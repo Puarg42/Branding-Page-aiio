@@ -1,14 +1,15 @@
 # Glossary
 
-## Purpose
+## Organizational Knowledge
 
-Defines the shared vocabulary for product, branding, category design, sales, investors and future documentation.
+## Living Organizational Memory
 
-## Table of Contents
+## Organizational Understanding
 
-- Core Category Terms
-- Product Terms
-- Layer Terms
-- Website Terms
-- Terms to Use Consistently
-- Terms to Avoid or Use Carefully
+## Organizational Intelligence
+
+## Organizational Capabilities
+
+## Self-Enabling Organization
+
+## Organizational Intelligence System

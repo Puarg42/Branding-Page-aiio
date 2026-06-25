@@ -1,21 +1,13 @@
 # First Principles
 
-## Purpose
+Purpose
 
-Define the foundational first principles behind aiio, the Organizational Intelligence System, product strategy, category design and website development.
+This document contains the fundamental principles from which the entire Organizational Intelligence Theory is derived.
 
-## Table of Contents
+Only principles that are considered universally valid belong here.
 
-- Why Organizations Exist
-- Organizational Capability
-- Organizational Knowledge
-- Organizational Memory
-- Organizational Context
-- Organizational Understanding
-- Organizational Intelligence
-- Organizational Enablement
-- Organizational Resilience
-- Product Implications
-- Category Implications
-- Website Implications
-- Open Questions
+## First Principle 001
+
+The fundamental innovation of the AI era is not that machines understand organizations.
+
+It is that organizations can, for the first time, be enabled to understand themselves.
