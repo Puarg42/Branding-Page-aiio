@@ -134,7 +134,7 @@ function Hero() {
     <section className="hero">
       <div className="hero-content">
         <p className="eyebrow">
-          {getEditableContent("home.hero.eyebrow", "OIS")}
+          {getEditableContent("home.hero.eyebrow", "Das OIS")}
         </p>
         <h1>
           <span className="headline-desktop">
