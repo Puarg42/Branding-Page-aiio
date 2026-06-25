@@ -11,7 +11,7 @@ const layerSections = [
       <RichText
         html={getEditableContent(
           "home.layer.collector",
-          "Alle KI-Systeme sind nur so gut wie das Wissen, auf dem sie arbeiten. <strong>ProcessCollector®</strong> sammelt Interviews, Dokumente und bestehendes Organisationswissen und erzeugt daraus eine strukturierte Wissensbasis.",
+          "Alle KI-Systeme sind nur so gut wie das Wissen, auf dem sie arbeiten. <strong>ProcessCollector®</strong> sammelt Interviews, Dokumente und bestehendes Organisationswissen, wo auch immer es dokumentiert ist, und erzeugt daraus eine strukturierte Wissensbasis.",
         )}
       />
     ),
