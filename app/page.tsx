@@ -150,8 +150,8 @@ const intelligenceProgression = [
 
 const oisEcosystemElements = [
   "People",
-  "Processes",
   "Knowledge",
+  "Processes",
   "Enterprise Systems",
   "Artificial Intelligence",
   "Organizational Memory",
@@ -285,19 +285,21 @@ function OisArchitecture() {
   return (
     <section className="ois-section" id="architektur">
       <div className="ois-intro">
-        <h2>The Organizational Intelligence System</h2>
-        <p className="ois-subheadline">
-          The missing infrastructure for organizations that want to understand
-          themselves.
-        </p>
+        <p className="ois-section-title">Built around Organizational Intelligence</p>
+        <h2>
+          Every resilient organization needs a foundation that continuously
+          connects knowledge, context, people and Artificial Intelligence.
+        </h2>
         <div className="ois-body">
           <p>Organizations already possess enormous knowledge.</p>
           <p>
-            What they lack is a living system that continuously connects people,
-            processes, knowledge, enterprise systems and Artificial Intelligence
-            into one shared organizational understanding.
+            What they lack is a living foundation that continuously transforms
+            fragmented information into shared organizational understanding.
           </p>
-          <p>The Organizational Intelligence System creates exactly this foundation.</p>
+          <p>
+            At aiio, we call this foundation the Organizational Intelligence
+            System (OIS).
+          </p>
         </div>
       </div>
 
@@ -338,9 +340,9 @@ function OisArchitecture() {
       </div>
 
       <div className="ois-bottom-statement">
-        <p>The OIS is not another application.</p>
+        <p>The OIS is not another enterprise application.</p>
         <p>
-          It is the infrastructure that enables organizations to understand
+          It is the foundation that enables organizations to understand
           themselves.
         </p>
       </div>

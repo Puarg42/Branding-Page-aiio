@@ -3326,11 +3326,21 @@ h1 {
 
 .ois-intro h2 {
   color: #ffffff;
-  font-size: clamp(3.2rem, 7vw, 7.8rem);
+  font-size: clamp(2.9rem, 5.4vw, 6.2rem);
   letter-spacing: 0;
-  line-height: 0.92;
+  line-height: 1;
   margin: 0 auto;
-  max-width: 1020px;
+  max-width: 1180px;
+  text-wrap: balance;
+}
+
+.ois-section-title {
+  color: rgb(179 145 255 / 86%);
+  font-size: 0.76rem;
+  font-weight: 820;
+  letter-spacing: 0.12em;
+  margin: 0 0 clamp(28px, 4vw, 52px);
+  text-transform: uppercase;
 }
 
 .ois-subheadline {
@@ -3350,7 +3360,7 @@ h1 {
   font-size: clamp(1.05rem, 1.4vw, 1.28rem);
   gap: 18px;
   line-height: 1.72;
-  margin: clamp(44px, 5.4vw, 76px) auto 0;
+  margin: clamp(40px, 5vw, 70px) auto 0;
   max-width: 780px;
 }
 
@@ -3359,8 +3369,8 @@ h1 {
 }
 
 .ois-ecosystem {
-  height: clamp(560px, 72vw, 760px);
-  margin: clamp(74px, 9vw, 132px) auto;
+  height: clamp(620px, 78vw, 840px);
+  margin: clamp(84px, 10vw, 154px) auto;
   max-width: 1380px;
   position: relative;
   width: min(100%, 1380px);
