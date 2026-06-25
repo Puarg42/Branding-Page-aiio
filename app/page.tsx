@@ -147,7 +147,7 @@ function Hero() {
         <p>
           {getEditableContent(
             "home.hero.intro",
-            "Mit dem OIS verbindet aiio Wissen, Recognition und Activation von Organisationsinformationen intelligent in einem integrierten Organizational Intelligence System.",
+            "Mit dem OIS verbinden wir drei nützliche Anwendungsfälle underer Kunden. "Wissen sichern", "Prozesse erkennen" und "Wissen aktivieren". Damit erschließen wir erstmals das vorhandene Organisations-Know-how in Unternehmen, machen es zielgerichtet wirksam und verbessern die Nutzung von bestehenden Systemen mit Hilfe von KI-Agenten",
           )}
         </p>
         <div className="actions" aria-label="Primäre Aktionen">
