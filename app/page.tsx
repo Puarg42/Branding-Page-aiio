@@ -148,6 +148,17 @@ const intelligenceProgression = [
   "Self-Enabling Organization",
 ] as const;
 
+const oisEcosystemElements = [
+  "People",
+  "Processes",
+  "Knowledge",
+  "Enterprise Systems",
+  "Artificial Intelligence",
+  "Organizational Memory",
+  "Context",
+  "Agents",
+] as const;
+
 function Hero() {
   return (
     <section className="hero">
@@ -267,6 +278,75 @@ function NewKindOrganization() {
   );
 }
 
+function OisArchitecture() {
+  return (
+    <section className="ois-section" id="architektur">
+      <div className="ois-intro">
+        <h2>The Organizational Intelligence System</h2>
+        <p className="ois-subheadline">
+          The missing infrastructure for organizations that want to understand
+          themselves.
+        </p>
+        <div className="ois-body">
+          <p>Organizations already possess enormous knowledge.</p>
+          <p>
+            What they lack is a living system that continuously connects people,
+            processes, knowledge, enterprise systems and Artificial Intelligence
+            into one shared organizational understanding.
+          </p>
+          <p>The Organizational Intelligence System creates exactly this foundation.</p>
+        </div>
+      </div>
+
+      <div
+        aria-label="Organizational Intelligence System ecosystem"
+        className="ois-ecosystem"
+      >
+        <svg
+          aria-hidden="true"
+          className="ois-connection-map"
+          focusable="false"
+          viewBox="0 0 1200 620"
+        >
+          <path className="ois-line ois-line-1" d="M600 310 C520 230 410 170 260 126" />
+          <path className="ois-line ois-line-2" d="M600 310 C470 305 300 312 150 248" />
+          <path className="ois-line ois-line-3" d="M600 310 C520 208 650 124 782 112" />
+          <path className="ois-line ois-line-4" d="M600 310 C715 250 848 210 1010 232" />
+          <path className="ois-line ois-line-5" d="M600 310 C745 354 855 432 940 520" />
+          <path className="ois-line ois-line-6" d="M600 310 C590 430 558 500 520 562" />
+          <path className="ois-line ois-line-7" d="M600 310 C468 375 350 472 252 510" />
+          <path className="ois-line ois-line-8" d="M600 310 C720 210 910 130 1078 120" />
+        </svg>
+        <div className="ois-core">
+          <span>Organizational</span>
+          <span>Intelligence</span>
+          <span>System</span>
+        </div>
+        {oisEcosystemElements.map((element) => (
+          <span
+            className={`ois-node ois-node-${element
+              .toLowerCase()
+              .replaceAll(" ", "-")}`}
+            key={element}
+          >
+            {element}
+          </span>
+        ))}
+      </div>
+
+      <div className="ois-bottom-statement">
+        <p>The OIS is not another application.</p>
+        <p>
+          It is the infrastructure that enables organizations to understand
+          themselves.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+// Kept only as a temporary legacy reference while the OIS section is redesigned.
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function Architecture() {
   return (
     <section className="section" id="architektur">
@@ -405,7 +485,7 @@ export default function Home() {
       <ProblemSection />
       <ConceptBreakthrough />
       <NewKindOrganization />
-      <Architecture />
+      <OisArchitecture />
       <Layers />
       <Demo />
     </main>
