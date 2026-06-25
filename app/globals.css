@@ -369,6 +369,10 @@ h1 {
   max-width: 760px;
 }
 
+.section-intro {
+  margin-top: 16px;
+}
+
 .architecture-grid,
 .layer-inner {
   align-items: stretch;
