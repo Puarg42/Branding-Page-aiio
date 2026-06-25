@@ -147,7 +147,7 @@ function Hero() {
         <p>
           {getEditableContent(
             "home.hero.intro",
-            `Mit dem OIS verbinden wir drei nützliche Anwendungsfälle unserer Kunden. "Wissen sichern", "Prozesse erkennen" und "Wissen aktivieren". Damit erschließen wir erstmals das vorhandene Organisations-Know-how in Unternehmen, machen es zielgerichtet wirksam und verbessern die Nutzung von bestehenden Systemen mit Hilfe von KI-Agenten.`,
+            `Das Organizational Intelligence System (OIS) macht Organisationswissen erstmals als gemeinsame Wissensbasis für Menschen, KI-Agenten und bestehende Unternehmenssysteme nutzbar. So entstehen Transparenz, intelligente Automatisierung und völlig neue Möglichkeiten der Organisationsentwicklung.`,
           )}
         </p>
         <div className="actions" aria-label="Primäre Aktionen">
