@@ -5,6 +5,8 @@ const layerSections = [
   {
     id: "collector",
     tone: "collector",
+    capability: "Capture",
+    product: "ProcessCollector®",
     eyebrow: getEditableContent("home.layer.collector.eyebrow", "Grounding Layer"),
     title: getEditableContent("home.layer.collector.title", "Organisationswissen erfassen und strukturieren."),
     copy: (
@@ -20,7 +22,7 @@ const layerSections = [
       "Erweiterbar mit ProcessMagnet Light für automatische Erkennung.",
     stack: ["Manifestieren", "Vernetzen", "Bewahren"],
     website: "https://processcollector.com/",
-    websiteLabel: "ProcessCollector entdecken",
+    websiteLabel: "Learn more",
     visualAlt: "Unterer Ausschnitt des aiio Systembildes mit hellem Organisationswissen, Dokumenten und Inputformaten.",
     visualBaseImage: "/system-layers/collector-layer-single-generated-v1.png",
     visualImage: "/system-layers/collector-layer-single-generated-v1.png",
@@ -28,6 +30,8 @@ const layerSections = [
   {
     id: "magnet",
     tone: "magnet",
+    capability: "Understand",
+    product: "ProcessMagnet®",
     eyebrow: getEditableContent("home.layer.magnet.eyebrow", "Understanding Layer"),
     title: getEditableContent("home.layer.magnet.title", "Zusammenhänge, Prozesse und Potenziale erkennen."),
     copy: (
@@ -43,7 +47,7 @@ const layerSections = [
       "ProcessCollector liefert den Grounding Layer.",
     stack: ["Erheben", "Harmonisieren", "Kontextualisieren"],
     website: "https://process-magnet.com/",
-    websiteLabel: "ProcessMagnet entdecken",
+    websiteLabel: "Learn more",
     visualAlt: "Mittlerer Ausschnitt des aiio Systembildes mit ProcessMagnet, Sogwirkung und Modell-Erkennung.",
     visualBaseImage: "/system-layers/magnet-layer-single-generated-v1.png",
     visualImage: "/system-layers/magnet-layer-single-generated-v1.png",
@@ -51,6 +55,8 @@ const layerSections = [
   {
     id: "forge",
     tone: "forge",
+    capability: "Enable",
+    product: "ProcessForge®",
     eyebrow: getEditableContent("home.layer.forge.eyebrow", "Activation Layer"),
     title: getEditableContent("home.layer.forge.title", "Organisationswissen aktivieren und nutzbar machen."),
     copy: (
@@ -66,7 +72,7 @@ const layerSections = [
       "Für Unternehmen, die Wissen operationalisieren wollen.",
     stack: ["Schmieden", "Transformieren", "Orchestrieren"],
     website: "https://www.processforge.com/",
-    websiteLabel: "ProcessForge entdecken",
+    websiteLabel: "Learn more",
     visualAlt: "Oberer Ausschnitt des aiio Systembildes mit ProcessForge, Agenten, APIs und Übergabe an Umsysteme.",
     visualBaseImage: "/system-layers/forge-layer-single-generated-v1.png",
     visualImage: "/system-layers/forge-layer-single-generated-v1.png",
@@ -92,6 +98,8 @@ const problemCards = [
   },
 ] as const;
 
+const capabilityPath = ["Capture", "Understand", "Enable", "Evolve"] as const;
+
 const intelligenceProgression = [
   "Knowledge",
   "Living Organizational Memory",
@@ -105,12 +113,9 @@ const intelligenceProgression = [
 const oisEcosystemElements = [
   "People",
   "Knowledge",
-  "Processes",
   "Enterprise Systems",
   "Artificial Intelligence",
   "Organizational Memory",
-  "Context",
-  "Agents",
 ] as const;
 
 const imagineMoments = [
@@ -179,7 +184,7 @@ function Hero() {
         </p>
         <div className="actions hero-actions" aria-label="Primary actions">
           <a className="button hero-button" href="#organizational-intelligence">
-            Discover the Organizational Intelligence System
+            Explore OIS
           </a>
           <a className="button hero-button secondary" href="/live-demo/kontakt">
             See it in action
@@ -344,13 +349,10 @@ function OisArchitecture() {
           viewBox="0 0 1200 620"
         >
           <path className="ois-line ois-line-1" d="M600 310 C520 230 410 170 260 126" />
-          <path className="ois-line ois-line-2" d="M600 310 C470 305 300 312 150 248" />
           <path className="ois-line ois-line-3" d="M600 310 C520 208 650 124 782 112" />
           <path className="ois-line ois-line-4" d="M600 310 C715 250 848 210 1010 232" />
           <path className="ois-line ois-line-5" d="M600 310 C745 354 855 432 940 520" />
           <path className="ois-line ois-line-6" d="M600 310 C590 430 558 500 520 562" />
-          <path className="ois-line ois-line-7" d="M600 310 C468 375 350 472 252 510" />
-          <path className="ois-line ois-line-8" d="M600 310 C720 210 910 130 1078 120" />
         </svg>
         <div className="ois-core">
           <span>Organizational</span>
@@ -419,11 +421,20 @@ function WhyNow() {
 function Layers() {
   return (
     <>
-      {layerSections.map((layer) => (
+      {layerSections.map((layer, index) => (
         <section className={`layer ${layer.tone}`} id={layer.id} key={layer.id}>
+          {index === 0 ? (
+            <div className="capability-system" aria-label="Capability path">
+              {capabilityPath.map((capability) => (
+                <span key={capability}>{capability}</span>
+              ))}
+            </div>
+          ) : null}
           <div className="layer-inner">
             <div className="layer-copy">
               <p className="eyebrow">{layer.eyebrow}</p>
+              <p className="layer-capability-word">{layer.capability}</p>
+              <p className="layer-product-name">{layer.product}</p>
               <h2>{layer.title}</h2>
               <div className="layer-copy-text rich-text">{layer.copy}</div>
               <div className="note">

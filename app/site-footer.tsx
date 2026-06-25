@@ -89,27 +89,32 @@ export function SiteFooter() {
       <div className="site-footer-inner">
         <section className="footer-cta" aria-label="Footer Aktion">
           <div>
-            <h2>{getEditableContent("footer.cta.title", "AI Improves Organizations.")}</h2>
+            <h2>
+              {getEditableContent(
+                "footer.cta.title",
+                "The future belongs to organizations that understand themselves.",
+              )}
+            </h2>
             <p>
               {getEditableContent(
                 "footer.cta.copy",
-                "Mit System das Chaos in Ordnung & Intelligenz verwandeln.",
+                "aiio defines Organizational Intelligence for organizations ready to understand, adapt and enable themselves.",
               )}
             </p>
           </div>
           <div className="footer-actions">
             <a
               className="button footer-button"
-              href="/kostenlose-testversion/anmelden"
-            >
-              Jetzt kostenlos testen
-            </a>
-            <a
-              className="button footer-button secondary"
               href="/live-demo/kontakt"
             >
-              Lass uns ins Gespräch kommen
+              See it in action
             </a>
+            <Link
+              className="button footer-button secondary"
+              href="/#organizational-intelligence"
+            >
+              Explore OIS
+            </Link>
           </div>
         </section>
 

@@ -209,10 +209,10 @@ export function MainHeader({ variant = "home" }: { variant?: HeaderVariant }) {
         </nav>
         <div className="header-actions" aria-label="Aktionen">
           <a className="nav-action" href="/live-demo/kontakt">
-            {getEditableContent("navigation.demo", "Jetzt Expertengespräch vereinbaren")}
+            {getEditableContent("navigation.demo", "Demo")}
           </a>
           <a className="nav-action primary" href="/kostenlose-testversion/anmelden">
-            {getEditableContent("navigation.trial", "14 Tage kostenlos testen")}
+            {getEditableContent("navigation.trial", "Kostenlos testen")}
           </a>
         </div>
       </div>
