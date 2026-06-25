@@ -348,7 +348,7 @@ h1 {
 }
 
 .section {
-  padding: 92px 0;
+  padding: 46px 0 92px;
 }
 
 .section h2,
@@ -877,7 +877,7 @@ h1 {
 
 .layer {
   border-top: 1px solid rgb(90 50 138 / 12%);
-  padding: 90px 0;
+  padding: 45px 0 90px;
 }
 
 .layer.collector {
@@ -1233,7 +1233,7 @@ h1 {
   display: grid;
   gap: 28px;
   grid-template-columns: 0.8fr 1fr auto;
-  padding: 64px 0;
+  padding: 32px 0 64px;
 }
 
 .demo p,
@@ -1393,7 +1393,7 @@ h1 {
 
 .about-hero-inner {
   margin: 0 auto;
-  padding: 112px 0 96px;
+  padding: 56px 0 96px;
   width: min(1180px, calc(100% - 40px));
 }
 
@@ -1444,11 +1444,11 @@ h1 {
   display: grid;
   gap: 42px;
   grid-template-columns: minmax(0, 1fr) minmax(300px, 0.76fr);
-  padding-top: 42px;
+  padding-top: 21px;
 }
 
 .award-section-top {
-  padding-top: 28px;
+  padding-top: 14px;
 }
 
 .award-section > div:first-child > p:not(.eyebrow) {
@@ -2001,7 +2001,7 @@ h1 {
 .subhero-content {
   margin: 0 auto;
   max-width: 1180px;
-  padding: 108px 24px 88px;
+  padding: 54px 24px 88px;
   position: relative;
   z-index: 1;
 }
@@ -2083,7 +2083,7 @@ h1 {
   display: grid;
   gap: 44px;
   grid-template-columns: minmax(0, 0.9fr) minmax(360px, 1fr);
-  padding: 88px 0 72px;
+  padding: 44px 0 72px;
 }
 
 .resource-hero-copy {
@@ -2132,7 +2132,7 @@ h1 {
 
 .resource-section {
   border-top: 1px solid rgb(90 50 138 / 12%);
-  padding: 74px 0;
+  padding: 37px 0 74px;
 }
 
 .resource-section-heading {
@@ -2236,7 +2236,7 @@ h1 {
   display: grid;
   gap: 36px;
   grid-template-columns: minmax(260px, 0.66fr) minmax(360px, 1fr);
-  padding: 74px 0 92px;
+  padding: 37px 0 92px;
 }
 
 .resource-form {
@@ -2774,7 +2774,7 @@ h1 {
   }
 
   .subhero-content {
-    padding: 76px 18px 72px;
+    padding: 38px 18px 72px;
   }
 
   .subhero h1 {
@@ -2788,7 +2788,7 @@ h1 {
   }
 
   .resource-hero {
-    padding: 58px 0 54px;
+    padding: 29px 0 54px;
   }
 
   .resource-hero-copy h1 {
@@ -2804,7 +2804,7 @@ h1 {
   }
 
   .about-hero-inner {
-    padding: 72px 0 68px;
+    padding: 36px 0 68px;
     width: min(calc(100% - 28px), 1180px);
   }
 
