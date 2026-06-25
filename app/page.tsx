@@ -246,7 +246,10 @@ function NewKindOrganization() {
             preserve their knowledge, understand themselves and develop new
             organizational capabilities.
           </p>
-          <p>This is the beginning of the Self-Enabling Organization.</p>
+          <p className="organization-closing-statement">
+            The organizations that will lead tomorrow are those that
+            continuously understand, adapt and enable themselves.
+          </p>
         </div>
         <ol className="organization-journey" aria-label="Self-enabling organization journey">
           {intelligenceProgression.map((step) => (
