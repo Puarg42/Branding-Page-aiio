@@ -1,83 +1,6 @@
 import { MainHeader } from "./main-navigation";
+import { CapabilityJourney } from "./capability-journey";
 import { getEditableContent, RichText } from "./editor/content";
-
-const layerSections = [
-  {
-    id: "collector",
-    tone: "collector",
-    capability: "Capture",
-    product: "ProcessCollector®",
-    eyebrow: getEditableContent("home.layer.collector.eyebrow", "Grounding Layer"),
-    title: getEditableContent("home.layer.collector.title", "Organisationswissen erfassen und strukturieren."),
-    copy: (
-      <RichText
-        html={getEditableContent(
-          "home.layer.collector",
-          "ProcessCollector sichert Wissen aus Dokumenten, Interviews, Prozessen und Systemen als belastbare KI-Grundlage.",
-        )}
-      />
-    ),
-    noteTitle: "Hinweis",
-    note:
-      "Erweiterbar mit ProcessMagnet Light für automatische Erkennung.",
-    stack: ["Manifestieren", "Vernetzen", "Bewahren"],
-    website: "https://processcollector.com/",
-    websiteLabel: "Learn more",
-    visualAlt: "Unterer Ausschnitt des aiio Systembildes mit hellem Organisationswissen, Dokumenten und Inputformaten.",
-    visualBaseImage: "/system-layers/collector-layer-single-generated-v1.png",
-    visualImage: "/system-layers/collector-layer-single-generated-v1.png",
-  },
-  {
-    id: "magnet",
-    tone: "magnet",
-    capability: "Understand",
-    product: "ProcessMagnet®",
-    eyebrow: getEditableContent("home.layer.magnet.eyebrow", "Understanding Layer"),
-    title: getEditableContent("home.layer.magnet.title", "Zusammenhänge, Prozesse und Potenziale erkennen."),
-    copy: (
-      <RichText
-        html={getEditableContent(
-          "home.layer.magnet",
-          "ProcessMagnet erkennt Muster, Prozesse und Potenziale auf Basis des ProcessCollectors.",
-        )}
-      />
-    ),
-    noteTitle: "Hinweis",
-    note:
-      "ProcessCollector liefert den Grounding Layer.",
-    stack: ["Erheben", "Harmonisieren", "Kontextualisieren"],
-    website: "https://process-magnet.com/",
-    websiteLabel: "Learn more",
-    visualAlt: "Mittlerer Ausschnitt des aiio Systembildes mit ProcessMagnet, Sogwirkung und Modell-Erkennung.",
-    visualBaseImage: "/system-layers/magnet-layer-single-generated-v1.png",
-    visualImage: "/system-layers/magnet-layer-single-generated-v1.png",
-  },
-  {
-    id: "forge",
-    tone: "forge",
-    capability: "Enable",
-    product: "ProcessForge®",
-    eyebrow: getEditableContent("home.layer.forge.eyebrow", "Activation Layer"),
-    title: getEditableContent("home.layer.forge.title", "Organisationswissen aktivieren und nutzbar machen."),
-    copy: (
-      <RichText
-        html={getEditableContent(
-          "home.layer.forge",
-          "ProcessForge aktiviert Organisationswissen für Agenten, Chats, APIs und Unternehmenssysteme.",
-        )}
-      />
-    ),
-    noteTitle: "Hinweis",
-    note:
-      "Für Unternehmen, die Wissen operationalisieren wollen.",
-    stack: ["Schmieden", "Transformieren", "Orchestrieren"],
-    website: "https://www.processforge.com/",
-    websiteLabel: "Learn more",
-    visualAlt: "Oberer Ausschnitt des aiio Systembildes mit ProcessForge, Agenten, APIs und Übergabe an Umsysteme.",
-    visualBaseImage: "/system-layers/forge-layer-single-generated-v1.png",
-    visualImage: "/system-layers/forge-layer-single-generated-v1.png",
-  },
-] as const;
 
 const problemCards = [
   {
@@ -97,8 +20,6 @@ const problemCards = [
     copy: "Fragmented understanding slows action.",
   },
 ] as const;
-
-const capabilityPath = ["Capture", "Understand", "Enable", "Evolve"] as const;
 
 const intelligenceProgression = [
   "Knowledge",
@@ -418,69 +339,6 @@ function WhyNow() {
   );
 }
 
-function Layers() {
-  return (
-    <>
-      {layerSections.map((layer, index) => (
-        <section className={`layer ${layer.tone}`} id={layer.id} key={layer.id}>
-          {index === 0 ? (
-            <div className="capability-system" aria-label="Capability path">
-              {capabilityPath.map((capability) => (
-                <span key={capability}>{capability}</span>
-              ))}
-            </div>
-          ) : null}
-          <div className="layer-inner">
-            <div className="layer-copy">
-              <p className="eyebrow">{layer.eyebrow}</p>
-              <p className="layer-capability-word">{layer.capability}</p>
-              <p className="layer-product-name">{layer.product}</p>
-              <h2>{layer.title}</h2>
-              <div className="layer-copy-text rich-text">{layer.copy}</div>
-              <div className="note">
-                {typeof layer.noteTitle === "string" ? (
-                  <strong>{layer.noteTitle}</strong>
-                ) : (
-                  layer.noteTitle
-                )}
-                <br />
-                {layer.note}
-              </div>
-              <a
-                className="layer-website-link"
-                href={layer.website}
-                rel="noreferrer"
-                target="_blank"
-              >
-                <span>{layer.websiteLabel}</span>
-                <span className="card-click-icon layer-website-icon" aria-hidden="true" />
-              </a>
-            </div>
-            <figure className="visual layer-system-visual">
-              <span
-                aria-label={layer.visualAlt}
-                className="layer-system-image layer-system-image-base"
-                role="img"
-                style={{ backgroundImage: `url(${layer.visualBaseImage})` }}
-              />
-              <span
-                aria-hidden="true"
-                className="layer-system-image layer-system-image-focus"
-                style={{ backgroundImage: `url(${layer.visualImage})` }}
-              />
-              <figcaption className="visual-stack layer-system-caption">
-                {layer.stack.map((item) => (
-                  <span key={item}>{item}</span>
-                ))}
-              </figcaption>
-            </figure>
-          </div>
-        </section>
-      ))}
-    </>
-  );
-}
-
 function Demo() {
   return (
     <section className="demo-section" id="demo">
@@ -522,7 +380,7 @@ export default function Home() {
       <LearningTransition />
       <OisArchitecture />
       <WhyNow />
-      <Layers />
+      <CapabilityJourney />
       <Demo />
     </main>
   );
