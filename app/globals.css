@@ -2941,11 +2941,24 @@ h1 {
 
 .hero-subheadline,
 .hero p.hero-subheadline {
+  animation: heroSubheadlineIn 1.8s 0.42s cubic-bezier(0.2, 0, 0, 1) both;
   color: rgb(255 255 255 / 76%);
   font-size: clamp(1.16rem, 1.65vw, 1.42rem);
   line-height: 1.42;
-  margin: 52px 0 0;
+  margin: 62px 0 0;
   max-width: 520px;
+}
+
+@keyframes heroSubheadlineIn {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-actions {
@@ -4371,6 +4384,13 @@ h1 {
   .about-hero::after,
   .subhero::after {
     transition: none;
+  }
+
+  .hero-subheadline,
+  .hero p.hero-subheadline {
+    animation: none;
+    opacity: 1;
+    transform: none;
   }
 
   .timeline-image-motion span {

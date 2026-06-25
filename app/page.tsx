@@ -172,11 +172,10 @@ function Hero() {
       <div className="landing-hero-content">
         <h1>The future belongs to organizations that understand themselves.</h1>
         <p className="hero-subheadline">
-          Artificial Intelligence changes software.
+          Organizations already know more than they can use.
           <br />
-          Organizational Intelligence changes organizations.
-          <br />
-          aiio brings them together.
+          For the first time, Artificial Intelligence enables them to understand
+          themselves.
         </p>
         <div className="actions hero-actions" aria-label="Primary actions">
           <a className="button hero-button" href="#organizational-intelligence">
