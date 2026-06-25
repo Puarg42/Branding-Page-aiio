@@ -46,7 +46,22 @@ const awards = [
   },
 ] as const;
 
-const milestones = [
+type TimelineMilestone = {
+  buttonLabel?: string;
+  copy: string;
+  glassMotion?: boolean;
+  href?: string;
+  image?: string;
+  motion?: boolean;
+  peopleMotion?: boolean;
+  poster?: string;
+  title: string;
+  videoMp4?: string;
+  videoWebm?: string;
+  year: string;
+};
+
+const milestones: TimelineMilestone[] = [
   {
     year: "2007",
     title: "Vom klassischen BPM zur Prozessbasis",
@@ -100,7 +115,7 @@ const milestones = [
     href: "https://processforge.com/",
     buttonLabel: "ProcessForge ansehen",
   },
-] as const;
+];
 
 const advisors = [
   {
