@@ -229,6 +229,41 @@ function ConceptBreakthrough() {
   );
 }
 
+function NewKindOrganization() {
+  return (
+    <section className="organization-section" id="self-enabling-organization">
+      <div className="organization-inner">
+        <div className="organization-header">
+          <p className="dark-eyebrow">A New Kind of Organization</p>
+          <h2>
+            The next generation of organizations will not be defined by
+            artificial intelligence.
+            <br />
+            They will be defined by their ability to understand themselves.
+          </h2>
+          <p>
+            For the first time in history, organizations can continuously
+            preserve their knowledge, understand themselves and develop new
+            organizational capabilities.
+          </p>
+          <p>This is the beginning of the Self-Enabling Organization.</p>
+        </div>
+        <ol className="organization-journey" aria-label="Self-enabling organization journey">
+          {intelligenceProgression.map((step) => (
+            <li key={step}>
+              <span>{step}</span>
+            </li>
+          ))}
+        </ol>
+        <div className="organization-bottom-statement">
+          <p>Understanding is the prerequisite for intelligence.</p>
+          <p>Self-understanding is the prerequisite for self-enablement.</p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Architecture() {
   return (
     <section className="section" id="architektur">
@@ -366,6 +401,7 @@ export default function Home() {
       <Hero />
       <ProblemSection />
       <ConceptBreakthrough />
+      <NewKindOrganization />
       <Architecture />
       <Layers />
       <Demo />
