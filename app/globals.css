@@ -3430,6 +3430,118 @@ h1 {
   }
 }
 
+.learning-transition {
+  background: #020203;
+  border-top: 1px solid rgb(255 255 255 / 8%);
+  color: #ffffff;
+  overflow: hidden;
+  position: relative;
+}
+
+.learning-transition::before {
+  animation: learningBackgroundDrift 38s ease-in-out infinite alternate;
+  background:
+    radial-gradient(circle at 50% 42%, rgb(255 255 255 / 7%), transparent 34%),
+    linear-gradient(112deg, transparent 0%, rgb(255 255 255 / 0%) 42%, rgb(255 255 255 / 4%) 50%, rgb(255 255 255 / 0%) 58%, transparent 100%);
+  content: "";
+  inset: 0;
+  opacity: 0.2;
+  pointer-events: none;
+  position: absolute;
+  transform: translateX(-14%) scale(1.08);
+  width: 140%;
+}
+
+.learning-moment {
+  align-items: center;
+  display: grid;
+  justify-items: center;
+  min-height: 122svh;
+  padding: clamp(136px, 15vw, 230px) 20px;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.learning-copy {
+  display: grid;
+  gap: clamp(30px, 4.4vw, 62px);
+  justify-items: center;
+  max-width: 1160px;
+}
+
+.learning-copy p {
+  color: rgb(255 255 255 / 58%);
+  font-family: var(--font-aiio-heading);
+  font-size: clamp(1.35rem, 2.4vw, 3rem);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.05;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.learning-copy h2 {
+  color: #ffffff;
+  font-size: clamp(4.1rem, 9.6vw, 11.4rem);
+  letter-spacing: 0;
+  line-height: 0.93;
+  margin: 0;
+  max-width: 1160px;
+  text-wrap: balance;
+}
+
+.learning-moment-final .learning-copy h2 {
+  font-size: clamp(4.8rem, 12vw, 13rem);
+  max-width: 1040px;
+}
+
+@keyframes learningBackgroundDrift {
+  0% {
+    opacity: 0.14;
+    transform: translateX(-20%) scale(1.08);
+  }
+
+  50% {
+    opacity: 0.26;
+  }
+
+  100% {
+    opacity: 0.18;
+    transform: translateX(0) scale(1.18);
+  }
+}
+
+@keyframes learningMomentReveal {
+  0% {
+    filter: blur(18px);
+    opacity: 0;
+    transform: translateY(72px) scale(0.982);
+  }
+
+  38%,
+  68% {
+    filter: blur(0);
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  100% {
+    filter: blur(11px);
+    opacity: 0.1;
+    transform: translateY(-58px) scale(0.988);
+  }
+}
+
+@supports (animation-timeline: view()) {
+  .learning-copy {
+    animation: learningMomentReveal both cubic-bezier(0.2, 0, 0, 1);
+    animation-range: entry 0% cover 96%;
+    animation-timeline: view();
+    opacity: 0;
+  }
+}
+
 .ois-section {
   background: #050507;
   border-top: 1px solid rgb(255 255 255 / 8%);
@@ -3757,6 +3869,18 @@ h1 {
     font-size: clamp(1.1rem, 2.6vw, 1.55rem);
   }
 
+  .learning-copy h2 {
+    font-size: clamp(3.2rem, 10vw, 6.6rem);
+  }
+
+  .learning-copy p {
+    font-size: clamp(1.18rem, 3vw, 1.9rem);
+  }
+
+  .learning-moment-final .learning-copy h2 {
+    font-size: clamp(3.7rem, 11vw, 7.2rem);
+  }
+
   .ois-intro h2 {
     font-size: clamp(3rem, 10vw, 5.2rem);
   }
@@ -3858,6 +3982,29 @@ h1 {
   .imagine-copy p {
     font-size: 1.08rem;
     line-height: 1.56;
+  }
+
+  .learning-moment {
+    min-height: 112svh;
+    padding: 96px 14px;
+  }
+
+  .learning-copy {
+    gap: 26px;
+  }
+
+  .learning-copy h2 {
+    font-size: 3.05rem;
+    line-height: 1;
+  }
+
+  .learning-copy p {
+    font-size: 1.22rem;
+    line-height: 1.18;
+  }
+
+  .learning-moment-final .learning-copy h2 {
+    font-size: 3.4rem;
   }
 
   .ois-section {
@@ -3980,11 +4127,17 @@ h1 {
   }
 
   .imagine-section::before,
+  .learning-transition::before,
   .imagine-copy {
     animation: none;
   }
 
-  .imagine-copy {
+  .learning-copy {
+    animation: none;
+  }
+
+  .imagine-copy,
+  .learning-copy {
     filter: none;
     opacity: 1;
     transform: none;

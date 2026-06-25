@@ -181,6 +181,20 @@ const imagineMoments = [
   },
 ] as const;
 
+const learningTransitionMoments = [
+  {
+    lead: "For centuries,",
+    statement: "organizations have learned through people.",
+  },
+  {
+    lead: "For the first time,",
+    statement: "organizations can learn themselves.",
+  },
+  {
+    statement: "This changes everything.",
+  },
+] as const;
+
 function Hero() {
   return (
     <section className="hero">
@@ -317,6 +331,24 @@ function ImagineFuture() {
           <h2>This is the Self-Enabling Organization.</h2>
         </div>
       </section>
+    </section>
+  );
+}
+
+function LearningTransition() {
+  return (
+    <section className="learning-transition" aria-label="Organizational learning transition">
+      {learningTransitionMoments.map((moment) => (
+        <section
+          className={`learning-moment${"lead" in moment ? "" : " learning-moment-final"}`}
+          key={moment.statement}
+        >
+          <div className="learning-copy">
+            {"lead" in moment ? <p>{moment.lead}</p> : null}
+            <h2>{moment.statement}</h2>
+          </div>
+        </section>
+      ))}
     </section>
   );
 }
@@ -531,6 +563,7 @@ export default function Home() {
       <ConceptBreakthrough />
       <NewKindOrganization />
       <ImagineFuture />
+      <LearningTransition />
       <OisArchitecture />
       <Layers />
       <Demo />
