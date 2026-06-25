@@ -1,0 +1,786 @@
+﻿[
+    {
+        "source":  "https://www.aiio.de/academy",
+        "slug":  "academy",
+        "assets":  [
+                       {
+                           "path":  "/aiio-pages/academy/image-01.svg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62bae77ef0d098075cf34904_wort%2Bkreis-wei%C3%9F.svg"
+                       },
+                       {
+                           "path":  "/aiio-pages/academy/image-02.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/6454cfd86b14fdffcabf9ee5_aiio%20Favicon%20256Pixel.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/academy/image-03.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/68186b3b0b1628820475fed9_Home-Academy-neu.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/academy/image-04.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/680b3f9d46f5a4a5aee2bb0b_og-pic_click-demo.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/academy/image-05.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1b30f2ee8656f2ea34d53_wort%2Bkreis-wei%C3%9F%404x.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/academy/image-06.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/67c8566d7c7a46b4429830ce_ki-verband-gross.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/academy/image-07.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/68186b3b0b1628820475fed9_Home-Academy-neu-p-500.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/academy/image-08.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/68186b3b0b1628820475fed9_Home-Academy-neu-p-800.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/academy/image-09.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/68186b3b0b1628820475fed9_Home-Academy-neu-p-1080.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/academy/image-10.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/680b3f9d46f5a4a5aee2bb0b_og-pic_click-demo-p-500.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/academy/image-11.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/680b3f9d46f5a4a5aee2bb0b_og-pic_click-demo-p-800.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/academy/image-12.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1b30f2ee8656f2ea34d53_wort%2Bkreis-wei%C3%9F%404x-p-500.png"
+                       }
+                   ]
+    },
+    {
+        "source":  "https://www.aiio.de/click-demos",
+        "slug":  "click-demos",
+        "assets":  [
+                       {
+                           "path":  "/aiio-pages/click-demos/image-01.svg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62bae77ef0d098075cf34904_wort%2Bkreis-wei%C3%9F.svg"
+                       },
+                       {
+                           "path":  "/aiio-pages/click-demos/image-02.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1d6b87b1aafa09061aa43_1280px-ABB_logo.svg.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/click-demos/image-03.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/67c830eb1dd1eb05ac434ee1_Euromobil.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/click-demos/image-04.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1d6f23592a83b2c9e4821_Thyssenkrupp%20200x150.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/click-demos/image-05.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/67d14c1ed1f511a222fc0108_VTG_Aktiengesellschaft_logo.svg.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/click-demos/image-06.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/653262f2e5955b19609f58e6_accc27f0f04a81bc47cbf6bcf29daf8b_Media%20Central%20Logo%20in%20Box.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/click-demos/image-07.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1b30f2ee8656f2ea34d53_wort%2Bkreis-wei%C3%9F%404x.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/click-demos/image-08.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/67c8566d7c7a46b4429830ce_ki-verband-gross.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/click-demos/image-09.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1d6b87b1aafa09061aa43_1280px-ABB_logo.svg-p-500.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/click-demos/image-10.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1d6b87b1aafa09061aa43_1280px-ABB_logo.svg-p-800.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/click-demos/image-11.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1d6b87b1aafa09061aa43_1280px-ABB_logo.svg-p-1080.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/click-demos/image-12.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/67c830eb1dd1eb05ac434ee1_Euromobil-p-500.png"
+                       }
+                   ]
+    },
+    {
+        "source":  "https://www.aiio.de/success-stories",
+        "slug":  "success-stories",
+        "assets":  [
+                       {
+                           "path":  "/aiio-pages/success-stories/image-01.svg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62bae77ef0d098075cf34904_wort%2Bkreis-wei%C3%9F.svg"
+                       },
+                       {
+                           "path":  "/aiio-pages/success-stories/image-02.jpeg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/685d378c7e0d81bf01cd9121_car-keys.jpeg"
+                       },
+                       {
+                           "path":  "/aiio-pages/success-stories/image-03.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/67c830eb1dd1eb05ac434ee1_Euromobil.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/success-stories/image-04.jpg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/69149e47d9296e0ce4a2a1b5_windpunx_case-thumb.jpg"
+                       },
+                       {
+                           "path":  "/aiio-pages/success-stories/image-05.svg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/670d10ebcaaea0da9f1d0e07_windpunx.svg"
+                       },
+                       {
+                           "path":  "/aiio-pages/success-stories/image-06.jpeg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/685d378c7e0d81bf01cd90fe_hvle4home.jpeg"
+                       },
+                       {
+                           "path":  "/aiio-pages/success-stories/image-07.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/659e671385f39ff9053fd162_1200px-Havell%C3%A4ndische_Eisenbahn_logo.svg.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/success-stories/image-08.jpeg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/685d378c7e0d81bf01cd90f0_abb4home_robot-arm.jpeg"
+                       },
+                       {
+                           "path":  "/aiio-pages/success-stories/image-09.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1d6b87b1aafa09061aa43_1280px-ABB_logo.svg.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/success-stories/image-10.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/6826e950e37a0649c4fbbeb1_MediaCentral_Logo_positiv_RGB.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/success-stories/image-11.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/6489663862ab5785e5352646_Max%20MC%20540x540%20Square.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/success-stories/image-12.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/64f1c05fd7acc99e5ef753d3_Symacon%20Logo.png"
+                       }
+                   ]
+    },
+    {
+        "source":  "https://www.aiio.de/platform/product-news",
+        "slug":  "product-news",
+        "assets":  [
+                       {
+                           "path":  "/aiio-pages/product-news/image-01.svg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62bae77ef0d098075cf34904_wort%2Bkreis-wei%C3%9F.svg"
+                       },
+                       {
+                           "path":  "/aiio-pages/product-news/image-02.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1b30f2ee8656f2ea34d53_wort%2Bkreis-wei%C3%9F%404x.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/product-news/image-03.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/67c8566d7c7a46b4429830ce_ki-verband-gross.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/product-news/image-04.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1b30f2ee8656f2ea34d53_wort%2Bkreis-wei%C3%9F%404x-p-500.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/product-news/image-05.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1b30f2ee8656f2ea34d53_wort%2Bkreis-wei%C3%9F%404x-p-800.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/product-news/image-06.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1b30f2ee8656f2ea34d53_wort%2Bkreis-wei%C3%9F%404x-p-1080.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/product-news/image-07.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/67c8566d7c7a46b4429830ce_ki-verband-gross-p-500.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/product-news/image-08.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/67c8566d7c7a46b4429830ce_ki-verband-gross-p-800.png"
+                       }
+                   ]
+    },
+    {
+        "source":  "https://www.aiio.de/partner-finden",
+        "slug":  "partner-finden",
+        "assets":  [
+                       {
+                           "path":  "/aiio-pages/partner-finden/image-01.svg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62bae77ef0d098075cf34904_wort%2Bkreis-wei%C3%9F.svg"
+                       },
+                       {
+                           "path":  "/aiio-pages/partner-finden/image-02.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/684933ad4ac9268a551929e6_partner-finden-banner.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/partner-finden/image-03.png",
+                           "source":  "https://cdn.prod.website-files.com/61e135f5aacd340b4914f075/68492ae93c42bd611229b8d4_bpmo_rgb_claim.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/partner-finden/image-04.png",
+                           "source":  "https://cdn.prod.website-files.com/61e135f5aacd340b4914f075/68be7c1ffc334376efc1ab29_FINK_Digital_Solutions_Logo_WortundBildmarke_Lang.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/partner-finden/image-05.jpg",
+                           "source":  "https://cdn.prod.website-files.com/61e135f5aacd340b4914f075/68db92c37ac7a1a3fc32ae71_20250910%20Catalysts%20Consulting%20Logo%20-%20New-01%20Batok%5B3%5D.jpg"
+                       },
+                       {
+                           "path":  "/aiio-pages/partner-finden/image-06.png",
+                           "source":  "https://cdn.prod.website-files.com/61e135f5aacd340b4914f075/68e3712258b60449ec547299_Logo%20NextUp%20(1).png"
+                       },
+                       {
+                           "path":  "/aiio-pages/partner-finden/image-07.png",
+                           "source":  "https://cdn.prod.website-files.com/61e135f5aacd340b4914f075/6853fbe008d47df9e260a420_T%26O%20Group_Logo.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/partner-finden/image-08.png",
+                           "source":  "https://cdn.prod.website-files.com/61e135f5aacd340b4914f075/68494dedeb47c2c50e6e7b5d_firmengruppenlogo-schwarz.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/partner-finden/image-09.png",
+                           "source":  "https://cdn.prod.website-files.com/61e135f5aacd340b4914f075/67c303dc3803e214c01cc68d_Optiqum%20Logo.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/partner-finden/image-10.png",
+                           "source":  "https://cdn.prod.website-files.com/61e135f5aacd340b4914f075/68492a156689c8ecb8ea63c6_cropped-LOgo-3-164x71.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/partner-finden/image-11.png",
+                           "source":  "https://cdn.prod.website-files.com/61e135f5aacd340b4914f075/67c30b33f60b55e8304bb8df_Bepro_Logo.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/partner-finden/image-12.png",
+                           "source":  "https://cdn.prod.website-files.com/61e135f5aacd340b4914f075/67afc76bdc8aabef115aecf5_IPU%20Logo.png"
+                       }
+                   ]
+    },
+    {
+        "source":  "https://www.aiio.de/blog",
+        "slug":  "blog",
+        "assets":  [
+                       {
+                           "path":  "/aiio-pages/blog/image-01.svg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62bae77ef0d098075cf34904_wort%2Bkreis-wei%C3%9F.svg"
+                       },
+                       {
+                           "path":  "/aiio-pages/blog/image-02.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1d6b87b1aafa09061aa43_1280px-ABB_logo.svg.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/blog/image-03.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/67c830eb1dd1eb05ac434ee1_Euromobil.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/blog/image-04.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1d6f23592a83b2c9e4821_Thyssenkrupp%20200x150.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/blog/image-05.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/67d14c1ed1f511a222fc0108_VTG_Aktiengesellschaft_logo.svg.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/blog/image-06.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/653262f2e5955b19609f58e6_accc27f0f04a81bc47cbf6bcf29daf8b_Media%20Central%20Logo%20in%20Box.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/blog/image-07.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1b30f2ee8656f2ea34d53_wort%2Bkreis-wei%C3%9F%404x.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/blog/image-08.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/67c8566d7c7a46b4429830ce_ki-verband-gross.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/blog/image-09.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1d6b87b1aafa09061aa43_1280px-ABB_logo.svg-p-500.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/blog/image-10.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1d6b87b1aafa09061aa43_1280px-ABB_logo.svg-p-800.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/blog/image-11.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1d6b87b1aafa09061aa43_1280px-ABB_logo.svg-p-1080.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/blog/image-12.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/67c830eb1dd1eb05ac434ee1_Euromobil-p-500.png"
+                       }
+                   ]
+    },
+    {
+        "source":  "https://www.aiio.de/services",
+        "slug":  "services",
+        "assets":  [
+                       {
+                           "path":  "/aiio-pages/services/image-01.svg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62bae77ef0d098075cf34904_wort%2Bkreis-wei%C3%9F.svg"
+                       },
+                       {
+                           "path":  "/aiio-pages/services/image-02.jpg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/643d3376090b753c63d72c63_Einf%C3%BChrungsschulung.jpg"
+                       },
+                       {
+                           "path":  "/aiio-pages/services/image-03.svg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/621cc5e517ee430d4db20cba_Pfeil%20nach%20rechts.svg"
+                       },
+                       {
+                           "path":  "/aiio-pages/services/image-04.jpg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/643d3cf784fd5d99e651d573_Modellierungsexperte%20werden.jpg"
+                       },
+                       {
+                           "path":  "/aiio-pages/services/image-05.jpg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/643d3b420313526779ad3d79_aiio%20Refresher.jpg"
+                       },
+                       {
+                           "path":  "/aiio-pages/services/image-06.jpg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/643d3e170aff90dd2ecdd550_schulungsbundle.jpg"
+                       },
+                       {
+                           "path":  "/aiio-pages/services/image-07.svg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/621cc60d3bdc9f3bc6629db2_Pfeil%20nach%20rechts%20weiss.svg"
+                       },
+                       {
+                           "path":  "/aiio-pages/services/image-08.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/646b810c5f7ff1456cdc4467_Sabrina%20Dieterle%2C%20Meimo%20AG.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/services/image-09.jpg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/646b8047fc59cfe9b8829b09_meimo-(Schutzabstand).jpg"
+                       },
+                       {
+                           "path":  "/aiio-pages/services/image-10.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1b30f2ee8656f2ea34d53_wort%2Bkreis-wei%C3%9F%404x.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/services/image-11.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/67c8566d7c7a46b4429830ce_ki-verband-gross.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/services/image-12.jpg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/643d3376090b753c63d72c63_Einf%C3%BChrungsschulung-p-500.jpg"
+                       }
+                   ]
+    },
+    {
+        "source":  "https://www.aiio.de/downloadcenter",
+        "slug":  "downloadcenter",
+        "assets":  [
+                       {
+                           "path":  "/aiio-pages/downloadcenter/image-01.svg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62bae77ef0d098075cf34904_wort%2Bkreis-wei%C3%9F.svg"
+                       },
+                       {
+                           "path":  "/aiio-pages/downloadcenter/image-02.svg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/6513f7a86a4808cda6717a02_25cfe3df994f837cf33fa28dde4d203a_Microsoft_Office_Teams_%282018%E2%80%93present%29.svg.svg"
+                       },
+                       {
+                           "path":  "/aiio-pages/downloadcenter/image-03.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1b30f2ee8656f2ea34d53_wort%2Bkreis-wei%C3%9F%404x.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/downloadcenter/image-04.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/67c8566d7c7a46b4429830ce_ki-verband-gross.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/downloadcenter/image-05.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1b30f2ee8656f2ea34d53_wort%2Bkreis-wei%C3%9F%404x-p-500.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/downloadcenter/image-06.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1b30f2ee8656f2ea34d53_wort%2Bkreis-wei%C3%9F%404x-p-800.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/downloadcenter/image-07.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1b30f2ee8656f2ea34d53_wort%2Bkreis-wei%C3%9F%404x-p-1080.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/downloadcenter/image-08.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/67c8566d7c7a46b4429830ce_ki-verband-gross-p-500.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/downloadcenter/image-09.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/67c8566d7c7a46b4429830ce_ki-verband-gross-p-800.png"
+                       }
+                   ]
+    },
+    {
+        "source":  "https://www.aiio.de/support",
+        "slug":  "support",
+        "assets":  [
+                       {
+                           "path":  "/aiio-pages/support/image-01.svg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62bae77ef0d098075cf34904_wort%2Bkreis-wei%C3%9F.svg"
+                       },
+                       {
+                           "path":  "/aiio-pages/support/image-02.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/631ee97b322acfdb26172976_Azure%20Active%20Directory.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/support/image-03.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/631eea5f8a5b069f07bfa51d_Azure%20Unternehmensanwendungen.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/support/image-04.jpg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/631eebd259ae5ad678109a58_aiio-azure-unternehmensanwendung.jpg"
+                       },
+                       {
+                           "path":  "/aiio-pages/support/image-05.jpg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/631eedf8af19c4015ac4ac17_aiio-azure-Berechtigungen-Markierungen.jpg"
+                       },
+                       {
+                           "path":  "/aiio-pages/support/image-06.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/631eef4092aded61304961f1_Berechtigungen%20akzeptieren.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/support/image-07.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1b30f2ee8656f2ea34d53_wort%2Bkreis-wei%C3%9F%404x.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/support/image-08.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/67c8566d7c7a46b4429830ce_ki-verband-gross.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/support/image-09.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/631ee97b322acfdb26172976_Azure%20Active%20Directory-p-500.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/support/image-10.jpg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/631eebd259ae5ad678109a58_aiio-azure-unternehmensanwendung-p-500.jpg"
+                       },
+                       {
+                           "path":  "/aiio-pages/support/image-11.jpg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/631eedf8af19c4015ac4ac17_aiio-azure-Berechtigungen-Markierungen-p-500.jpg"
+                       },
+                       {
+                           "path":  "/aiio-pages/support/image-12.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1b30f2ee8656f2ea34d53_wort%2Bkreis-wei%C3%9F%404x-p-500.png"
+                       }
+                   ]
+    },
+    {
+        "source":  "https://www.aiio.de/live-demo/kontakt",
+        "slug":  "demo-kontakt",
+        "assets":  [
+                       {
+                           "path":  "/aiio-pages/demo-kontakt/image-01.svg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62bae77ef0d098075cf34904_wort%2Bkreis-wei%C3%9F.svg"
+                       },
+                       {
+                           "path":  "/aiio-pages/demo-kontakt/image-02.jpg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/68b6fe6bdda386d0c2c4b7ec_250902_pmu-headshot.jpg"
+                       },
+                       {
+                           "path":  "/aiio-pages/demo-kontakt/image-03.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1b30f2ee8656f2ea34d53_wort%2Bkreis-wei%C3%9F%404x.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/demo-kontakt/image-04.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/67c8566d7c7a46b4429830ce_ki-verband-gross.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/demo-kontakt/image-05.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1b30f2ee8656f2ea34d53_wort%2Bkreis-wei%C3%9F%404x-p-500.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/demo-kontakt/image-06.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1b30f2ee8656f2ea34d53_wort%2Bkreis-wei%C3%9F%404x-p-800.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/demo-kontakt/image-07.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1b30f2ee8656f2ea34d53_wort%2Bkreis-wei%C3%9F%404x-p-1080.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/demo-kontakt/image-08.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/67c8566d7c7a46b4429830ce_ki-verband-gross-p-500.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/demo-kontakt/image-09.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/67c8566d7c7a46b4429830ce_ki-verband-gross-p-800.png"
+                       }
+                   ]
+    },
+    {
+        "source":  "https://www.aiio.de/kostenlose-testversion/anmelden",
+        "slug":  "testen",
+        "assets":  [
+                       {
+                           "path":  "/aiio-pages/testen/image-01.svg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62bae77ef0d098075cf34904_wort%2Bkreis-wei%C3%9F.svg"
+                       },
+                       {
+                           "path":  "/aiio-pages/testen/image-02.svg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/621cc60d3bdc9f3bc6629db2_Pfeil%20nach%20rechts%20weiss.svg"
+                       },
+                       {
+                           "path":  "/aiio-pages/testen/image-03.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1b30f2ee8656f2ea34d53_wort%2Bkreis-wei%C3%9F%404x.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/testen/image-04.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/67c8566d7c7a46b4429830ce_ki-verband-gross.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/testen/image-05.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1b30f2ee8656f2ea34d53_wort%2Bkreis-wei%C3%9F%404x-p-500.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/testen/image-06.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1b30f2ee8656f2ea34d53_wort%2Bkreis-wei%C3%9F%404x-p-800.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/testen/image-07.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1b30f2ee8656f2ea34d53_wort%2Bkreis-wei%C3%9F%404x-p-1080.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/testen/image-08.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/67c8566d7c7a46b4429830ce_ki-verband-gross-p-500.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/testen/image-09.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/67c8566d7c7a46b4429830ce_ki-verband-gross-p-800.png"
+                       }
+                   ]
+    },
+    {
+        "source":  "https://www.aiio.de/pricing",
+        "slug":  "pricing",
+        "assets":  [
+                       {
+                           "path":  "/aiio-pages/pricing/image-01.svg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62bae77ef0d098075cf34904_wort%2Bkreis-wei%C3%9F.svg"
+                       },
+                       {
+                           "path":  "/aiio-pages/pricing/image-02.svg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/670cfe178b3cc2d9a59b0aa7_euromobil.svg"
+                       },
+                       {
+                           "path":  "/aiio-pages/pricing/image-03.jpg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/6800cc49bd0e2a2ae5afd8ee_wellmann_berlin_11.jpg"
+                       },
+                       {
+                           "path":  "/aiio-pages/pricing/image-04.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/66cf1eeae32f8a0dbda55f15_ABB_logo.svg.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/pricing/image-05.jpg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/67c8366dbd0a54b5f326f5ca_ki-bilder-3.jpg"
+                       },
+                       {
+                           "path":  "/aiio-pages/pricing/image-06.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/6826e950e37a0649c4fbbeb1_MediaCentral_Logo_positiv_RGB.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/pricing/image-07.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/6489663862ab5785e5352646_Max%20MC%20540x540%20Square.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/pricing/image-08.jpg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/66cc8406f06c7512aeb2979f_logo_hvle.jpg"
+                       },
+                       {
+                           "path":  "/aiio-pages/pricing/image-09.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/64f1c05fd7acc99e5ef753d3_Symacon%20Logo.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/pricing/image-10.jpg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/64f1c114a9500669ff9b08db_Bernd%20Petermann.jpg"
+                       },
+                       {
+                           "path":  "/aiio-pages/pricing/image-11.jpg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/6790b812ca56f0b19681b792_13779ffe3d1ecc0ba549dc645532e866_93f26_windpunx_Hauptlogo_Claim-s.jpg"
+                       },
+                       {
+                           "path":  "/aiio-pages/pricing/image-12.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/64e325df33128d898636ad23_De%20Giradi%20Logo.PNG"
+                       }
+                   ]
+    },
+    {
+        "source":  "https://www.aiio.de/release-notes",
+        "slug":  "release-notes",
+        "assets":  [
+                       {
+                           "path":  "/aiio-pages/release-notes/image-01.svg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62bae77ef0d098075cf34904_wort%2Bkreis-wei%C3%9F.svg"
+                       },
+                       {
+                           "path":  "/aiio-pages/release-notes/image-02.svg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/621cc5e517ee430d4db20cba_Pfeil%20nach%20rechts.svg"
+                       },
+                       {
+                           "path":  "/aiio-pages/release-notes/image-03.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1b30f2ee8656f2ea34d53_wort%2Bkreis-wei%C3%9F%404x.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/release-notes/image-04.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/67c8566d7c7a46b4429830ce_ki-verband-gross.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/release-notes/image-05.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1b30f2ee8656f2ea34d53_wort%2Bkreis-wei%C3%9F%404x-p-500.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/release-notes/image-06.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1b30f2ee8656f2ea34d53_wort%2Bkreis-wei%C3%9F%404x-p-800.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/release-notes/image-07.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1b30f2ee8656f2ea34d53_wort%2Bkreis-wei%C3%9F%404x-p-1080.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/release-notes/image-08.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/67c8566d7c7a46b4429830ce_ki-verband-gross-p-500.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/release-notes/image-09.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/67c8566d7c7a46b4429830ce_ki-verband-gross-p-800.png"
+                       }
+                   ]
+    },
+    {
+        "source":  "https://www.aiio.de/kontakt",
+        "slug":  "kontakt",
+        "assets":  [
+                       {
+                           "path":  "/aiio-pages/kontakt/image-01.svg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62bae77ef0d098075cf34904_wort%2Bkreis-wei%C3%9F.svg"
+                       },
+                       {
+                           "path":  "/aiio-pages/kontakt/image-02.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62976e3bfd3f4a086cfe02be_aiio%20Logo%20light%20lila.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/kontakt/image-03.svg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/61dd47caf292962f5bf760ec_Telefon%20Icon%20light%20lila.svg"
+                       },
+                       {
+                           "path":  "/aiio-pages/kontakt/image-04.svg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/61dd48f43abe16a5c379acdc_Mail%20Logo%20light%20lila.svg"
+                       },
+                       {
+                           "path":  "/aiio-pages/kontakt/image-05.svg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/61dd48e6facf8a6d15f92644_Location%20Logo%20light%20lila.svg"
+                       },
+                       {
+                           "path":  "/aiio-pages/kontakt/image-06.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1b30f2ee8656f2ea34d53_wort%2Bkreis-wei%C3%9F%404x.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/kontakt/image-07.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/67c8566d7c7a46b4429830ce_ki-verband-gross.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/kontakt/image-08.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1b30f2ee8656f2ea34d53_wort%2Bkreis-wei%C3%9F%404x-p-500.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/kontakt/image-09.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1b30f2ee8656f2ea34d53_wort%2Bkreis-wei%C3%9F%404x-p-800.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/kontakt/image-10.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1b30f2ee8656f2ea34d53_wort%2Bkreis-wei%C3%9F%404x-p-1080.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/kontakt/image-11.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/67c8566d7c7a46b4429830ce_ki-verband-gross-p-500.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/kontakt/image-12.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/67c8566d7c7a46b4429830ce_ki-verband-gross-p-800.png"
+                       }
+                   ]
+    },
+    {
+        "source":  "https://www.aiio.de/presse",
+        "slug":  "presse",
+        "assets":  [
+                       {
+                           "path":  "/aiio-pages/presse/image-01.svg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62bae77ef0d098075cf34904_wort%2Bkreis-wei%C3%9F.svg"
+                       },
+                       {
+                           "path":  "/aiio-pages/presse/image-02.svg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a0a901703635fe01724da8_Downloadbereich-Icon.svg"
+                       },
+                       {
+                           "path":  "/aiio-pages/presse/image-03.svg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a0a8d673f7e0703c738e96_Aktuelle-Stories-Icon.svg"
+                       },
+                       {
+                           "path":  "/aiio-pages/presse/image-04.svg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a0a8e6f0e771e6a3d8042b_Zitate-Icon.svg"
+                       },
+                       {
+                           "path":  "/aiio-pages/presse/image-05.svg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a0a8f5a5b90e1c7bafcaa5_Presse-Archiv-Icon.svg"
+                       },
+                       {
+                           "path":  "/aiio-pages/presse/image-06.svg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a0a92c95a46b46ebdd233c_Kontakt-Icon-weiss.svg"
+                       },
+                       {
+                           "path":  "/aiio-pages/presse/image-07.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1d6735f8f794b09ead9ed_Volkswagen_logo_2019.svg.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/presse/image-08.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1d6e5bece233357a00fa9_VDE%20200x150.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/presse/image-09.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1d6f23592a83b2c9e4821_Thyssenkrupp%20200x150.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/presse/image-10.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1d6fb6e382c294625c5fc_Total%20200x150.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/presse/image-11.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1d6b87b1aafa09061aa43_1280px-ABB_logo.svg.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/presse/image-12.jpg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1dd46935b7c639ba4c109_usp-image-green.jpg"
+                       }
+                   ]
+    },
+    {
+        "source":  "https://www.aiio.de/facts",
+        "slug":  "facts",
+        "assets":  [
+                       {
+                           "path":  "/aiio-pages/facts/image-01.svg",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62bae77ef0d098075cf34904_wort%2Bkreis-wei%C3%9F.svg"
+                       },
+                       {
+                           "path":  "/aiio-pages/facts/image-02.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1b30f2ee8656f2ea34d53_wort%2Bkreis-wei%C3%9F%404x.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/facts/image-03.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/67c8566d7c7a46b4429830ce_ki-verband-gross.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/facts/image-04.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1b30f2ee8656f2ea34d53_wort%2Bkreis-wei%C3%9F%404x-p-500.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/facts/image-05.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1b30f2ee8656f2ea34d53_wort%2Bkreis-wei%C3%9F%404x-p-800.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/facts/image-06.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/62a1b30f2ee8656f2ea34d53_wort%2Bkreis-wei%C3%9F%404x-p-1080.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/facts/image-07.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/67c8566d7c7a46b4429830ce_ki-verband-gross-p-500.png"
+                       },
+                       {
+                           "path":  "/aiio-pages/facts/image-08.png",
+                           "source":  "https://cdn.prod.website-files.com/61b8746e0e120e69f52883cf/67c8566d7c7a46b4429830ce_ki-verband-gross-p-800.png"
+                       }
+                   ]
+    }
+]
