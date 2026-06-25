@@ -118,19 +118,19 @@ const cards = [
 const problemCards = [
   {
     title: "Knowledge disappears.",
-    copy: "Knowledge leaves with people, projects and decisions.",
+    copy: "Knowledge leaves with every handover.",
   },
   {
     title: "AI lacks context.",
-    copy: "AI cannot help without organizational context.",
+    copy: "Without context, AI guesses.",
   },
   {
     title: "Complexity explodes.",
-    copy: "Systems multiply. The whole becomes invisible.",
+    copy: "Systems multiply. Clarity disappears.",
   },
   {
     title: "Decisions slow down.",
-    copy: "Fragmented understanding slows every move.",
+    copy: "Fragmented understanding slows action.",
   },
 ] as const;
 
@@ -158,16 +158,16 @@ const oisEcosystemElements = [
 const imagineMoments = [
   {
     statement: "Imagine an organization that never loses its knowledge.",
-    support: "Knowledge stays, even when people leave.",
+    support: "Knowledge stays.",
   },
   {
     statement: "Imagine an organization that truly understands itself.",
-    support: "Processes, decisions and relationships become shared understanding.",
+    support: "Everything becomes shared understanding.",
   },
   {
     statement:
       "Imagine an organization that continuously develops new capabilities.",
-    support: "Every interaction makes the organization stronger.",
+    support: "Every interaction strengthens it.",
   },
   {
     statement: "Imagine an organization that is resilient by design.",
@@ -205,7 +205,7 @@ function Hero() {
           <br />
           Organizational Intelligence changes organizations.
           <br />
-          aiio enables both.
+          aiio brings them together.
         </p>
         <div className="actions hero-actions" aria-label="Primary actions">
           <a className="button hero-button" href="#organizational-intelligence">
@@ -249,17 +249,13 @@ function ConceptBreakthrough() {
           <h2>The missing layer is Organizational Intelligence.</h2>
           <div className="concept-statement">
             <p>
-              The fundamental innovation of the AI era is not that machines
-              understand organizations.
+              The breakthrough is not machines understanding organizations.
             </p>
-            <p>
-              It is that organizations can, for the first time, be enabled to
-              understand themselves.
-            </p>
+            <p>It is organizations understanding themselves.</p>
           </div>
           <p className="concept-support">
-            aiio creates the living foundation for organizational memory,
-            understanding and capability.
+            aiio creates the living foundation for memory, understanding and
+            capability.
           </p>
         </div>
         <ol
@@ -282,20 +278,16 @@ function NewKindOrganization() {
         <div className="organization-header">
           <p className="dark-eyebrow">A New Kind of Organization</p>
           <h2>
-            The next generation will not be defined by artificial intelligence.
+            The next generation will not be defined by AI alone.
             <br />
             It will be defined by self-understanding.
           </h2>
-          <p>
-            Organizations can now preserve knowledge, understand themselves and
-            build new capabilities continuously.
-          </p>
+          <p>Knowledge stays. Understanding grows. Capabilities compound.</p>
         </div>
         <div className="organization-closing-block">
           <div className="organization-closing-statement">
-            The organizations that will lead tomorrow are those that
-            continuously understand themselves and develop new organizational
-            capabilities.
+            Tomorrow&apos;s leading organizations continuously understand themselves
+            and develop new capabilities.
           </div>
         </div>
         <ol className="organization-journey" aria-label="Self-enabling organization journey">
@@ -358,19 +350,15 @@ function OisArchitecture() {
     <section className="ois-section" id="architektur">
       <div className="ois-intro">
         <p className="ois-section-title">Built around Organizational Intelligence</p>
-        <h2>
-          Every resilient organization needs a foundation that continuously
-          connects knowledge, context, people and Artificial Intelligence.
-        </h2>
+        <h2>Resilient organizations need one living foundation.</h2>
         <div className="ois-body">
-          <p>Organizations already possess enormous knowledge.</p>
+          <p>The knowledge is already there.</p>
           <p>
-            What they lack is a living foundation that turns fragmentation into
-            shared understanding.
+            What is missing is a system that turns fragments into shared
+            understanding.
           </p>
           <p>
-            At aiio, we call this foundation the Organizational Intelligence
-            System (OIS).
+            At aiio, that foundation is the Organizational Intelligence System.
           </p>
         </div>
       </div>
@@ -412,11 +400,8 @@ function OisArchitecture() {
       </div>
 
       <div className="ois-bottom-statement">
-        <p>The OIS is not another enterprise application.</p>
-        <p>
-          It is the foundation that enables organizations to understand
-          themselves.
-        </p>
+        <p>The OIS is not another application.</p>
+        <p>It is the foundation for organizational self-understanding.</p>
       </div>
     </section>
   );
