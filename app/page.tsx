@@ -257,10 +257,13 @@ function NewKindOrganization() {
             preserve their knowledge, understand themselves and develop new
             organizational capabilities.
           </p>
-          <p className="organization-closing-statement">
+        </div>
+        <div className="organization-closing-block">
+          <div className="organization-closing-statement">
             The organizations that will lead tomorrow are those that
-            continuously understand, adapt and enable themselves.
-          </p>
+            continuously understand themselves and develop new organizational
+            capabilities.
+          </div>
         </div>
         <ol className="organization-journey" aria-label="Self-enabling organization journey">
           {intelligenceProgression.map((step) => (
