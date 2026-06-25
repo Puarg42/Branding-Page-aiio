@@ -115,35 +115,115 @@ const cards = [
   },
 ] as const;
 
+const problemCards = [
+  {
+    title: "Knowledge disappears.",
+    copy:
+      "Critical knowledge leaves with people, projects, systems and decisions faster than organizations can preserve it.",
+  },
+  {
+    title: "AI lacks context.",
+    copy:
+      "Without shared organizational context, AI can answer questions but cannot reliably support how the organization works.",
+  },
+  {
+    title: "Complexity explodes.",
+    copy:
+      "Structures, tools, rules and responsibilities multiply until no one sees the whole system clearly.",
+  },
+  {
+    title: "Decisions slow down.",
+    copy:
+      "When understanding is fragmented, leaders spend more time aligning than moving.",
+  },
+] as const;
+
+const intelligenceProgression = [
+  "Knowledge",
+  "Living Organizational Memory",
+  "Organizational Understanding",
+  "Organizational Intelligence",
+  "Organizational Capabilities",
+  "Organizational Resilience",
+  "Self-Enabling Organization",
+] as const;
+
 function Hero() {
   return (
     <section className="hero">
-      <div className="hero-content">
-        <p className="eyebrow">
-          {getEditableContent("home.hero.eyebrow", "Das OIS")}
+      <div className="landing-hero-content">
+        <h1>The future belongs to organizations that understand themselves.</h1>
+        <p className="hero-subheadline">
+          Artificial Intelligence changes software.
+          <br />
+          Organizational Intelligence changes organizations.
+          <br />
+          aiio enables both.
         </p>
-        <h1>
-          <span className="headline-desktop">
-            {getEditableContent("home.hero.title", "Ihre Organisation weiß mehr, als Ihre KI nutzen kann.")}
-          </span>
-          <span className="headline-mobile">
-            {getEditableContent("home.hero.title", "Ihre Organisation weiß mehr, als Ihre KI nutzen kann.")}
-          </span>
-        </h1>
-        <p>
-          {getEditableContent(
-            "home.hero.intro",
-            "Das Organizational Intelligence System von aiio macht verstreutes Organisationswissen erstmals als gemeinsame Handlungsbasis für Menschen, KI-Agenten und bestehende Unternehmenssysteme nutzbar. So wird aus Dokumenten, Prozessen, Strukturen und Erfahrungswissen eine aktivierbare Intelligenzschicht für die Organisation.",
-          )}
-        </p>
-        <div className="actions" aria-label="Primäre Aktionen">
-          <a className="button" href="#architektur">
-            Plattform verstehen
+        <div className="actions hero-actions" aria-label="Primary actions">
+          <a className="button hero-button" href="#organizational-intelligence">
+            Discover the Organizational Intelligence System
           </a>
-          <a className="button secondary" href="/live-demo/kontakt">
-            Demo anfordern
+          <a className="button hero-button secondary" href="/live-demo/kontakt">
+            See it in action
           </a>
         </div>
+      </div>
+      <div className="hero-visual" aria-hidden="true" />
+    </section>
+  );
+}
+
+function ProblemSection() {
+  return (
+    <section className="problem-section" id="problem">
+      <div className="problem-inner">
+        <p className="dark-eyebrow">The problem</p>
+        <h2>Organizations are losing themselves.</h2>
+        <div className="problem-grid">
+          {problemCards.map((card) => (
+            <article className="problem-card" key={card.title}>
+              <h3>{card.title}</h3>
+              <p>{card.copy}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ConceptBreakthrough() {
+  return (
+    <section className="concept-section" id="organizational-intelligence">
+      <div className="concept-inner">
+        <div className="concept-copy">
+          <p className="dark-eyebrow">The missing layer</p>
+          <h2>The missing layer is Organizational Intelligence.</h2>
+          <div className="concept-statement">
+            <p>
+              The fundamental innovation of the AI era is not that machines
+              understand organizations.
+            </p>
+            <p>
+              It is that organizations can, for the first time, be enabled to
+              understand themselves.
+            </p>
+          </div>
+          <p className="concept-support">
+            aiio creates the Organizational Intelligence System: a living
+            foundation that preserves organizational knowledge, creates shared
+            understanding and enables new organizational capabilities.
+          </p>
+        </div>
+        <ol
+          aria-label="Organizational Intelligence progression"
+          className="intelligence-progression"
+        >
+          {intelligenceProgression.map((step) => (
+            <li key={step}>{step}</li>
+          ))}
+        </ol>
       </div>
     </section>
   );
@@ -284,6 +364,8 @@ export default function Home() {
     <main>
       <MainHeader />
       <Hero />
+      <ProblemSection />
+      <ConceptBreakthrough />
       <Architecture />
       <Layers />
       <Demo />

@@ -2876,6 +2876,324 @@ h1 {
   }
 }
 
+/* New dark landing page opening */
+.hero {
+  align-items: center;
+  background:
+    radial-gradient(circle at 74% 42%, rgb(107 68 190 / 34%), transparent 28%),
+    radial-gradient(circle at 30% 6%, rgb(90 50 138 / 20%), transparent 30%),
+    linear-gradient(135deg, #020205 0%, #090812 48%, #12091f 100%);
+  display: grid;
+  height: auto;
+  max-height: none;
+  min-height: calc(100vh - 76px);
+  overflow: hidden;
+  padding: clamp(72px, 9vw, 132px) 0 clamp(72px, 8vw, 118px);
+}
+
+.hero::before {
+  display: none;
+}
+
+.hero::after {
+  background:
+    linear-gradient(90deg, rgb(2 2 5 / 96%) 0%, rgb(2 2 5 / 78%) 34%, rgb(2 2 5 / 16%) 72%, transparent 100%),
+    radial-gradient(circle at 78% 48%, rgb(145 102 255 / 18%), transparent 36%);
+  content: "";
+  display: block;
+  inset: 0;
+  opacity: 1;
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+}
+
+.hero:hover::after {
+  opacity: 1;
+}
+
+.landing-hero-content,
+.problem-inner,
+.concept-inner {
+  margin: 0 auto;
+  position: relative;
+  width: min(1180px, calc(100% - 40px));
+  z-index: 2;
+}
+
+.landing-hero-content {
+  display: grid;
+  justify-items: start;
+}
+
+.hero h1 {
+  color: #ffffff;
+  font-size: clamp(3.3rem, 7vw, 7.4rem);
+  letter-spacing: 0;
+  line-height: 0.94;
+  margin: 0;
+  max-width: min(820px, 64vw);
+}
+
+.hero-subheadline,
+.hero p.hero-subheadline {
+  color: rgb(255 255 255 / 76%);
+  font-size: clamp(1.12rem, 1.7vw, 1.45rem);
+  line-height: 1.58;
+  margin: 30px 0 0;
+  max-width: 620px;
+}
+
+.hero-actions {
+  margin-top: 38px;
+}
+
+.hero-button {
+  background: #ffffff;
+  color: #12091f;
+  min-height: 52px;
+  padding: 0 22px;
+}
+
+.hero-button.secondary {
+  background: rgb(255 255 255 / 7%);
+  border: 1px solid rgb(255 255 255 / 20%);
+  color: #ffffff;
+}
+
+.hero-visual {
+  background-image: url("/landing-organizational-intelligence-hero-v1.png");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: 0;
+  height: min(64vw, 760px);
+  opacity: 0.9;
+  pointer-events: none;
+  position: absolute;
+  right: clamp(-280px, -10vw, -90px);
+  width: min(72vw, 1180px);
+  z-index: 0;
+}
+
+.dark-eyebrow {
+  color: rgb(179 145 255 / 86%);
+  font-size: 0.76rem;
+  font-weight: 820;
+  letter-spacing: 0.12em;
+  margin: 0 0 20px;
+  text-transform: uppercase;
+}
+
+.problem-section,
+.concept-section {
+  background:
+    radial-gradient(circle at 50% 0%, rgb(90 50 138 / 18%), transparent 34%),
+    linear-gradient(180deg, #020205 0%, #070610 100%);
+  border-top: 1px solid rgb(255 255 255 / 8%);
+  color: #ffffff;
+}
+
+.problem-section {
+  padding: clamp(84px, 10vw, 140px) 0 clamp(88px, 10vw, 148px);
+}
+
+.problem-inner h2,
+.concept-inner h2 {
+  color: #ffffff;
+  font-size: clamp(2.55rem, 5vw, 5rem);
+  line-height: 0.98;
+  margin: 0;
+  max-width: 860px;
+}
+
+.problem-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: clamp(42px, 6vw, 76px);
+}
+
+.problem-card {
+  background:
+    linear-gradient(180deg, rgb(255 255 255 / 8%), rgb(255 255 255 / 3%)),
+    rgb(255 255 255 / 2%);
+  border: 1px solid rgb(255 255 255 / 11%);
+  border-radius: 14px;
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 10%);
+  min-height: 238px;
+  padding: 24px;
+}
+
+.problem-card h3 {
+  color: #ffffff;
+  font-size: clamp(1.22rem, 1.7vw, 1.55rem);
+  line-height: 1.08;
+  margin: 0 0 22px;
+}
+
+.problem-card p {
+  color: rgb(255 255 255 / 62%);
+  font-size: 1rem;
+  line-height: 1.68;
+  margin: 0;
+}
+
+.concept-section {
+  padding: clamp(96px, 12vw, 176px) 0;
+}
+
+.concept-inner {
+  align-items: center;
+  display: grid;
+  gap: clamp(48px, 7vw, 90px);
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 430px);
+}
+
+.concept-statement {
+  color: #ffffff;
+  display: grid;
+  font-family: var(--font-aiio-heading);
+  font-size: clamp(1.72rem, 3.2vw, 3.25rem);
+  font-weight: 600;
+  gap: 22px;
+  line-height: 1.08;
+  margin-top: clamp(36px, 5vw, 58px);
+  max-width: 920px;
+}
+
+.concept-statement p {
+  margin: 0;
+}
+
+.concept-statement p:first-child {
+  color: rgb(255 255 255 / 58%);
+}
+
+.concept-support {
+  color: rgb(255 255 255 / 66%);
+  font-size: clamp(1.05rem, 1.45vw, 1.28rem);
+  line-height: 1.72;
+  margin: 34px 0 0;
+  max-width: 760px;
+}
+
+.intelligence-progression {
+  background:
+    linear-gradient(180deg, rgb(255 255 255 / 8%), rgb(255 255 255 / 3%)),
+    rgb(255 255 255 / 2%);
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-radius: 18px;
+  box-shadow:
+    0 40px 90px rgb(0 0 0 / 28%),
+    inset 0 1px 0 rgb(255 255 255 / 12%);
+  counter-reset: progression;
+  display: grid;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 18px;
+}
+
+.intelligence-progression li {
+  color: rgb(255 255 255 / 84%);
+  font-family: var(--font-aiio-heading);
+  font-size: clamp(1rem, 1.4vw, 1.18rem);
+  font-weight: 600;
+  line-height: 1.18;
+  min-height: 58px;
+  padding: 14px 14px 28px;
+  position: relative;
+  text-align: center;
+}
+
+.intelligence-progression li:not(:last-child)::after {
+  bottom: 2px;
+  color: rgb(179 145 255 / 72%);
+  content: "↓";
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.intelligence-progression li:last-child {
+  background: rgb(90 50 138 / 32%);
+  border: 1px solid rgb(179 145 255 / 20%);
+  border-radius: 12px;
+  color: #ffffff;
+  padding-bottom: 14px;
+}
+
+@media (max-width: 920px) {
+  .hero {
+    min-height: 720px;
+  }
+
+  .hero h1 {
+    max-width: 780px;
+  }
+
+  .hero-visual {
+    bottom: -80px;
+    height: min(86vw, 620px);
+    opacity: 0.46;
+    right: -280px;
+    width: min(112vw, 920px);
+  }
+
+  .problem-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .concept-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .intelligence-progression {
+    max-width: 520px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    min-height: 700px;
+    padding: 56px 0 72px;
+  }
+
+  .landing-hero-content,
+  .problem-inner,
+  .concept-inner {
+    width: min(calc(100% - 28px), 1180px);
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    line-height: 1;
+    max-width: 100%;
+  }
+
+  .hero-subheadline,
+  .hero p.hero-subheadline {
+    font-size: 1.05rem;
+    max-width: 100%;
+  }
+
+  .problem-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .problem-card {
+    min-height: 0;
+  }
+
+  .concept-statement {
+    font-size: 1.82rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero::after,
   .about-hero::after,
