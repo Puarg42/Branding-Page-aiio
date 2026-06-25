@@ -17,14 +17,14 @@ const layerSections = [
     ),
     noteTitle: (
       <>
-        Bereits erweiterbar mit Prozess-Staubsauger{" "}
+        Erweiterbar mit dem Prozess-Staubsauger{" "}
         <strong>
           (ProcessMagnet<sup>&reg;</sup>light)
         </strong>
       </>
     ),
     note:
-      "Automatische Dokumentenanalyse und Prozess-Staubsauger für den schnellen Einstieg.",
+      "zur automatischen Dokumentenanalyse für den schnellen Einstieg.",
     stack: ["Manifestieren", "Vernetzen", "Bewahren"],
     website: "https://processcollector.com/",
     websiteLabel: "ProcessCollector",
