@@ -3306,6 +3306,127 @@ h1 {
   }
 }
 
+.imagine-section {
+  background: #030305;
+  border-top: 1px solid rgb(255 255 255 / 8%);
+  color: #ffffff;
+  overflow: hidden;
+  position: relative;
+}
+
+.imagine-section::before {
+  animation: imagineBackgroundDrift 28s ease-in-out infinite alternate;
+  background:
+    linear-gradient(104deg, transparent 0%, rgb(255 255 255 / 0%) 38%, rgb(255 255 255 / 5%) 50%, rgb(255 255 255 / 0%) 62%, transparent 100%);
+  content: "";
+  height: 100%;
+  inset: 0;
+  opacity: 0.34;
+  pointer-events: none;
+  position: absolute;
+  transform: translateX(-18%);
+  width: 140%;
+}
+
+.imagine-section-title {
+  color: rgb(255 255 255 / 46%);
+  font-size: 0.78rem;
+  font-weight: 820;
+  left: 50%;
+  letter-spacing: 0.14em;
+  margin: 0;
+  position: sticky;
+  text-align: center;
+  text-transform: uppercase;
+  top: 108px;
+  transform: translateX(-50%);
+  width: max-content;
+  z-index: 2;
+}
+
+.imagine-moment {
+  align-items: center;
+  display: grid;
+  justify-items: center;
+  min-height: 100svh;
+  padding: clamp(96px, 10vw, 150px) 20px;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.imagine-copy {
+  display: grid;
+  gap: clamp(26px, 4vw, 48px);
+  justify-items: center;
+  max-width: 1120px;
+}
+
+.imagine-copy h2 {
+  color: #ffffff;
+  font-size: clamp(3.4rem, 8vw, 8.8rem);
+  letter-spacing: 0;
+  line-height: 0.94;
+  margin: 0;
+  max-width: 1120px;
+  text-wrap: balance;
+}
+
+.imagine-copy p {
+  color: rgb(255 255 255 / 66%);
+  font-size: clamp(1.14rem, 2vw, 2rem);
+  line-height: 1.45;
+  margin: 0;
+  max-width: 760px;
+  text-wrap: balance;
+}
+
+.imagine-final .imagine-copy h2 {
+  max-width: 960px;
+}
+
+@keyframes imagineBackgroundDrift {
+  0% {
+    opacity: 0.18;
+    transform: translateX(-22%);
+  }
+
+  100% {
+    opacity: 0.38;
+    transform: translateX(-2%);
+  }
+}
+
+@keyframes imagineMomentReveal {
+  0% {
+    filter: blur(14px);
+    opacity: 0;
+    transform: translateY(56px) scale(0.985);
+  }
+
+  42%,
+  64% {
+    filter: blur(0);
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  100% {
+    filter: blur(8px);
+    opacity: 0.12;
+    transform: translateY(-44px) scale(0.992);
+  }
+}
+
+@supports (animation-timeline: view()) {
+  .imagine-copy {
+    animation: imagineMomentReveal both cubic-bezier(0.2, 0, 0, 1);
+    animation-range: entry 10% cover 78%;
+    animation-timeline: view();
+    opacity: 0;
+  }
+}
+
 .ois-section {
   background: #050507;
   border-top: 1px solid rgb(255 255 255 / 8%);
@@ -3625,6 +3746,14 @@ h1 {
     min-height: clamp(138px, 18vh, 220px);
   }
 
+  .imagine-copy h2 {
+    font-size: clamp(3.1rem, 10vw, 6.2rem);
+  }
+
+  .imagine-copy p {
+    font-size: clamp(1.1rem, 2.6vw, 1.55rem);
+  }
+
   .ois-intro h2 {
     font-size: clamp(3rem, 10vw, 5.2rem);
   }
@@ -3707,6 +3836,25 @@ h1 {
 
   .organization-bottom-statement p {
     font-size: 1.75rem;
+  }
+
+  .imagine-section-title {
+    top: 92px;
+  }
+
+  .imagine-moment {
+    min-height: 100svh;
+    padding: 84px 14px;
+  }
+
+  .imagine-copy h2 {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .imagine-copy p {
+    font-size: 1.08rem;
+    line-height: 1.56;
   }
 
   .ois-section {
@@ -3823,6 +3971,17 @@ h1 {
   .organization-journey li,
   .organization-bottom-statement p {
     animation: none;
+    filter: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .imagine-section::before,
+  .imagine-copy {
+    animation: none;
+  }
+
+  .imagine-copy {
     filter: none;
     opacity: 1;
     transform: none;

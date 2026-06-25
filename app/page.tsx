@@ -159,6 +159,33 @@ const oisEcosystemElements = [
   "Agents",
 ] as const;
 
+const imagineMoments = [
+  {
+    statement: "Imagine an organization that never loses its knowledge.",
+    support: "Knowledge stays, even when people leave.",
+  },
+  {
+    statement: "Imagine an organization that truly understands itself.",
+    support:
+      "Every process, every decision and every relationship becomes part of one shared organizational understanding.",
+  },
+  {
+    statement:
+      "Imagine an organization that continuously develops new capabilities.",
+    support: "Every interaction makes the organization stronger.",
+  },
+  {
+    statement: "Imagine an organization that is resilient by design.",
+    support: (
+      <>
+        Prepared for change.
+        <br />
+        Ready for the unknown.
+      </>
+    ),
+  },
+] as const;
+
 function Hero() {
   return (
     <section className="hero">
@@ -277,6 +304,27 @@ function NewKindOrganization() {
           <p>Self-understanding is the prerequisite for self-enablement.</p>
         </div>
       </div>
+    </section>
+  );
+}
+
+function ImagineFuture() {
+  return (
+    <section className="imagine-section" id="imagine">
+      <p className="imagine-section-title">Imagine...</p>
+      {imagineMoments.map((moment) => (
+        <section className="imagine-moment" key={moment.statement}>
+          <div className="imagine-copy">
+            <h2>{moment.statement}</h2>
+            <p>{moment.support}</p>
+          </div>
+        </section>
+      ))}
+      <section className="imagine-moment imagine-final">
+        <div className="imagine-copy">
+          <h2>This is the Self-Enabling Organization.</h2>
+        </div>
+      </section>
     </section>
   );
 }
@@ -490,6 +538,7 @@ export default function Home() {
       <ProblemSection />
       <ConceptBreakthrough />
       <NewKindOrganization />
+      <ImagineFuture />
       <OisArchitecture />
       <Layers />
       <Demo />
