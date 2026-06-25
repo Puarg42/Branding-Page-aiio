@@ -71,7 +71,7 @@ const layerSections = [
       <RichText
         html={getEditableContent(
           "home.layer.forge",
-          "<strong>ProcessForge®</strong>ist die Wissensschmiede für Organisationen: Aus dem neu erhobenen und konsolidierten Informationen erzeugt sie neues, zielgerichtetes Organisationswissen. Dieses wird in passende, auch multimodale Formate gebracht, von Agenten kontextbezogen genutzt und bedarfsgerecht an Umsysteme verteilt.",
+          "<strong>ProcessForge®</strong> ist die Wissensschmiede für Organisationen: Aus dem neu erhobenen und konsolidierten Informationen erzeugt sie neues, zielgerichtetes Organisationswissen. Dieses wird in passende, auch multimodale Formate gebracht, von Agenten kontextbezogen genutzt und bedarfsgerecht an Umsysteme verteilt.",
         )}
       />
     ),
@@ -138,16 +138,16 @@ function Hero() {
         </p>
         <h1>
           <span className="headline-desktop">
-            {getEditableContent("home.hero.title", "Organizational Intelligence mit System")}
+            {getEditableContent("home.hero.title", "Ihre Organisation weiß mehr, als Ihre KI nutzen kann.")}
           </span>
           <span className="headline-mobile">
-            {getEditableContent("home.hero.title", "Organizational Intelligence mit System")}
+            {getEditableContent("home.hero.title", "Ihre Organisation weiß mehr, als Ihre KI nutzen kann.")}
           </span>
         </h1>
         <p>
           {getEditableContent(
             "home.hero.intro",
-            `Das OIS von aiio macht Organisationswissen erstmals als gemeinsame Wissensbasis für Menschen, KI-Agenten und bestehende Unternehmenssysteme nutzbar. So entstehen Transparenz, intelligente Automatisierung und völlig neue Möglichkeiten der Organisationsentwicklung.`,
+            "Das Organizational Intelligence System von aiio macht verstreutes Organisationswissen erstmals als gemeinsame Handlungsbasis für Menschen, KI-Agenten und bestehende Unternehmenssysteme nutzbar. So wird aus Dokumenten, Prozessen, Strukturen und Erfahrungswissen eine aktivierbare Intelligenzschicht für die Organisation.",
           )}
         </p>
         <div className="actions" aria-label="Primäre Aktionen">
@@ -166,18 +166,18 @@ function Hero() {
 function Architecture() {
   return (
     <section className="section" id="architektur">
-      <p className="eyebrow">{getEditableContent("home.architecture.eyebrow", "System")}</p>
+      <p className="eyebrow">{getEditableContent("home.architecture.eyebrow", "Das System")}</p>
       <h2>
         {getEditableContent(
           "home.architecture.title",
-          "Ein System. 3-fach Nutzen.",
+          "Von verstreutem Wissen zu aktivierbarer Organisationsintelligenz.",
         )}
       </h2>
       <div className="section-intro rich-text">
         <RichText
           html={getEditableContent(
             "home.architecture.intro",
-            "Mit dem OIS stellt aiio ein 3-Layer-System bereit, das unstrukturiertes, verstreutes Organisationswissen <b>versteht</b>, <b>strukturiert </b>und <b>aktiviert</b>. Jeder Layer ist separat nutzbar, generiert sofortigen Nutzen und wird bei wachsendem Anspruch zur tragenden Schicht des nächsten Layers.",
+            "Das OIS verbindet drei aufeinander aufbauende Layer: ProcessCollector sichert und strukturiert Organisationswissen, ProcessMagnet erkennt daraus Prozesse, Zusammenhänge und Modelle, ProcessForge aktiviert dieses Wissen für KI-Agenten, APIs, Chats und bestehende Systeme.",
           )}
         />
       </div>
