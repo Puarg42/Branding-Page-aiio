@@ -195,6 +195,19 @@ const learningTransitionMoments = [
   },
 ] as const;
 
+const whyNowStages = [
+  {
+    stage: "Industrial Revolution",
+    infrastructure: "Machines",
+    copy: "Machines amplified physical work.",
+  },
+  {
+    stage: "Digital Revolution",
+    infrastructure: "Software",
+    copy: "Software amplified business processes.",
+  },
+] as const;
+
 function Hero() {
   return (
     <section className="hero">
@@ -407,6 +420,45 @@ function OisArchitecture() {
   );
 }
 
+function WhyNow() {
+  return (
+    <section className="why-now-section" id="why-now">
+      <div className="why-now-intro">
+        <p className="why-now-title">Why Now?</p>
+        <h2>Every technological revolution creates new infrastructure.</h2>
+      </div>
+
+      <div className="why-now-timeline" aria-label="Technological infrastructure timeline">
+        <div className="why-now-line" aria-hidden="true" />
+        {whyNowStages.map((item) => (
+          <article className="why-stage" key={item.stage}>
+            <span className="why-stage-dot" aria-hidden="true" />
+            <p className="why-stage-name">{item.stage}</p>
+            <h3>{item.infrastructure}</h3>
+            <p>{item.copy}</p>
+          </article>
+        ))}
+        <article className="why-stage why-stage-incomplete">
+          <span className="why-stage-dot" aria-hidden="true" />
+          <p className="why-stage-name">Artificial Intelligence</p>
+          <h3>???</h3>
+        </article>
+        <article className="why-stage why-stage-reveal">
+          <span className="why-stage-dot" aria-hidden="true" />
+          <p className="why-stage-name">Organizational Intelligence</p>
+          <h3>The Organizational Intelligence System</h3>
+          <p>Organizations can now understand themselves.</p>
+        </article>
+      </div>
+
+      <div className="why-now-closing">
+        <p>Artificial Intelligence changes software.</p>
+        <p>Organizational Intelligence changes organizations.</p>
+      </div>
+    </section>
+  );
+}
+
 // Kept only as a temporary legacy reference while the OIS section is redesigned.
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 function Architecture() {
@@ -550,6 +602,7 @@ export default function Home() {
       <ImagineFuture />
       <LearningTransition />
       <OisArchitecture />
+      <WhyNow />
       <Layers />
       <Demo />
     </main>
