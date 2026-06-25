@@ -6,18 +6,18 @@ export const layers = [
     stage: "COLLECT",
     layerName: "Grounding Layer",
     product: "ProcessCollector",
-    verb: "Wissen erfassen",
-    headline: "Der gemeinsame Boden für jede KI-gestützte Veränderung.",
+    verb: "Organisationswissen erfassen",
+    headline: "Organisationswissen erfassen und strukturieren.",
     summary:
-      "ProcessCollector macht implizites Prozesswissen sichtbar und schafft den belastbaren Einstieg in den aiio Produkt-Stack.",
+      "ProcessCollector sammelt Wissen aus Dokumenten, Interviews, Prozessen und bestehenden Systemen und schafft daraus die belastbare Grundlage für KI-gestützte Organisationsarbeit.",
     promise:
-      "Transparenz entsteht dort, wo Menschen ihr Wissen strukturiert teilen und die Organisation daraus ein gemeinsames Bild gewinnt.",
+      "ProcessCollector schafft den Grounding Layer des OIS: eine belastbare, strukturierte Wissensbasis für Menschen, KI-Agenten und bestehende Systeme.",
     detail:
-      "Der Grounding Layer sammelt Prozesswissen direkt aus der Organisation, verbindet es mit Rollen, Systemen und Abhängigkeiten und macht es für weitere KI-gestützte Schritte nutzbar.",
+      "Als Grounding Layer sammelt ProcessCollector Wissen aus Dokumenten, Interviews, Prozessen und bestehenden Systemen und macht es als gemeinsame Handlungsbasis nutzbar.",
     outcomes: [
-      "Prozesswissen wird auffindbar, vergleichbar und anschlussfähig.",
-      "Fachbereiche behalten die Nähe zur Realität ihrer Arbeit.",
-      "Die Plattform erhält den Kontext, den Recognition und Activation brauchen.",
+      "Organisationswissen wird strukturiert, auffindbar und anschlussfähig.",
+      "Dokumente, Interviews, Prozesse und bestehende Systeme werden zu einer gemeinsamen Wissensbasis.",
+      "Die Grundlage für KI-gestützte Organisationsarbeit entsteht belastbar und nachvollziehbar.",
     ],
     modules: [
       "Geführte Wissenserfassung",
@@ -28,20 +28,20 @@ export const layers = [
   {
     slug: "magnet",
     stage: "RECOGNIZE",
-    layerName: "Recognition Layer",
+    layerName: "Understanding Layer",
     product: "ProcessMagnet",
-    verb: "Prozessrealität modellieren",
-    headline: "Aus multimodalen Inhalten werden BPMN-konforme Modelle.",
+    verb: "Zusammenhänge erkennen",
+    headline: "Zusammenhänge, Prozesse und Potenziale erkennen.",
     summary:
-      "ProcessMagnet überführt Dokumente, E-Mails, Transkripte, Legacy-Systeme und perspektivisch Video in klare, wertorientierte und BPMN-konforme Prozess- und Organisationsmodelle.",
+      "ProcessMagnet analysiert die strukturierte Wissensbasis, erkennt Muster, Prozesszusammenhänge, Schwachstellen und Optimierungspotenziale – auf Basis des ProcessCollectors als Grounding Layer.",
     promise:
-      "Recognition entsteht, wenn multimodale Inhalte automatisch oder durch Analysten gelenkt in belastbare Modelle übersetzt werden.",
+      "ProcessMagnet baut auf dem ProcessCollector auf und macht Muster, Prozesszusammenhänge und Optimierungspotenziale sichtbar.",
     detail:
-      "Der Recognition Layer nutzt Multimodal Retrieval, um Prozesskandidaten, Varianten, Rollen und Organisationsbezüge zu erkennen. ProcessCollector ist Single Point of Truth: Inhalte, Modelle und Regelwerke werden als Handlungsbasis und Protokollschicht für Entscheidungen der KI-Agenten genutzt.",
+      "Als Understanding Layer analysiert ProcessMagnet die strukturierte Wissensbasis und erkennt Muster, Prozesszusammenhänge, Schwachstellen und Optimierungspotenziale – auf Basis des ProcessCollectors als Grounding Layer.",
     outcomes: [
-      "Multimodale Quellen werden zu BPMN-konformen Prozess- und Organisationsmodellen.",
-      "Analysten können den automatischen Erkenntnisprozess lenken und validieren.",
-      "ProcessCollector bleibt Handlungsbasis und Protokollschicht für KI-Agenten.",
+      "Muster und Prozesszusammenhänge werden aus der Wissensbasis sichtbar.",
+      "Schwachstellen und Optimierungspotenziale werden erkennbar.",
+      "ProcessCollector bleibt Grounding Layer für belastbare Analysen.",
     ],
     modules: [
       "Multimodal Retrieval",
@@ -54,18 +54,18 @@ export const layers = [
     stage: "ACTIVATE",
     layerName: "Activation Layer",
     product: "ProcessForge",
-    verb: "Organisation verändern",
-    headline: "Geschmiedetes Organisationswissen wird aktiviert.",
+    verb: "Wissen aktivieren",
+    headline: "Organisationswissen aktivieren und nutzbar machen.",
     summary:
-      "ProcessForge ist der KI-driven Outlet für geschmiedetes Organisationswissen: Inhalte werden durch Agenten verwertet, in multimodale Ausgabeformate transformiert und an Umsysteme verteilt.",
+      "ProcessForge macht Organisationswissen für KI-Agenten, Chats, APIs und bestehende Unternehmenssysteme nutzbar. So wird Wissen nicht nur dokumentiert, sondern aktiv in Arbeit und Entscheidungen eingebunden.",
     promise:
-      "Activation beginnt dort, wo der Produkt-Stack seine Inhalte nicht nur erkennt und speichert, sondern in andere Systeme, Formate und Agentenflüsse bringt.",
+      "ProcessForge operationalisiert den OIS-Stack und bindet Organisationswissen aktiv in Arbeit, Entscheidungen und Umsysteme ein.",
     detail:
-      "Der Activation Layer nutzt Multimodal Interaction, um geschmiedete Inhalte über Chat, API, MCP, Agenten, Automatisierungen und multimodale Ausgabeformate einmalig oder dauerhaft an Umsysteme zu verteilen.",
+      "Als Activation Layer macht ProcessForge Organisationswissen für KI-Agenten, Chats, APIs und bestehende Unternehmenssysteme nutzbar. So wird Wissen nicht nur dokumentiert, sondern aktiv in Arbeit und Entscheidungen eingebunden.",
     outcomes: [
-      "Geschürftes Wissen aus ProcessMagnet wird in verwertbare Outputs übersetzt.",
-      "Agenten können Prozess- und Organisationswissen aktiv weiterverarbeiten.",
-      "Umsysteme erhalten einmalig oder dauerhaft die passenden Formate und Kontexte.",
+      "Organisationswissen wird für KI-Agenten, Chats, APIs und Umsysteme nutzbar.",
+      "Wissen fließt aktiv in Arbeit und Entscheidungen ein.",
+      "Bestehende Unternehmenssysteme werden mit aktivierbarer Organisationsintelligenz verbunden.",
     ],
     modules: [
       "Multimodal Interaction",
@@ -91,9 +91,9 @@ export const operatingModel = [
       "ProcessCollector ist ein eigenständiger Einstieg und zugleich die Grundlage jeder weiteren Schicht: Single Point of Truth, Wissensbasis und Protokoll.",
   },
   {
-    title: "Recognition als Erweiterung",
+    title: "Understanding als Erweiterung",
     copy:
-      "ProcessMagnet erweitert den Collector, wenn multimodale Inhalte in BPMN-konforme Prozess- und Organisationsmodelle überführt werden sollen.",
+      "ProcessMagnet erweitert den Collector, wenn Zusammenhänge, Prozesse, Schwachstellen und Optimierungspotenziale erkannt werden sollen.",
   },
   {
     title: "Activation mit Anschluss",
@@ -108,8 +108,8 @@ export const platformPromises = [
     copy: "Was die Organisation weiß, wird sichtbar und teilbar.",
   },
   {
-    title: "Recognition",
-    copy: "Was sichtbar ist, wird zu BPMN-konformen Modellen und entscheidungsfähig.",
+    title: "Understanding",
+    copy: "Was strukturiert ist, wird zu Zusammenhängen, Prozessen und Potenzialen.",
   },
   {
     title: "Aktivierung",

@@ -5,29 +5,22 @@ const layerSections = [
   {
     id: "collector",
     tone: "collector",
-    eyebrow: getEditableContent("home.layer.collector.eyebrow", "1. Grounding Layer"),
-    title: getEditableContent("home.layer.collector.title", "Die Handlungsbasis für jede Organisation."),
+    eyebrow: getEditableContent("home.layer.collector.eyebrow", "Grounding Layer"),
+    title: getEditableContent("home.layer.collector.title", "Organisationswissen erfassen und strukturieren."),
     copy: (
       <RichText
         html={getEditableContent(
           "home.layer.collector",
-          "Alle KI-Systeme sind nur so gut wie das Wissen, auf dem sie arbeiten. <strong>ProcessCollector<sup>&reg;</sup></strong> sammelt Organisationswissen, wie Prozesse, Organigramme, Strukturen, Regularien und erzeugt daraus ein strukturiertes Organisationsmodell als Handlungsbasis für Menschen, KI und deren Agenten.",
+          "ProcessCollector sammelt Wissen aus Dokumenten, Interviews, Prozessen und bestehenden Systemen und schafft daraus die belastbare Grundlage für KI-gestützte Organisationsarbeit.",
         )}
       />
     ),
-    noteTitle: (
-      <>
-        Erweiterbar mit dem Prozess-Staubsauger{" "}
-        <strong>
-          (ProcessMagnet<sup>&reg;</sup>light)
-        </strong>
-      </>
-    ),
+    noteTitle: "Hinweis",
     note:
-      "zur automatischen Dokumentenanalyse für den schnellen Einstieg.",
+      "Optional erweiterbar mit ProcessMagnet Light für automatische Prozess- und Dokumentenerkennung.",
     stack: ["Manifestieren", "Vernetzen", "Bewahren"],
     website: "https://processcollector.com/",
-    websiteLabel: "ProcessCollector",
+    websiteLabel: "ProcessCollector entdecken",
     visualAlt: "Unterer Ausschnitt des aiio Systembildes mit hellem Organisationswissen, Dokumenten und Inputformaten.",
     visualBaseImage: "/system-layers/collector-layer-single-generated-v1.png",
     visualImage: "/system-layers/collector-layer-single-generated-v1.png",
@@ -35,29 +28,22 @@ const layerSections = [
   {
     id: "magnet",
     tone: "magnet",
-    eyebrow: getEditableContent("home.layer.magnet.eyebrow", "2. Recognition Layer"),
-    title: getEditableContent("home.layer.magnet.title", "Vom Wissen zum BPMN-konformen Orga-Modell."),
+    eyebrow: getEditableContent("home.layer.magnet.eyebrow", "Understanding Layer"),
+    title: getEditableContent("home.layer.magnet.title", "Zusammenhänge, Prozesse und Potenziale erkennen."),
     copy: (
       <RichText
         html={getEditableContent(
           "home.layer.magnet",
-          "<strong>ProcessMagnet®</strong> überführt unstrukturierte Inhalte wie Dokumente, E-Mails, Transkripte, Legacy-Systeme, Bilder oder Videos in strukturierte, wertorientierte und BPMN-konforme Prozess- und Organisationsmodelle.",
+          "ProcessMagnet analysiert die strukturierte Wissensbasis, erkennt Muster, Prozesszusammenhänge, Schwachstellen und Optimierungspotenziale – auf Basis des ProcessCollectors als Grounding Layer.",
         )}
       />
     ),
-    noteTitle: (
-      <>
-        <strong>
-          ProcessCollector<sup>&reg;</sup>
-        </strong>{" "}
-        ist Single Point of Truth:
-      </>
-    ),
+    noteTitle: "Hinweis",
     note:
-      "Inhalte, Modelle und Regelwerke werden als Handlungsbasis und Protokollschicht für Entscheidungen der KI-Agenten genutzt.",
+      "ProcessCollector dient als Grounding Layer für belastbare Analysen.",
     stack: ["Erheben", "Harmonisieren", "Kontextualisieren"],
     website: "https://process-magnet.com/",
-    websiteLabel: "ProcessMagnet",
+    websiteLabel: "ProcessMagnet entdecken",
     visualAlt: "Mittlerer Ausschnitt des aiio Systembildes mit ProcessMagnet, Sogwirkung und Modell-Erkennung.",
     visualBaseImage: "/system-layers/magnet-layer-single-generated-v1.png",
     visualImage: "/system-layers/magnet-layer-single-generated-v1.png",
@@ -65,22 +51,22 @@ const layerSections = [
   {
     id: "forge",
     tone: "forge",
-    eyebrow: getEditableContent("home.layer.forge.eyebrow", "3. Activation Layer"),
-    title: getEditableContent("home.layer.forge.title", "Geschmiedetes Wissen aktivieren."),
+    eyebrow: getEditableContent("home.layer.forge.eyebrow", "Activation Layer"),
+    title: getEditableContent("home.layer.forge.title", "Organisationswissen aktivieren und nutzbar machen."),
     copy: (
       <RichText
         html={getEditableContent(
           "home.layer.forge",
-          "<strong>ProcessForge®</strong> ist die Wissensschmiede für Organisationen: Aus dem neu erhobenen und konsolidierten Informationen erzeugt sie neues, zielgerichtetes Organisationswissen. Dieses wird in passende, auch multimodale Formate gebracht, von Agenten kontextbezogen genutzt und bedarfsgerecht an Umsysteme verteilt.",
+          "ProcessForge macht Organisationswissen für KI-Agenten, Chats, APIs und bestehende Unternehmenssysteme nutzbar. So wird Wissen nicht nur dokumentiert, sondern aktiv in Arbeit und Entscheidungen eingebunden.",
         )}
       />
     ),
-    noteTitle: "Activation als KI-driven Outlet",
+    noteTitle: "Hinweis",
     note:
-      "Forge öffnet den Stack nach außen: Chat, API, MCP, Agenten, Automatisierungen und multimodale Ausgabeformate.",
+      "Für Unternehmen, die Organisationswissen operationalisieren und in bestehende Systeme integrieren möchten.",
     stack: ["Schmieden", "Transformieren", "Orchestrieren"],
     website: "https://www.processforge.com/",
-    websiteLabel: "ProcessForge",
+    websiteLabel: "ProcessForge entdecken",
     visualAlt: "Oberer Ausschnitt des aiio Systembildes mit ProcessForge, Agenten, APIs und Übergabe an Umsysteme.",
     visualBaseImage: "/system-layers/forge-layer-single-generated-v1.png",
     visualImage: "/system-layers/forge-layer-single-generated-v1.png",
@@ -89,40 +75,40 @@ const layerSections = [
 
 const cards = [
   {
-    eyebrow: getEditableContent("home.card.collector.eyebrow", "1. Wissen sichern"),
+    eyebrow: getEditableContent("home.card.collector.eyebrow", "Grounding Layer"),
     title: getEditableContent("home.card.collector.title", "ProcessCollector®"),
     href: "#collector",
     copy: (
       <RichText
         html={getEditableContent(
           "home.card.collector",
-          "Der <strong>Grounding Layer</strong> für Flow-Charts, Organigramme, Rollen, Versionierungen und dokumentierte Entscheidungen als belastbare Handlungsbasis für Menschen und KI-Agenten.",
+          "ProcessCollector sammelt Wissen aus Dokumenten, Interviews, Prozessen und bestehenden Systemen und schafft daraus die belastbare Grundlage für KI-gestützte Organisationsarbeit.",
         )}
       />
     ),
   },
   {
-    eyebrow: getEditableContent("home.card.magnet.eyebrow", "2. Prozesse erkennen"),
+    eyebrow: getEditableContent("home.card.magnet.eyebrow", "Understanding Layer"),
     title: getEditableContent("home.card.magnet.title", "ProcessMagnet®"),
     href: "#magnet",
     copy: (
       <RichText
         html={getEditableContent(
           "home.card.magnet",
-          "Der <strong>Recognition Layer</strong> erkennt aus Dokumenten, E-Mails, Transkripten, Bildern und Legacy-Systeme Organisationsinformationen und generiert aus diesen wertorientierten, BPMN-konformen Prozess- und Organisationsmodelle zur weiteren Verwendung für KI-Agenten.",
+          "ProcessMagnet analysiert die strukturierte Wissensbasis, erkennt Muster, Prozesszusammenhänge, Schwachstellen und Optimierungspotenziale – auf Basis des ProcessCollectors als Grounding Layer.",
         )}
       />
     ),
   },
   {
-    eyebrow: getEditableContent("home.card.forge.eyebrow", "3. Wissen aktivieren"),
+    eyebrow: getEditableContent("home.card.forge.eyebrow", "Activation Layer"),
     title: getEditableContent("home.card.forge.title", "ProcessForge®"),
     href: "#forge",
     copy: (
       <RichText
         html={getEditableContent(
           "home.card.forge",
-          "Der <strong>Activation Layer</strong> für die Verwertung geschmiedeten Wissens: Agenten, APIs, MCP, Chats und Ausgabeformate verteilen Inhalte einmalig oder dauerhaft an Umsysteme.",
+          "ProcessForge macht Organisationswissen für KI-Agenten, Chats, APIs und bestehende Unternehmenssysteme nutzbar. So wird Wissen nicht nur dokumentiert, sondern aktiv in Arbeit und Entscheidungen eingebunden.",
         )}
       />
     ),
