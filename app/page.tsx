@@ -11,13 +11,13 @@ const layerSections = [
       <RichText
         html={getEditableContent(
           "home.layer.collector",
-          "ProcessCollector sammelt Wissen aus Dokumenten, Interviews, Prozessen und bestehenden Systemen und schafft daraus die belastbare Grundlage für KI-gestützte Organisationsarbeit.",
+          "ProcessCollector sichert Wissen aus Dokumenten, Interviews, Prozessen und Systemen als belastbare KI-Grundlage.",
         )}
       />
     ),
     noteTitle: "Hinweis",
     note:
-      "Optional erweiterbar mit ProcessMagnet Light für automatische Prozess- und Dokumentenerkennung.",
+      "Erweiterbar mit ProcessMagnet Light für automatische Erkennung.",
     stack: ["Manifestieren", "Vernetzen", "Bewahren"],
     website: "https://processcollector.com/",
     websiteLabel: "ProcessCollector entdecken",
@@ -34,13 +34,13 @@ const layerSections = [
       <RichText
         html={getEditableContent(
           "home.layer.magnet",
-          "ProcessMagnet analysiert die strukturierte Wissensbasis, erkennt Muster, Prozesszusammenhänge, Schwachstellen und Optimierungspotenziale – auf Basis des ProcessCollectors als Grounding Layer.",
+          "ProcessMagnet erkennt Muster, Prozesse und Potenziale auf Basis des ProcessCollectors.",
         )}
       />
     ),
     noteTitle: "Hinweis",
     note:
-      "ProcessCollector dient als Grounding Layer für belastbare Analysen.",
+      "ProcessCollector liefert den Grounding Layer.",
     stack: ["Erheben", "Harmonisieren", "Kontextualisieren"],
     website: "https://process-magnet.com/",
     websiteLabel: "ProcessMagnet entdecken",
@@ -57,13 +57,13 @@ const layerSections = [
       <RichText
         html={getEditableContent(
           "home.layer.forge",
-          "ProcessForge macht Organisationswissen für KI-Agenten, Chats, APIs und bestehende Unternehmenssysteme nutzbar. So wird Wissen nicht nur dokumentiert, sondern aktiv in Arbeit und Entscheidungen eingebunden.",
+          "ProcessForge aktiviert Organisationswissen für Agenten, Chats, APIs und Unternehmenssysteme.",
         )}
       />
     ),
     noteTitle: "Hinweis",
     note:
-      "Für Unternehmen, die Organisationswissen operationalisieren und in bestehende Systeme integrieren möchten.",
+      "Für Unternehmen, die Wissen operationalisieren wollen.",
     stack: ["Schmieden", "Transformieren", "Orchestrieren"],
     website: "https://www.processforge.com/",
     websiteLabel: "ProcessForge entdecken",
@@ -118,23 +118,19 @@ const cards = [
 const problemCards = [
   {
     title: "Knowledge disappears.",
-    copy:
-      "Critical knowledge leaves with people, projects, systems and decisions faster than organizations can preserve it.",
+    copy: "Knowledge leaves with people, projects and decisions.",
   },
   {
     title: "AI lacks context.",
-    copy:
-      "Without shared organizational context, AI can answer questions but cannot reliably support how the organization works.",
+    copy: "AI cannot help without organizational context.",
   },
   {
     title: "Complexity explodes.",
-    copy:
-      "Structures, tools, rules and responsibilities multiply until no one sees the whole system clearly.",
+    copy: "Systems multiply. The whole becomes invisible.",
   },
   {
     title: "Decisions slow down.",
-    copy:
-      "When understanding is fragmented, leaders spend more time aligning than moving.",
+    copy: "Fragmented understanding slows every move.",
   },
 ] as const;
 
@@ -166,8 +162,7 @@ const imagineMoments = [
   },
   {
     statement: "Imagine an organization that truly understands itself.",
-    support:
-      "Every process, every decision and every relationship becomes part of one shared organizational understanding.",
+    support: "Processes, decisions and relationships become shared understanding.",
   },
   {
     statement:
@@ -249,9 +244,8 @@ function ConceptBreakthrough() {
             </p>
           </div>
           <p className="concept-support">
-            aiio creates the Organizational Intelligence System: a living
-            foundation that preserves organizational knowledge, creates shared
-            understanding and enables new organizational capabilities.
+            aiio creates the living foundation for organizational memory,
+            understanding and capability.
           </p>
         </div>
         <ol
@@ -274,15 +268,13 @@ function NewKindOrganization() {
         <div className="organization-header">
           <p className="dark-eyebrow">A New Kind of Organization</p>
           <h2>
-            The next generation of organizations will not be defined by
-            artificial intelligence.
+            The next generation will not be defined by artificial intelligence.
             <br />
-            They will be defined by their ability to understand themselves.
+            It will be defined by self-understanding.
           </h2>
           <p>
-            For the first time in history, organizations can continuously
-            preserve their knowledge, understand themselves and develop new
-            organizational capabilities.
+            Organizations can now preserve knowledge, understand themselves and
+            build new capabilities continuously.
           </p>
         </div>
         <div className="organization-closing-block">
@@ -341,8 +333,8 @@ function OisArchitecture() {
         <div className="ois-body">
           <p>Organizations already possess enormous knowledge.</p>
           <p>
-            What they lack is a living foundation that continuously transforms
-            fragmented information into shared organizational understanding.
+            What they lack is a living foundation that turns fragmentation into
+            shared understanding.
           </p>
           <p>
             At aiio, we call this foundation the Organizational Intelligence
@@ -518,7 +510,7 @@ function Demo() {
           <RichText
             html={getEditableContent(
               "home.demo.copy",
-              "Die beste aiio-Demo beginnt nicht mit einem Tool, sondern mit echtem Organisationswissen: sammeln, strukturieren, modellieren und als aktivierbaren Produkt-Stack in die passenden Umsysteme bringen.",
+              "Die beste aiio-Demo beginnt mit echtem Organisationswissen und zeigt, wie daraus Handlung entsteht.",
             )}
           />
         </div>
