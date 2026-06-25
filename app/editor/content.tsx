@@ -1,11 +1,9 @@
-import contentStore from "./content-store.json";
-import { editableContentVersion } from "./content-version";
-
-export const editableContent = contentStore as Record<string, string>;
-export const contentVersion = editableContentVersion;
+export const editableContent: Record<string, string> = {};
+export const contentVersion = "source-files";
 
 export function getEditableContent(id: string, fallback: string) {
-  return editableContent[id] ?? fallback;
+  void id;
+  return fallback;
 }
 
 export function RichText({ html }: { html: string }) {

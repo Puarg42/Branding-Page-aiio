@@ -6,12 +6,12 @@ const layerSections = [
     id: "collector",
     tone: "collector",
     eyebrow: getEditableContent("home.layer.collector.eyebrow", "1. Grounding Layer"),
-    title: getEditableContent("home.layer.collector.title", "Der Grounding Layer für jede Organisation."),
+    title: getEditableContent("home.layer.collector.title", "Die Handlungsbasis für jede Organisation."),
     copy: (
       <RichText
         html={getEditableContent(
           "home.layer.collector",
-          "Alle KI-Systeme sind nur so gut wie das Wissen, auf dem sie arbeiten. <strong>ProcessCollector®</strong> sammelt Interviews, Dokumente und bestehendes Organisationswissen, wo auch immer es dokumentiert ist, und erzeugt daraus eine strukturierte Wissensbasis.",
+          "Alle KI-Systeme sind nur so gut wie das Wissen, auf dem sie arbeiten. <strong>ProcessCollector®</strong> sammelt Prozesse, Organigramme, Dokumente, Regularien sowie bestehendes Organisationswissen, wo auch immer es dokumentiert ist, und erzeugt daraus ein strukturiertes Organisationsmodell als Handlungsbasis für KI und deren Agenten.",
         )}
       />
     ),
@@ -36,7 +36,7 @@ const layerSections = [
     id: "magnet",
     tone: "magnet",
     eyebrow: getEditableContent("home.layer.magnet.eyebrow", "2. Recognition Layer"),
-    title: getEditableContent("home.layer.magnet.title", "Vom Inhalt zum BPMN-konformen Modell."),
+    title: getEditableContent("home.layer.magnet.title", "Vom Wissen zum BPMN-konformen Orga-Modell."),
     copy: (
       <RichText
         html={getEditableContent(
@@ -71,7 +71,7 @@ const layerSections = [
       <RichText
         html={getEditableContent(
           "home.layer.forge",
-          "<strong>ProcessForge®</strong>ist der KI-driven Outlet für geschmiedetes Organisationswissen: verborgenes Wissen aus ProcessMagnet wird in unterschiedlichste, auch multimodale Ausgabeformate transformiert, durch Agenten im Kontext vom manifestierten Wissen im ProcessCollector verwertet und einmalig oder dauerhaft an Umsysteme verteilt.",
+          "<strong>ProcessForge®</strong>ist die Wissensschmiede für Organisationen: Aus dem neu erhobenen und konsolidierten Informationen erzeugt sie neues, zielgerichtetes Organisationswissen. Dieses wird in passende, auch multimodale Formate gebracht, von Agenten kontextbezogen genutzt und bedarfsgerecht an Umsysteme verteilt.",
         )}
       />
     ),
@@ -96,7 +96,7 @@ const cards = [
       <RichText
         html={getEditableContent(
           "home.card.collector",
-          "Der <strong>Grounding Layer</strong> für Flow-Charts, Organigramme, Rollen, Versionierungen und dokumentierte Entscheidungen als belastbare Wissensbasis.",
+          "Der <strong>Grounding Layer</strong> für Flow-Charts, Organigramme, Rollen, Versionierungen und dokumentierte Entscheidungen als belastbare Handlungsbasis für Menschen und KI-Agenten.",
         )}
       />
     ),
@@ -109,7 +109,7 @@ const cards = [
       <RichText
         html={getEditableContent(
           "home.card.magnet",
-          "Der <strong>Recognition Layer</strong> für Multimodal Retrieval: Dokumente, E-Mails, Transkripte und Legacy-Systeme werden zu wertorientierten, BPMN-konformen Prozess- und Organisationsmodellen.",
+          "Der <strong>Recognition Layer</strong> erkennt aus Dokumenten, E-Mails, Transkripten, Bildern und Legacy-Systeme Organisationsinformationen und generiert aus diesen wertorientierten, BPMN-konformen Prozess- und Organisationsmodelle zur weiteren Verwendung für KI-Agenten.",
         )}
       />
     ),
@@ -134,7 +134,7 @@ function Hero() {
     <section className="hero">
       <div className="hero-content">
         <p className="eyebrow">
-          {getEditableContent("home.hero.eyebrow", "OIS - Das Organizational Intelligence System")}
+          {getEditableContent("home.hero.eyebrow", "OIS")}
         </p>
         <h1>
           <span className="headline-desktop">
@@ -166,18 +166,18 @@ function Hero() {
 function Architecture() {
   return (
     <section className="section" id="architektur">
-      <p className="eyebrow">{getEditableContent("home.architecture.eyebrow", "Systemlogik")}</p>
+      <p className="eyebrow">{getEditableContent("home.architecture.eyebrow", "System")}</p>
       <h2>
         {getEditableContent(
           "home.architecture.title",
-          "Drei Lösungen. Ein Organizational Intelligence System.",
+          "Ein System. 3-fach Nutzen.",
         )}
       </h2>
       <div className="section-intro rich-text">
         <RichText
           html={getEditableContent(
             "home.architecture.intro",
-            "aiio macht aus verstreutem Organisationswissen ein System, das versteht, strukturiert und aktiviert. Jede Lösung schafft für sich sofort Nutzen und wird bei wachsendem Anspruch zur tragenden Schicht der nächsten.",
+            "Mit dem OIS stellt aiio ein 3-Layer-System bereit, das unstrukturiertes, verstreutes Organisationswissen <b>versteht</b>, <b>strukturiert </b>und <b>aktiviert</b>. Jeder Layer ist separat nutzbar, generiert sofortigen Nutzen und wird bei wachsendem Anspruch zur tragenden Schicht des nächsten Layers.",
           )}
         />
       </div>

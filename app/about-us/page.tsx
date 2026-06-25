@@ -107,7 +107,7 @@ const milestones: TimelineMilestone[] = [
   },
   {
     year: "2026",
-    title: "ProcessForge als Prozessschmiede",
+    title: "Die ProcessForge komplettiert das neue OIS",
     image: "/aiio-architecture-stack-output-v3.png",
     glassMotion: true,
     copy:
