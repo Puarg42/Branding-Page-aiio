@@ -7,6 +7,12 @@ This documentation structure is the strategic source of truth for aiio product s
 ## Table of Contents
 
 - 00_FOUNDATION
+  - AIIO_THESIS.md
+  - CATEGORY_DESIGN.md
+  - GLOSSARY.md
+  - OIS_SPECIFICATION.md
+  - DECISIONS.md
+  - THEORY_OF_SELF_ENABLING_ORGANIZATIONS.md
 - 01_BRANDING
 - 02_PRODUCTS
 - 03_MARKET
