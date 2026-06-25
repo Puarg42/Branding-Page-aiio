@@ -3280,22 +3280,19 @@ h1 {
 
 @keyframes organizationJourneyReveal {
   0% {
-    filter: blur(14px);
     opacity: 0;
-    transform: translateY(70px) scale(0.98);
+    transform: translateY(72px);
   }
 
   42%,
   76% {
-    filter: blur(0);
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
   }
 
   100% {
-    filter: blur(4px);
     opacity: 0.32;
-    transform: translateY(-38px) scale(0.992);
+    transform: translateY(-40px);
   }
 }
 
@@ -3403,22 +3400,19 @@ h1 {
 
 @keyframes imagineMomentReveal {
   0% {
-    filter: blur(18px);
     opacity: 0;
-    transform: translateY(72px) scale(0.982);
+    transform: translateY(72px);
   }
 
   36%,
   74% {
-    filter: blur(0);
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
   }
 
   100% {
-    filter: blur(12px);
     opacity: 0.08;
-    transform: translateY(-62px) scale(0.99);
+    transform: translateY(-62px);
   }
 }
 
@@ -3515,22 +3509,19 @@ h1 {
 
 @keyframes learningMomentReveal {
   0% {
-    filter: blur(22px);
     opacity: 0;
-    transform: translateY(84px) scale(0.98);
+    transform: translateY(84px);
   }
 
   34%,
   78% {
-    filter: blur(0);
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
   }
 
   100% {
-    filter: blur(14px);
     opacity: 0.08;
-    transform: translateY(-72px) scale(0.988);
+    transform: translateY(-72px);
   }
 }
 
@@ -3793,13 +3784,11 @@ h1 {
 
 @keyframes oisNodeIn {
   0% {
-    filter: blur(10px);
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.96);
   }
 
   100% {
-    filter: blur(0);
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
   }
