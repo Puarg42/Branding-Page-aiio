@@ -147,7 +147,7 @@ function Hero() {
         <p>
           {getEditableContent(
             "home.hero.intro",
-            `Das Organizational Intelligence System (OIS) macht Organisationswissen erstmals als gemeinsame Wissensbasis für Menschen, KI-Agenten und bestehende Unternehmenssysteme nutzbar. So entstehen Transparenz, intelligente Automatisierung und völlig neue Möglichkeiten der Organisationsentwicklung.`,
+            `Das OIS von aiio macht Organisationswissen erstmals als gemeinsame Wissensbasis für Menschen, KI-Agenten und bestehende Unternehmenssysteme nutzbar. So entstehen Transparenz, intelligente Automatisierung und völlig neue Möglichkeiten der Organisationsentwicklung.`,
           )}
         </p>
         <div className="actions" aria-label="Primäre Aktionen">
