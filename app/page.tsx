@@ -73,48 +73,6 @@ const layerSections = [
   },
 ] as const;
 
-const cards = [
-  {
-    eyebrow: getEditableContent("home.card.collector.eyebrow", "Grounding Layer"),
-    title: getEditableContent("home.card.collector.title", "ProcessCollector®"),
-    href: "#collector",
-    copy: (
-      <RichText
-        html={getEditableContent(
-          "home.card.collector",
-          "ProcessCollector sammelt Wissen aus Dokumenten, Interviews, Prozessen und bestehenden Systemen und schafft daraus die belastbare Grundlage für KI-gestützte Organisationsarbeit.",
-        )}
-      />
-    ),
-  },
-  {
-    eyebrow: getEditableContent("home.card.magnet.eyebrow", "Understanding Layer"),
-    title: getEditableContent("home.card.magnet.title", "ProcessMagnet®"),
-    href: "#magnet",
-    copy: (
-      <RichText
-        html={getEditableContent(
-          "home.card.magnet",
-          "ProcessMagnet analysiert die strukturierte Wissensbasis, erkennt Muster, Prozesszusammenhänge, Schwachstellen und Optimierungspotenziale – auf Basis des ProcessCollectors als Grounding Layer.",
-        )}
-      />
-    ),
-  },
-  {
-    eyebrow: getEditableContent("home.card.forge.eyebrow", "Activation Layer"),
-    title: getEditableContent("home.card.forge.title", "ProcessForge®"),
-    href: "#forge",
-    copy: (
-      <RichText
-        html={getEditableContent(
-          "home.card.forge",
-          "ProcessForge macht Organisationswissen für KI-Agenten, Chats, APIs und bestehende Unternehmenssysteme nutzbar. So wird Wissen nicht nur dokumentiert, sondern aktiv in Arbeit und Entscheidungen eingebunden.",
-        )}
-      />
-    ),
-  },
-] as const;
-
 const problemCards = [
   {
     title: "Knowledge disappears.",
@@ -454,55 +412,6 @@ function WhyNow() {
       <div className="why-now-closing">
         <p>Artificial Intelligence changes software.</p>
         <p>Organizational Intelligence changes organizations.</p>
-      </div>
-    </section>
-  );
-}
-
-// Kept only as a temporary legacy reference while the OIS section is redesigned.
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-function Architecture() {
-  return (
-    <section className="section" id="architektur">
-      <p className="eyebrow">{getEditableContent("home.architecture.eyebrow", "Das System")}</p>
-      <h2>
-        {getEditableContent(
-          "home.architecture.title",
-          "Von verstreutem Wissen zu aktivierbarer Organisationsintelligenz.",
-        )}
-      </h2>
-      <div className="section-intro rich-text">
-        <RichText
-          html={getEditableContent(
-            "home.architecture.intro",
-            "Das OIS verbindet drei aufeinander aufbauende Layer: ProcessCollector sichert und strukturiert Organisationswissen, ProcessMagnet erkennt daraus Prozesse, Zusammenhänge und Modelle, ProcessForge aktiviert dieses Wissen für KI-Agenten, APIs, Chats und bestehende Systeme.",
-          )}
-        />
-      </div>
-      <div className="architecture-grid architecture-copy-grid">
-        <p>
-          Der Einstieg beginnt dort, wo Organisationen zuerst Klarheit brauchen:
-          beim Wissen. ProcessCollector sichert Interviews, Dokumente und
-          vorhandenes Prozesswissen als belastbare Grundlage. ProcessMagnet
-          erkennt daraus mithilfe von Multimodal Retrieval Prozesse,
-          Zusammenhänge und BPMN-konforme Modelle.
-        </p>
-        <p>
-          ProcessForge aktiviert dieses geschmiedete Wissen für Agenten, APIs,
-          MCP, Chats und Umsysteme. So entsteht kein Nebeneinander einzelner
-          Tools, sondern ein aufbauender Produkt-Stack: vom eigenständigen Use
-          Case bis zum vollständigen Organizational Intelligence System.
-        </p>
-      </div>
-      <div className="cards architecture-cards" aria-label="Stacking Product">
-        {cards.map((card) => (
-          <a className="card card-link" href={card.href} key={card.title}>
-            <span>{card.eyebrow}</span>
-            <h3>{card.title}</h3>
-            <div className="card-copy rich-text">{card.copy}</div>
-            <span className="card-click-icon" aria-hidden="true" />
-          </a>
-        ))}
       </div>
     </section>
   );
