@@ -1,94 +1,20 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useRef, useState, type ReactNode } from "react";
-import { getEditableContent } from "./editor/content";
+import { useEffect, useState, type ReactNode } from "react";
 
 type HeaderVariant = "home" | "solid";
 
 type MenuLink = {
-  description?: string;
   href: string;
   label: string;
 };
 
-const aboutNavItem: MenuLink = {
-  href: "/about-us",
-  label: getEditableContent("navigation.about", "Über uns"),
-};
-const systemNavItem: MenuLink = {
-  href: "/#architektur",
-  label: getEditableContent("navigation.system", "System"),
-};
-
-const resourceGroups = [
-  {
-    title: "Why choose aiio?",
-    items: [
-      {
-        href: "/academy",
-        label: "aiio Academy",
-        description:
-          "Lerne unsere Plattform in kurzen Video-Tutorials näher kennen.",
-      },
-      {
-        href: "/click-demos",
-        label: "Interactive Demos",
-        description:
-          "Entdecke in wenigen Minuten, wie aiio deine Probleme löst!",
-      },
-      {
-        href: "/success-stories",
-        label: "Success Stories",
-        description:
-          "So haben andere Unternehmen mit aiio einfach Wert geschaffen!",
-      },
-      {
-        href: "/dokumentation",
-        label: "Dokumentation",
-        description:
-          "Alles Wissenswerte über OIS - Das Organizational Intelligence System und seine Handhabung.",
-      },
-      {
-        href: "/platform/product-news",
-        label: "Feature Newsletter",
-        description:
-          "Die neusten Features für Prozess-Champions - in deinem Postfach!",
-      },
-    ],
-  },
-  {
-    title: "Hilfe, News & Weiteres",
-    items: [
-      {
-        href: "/partner-finden",
-        label: "Partner",
-        description: "Du benötigst menschliche Unterstützung? Hier findest du sie!",
-      },
-      {
-        href: "/blog",
-        label: "Blog & News",
-        description:
-          "Alles Neue rund um aiio und aus der Welt von KI für Unternehmen.",
-      },
-      {
-        href: "/services",
-        label: "Services",
-        description: "Schulungen, Workshops und mehr: Wir helfen dir weiter!",
-      },
-      {
-        href: "/downloadcenter",
-        label: "Downloads",
-        description:
-          "Die wichtigsten Dokumente rund um aiio zum Download für dich.",
-      },
-      {
-        href: "/support",
-        label: "Support",
-        description: "Probleme oder Wünsche? Tritt mit uns in Kontakt!",
-      },
-    ],
-  },
+const navItems: MenuLink[] = [
+  { href: "/#organizational-intelligence", label: "Vision" },
+  { href: "/#capabilities", label: "Platform" },
+  { href: "/#why-now", label: "Research" },
+  { href: "/about-us", label: "Company" },
 ] as const;
 
 function isExternalLink(href: string) {
@@ -130,89 +56,46 @@ function BrandLink({ className }: { className: string }) {
   );
 }
 
-function ResourcesMenu() {
-  const [isOpen, setIsOpen] = useState(false);
-  const menuRef = useRef<HTMLDivElement>(null);
+export function MainHeader({ variant = "home" }: { variant?: HeaderVariant }) {
+  const [hasScrolled, setHasScrolled] = useState(false);
+  const isScrolled = variant === "solid" || hasScrolled;
 
   useEffect(() => {
-    if (!isOpen) {
+    if (variant === "solid") {
       return;
     }
 
-    function handlePointerDown(event: PointerEvent) {
-      if (
-        menuRef.current &&
-        event.target instanceof Node &&
-        !menuRef.current.contains(event.target)
-      ) {
-        setIsOpen(false);
-      }
+    function handleScroll() {
+      setHasScrolled(window.scrollY > 18);
     }
 
-    function handleKeyDown(event: KeyboardEvent) {
-      if (event.key === "Escape") {
-        setIsOpen(false);
-      }
-    }
-
-    document.addEventListener("pointerdown", handlePointerDown);
-    document.addEventListener("keydown", handleKeyDown);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
-      document.removeEventListener("pointerdown", handlePointerDown);
-      document.removeEventListener("keydown", handleKeyDown);
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, [isOpen]);
+  }, [variant]);
+
+  const headerClass =
+    variant === "solid"
+      ? "site-header solid is-scrolled"
+      : `topbar-shell${isScrolled ? " is-scrolled" : ""}`;
 
   return (
-    <div className={isOpen ? "resources-menu is-open" : "resources-menu"} ref={menuRef}>
-      <button
-        aria-expanded={isOpen}
-        aria-haspopup="menu"
-        className="resources-trigger"
-        onClick={() => setIsOpen((current) => !current)}
-        type="button"
-      >
-        {getEditableContent("navigation.resources", "Ressource")}
-      </button>
-      <div className="resources-panel" hidden={!isOpen} role="menu">
-        {resourceGroups.map((group) => (
-          <div className="resources-group" key={group.title}>
-            <p>{group.title}</p>
-            {group.items.map((item) => (
-              <SmartLink
-                className="resources-link"
-                href={item.href}
-                key={item.href}
-                onClick={() => setIsOpen(false)}
-              >
-                <strong>{item.label}</strong>
-                <span>{item.description}</span>
-              </SmartLink>
-            ))}
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-export function MainHeader({ variant = "home" }: { variant?: HeaderVariant }) {
-  return (
-    <header className={variant === "solid" ? "site-header solid" : "topbar-shell"}>
+    <header className={headerClass}>
       <div className={variant === "solid" ? "site-header-inner" : "topbar"}>
         <BrandLink className={variant === "solid" ? "brand-mark" : "brand"} />
         <nav aria-label="Hauptnavigation" className="main-nav">
-          <SmartLink href={systemNavItem.href}>{systemNavItem.label}</SmartLink>
-          <ResourcesMenu />
-          <SmartLink href={aboutNavItem.href}>{aboutNavItem.label}</SmartLink>
+          {navItems.map((item) => (
+            <SmartLink href={item.href} key={item.href}>
+              {item.label}
+            </SmartLink>
+          ))}
         </nav>
         <div className="header-actions" aria-label="Aktionen">
           <a className="nav-action" href="/live-demo/kontakt">
-            {getEditableContent("navigation.demo", "Demo")}
-          </a>
-          <a className="nav-action primary" href="/kostenlose-testversion/anmelden">
-            {getEditableContent("navigation.trial", "Kostenlos testen")}
+            Request Demo
           </a>
         </div>
       </div>
