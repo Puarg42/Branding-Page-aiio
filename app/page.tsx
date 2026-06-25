@@ -19,7 +19,7 @@ const layerSections = [
       <>
         Bereits erweiterbar mit Prozess-Staubsauger{" "}
         <strong>
-          (ProcessMagnet<sup>&reg;</sup> light)
+          (ProcessMagnet<sup>&reg;</sup>light)
         </strong>
       </>
     ),
