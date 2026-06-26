@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { MainHeader } from "./main-navigation";
 import { CapabilityJourney } from "./capability-journey";
 import {
@@ -63,7 +64,18 @@ function Hero() {
           </a>
         </div>
       </div>
-      <div className="hero-visual" aria-hidden="true" />
+      <div className="hero-visual" aria-hidden="true">
+        <Image
+          alt=""
+          decoding="async"
+          fetchPriority="high"
+          height="929"
+          priority
+          sizes="(max-width: 720px) 680px, (max-width: 920px) 920px, 72vw"
+          src="/landing-organizational-intelligence-hero-v1.jpg"
+          width="1692"
+        />
+      </div>
     </section>
   );
 }

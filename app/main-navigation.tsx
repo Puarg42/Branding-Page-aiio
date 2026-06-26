@@ -26,22 +26,31 @@ function SmartLink({
   className,
   href,
   onClick,
+  tabIndex,
 }: {
   children: ReactNode;
   className?: string;
   href: string;
   onClick?: () => void;
+  tabIndex?: number;
 }) {
   if (isExternalLink(href)) {
     return (
-      <a className={className} href={href} onClick={onClick} rel="noreferrer" target="_blank">
+      <a
+        className={className}
+        href={href}
+        onClick={onClick}
+        rel="noreferrer"
+        tabIndex={tabIndex}
+        target="_blank"
+      >
         {children}
       </a>
     );
   }
 
   return (
-    <Link className={className} href={href} onClick={onClick}>
+    <Link className={className} href={href} onClick={onClick} tabIndex={tabIndex}>
       {children}
     </Link>
   );
@@ -143,7 +152,12 @@ export function MainHeader({ variant = "home" }: { variant?: HeaderVariant }) {
       >
         <nav aria-label="Mobile Hauptnavigation" className="mobile-menu-nav">
           {navItems.map((item) => (
-            <SmartLink href={item.href} key={item.href} onClick={closeMenu}>
+            <SmartLink
+              href={item.href}
+              key={item.href}
+              onClick={closeMenu}
+              tabIndex={menuOpen ? undefined : -1}
+            >
               {item.label}
             </SmartLink>
           ))}
@@ -152,6 +166,7 @@ export function MainHeader({ variant = "home" }: { variant?: HeaderVariant }) {
           className="mobile-menu-cta"
           href="/live-demo/kontakt"
           onClick={closeMenu}
+          tabIndex={menuOpen ? undefined : -1}
         >
           Request Demo
         </a>

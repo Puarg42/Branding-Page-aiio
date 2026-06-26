@@ -39,6 +39,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de">
+      <head>
+        <link
+          as="font"
+          crossOrigin="anonymous"
+          href="/fonts/chillax-semibold.woff2"
+          rel="preload"
+          type="font/woff2"
+        />
+        <link
+          as="font"
+          crossOrigin="anonymous"
+          href="/fonts/chillax-bold.woff2"
+          rel="preload"
+          type="font/woff2"
+        />
+      </head>
       <body>
         {children}
         <SiteFooter />
