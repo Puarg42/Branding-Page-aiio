@@ -182,78 +182,90 @@ It is this transition that defines the beginning of Organizational Intelligence.
 
 # 2. The Missing Layer
 
-For decades, organizations have invested in collecting knowledge.
+Every major discipline of organizational management has focused on one central objective.
 
-Documents became digital.
+Business Process Management structured activities.
+
+Knowledge Management organized information.
+
+Enterprise Architecture described systems.
+
+Governance defined responsibilities.
+
+Compliance established rules.
+
+Artificial Intelligence accelerated reasoning.
+
+Each discipline solved an important problem.
+
+None of them solved the fundamental one.
+
+Organizations still do not understand themselves.
+
+The reason is deceptively simple.
+
+Knowledge and understanding are not the same.
+
+Knowledge consists of isolated facts.
+
+Understanding emerges from relationships.
+
+Knowledge answers questions.
+
+Understanding explains context.
+
+Knowledge describes what exists.
+
+Understanding explains why it behaves as it does.
+
+For decades organizations invested in collecting more knowledge.
+
+Documents multiplied.
 
 Processes became digital.
 
-Communication became digital.
+Policies became searchable.
 
-Enterprise software became digital.
+Enterprise systems became connected.
 
-Knowledge became increasingly accessible.
+Knowledge became increasingly available.
 
-Yet one fundamental assumption remained largely unquestioned.
+Yet organizational understanding hardly improved.
 
-More knowledge does not automatically create more understanding.
+The missing capability was never the collection of knowledge.
 
-This assumption shaped generations of organizational software.
+It was the continuous integration of knowledge into a coherent understanding of the organization itself.
 
-Knowledge was treated as the final objective.
+This distinction changes the way organizations must be understood.
 
-In reality, knowledge is only the raw material.
+Knowledge is not the destination.
 
-Understanding is something fundamentally different.
+It is the raw material.
 
-Knowledge describes isolated facts.
+Understanding is the capability that emerges when knowledge becomes continuously connected, contextualized and interpreted.
 
-Understanding reveals relationships.
+Understanding therefore cannot be documented once.
 
-Knowledge explains individual elements.
+It must continuously evolve together with the organization itself.
 
-Understanding explains how those elements interact.
+This capability has been missing from organizational management for decades.
 
-Knowledge is static.
+It represents the missing layer between knowledge and intelligence.
 
-Understanding continuously evolves.
+Once this layer exists, intelligence is no longer applied only to isolated documents or individual tasks.
 
-Knowledge can be stored.
-
-Understanding must continuously emerge.
-
-Understanding is therefore not another repository.
-
-It is not another management system.
-
-It is not another documentation discipline.
-
-It is the capability that emerges when organizational knowledge becomes continuously connected, contextualized and interpreted.
-
-This missing capability separates today's organizations from tomorrow's organizations.
-
-It separates documentation from comprehension.
-
-Information from meaning.
-
-Knowledge from intelligence.
-
-Organizational Intelligence therefore does not begin with Artificial Intelligence.
-
-It begins with organizational understanding.
-
-Understanding becomes the missing layer between knowledge and intelligence.
-
-Once this layer exists, entirely new organizational capabilities become possible.
+It becomes applicable to the organization itself.
 
 Organizations become capable of reasoning about themselves.
 
-They become capable of continuously improving themselves.
+They become capable of recognizing inconsistencies.
 
-They become capable of adapting themselves.
+They become capable of identifying opportunities.
 
-Ultimately, they become capable of enabling themselves.
+They become capable of improving themselves continuously.
 
-The emergence of organizational understanding therefore represents more than another technological improvement.
+Understanding therefore becomes the enabling capability from which Organizational Intelligence emerges.
+
+The emergence of this missing layer represents more than another technological innovation.
 
 It represents the beginning of a new stage in the evolution of organizations.
