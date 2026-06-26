@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { MainHeader } from "./main-navigation";
 import { CapabilityJourney } from "./capability-journey";
 import {
@@ -65,13 +64,13 @@ function Hero() {
         </div>
       </div>
       <div className="hero-visual" aria-hidden="true">
-        <Image
+        {/* Vinext local dev cannot serve Next image optimization for this static hero asset. */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
           alt=""
           decoding="async"
           fetchPriority="high"
           height="929"
-          priority
-          sizes="(max-width: 720px) 680px, (max-width: 920px) 920px, 72vw"
           src="/landing-organizational-intelligence-hero-v1.jpg"
           width="1692"
         />
