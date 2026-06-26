@@ -270,7 +270,65 @@ The emergence of this missing layer represents more than another technological i
 
 It represents the beginning of a new stage in the evolution of organizations.
 
-# 3. The Organizational Intelligence Model
+# 3. Organizational Understanding
+
+The concept of understanding is often used intuitively.
+
+Yet it is rarely defined.
+
+Within the Organizational Intelligence Theory, understanding is not considered a collection of knowledge.
+
+It is considered an emergent capability.
+
+Organizational Understanding is the continuously evolving capability of an organization to interpret itself through the integration of knowledge, context, relationships and reasoning.
+
+Knowledge alone is insufficient.
+
+Context explains where knowledge applies.
+
+Relationships explain how organizational elements influence each other.
+
+Reasoning allows organizations to derive meaning, identify inconsistencies and anticipate consequences.
+
+Only when these four dimensions continuously interact does understanding emerge.
+
+Knowledge
+
++
+
+Context
+
++
+
+Relationships
+
++
+
+Reasoning
+
+↓
+
+Organizational Understanding
+
+Unlike documentation, understanding cannot be frozen.
+
+Every organizational decision changes context.
+
+Every new employee changes relationships.
+
+Every new regulation changes interpretation.
+
+Understanding therefore evolves continuously together with the organization itself.
+
+Organizational Understanding is not another repository.
+
+It is not another management discipline.
+
+It is the capability that enables organizations to continuously interpret themselves.
+
+Only once this capability exists can Organizational Intelligence emerge.
+
+# 4. The Organizational Intelligence Model
 
 Organizational Intelligence does not emerge suddenly.
 
