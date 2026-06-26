@@ -618,7 +618,75 @@ creates new Knowledge
 
 ↺
 
-# 8. The Organizational Intelligence Model
+# 8. The Organizational Intelligence Hypothesis
+
+Every generation of management has attempted to improve organizational performance.
+
+Some focused on specialization.
+
+Some focused on standardization.
+
+Some focused on quality.
+
+Others focused on knowledge.
+
+Artificial Intelligence now promises to improve decision-making.
+
+Despite these advances, one fundamental assumption has remained largely unquestioned.
+
+Organizations do not become better simply because they possess more information.
+
+They become better because they continuously improve the quality of their collective decisions.
+
+Decision quality therefore represents the true indicator of organizational development.
+
+This leads to the central hypothesis of Organizational Intelligence.
+
+**The long-term performance of an organization is determined by the quality of the decisions it is capable of making under continuously changing conditions.**
+
+Decision quality itself does not emerge randomly.
+
+It emerges from Organizational Understanding.
+
+Organizations that understand themselves make better decisions.
+
+Better decisions create stronger organizational capabilities.
+
+Stronger capabilities create resilience.
+
+Resilience enables continuous self-improvement.
+
+The relationship can therefore be expressed as a causal chain.
+
+Organizational Understanding
+
+↓
+
+Decision Quality
+
+↓
+
+Organizational Capabilities
+
+↓
+
+Organizational Resilience
+
+↓
+
+Self-Enabling Organization
+
+This hypothesis fundamentally changes the purpose of organizational software.
+
+Its objective is no longer the management of information.
+
+Its objective becomes the continuous improvement of organizational decision quality.
+
+If this hypothesis proves correct, Organizational Intelligence represents not merely another software category.
+
+It represents a new management discipline.
+
+# 9. The Organizational Intelligence Model
 
 Organizational Intelligence does not emerge suddenly.
 
