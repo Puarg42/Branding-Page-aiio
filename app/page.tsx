@@ -137,6 +137,11 @@ function ProblemSection() {
           ))}
         </div>
       </div>
+      <div className="problem-atmosphere" aria-hidden="true">
+        <span />
+        <span />
+        <span />
+      </div>
     </section>
   );
 }
@@ -175,6 +180,11 @@ function ConceptBreakthrough() {
 function NewKindOrganization() {
   return (
     <section className="organization-section" id="self-enabling-organization">
+      <div className="organization-ambient" aria-hidden="true">
+        <span />
+        <span />
+        <span />
+      </div>
       <div className="organization-inner">
         <div className="organization-header">
           <p className="dark-eyebrow">A New Kind of Organization</p>
@@ -303,6 +313,9 @@ function CompanyPurpose() {
             </article>
           ))}
         </div>
+      </div>
+      <div className="company-quiet-image" aria-hidden="true">
+        <span />
       </div>
     </section>
   );
