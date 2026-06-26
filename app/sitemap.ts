@@ -3,8 +3,8 @@ import { siteUrl } from "./site-url";
 
 const routes = [
   { path: "/", priority: 1 },
+  { path: "/thinking", priority: 0.78 },
   { path: "/platform", priority: 0.86 },
-  { path: "/research", priority: 0.78 },
   { path: "/partners", priority: 0.72 },
   { path: "/company", priority: 0.76 },
   { path: "/contact", priority: 0.72 },

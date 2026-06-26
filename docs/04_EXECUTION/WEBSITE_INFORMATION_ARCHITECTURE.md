@@ -17,27 +17,28 @@ Top-Level Navigation
 | --- | --- | --- |
 | Home | `/` | Launch the Organizational Intelligence category. |
 | Platform | `/platform` | Introduce the Organizational Intelligence System as one integrated platform. |
-| Research | `/research` | Position aiio as the thought leader of Organizational Intelligence. |
+| Thinking | `/thinking` | Establish aiio as the thought leader of Organizational Intelligence. |
 | Partners | `/partners` | Explain why partners should build on aiio. |
 | Company | `/company` | Explain why aiio exists. |
 | Contact | `/contact` | Provide a simple premium contact entry point. |
 
 Platform Architecture
 
-- Capture
-- Understand
-- Enable
-- Evolve
+- Capture Knowledge
+- Build Understanding
+- Enable Action
+- Evolve Organizations
 
-Research Architecture
+Thinking Architecture
 
 - Hero
 - Core Thesis
 - Organizational Intelligence
 - Whitepapers
-- Research
+- Essays
 - Publications
-- Future Dissertation
+- Dissertation
+- Future of Organizations
 
 Partners Architecture
 

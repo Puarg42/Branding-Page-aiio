@@ -8,8 +8,8 @@ type FooterLink = {
 
 const footerNav: FooterLink[] = [
   { href: "/", label: "Home" },
+  { href: "/thinking", label: "Thinking" },
   { href: "/platform", label: "Platform" },
-  { href: "/research", label: "Research" },
   { href: "/partners", label: "Partners" },
   { href: "/company", label: "Company" },
   { href: "/contact", label: "Contact" },

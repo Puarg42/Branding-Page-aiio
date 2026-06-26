@@ -13,26 +13,26 @@ export const metadata: Metadata = {
 
 const capabilities: CapabilityTeaser[] = [
   {
-    title: "Capture",
-    copy: "Preserve organizational knowledge before it disappears.",
+    title: "Capture Knowledge",
+    copy: "Make organizational knowledge visible, preserved and ready to become shared context.",
     product: "ProcessCollector",
     href: "#processcollector",
   },
   {
-    title: "Understand",
-    copy: "Turn fragmented knowledge into shared organizational understanding.",
+    title: "Build Understanding",
+    copy: "Transform fragmented information into one coherent understanding of the organization.",
     product: "ProcessMagnet",
     href: "#processmagnet",
   },
   {
-    title: "Enable",
-    copy: "Make organizational intelligence usable for people, agents and systems.",
+    title: "Enable Action",
+    copy: "Activate organizational intelligence for people, agents, workflows and existing systems.",
     product: "ProcessForge",
     href: "#processforge",
   },
   {
-    title: "Evolve",
-    copy: "Prepare the organization to learn continuously from its own memory.",
+    title: "Evolve Organizations",
+    copy: "Create the foundation for organizations that continuously learn and develop capabilities.",
     product: "DataForge",
     href: "#dataforge",
     badge: "Coming Soon",
@@ -43,7 +43,7 @@ export default function PlatformPage() {
   return (
     <WebsiteArchitecturePage
       eyebrow="Platform"
-      intro="The Organizational Intelligence System brings capture, understanding, enablement and evolution into one integrated platform."
+      intro="The Organizational Intelligence System introduces four platform capabilities that turn organizational knowledge into lasting organizational capability."
       title="The platform for Organizational Intelligence."
     >
       <CapabilityTeaserGrid capabilities={capabilities} />

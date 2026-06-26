@@ -93,7 +93,7 @@ export function CapabilityTeaserGrid({
                 <p>{capability.copy}</p>
               </div>
               <Link className="website-text-link" href={capability.href}>
-                Learn more
+                Learn more <span aria-hidden="true">→</span>
               </Link>
             </article>
           ))}
