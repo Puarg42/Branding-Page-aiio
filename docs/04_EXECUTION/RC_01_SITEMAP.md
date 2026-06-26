@@ -9,17 +9,14 @@ This document lists every visible section in the current RC-01 landing page.
 1. Hero
 2. The Problem
 3. The Missing Layer
-4. A New Kind of Organization
-5. Imagine...
-6. Organizational Learning Transition
-7. Built around Organizational Intelligence
-8. Why Now?
-9. Grounding Layer / ProcessCollector
-10. Understanding Layer / ProcessMagnet
-11. Activation Layer / ProcessForge
-12. Demo
-13. Footer
+4. Monday Morning
+5. The Organization Mirror
+6. Built around Organizational Intelligence
+7. Category Evolution
+8. From Understanding to Capability
+9. Demo
+10. Footer
 
 ## Render Order
 
-Hero -> The Problem -> The Missing Layer -> A New Kind of Organization -> Imagine... -> Organizational Learning Transition -> Built around Organizational Intelligence -> Why Now? -> ProcessCollector -> ProcessMagnet -> ProcessForge -> Demo -> Footer
+Hero -> The Problem -> The Missing Layer -> Monday Morning -> The Organization Mirror -> Built around Organizational Intelligence -> Category Evolution -> From Understanding to Capability -> Demo -> Footer
