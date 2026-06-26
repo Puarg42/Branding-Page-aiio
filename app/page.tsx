@@ -5,7 +5,6 @@ import {
   CeoMondayMoment,
   OrganizationMirror,
 } from "./category-reinforcement";
-import { getEditableContent, RichText } from "./editor/content";
 
 const problemCards = [
   {
@@ -42,6 +41,63 @@ const oisEcosystemElements = [
   "Enterprise Systems",
   "Artificial Intelligence",
   "Organizational Memory",
+] as const;
+
+const imagineMoments = [
+  {
+    statement: "Imagine an organization that never loses its knowledge.",
+    support: "Knowledge stays.",
+  },
+  {
+    statement: "Imagine an organization that truly understands itself.",
+    support: "Everything becomes shared understanding.",
+  },
+  {
+    statement:
+      "Imagine an organization that continuously develops new capabilities.",
+    support: "Every interaction strengthens it.",
+  },
+  {
+    statement: "Imagine an organization that is resilient by design.",
+    support: (
+      <>
+        Prepared for change.
+        <br />
+        Ready for the unknown.
+      </>
+    ),
+  },
+] as const;
+
+const whyNowStages = [
+  {
+    stage: "Industrial Revolution",
+    infrastructure: "Machines",
+    copy: "Machines amplified physical work.",
+  },
+  {
+    stage: "Digital Revolution",
+    infrastructure: "Software",
+    copy: "Software amplified business processes.",
+  },
+] as const;
+
+const companyPrinciples = [
+  {
+    title: "Understanding before Intelligence",
+    copy:
+      "Artificial Intelligence creates value only when it is grounded in organizational understanding.",
+  },
+  {
+    title: "Enable, don't replace",
+    copy:
+      "Technology should strengthen organizations rather than create new dependencies.",
+  },
+  {
+    title: "Build for the next decade",
+    copy:
+      "We are not building software for today's workflows. We are building the foundation for the next generation of organizations.",
+  },
 ] as const;
 
 function Hero() {
@@ -129,6 +185,62 @@ function ConceptBreakthrough() {
   );
 }
 
+function NewKindOrganization() {
+  return (
+    <section className="organization-section" id="self-enabling-organization">
+      <div className="organization-inner">
+        <div className="organization-header">
+          <p className="dark-eyebrow">A New Kind of Organization</p>
+          <h2>
+            The next generation will not be defined by AI alone.
+            <br />
+            It will be defined by self-understanding.
+          </h2>
+          <p>Knowledge stays. Understanding grows. Capabilities compound.</p>
+        </div>
+        <div className="organization-closing-block">
+          <div className="organization-closing-statement">
+            Tomorrow&apos;s leading organizations continuously understand themselves
+            and develop new capabilities.
+          </div>
+        </div>
+        <ol className="organization-journey" aria-label="Self-enabling organization journey">
+          {intelligenceProgression.map((step) => (
+            <li key={step}>
+              <span>{step}</span>
+            </li>
+          ))}
+        </ol>
+        <div className="organization-bottom-statement">
+          <p>Understanding is the prerequisite for intelligence.</p>
+          <p>Self-understanding is the prerequisite for self-enablement.</p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ImagineFuture() {
+  return (
+    <section className="imagine-section" id="imagine">
+      <p className="imagine-section-title">Imagine...</p>
+      {imagineMoments.map((moment) => (
+        <section className="imagine-moment" key={moment.statement}>
+          <div className="imagine-copy">
+            <h2>{moment.statement}</h2>
+            <p>{moment.support}</p>
+          </div>
+        </section>
+      ))}
+      <section className="imagine-moment imagine-final">
+        <div className="imagine-copy">
+          <h2>This is the Self-Enabling Organization.</h2>
+        </div>
+      </section>
+    </section>
+  );
+}
+
 function OisArchitecture() {
   return (
     <section className="ois-section" id="architektur">
@@ -182,30 +294,77 @@ function OisArchitecture() {
   );
 }
 
-function Demo() {
+function WhyNow() {
   return (
-    <section className="demo-section" id="demo">
-      <div className="demo">
-        <div>
-          <p className="eyebrow">{getEditableContent("home.demo.eyebrow", "Demo")}</p>
-          <h2>
-            {getEditableContent(
-              "home.demo.title",
-              "See what your organization already knows.",
-            )}
-          </h2>
+    <section className="why-now-section" id="why-now">
+      <div className="why-now-intro">
+        <p className="why-now-title">Why Now?</p>
+        <h2>Every technological revolution creates new infrastructure.</h2>
+      </div>
+
+      <div className="why-now-timeline" aria-label="Technological infrastructure timeline">
+        <div className="why-now-line" aria-hidden="true" />
+        {whyNowStages.map((item) => (
+          <article className="why-stage" key={item.stage}>
+            <span className="why-stage-dot" aria-hidden="true" />
+            <p className="why-stage-name">{item.stage}</p>
+            <h3>{item.infrastructure}</h3>
+            <p>{item.copy}</p>
+          </article>
+        ))}
+        <article className="why-stage why-stage-incomplete">
+          <span className="why-stage-dot" aria-hidden="true" />
+          <p className="why-stage-name">Artificial Intelligence</p>
+          <h3>???</h3>
+        </article>
+        <article className="why-stage why-stage-reveal">
+          <span className="why-stage-dot" aria-hidden="true" />
+          <p className="why-stage-name">Organizational Intelligence</p>
+          <h3>The Organizational Intelligence System</h3>
+          <p>Organizations can now understand themselves.</p>
+        </article>
+      </div>
+
+      <div className="why-now-closing">
+        <p>Artificial Intelligence changes software.</p>
+        <p>Organizational Intelligence changes organizations.</p>
+      </div>
+    </section>
+  );
+}
+
+function CompanyPurpose() {
+  return (
+    <section className="company-purpose-section" id="company">
+      <div className="company-purpose-inner">
+        <div className="company-purpose-copy">
+          <p className="company-purpose-title">Company</p>
+          <h2>Why aiio exists</h2>
+          <div>
+            <p>
+              Artificial Intelligence alone is not enough. It can only help an
+              organization move forward when it is grounded in what the
+              organization knows, how it works and why it makes decisions.
+            </p>
+            <p>
+              Before organizations can become more intelligent, they first need to
+              understand themselves.
+            </p>
+            <p>
+              aiio exists to enable that transformation: calmly, deliberately and
+              with a long-term commitment to organizations that can understand and
+              enable themselves.
+            </p>
+          </div>
         </div>
-        <div className="demo-copy rich-text">
-          <RichText
-            html={getEditableContent(
-              "home.demo.copy",
-              "The best aiio demo starts with real organizational knowledge and shows how understanding becomes action.",
-            )}
-          />
+        <div className="company-principles" aria-label="aiio principles">
+          {companyPrinciples.map((principle) => (
+            <article className="company-principle" key={principle.title}>
+              <h3>{principle.title}</h3>
+              <p>{principle.copy}</p>
+            </article>
+          ))}
         </div>
-        <a className="button" href="/live-demo/kontakt">
-          Request a Demo
-        </a>
       </div>
     </section>
   );
@@ -218,12 +377,15 @@ export default function Home() {
       <Hero />
       <ProblemSection />
       <ConceptBreakthrough />
+      <NewKindOrganization />
+      <ImagineFuture />
       <CeoMondayMoment />
       <OrganizationMirror />
       <OisArchitecture />
       <CategoryEvolution />
+      <WhyNow />
       <CapabilityJourney />
-      <Demo />
+      <CompanyPurpose />
     </main>
   );
 }
