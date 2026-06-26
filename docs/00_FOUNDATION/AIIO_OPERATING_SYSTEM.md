@@ -686,7 +686,89 @@ If this hypothesis proves correct, Organizational Intelligence represents not me
 
 It represents a new management discipline.
 
-# 9. The Organizational Intelligence Model
+# 9. The Evolution of Organizational Management
+
+Management has always evolved by expanding the capabilities of organizations.
+
+Every major discipline emerged because organizations reached the limits of the previous one.
+
+Scientific Management optimized manual work.
+
+Quality Management optimized consistency.
+
+Business Process Management optimized organizational activities.
+
+Knowledge Management optimized access to organizational knowledge.
+
+Enterprise Architecture optimized technological complexity.
+
+Artificial Intelligence optimizes reasoning.
+
+Each discipline represents an important evolutionary step.
+
+None of them should be considered obsolete.
+
+Each remains necessary.
+
+Yet every discipline shares one common characteristic.
+
+Each optimizes a specific organizational capability.
+
+None of them continuously develops organizational understanding itself.
+
+Business Process Management documents activities.
+
+Knowledge Management stores knowledge.
+
+Enterprise Architecture models systems.
+
+Artificial Intelligence reasons about information.
+
+Organizational Intelligence connects all of them.
+
+Its objective is not to replace existing disciplines.
+
+Its objective is to integrate their contributions into a continuously evolving understanding of the organization.
+
+Organizational Intelligence therefore represents an integrative discipline.
+
+It explains how existing organizational capabilities collectively contribute to organizational understanding, decision quality and continuous evolution.
+
+The emergence of Organizational Intelligence should therefore not be interpreted as the end of previous management disciplines.
+
+It represents their logical continuation.
+
+--------------------------------------------------
+
+Conceptual Evolution
+
+Scientific Management
+
+↓
+
+Quality Management
+
+↓
+
+Business Process Management
+
+↓
+
+Knowledge Management
+
+↓
+
+Enterprise Architecture
+
+↓
+
+Artificial Intelligence
+
+↓
+
+Organizational Intelligence
+
+# 10. The Organizational Intelligence Model
 
 Organizational Intelligence does not emerge suddenly.
 
