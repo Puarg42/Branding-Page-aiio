@@ -536,7 +536,89 @@ Organizational Capabilities
 
 Organizational Resilience
 
-# 7. The Organizational Intelligence Model
+# 7. The Self-Enabling Cycle
+
+The development of Organizational Intelligence does not end with resilience.
+
+It begins again.
+
+Every capability an organization develops influences the way it generates new knowledge.
+
+Every decision creates new experience.
+
+Every adaptation creates new organizational context.
+
+Every improvement changes the organization itself.
+
+Organizations therefore continuously recreate the knowledge from which future understanding emerges.
+
+Organizational Intelligence is therefore not a linear progression.
+
+It is a continuously reinforcing cycle.
+
+Knowledge creates Understanding.
+
+Understanding enables Intelligence.
+
+Intelligence develops Capabilities.
+
+Capabilities strengthen Resilience.
+
+Resilience enables organizations to continuously improve themselves.
+
+Every improvement creates new Organizational Knowledge.
+
+The cycle begins again.
+
+This continuous feedback loop defines the transition from adaptive organizations to Self-Enabling Organizations.
+
+Self-enabling organizations do not merely react to change.
+
+They continuously generate the knowledge required for their own future evolution.
+
+Learning therefore becomes endogenous.
+
+Improvement becomes continuous.
+
+Organizational evolution becomes self-reinforcing.
+
+The defining characteristic of a Self-Enabling Organization is therefore not autonomy.
+
+It is the ability to continuously generate the conditions required for its own development.
+
+--------------------------------------------------
+
+Conceptual Model
+
+Knowledge
+
+↓
+
+Understanding
+
+↓
+
+Intelligence
+
+↓
+
+Capabilities
+
+↓
+
+Resilience
+
+↓
+
+Self-Enabling
+
+↓
+
+creates new Knowledge
+
+↺
+
+# 8. The Organizational Intelligence Model
 
 Organizational Intelligence does not emerge suddenly.
 
