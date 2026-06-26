@@ -1,5 +1,10 @@
 import { MainHeader } from "./main-navigation";
 import { CapabilityJourney } from "./capability-journey";
+import {
+  CategoryEvolution,
+  CeoMondayMoment,
+  OrganizationMirror,
+} from "./category-reinforcement";
 import { getEditableContent, RichText } from "./editor/content";
 
 const problemCards = [
@@ -377,8 +382,11 @@ export default function Home() {
       <ConceptBreakthrough />
       <NewKindOrganization />
       <ImagineFuture />
+      <CeoMondayMoment />
       <LearningTransition />
+      <OrganizationMirror />
       <OisArchitecture />
+      <CategoryEvolution />
       <WhyNow />
       <CapabilityJourney />
       <Demo />
