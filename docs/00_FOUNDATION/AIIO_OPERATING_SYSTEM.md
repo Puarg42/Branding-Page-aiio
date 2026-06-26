@@ -269,3 +269,99 @@ Understanding therefore becomes the enabling capability from which Organizationa
 The emergence of this missing layer represents more than another technological innovation.
 
 It represents the beginning of a new stage in the evolution of organizations.
+
+# 3. The Organizational Intelligence Model
+
+Organizational Intelligence does not emerge suddenly.
+
+It develops progressively.
+
+Every organization evolves through a sequence of capabilities.
+
+Each capability enables the next.
+
+The model proposed in this document consists of six consecutive stages.
+
+Knowledge
+
+↓
+
+Understanding
+
+↓
+
+Action
+
+↓
+
+Capabilities
+
+↓
+
+Resilience
+
+↓
+
+Self-Enabling Organization
+
+Knowledge forms the foundation.
+
+Every organization possesses knowledge.
+
+Yet knowledge alone does not create organizational intelligence.
+
+Understanding emerges when knowledge becomes continuously connected, contextualized and interpreted.
+
+Action becomes possible when understanding guides decisions instead of isolated information.
+
+Repeated action develops organizational capabilities.
+
+Capabilities allow organizations to perform consistently, adapt reliably and improve deliberately.
+
+As capabilities mature, organizational resilience emerges.
+
+Resilience is the ability to remain effective despite uncertainty, disruption and continuous change.
+
+Ultimately, resilient organizations become capable of enabling themselves.
+
+A Self-Enabling Organization continuously learns, understands, improves and evolves without depending on permanent external intervention.
+
+This progression represents more than a maturity model.
+
+It describes the natural evolution of organizational intelligence.
+
+Artificial Intelligence does not replace any stage of this model.
+
+It accelerates the transition between them.
+
+The objective is therefore not Artificial Intelligence itself.
+
+The objective is the emergence of Self-Enabling Organizations.
+
+--------------------------------------------------
+
+Conceptual Interpretation
+
+Knowledge answers:
+
+"What exists?"
+
+Understanding answers:
+
+"Why does it exist?"
+
+Action answers:
+
+"What should we do?"
+
+Capabilities answer:
+
+"What are we consistently able to do?"
+
+Resilience answers:
+
+"How do we remain effective under change?"
+
+Self-Enabling Organizations answer:
+
+"How do we continuously improve ourselves?"
