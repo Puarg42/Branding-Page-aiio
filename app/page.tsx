@@ -9,20 +9,20 @@ import { getEditableContent, RichText } from "./editor/content";
 
 const problemCards = [
   {
-    title: "Knowledge disappears.",
-    copy: "Knowledge leaves with every handover.",
+    title: "Knowledge leaves.",
+    copy: "Every handover erases context.",
   },
   {
-    title: "AI lacks context.",
-    copy: "Without context, AI guesses.",
+    title: "AI guesses.",
+    copy: "Without context, intelligence becomes noise.",
   },
   {
-    title: "Complexity explodes.",
-    copy: "Systems multiply. Clarity disappears.",
+    title: "Complexity compounds.",
+    copy: "Systems multiply faster than understanding.",
   },
   {
-    title: "Decisions slow down.",
-    copy: "Fragmented understanding slows action.",
+    title: "Decisions stall.",
+    copy: "Fragmented knowledge slows action.",
   },
 ] as const;
 
@@ -44,59 +44,6 @@ const oisEcosystemElements = [
   "Organizational Memory",
 ] as const;
 
-const imagineMoments = [
-  {
-    statement: "Imagine an organization that never loses its knowledge.",
-    support: "Knowledge stays.",
-  },
-  {
-    statement: "Imagine an organization that truly understands itself.",
-    support: "Everything becomes shared understanding.",
-  },
-  {
-    statement:
-      "Imagine an organization that continuously develops new capabilities.",
-    support: "Every interaction strengthens it.",
-  },
-  {
-    statement: "Imagine an organization that is resilient by design.",
-    support: (
-      <>
-        Prepared for change.
-        <br />
-        Ready for the unknown.
-      </>
-    ),
-  },
-] as const;
-
-const learningTransitionMoments = [
-  {
-    lead: "For centuries,",
-    statement: "organizations have learned through people.",
-  },
-  {
-    lead: "For the first time,",
-    statement: "organizations can learn themselves.",
-  },
-  {
-    statement: "This changes everything.",
-  },
-] as const;
-
-const whyNowStages = [
-  {
-    stage: "Industrial Revolution",
-    infrastructure: "Machines",
-    copy: "Machines amplified physical work.",
-  },
-  {
-    stage: "Digital Revolution",
-    infrastructure: "Software",
-    copy: "Software amplified business processes.",
-  },
-] as const;
-
 function Hero() {
   return (
     <section className="hero">
@@ -105,8 +52,7 @@ function Hero() {
         <p className="hero-subheadline">
           Organizations already know more than they can use.
           <br />
-          For the first time, Artificial Intelligence enables them to understand
-          themselves.
+          aiio turns that hidden knowledge into Organizational Intelligence.
         </p>
         <div className="actions hero-actions" aria-label="Primary actions">
           <a className="button hero-button" href="#organizational-intelligence">
@@ -147,7 +93,7 @@ function ConceptBreakthrough() {
       <div className="concept-inner">
         <div className="concept-copy">
           <p className="dark-eyebrow">The missing layer</p>
-          <h2>The missing layer is Organizational Intelligence.</h2>
+          <h2>The missing layer is not more software. It is Organizational Intelligence.</h2>
           <div className="concept-statement">
             <p>
               The breakthrough is not machines understanding organizations.
@@ -172,95 +118,15 @@ function ConceptBreakthrough() {
   );
 }
 
-function NewKindOrganization() {
-  return (
-    <section className="organization-section" id="self-enabling-organization">
-      <div className="organization-inner">
-        <div className="organization-header">
-          <p className="dark-eyebrow">A New Kind of Organization</p>
-          <h2>
-            The next generation will not be defined by AI alone.
-            <br />
-            It will be defined by self-understanding.
-          </h2>
-          <p>Knowledge stays. Understanding grows. Capabilities compound.</p>
-        </div>
-        <div className="organization-closing-block">
-          <div className="organization-closing-statement">
-            Tomorrow&apos;s leading organizations continuously understand themselves
-            and develop new capabilities.
-          </div>
-        </div>
-        <ol className="organization-journey" aria-label="Self-enabling organization journey">
-          {intelligenceProgression.map((step) => (
-            <li key={step}>
-              <span>{step}</span>
-            </li>
-          ))}
-        </ol>
-        <div className="organization-bottom-statement">
-          <p>Understanding is the prerequisite for intelligence.</p>
-          <p>Self-understanding is the prerequisite for self-enablement.</p>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function ImagineFuture() {
-  return (
-    <section className="imagine-section" id="imagine">
-      <p className="imagine-section-title">Imagine...</p>
-      {imagineMoments.map((moment) => (
-        <section className="imagine-moment" key={moment.statement}>
-          <div className="imagine-copy">
-            <h2>{moment.statement}</h2>
-            <p>{moment.support}</p>
-          </div>
-        </section>
-      ))}
-      <section className="imagine-moment imagine-final">
-        <div className="imagine-copy">
-          <h2>This is the Self-Enabling Organization.</h2>
-        </div>
-      </section>
-    </section>
-  );
-}
-
-function LearningTransition() {
-  return (
-    <section className="learning-transition" aria-label="Organizational learning transition">
-      {learningTransitionMoments.map((moment) => (
-        <section
-          className={`learning-moment${"lead" in moment ? "" : " learning-moment-final"}`}
-          key={moment.statement}
-        >
-          <div className="learning-copy">
-            {"lead" in moment ? <p>{moment.lead}</p> : null}
-            <h2>{moment.statement}</h2>
-          </div>
-        </section>
-      ))}
-    </section>
-  );
-}
-
 function OisArchitecture() {
   return (
     <section className="ois-section" id="architektur">
       <div className="ois-intro">
         <p className="ois-section-title">Built around Organizational Intelligence</p>
-        <h2>Resilient organizations need one living foundation.</h2>
+        <h2>One foundation for organizational self-understanding.</h2>
         <div className="ois-body">
-          <p>The knowledge is already there.</p>
-          <p>
-            What is missing is a system that turns fragments into shared
-            understanding.
-          </p>
-          <p>
-            At aiio, that foundation is the Organizational Intelligence System.
-          </p>
+          <p>People, knowledge, systems and AI become one shared context.</p>
+          <p>That foundation is the Organizational Intelligence System.</p>
         </div>
       </div>
 
@@ -299,46 +165,7 @@ function OisArchitecture() {
 
       <div className="ois-bottom-statement">
         <p>The OIS is not another application.</p>
-        <p>It is the foundation for organizational self-understanding.</p>
-      </div>
-    </section>
-  );
-}
-
-function WhyNow() {
-  return (
-    <section className="why-now-section" id="why-now">
-      <div className="why-now-intro">
-        <p className="why-now-title">Why Now?</p>
-        <h2>Every technological revolution creates new infrastructure.</h2>
-      </div>
-
-      <div className="why-now-timeline" aria-label="Technological infrastructure timeline">
-        <div className="why-now-line" aria-hidden="true" />
-        {whyNowStages.map((item) => (
-          <article className="why-stage" key={item.stage}>
-            <span className="why-stage-dot" aria-hidden="true" />
-            <p className="why-stage-name">{item.stage}</p>
-            <h3>{item.infrastructure}</h3>
-            <p>{item.copy}</p>
-          </article>
-        ))}
-        <article className="why-stage why-stage-incomplete">
-          <span className="why-stage-dot" aria-hidden="true" />
-          <p className="why-stage-name">Artificial Intelligence</p>
-          <h3>???</h3>
-        </article>
-        <article className="why-stage why-stage-reveal">
-          <span className="why-stage-dot" aria-hidden="true" />
-          <p className="why-stage-name">Organizational Intelligence</p>
-          <h3>The Organizational Intelligence System</h3>
-          <p>Organizations can now understand themselves.</p>
-        </article>
-      </div>
-
-      <div className="why-now-closing">
-        <p>Artificial Intelligence changes software.</p>
-        <p>Organizational Intelligence changes organizations.</p>
+        <p>It is the infrastructure for self-understanding.</p>
       </div>
     </section>
   );
@@ -353,7 +180,7 @@ function Demo() {
           <h2>
             {getEditableContent(
               "home.demo.title",
-              "Zeigen, was die Organisation schon weiß.",
+              "See what your organization already knows.",
             )}
           </h2>
         </div>
@@ -361,12 +188,12 @@ function Demo() {
           <RichText
             html={getEditableContent(
               "home.demo.copy",
-              "Die beste aiio-Demo beginnt mit echtem Organisationswissen und zeigt, wie daraus Handlung entsteht.",
+              "The best aiio demo starts with real organizational knowledge and shows how understanding becomes action.",
             )}
           />
         </div>
         <a className="button" href="/live-demo/kontakt">
-          Demo anfordern
+          Request a Demo
         </a>
       </div>
     </section>
@@ -380,14 +207,10 @@ export default function Home() {
       <Hero />
       <ProblemSection />
       <ConceptBreakthrough />
-      <NewKindOrganization />
-      <ImagineFuture />
       <CeoMondayMoment />
-      <LearningTransition />
       <OrganizationMirror />
       <OisArchitecture />
       <CategoryEvolution />
-      <WhyNow />
       <CapabilityJourney />
       <Demo />
     </main>

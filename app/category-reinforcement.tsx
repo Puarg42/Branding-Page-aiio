@@ -25,25 +25,19 @@ const mirrorElements = [
 
 const ceoMoments = [
   {
-    statement: "Your most experienced expert retires.",
-    support: (
-      <>
-        Nothing is lost.
-        <br />
-        Your organization remembers.
-      </>
-    ),
+    statement: "An expert leaves. The organization remembers.",
+    support: "Knowledge stays usable.",
   },
   {
-    statement: "Artificial Intelligence answers with confidence.",
-    support: "Because it understands your organization.",
+    statement: "AI answers with context.",
+    support: "Because it understands how the organization works.",
   },
   {
-    statement: "Every improvement strengthens the organization.",
-    support: "Not just one project.",
+    statement: "Every improvement compounds.",
+    support: "Not as a project. As organizational memory.",
   },
   {
-    statement: "Your organization continuously develops new capabilities.",
+    statement: "Capabilities keep evolving.",
     support: "Without starting from zero.",
   },
 ] as const;
@@ -63,7 +57,7 @@ const infrastructureStages = [
   },
   {
     era: "Artificial Intelligence",
-    foundation: "The open question",
+    foundation: "Missing infrastructure",
   },
   {
     era: "Organizational Intelligence",
@@ -101,7 +95,7 @@ export function CeoMondayMoment() {
 
   return (
     <section className="ceo-moment-section" id="monday-morning">
-      <p className="ceo-moment-title">Imagine Monday Morning.</p>
+      <p className="ceo-moment-title">Monday Morning</p>
       {ceoMoments.map((moment, index) => (
         <section className="ceo-moment" key={moment.statement}>
           <motion.div
@@ -129,11 +123,10 @@ export function OrganizationMirror() {
     <section className="organization-mirror-section" id="organization-mirror">
       <motion.div className="organization-mirror-intro" {...reveal}>
         <p className="mirror-section-title">The Organization Mirror</p>
-        <h2>Every organization already contains intelligence.</h2>
+        <h2>Make the organization visible to itself.</h2>
         <p>
-          Organizations already possess enormous knowledge.
-          <br />
-          The challenge is making it visible.
+          People, systems, processes and knowledge converge into one living
+          memory.
         </p>
       </motion.div>
 
@@ -194,7 +187,7 @@ export function CategoryEvolution() {
     <section className="category-evolution-section" id="category-evolution">
       <motion.div className="category-evolution-intro" {...reveal}>
         <p className="category-evolution-title">Category Evolution</p>
-        <h2>Every technological revolution required new infrastructure.</h2>
+        <h2>Every revolution creates its own infrastructure.</h2>
       </motion.div>
 
       <div className="category-timeline" aria-label="Infrastructure evolution timeline">
@@ -227,7 +220,7 @@ export function CategoryEvolution() {
         {...reveal}
         transition={shouldReduceMotion ? { duration: 0 } : { duration: 1, ease: motionEase, delay: 0.16 }}
       >
-        <p className="category-reference-label">Reference Model</p>
+        <p className="category-reference-label">Category Model</p>
         <ol aria-label="aiio category evolution reference model">
           {categoryProgression.map((step) => (
             <li key={step}>{step}</li>

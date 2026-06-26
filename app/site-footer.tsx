@@ -9,7 +9,7 @@ type FooterLink = {
 const footerNav: FooterLink[] = [
   { href: "/#organizational-intelligence", label: "Vision" },
   { href: "/#capabilities", label: "Platform" },
-  { href: "/#why-now", label: "Research" },
+  { href: "/#category-evolution", label: "Research" },
   { href: "/about-us", label: "Company" },
 ];
 

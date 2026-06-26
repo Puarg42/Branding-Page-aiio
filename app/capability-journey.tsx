@@ -6,33 +6,25 @@ const capabilities = [
   {
     badge: null,
     label: "Powered by ProcessCollector",
-    support: "Capture organizational reality before valuable knowledge disappears.",
-    title: "Capture Organizational Knowledge",
+    support: "Preserve what the organization knows.",
+    title: "Capture Knowledge",
   },
   {
     badge: null,
     label: "Powered by ProcessMagnet",
-    support:
-      "Transform fragmented knowledge into one shared organizational understanding.",
-    title: "Create Organizational Understanding",
+    support: "Turn fragments into shared context.",
+    title: "Create Understanding",
   },
   {
     badge: null,
     label: "Powered by ProcessForge",
-    support:
-      "Continuously transform organizational understanding into new organizational capabilities.",
-    title: "Develop Organizational Capabilities",
+    support: "Activate knowledge in agents, workflows and systems.",
+    title: "Enable Action",
   },
   {
     badge: "Coming Soon",
     label: "Powered by DataForge",
-    support: (
-      <>
-        Learn from the past.
-        <br />
-        Prepare for the future.
-      </>
-    ),
+    support: "Learn, adapt and compound capability.",
     title: "Continuously Evolve",
   },
 ] as const;
@@ -68,11 +60,8 @@ export function CapabilityJourney() {
           whileInView="visible"
         >
           <p className="capability-section-title">From Understanding to Capability</p>
-          <h2>Organizational Intelligence creates organizational capabilities.</h2>
-          <p>
-            Organizational understanding only becomes valuable when it continuously
-            creates new capabilities.
-          </p>
+          <h2>Understanding becomes capability.</h2>
+          <p>Organizational Intelligence turns shared understanding into action.</p>
         </motion.div>
 
         <div className="capability-journey-map" aria-label="Capability journey">

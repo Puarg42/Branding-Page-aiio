@@ -13,7 +13,7 @@ type MenuLink = {
 const navItems: MenuLink[] = [
   { href: "/#organizational-intelligence", label: "Vision" },
   { href: "/#capabilities", label: "Platform" },
-  { href: "/#why-now", label: "Research" },
+  { href: "/#category-evolution", label: "Research" },
   { href: "/about-us", label: "Company" },
 ] as const;
 
