@@ -886,7 +886,93 @@ Organizations remain responsible for their own development.
 
 Consultants increasingly become architects of organizational capabilities rather than providers of organizational knowledge.
 
-# 12. The Organizational Intelligence Model
+# 12. Organizational Memory
+
+Human beings learn because they possess memory.
+
+Organizations learn differently.
+
+For centuries, organizations attempted to preserve experience through documentation.
+
+Processes.
+
+Policies.
+
+Manuals.
+
+Standards.
+
+Meeting minutes.
+
+Knowledge bases.
+
+These artifacts preserve information.
+
+They do not constitute organizational memory.
+
+Documentation records the past.
+
+Memory influences future decisions.
+
+Within the Organizational Intelligence Theory, Organizational Memory is defined as:
+
+**The continuously evolving representation of organizational experience that remains available for future understanding and decision-making.**
+
+Organizational Memory is not a repository.
+
+It is not an archive.
+
+It is not a document management system.
+
+It is the capability of an organization to preserve, connect and continuously reinterpret its accumulated experience.
+
+Without Organizational Memory, every generation of employees begins again.
+
+Knowledge leaves with people.
+
+Projects repeat previous mistakes.
+
+Organizations repeatedly solve identical problems.
+
+Organizational Memory changes this dynamic.
+
+Experience becomes continuously reusable.
+
+Learning becomes cumulative.
+
+Understanding becomes sustainable.
+
+Organizational Intelligence therefore requires Organizational Memory as its foundation.
+
+Only organizations capable of preserving their experience can continuously improve the quality of future decisions.
+
+--------------------------------------------------
+
+Conceptual Relationship
+
+Experience
+
+↓
+
+Organizational Memory
+
+↓
+
+Organizational Understanding
+
+↓
+
+Decision Quality
+
+↓
+
+Action
+
+↓
+
+New Experience
+
+# 13. The Organizational Intelligence Model
 
 Organizational Intelligence does not emerge suddenly.
 
