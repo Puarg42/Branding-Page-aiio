@@ -6,26 +6,26 @@ const capabilities = [
   {
     badge: null,
     label: "Powered by ProcessCollector",
-    support: "Preserve what the organization knows.",
+    support: "Capture organizational reality before valuable knowledge disappears.",
     title: "Capture Knowledge",
   },
   {
     badge: null,
     label: "Powered by ProcessMagnet",
-    support: "Turn fragments into shared context.",
-    title: "Create Understanding",
+    support: "Transform fragmented knowledge into shared organizational understanding.",
+    title: "Build Understanding",
   },
   {
     badge: null,
     label: "Powered by ProcessForge",
-    support: "Activate knowledge in agents, workflows and systems.",
+    support: "Enable better decisions through contextual organizational understanding.",
     title: "Enable Action",
   },
   {
     badge: "Coming Soon",
     label: "Powered by DataForge",
-    support: "Learn, adapt and compound capability.",
-    title: "Continuously Evolve",
+    support: "Measure organizational evolution and continuously developing capabilities.",
+    title: "Evolve Organizations",
   },
 ] as const;
 

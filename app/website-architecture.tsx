@@ -86,7 +86,7 @@ export function CapabilityTeaserGrid({
             >
               <div>
                 <div className="website-card-topline">
-                  <span>{capability.product}</span>
+                  <span>Powered by {capability.product}</span>
                   {capability.badge ? <em>{capability.badge}</em> : null}
                 </div>
                 <h3>{capability.title}</h3>

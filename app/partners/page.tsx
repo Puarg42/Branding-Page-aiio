@@ -1,27 +1,68 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { WebsiteArchitecturePage } from "../website-architecture";
 
 export const metadata: Metadata = {
   title: "Partners | aiio",
   description:
-    "The partner architecture for organizations building on the aiio platform.",
+    "The partner architecture for organizations building Organizational Intelligence.",
 };
 
-const sections = [
-  { title: "Partner Ecosystem" },
-  { title: "Business Model" },
-  { title: "Partner Benefits" },
-  { title: "Partner Portal" },
-  { title: "Call to Action" },
+const partnerRoles = [
+  {
+    title: "Develop understanding",
+    purpose:
+      "Help organizations turn fragmented knowledge into shared Organizational Understanding.",
+  },
+  {
+    title: "Build capabilities",
+    purpose:
+      "Enable customers to move from temporary projects toward continuously improving organizational capabilities.",
+  },
+  {
+    title: "Support evolution",
+    purpose:
+      "Guide organizations as decision quality, resilience and self-enablement become operating principles.",
+  },
 ] as const;
 
 export default function PartnersPage() {
   return (
     <WebsiteArchitecturePage
       eyebrow="Partners"
-      intro="The partner area will explain how partners build on aiio and extend the Organizational Intelligence category."
-      sections={sections}
-      title="Build on the Organizational Intelligence System."
-    />
+      intro="Partners help organizations develop Organizational Intelligence. Their role evolves from delivering knowledge toward enabling continuously improving organizations."
+      title="Build the capability era with aiio."
+    >
+      <section className="website-architecture-section">
+        <div className="website-page-shell">
+          <div className="website-section-heading">
+            <p className="website-eyebrow">Partner Ecosystem</p>
+            <h2>Partners become capability builders.</h2>
+          </div>
+          <div className="website-architecture-grid">
+            {partnerRoles.map((role) => (
+              <article className="website-architecture-card" key={role.title}>
+                <h3>{role.title}</h3>
+                <p>{role.purpose}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="website-contact-section">
+        <div className="website-page-shell">
+          <div className="website-contact-panel">
+            <p>
+              Partnership with aiio means helping organizations build the
+              capability to understand, decide and evolve continuously.
+            </p>
+            <Link className="website-final-button" href="/contact">
+              Start a partner conversation
+            </Link>
+          </div>
+        </div>
+      </section>
+    </WebsiteArchitecturePage>
   );
 }
