@@ -972,7 +972,59 @@ Action
 
 New Experience
 
-# 13. The Organizational Intelligence Model
+# 13. Emergence
+
+Organizations cannot understand themselves through isolated information.
+
+Understanding emerges.
+
+It is not explicitly created.
+
+It is not stored.
+
+It is not written.
+
+It continuously develops through the interaction of organizational experience, memory, knowledge, context and relationships.
+
+Within the Organizational Intelligence Theory, Organizational Understanding is therefore considered an emergent organizational property.
+
+Emergence describes properties that cannot be explained by analyzing individual components in isolation.
+
+They arise only through the interaction of the complete system.
+
+Organizational Understanding follows the same principle.
+
+No individual employee possesses complete organizational understanding.
+
+No individual document contains it.
+
+No isolated process describes it.
+
+Only the continuously connected representation of the organization allows understanding to emerge.
+
+This distinction fundamentally separates Organizational Intelligence from traditional Knowledge Management.
+
+Knowledge can be documented.
+
+Understanding cannot.
+
+It continuously emerges.
+
+Every new experience changes organizational memory.
+
+Every new relationship changes context.
+
+Every organizational decision changes future understanding.
+
+Organizational Understanding therefore remains permanently incomplete.
+
+It continuously evolves together with the organization itself.
+
+Organizational Intelligence should therefore not be understood as a collection of organizational knowledge.
+
+It should be understood as the capability of an organization to continuously generate organizational understanding from its own evolving representation.
+
+# 14. The Organizational Intelligence Model
 
 Organizational Intelligence does not emerge suddenly.
 
