@@ -11,10 +11,12 @@ type MenuLink = {
 };
 
 const navItems: MenuLink[] = [
-  { href: "/#organizational-intelligence", label: "Vision" },
-  { href: "/#capabilities", label: "Platform" },
-  { href: "/#category-evolution", label: "Research" },
-  { href: "/about-us", label: "Company" },
+  { href: "/", label: "Home" },
+  { href: "/platform", label: "Platform" },
+  { href: "/research", label: "Research" },
+  { href: "/partners", label: "Partners" },
+  { href: "/company", label: "Company" },
+  { href: "/contact", label: "Contact" },
 ] as const;
 
 function isExternalLink(href: string) {
@@ -139,11 +141,6 @@ export function MainHeader({ variant = "home" }: { variant?: HeaderVariant }) {
             </SmartLink>
           ))}
         </nav>
-        <div className="header-actions" aria-label="Aktionen">
-          <a className="nav-action" href="/live-demo/kontakt">
-            Request Demo
-          </a>
-        </div>
       </div>
       <div
         aria-hidden={!menuOpen}
@@ -162,14 +159,6 @@ export function MainHeader({ variant = "home" }: { variant?: HeaderVariant }) {
             </SmartLink>
           ))}
         </nav>
-        <a
-          className="mobile-menu-cta"
-          href="/live-demo/kontakt"
-          onClick={closeMenu}
-          tabIndex={menuOpen ? undefined : -1}
-        >
-          Request Demo
-        </a>
       </div>
     </header>
   );

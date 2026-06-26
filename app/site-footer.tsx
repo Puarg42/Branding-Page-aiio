@@ -7,10 +7,12 @@ type FooterLink = {
 };
 
 const footerNav: FooterLink[] = [
-  { href: "/#organizational-intelligence", label: "Vision" },
-  { href: "/#capabilities", label: "Platform" },
-  { href: "/#category-evolution", label: "Research" },
-  { href: "/about-us", label: "Company" },
+  { href: "/", label: "Home" },
+  { href: "/platform", label: "Platform" },
+  { href: "/research", label: "Research" },
+  { href: "/partners", label: "Partners" },
+  { href: "/company", label: "Company" },
+  { href: "/contact", label: "Contact" },
 ];
 
 const legalLinks: FooterLink[] = [
@@ -67,7 +69,7 @@ export function SiteFooter() {
             <Link className="footer-final-button primary" href="/live-demo/kontakt">
               Request a Demo
             </Link>
-            <Link className="footer-final-button" href="/#capabilities">
+            <Link className="footer-final-button" href="/platform">
               Explore the Platform
             </Link>
           </div>
