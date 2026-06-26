@@ -69,19 +69,6 @@ const imagineMoments = [
   },
 ] as const;
 
-const whyNowStages = [
-  {
-    stage: "Industrial Revolution",
-    infrastructure: "Machines",
-    copy: "Machines amplified physical work.",
-  },
-  {
-    stage: "Digital Revolution",
-    infrastructure: "Software",
-    copy: "Software amplified business processes.",
-  },
-] as const;
-
 const companyPrinciples = [
   {
     title: "Understanding before Intelligence",
@@ -204,13 +191,6 @@ function NewKindOrganization() {
             and develop new capabilities.
           </div>
         </div>
-        <ol className="organization-journey" aria-label="Self-enabling organization journey">
-          {intelligenceProgression.map((step) => (
-            <li key={step}>
-              <span>{step}</span>
-            </li>
-          ))}
-        </ol>
         <div className="organization-bottom-statement">
           <p>Understanding is the prerequisite for intelligence.</p>
           <p>Self-understanding is the prerequisite for self-enablement.</p>
@@ -294,45 +274,6 @@ function OisArchitecture() {
   );
 }
 
-function WhyNow() {
-  return (
-    <section className="why-now-section" id="why-now">
-      <div className="why-now-intro">
-        <p className="why-now-title">Why Now?</p>
-        <h2>Every technological revolution creates new infrastructure.</h2>
-      </div>
-
-      <div className="why-now-timeline" aria-label="Technological infrastructure timeline">
-        <div className="why-now-line" aria-hidden="true" />
-        {whyNowStages.map((item) => (
-          <article className="why-stage" key={item.stage}>
-            <span className="why-stage-dot" aria-hidden="true" />
-            <p className="why-stage-name">{item.stage}</p>
-            <h3>{item.infrastructure}</h3>
-            <p>{item.copy}</p>
-          </article>
-        ))}
-        <article className="why-stage why-stage-incomplete">
-          <span className="why-stage-dot" aria-hidden="true" />
-          <p className="why-stage-name">Artificial Intelligence</p>
-          <h3>???</h3>
-        </article>
-        <article className="why-stage why-stage-reveal">
-          <span className="why-stage-dot" aria-hidden="true" />
-          <p className="why-stage-name">Organizational Intelligence</p>
-          <h3>The Organizational Intelligence System</h3>
-          <p>Organizations can now understand themselves.</p>
-        </article>
-      </div>
-
-      <div className="why-now-closing">
-        <p>Artificial Intelligence changes software.</p>
-        <p>Organizational Intelligence changes organizations.</p>
-      </div>
-    </section>
-  );
-}
-
 function CompanyPurpose() {
   return (
     <section className="company-purpose-section" id="company">
@@ -342,18 +283,15 @@ function CompanyPurpose() {
           <h2>Why aiio exists</h2>
           <div>
             <p>
-              Artificial Intelligence alone is not enough. It can only help an
-              organization move forward when it is grounded in what the
-              organization knows, how it works and why it makes decisions.
+              Artificial Intelligence alone is not enough. It creates value only
+              when it is grounded in organizational understanding.
             </p>
             <p>
-              Before organizations can become more intelligent, they first need to
-              understand themselves.
+              Organizations first need to understand themselves.
             </p>
             <p>
-              aiio exists to enable that transformation: calmly, deliberately and
-              with a long-term commitment to organizations that can understand and
-              enable themselves.
+              aiio exists to enable that transformation with long-term
+              conviction.
             </p>
           </div>
         </div>
@@ -383,7 +321,6 @@ export default function Home() {
       <OrganizationMirror />
       <OisArchitecture />
       <CategoryEvolution />
-      <WhyNow />
       <CapabilityJourney />
       <CompanyPurpose />
     </main>

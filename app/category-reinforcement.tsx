@@ -39,10 +39,6 @@ const ceoMoments = [
     support: "Because it understands your organization.",
   },
   {
-    statement: "Every improvement strengthens the organization.",
-    support: "Not just one project.",
-  },
-  {
     statement: "Your organization continuously develops new capabilities.",
     support: "Without starting from zero.",
   },
@@ -68,17 +64,12 @@ const infrastructureStages = [
   {
     era: "Next Age",
     foundation: "Organizational Intelligence",
-    featured: true,
-    outcome: "Self-Enabling Organizations",
   },
-] as const;
-
-const categoryProgression = [
-  "Business Process Management",
-  "Knowledge Management",
-  "Artificial Intelligence",
-  "Organizational Intelligence",
-  "Self-Enabling Organizations",
+  {
+    era: "Outcome",
+    foundation: "Self-Enabling Organizations",
+    featured: true,
+  },
 ] as const;
 
 function useReveal(duration = 0.95) {
@@ -194,11 +185,11 @@ export function CategoryEvolution() {
   return (
     <section className="category-evolution-section" id="category-evolution">
       <motion.div className="category-evolution-intro" {...reveal}>
-        <p className="category-evolution-title">Category Evolution</p>
+        <p className="category-evolution-title">Why Now?</p>
         <h2>Every technological revolution required new infrastructure.</h2>
       </motion.div>
 
-      <div className="category-timeline" aria-label="Infrastructure evolution timeline">
+      <div className="category-timeline" aria-label="Why Now infrastructure progression">
         <div className="category-timeline-line" aria-hidden="true" />
         {infrastructureStages.map((stage, index) => (
           <motion.article
@@ -219,25 +210,9 @@ export function CategoryEvolution() {
             <span className="category-stage-dot" aria-hidden="true" />
             <p>{stage.era}</p>
             <h3>{stage.foundation}</h3>
-            {"outcome" in stage ? (
-              <strong className="category-stage-outcome">{stage.outcome}</strong>
-            ) : null}
           </motion.article>
         ))}
       </div>
-
-      <motion.div
-        className="category-reference-model"
-        {...reveal}
-        transition={shouldReduceMotion ? { duration: 0 } : { duration: 1, ease: motionEase, delay: 0.16 }}
-      >
-        <p className="category-reference-label">Category Model</p>
-        <ol aria-label="aiio category evolution reference model">
-          {categoryProgression.map((step) => (
-            <li key={step}>{step}</li>
-          ))}
-        </ol>
-      </motion.div>
     </section>
   );
 }
