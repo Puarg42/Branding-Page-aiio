@@ -5,9 +5,9 @@ import { MainHeader } from "../main-navigation";
 import { TimelineMedia } from "./timeline-media";
 
 export const metadata: Metadata = {
-  title: "Über uns | aiio",
+  title: "Why aiio exists | aiio",
   description:
-    "Über aiio: Management, Entwicklungsgeschichte, Expert Panel und die Vision einer KI-nativen Plattform für Organisationen.",
+    "Why aiio exists: enabling organizations to understand themselves in the age of Artificial Intelligence.",
 };
 
 const leadership = [
@@ -138,21 +138,21 @@ const advisors = [
   },
 ] as const;
 
-const proofPoints = [
+const principles = [
   {
-    title: "Schneller nutzbar",
+    title: "Understanding before Intelligence",
     copy:
-      "aiio ist auf kurze Wege ausgelegt: im Browser, in Microsoft Teams und in Microsoft-365-nahen Arbeitsumgebungen.",
+      "Artificial Intelligence creates value only when it is grounded in organizational understanding.",
   },
   {
-    title: "Beteiligung statt Spezialdisziplin",
+    title: "Enable, don't replace",
     copy:
-      "Prozessarbeit soll nicht nur Expertinnen und Experten gehören. Mitarbeitende können ihr Wissen beitragen und damit Veränderung greifbar machen.",
+      "Technology should strengthen organizations rather than create new dependencies.",
   },
   {
-    title: "KI als Kollege",
+    title: "Build for the next decade",
     copy:
-      "Verbesserungsideen, Potenziale und nächste Schritte werden so aufbereitet, dass Organisationen schneller von Modellen zu aktivierter Wirkung kommen.",
+      "We are not building software for today's workflows. We are building the foundation for the next generation of organizations.",
   },
 ] as const;
 
@@ -191,12 +191,11 @@ export default function AboutUsPage() {
 
       <section className="about-hero">
         <div className="about-hero-inner">
-          <p className="eyebrow">{getEditableContent("about.hero.eyebrow", "Über aiio")}</p>
-          <h1>{getEditableContent("about.hero.title", "AI Improves Organizations.")}</h1>
+          <p className="eyebrow">{getEditableContent("about.hero.eyebrow", "Company")}</p>
+          <h1>{getEditableContent("about.hero.title", "Why aiio exists")}</h1>
           <p>
-            aiio entwickelt eine KI-native Plattform für Organisationen, die
-            verstreutes Wissen in Transparenz, BPMN-konforme Modelle und
-            aktivierbare Outputs übersetzt.
+            Organizations are becoming more complex than their structures,
+            systems and routines can fully explain.
           </p>
           <div className="actions" aria-label="Über aiio Aktionen">
             <Link className="button" href="/#architektur">
@@ -211,22 +210,29 @@ export default function AboutUsPage() {
 
       <section className="section about-intro">
         <div>
-          <p className="eyebrow">{getEditableContent("about.intro.eyebrow", "Haltung")}</p>
+          <p className="eyebrow">{getEditableContent("about.intro.eyebrow", "Purpose")}</p>
           <h2>
             {getEditableContent(
               "about.intro.title",
-              "Prozessmanagement wird zur gemeinsamen Organisationsarbeit.",
+              "Why aiio exists",
             )}
           </h2>
         </div>
         <div className="about-statement">
           <p>
-            Unternehmen stehen unter Druck, effizienter zu werden, Vorgaben
-            einzuhalten und Veränderung mit begrenzten Ressourcen zu gestalten.
-            aiio setzt genau dort an: Prozesswissen soll einfacher erfasst,
-            gemeinsam verstanden und in konkrete Verbesserung übersetzt werden.
+            Artificial Intelligence alone is not enough. It can only help an
+            organization move forward when it is grounded in what the
+            organization knows, how it works and why it makes decisions.
           </p>
-          <strong>Über 120 Jahre Managementerfahrung treffen auf KI-native Produktentwicklung.</strong>
+          <p>
+            Before organizations can become more intelligent, they first need to
+            understand themselves.
+          </p>
+          <p>
+            aiio exists to enable that transformation: calmly, deliberately and
+            with a long-term commitment to organizations that can understand and
+            enable themselves.
+          </p>
         </div>
       </section>
 
@@ -364,19 +370,19 @@ export default function AboutUsPage() {
       </section>
 
       <section className="section">
-        <p className="eyebrow">{getEditableContent("about.proof.eyebrow", "Kundennutzen")}</p>
-        <h2>{getEditableContent("about.proof.title", "Warum Organisationen aiio nutzen.")}</h2>
+        <p className="eyebrow">{getEditableContent("about.principles.eyebrow", "Principles")}</p>
+        <h2>{getEditableContent("about.principles.title", "Three principles guide our work.")}</h2>
         <div className="about-grid">
-          {proofPoints.map((proof, proofIndex) => {
-            const proofTitle = getEditableContent(
-              `about.proof.${proofIndex}.title`,
-              proof.title,
+          {principles.map((principle, principleIndex) => {
+            const principleTitle = getEditableContent(
+              `about.principles.${principleIndex}.title`,
+              principle.title,
             );
 
             return (
-              <article className="about-card proof-card" key={proof.title}>
-                <h3>{proofTitle}</h3>
-                <p>{proof.copy}</p>
+              <article className="about-card proof-card" key={principle.title}>
+                <h3>{principleTitle}</h3>
+                <p>{principle.copy}</p>
               </article>
             );
           })}
