@@ -826,7 +826,67 @@ The defining innovation of this era is therefore not Artificial Intelligence its
 
 It is the emergence of organizations that can continuously understand and improve themselves.
 
-# 11. The Organizational Intelligence Model
+# 11. The Transformation of Consulting
+
+Organizations have always relied on external expertise to compensate for missing organizational understanding.
+
+Consultants analyzed processes.
+
+Documented structures.
+
+Developed strategies.
+
+Designed target operating models.
+
+Transferred knowledge.
+
+Their value originated from creating understanding that organizations could not continuously generate themselves.
+
+Organizational Intelligence fundamentally changes this relationship.
+
+Organizations gradually become capable of developing their own understanding.
+
+Analysis becomes continuous.
+
+Knowledge becomes cumulative.
+
+Understanding becomes organizational instead of external.
+
+This does not eliminate consulting.
+
+It changes its purpose.
+
+Consultants no longer create understanding on behalf of organizations.
+
+They enable organizations to continuously develop understanding themselves.
+
+The value of consulting therefore shifts.
+
+From delivering answers
+
+to developing organizational capabilities.
+
+From temporary projects
+
+to continuous organizational evolution.
+
+From documentation
+
+to enablement.
+
+Consulting becomes less transactional.
+
+More transformational.
+
+Organizational Intelligence therefore should not be understood as a substitute for consulting.
+
+It represents the technological and organizational foundation upon which the next generation of consulting will evolve.
+
+Organizations remain responsible for their own development.
+
+Consultants increasingly become architects of organizational capabilities rather than providers of organizational knowledge.
+
+# 12. The Organizational Intelligence Model
 
 Organizational Intelligence does not emerge suddenly.
 
