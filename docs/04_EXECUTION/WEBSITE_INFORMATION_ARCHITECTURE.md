@@ -4,6 +4,10 @@ Purpose
 
 Define the premium top-level website architecture for aiio after Branding Page V1.
 
+Related Documents
+
+- `WEBSITE_EXPERIENCE_ARCHITECTURE.md`
+
 Scope
 
 - Branch: `feature/category-design-v1`
