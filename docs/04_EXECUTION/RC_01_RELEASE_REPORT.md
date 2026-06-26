@@ -62,7 +62,13 @@ This measurement should not be treated as the release score.
 
 ## Deployment Status
 
-The branch `feature/category-design-v1` is pushed to GitHub at commit `247a9ae`.
+The branch `feature/category-design-v1` is pushed to GitHub.
+
+RC-01 source tag: `rc-01`
+
+RC-01 report commit: `737918a`
+
+Landing page implementation commit: `247a9ae`
 
 GitHub shows a Vercel Preview deployment record for commit `247a9ae`.
 
