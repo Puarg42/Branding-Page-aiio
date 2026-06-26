@@ -40,7 +40,7 @@ const capabilities = [
 const motionEase = [0.2, 0, 0, 1] as const;
 
 const fadeIn: Variants = {
-  hidden: { opacity: 0, y: 44 },
+  hidden: { opacity: 0, y: 32 },
   visible: { opacity: 1, y: 0 },
 };
 

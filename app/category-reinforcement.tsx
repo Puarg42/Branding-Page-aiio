@@ -5,7 +5,7 @@ import { motion, useReducedMotion, type Transition, type Variants } from "framer
 const motionEase = [0.2, 0, 0, 1] as const;
 
 const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 56 },
+  hidden: { opacity: 0, y: 36 },
   visible: { opacity: 1, y: 0 },
 };
 
