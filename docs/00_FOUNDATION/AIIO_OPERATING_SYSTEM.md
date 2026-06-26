@@ -768,7 +768,65 @@ Artificial Intelligence
 
 Organizational Intelligence
 
-# 10. The Organizational Intelligence Model
+# 10. Why Now?
+
+Every major management discipline emerged when technological progress made a previously impossible capability achievable.
+
+Scientific Management required industrialization.
+
+Business Process Management required digital modeling.
+
+Knowledge Management required digital information.
+
+Artificial Intelligence required computational reasoning.
+
+Organizational Intelligence requires something fundamentally different.
+
+Organizations must become understandable.
+
+For most of history this was impossible.
+
+Organizational knowledge remained fragmented.
+
+Documents existed in isolation.
+
+Processes were disconnected from policies.
+
+Systems were disconnected from human expertise.
+
+Knowledge disappeared continuously.
+
+The technological foundations required to integrate these perspectives simply did not exist.
+
+Only recently have four developments converged.
+
+Large Language Models.
+
+Vector databases.
+
+Knowledge Graphs.
+
+Multimodal information retrieval.
+
+Individually, each technology solves only part of the problem.
+
+Together, they make something fundamentally new possible.
+
+Organizations can, for the first time, continuously construct an integrated understanding of themselves.
+
+This convergence represents the true beginning of Organizational Intelligence.
+
+Artificial Intelligence is therefore not the destination.
+
+It is the technological enabler that makes Organizational Intelligence possible.
+
+Just as electricity enabled industrial production without becoming the purpose of industrialization, Artificial Intelligence enables Organizational Intelligence without becoming its purpose.
+
+The defining innovation of this era is therefore not Artificial Intelligence itself.
+
+It is the emergence of organizations that can continuously understand and improve themselves.
+
+# 11. The Organizational Intelligence Model
 
 Organizational Intelligence does not emerge suddenly.
 
