@@ -406,7 +406,63 @@ Resilience
 
 Self-Enabling Organizations
 
-# 5. The Organizational Intelligence Model
+# 5. Organizational Capabilities
+
+Organizational Intelligence cannot be observed directly.
+
+It becomes visible through the capabilities an organization develops.
+
+Capabilities are therefore the observable manifestation of Organizational Intelligence.
+
+Every decision an organization makes contributes either to strengthening or weakening its capabilities.
+
+Unlike individual skills, organizational capabilities are collective.
+
+They emerge through the coordinated interaction of people, processes, knowledge, technology and organizational understanding.
+
+Capabilities therefore cannot simply be purchased.
+
+They must continuously evolve.
+
+Within the Organizational Intelligence Theory, Organizational Capabilities are defined as:
+
+**The continuously evolving organizational abilities that emerge when understanding is consistently transformed into coordinated action.**
+
+Action alone does not create capabilities.
+
+Repeated, coherent and continuously improving action does.
+
+Every capability increases the organization's ability to respond to future situations.
+
+Capabilities therefore represent accumulated organizational learning.
+
+The development of capabilities marks the transition from reacting to individual situations toward systematically improving organizational performance.
+
+Organizations with stronger capabilities require less external coordination.
+
+They become increasingly capable of improving themselves.
+
+Capabilities therefore represent the first measurable outcome of Organizational Intelligence.
+
+--------------------------------------------------
+
+Conceptual Progression
+
+Knowledge
+
+↓
+
+Organizational Understanding
+
+↓
+
+Organizational Intelligence
+
+↓
+
+Organizational Capabilities
+
+# 6. The Organizational Intelligence Model
 
 Organizational Intelligence does not emerge suddenly.
 
