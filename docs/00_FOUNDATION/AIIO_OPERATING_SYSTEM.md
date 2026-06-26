@@ -462,7 +462,81 @@ Organizational Intelligence
 
 Organizational Capabilities
 
-# 6. The Organizational Intelligence Model
+# 6. Organizational Resilience
+
+Organizations operate in environments that continuously change.
+
+Markets evolve.
+
+Technologies advance.
+
+Regulations change.
+
+People join and leave.
+
+Customer expectations shift.
+
+No organization can prevent change.
+
+The decisive question is therefore not whether organizations face uncertainty.
+
+The decisive question is whether they remain capable of understanding, deciding and acting despite uncertainty.
+
+Within the Organizational Intelligence Theory, Organizational Resilience is defined as:
+
+**The continuously evolving capability of an organization to preserve its ability to understand, decide and act under changing conditions.**
+
+Resilience is not the consequence of isolated organizational capabilities.
+
+It emerges from the coordinated interaction of multiple capabilities.
+
+Every additional capability strengthens the organization's ability to respond to future situations.
+
+As capabilities become increasingly interconnected, organizations become less dependent on individual people, isolated knowledge or temporary structures.
+
+Learning becomes continuous.
+
+Adaptation becomes systematic.
+
+Improvement becomes sustainable.
+
+Resilience therefore represents the stabilization of Organizational Intelligence.
+
+It is the stage at which organizational intelligence remains effective despite continuous change.
+
+Resilient organizations do not merely survive disruption.
+
+They continuously learn from it.
+
+Every disruption becomes additional organizational understanding.
+
+Every adaptation strengthens future capabilities.
+
+Resilience therefore transforms Organizational Intelligence from a temporary advantage into a permanent organizational characteristic.
+
+--------------------------------------------------
+
+Conceptual Progression
+
+Knowledge
+
+↓
+
+Organizational Understanding
+
+↓
+
+Organizational Intelligence
+
+↓
+
+Organizational Capabilities
+
+↓
+
+Organizational Resilience
+
+# 7. The Organizational Intelligence Model
 
 Organizational Intelligence does not emerge suddenly.
 
