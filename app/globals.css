@@ -3765,7 +3765,8 @@ h1 {
   top: 64%;
 }
 
-.mirror-element-knowledge {
+.mirror-element-knowledge,
+.mirror-element-documents {
   left: 35%;
   top: 10%;
 }
@@ -4496,6 +4497,15 @@ h1 {
   font-size: clamp(2.1rem, 3.3vw, 4.1rem);
 }
 
+.category-stage-outcome {
+  color: rgb(255 255 255 / 76%);
+  display: block;
+  font-size: clamp(1.05rem, 1.42vw, 1.28rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 4px;
+}
+
 .category-reference-model {
   display: grid;
   justify-items: center;
@@ -4887,7 +4897,8 @@ h1 {
     top: 36%;
   }
 
-  .mirror-element-knowledge {
+  .mirror-element-knowledge,
+  .mirror-element-documents {
     left: 62%;
     top: 12%;
   }
@@ -5513,6 +5524,7 @@ h1 {
   }
 
   .mirror-element-knowledge,
+  .mirror-element-documents,
   .ois-node-knowledge {
     left: 64%;
     top: 11%;

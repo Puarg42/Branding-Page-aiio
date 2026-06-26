@@ -17,7 +17,7 @@ const staticReveal: Variants = {
 const mirrorElements = [
   "People",
   "Processes",
-  "Knowledge",
+  "Documents",
   "Enterprise Systems",
   "Artificial Intelligence",
   "Data",
@@ -25,44 +25,51 @@ const mirrorElements = [
 
 const ceoMoments = [
   {
-    statement: "An expert leaves. The organization remembers.",
-    support: "Knowledge stays usable.",
+    statement: "Your most experienced expert retires.",
+    support: (
+      <>
+        Nothing is lost.
+        <br />
+        Your organization remembers.
+      </>
+    ),
   },
   {
-    statement: "AI answers with context.",
-    support: "Because it understands how the organization works.",
+    statement: "Artificial Intelligence answers with confidence.",
+    support: "Because it understands your organization.",
   },
   {
-    statement: "Every improvement compounds.",
-    support: "Not as a project. As organizational memory.",
+    statement: "Every improvement strengthens the organization.",
+    support: "Not just one project.",
   },
   {
-    statement: "Capabilities keep evolving.",
+    statement: "Your organization continuously develops new capabilities.",
     support: "Without starting from zero.",
   },
 ] as const;
 
 const infrastructureStages = [
   {
-    era: "Industrial Revolution",
+    era: "Industrial Age",
     foundation: "Machines",
   },
   {
-    era: "Process Revolution",
+    era: "Process Age",
     foundation: "Business Process Management",
   },
   {
-    era: "Digital Revolution",
+    era: "Digital Age",
     foundation: "Knowledge Management",
   },
   {
-    era: "Artificial Intelligence",
-    foundation: "Missing infrastructure",
+    era: "AI Age",
+    foundation: "Artificial Intelligence",
   },
   {
-    era: "Organizational Intelligence",
-    foundation: "Self-Enabling Organizations",
+    era: "Next Age",
+    foundation: "Organizational Intelligence",
     featured: true,
+    outcome: "Self-Enabling Organizations",
   },
 ] as const;
 
@@ -95,7 +102,7 @@ export function CeoMondayMoment() {
 
   return (
     <section className="ceo-moment-section" id="monday-morning">
-      <p className="ceo-moment-title">Monday Morning</p>
+      <p className="ceo-moment-title">Imagine Monday Morning.</p>
       {ceoMoments.map((moment, index) => (
         <section className="ceo-moment" key={moment.statement}>
           <motion.div
@@ -123,10 +130,11 @@ export function OrganizationMirror() {
     <section className="organization-mirror-section" id="organization-mirror">
       <motion.div className="organization-mirror-intro" {...reveal}>
         <p className="mirror-section-title">The Organization Mirror</p>
-        <h2>Make the organization visible to itself.</h2>
+        <h2>Every organization already contains intelligence.</h2>
         <p>
-          People, systems, processes and knowledge converge into one living
-          memory.
+          Organizational knowledge already exists.
+          <br />
+          The challenge is making it visible.
         </p>
       </motion.div>
 
@@ -187,7 +195,7 @@ export function CategoryEvolution() {
     <section className="category-evolution-section" id="category-evolution">
       <motion.div className="category-evolution-intro" {...reveal}>
         <p className="category-evolution-title">Category Evolution</p>
-        <h2>Every revolution creates its own infrastructure.</h2>
+        <h2>Every technological revolution required new infrastructure.</h2>
       </motion.div>
 
       <div className="category-timeline" aria-label="Infrastructure evolution timeline">
@@ -211,6 +219,9 @@ export function CategoryEvolution() {
             <span className="category-stage-dot" aria-hidden="true" />
             <p>{stage.era}</p>
             <h3>{stage.foundation}</h3>
+            {"outcome" in stage ? (
+              <strong className="category-stage-outcome">{stage.outcome}</strong>
+            ) : null}
           </motion.article>
         ))}
       </div>
