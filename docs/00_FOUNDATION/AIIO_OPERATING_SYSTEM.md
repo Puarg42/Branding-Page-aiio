@@ -328,7 +328,85 @@ It is the capability that enables organizations to continuously interpret themse
 
 Only once this capability exists can Organizational Intelligence emerge.
 
-# 4. The Organizational Intelligence Model
+# 4. Organizational Intelligence
+
+Understanding alone does not create intelligence.
+
+Understanding enables intelligence.
+
+This distinction is fundamental.
+
+An organization may understand itself without consistently acting upon that understanding.
+
+Intelligence begins when understanding is continuously transformed into coherent decisions and effective action.
+
+Within the Organizational Intelligence Theory, Organizational Intelligence is defined as:
+
+**The continuously evolving capability of an organization to transform organizational understanding into coherent decisions, coordinated action and continuous improvement.**
+
+Organizational Intelligence therefore does not replace Organizational Understanding.
+
+It builds upon it.
+
+The relationship can be understood as a progression.
+
+Knowledge provides the foundation.
+
+Understanding creates meaning.
+
+Intelligence transforms meaning into action.
+
+Action develops capabilities.
+
+Capabilities strengthen resilience.
+
+Resilience enables organizations to continuously evolve themselves.
+
+Organizational Intelligence is therefore not a technology.
+
+Nor is it another management discipline.
+
+It is an organizational capability.
+
+Artificial Intelligence may accelerate this capability.
+
+It cannot substitute it.
+
+The objective is not intelligent software.
+
+The objective is intelligent organizations.
+
+--------------------------------------------------
+
+Conceptual Progression
+
+Knowledge
+
+↓
+
+Organizational Understanding
+
+↓
+
+Organizational Intelligence
+
+↓
+
+Action
+
+↓
+
+Capabilities
+
+↓
+
+Resilience
+
+↓
+
+Self-Enabling Organizations
+
+# 5. The Organizational Intelligence Model
 
 Organizational Intelligence does not emerge suddenly.
 
