@@ -57,6 +57,8 @@ RC-02 focuses on production readiness for Branding Page V1: mobile behavior, acc
 | Largest Contentful Paint | 1.4 s |
 | Cumulative Layout Shift | 0 |
 | Total Blocking Time | 40 ms |
+| Vercel Preview Deployment | Success |
+| Vercel Preview Content Check | Passed |
 
 Lighthouse source report: `docs/04_EXECUTION/lighthouse-rc-02.json`
 
@@ -68,9 +70,7 @@ Lighthouse source report: `docs/04_EXECUTION/lighthouse-rc-02.json`
 
 ## Preview URL
 
-Pending Vercel preview confirmation after the branch is pushed. The expected production domain remains:
-
-https://branding-page-aiio.vercel.app
+https://branding-page-aiio-n2iprxv3u-puarg42s-projects.vercel.app
 
 ## Release Recommendation
 
