@@ -65,22 +65,22 @@ const productDetails: Record<
 const stackStages = [
   {
     title: "Capture Knowledge",
-    label: "Foundation - ProcessCollector",
+    label: "Foundation",
     layers: ["Knowledge"],
   },
   {
     title: "Build Understanding",
-    label: "Intelligence - ProcessCollector + ProcessMagnet",
+    label: "Shared Understanding",
     layers: ["Knowledge", "Understanding"],
   },
   {
     title: "Enable Action",
-    label: "Execution - ProcessMagnet + ProcessForge",
+    label: "Coordinated Action",
     layers: ["Understanding", "Action"],
   },
   {
     title: "Evolve Organizations",
-    label: "Evolution - ProcessForge + DataForge",
+    label: "Continuous Evolution",
     layers: ["Action", "Evolution"],
   },
 ] as const;

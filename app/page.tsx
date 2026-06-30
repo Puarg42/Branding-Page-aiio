@@ -219,11 +219,10 @@ function OisArchitecture() {
   return (
     <section className="ois-section" id="architektur">
       <div className="ois-intro">
-        <p className="ois-section-title">Built around Organizational Intelligence</p>
-        <h2>One foundation for organizational self-understanding.</h2>
+        <p className="ois-section-title">The Platform</p>
+        <h2>How aiio enables the journey.</h2>
         <div className="ois-body">
-          <p>People, knowledge, systems and AI become one shared context.</p>
-          <p>That foundation is the Organizational Intelligence System.</p>
+          <p>The Organizational Intelligence System connects knowledge, people, systems and AI into one shared context.</p>
         </div>
       </div>
 

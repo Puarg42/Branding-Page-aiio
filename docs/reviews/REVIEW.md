@@ -1,67 +1,62 @@
-# Sprint 01A.1 Capability Journey Refinement Review
+# Sprint 01A.2 Editorial Storytelling Review
 
 ## Scope
 
-This review documents the refinement of the homepage Capability Journey section.
+This review documents the editorial refinement of the first three homepage screens.
 
 ## What Changed
 
-1. Increased the visual continuity of the Capability Journey.
-2. Strengthened the flow from Capture Knowledge to Evolve Organizations.
-3. Added subtle connection lines between the capability sequence and stack visuals.
-4. Reduced the feeling of four isolated cards by tightening the stack rhythm.
-5. Increased visual importance of the existing Capability Model illustration.
-6. Preserved the existing copy, typography, colors and illustrations.
+1. Reframed the Capability Journey as the emotional center of the homepage.
+2. Changed the Capability Journey headline to answer the visitor question directly: "How organizations become intelligent."
+3. Reduced product emphasis in the stack labels and replaced it with capability language.
+4. Softened visual connection lines and glow intensity to reduce competing elements.
+5. Increased whitespace around the Capability Model and the transition into the Platform section.
+6. Reframed the Platform section so it explains the journey instead of introducing it.
 
 ## Modified Components
 
 1. `app/capability-journey.tsx`
-2. `app/globals.css`
+2. `app/visual-language.tsx`
+3. `app/page.tsx`
+4. `app/globals.css`
 
 ## Intentionally Left Untouched
 
-1. Hero section
-2. Platform section
-3. Thinking pages
-4. Company section
-5. Navigation
-6. Footer
-7. Typography system
-8. Color system
-9. Existing illustration components
+1. Hero structure and copy
+2. Existing illustrations
+3. Navigation
+4. Footer
+5. Thinking pages
+6. Company section
+7. Product routes
+8. Color and typography systems
 
 ## Validation Notes
 
-1. Homepage structure remains unchanged.
-2. Hero remains unchanged.
-3. Platform remains unchanged.
-4. Capability Journey now reads more clearly as one continuous story.
-5. Capability colors remain consistent:
-   - Capture Knowledge: Light Glass
-   - Build Understanding: Cyan
-   - Enable Action: Purple
-   - Evolve Organizations: Amber
-6. Chillax remains the headline font.
-7. Inter remains the body font.
-8. Review screenshots were regenerated at `1440 x 900` viewport, device scale factor `2`, dark mode.
-9. Exported PNG widths were verified after saving:
-   - `01-homepage-full.png`: `2880 x 62488`
+1. Production build completed successfully.
+2. Homepage order remains Hero, Capability Journey, Platform.
+3. Hero remains an inspirational opening screen.
+4. Capability Journey now reads more like one editorial progression.
+5. Platform now explains how aiio enables the journey.
+6. No new features or illustrations were introduced.
+7. Review screenshots were regenerated at `1440 x 900` viewport, device scale factor `2`, dark mode.
+8. Exported PNG widths were verified after saving:
+   - `01-homepage-full.png`: `2880 x 62636`
    - `02-homepage-hero.png`: `2880 x 1800`
    - `03-homepage-capability-journey.png`: `2880 x 1800`
    - `04-homepage-platform.png`: `2880 x 1800`
 
 ## Remaining Design Limitations
 
-1. The section still relies on abstract layer visuals; future review should confirm whether first-time visitors understand the model without additional explanation.
-2. The section screenshots are viewport-based captures, not downscaled thumbnails.
-3. The full-page screenshot is very tall and best used for structural review rather than fine visual critique.
+1. The Capability Journey still contains product references inside the master architecture visual.
+2. The Platform first viewport is intentionally quiet and text-led; the visual appears further down the section.
+3. The Hero subline remains visually secondary because the Hero was intentionally left unchanged.
 
 ## Suggestions for the Next Sprint
 
-1. Review whether the first viewport of the Capability Journey should show slightly more of the headline below the model.
-2. Consider a lightweight scroll cue from the model into the four capability chapters.
-3. Test whether the four capability stack labels feel too product-adjacent or sufficiently capability-led.
-4. Review the mobile version of the same section after the desktop composition is approved.
+1. Review whether product references inside the master architecture visual should be softened.
+2. Consider a dedicated first-viewport composition for Platform if the visual should appear sooner.
+3. Review mobile pacing after the desktop editorial rhythm is approved.
 
 ## Screenshots
 

@@ -55,9 +55,9 @@ export function CapabilityJourney() {
           viewport={{ amount: 0.45, once: true }}
           whileInView="visible"
         >
-          <p className="capability-section-title">From Understanding to Capability</p>
-          <h2>Understanding becomes capability.</h2>
-          <p>Organizational Intelligence turns shared understanding into action.</p>
+          <p className="capability-section-title">The Capability Journey</p>
+          <h2>How organizations become intelligent.</h2>
+          <p>Knowledge becomes understanding. Understanding becomes action. Action becomes capability.</p>
         </motion.div>
 
         <div className="capability-sequence" aria-label="Capability progression">
