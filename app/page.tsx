@@ -284,15 +284,15 @@ export default function Home() {
     <main>
       <MainHeader />
       <Hero />
+      <CapabilityJourney />
+      <OisArchitecture />
       <ProblemSection />
       <ConceptBreakthrough />
       <NewKindOrganization />
       <ImagineFuture />
       <CeoMondayMoment />
       <OrganizationMirror />
-      <OisArchitecture />
       <CategoryEvolution />
-      <CapabilityJourney />
       <CompanyPurpose />
     </main>
   );

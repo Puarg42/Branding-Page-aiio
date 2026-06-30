@@ -6634,3 +6634,197 @@ h1 {
     grid-template-columns: 1fr;
   }
 }
+
+/* Sprint 01A.1: Hero to Capability Journey */
+.hero {
+  min-height: calc(100svh - 76px);
+  padding: clamp(126px, 12vw, 196px) 0 clamp(120px, 12vw, 210px);
+}
+
+.hero-visual {
+  opacity: 0.68;
+  right: clamp(-390px, -16vw, -160px);
+  width: min(78vw, 1320px);
+}
+
+.vl-architecture-hero::before {
+  opacity: 0.46;
+}
+
+.vl-architecture-hero .vl-layer-content {
+  opacity: 0;
+}
+
+.vl-architecture-hero .vl-vertical-flow {
+  opacity: 0.72;
+}
+
+.capability-journey-section {
+  background:
+    radial-gradient(circle at 50% 10%, rgb(24 214 255 / 9%), transparent 28%),
+    radial-gradient(circle at 55% 46%, rgb(139 92 246 / 13%), transparent 34%),
+    linear-gradient(180deg, #030305 0%, #050507 48%, #07040c 100%);
+  border-top: 0;
+  min-height: 100svh;
+  padding: clamp(118px, 12vw, 190px) 0 clamp(150px, 16vw, 280px);
+}
+
+.capability-model-stage {
+  margin: 0 auto clamp(90px, 10vw, 160px);
+  max-width: 1180px;
+  position: relative;
+}
+
+.capability-model-stage .vl-architecture-platform {
+  height: clamp(600px, 72vh, 840px);
+  margin: 0 auto;
+  max-width: 1120px;
+}
+
+.capability-journey-intro {
+  gap: clamp(24px, 3.2vw, 44px);
+}
+
+.capability-journey-intro h2 {
+  font-size: clamp(3.4rem, 6.2vw, 7.4rem);
+}
+
+.capability-sequence {
+  align-items: start;
+  display: grid;
+  gap: clamp(18px, 2.6vw, 42px);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: clamp(82px, 9vw, 150px) auto 0;
+  max-width: 1120px;
+  position: relative;
+}
+
+.capability-sequence::before {
+  background: linear-gradient(90deg, transparent, rgb(255 255 255 / 20%), transparent);
+  content: "";
+  height: 1px;
+  left: 7%;
+  position: absolute;
+  right: 7%;
+  top: 50%;
+}
+
+.capability-sequence-step {
+  align-items: center;
+  display: grid;
+  gap: 18px;
+  justify-items: center;
+  min-height: 132px;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.capability-sequence-step span {
+  background: rgb(255 255 255 / 5%);
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-radius: 999px;
+  color: #ffffff;
+  display: inline-flex;
+  font-family: var(--font-aiio-heading);
+  font-size: clamp(1.08rem, 1.45vw, 1.44rem);
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1;
+  min-width: min(100%, 220px);
+  padding: 18px 22px;
+  white-space: nowrap;
+}
+
+.capability-sequence-step em {
+  color: rgb(255 255 255 / 46%);
+  font-style: normal;
+  line-height: 1;
+}
+
+.vl-stack-visual {
+  isolation: isolate;
+}
+
+.vl-stack-visual::before {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgb(232 236 247 / 22%),
+    rgb(24 214 255 / 36%),
+    rgb(139 92 246 / 36%),
+    rgb(244 166 42 / 34%),
+    transparent
+  );
+  content: "";
+  height: 1px;
+  left: 3%;
+  position: absolute;
+  right: 3%;
+  top: 52%;
+  z-index: -1;
+}
+
+.vl-stack-stage {
+  backdrop-filter: saturate(120%);
+  z-index: 1;
+}
+
+.ois-section {
+  padding-top: clamp(190px, 20vw, 360px);
+}
+
+.ois-intro {
+  margin-bottom: clamp(100px, 10vw, 180px);
+}
+
+@media (max-width: 1100px) {
+  .hero-visual {
+    opacity: 0.44;
+    right: -390px;
+  }
+
+  .capability-sequence {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .capability-sequence::before,
+  .vl-stack-visual::before {
+    display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero {
+    min-height: 100svh;
+    padding-bottom: 96px;
+  }
+
+  .hero-visual {
+    bottom: -96px;
+    opacity: 0.36;
+    right: -340px;
+  }
+
+  .capability-journey-section {
+    padding: 96px 0 128px;
+  }
+
+  .capability-model-stage .vl-architecture-platform {
+    height: 620px;
+  }
+
+  .capability-sequence {
+    grid-template-columns: 1fr;
+    margin-top: 70px;
+  }
+
+  .capability-sequence-step {
+    min-height: 92px;
+  }
+
+  .capability-sequence-step span {
+    min-width: min(100%, 260px);
+    white-space: normal;
+  }
+}
