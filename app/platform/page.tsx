@@ -4,6 +4,7 @@ import {
   WebsiteArchitecturePage,
   type CapabilityTeaser,
 } from "../website-architecture";
+import { CapabilityLayerIllustration } from "../visual-language";
 
 export const metadata: Metadata = {
   title: "Platform | aiio",
@@ -46,6 +47,16 @@ export default function PlatformPage() {
       intro="The aiio Platform is the first Organizational Intelligence System (OIS). It continuously captures organizational knowledge, develops Organizational Understanding, enables better organizational decisions and supports the continuous evolution of organizational capabilities."
       title="The platform for Organizational Intelligence."
     >
+      <section
+        className="website-architecture-section website-platform-visual-section"
+        id="capability-layer"
+      >
+        <div className="website-page-shell">
+          <div className="website-capability-layer-visual" aria-hidden="true">
+            <CapabilityLayerIllustration />
+          </div>
+        </div>
+      </section>
       <CapabilityTeaserGrid capabilities={capabilities} />
     </WebsiteArchitecturePage>
   );

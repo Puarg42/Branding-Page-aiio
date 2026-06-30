@@ -1,4 +1,4 @@
-type LayeredVisualVariant = "hero" | "platform" | "thinking";
+type LayeredVisualVariant = "brand" | "hero" | "platform" | "thinking";
 type ProductVisual = "ProcessCollector" | "ProcessMagnet" | "ProcessForge" | "DataForge";
 
 const capabilityLayers = [
@@ -43,7 +43,7 @@ const productDetails: Record<
   ProcessCollector: {
     className: "collector",
     label: "Capture Knowledge",
-    signals: ["Docs", "People", "Processes", "Policies"],
+    signals: ["Docs", "Roles", "Flows", "Rules"],
   },
   ProcessMagnet: {
     className: "magnet",
@@ -53,12 +53,12 @@ const productDetails: Record<
   ProcessForge: {
     className: "forge",
     label: "Enable Action",
-    signals: ["Agents", "Recommendations", "Reports", "Actions"],
+    signals: ["Agents", "APIs", "Chats", "Actions"],
   },
   DataForge: {
     className: "dataforge",
     label: "Evolve Organizations",
-    signals: ["KPIs", "Feedback", "Optimization", "Learning"],
+    signals: ["KPIs", "Loops", "Signals", "Learning"],
   },
 };
 
@@ -90,10 +90,13 @@ export function LayeredIntelligenceVisual({
 }: {
   variant?: LayeredVisualVariant;
 }) {
+  const particleCount = variant === "brand" || variant === "hero" ? 36 : 22;
+
   return (
     <div className={`vl-architecture vl-architecture-${variant}`}>
+      <div className="vl-light-flow" aria-hidden="true" />
       <div className="vl-particles" aria-hidden="true">
-        {Array.from({ length: variant === "hero" ? 32 : 20 }, (_, index) => (
+        {Array.from({ length: particleCount }, (_, index) => (
           <span key={index} />
         ))}
       </div>
@@ -121,19 +124,64 @@ export function LayeredIntelligenceVisual({
   );
 }
 
+export function BrandIllustration() {
+  return <LayeredIntelligenceVisual variant="brand" />;
+}
+
+export function CapabilityLayerIllustration() {
+  return <LayeredIntelligenceVisual variant="platform" />;
+}
+
 export function CapabilityCardVisual({ product }: { product: ProductVisual }) {
   const detail = productDetails[product];
 
   return (
     <div className={`vl-card-visual is-${detail.className}`} aria-hidden="true">
-      <div className="vl-card-orbit" />
-      <div className="vl-card-core" />
+      <div className="vl-card-crop">
+        <span className="vl-card-crop-layer layer-back" />
+        <span className="vl-card-crop-layer layer-mid" />
+        <span className="vl-card-crop-layer layer-front" />
+        <span className="vl-card-crop-light" />
+      </div>
       <div className="vl-card-signals">
         {detail.signals.map((signal) => (
           <span key={signal}>{signal}</span>
         ))}
       </div>
       <p>{detail.label}</p>
+    </div>
+  );
+}
+
+export function OrganizationalMindVisual() {
+  const mindNodes = [
+    "Knowledge",
+    "Context",
+    "People",
+    "Processes",
+    "Systems",
+    "AI",
+    "Memory",
+    "Decisions",
+  ] as const;
+
+  return (
+    <div className="vl-organizational-mind" aria-label="Organizational Mind illustration">
+      <div className="vl-mind-light" aria-hidden="true" />
+      <div className="vl-mind-orbit orbit-one" aria-hidden="true" />
+      <div className="vl-mind-orbit orbit-two" aria-hidden="true" />
+      <div className="vl-mind-orbit orbit-three" aria-hidden="true" />
+      <div className="vl-mind-core">
+        <span>Living</span>
+        <strong>Organizational Mind</strong>
+      </div>
+      <div className="vl-mind-nodes" aria-hidden="true">
+        {mindNodes.map((node, index) => (
+          <span className={`vl-mind-node node-${index + 1}`} key={node}>
+            {node}
+          </span>
+        ))}
+      </div>
     </div>
   );
 }

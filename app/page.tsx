@@ -5,7 +5,7 @@ import {
   CeoMondayMoment,
   OrganizationMirror,
 } from "./category-reinforcement";
-import { LayeredIntelligenceVisual } from "./visual-language";
+import { BrandIllustration, LayeredIntelligenceVisual } from "./visual-language";
 
 const problemCards = [
   {
@@ -100,7 +100,7 @@ function Hero() {
         </div>
       </div>
       <div className="hero-visual" aria-hidden="true">
-        <LayeredIntelligenceVisual variant="hero" />
+        <BrandIllustration />
       </div>
     </section>
   );

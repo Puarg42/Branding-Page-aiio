@@ -7051,3 +7051,340 @@ h1 {
     min-height: 360px;
   }
 }
+
+/* Sprint 06: aiio Visual System integration */
+.hero-visual {
+  animation: none;
+}
+
+.vl-architecture {
+  background:
+    radial-gradient(circle at 50% 50%, rgb(24 214 255 / 6%), transparent 34%),
+    radial-gradient(circle at 50% 72%, rgb(139 92 246 / 8%), transparent 38%);
+  isolation: isolate;
+}
+
+.vl-architecture::after {
+  background:
+    linear-gradient(90deg, transparent, rgb(255 255 255 / 10%), transparent),
+    linear-gradient(180deg, rgb(24 214 255 / 0%), rgb(24 214 255 / 18%), rgb(139 92 246 / 0%));
+  content: "";
+  inset: 4% 12%;
+  opacity: 0.34;
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+}
+
+.vl-light-flow {
+  background:
+    radial-gradient(circle at 50% 18%, rgb(244 166 42 / 16%), transparent 16%),
+    radial-gradient(circle at 50% 50%, rgb(24 214 255 / 24%), transparent 20%),
+    radial-gradient(circle at 50% 72%, rgb(139 92 246 / 20%), transparent 22%);
+  inset: 2% 18% 0;
+  opacity: 0.5;
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+}
+
+.vl-layer,
+.vl-understanding-core,
+.vl-particles span,
+.vl-stack-stage,
+.vl-card-core {
+  animation: none;
+}
+
+.vl-layer {
+  z-index: 2;
+}
+
+.vl-layer-ring {
+  backdrop-filter: saturate(115%);
+}
+
+.vl-architecture-brand {
+  opacity: 0.92;
+}
+
+.vl-architecture-brand::before {
+  opacity: 0.36;
+}
+
+.vl-architecture-brand .vl-layer-content {
+  opacity: 0;
+}
+
+.vl-architecture-brand .vl-vertical-flow {
+  opacity: 0.68;
+}
+
+.vl-vertical-flow::after {
+  animation: vlLightFlow 10s ease-in-out infinite;
+  background: linear-gradient(180deg, transparent, rgb(255 255 255 / 74%), transparent);
+  content: "";
+  height: 18%;
+  left: 50%;
+  opacity: 0.56;
+  position: absolute;
+  top: 18%;
+  transform: translateX(-50%);
+  width: 1px;
+}
+
+.vl-card-visual {
+  background:
+    radial-gradient(circle at 50% 42%, rgb(24 214 255 / 8%), transparent 38%),
+    linear-gradient(180deg, rgb(255 255 255 / 5%), rgb(255 255 255 / 1%));
+}
+
+.vl-card-crop {
+  inset: 0;
+  position: absolute;
+}
+
+.vl-card-crop-layer {
+  border: 1px solid rgb(255 255 255 / 16%);
+  border-radius: 50%;
+  left: 8%;
+  position: absolute;
+  right: 8%;
+  transform: rotateX(62deg);
+}
+
+.vl-card-crop-layer.layer-back {
+  background: rgb(232 236 247 / 8%);
+  bottom: 8%;
+  height: 42%;
+}
+
+.vl-card-crop-layer.layer-mid {
+  background: rgb(24 214 255 / 10%);
+  bottom: 28%;
+  box-shadow: 0 0 30px rgb(24 214 255 / 14%);
+  height: 38%;
+}
+
+.vl-card-crop-layer.layer-front {
+  background: rgb(139 92 246 / 12%);
+  bottom: 48%;
+  box-shadow: 0 0 34px rgb(139 92 246 / 18%);
+  height: 34%;
+}
+
+.vl-card-crop-light {
+  background: linear-gradient(180deg, transparent, rgb(255 255 255 / 72%), transparent);
+  bottom: 18%;
+  box-shadow: 0 0 28px rgb(24 214 255 / 28%);
+  left: 50%;
+  opacity: 0.54;
+  position: absolute;
+  top: 16%;
+  width: 1px;
+}
+
+.is-collector .vl-card-crop-layer.layer-front,
+.is-collector .vl-card-crop-layer.layer-mid {
+  opacity: 0.32;
+}
+
+.is-magnet .vl-card-crop-layer.layer-mid {
+  background: rgb(24 214 255 / 16%);
+  box-shadow: 0 0 42px rgb(24 214 255 / 22%);
+}
+
+.is-forge .vl-card-crop-layer.layer-front {
+  background: rgb(139 92 246 / 18%);
+  box-shadow: 0 0 44px rgb(139 92 246 / 28%);
+}
+
+.is-dataforge .vl-card-crop-layer.layer-front {
+  background: rgb(244 166 42 / 16%);
+  box-shadow: 0 0 44px rgb(244 166 42 / 22%);
+}
+
+.vl-organizational-mind {
+  background:
+    radial-gradient(circle at 50% 50%, rgb(24 214 255 / 12%), transparent 34%),
+    radial-gradient(circle at 50% 60%, rgb(139 92 246 / 12%), transparent 42%),
+    linear-gradient(180deg, rgb(255 255 255 / 4%), rgb(255 255 255 / 1%));
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-radius: 28px;
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 8%),
+    0 38px 120px rgb(0 0 0 / 24%);
+  min-height: 560px;
+  overflow: hidden;
+  position: relative;
+}
+
+.vl-mind-light {
+  animation: vlLightFlow 11s ease-in-out infinite;
+  background:
+    radial-gradient(circle at 50% 50%, rgb(255 255 255 / 58%), transparent 8%),
+    radial-gradient(circle at 50% 50%, rgb(24 214 255 / 32%), transparent 24%),
+    radial-gradient(circle at 50% 50%, rgb(139 92 246 / 22%), transparent 38%);
+  inset: 0;
+  opacity: 0.58;
+  position: absolute;
+}
+
+.vl-mind-orbit {
+  border: 1px solid rgb(255 255 255 / 14%);
+  border-radius: 50%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%) rotateX(62deg);
+}
+
+.vl-mind-orbit.orbit-one {
+  height: 44%;
+  width: 72%;
+}
+
+.vl-mind-orbit.orbit-two {
+  border-color: rgb(24 214 255 / 18%);
+  height: 58%;
+  width: 86%;
+}
+
+.vl-mind-orbit.orbit-three {
+  border-color: rgb(139 92 246 / 18%);
+  height: 72%;
+  width: 102%;
+}
+
+.vl-mind-core {
+  align-items: center;
+  background:
+    radial-gradient(circle at 50% 38%, rgb(255 255 255 / 16%), transparent 44%),
+    rgb(10 10 16 / 62%);
+  border: 1px solid rgb(255 255 255 / 16%);
+  border-radius: 999px;
+  box-shadow:
+    0 0 70px rgb(24 214 255 / 18%),
+    0 0 90px rgb(139 92 246 / 16%);
+  color: #ffffff;
+  display: grid;
+  height: clamp(170px, 18vw, 240px);
+  justify-items: center;
+  left: 50%;
+  padding: 32px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(170px, 18vw, 240px);
+  z-index: 2;
+}
+
+.vl-mind-core span {
+  color: rgb(255 255 255 / 54%);
+  font-size: 0.72rem;
+  font-weight: 780;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.vl-mind-core strong {
+  font-family: var(--font-aiio-heading);
+  font-size: clamp(1.18rem, 2vw, 2rem);
+  font-weight: 600;
+  line-height: 1.02;
+}
+
+.vl-mind-node {
+  background: rgb(255 255 255 / 7%);
+  border: 1px solid rgb(255 255 255 / 13%);
+  border-radius: 999px;
+  color: rgb(255 255 255 / 74%);
+  font-size: 0.72rem;
+  font-weight: 780;
+  letter-spacing: 0.08em;
+  padding: 10px 14px;
+  position: absolute;
+  text-transform: uppercase;
+  z-index: 3;
+}
+
+.vl-mind-node.node-1 { left: 9%; top: 22%; }
+.vl-mind-node.node-2 { right: 10%; top: 20%; }
+.vl-mind-node.node-3 { left: 14%; top: 48%; }
+.vl-mind-node.node-4 { right: 12%; top: 48%; }
+.vl-mind-node.node-5 { left: 18%; bottom: 18%; }
+.vl-mind-node.node-6 { right: 18%; bottom: 18%; }
+.vl-mind-node.node-7 { left: 42%; top: 10%; }
+.vl-mind-node.node-8 { left: 41%; bottom: 10%; }
+
+.website-platform-visual-section {
+  padding-bottom: 0;
+}
+
+section[id],
+.website-architecture-section[id],
+.website-capability-card[id] {
+  scroll-margin-top: 104px;
+}
+
+.website-capability-layer-visual .vl-architecture-platform {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.organization-mirror-visual {
+  background:
+    radial-gradient(circle at 50% 50%, rgb(24 214 255 / 10%), transparent 30%),
+    radial-gradient(circle at 50% 52%, rgb(139 92 246 / 12%), transparent 42%),
+    linear-gradient(180deg, rgb(255 255 255 / 3%), rgb(255 255 255 / 1%));
+  border: 1px solid rgb(255 255 255 / 9%);
+  border-radius: 32px;
+}
+
+.mirror-line {
+  stroke: rgb(24 214 255 / 34%);
+}
+
+.mirror-center,
+.mirror-element {
+  border-color: rgb(255 255 255 / 14%);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 8%),
+    0 22px 76px rgb(0 0 0 / 20%);
+}
+
+@keyframes vlLightFlow {
+  0%,
+  100% {
+    opacity: 0.34;
+  }
+
+  50% {
+    opacity: 0.72;
+  }
+}
+
+@media (max-width: 720px) {
+  .vl-organizational-mind {
+    min-height: 480px;
+  }
+
+  .vl-mind-node {
+    font-size: 0.62rem;
+    padding: 8px 10px;
+  }
+
+  .vl-mind-node.node-7,
+  .vl-mind-node.node-8 {
+    left: 36%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vl-light-flow,
+  .vl-vertical-flow::after,
+  .vl-mind-light {
+    animation: none;
+  }
+}

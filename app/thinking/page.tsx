@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { LayeredIntelligenceVisual, TheoryModelVisual } from "../visual-language";
+import { LayeredIntelligenceVisual, OrganizationalMindVisual } from "../visual-language";
 import { WebsiteArchitecturePage } from "../website-architecture";
 
 export const metadata: Metadata = {
@@ -93,17 +93,17 @@ export default function ThinkingPage() {
         </div>
       </section>
 
-      <section className="website-architecture-section">
+      <section className="website-architecture-section" id="organizational-mind">
         <div className="website-page-shell website-visual-theory-grid">
           <div className="website-section-heading">
             <p className="website-eyebrow">Model</p>
             <h2>Knowledge becomes capability through understanding.</h2>
           </div>
-          <TheoryModelVisual />
+          <OrganizationalMindVisual />
         </div>
       </section>
 
-      <section className="website-architecture-section">
+      <section className="website-architecture-section" id="visual-framework">
         <div className="website-page-shell website-visual-theory-grid">
           <div className="website-section-heading">
             <p className="website-eyebrow">Framework</p>
