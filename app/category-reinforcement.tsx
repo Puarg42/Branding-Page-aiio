@@ -2,7 +2,7 @@
 
 import { motion, useReducedMotion, type Transition, type Variants } from "framer-motion";
 
-import { OrganizationalMindVisual } from "./visual-language";
+import { BrandIllustration } from "../components/brand/BrandIllustration";
 
 const motionEase = [0.2, 0, 0, 1] as const;
 
@@ -131,7 +131,7 @@ export function OrganizationMirror() {
               : { duration: 1.1, ease: motionEase, delay: 0.12 }
           }
         >
-          <OrganizationalMindVisual />
+          <BrandIllustration variant="BC-001" />
         </motion.div>
       </div>
     </section>

@@ -5,7 +5,7 @@ import {
   CeoMondayMoment,
   OrganizationMirror,
 } from "./category-reinforcement";
-import { BrandIllustration, LayeredIntelligenceVisual } from "./visual-language";
+import { BrandIllustration } from "../components/brand/BrandIllustration";
 
 const problemCards = [
   {
@@ -100,7 +100,7 @@ function Hero() {
         </div>
       </div>
       <div className="hero-visual" aria-hidden="true">
-        <BrandIllustration />
+        <BrandIllustration priority variant="BC-001" />
       </div>
     </section>
   );
@@ -230,7 +230,7 @@ function OisArchitecture() {
         aria-label="Organizational Intelligence layered architecture"
         className="ois-visual-wrap"
       >
-        <LayeredIntelligenceVisual variant="platform" />
+        <BrandIllustration variant="BC-002" />
       </div>
 
       <div className="ois-bottom-statement">

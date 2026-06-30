@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion, type Transition, type Variants } from "framer-motion";
-import { CapabilityStackVisual, LayeredIntelligenceVisual } from "./visual-language";
+import { BrandIllustration } from "../components/brand/BrandIllustration";
 
 const motionEase = [0.2, 0, 0, 1] as const;
 
@@ -40,7 +40,7 @@ export function CapabilityJourney() {
           viewport={{ amount: 0.28, once: true }}
           whileInView="visible"
         >
-          <LayeredIntelligenceVisual variant="platform" />
+          <BrandIllustration variant="BC-002" />
         </motion.div>
 
         <motion.div
@@ -83,7 +83,7 @@ export function CapabilityJourney() {
           viewport={{ amount: 0.28, once: true }}
           whileInView="visible"
         >
-          <CapabilityStackVisual />
+          <BrandIllustration variant="BC-002" />
         </motion.div>
 
         <motion.div

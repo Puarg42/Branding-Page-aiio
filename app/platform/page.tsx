@@ -4,7 +4,7 @@ import {
   WebsiteArchitecturePage,
   type CapabilityTeaser,
 } from "../website-architecture";
-import { CapabilityLayerIllustration } from "../visual-language";
+import { BrandIllustration } from "../../components/brand/BrandIllustration";
 
 export const metadata: Metadata = {
   title: "Platform | aiio",
@@ -53,7 +53,7 @@ export default function PlatformPage() {
       >
         <div className="website-page-shell">
           <div className="website-capability-layer-visual" aria-hidden="true">
-            <CapabilityLayerIllustration />
+            <BrandIllustration variant="BC-002" />
           </div>
         </div>
       </section>

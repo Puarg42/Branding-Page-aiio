@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { OrganizationalMindVisual, VisualLanguageLibraryVisual } from "../visual-language";
+import { BrandIllustration } from "../../components/brand/BrandIllustration";
 import { WebsiteArchitecturePage } from "../website-architecture";
 
 export const metadata: Metadata = {
@@ -99,7 +99,7 @@ export default function ThinkingPage() {
             <p className="website-eyebrow">Model</p>
             <h2>Knowledge becomes capability through understanding.</h2>
           </div>
-          <OrganizationalMindVisual />
+          <BrandIllustration variant="BC-001" />
         </div>
       </section>
 
@@ -109,7 +109,7 @@ export default function ThinkingPage() {
             <p className="website-eyebrow">Framework</p>
             <h2>The same architecture guides every visual theory.</h2>
           </div>
-          <VisualLanguageLibraryVisual />
+          <BrandIllustration variant="BC-003" />
         </div>
       </section>
 

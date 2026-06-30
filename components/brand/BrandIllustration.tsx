@@ -1,0 +1,56 @@
+type BrandIllustrationVariant = "BC-001" | "BC-002" | "BC-003" | "BC-004";
+
+const brandCanonAssets: Record<
+  BrandIllustrationVariant,
+  {
+    alt: string;
+    src: string;
+  }
+> = {
+  "BC-001": {
+    alt: "Organizational Mind brand illustration",
+    src: "/brand-canon/001-organizational-mind.png",
+  },
+  "BC-002": {
+    alt: "Organizational Intelligence Engine platform illustration",
+    src: "/brand-canon/002-intelligence-engine.png",
+  },
+  "BC-003": {
+    alt: "Transparent Intelligence material illustration",
+    src: "/brand-canon/003-transparent-intelligence-material.png",
+  },
+  "BC-004": {
+    alt: "Visual Language Library brand illustration",
+    src: "/brand-canon/004-visual-language-library.png",
+  },
+};
+
+type BrandIllustrationProps = {
+  className?: string;
+  decorative?: boolean;
+  priority?: boolean;
+  variant: BrandIllustrationVariant;
+};
+
+export function BrandIllustration({
+  className = "",
+  decorative = true,
+  priority = false,
+  variant,
+}: BrandIllustrationProps) {
+  const asset = brandCanonAssets[variant];
+
+  return (
+    <figure
+      aria-hidden={decorative ? "true" : undefined}
+      className={`brand-canon-figure is-${variant.toLowerCase()} ${className}`.trim()}
+    >
+      <img
+        alt={decorative ? "" : asset.alt}
+        className="brand-canon-image"
+        loading={priority ? "eager" : "lazy"}
+        src={asset.src}
+      />
+    </figure>
+  );
+}
