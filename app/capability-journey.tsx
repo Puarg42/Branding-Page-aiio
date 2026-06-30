@@ -72,6 +72,7 @@ export function CapabilityJourney() {
         </div>
 
         <motion.div
+          className="capability-stack-stage"
           initial="hidden"
           transition={
             shouldReduceMotion
