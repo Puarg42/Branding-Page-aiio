@@ -4,6 +4,12 @@
 
 Define the illustration system used to explain Organizational Intelligence as transformation rather than software.
 
+## Master Model
+
+The 4 Capability Layers illustration is the canonical aiio visual model.
+
+Future illustrations should evolve from this model instead of introducing a separate illustration language.
+
 ## Table of Contents
 
 1. Illustration Thesis

@@ -1,28 +1,35 @@
 type LayeredVisualVariant = "hero" | "platform" | "thinking";
 type ProductVisual = "ProcessCollector" | "ProcessMagnet" | "ProcessForge" | "DataForge";
 
-const knowledgeSignals = [
-  "Documents",
-  "People",
-  "Processes",
-  "Policies",
-  "ERP",
-  "Emails",
-  "Standards",
-] as const;
-
-const understandingSignals = [
-  "Context",
-  "Relationships",
-  "Memory",
-  "Meaning",
-] as const;
-
-const capabilitySignals = [
-  "Decisions",
-  "Agents",
-  "Reports",
-  "Actions",
+const capabilityLayers = [
+  {
+    id: "evolution",
+    label: "Layer 4",
+    product: "DataForge",
+    signals: ["KPIs", "Feedback", "Measurement", "Learning"],
+    title: "Evolve Organizations",
+  },
+  {
+    id: "action",
+    label: "Layer 3",
+    product: "ProcessForge",
+    signals: ["Agents", "Recommendations", "Reports", "Actions"],
+    title: "Enable Action",
+  },
+  {
+    id: "understanding",
+    label: "Layer 2",
+    product: "ProcessMagnet",
+    signals: ["Context", "Knowledge Graph", "Connections", "Meaning"],
+    title: "Build Understanding",
+  },
+  {
+    id: "knowledge",
+    label: "Layer 1",
+    product: "ProcessCollector",
+    signals: ["Documents", "Policies", "Processes", "People", "Systems", "Standards"],
+    title: "Capture Knowledge",
+  },
 ] as const;
 
 const productDetails: Record<
@@ -35,41 +42,46 @@ const productDetails: Record<
 > = {
   ProcessCollector: {
     className: "collector",
-    label: "Knowledge Layer",
-    signals: ["Docs", "People", "ERP", "Policies"],
+    label: "Capture Knowledge",
+    signals: ["Docs", "People", "Processes", "Policies"],
   },
   ProcessMagnet: {
     className: "magnet",
-    label: "Understanding Layer",
+    label: "Build Understanding",
     signals: ["Graph", "Context", "Memory", "Meaning"],
   },
   ProcessForge: {
     className: "forge",
-    label: "Capability Layer",
-    signals: ["Agents", "Decisions", "Reports", "Actions"],
+    label: "Enable Action",
+    signals: ["Agents", "Recommendations", "Reports", "Actions"],
   },
   DataForge: {
     className: "dataforge",
-    label: "Evolution Layer",
-    signals: ["KPIs", "Growth", "Feedback", "Learning"],
+    label: "Evolve Organizations",
+    signals: ["KPIs", "Feedback", "Optimization", "Learning"],
   },
 };
 
 const stackStages = [
   {
-    title: "Capture + Connect",
-    label: "ProcessCollector + ProcessMagnet",
+    title: "Capture Knowledge",
+    label: "Foundation - ProcessCollector",
+    layers: ["Knowledge"],
+  },
+  {
+    title: "Build Understanding",
+    label: "Intelligence - ProcessCollector + ProcessMagnet",
     layers: ["Knowledge", "Understanding"],
   },
   {
-    title: "Understand + Decide",
-    label: "ProcessMagnet + ProcessForge",
-    layers: ["Understanding", "Capabilities"],
+    title: "Enable Action",
+    label: "Execution - ProcessMagnet + ProcessForge",
+    layers: ["Understanding", "Action"],
   },
   {
-    title: "Act + Evolve",
-    label: "ProcessForge + DataForge",
-    layers: ["Capabilities", "Evolution"],
+    title: "Evolve Organizations",
+    label: "Evolution - ProcessForge + DataForge",
+    layers: ["Action", "Evolution"],
   },
 ] as const;
 
@@ -86,45 +98,23 @@ export function LayeredIntelligenceVisual({
         ))}
       </div>
 
-      <div className="vl-layer vl-layer-capabilities">
-        <div className="vl-layer-ring" />
-        <div className="vl-layer-content">
-          <span className="vl-layer-label">Layer 3</span>
-          <strong>Organizational Capabilities</strong>
-          <div className="vl-signal-row">
-            {capabilitySignals.map((signal) => (
-              <span key={signal}>{signal}</span>
-            ))}
+      {capabilityLayers.map((layer) => (
+        <div className={`vl-layer vl-layer-${layer.id}`} key={layer.id}>
+          <div className="vl-layer-ring" />
+          {layer.id === "understanding" ? <div className="vl-understanding-core" /> : null}
+          <div className="vl-layer-content">
+            <span className="vl-layer-label">
+              {layer.label} - Powered by {layer.product}
+            </span>
+            <strong>{layer.title}</strong>
+            <div className="vl-signal-row">
+              {layer.signals.map((signal) => (
+                <span key={signal}>{signal}</span>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-
-      <div className="vl-layer vl-layer-understanding">
-        <div className="vl-layer-ring" />
-        <div className="vl-understanding-core" />
-        <div className="vl-layer-content">
-          <span className="vl-layer-label">Layer 2</span>
-          <strong>Organizational Understanding</strong>
-          <div className="vl-network" aria-hidden="true">
-            {understandingSignals.map((signal) => (
-              <span key={signal}>{signal}</span>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <div className="vl-layer vl-layer-knowledge">
-        <div className="vl-layer-ring" />
-        <div className="vl-layer-content">
-          <span className="vl-layer-label">Layer 1</span>
-          <strong>Organizational Knowledge</strong>
-          <div className="vl-fragments">
-            {knowledgeSignals.map((signal) => (
-              <span key={signal}>{signal}</span>
-            ))}
-          </div>
-        </div>
-      </div>
+      ))}
 
       <div className="vl-vertical-flow" aria-hidden="true" />
     </div>
