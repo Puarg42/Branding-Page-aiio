@@ -43,12 +43,17 @@ This review documents the refinement of the homepage Capability Journey section.
    - Evolve Organizations: Amber
 6. Chillax remains the headline font.
 7. Inter remains the body font.
-8. Review screenshots were generated at desktop width.
+8. Review screenshots were regenerated at `1440 x 900` viewport, device scale factor `2`, dark mode.
+9. Exported PNG widths were verified after saving:
+   - `01-homepage-full.png`: `2880 x 62488`
+   - `02-homepage-hero.png`: `2880 x 1800`
+   - `03-homepage-capability-journey.png`: `2880 x 1800`
+   - `04-homepage-platform.png`: `2880 x 1800`
 
 ## Remaining Design Limitations
 
 1. The section still relies on abstract layer visuals; future review should confirm whether first-time visitors understand the model without additional explanation.
-2. The sticky header remains visible in section screenshots because it is part of the live page experience.
+2. The section screenshots are viewport-based captures, not downscaled thumbnails.
 3. The full-page screenshot is very tall and best used for structural review rather than fine visual critique.
 
 ## Suggestions for the Next Sprint
