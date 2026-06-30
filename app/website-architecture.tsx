@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { MainHeader } from "./main-navigation";
+import { CapabilityCardVisual } from "./visual-language";
 
 export type ArchitectureSection = {
   title: string;
@@ -61,7 +62,7 @@ export type CapabilityTeaser = {
   badge?: string;
   copy: string;
   href: string;
-  product: string;
+  product: "ProcessCollector" | "ProcessMagnet" | "ProcessForge" | "DataForge";
   title: string;
 };
 
@@ -92,6 +93,7 @@ export function CapabilityTeaserGrid({
                 <h3>{capability.title}</h3>
                 <p>{capability.copy}</p>
               </div>
+              <CapabilityCardVisual product={capability.product} />
               <Link className="website-text-link" href={capability.href}>
                 Learn more <span aria-hidden="true">→</span>
               </Link>

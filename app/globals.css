@@ -5677,3 +5677,647 @@ h1 {
     flex-direction: column;
   }
 }
+
+/* aiio Visual Language 1.0 */
+.hero {
+  background:
+    radial-gradient(circle at 76% 44%, rgb(38 202 218 / 18%), transparent 34%),
+    radial-gradient(circle at 84% 14%, rgb(141 82 219 / 26%), transparent 28%),
+    linear-gradient(135deg, #210b34 0%, #0b0611 58%, #050306 100%);
+}
+
+.hero::before,
+.hero::after {
+  display: none;
+}
+
+.landing-hero-content {
+  position: relative;
+  z-index: 3;
+}
+
+.landing-hero-content h1,
+.landing-hero-content .hero-subheadline {
+  color: #ffffff;
+}
+
+.landing-hero-content .hero-subheadline {
+  color: rgb(255 255 255 / 70%);
+}
+
+.hero-visual {
+  bottom: 0;
+  height: min(720px, 86vh);
+  opacity: 1;
+  overflow: visible;
+  pointer-events: none;
+  position: absolute;
+  right: clamp(-150px, -6vw, -72px);
+  top: auto;
+  width: min(62vw, 1040px);
+  z-index: 1;
+}
+
+.hero-visual::after,
+.hero-visual img {
+  display: none;
+}
+
+.vl-architecture {
+  --vl-cyan: #28d7e5;
+  --vl-purple: #7b45c7;
+  --vl-purple-deep: #5a328a;
+  --vl-glass: rgb(255 255 255 / 12%);
+  height: 100%;
+  min-height: 560px;
+  position: relative;
+  width: 100%;
+}
+
+.vl-architecture::before {
+  background:
+    radial-gradient(circle at 56% 46%, rgb(40 215 229 / 28%), transparent 18%),
+    radial-gradient(circle at 54% 28%, rgb(123 69 199 / 26%), transparent 20%);
+  content: "";
+  filter: blur(26px);
+  inset: 10% 18% 8%;
+  opacity: 0.8;
+  position: absolute;
+}
+
+.vl-layer {
+  animation: vlFloat 7s ease-in-out infinite;
+  height: 34%;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  transform-style: preserve-3d;
+  width: min(760px, 96%);
+}
+
+.vl-layer-capabilities {
+  animation-delay: -1.4s;
+  top: 3%;
+}
+
+.vl-layer-understanding {
+  animation-delay: -0.7s;
+  top: 32%;
+}
+
+.vl-layer-knowledge {
+  bottom: 3%;
+}
+
+.vl-layer-ring {
+  background:
+    radial-gradient(ellipse at center, rgb(255 255 255 / 12%) 0%, rgb(255 255 255 / 4%) 56%, transparent 72%),
+    linear-gradient(90deg, rgb(255 255 255 / 10%), rgb(40 215 229 / 20%), rgb(255 255 255 / 8%));
+  border: 1px solid rgb(255 255 255 / 18%);
+  border-radius: 50%;
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 20%),
+    0 30px 80px rgb(0 0 0 / 26%),
+    0 0 44px rgb(40 215 229 / 12%);
+  height: 62%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 28%;
+  transform: rotateX(62deg);
+}
+
+.vl-layer-capabilities .vl-layer-ring {
+  background:
+    radial-gradient(ellipse at center, rgb(123 69 199 / 24%) 0%, rgb(123 69 199 / 10%) 58%, transparent 74%),
+    linear-gradient(90deg, rgb(255 255 255 / 9%), rgb(123 69 199 / 22%), rgb(40 215 229 / 9%));
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 16%),
+    0 34px 96px rgb(0 0 0 / 32%),
+    0 0 58px rgb(123 69 199 / 24%);
+}
+
+.vl-layer-understanding .vl-layer-ring {
+  background:
+    radial-gradient(ellipse at center, rgb(40 215 229 / 20%) 0%, rgb(40 215 229 / 7%) 58%, transparent 74%),
+    linear-gradient(90deg, rgb(255 255 255 / 8%), rgb(40 215 229 / 22%), rgb(123 69 199 / 10%));
+}
+
+.vl-layer-knowledge .vl-layer-ring {
+  background:
+    radial-gradient(ellipse at center, rgb(255 255 255 / 18%) 0%, rgb(255 255 255 / 8%) 54%, transparent 74%),
+    linear-gradient(90deg, rgb(255 255 255 / 20%), rgb(40 215 229 / 14%), rgb(255 255 255 / 10%));
+}
+
+.vl-layer-content {
+  align-items: center;
+  display: grid;
+  gap: 12px;
+  justify-items: center;
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  top: 30%;
+  transform: translateX(-50%);
+  width: min(560px, 82%);
+  z-index: 3;
+}
+
+.vl-layer-label {
+  color: rgb(255 255 255 / 48%);
+  font-size: 0.68rem;
+  font-weight: 820;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.vl-layer-content strong {
+  color: #ffffff;
+  font-family: var(--font-aiio-heading);
+  font-size: clamp(1.35rem, 2.4vw, 2.5rem);
+  font-weight: 600;
+  line-height: 1.04;
+  text-shadow: 0 0 28px rgb(40 215 229 / 16%);
+}
+
+.vl-signal-row,
+.vl-fragments,
+.vl-network {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.vl-signal-row span,
+.vl-fragments span,
+.vl-network span {
+  background: rgb(255 255 255 / 8%);
+  border: 1px solid rgb(255 255 255 / 14%);
+  border-radius: 999px;
+  color: rgb(255 255 255 / 68%);
+  font-size: 0.7rem;
+  font-weight: 760;
+  letter-spacing: 0.05em;
+  padding: 7px 10px;
+  text-transform: uppercase;
+}
+
+.vl-fragments span {
+  background: rgb(255 255 255 / 13%);
+  color: rgb(255 255 255 / 78%);
+}
+
+.vl-network span {
+  border-color: rgb(40 215 229 / 22%);
+  color: rgb(179 247 255 / 78%);
+}
+
+.vl-understanding-core {
+  animation: vlPulse 4.8s ease-in-out infinite;
+  background:
+    radial-gradient(circle, #ffffff 0 6%, rgb(40 215 229 / 88%) 7% 24%, rgb(40 215 229 / 18%) 25% 52%, transparent 53%);
+  border-radius: 999px;
+  box-shadow:
+    0 0 34px rgb(40 215 229 / 46%),
+    0 0 86px rgb(40 215 229 / 26%);
+  height: clamp(68px, 8vw, 116px);
+  left: 50%;
+  position: absolute;
+  top: 47%;
+  transform: translate(-50%, -50%);
+  width: clamp(68px, 8vw, 116px);
+  z-index: 2;
+}
+
+.vl-vertical-flow {
+  background: linear-gradient(180deg, rgb(123 69 199 / 0%), rgb(40 215 229 / 72%), rgb(255 255 255 / 12%));
+  bottom: 18%;
+  box-shadow: 0 0 46px rgb(40 215 229 / 36%);
+  left: 50%;
+  position: absolute;
+  top: 12%;
+  transform: translateX(-50%);
+  width: 1px;
+  z-index: 1;
+}
+
+.vl-particles {
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.vl-particles span {
+  animation: vlParticle 9s ease-in-out infinite;
+  background: rgb(40 215 229 / 58%);
+  border-radius: 999px;
+  height: 3px;
+  left: var(--particle-x, 50%);
+  opacity: 0.28;
+  position: absolute;
+  top: var(--particle-y, 50%);
+  width: 3px;
+}
+
+.vl-particles span:nth-child(3n) {
+  background: rgb(179 145 255 / 58%);
+}
+
+.vl-particles span:nth-child(1) { --particle-x: 8%; --particle-y: 18%; }
+.vl-particles span:nth-child(2) { --particle-x: 18%; --particle-y: 64%; }
+.vl-particles span:nth-child(3) { --particle-x: 28%; --particle-y: 28%; }
+.vl-particles span:nth-child(4) { --particle-x: 38%; --particle-y: 78%; }
+.vl-particles span:nth-child(5) { --particle-x: 48%; --particle-y: 14%; }
+.vl-particles span:nth-child(6) { --particle-x: 58%; --particle-y: 56%; }
+.vl-particles span:nth-child(7) { --particle-x: 68%; --particle-y: 32%; }
+.vl-particles span:nth-child(8) { --particle-x: 78%; --particle-y: 72%; }
+.vl-particles span:nth-child(9) { --particle-x: 88%; --particle-y: 22%; }
+.vl-particles span:nth-child(10) { --particle-x: 14%; --particle-y: 84%; }
+.vl-particles span:nth-child(11) { --particle-x: 24%; --particle-y: 42%; }
+.vl-particles span:nth-child(12) { --particle-x: 34%; --particle-y: 12%; }
+.vl-particles span:nth-child(13) { --particle-x: 44%; --particle-y: 66%; }
+.vl-particles span:nth-child(14) { --particle-x: 54%; --particle-y: 24%; }
+.vl-particles span:nth-child(15) { --particle-x: 64%; --particle-y: 86%; }
+.vl-particles span:nth-child(16) { --particle-x: 74%; --particle-y: 46%; }
+.vl-particles span:nth-child(17) { --particle-x: 84%; --particle-y: 62%; }
+.vl-particles span:nth-child(18) { --particle-x: 92%; --particle-y: 38%; }
+.vl-particles span:nth-child(19) { --particle-x: 6%; --particle-y: 48%; }
+.vl-particles span:nth-child(20) { --particle-x: 16%; --particle-y: 30%; }
+.vl-particles span:nth-child(21) { --particle-x: 26%; --particle-y: 88%; }
+.vl-particles span:nth-child(22) { --particle-x: 36%; --particle-y: 50%; }
+.vl-particles span:nth-child(23) { --particle-x: 46%; --particle-y: 34%; }
+.vl-particles span:nth-child(24) { --particle-x: 56%; --particle-y: 76%; }
+.vl-particles span:nth-child(25) { --particle-x: 66%; --particle-y: 16%; }
+.vl-particles span:nth-child(26) { --particle-x: 76%; --particle-y: 58%; }
+.vl-particles span:nth-child(27) { --particle-x: 86%; --particle-y: 80%; }
+.vl-particles span:nth-child(28) { --particle-x: 96%; --particle-y: 28%; }
+.vl-particles span:nth-child(29) { --particle-x: 12%; --particle-y: 72%; }
+.vl-particles span:nth-child(30) { --particle-x: 52%; --particle-y: 92%; }
+.vl-particles span:nth-child(31) { --particle-x: 72%; --particle-y: 8%; }
+.vl-particles span:nth-child(32) { --particle-x: 90%; --particle-y: 92%; }
+
+.vl-architecture-platform,
+.vl-architecture-thinking {
+  height: clamp(680px, 72vw, 920px);
+  margin: clamp(130px, 14vw, 220px) auto;
+  max-width: 1160px;
+}
+
+.ois-visual-wrap {
+  margin: 0 auto;
+  width: min(1180px, calc(100% - 40px));
+}
+
+.vl-card-visual {
+  aspect-ratio: 1.35 / 1;
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-radius: 16px;
+  margin-top: 38px;
+  overflow: hidden;
+  position: relative;
+}
+
+.vl-card-visual::before {
+  background:
+    radial-gradient(circle at 50% 48%, rgb(40 215 229 / 26%), transparent 34%),
+    linear-gradient(180deg, rgb(255 255 255 / 7%), rgb(255 255 255 / 2%));
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.vl-card-orbit {
+  border: 1px solid rgb(255 255 255 / 18%);
+  border-radius: 50%;
+  bottom: 12%;
+  height: 44%;
+  left: 12%;
+  position: absolute;
+  right: 12%;
+  transform: rotateX(64deg);
+}
+
+.vl-card-core {
+  background: rgb(40 215 229 / 86%);
+  border-radius: 999px;
+  box-shadow: 0 0 28px rgb(40 215 229 / 52%);
+  height: 22px;
+  left: 50%;
+  position: absolute;
+  top: 52%;
+  transform: translate(-50%, -50%);
+  width: 22px;
+}
+
+.is-collector .vl-card-core,
+.is-collector::before {
+  background:
+    radial-gradient(circle at 50% 52%, rgb(255 255 255 / 22%), transparent 36%),
+    linear-gradient(180deg, rgb(255 255 255 / 8%), rgb(255 255 255 / 2%));
+}
+
+.is-forge .vl-card-core,
+.is-dataforge .vl-card-core {
+  background: rgb(123 69 199 / 88%);
+  box-shadow: 0 0 30px rgb(123 69 199 / 58%);
+}
+
+.vl-card-signals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  inset: 18px 18px auto;
+  position: absolute;
+}
+
+.vl-card-signals span {
+  background: rgb(255 255 255 / 9%);
+  border: 1px solid rgb(255 255 255 / 14%);
+  border-radius: 999px;
+  color: rgb(255 255 255 / 68%);
+  font-size: 0.62rem;
+  font-weight: 780;
+  letter-spacing: 0.06em;
+  padding: 6px 8px;
+  text-transform: uppercase;
+}
+
+.vl-card-visual p {
+  bottom: 16px;
+  color: rgb(255 255 255 / 62%);
+  font-size: 0.72rem;
+  font-weight: 800;
+  left: 18px;
+  letter-spacing: 0.08em;
+  margin: 0;
+  position: absolute;
+  text-transform: uppercase;
+}
+
+.website-visual-theory-grid {
+  align-items: center;
+  display: grid;
+  gap: clamp(52px, 7vw, 110px);
+  grid-template-columns: minmax(0, 0.8fr) minmax(360px, 1fr);
+}
+
+.website-visual-theory-grid .website-section-heading {
+  margin-bottom: 0;
+}
+
+.vl-theory-model {
+  align-items: center;
+  display: grid;
+  gap: 24px;
+  justify-items: center;
+  min-height: 520px;
+  position: relative;
+}
+
+.vl-theory-node {
+  align-items: center;
+  background: rgb(255 255 255 / 4%);
+  border: 1px solid rgb(255 255 255 / 15%);
+  border-radius: 999px;
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 9%),
+    0 22px 80px rgb(0 0 0 / 24%);
+  color: #ffffff;
+  display: flex;
+  font-family: var(--font-aiio-heading);
+  font-size: clamp(1.35rem, 2.6vw, 2.8rem);
+  font-weight: 600;
+  justify-content: center;
+  min-height: 116px;
+  padding: 26px 42px;
+  text-align: center;
+  width: min(100%, 560px);
+}
+
+.vl-theory-node.knowledge {
+  background: rgb(255 255 255 / 6%);
+}
+
+.vl-theory-node.understanding {
+  border-color: rgb(40 215 229 / 28%);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 9%),
+    0 0 60px rgb(40 215 229 / 14%);
+}
+
+.vl-theory-node.capabilities {
+  border-color: rgb(179 145 255 / 30%);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 9%),
+    0 0 68px rgb(123 69 199 / 20%);
+}
+
+.vl-theory-arrow {
+  background: linear-gradient(180deg, rgb(40 215 229 / 0%), rgb(40 215 229 / 62%));
+  height: 42px;
+  width: 1px;
+}
+
+.vl-stack-visual {
+  display: grid;
+  gap: clamp(24px, 4vw, 54px);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: clamp(150px, 16vw, 260px) auto 0;
+  position: relative;
+}
+
+.vl-stack-stage {
+  background:
+    linear-gradient(180deg, rgb(255 255 255 / 7%), rgb(255 255 255 / 2%)),
+    rgb(255 255 255 / 2%);
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-radius: 22px;
+  box-shadow: 0 34px 90px rgb(0 0 0 / 24%);
+  min-height: 520px;
+  overflow: hidden;
+  padding: clamp(30px, 3vw, 44px);
+  position: relative;
+}
+
+.vl-stack-number {
+  color: rgb(255 255 255 / 30%);
+  font-family: var(--font-aiio-heading);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.vl-stack-plates {
+  height: 220px;
+  margin: 48px 0;
+  position: relative;
+}
+
+.vl-stack-plate {
+  border: 1px solid rgb(255 255 255 / 18%);
+  border-radius: 50%;
+  height: 48%;
+  left: 5%;
+  position: absolute;
+  right: 5%;
+  transform: rotateX(62deg);
+}
+
+.vl-stack-plate.knowledge {
+  background: rgb(255 255 255 / 8%);
+  bottom: 0;
+}
+
+.vl-stack-plate.understanding {
+  background: rgb(40 215 229 / 12%);
+  box-shadow: 0 0 40px rgb(40 215 229 / 16%);
+  bottom: 28%;
+}
+
+.vl-stack-plate.capabilities,
+.vl-stack-plate.evolution {
+  background: rgb(123 69 199 / 15%);
+  box-shadow: 0 0 48px rgb(123 69 199 / 20%);
+  bottom: 56%;
+}
+
+.vl-stack-stage h3 {
+  color: #ffffff;
+  font-size: clamp(2rem, 3.2vw, 3.8rem);
+  line-height: 1.02;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.vl-stack-stage p {
+  color: rgb(179 145 255 / 82%);
+  font-size: 0.78rem;
+  font-weight: 820;
+  letter-spacing: 0.1em;
+  margin: 28px 0 0;
+  text-transform: uppercase;
+}
+
+@keyframes vlFloat {
+  0%,
+  100% {
+    margin-top: 0;
+  }
+
+  50% {
+    margin-top: -12px;
+  }
+}
+
+@keyframes vlPulse {
+  0%,
+  100% {
+    opacity: 0.72;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes vlParticle {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-24px);
+  }
+}
+
+@media (max-width: 1100px) {
+  .hero-visual {
+    opacity: 0.5;
+    right: -300px;
+    width: 980px;
+  }
+
+  .website-visual-theory-grid,
+  .vl-stack-visual {
+    grid-template-columns: 1fr;
+  }
+
+  .vl-stack-stage {
+    min-height: 460px;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero {
+    min-height: 760px;
+  }
+
+  .hero-visual {
+    bottom: -70px;
+    height: 470px;
+    opacity: 0.62;
+    right: -260px;
+    width: 760px;
+  }
+
+  .vl-architecture {
+    min-height: 450px;
+  }
+
+  .vl-layer-content strong {
+    font-size: 1.14rem;
+  }
+
+  .vl-signal-row span,
+  .vl-fragments span,
+  .vl-network span {
+    font-size: 0.58rem;
+    padding: 5px 7px;
+  }
+
+  .vl-architecture-platform,
+  .vl-architecture-thinking {
+    height: 580px;
+    margin: 70px auto;
+  }
+
+  .ois-visual-wrap {
+    width: min(calc(100% - 28px), 1180px);
+  }
+
+  .website-visual-theory-grid {
+    gap: 56px;
+    grid-template-columns: 1fr;
+  }
+
+  .vl-theory-model {
+    min-height: 420px;
+  }
+
+  .vl-theory-node {
+    min-height: 96px;
+  }
+
+  .vl-stack-visual {
+    margin-top: 88px;
+  }
+
+  .vl-stack-stage {
+    min-height: 390px;
+  }
+
+  .vl-stack-plates {
+    height: 160px;
+    margin: 34px 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vl-layer,
+  .vl-understanding-core,
+  .vl-particles span {
+    animation: none;
+  }
+}

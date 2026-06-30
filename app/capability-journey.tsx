@@ -1,33 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion, type Transition, type Variants } from "framer-motion";
-
-const capabilities = [
-  {
-    badge: null,
-    label: "Powered by ProcessCollector",
-    support: "Capture organizational reality before valuable knowledge disappears.",
-    title: "Capture Knowledge",
-  },
-  {
-    badge: null,
-    label: "Powered by ProcessMagnet",
-    support: "Transform fragmented knowledge into shared organizational understanding.",
-    title: "Build Understanding",
-  },
-  {
-    badge: null,
-    label: "Powered by ProcessForge",
-    support: "Enable better decisions through contextual organizational understanding.",
-    title: "Enable Action",
-  },
-  {
-    badge: "Coming Soon",
-    label: "Powered by DataForge",
-    support: "Measure organizational evolution and continuously developing capabilities.",
-    title: "Evolve Organizations",
-  },
-] as const;
+import { CapabilityStackVisual } from "./visual-language";
 
 const motionEase = [0.2, 0, 0, 1] as const;
 
@@ -64,34 +38,19 @@ export function CapabilityJourney() {
           <p>Organizational Intelligence turns shared understanding into action.</p>
         </motion.div>
 
-        <div className="capability-journey-map" aria-label="Capability journey">
-          <div className="capability-journey-line" aria-hidden="true" />
-          {capabilities.map((capability, index) => (
-            <motion.article
-              className="capability-step"
-              initial="hidden"
-              key={capability.title}
-              transition={{
-                delay: index * 0.08,
-                duration: shouldReduceMotion ? 0 : 0.88,
-                ease: motionEase,
-              }}
-              variants={variants}
-              viewport={{ amount: 0.38, once: true }}
-              whileInView="visible"
-            >
-              <span className="capability-step-number">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-              <h3>{capability.title}</h3>
-              <p>{capability.support}</p>
-              <div className="capability-step-footer">
-                <span>{capability.label}</span>
-                {capability.badge ? <strong>{capability.badge}</strong> : null}
-              </div>
-            </motion.article>
-          ))}
-        </div>
+        <motion.div
+          initial="hidden"
+          transition={
+            shouldReduceMotion
+              ? { duration: 0 }
+              : { duration: 0.95, ease: motionEase, delay: 0.08 }
+          }
+          variants={variants}
+          viewport={{ amount: 0.28, once: true }}
+          whileInView="visible"
+        >
+          <CapabilityStackVisual />
+        </motion.div>
 
         <motion.div
           className="capability-closing"

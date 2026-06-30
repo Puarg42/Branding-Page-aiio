@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { LayeredIntelligenceVisual, TheoryModelVisual } from "../visual-language";
 import { WebsiteArchitecturePage } from "../website-architecture";
 
 export const metadata: Metadata = {
@@ -89,6 +90,26 @@ export default function ThinkingPage() {
               Read the Theory <span aria-hidden="true">→</span>
             </Link>
           </div>
+        </div>
+      </section>
+
+      <section className="website-architecture-section">
+        <div className="website-page-shell website-visual-theory-grid">
+          <div className="website-section-heading">
+            <p className="website-eyebrow">Model</p>
+            <h2>Knowledge becomes capability through understanding.</h2>
+          </div>
+          <TheoryModelVisual />
+        </div>
+      </section>
+
+      <section className="website-architecture-section">
+        <div className="website-page-shell website-visual-theory-grid">
+          <div className="website-section-heading">
+            <p className="website-eyebrow">Framework</p>
+            <h2>The same architecture guides every visual theory.</h2>
+          </div>
+          <LayeredIntelligenceVisual variant="thinking" />
         </div>
       </section>
 

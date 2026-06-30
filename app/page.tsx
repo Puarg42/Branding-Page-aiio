@@ -5,6 +5,7 @@ import {
   CeoMondayMoment,
   OrganizationMirror,
 } from "./category-reinforcement";
+import { LayeredIntelligenceVisual } from "./visual-language";
 
 const problemCards = [
   {
@@ -33,14 +34,6 @@ const intelligenceProgression = [
   "Organizational Capabilities",
   "Organizational Resilience",
   "Self-Enabling Organization",
-] as const;
-
-const oisEcosystemElements = [
-  "People",
-  "Knowledge",
-  "Enterprise Systems",
-  "Artificial Intelligence",
-  "Organizational Memory",
 ] as const;
 
 const imagineMoments = [
@@ -107,16 +100,7 @@ function Hero() {
         </div>
       </div>
       <div className="hero-visual" aria-hidden="true">
-        {/* Vinext local dev cannot serve Next image optimization for this static hero asset. */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          alt=""
-          decoding="async"
-          fetchPriority="high"
-          height="929"
-          src="/landing-organizational-intelligence-hero-v1.jpg"
-          width="1692"
-        />
+        <LayeredIntelligenceVisual variant="hero" />
       </div>
     </section>
   );
@@ -244,36 +228,10 @@ function OisArchitecture() {
       </div>
 
       <div
-        aria-label="Organizational Intelligence System ecosystem"
-        className="ois-ecosystem"
+        aria-label="Organizational Intelligence layered architecture"
+        className="ois-visual-wrap"
       >
-        <svg
-          aria-hidden="true"
-          className="ois-connection-map"
-          focusable="false"
-          viewBox="0 0 1200 620"
-        >
-          <path className="ois-line ois-line-1" d="M600 310 C520 230 410 170 260 126" />
-          <path className="ois-line ois-line-3" d="M600 310 C520 208 650 124 782 112" />
-          <path className="ois-line ois-line-4" d="M600 310 C715 250 848 210 1010 232" />
-          <path className="ois-line ois-line-5" d="M600 310 C745 354 855 432 940 520" />
-          <path className="ois-line ois-line-6" d="M600 310 C590 430 558 500 520 562" />
-        </svg>
-        <div className="ois-core">
-          <span>Organizational</span>
-          <span>Intelligence</span>
-          <span>System</span>
-        </div>
-        {oisEcosystemElements.map((element) => (
-          <span
-            className={`ois-node ois-node-${element
-              .toLowerCase()
-              .replaceAll(" ", "-")}`}
-            key={element}
-          >
-            {element}
-          </span>
-        ))}
+        <LayeredIntelligenceVisual variant="platform" />
       </div>
 
       <div className="ois-bottom-statement">
