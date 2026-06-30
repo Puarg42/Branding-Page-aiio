@@ -22,12 +22,7 @@ Initialize the aiio Brand Canon as the immutable source for website, presentatio
 - `BC-001` - Organizational Mind
 - `BC-002` - Organizational Intelligence Engine
 - `BC-003` - Transparent Intelligence
-
-## Pending Brand Asset
-
 - `BC-004` - Visual Language Library
-
-The sprint brief requires `004-visual-language-library.png`, but no immutable source file with this filename is available in the workspace, downloads folder or Codex attachments. No replacement, placeholder asset or regenerated file was created.
 
 ## Architecture Changes
 
@@ -35,6 +30,7 @@ The sprint brief requires `004-visual-language-library.png`, but no immutable so
 - Brand assets are mapped centrally inside `BrandIllustration`.
 - Homepage, capability journey, platform page, thinking page and capability cards consume Canon assets.
 - `BrandIllustration` accepts only `BC-001`, `BC-002`, `BC-003` and `BC-004`.
+- The Thinking framework visual now consumes `BC-004`.
 
 ## Review Package
 
@@ -53,13 +49,9 @@ Generated in `/docs/reviews/brand-canon-v1/`:
 
 ## Remaining Issues
 
-- `BC-004` is not yet physically present in `/public/brand-canon/`.
-- The `BrandIllustration` component already supports `BC-004`, but no page uses it until the immutable asset is supplied.
 - Older archive/resource pages still use historical aiio.de images. They were intentionally not changed because this sprint focused the new Brand Canon on the current Branding, Platform and Thinking experience.
 
 ## Recommendations for Sprint 06
 
-- Supply `004-visual-language-library.png` as the fourth immutable Canon asset.
-- Once BC-004 is supplied, copy it into `/public/brand-canon/` without modification.
 - Decide whether legacy archive/resource pages should be migrated into the Brand Canon system or preserved as historical content.
 - Add a visual governance checklist for future page design, decks and publications.

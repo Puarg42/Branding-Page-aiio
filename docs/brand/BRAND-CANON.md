@@ -86,10 +86,6 @@ Defines
 
 Every future illustration must be composed from these primitives.
 
-Status
-
-Asset file pending import.
-
 ## Immutable Principles
 
 1. Transparency over Decoration

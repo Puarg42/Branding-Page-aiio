@@ -109,7 +109,7 @@ export default function ThinkingPage() {
             <p className="website-eyebrow">Framework</p>
             <h2>The same architecture guides every visual theory.</h2>
           </div>
-          <BrandIllustration variant="BC-003" />
+          <BrandIllustration variant="BC-004" />
         </div>
       </section>
 
