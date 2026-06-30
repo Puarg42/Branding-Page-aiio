@@ -7384,7 +7384,632 @@ section[id],
 @media (prefers-reduced-motion: reduce) {
   .vl-light-flow,
   .vl-vertical-flow::after,
-  .vl-mind-light {
+  .vl-mind-light,
+  .vl-asset-light,
+  .vl-card-light,
+  .vl-library-light {
     animation: none;
+  }
+}
+
+.vl-asset-architecture {
+  background: #030305;
+  border: 1px solid rgb(255 255 255 / 8%);
+  border-radius: 32px;
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 7%),
+    0 44px 130px rgb(0 0 0 / 32%);
+  overflow: hidden;
+}
+
+.vl-asset-architecture::before,
+.vl-asset-architecture::after {
+  display: none;
+}
+
+.vl-architecture-asset {
+  display: block;
+  height: 100%;
+  inset: 0;
+  object-fit: contain;
+  object-position: center;
+  opacity: 0.96;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.vl-architecture-brand {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.vl-architecture-brand .vl-architecture-asset {
+  object-fit: cover;
+  object-position: 62% 50%;
+  opacity: 0.72;
+  transform: scale(1.04);
+}
+
+.vl-architecture-platform .vl-architecture-asset {
+  object-fit: contain;
+}
+
+.vl-architecture-thinking .vl-architecture-asset {
+  object-fit: cover;
+}
+
+.vl-asset-light,
+.vl-card-light,
+.vl-library-light {
+  animation: vlLightFlow 12s ease-in-out infinite;
+  background:
+    linear-gradient(90deg, transparent, rgb(255 255 255 / 18%), transparent),
+    radial-gradient(circle at 50% 50%, rgb(24 214 255 / 16%), transparent 28%);
+  inset: 0;
+  opacity: 0.34;
+  pointer-events: none;
+  position: absolute;
+  z-index: 2;
+}
+
+.vl-card-visual {
+  background: #030305;
+  overflow: hidden;
+}
+
+.vl-card-crop,
+.vl-card-crop-layer,
+.vl-card-crop-light {
+  display: none;
+}
+
+.vl-card-image {
+  display: block;
+  height: 100%;
+  inset: 0;
+  object-fit: cover;
+  opacity: 0.72;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.is-collector .vl-card-image {
+  object-position: 14% 10%;
+  transform: scale(2.6);
+}
+
+.is-magnet .vl-card-image {
+  object-position: 50% 44%;
+  transform: scale(2.45);
+}
+
+.is-forge .vl-card-image {
+  object-position: 50% 68%;
+  transform: scale(2.25);
+}
+
+.is-dataforge .vl-card-image {
+  object-position: 78% 88%;
+  transform: scale(2.1);
+}
+
+.vl-card-signal,
+.vl-card-label {
+  z-index: 3;
+}
+
+.vl-library-visual {
+  background: #030305;
+  border: 1px solid rgb(255 255 255 / 8%);
+  border-radius: 28px;
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 7%),
+    0 38px 120px rgb(0 0 0 / 28%);
+  min-height: clamp(420px, 52vw, 700px);
+  overflow: hidden;
+  position: relative;
+}
+
+.vl-library-asset {
+  display: block;
+  height: 100%;
+  inset: 0;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.92;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.vl-library-light {
+  background:
+    radial-gradient(circle at 50% 18%, rgb(255 255 255 / 18%), transparent 18%),
+    linear-gradient(180deg, rgb(255 255 255 / 8%), transparent 34%, rgb(139 92 246 / 8%));
+}
+
+.vl-organizational-mind {
+  background: #030305;
+  border: 1px solid rgb(255 255 255 / 9%);
+  border-radius: 28px;
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 7%),
+    0 38px 120px rgb(0 0 0 / 28%);
+  min-height: 560px;
+  overflow: hidden;
+}
+
+.vl-mind-asset {
+  display: block;
+  height: 100%;
+  inset: 0;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.96;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.vl-mind-light {
+  background:
+    radial-gradient(circle at 50% 46%, rgb(255 255 255 / 18%), transparent 12%),
+    linear-gradient(90deg, transparent, rgb(24 214 255 / 10%), transparent);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.organization-mirror-visual {
+  background: #030305;
+  overflow: hidden;
+  padding: 0;
+}
+
+.organization-mirror-visual > div,
+.organization-mirror-visual .vl-organizational-mind {
+  height: 100%;
+  min-height: clamp(520px, 56vw, 760px);
+}
+
+.organization-mirror-visual .vl-organizational-mind {
+  border: 0;
+  border-radius: 32px;
+  box-shadow: none;
+}
+
+@media (max-width: 720px) {
+  .vl-architecture-brand .vl-architecture-asset {
+    object-position: 58% 50%;
+    transform: scale(1.1);
+  }
+
+  .vl-library-visual,
+  .vl-organizational-mind,
+  .organization-mirror-visual .vl-organizational-mind {
+    min-height: 420px;
+  }
+
+  .is-collector .vl-card-image,
+  .is-magnet .vl-card-image,
+  .is-forge .vl-card-image,
+  .is-dataforge .vl-card-image {
+    transform: scale(2.15);
+  }
+}
+
+/* aiio Visual Identity 1.0: transparent optical material, light as understanding. */
+.vl-architecture {
+  --cap-knowledge: 232 236 247;
+  --cap-understanding: 24 214 255;
+  --cap-action: 91 50 138;
+  --cap-evolution: 244 166 42;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  isolation: isolate;
+  overflow: visible;
+}
+
+.vl-architecture::before,
+.vl-architecture::after {
+  display: none;
+}
+
+.vl-visual-field {
+  height: 100%;
+  min-height: inherit;
+  position: relative;
+  width: 100%;
+}
+
+.vl-light-column {
+  background:
+    linear-gradient(
+      180deg,
+      transparent,
+      rgb(255 255 255 / 34%),
+      rgb(var(--cap-understanding) / 22%),
+      rgb(255 255 255 / 24%),
+      transparent
+    );
+  filter: none;
+  inset: 8% auto 8% 50%;
+  opacity: 0.62;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 1px;
+  z-index: 3;
+}
+
+.vl-light-flow {
+  animation: vlLightFlow 14s ease-in-out infinite;
+  background:
+    radial-gradient(circle at 50% 26%, rgb(var(--cap-evolution) / 20%), transparent 11%),
+    radial-gradient(circle at 50% 50%, rgb(var(--cap-understanding) / 18%), transparent 14%),
+    radial-gradient(circle at 50% 72%, rgb(var(--cap-action) / 18%), transparent 15%);
+  filter: none;
+  inset: 0;
+  opacity: 0.42;
+  position: absolute;
+  z-index: 1;
+}
+
+.vl-layer-orbit {
+  border: 1px solid rgb(255 255 255 / 16%);
+  border-radius: 999px;
+  height: clamp(100px, 12vw, 168px);
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  width: min(82%, 980px);
+  z-index: 2;
+}
+
+.vl-layer-orbit.knowledge {
+  bottom: 8%;
+  color: rgb(var(--cap-knowledge));
+}
+
+.vl-layer-orbit.understanding {
+  bottom: 32%;
+  color: rgb(var(--cap-understanding));
+}
+
+.vl-layer-orbit.action {
+  bottom: 56%;
+  color: rgb(var(--cap-action));
+}
+
+.vl-layer-orbit.evolution {
+  bottom: 80%;
+  color: rgb(var(--cap-evolution));
+}
+
+.vl-layer-glass {
+  background:
+    linear-gradient(180deg, rgb(255 255 255 / 8%), rgb(255 255 255 / 2%)),
+    radial-gradient(circle at 50% 50%, currentColor 0%, transparent 68%);
+  border: 1px solid rgb(255 255 255 / 18%);
+  border-radius: inherit;
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 18%),
+    inset 0 -1px 0 rgb(255 255 255 / 7%);
+  inset: 0;
+  opacity: 0.16;
+  position: absolute;
+}
+
+.vl-layer-line {
+  background: linear-gradient(90deg, transparent, currentColor, transparent);
+  height: 1px;
+  inset: 50% 8% auto;
+  opacity: 0.48;
+  position: absolute;
+}
+
+.vl-layer-index {
+  color: rgb(255 255 255 / 42%);
+  font-family: var(--font-aiio-heading);
+  font-size: clamp(0.76rem, 1vw, 0.92rem);
+  font-weight: 500;
+  left: 7%;
+  letter-spacing: 0.14em;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.vl-layer-copy {
+  align-items: baseline;
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+.vl-layer-copy strong {
+  color: rgb(255 255 255 / 86%);
+  font-family: var(--font-aiio-heading);
+  font-size: clamp(1.6rem, 3vw, 3.8rem);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.vl-layer-copy span {
+  color: currentColor;
+  font-size: 0.72rem;
+  font-weight: 650;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.vl-architecture-brand .vl-layer-copy,
+.vl-architecture-brand .vl-layer-index {
+  opacity: 0;
+}
+
+.vl-architecture-brand .vl-layer-orbit {
+  width: min(92%, 1080px);
+}
+
+.vl-card-visual {
+  background: transparent;
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-radius: 18px;
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 12%),
+    0 28px 80px rgb(0 0 0 / 18%);
+  overflow: hidden;
+}
+
+.vl-card-visual::before,
+.vl-card-visual::after {
+  display: none;
+}
+
+.vl-card-material {
+  background:
+    linear-gradient(180deg, rgb(255 255 255 / 9%), rgb(255 255 255 / 1%)),
+    radial-gradient(circle at 50% 52%, currentColor, transparent 48%);
+  border: 1px solid rgb(255 255 255 / 16%);
+  border-radius: 999px;
+  bottom: 18%;
+  left: 14%;
+  opacity: 0.18;
+  position: absolute;
+  right: 14%;
+  top: 16%;
+}
+
+.vl-card-light {
+  animation: vlLightFlow 14s ease-in-out infinite;
+  background: radial-gradient(circle at 50% 52%, rgb(255 255 255 / 28%), transparent 18%);
+  inset: 0;
+  opacity: 0.42;
+  pointer-events: none;
+  position: absolute;
+}
+
+.is-collector {
+  color: rgb(var(--cap-knowledge));
+}
+
+.is-magnet {
+  color: rgb(var(--cap-understanding));
+}
+
+.is-forge {
+  color: rgb(var(--cap-action));
+}
+
+.is-dataforge {
+  color: rgb(var(--cap-evolution));
+}
+
+.vl-card-signals {
+  display: flex;
+  gap: 10px;
+  inset: 20px 20px auto;
+  justify-content: center;
+  position: absolute;
+  z-index: 3;
+}
+
+.vl-card-signals span {
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-radius: 999px;
+  color: rgb(255 255 255 / 62%);
+  font-size: 0.62rem;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  padding: 7px 10px;
+  text-transform: uppercase;
+}
+
+.vl-card-visual p {
+  color: rgb(255 255 255 / 72%);
+  z-index: 3;
+}
+
+.vl-library-visual {
+  background: transparent;
+  border: 1px solid rgb(255 255 255 / 9%);
+  border-radius: 28px;
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 10%),
+    0 38px 120px rgb(0 0 0 / 20%);
+  min-height: clamp(480px, 56vw, 760px);
+  overflow: hidden;
+  position: relative;
+}
+
+.vl-library-row {
+  display: grid;
+  gap: clamp(20px, 4vw, 56px);
+  grid-template-columns: repeat(5, minmax(64px, 1fr));
+  left: 8%;
+  position: absolute;
+  right: 8%;
+}
+
+.vl-library-row.row-one {
+  top: 18%;
+}
+
+.vl-library-row.row-two {
+  bottom: 18%;
+  grid-template-columns: repeat(4, minmax(72px, 1fr));
+}
+
+.vl-library-object,
+.vl-library-system {
+  aspect-ratio: 1;
+  border: 1px solid rgb(255 255 255 / 16%);
+  border-radius: 22px;
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 16%);
+  opacity: 0.9;
+  position: relative;
+}
+
+.vl-library-object::after,
+.vl-library-system::after {
+  background: radial-gradient(circle at 50% 50%, currentColor, transparent 54%);
+  border-radius: inherit;
+  content: "";
+  inset: 0;
+  opacity: 0.22;
+  position: absolute;
+}
+
+.vl-library-object {
+  color: rgb(var(--cap-knowledge));
+}
+
+.vl-library-system.knowledge {
+  color: rgb(var(--cap-knowledge));
+}
+
+.vl-library-system.understanding {
+  color: rgb(var(--cap-understanding));
+}
+
+.vl-library-system.action {
+  color: rgb(var(--cap-action));
+}
+
+.vl-library-system.evolution {
+  color: rgb(var(--cap-evolution));
+}
+
+.vl-library-light {
+  animation: vlLightFlow 14s ease-in-out infinite;
+  background:
+    linear-gradient(180deg, transparent, rgb(255 255 255 / 18%), transparent),
+    radial-gradient(circle at 50% 50%, rgb(var(--cap-understanding) / 12%), transparent 26%);
+  inset: 0;
+  opacity: 0.46;
+  pointer-events: none;
+  position: absolute;
+}
+
+.vl-organizational-mind {
+  background: transparent;
+  border: 1px solid rgb(255 255 255 / 9%);
+  border-radius: 28px;
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 10%),
+    0 38px 120px rgb(0 0 0 / 20%);
+  min-height: 560px;
+  overflow: hidden;
+  position: relative;
+}
+
+.vl-organizational-mind::before {
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-radius: 999px;
+  content: "";
+  height: min(62%, 420px);
+  left: 50%;
+  opacity: 0.86;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(62%, 420px);
+}
+
+.vl-mind-light {
+  animation: vlLightFlow 14s ease-in-out infinite;
+  background:
+    radial-gradient(circle at 50% 50%, rgb(255 255 255 / 22%), transparent 12%),
+    radial-gradient(circle at 50% 50%, rgb(var(--cap-understanding) / 14%), transparent 32%);
+  inset: 0;
+  opacity: 0.56;
+  pointer-events: none;
+  position: absolute;
+}
+
+.vl-mind-core {
+  background: rgb(255 255 255 / 3%);
+  border: 1px solid rgb(255 255 255 / 14%);
+  border-radius: 999px;
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 16%);
+  color: rgb(255 255 255 / 86%);
+}
+
+.vl-mind-core strong {
+  color: inherit;
+  font-family: var(--font-aiio-heading);
+  font-weight: 500;
+}
+
+.vl-mind-node {
+  background: rgb(255 255 255 / 3%);
+  border: 1px solid rgb(255 255 255 / 11%);
+  box-shadow: none;
+  color: rgb(255 255 255 / 58%);
+}
+
+.vl-mind-node.node-1 { left: 10%; top: 22%; }
+.vl-mind-node.node-2 { right: 10%; top: 22%; }
+.vl-mind-node.node-3 { left: 14%; top: 50%; }
+.vl-mind-node.node-4 { right: 14%; top: 50%; }
+.vl-mind-node.node-5 { left: 22%; bottom: 18%; }
+.vl-mind-node.node-6 { right: 22%; bottom: 18%; }
+
+.organization-mirror-visual {
+  background: transparent;
+}
+
+@media (max-width: 720px) {
+  .vl-layer-orbit {
+    width: 92%;
+  }
+
+  .vl-layer-copy {
+    align-items: center;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .vl-layer-copy strong {
+    font-size: clamp(1.32rem, 8vw, 2.4rem);
+  }
+
+  .vl-layer-copy span {
+    font-size: 0.58rem;
+  }
+
+  .vl-library-row,
+  .vl-library-row.row-two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

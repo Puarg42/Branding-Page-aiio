@@ -2,28 +2,51 @@
 
 ## Purpose
 
-Define the shared visual language for the aiio brand and the Organizational Intelligence System.
+Define the shared visual language for aiio and the Organizational Intelligence category.
 
 ## Principle
 
-Every illustration explains an idea.
+Every illustration explains Organizational Intelligence.
+
+No illustration explains software.
 
 No illustration is decorative.
 
+## Visual Identity
+
+The aiio visual language is built on:
+
+1. Transparency
+2. Light
+3. Optical material
+4. Capability colors
+5. Architectural precision
+6. Large negative space
+
 ## Canonical Model
 
-All visual assets derive from the 4 Capability Layers model:
+All illustrations derive from the capability model:
 
-1. Capture Knowledge
-2. Build Understanding
-3. Enable Action
-4. Evolve Organizations
+1. Knowledge
+2. Understanding
+3. Action
+4. Evolution
+
+The simplified theoretical model is:
+
+1. Knowledge
+2. Understanding
+3. Capabilities
 
 ## Table of Contents
 
 1. Visual Thesis
-2. Core Principles
-3. Layer Architecture
-4. Visual System
-5. Application Areas
-6. Governance
+2. Transparency
+3. Light
+4. Material
+5. Capability Colors
+6. Composition
+7. Illustration Rules
+8. Motion Rules
+9. Prohibited Elements
+10. Governance

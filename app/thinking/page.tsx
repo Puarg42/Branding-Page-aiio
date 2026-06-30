@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { LayeredIntelligenceVisual, OrganizationalMindVisual } from "../visual-language";
+import { OrganizationalMindVisual, VisualLanguageLibraryVisual } from "../visual-language";
 import { WebsiteArchitecturePage } from "../website-architecture";
 
 export const metadata: Metadata = {
@@ -109,7 +109,7 @@ export default function ThinkingPage() {
             <p className="website-eyebrow">Framework</p>
             <h2>The same architecture guides every visual theory.</h2>
           </div>
-          <LayeredIntelligenceVisual variant="thinking" />
+          <VisualLanguageLibraryVisual />
         </div>
       </section>
 

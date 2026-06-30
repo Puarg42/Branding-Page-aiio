@@ -1,37 +1,6 @@
 type LayeredVisualVariant = "brand" | "hero" | "platform" | "thinking";
 type ProductVisual = "ProcessCollector" | "ProcessMagnet" | "ProcessForge" | "DataForge";
 
-const capabilityLayers = [
-  {
-    id: "evolution",
-    label: "Layer 4",
-    product: "DataForge",
-    signals: ["KPIs", "Feedback", "Measurement", "Learning"],
-    title: "Evolve Organizations",
-  },
-  {
-    id: "action",
-    label: "Layer 3",
-    product: "ProcessForge",
-    signals: ["Agents", "Recommendations", "Reports", "Actions"],
-    title: "Enable Action",
-  },
-  {
-    id: "understanding",
-    label: "Layer 2",
-    product: "ProcessMagnet",
-    signals: ["Context", "Knowledge Graph", "Connections", "Meaning"],
-    title: "Build Understanding",
-  },
-  {
-    id: "knowledge",
-    label: "Layer 1",
-    product: "ProcessCollector",
-    signals: ["Documents", "Policies", "Processes", "People", "Systems", "Standards"],
-    title: "Capture Knowledge",
-  },
-] as const;
-
 const productDetails: Record<
   ProductVisual,
   {
@@ -43,45 +12,68 @@ const productDetails: Record<
   ProcessCollector: {
     className: "collector",
     label: "Capture Knowledge",
-    signals: ["Docs", "Roles", "Flows", "Rules"],
+    signals: ["Knowledge", "Structure", "Memory"],
   },
   ProcessMagnet: {
     className: "magnet",
     label: "Build Understanding",
-    signals: ["Graph", "Context", "Memory", "Meaning"],
+    signals: ["Context", "Relations", "Meaning"],
   },
   ProcessForge: {
     className: "forge",
     label: "Enable Action",
-    signals: ["Agents", "APIs", "Chats", "Actions"],
+    signals: ["Decision", "Action", "Enablement"],
   },
   DataForge: {
     className: "dataforge",
     label: "Evolve Organizations",
-    signals: ["KPIs", "Loops", "Signals", "Learning"],
+    signals: ["Feedback", "Learning", "Evolution"],
   },
 };
+
+const layerModel = [
+  {
+    className: "knowledge",
+    title: "Knowledge",
+    caption: "Frost White",
+  },
+  {
+    className: "understanding",
+    title: "Understanding",
+    caption: "Cyan",
+  },
+  {
+    className: "action",
+    title: "Action",
+    caption: "Deep Violet",
+  },
+  {
+    className: "evolution",
+    title: "Evolution",
+    caption: "Warm Amber",
+  },
+] as const;
 
 const stackStages = [
   {
     title: "Capture Knowledge",
-    label: "Foundation",
-    layers: ["Knowledge"],
+    label: "Transparent Knowledge",
+    layers: ["knowledge"],
   },
   {
     title: "Build Understanding",
-    label: "Shared Understanding",
-    layers: ["Knowledge", "Understanding"],
+    label: "Connected Understanding",
+    layers: ["knowledge", "understanding"],
   },
   {
     title: "Enable Action",
     label: "Coordinated Action",
-    layers: ["Understanding", "Action"],
+    layers: ["understanding", "action"],
   },
   {
     title: "Evolve Organizations",
     label: "Continuous Evolution",
-    layers: ["Action", "Evolution"],
+    layers: ["action", "evolution"],
   },
 ] as const;
 
@@ -90,36 +82,26 @@ export function LayeredIntelligenceVisual({
 }: {
   variant?: LayeredVisualVariant;
 }) {
-  const particleCount = variant === "brand" || variant === "hero" ? 36 : 22;
-
   return (
-    <div className={`vl-architecture vl-architecture-${variant}`}>
-      <div className="vl-light-flow" aria-hidden="true" />
-      <div className="vl-particles" aria-hidden="true">
-        {Array.from({ length: particleCount }, (_, index) => (
-          <span key={index} />
-        ))}
-      </div>
-
-      {capabilityLayers.map((layer) => (
-        <div className={`vl-layer vl-layer-${layer.id}`} key={layer.id}>
-          <div className="vl-layer-ring" />
-          {layer.id === "understanding" ? <div className="vl-understanding-core" /> : null}
-          <div className="vl-layer-content">
-            <span className="vl-layer-label">
-              {layer.label} - Powered by {layer.product}
-            </span>
-            <strong>{layer.title}</strong>
-            <div className="vl-signal-row">
-              {layer.signals.map((signal) => (
-                <span key={signal}>{signal}</span>
-              ))}
+    <div
+      className={`vl-architecture vl-architecture-${variant}`}
+      aria-label="Capability layers: Knowledge, Understanding, Action and Evolution"
+    >
+      <div className="vl-visual-field" aria-hidden="true">
+        <span className="vl-light-column" />
+        <span className="vl-light-flow" />
+        {layerModel.map((layer, index) => (
+          <div className={`vl-layer-orbit ${layer.className}`} key={layer.title}>
+            <span className="vl-layer-glass" />
+            <span className="vl-layer-line" />
+            <span className="vl-layer-index">{String(index + 1).padStart(2, "0")}</span>
+            <div className="vl-layer-copy">
+              <strong>{layer.title}</strong>
+              <span>{layer.caption}</span>
             </div>
           </div>
-        </div>
-      ))}
-
-      <div className="vl-vertical-flow" aria-hidden="true" />
+        ))}
+      </div>
     </div>
   );
 }
@@ -137,12 +119,8 @@ export function CapabilityCardVisual({ product }: { product: ProductVisual }) {
 
   return (
     <div className={`vl-card-visual is-${detail.className}`} aria-hidden="true">
-      <div className="vl-card-crop">
-        <span className="vl-card-crop-layer layer-back" />
-        <span className="vl-card-crop-layer layer-mid" />
-        <span className="vl-card-crop-layer layer-front" />
-        <span className="vl-card-crop-light" />
-      </div>
+      <span className="vl-card-material" />
+      <span className="vl-card-light" />
       <div className="vl-card-signals">
         {detail.signals.map((signal) => (
           <span key={signal}>{signal}</span>
@@ -153,35 +131,38 @@ export function CapabilityCardVisual({ product }: { product: ProductVisual }) {
   );
 }
 
-export function OrganizationalMindVisual() {
-  const mindNodes = [
-    "Knowledge",
-    "Context",
-    "People",
-    "Processes",
-    "Systems",
-    "AI",
-    "Memory",
-    "Decisions",
-  ] as const;
-
+export function VisualLanguageLibraryVisual() {
   return (
-    <div className="vl-organizational-mind" aria-label="Organizational Mind illustration">
-      <div className="vl-mind-light" aria-hidden="true" />
-      <div className="vl-mind-orbit orbit-one" aria-hidden="true" />
-      <div className="vl-mind-orbit orbit-two" aria-hidden="true" />
-      <div className="vl-mind-orbit orbit-three" aria-hidden="true" />
-      <div className="vl-mind-core">
-        <span>Living</span>
-        <strong>Organizational Mind</strong>
+    <div className="vl-library-visual" aria-label="aiio visual language: transparent optical objects">
+      <div className="vl-library-row row-one" aria-hidden="true">
+        {["panel", "graph", "memory", "material", "wave"].map((shape) => (
+          <span className={`vl-library-object ${shape}`} key={shape} />
+        ))}
       </div>
-      <div className="vl-mind-nodes" aria-hidden="true">
-        {mindNodes.map((node, index) => (
+      <div className="vl-library-row row-two" aria-hidden="true">
+        {["knowledge", "understanding", "action", "evolution"].map((shape) => (
+          <span className={`vl-library-system ${shape}`} key={shape} />
+        ))}
+      </div>
+      <span className="vl-library-light" aria-hidden="true" />
+    </div>
+  );
+}
+
+export function OrganizationalMindVisual() {
+  return (
+    <div className="vl-organizational-mind" aria-label="Living Organizational Memory becoming understanding">
+      <span className="vl-mind-light" aria-hidden="true" />
+      <span className="vl-mind-core" aria-hidden="true">
+        <strong>Understanding</strong>
+      </span>
+      {["Knowledge", "Context", "Memory", "Relations", "Reasoning", "Capability"].map(
+        (node, index) => (
           <span className={`vl-mind-node node-${index + 1}`} key={node}>
             {node}
           </span>
-        ))}
-      </div>
+        ),
+      )}
     </div>
   );
 }
@@ -212,7 +193,7 @@ export function CapabilityStackVisual() {
           <span className="vl-stack-number">{String(index + 1).padStart(2, "0")}</span>
           <div className="vl-stack-plates" aria-hidden="true">
             {stage.layers.map((layer) => (
-              <span className={`vl-stack-plate ${layer.toLowerCase()}`} key={layer} />
+              <span className={`vl-stack-plate ${layer}`} key={layer} />
             ))}
           </div>
           <h3>{stage.title}</h3>

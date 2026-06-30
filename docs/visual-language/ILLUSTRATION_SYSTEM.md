@@ -4,19 +4,43 @@
 
 Define the illustration system used to explain Organizational Intelligence as transformation rather than software.
 
-## Master Model
+## Master Rule
 
-The 4 Capability Layers illustration is the canonical aiio visual model.
+Every illustration communicates exactly one idea.
 
-Future illustrations should evolve from this model instead of introducing a separate illustration language.
+Every object has semantic meaning.
+
+Nothing decorative exists.
+
+## Material
+
+Illustrations use transparent intelligence:
+
+1. 95 percent transparent optical material
+2. Laboratory precision
+3. Floating architectural composition
+4. No environment
+
+## Prohibited Elements
+
+Do not use:
+
+1. Dashboards
+2. Screens
+3. User interfaces
+4. Icons
+5. Servers
+6. Circuits
+7. Glowing brains
+8. Cyberpunk effects
+9. Gaming aesthetics
 
 ## Table of Contents
 
 1. Illustration Thesis
-2. Layered Architecture
-3. Glass
-4. Glow
-5. Depth
-6. Connections
-7. Particle Effects
-8. Reuse Across Media
+2. Transparency
+3. Light
+4. Material
+5. Layer Architecture
+6. Composition
+7. Reuse Across Media

@@ -2,23 +2,35 @@
 
 ## Purpose
 
-Define the color system for aiio visuals, interfaces, diagrams and communication assets.
+Define the capability color system for aiio visuals, diagrams and communication assets.
+
+## Core Rule
+
+Only capability colors exist inside illustrations.
+
+Do not introduce additional illustration colors.
 
 ## Capability Colors
 
-Capture Knowledge: `#E8ECF7`
+Knowledge: Frost White `#E8ECF7`
 
-Build Understanding: `#18D6FF`
+Understanding: Cyan `#18D6FF`
 
-Enable Action: `#8B5CF6`
+Action: Deep Violet `#5A328A`
 
-Evolve Organizations: `#F4A62A`
+Evolution: Warm Amber `#F4A62A`
+
+## Usage
+
+Color does not decorate.
+
+Color identifies capability.
 
 ## Table of Contents
 
 1. Core Palette
 2. Layer Colors
 3. Dark Mode
-4. Accent Colors
-5. Contrast
-6. Usage Rules
+4. Contrast
+5. Semantic Usage
+6. Prohibited Usage

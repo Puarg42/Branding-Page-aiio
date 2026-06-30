@@ -2,6 +2,8 @@
 
 import { motion, useReducedMotion, type Transition, type Variants } from "framer-motion";
 
+import { OrganizationalMindVisual } from "./visual-language";
+
 const motionEase = [0.2, 0, 0, 1] as const;
 
 const fadeUp: Variants = {
@@ -13,15 +15,6 @@ const staticReveal: Variants = {
   hidden: { opacity: 1, y: 0 },
   visible: { opacity: 1, y: 0 },
 };
-
-const mirrorElements = [
-  "People",
-  "Processes",
-  "Documents",
-  "Enterprise Systems",
-  "Artificial Intelligence",
-  "Data",
-] as const;
 
 const ceoMoments = [
   {
@@ -130,49 +123,16 @@ export function OrganizationMirror() {
       </motion.div>
 
       <div className="organization-mirror-visual" aria-label="Organization Mirror visualization">
-        <svg
-          aria-hidden="true"
-          className="mirror-connection-map"
-          focusable="false"
-          viewBox="0 0 1200 680"
-        >
-          <path className="mirror-line mirror-line-1" d="M600 340 C480 260 356 190 214 150" />
-          <path className="mirror-line mirror-line-2" d="M600 340 C452 354 310 370 158 430" />
-          <path className="mirror-line mirror-line-3" d="M600 340 C552 210 506 144 430 86" />
-          <path className="mirror-line mirror-line-4" d="M600 340 C712 214 822 144 988 112" />
-          <path className="mirror-line mirror-line-5" d="M600 340 C742 360 898 382 1062 454" />
-          <path className="mirror-line mirror-line-6" d="M600 340 C610 462 638 548 718 612" />
-        </svg>
-
         <motion.div
-          className="mirror-center"
           {...reveal}
-          transition={shouldReduceMotion ? { duration: 0 } : { duration: 1.1, ease: motionEase, delay: 0.12 }}
+          transition={
+            shouldReduceMotion
+              ? { duration: 0 }
+              : { duration: 1.1, ease: motionEase, delay: 0.12 }
+          }
         >
-          <span>Living Organizational Memory</span>
-          <strong aria-hidden="true">↓</strong>
-          <span>Organizational Understanding</span>
+          <OrganizationalMindVisual />
         </motion.div>
-
-        {mirrorElements.map((element, index) => (
-          <motion.span
-            className={`mirror-element mirror-element-${element
-              .toLowerCase()
-              .replaceAll(" ", "-")}`}
-            initial="hidden"
-            key={element}
-            transition={{
-              delay: shouldReduceMotion ? 0 : 0.12 + index * 0.08,
-              duration: shouldReduceMotion ? 0 : 0.95,
-              ease: motionEase,
-            }}
-            variants={shouldReduceMotion ? staticReveal : fadeUp}
-            viewport={{ amount: 0.35, once: true }}
-            whileInView="visible"
-          >
-            {element}
-          </motion.span>
-        ))}
       </div>
     </section>
   );

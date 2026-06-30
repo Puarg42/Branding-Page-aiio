@@ -2,170 +2,182 @@
 
 ## Purpose
 
-This document defines the visual language of the aiio brand book.
+This document defines the visual identity of Organizational Intelligence.
 
-## Brand System 1.1
+The visual identity does not describe software.
 
-The aiio website is the first public expression of Organizational Intelligence as an emerging management discipline.
+It defines the visual language of a new management discipline.
 
-The visual identity should communicate:
+## Core Principle
 
-Simple on the surface.
+Every illustration must belong to one single visual language.
 
-Profound underneath.
+Every illustration communicates exactly one idea.
 
-Every illustration is a conceptual model.
+Nothing decorative exists.
 
-No visual element exists only for decoration.
+Every object has semantic meaning.
 
-## Table of Contents
+## Design Philosophy
 
-1. Visual Thesis
-2. Design Principles
-3. Layer Architecture
-4. Color System
-5. Illustration System
-6. Motion
-7. Diagrams
-8. Photography
-9. Iconography
-10. Governance
+The aiio visual language should feel like:
 
-## Master Visual Model
+1. Apple Industrial Design
+2. Architectural Visualization
+3. Scientific Luxury
+4. Museum Installation
+5. Timeless precision
 
-All future illustrations evolve from the 4 Capability Layers model.
+It must not feel like:
 
-The model explains the Organizational Intelligence capability journey:
+1. SaaS
+2. BPM software
+3. Cyberpunk
+4. Gaming
+5. Generic AI art
+6. Stock illustration
 
-1. Capture Knowledge
-2. Build Understanding
-3. Enable Action
-4. Evolve Organizations
+## Transparency
 
-This master model is used across:
+Transparency is the primary design element.
 
-1. Website
-2. Thinking
-3. Research
-4. Whitepapers
-5. Investor Deck
-6. Partner Deck
-7. Podcast
-8. Keynotes
-9. Documentation
-10. Events
+Understanding increases through transparency.
 
-## Capability Layers
+Visuals use transparent intelligence:
 
-### Layer 1: Capture Knowledge
+1. 95 percent transparent material
+2. Engineered optical surfaces
+3. Laboratory precision
+4. Clear semantic hierarchy
 
-Powered by ProcessCollector.
+Avoid decorative reflections.
 
-Color: `#E8ECF7`
+Avoid ornamental shine.
 
-Meaning:
+## Light
 
-1. Collect
-2. Harmonize
-3. Structure
-4. Organizational knowledge
+Light represents understanding.
 
-Sources:
+Light does not represent energy.
 
-1. Documents
-2. Policies
-3. Processes
-4. People
-5. Systems
-6. Standards
+Light does not represent technology.
 
-### Layer 2: Build Understanding
+Light does not represent Artificial Intelligence.
 
-Powered by ProcessMagnet.
+Light flows.
 
-Color: `#18D6FF`
+It never explodes.
 
-Meaning:
+## Material
 
-1. Create Organizational Understanding
-2. Semantic relationships
-3. Context
-4. Knowledge Graph
-5. Connections
-6. Understanding
+The material language is unique to aiio.
 
-### Layer 3: Enable Action
+It is transparent, precise and engineered.
 
-Powered by ProcessForge.
+Objects should feel like optical instruments for organizational understanding.
 
-Color: `#8B5CF6`
+## Capability Colors
 
-Meaning:
+Only capability colors exist.
 
-1. Transform understanding into decisions
-2. AI Agents
-3. Recommendations
-4. Reports
-5. Dashboards
-6. Automation
-7. Actions
+### Knowledge
 
-### Layer 4: Evolve Organizations
+Frost White
 
-Powered by DataForge.
+`#E8ECF7`
 
-Color: `#F4A62A`
+### Understanding
 
-Meaning:
+Cyan
 
-1. Continuous organizational evolution
-2. KPIs
-3. Feedback
-4. Measurement
-5. Optimization
-6. Learning
-7. Capabilities
+`#18D6FF`
 
-## Typography
+### Action
 
-Headlines use Chillax.
+Deep Violet
 
-Body text uses Inter.
+`#5A328A`
 
-Buttons use Inter Medium.
+### Evolution
 
-Navigation uses Inter Medium.
+Warm Amber
 
-Captions use Inter Regular.
+`#F4A62A`
 
-## Motion
+No additional illustration colors are allowed.
 
-Motion communicates calm intelligence.
+## Composition
 
 Use:
 
-1. Floating particles
-2. Soft glow
-3. Slow pulse
-4. Layer parallax
-5. Connection highlights
+1. Large negative space
+2. Perfect balance
+3. Architectural precision
+4. Floating objects
+5. No horizon
+6. No room
+7. No environment
 
-Avoid:
+The composition should feel curated, not rendered.
 
-1. Aggressive motion
-2. Decorative movement
-3. Overloaded animation
-4. Sci-fi effects
+## Prohibited Elements
 
-## Validation
+Do not use:
 
-The visual system is valid when:
+1. Dashboards
+2. Screens
+3. User interfaces
+4. Icons
+5. Servers
+6. Circuits
+7. Glowing brains
+8. Science fiction devices
+9. Decorative particles
+10. Explosions of light
 
-1. The Hero remains clean and cinematic.
-2. The Platform illustration is the visual centerpiece.
-3. The master capability model is consistently reused.
-4. The four capability colors appear consistently.
-5. Chillax remains the headline font.
-6. Inter remains the body font.
-7. Every illustration belongs to one coherent family.
-8. No page contradicts the Theory of Organizational Intelligence.
+## Motion
+
+Motion only animates understanding.
+
+Allowed:
+
+1. Slow light flow
+2. Calm opacity changes
+3. Subtle translateY
+
+Not allowed:
+
+1. Floating for decoration
+2. Parallax as spectacle
+3. Rotation
+4. Bounce
+5. Blur
+6. Explosive light
+
+## Canonical Layer Model
+
+The visual system is organized around three conceptual layers:
+
+1. Organizational Capabilities
+2. Organizational Understanding
+3. Organizational Knowledge
+
+The extended capability system adds:
+
+1. Knowledge
+2. Understanding
+3. Action
+4. Evolution
+
+## Governance
+
+Before any illustration is accepted, ask:
+
+1. Does it communicate Organizational Intelligence?
+2. Does it use transparency as the primary design element?
+3. Does light represent understanding?
+4. Does it use only capability colors?
+5. Does it avoid software UI, icons and dashboards?
+6. Does it feel like the same design family?
+
+If the answer is uncertain, simplify.
