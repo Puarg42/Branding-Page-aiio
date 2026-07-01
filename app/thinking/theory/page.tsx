@@ -216,7 +216,7 @@ export default function TheoryPage() {
                 alt=""
                 className="theory-book-hero-image"
                 loading="eager"
-                src="/brand-canon/_incoming/001-organizational-mind-theory-Neu.png"
+                src="/brand-canon/001-organizational-mind-theory.png"
               />
               <div className="theory-book-hero-shade" />
             </div>
