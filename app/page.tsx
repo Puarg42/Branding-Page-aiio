@@ -9,20 +9,20 @@ import { BrandIllustration } from "../components/brand/BrandIllustration";
 
 const problemCards = [
   {
-    title: "Knowledge leaves.",
-    copy: "Every handover erases context.",
+    title: "Knowledge disappears.",
+    copy: "Critical context leaves with people, projects and tools.",
   },
   {
-    title: "AI guesses.",
-    copy: "Without context, intelligence becomes noise.",
+    title: "AI lacks context.",
+    copy: "Answers remain generic when they are not grounded in the organization.",
   },
   {
-    title: "Complexity compounds.",
-    copy: "Systems multiply faster than understanding.",
+    title: "Complexity costs.",
+    copy: "Processes, systems and decisions drift apart as the organization grows.",
   },
   {
-    title: "Decisions stall.",
-    copy: "Fragmented knowledge slows action.",
+    title: "Decisions slow down.",
+    copy: "Teams spend too much time reconstructing what the organization already knows.",
   },
 ] as const;
 
@@ -62,17 +62,17 @@ const companyPrinciples = [
   {
     title: "Understanding before Intelligence",
     copy:
-      "Intelligence matters when it improves how organizations decide and act.",
+      "AI creates value when it is grounded in how the organization actually works.",
   },
   {
     title: "Enable, don't replace",
     copy:
-      "Technology should strengthen organizational capability, not create new dependency.",
+      "Technology should make organizations more capable, not more dependent.",
   },
   {
     title: "Build for the next decade",
     copy:
-      "We are building the foundation for organizations that learn, adapt and evolve over time.",
+      "aiio builds the foundation for organizations that learn, adapt and evolve over time.",
   },
 ] as const;
 
@@ -82,9 +82,9 @@ function Hero() {
       <div className="landing-hero-content">
         <h1>The future belongs to organizations that understand themselves.</h1>
         <p className="hero-subheadline">
-          Organizations already know more than they can use.
+          aiio turns scattered organizational knowledge into a shared basis for better decisions.
           <br />
-          For the first time, that knowledge can become understanding.
+          So leaders, teams and AI can act with the same context.
         </p>
         <div className="actions hero-actions" aria-label="Primary actions">
           <a className="button hero-button" href="#organizational-intelligence">
@@ -132,14 +132,15 @@ function ConceptBreakthrough() {
       <div className="concept-inner">
         <div className="concept-copy">
           <p className="dark-eyebrow">The missing layer</p>
-          <h2>The missing layer is understanding.</h2>
+          <h2>Business value begins with shared understanding.</h2>
           <div className="concept-statement">
-            <p>More information was never enough.</p>
-            <p>Meaning emerges when context connects.</p>
+            <p>More information does not improve decisions.</p>
+            <p>Connected context does.</p>
           </div>
           <p className="concept-support">
-            Organizational Intelligence begins where scattered knowledge becomes
-            shared meaning.
+            Organizational Intelligence creates the context layer that makes
+            knowledge usable for people, AI and enterprise systems.{" "}
+            <a href="/thinking/theory">Why Organizational Understanding matters</a>.
           </p>
         </div>
         <ol
@@ -167,13 +168,13 @@ function NewKindOrganization() {
         <div className="organization-header">
           <p className="dark-eyebrow">A New Kind of Organization</p>
           <h2>
-            The next generation turns learning into capability.
+            The next generation turns knowledge into operating advantage.
           </h2>
-          <p>Knowledge stays. Decisions improve. Capabilities compound.</p>
+          <p>Less rework. Faster decisions. Stronger organizational capability.</p>
         </div>
         <div className="organization-closing-block">
           <div className="organization-closing-statement">
-            Tomorrow&apos;s leading organizations keep getting better at change.
+            The organizations that lead tomorrow will make better use of what they already know.
           </div>
         </div>
         <div className="organization-bottom-statement">
@@ -211,9 +212,12 @@ function OisArchitecture() {
     <section className="ois-section" id="architektur">
       <div className="ois-intro">
         <p className="ois-section-title">The Platform</p>
-        <h2>Organizational Intelligence needs an operating system.</h2>
+        <h2>aiio makes Organizational Intelligence operational.</h2>
         <div className="ois-body">
-          <p>aiio connects knowledge, people, systems and AI into one operating context.</p>
+          <p>
+            The OIS connects knowledge, people, systems and AI into one operating
+            context for decisions and action.
+          </p>
         </div>
       </div>
 
@@ -226,7 +230,7 @@ function OisArchitecture() {
 
       <div className="ois-bottom-statement">
         <p>The OIS is not another application.</p>
-        <p>It is how the journey becomes operational.</p>
+        <p>It is the infrastructure for organizations that want to use what they know.</p>
       </div>
     </section>
   );
@@ -241,15 +245,15 @@ function CompanyPurpose() {
           <h2>Why aiio exists</h2>
           <div>
             <p>
-              Organizations should not depend on scattered memory or isolated
-              projects to evolve.
+              Organizations should not depend on scattered memory to make important
+              decisions.
             </p>
             <p>
-              aiio exists to make understanding a durable organizational
-              capability.
+              aiio exists to turn organizational understanding into a durable
+              business capability.
             </p>
             <p>
-              That conviction guides everything we build.
+              The theory explains the foundation. The platform makes it usable.
             </p>
           </div>
         </div>
