@@ -5777,19 +5777,34 @@ h1 {
 
 .theory-toc li {
   color: rgb(255 255 255 / 54%);
+  line-height: 1.42;
+  padding: 0;
+}
+
+.theory-toc a {
+  color: inherit;
   display: grid;
   font-size: 0.98rem;
   gap: 8px;
   grid-template-columns: 34px minmax(0, 1fr);
-  line-height: 1.42;
   padding: 11px 0;
+  text-decoration: none;
+  transition: color 180ms ease;
 }
 
-.theory-toc li span {
+.theory-toc a:hover {
+  color: rgb(255 255 255 / 82%);
+}
+
+.theory-toc li > a > span:first-child {
   color: rgb(179 145 255 / 72%);
   font-size: 0.76rem;
   font-weight: 800;
   letter-spacing: 0.08em;
+}
+
+.theory-toc-title {
+  min-width: 0;
 }
 
 .theory-reading-area {
@@ -5813,6 +5828,50 @@ h1 {
   line-height: 0.98;
   margin: 0;
   text-wrap: balance;
+}
+
+.theory-chapter-placeholder p {
+  color: rgb(255 255 255 / 68%);
+  font-size: clamp(1.05rem, 1.35vw, 1.2rem);
+  line-height: 1.82;
+  margin: 34px 0 0;
+  max-width: 680px;
+}
+
+.theory-chapter-placeholder p + p {
+  margin-top: 22px;
+}
+
+.theory-chapter-placeholder strong {
+  color: #ffffff;
+  font-weight: 720;
+}
+
+.theory-formula {
+  background:
+    radial-gradient(circle at 12% 0%, rgb(94 222 255 / 12%), transparent 40%),
+    linear-gradient(180deg, rgb(255 255 255 / 7%), rgb(255 255 255 / 2%));
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-radius: 24px;
+  display: grid;
+  gap: 14px;
+  margin: 46px 0 10px;
+  max-width: 560px;
+  padding: clamp(30px, 4vw, 46px);
+}
+
+.theory-formula span {
+  color: rgb(255 255 255 / 72%);
+  font-family: var(--font-aiio-heading);
+  font-size: clamp(1.25rem, 2vw, 2rem);
+  font-weight: 560;
+  letter-spacing: 0;
+  line-height: 1.12;
+}
+
+.theory-formula span:first-child,
+.theory-formula span:last-child {
+  color: #ffffff;
 }
 
 .request-demo-page {
