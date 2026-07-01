@@ -79,6 +79,11 @@ export function TheorySidebar({ chapters }: TheorySidebarProps) {
 
   return (
     <aside className="theory-sidebar" aria-label="Theory table of contents">
+      <a className="theory-publisher-logo" href="/" aria-label="aiio Startseite">
+        <span className="aiio-logo" aria-hidden="true" />
+        <span className="sr-only">aiio</span>
+      </a>
+
       <a className="theory-back-link" href="/thinking">
         <span aria-hidden="true">&larr;</span>
         Back to Thinking
@@ -88,6 +93,13 @@ export function TheorySidebar({ chapters }: TheorySidebarProps) {
         <p className="theory-sidebar-eyebrow">Theory</p>
         <h2>Organizational Intelligence</h2>
         <p>A Theory of Organizational Understanding</p>
+      </div>
+
+      <div className="theory-publication-meta" aria-label="Publication details">
+        <span>Theory</span>
+        <span>Version 0.9</span>
+        <span>{chapters.length} Chapters</span>
+        <span>Approx. 35 min reading</span>
       </div>
 
       <div className="theory-progress" aria-label="Reading progress">

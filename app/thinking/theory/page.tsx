@@ -1,7 +1,6 @@
 import { readFileSync } from "fs";
 import path from "path";
 import type { Metadata } from "next";
-import { MainHeader } from "../../main-navigation";
 import { TheorySidebar } from "./theory-sidebar";
 
 export const metadata: Metadata = {
@@ -206,69 +205,66 @@ const sidebarChapters = chapters.map(({ id, title }) => ({ id, title }));
 
 export default function TheoryPage() {
   return (
-    <>
-      <MainHeader variant="solid" />
-      <main className="theory-book-page">
-        <div className="theory-book-layout">
-          <TheorySidebar chapters={sidebarChapters} />
+    <main className="theory-book-page">
+      <div className="theory-book-layout">
+        <TheorySidebar chapters={sidebarChapters} />
 
-          <div className="theory-book-main">
-            <section className="theory-book-hero" aria-label="Theory introduction">
-              <div className="theory-book-hero-artwork" aria-hidden="true">
-                <img
-                  alt=""
-                  className="theory-book-hero-image"
-                  loading="eager"
-                  src="/brand-canon/001-organizational-mind-theory-neu.png"
-                />
-                <div className="theory-book-hero-shade" />
-              </div>
-              <div className="theory-book-hero-content">
-                <p className="theory-sidebar-eyebrow">Theory</p>
-                <h1>Organizational Intelligence</h1>
-                <p>A Theory of Organizational Understanding</p>
-              </div>
-            </section>
+        <div className="theory-book-main">
+          <section className="theory-book-hero" aria-label="Theory introduction">
+            <div className="theory-book-hero-artwork" aria-hidden="true">
+              <img
+                alt=""
+                className="theory-book-hero-image"
+                loading="eager"
+                src="/brand-canon/001-organizational-mind-theory-neu.png"
+              />
+              <div className="theory-book-hero-shade" />
+            </div>
+            <div className="theory-book-hero-content">
+              <p className="theory-sidebar-eyebrow">Theory</p>
+              <h1>Organizational Intelligence</h1>
+              <p>A Theory of Organizational Understanding</p>
+            </div>
+          </section>
 
-            <article className="theory-reading-area" aria-label="Theory chapters">
-              {chapters.map((chapter, chapterIndex) => (
-                <section className="theory-chapter" id={chapter.id} key={chapter.id}>
-                  <div className="theory-chapter-marker">
-                    <span>{String(chapterIndex + 1).padStart(2, "0")}</span>
-                    <i aria-hidden="true" />
-                  </div>
-                  <h2>{chapter.title}</h2>
-                  <div className="theory-chapter-body">
-                    {chapter.blocks.map((block, index) => {
-                      const firstTextBlockIndex = chapter.blocks.findIndex(
-                        (chapterBlock) => chapterBlock.type !== "model",
-                      );
-                      const openingClassName = index === firstTextBlockIndex ? " is-opening" : "";
+          <article className="theory-reading-area" aria-label="Theory chapters">
+            {chapters.map((chapter, chapterIndex) => (
+              <section className="theory-chapter" id={chapter.id} key={chapter.id}>
+                <div className="theory-chapter-marker">
+                  <span>{String(chapterIndex + 1).padStart(2, "0")}</span>
+                  <i aria-hidden="true" />
+                </div>
+                <h2>{chapter.title}</h2>
+                <div className="theory-chapter-body">
+                  {chapter.blocks.map((block, index) => {
+                    const firstTextBlockIndex = chapter.blocks.findIndex(
+                      (chapterBlock) => chapterBlock.type !== "model",
+                    );
+                    const openingClassName = index === firstTextBlockIndex ? " is-opening" : "";
 
-                      return block.type === "model" ? (
-                        <div className="theory-formula" key={`${chapter.id}-model-${index}`}>
-                          {block.lines.map((line, lineIndex) => (
-                            <span key={`${chapter.id}-model-${index}-${lineIndex}`}>{line}</span>
-                          ))}
-                        </div>
-                      ) : block.type === "quote" ? (
-                        <blockquote className={openingClassName.trim()} key={`${chapter.id}-quote-${index}`}>
-                          <span aria-hidden="true">&ldquo;</span>
-                          <p>{block.text}</p>
-                        </blockquote>
-                      ) : (
-                        <p className={openingClassName.trim()} key={`${chapter.id}-paragraph-${index}`}>
-                          {renderOpeningSentence(block.text, Boolean(openingClassName))}
-                        </p>
-                      );
-                    })}
-                  </div>
-                </section>
-              ))}
-            </article>
-          </div>
+                    return block.type === "model" ? (
+                      <div className="theory-formula" key={`${chapter.id}-model-${index}`}>
+                        {block.lines.map((line, lineIndex) => (
+                          <span key={`${chapter.id}-model-${index}-${lineIndex}`}>{line}</span>
+                        ))}
+                      </div>
+                    ) : block.type === "quote" ? (
+                      <blockquote className={openingClassName.trim()} key={`${chapter.id}-quote-${index}`}>
+                        <span aria-hidden="true">&ldquo;</span>
+                        <p>{block.text}</p>
+                      </blockquote>
+                    ) : (
+                      <p className={openingClassName.trim()} key={`${chapter.id}-paragraph-${index}`}>
+                        {renderOpeningSentence(block.text, Boolean(openingClassName))}
+                      </p>
+                    );
+                  })}
+                </div>
+              </section>
+            ))}
+          </article>
         </div>
-      </main>
-    </>
+      </div>
+    </main>
   );
 }
