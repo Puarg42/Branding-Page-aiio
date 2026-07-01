@@ -1,5 +1,5 @@
-import { ResourcePage } from "../resource-pages";
+import { LegalPage } from "../legal-page";
 
 export default function ImpressumPage() {
-  return <ResourcePage slug="impressum" />;
+  return <LegalPage slug="impressum" />;
 }

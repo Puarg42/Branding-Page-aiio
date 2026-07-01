@@ -1,5 +1,5 @@
-import { ResourcePage } from "../resource-pages";
+import { LegalPage } from "../legal-page";
 
 export default function DatenschutzPage() {
-  return <ResourcePage slug="datenschutz" />;
+  return <LegalPage slug="datenschutz" />;
 }
