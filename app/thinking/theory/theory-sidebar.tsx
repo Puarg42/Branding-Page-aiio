@@ -18,35 +18,47 @@ export function TheorySidebar({ chapters }: TheorySidebarProps) {
   useEffect(() => {
     let animationFrame = 0;
 
-    function updateReadingState() {
+    function updateProgress() {
       const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
       const nextProgress = scrollableHeight > 0 ? (window.scrollY / scrollableHeight) * 100 : 0;
-      const currentChapter = chapters
-        .map((chapter) => document.getElementById(chapter.id))
-        .filter((section): section is HTMLElement => Boolean(section))
-        .reduce((current, section) => {
-          if (section.getBoundingClientRect().top <= window.innerHeight * 0.34) {
-            return section.id;
-          }
-
-          return current;
-        }, chapters[0]?.id ?? "");
 
       setProgress(Math.min(100, Math.max(0, nextProgress)));
-      setActiveId(currentChapter);
     }
 
     function onScroll() {
       window.cancelAnimationFrame(animationFrame);
-      animationFrame = window.requestAnimationFrame(updateReadingState);
+      animationFrame = window.requestAnimationFrame(updateProgress);
     }
 
-    updateReadingState();
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleEntry = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((first, second) => first.boundingClientRect.top - second.boundingClientRect.top)[0];
+
+        if (visibleEntry?.target.id) {
+          setActiveId(visibleEntry.target.id);
+        }
+      },
+      {
+        root: null,
+        rootMargin: "-28% 0px -58% 0px",
+        threshold: [0, 0.08, 0.18],
+      },
+    );
+
+    chapters
+      .map((chapter) => document.getElementById(chapter.id))
+      .filter((section): section is HTMLElement => Boolean(section))
+      .forEach((section) => observer.observe(section));
+
+    updateProgress();
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll);
 
     return () => {
       window.cancelAnimationFrame(animationFrame);
+      observer.disconnect();
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
     };

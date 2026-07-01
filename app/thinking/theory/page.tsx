@@ -217,22 +217,29 @@ export default function TheoryPage() {
                 </div>
                 <h2>{chapter.title}</h2>
                 <div className="theory-chapter-body">
-                  {chapter.blocks.map((block, index) =>
-                    block.type === "model" ? (
+                  {chapter.blocks.map((block, index) => {
+                    const firstTextBlockIndex = chapter.blocks.findIndex(
+                      (chapterBlock) => chapterBlock.type !== "model",
+                    );
+                    const openingClassName = index === firstTextBlockIndex ? " is-opening" : "";
+
+                    return block.type === "model" ? (
                       <div className="theory-formula" key={`${chapter.id}-model-${index}`}>
                         {block.lines.map((line, lineIndex) => (
                           <span key={`${chapter.id}-model-${index}-${lineIndex}`}>{line}</span>
                         ))}
                       </div>
                     ) : block.type === "quote" ? (
-                      <blockquote key={`${chapter.id}-quote-${index}`}>
+                      <blockquote className={openingClassName.trim()} key={`${chapter.id}-quote-${index}`}>
                         <span aria-hidden="true">&ldquo;</span>
                         <p>{block.text}</p>
                       </blockquote>
                     ) : (
-                      <p key={`${chapter.id}-paragraph-${index}`}>{block.text}</p>
-                    ),
-                  )}
+                      <p className={openingClassName.trim()} key={`${chapter.id}-paragraph-${index}`}>
+                        {block.text}
+                      </p>
+                    );
+                  })}
                 </div>
               </section>
             ))}
