@@ -1,279 +1,271 @@
 import { MainHeader } from "./main-navigation";
-import { getEditableContent, RichText } from "./editor/content";
+import { CapabilityJourney } from "./capability-journey";
+import {
+  CategoryEvolution,
+  CeoMondayMoment,
+  OrganizationMirror,
+} from "./category-reinforcement";
+import { BrandIllustration } from "../components/brand/BrandIllustration";
 
-const layerSections = [
+const problemCards = [
   {
-    id: "collector",
-    tone: "collector",
-    eyebrow: getEditableContent("home.layer.collector.eyebrow", "Grounding Layer"),
-    title: getEditableContent("home.layer.collector.title", "Organisationswissen erfassen und strukturieren."),
-    copy: (
-      <RichText
-        html={getEditableContent(
-          "home.layer.collector",
-          "ProcessCollector sammelt Wissen aus Dokumenten, Interviews, Prozessen und bestehenden Systemen und schafft daraus die belastbare Grundlage für KI-gestützte Organisationsarbeit.",
-        )}
-      />
-    ),
-    noteTitle: "Hinweis",
-    note:
-      "Optional erweiterbar mit ProcessMagnet Light für automatische Prozess- und Dokumentenerkennung.",
-    stack: ["Manifestieren", "Vernetzen", "Bewahren"],
-    website: "https://processcollector.com/",
-    websiteLabel: "ProcessCollector entdecken",
-    visualAlt: "Unterer Ausschnitt des aiio Systembildes mit hellem Organisationswissen, Dokumenten und Inputformaten.",
-    visualBaseImage: "/system-layers/collector-layer-single-generated-v1.png",
-    visualImage: "/system-layers/collector-layer-single-generated-v1.png",
+    title: "Knowledge leaves.",
+    copy: "Every handover erases context.",
   },
   {
-    id: "magnet",
-    tone: "magnet",
-    eyebrow: getEditableContent("home.layer.magnet.eyebrow", "Understanding Layer"),
-    title: getEditableContent("home.layer.magnet.title", "Zusammenhänge, Prozesse und Potenziale erkennen."),
-    copy: (
-      <RichText
-        html={getEditableContent(
-          "home.layer.magnet",
-          "ProcessMagnet analysiert die strukturierte Wissensbasis, erkennt Muster, Prozesszusammenhänge, Schwachstellen und Optimierungspotenziale – auf Basis des ProcessCollectors als Grounding Layer.",
-        )}
-      />
-    ),
-    noteTitle: "Hinweis",
-    note:
-      "ProcessCollector dient als Grounding Layer für belastbare Analysen.",
-    stack: ["Erheben", "Harmonisieren", "Kontextualisieren"],
-    website: "https://process-magnet.com/",
-    websiteLabel: "ProcessMagnet entdecken",
-    visualAlt: "Mittlerer Ausschnitt des aiio Systembildes mit ProcessMagnet, Sogwirkung und Modell-Erkennung.",
-    visualBaseImage: "/system-layers/magnet-layer-single-generated-v1.png",
-    visualImage: "/system-layers/magnet-layer-single-generated-v1.png",
+    title: "AI guesses.",
+    copy: "Without context, intelligence becomes noise.",
   },
   {
-    id: "forge",
-    tone: "forge",
-    eyebrow: getEditableContent("home.layer.forge.eyebrow", "Activation Layer"),
-    title: getEditableContent("home.layer.forge.title", "Organisationswissen aktivieren und nutzbar machen."),
-    copy: (
-      <RichText
-        html={getEditableContent(
-          "home.layer.forge",
-          "ProcessForge macht Organisationswissen für KI-Agenten, Chats, APIs und bestehende Unternehmenssysteme nutzbar. So wird Wissen nicht nur dokumentiert, sondern aktiv in Arbeit und Entscheidungen eingebunden.",
-        )}
-      />
-    ),
-    noteTitle: "Hinweis",
-    note:
-      "Für Unternehmen, die Organisationswissen operationalisieren und in bestehende Systeme integrieren möchten.",
-    stack: ["Schmieden", "Transformieren", "Orchestrieren"],
-    website: "https://www.processforge.com/",
-    websiteLabel: "ProcessForge entdecken",
-    visualAlt: "Oberer Ausschnitt des aiio Systembildes mit ProcessForge, Agenten, APIs und Übergabe an Umsysteme.",
-    visualBaseImage: "/system-layers/forge-layer-single-generated-v1.png",
-    visualImage: "/system-layers/forge-layer-single-generated-v1.png",
+    title: "Complexity compounds.",
+    copy: "Systems multiply faster than understanding.",
+  },
+  {
+    title: "Decisions stall.",
+    copy: "Fragmented knowledge slows action.",
   },
 ] as const;
 
-const cards = [
+const intelligenceProgression = [
+  "Fragmented knowledge",
+  "Connected context",
+  "Shared meaning",
+] as const;
+
+const imagineMoments = [
   {
-    eyebrow: getEditableContent("home.card.collector.eyebrow", "Grounding Layer"),
-    title: getEditableContent("home.card.collector.title", "ProcessCollector®"),
-    href: "#collector",
-    copy: (
-      <RichText
-        html={getEditableContent(
-          "home.card.collector",
-          "ProcessCollector sammelt Wissen aus Dokumenten, Interviews, Prozessen und bestehenden Systemen und schafft daraus die belastbare Grundlage für KI-gestützte Organisationsarbeit.",
-        )}
-      />
-    ),
+    statement: "Imagine an organization that never loses its knowledge.",
+    support: "Knowledge stays.",
   },
   {
-    eyebrow: getEditableContent("home.card.magnet.eyebrow", "Understanding Layer"),
-    title: getEditableContent("home.card.magnet.title", "ProcessMagnet®"),
-    href: "#magnet",
-    copy: (
-      <RichText
-        html={getEditableContent(
-          "home.card.magnet",
-          "ProcessMagnet analysiert die strukturierte Wissensbasis, erkennt Muster, Prozesszusammenhänge, Schwachstellen und Optimierungspotenziale – auf Basis des ProcessCollectors als Grounding Layer.",
-        )}
-      />
-    ),
+    statement: "Imagine an organization where context is never lost.",
+    support: "Every decision carries memory forward.",
   },
   {
-    eyebrow: getEditableContent("home.card.forge.eyebrow", "Activation Layer"),
-    title: getEditableContent("home.card.forge.title", "ProcessForge®"),
-    href: "#forge",
-    copy: (
-      <RichText
-        html={getEditableContent(
-          "home.card.forge",
-          "ProcessForge macht Organisationswissen für KI-Agenten, Chats, APIs und bestehende Unternehmenssysteme nutzbar. So wird Wissen nicht nur dokumentiert, sondern aktiv in Arbeit und Entscheidungen eingebunden.",
-        )}
-      />
+    statement:
+      "Imagine an organization that continuously develops new capabilities.",
+    support: "Every interaction strengthens it.",
+  },
+  {
+    statement: "Imagine an organization that is resilient by design.",
+    support: (
+      <>
+        Prepared for change.
+        <br />
+        Ready for the unknown.
+      </>
     ),
+  },
+] as const;
+
+const companyPrinciples = [
+  {
+    title: "Understanding before Intelligence",
+    copy:
+      "Intelligence matters when it improves how organizations decide and act.",
+  },
+  {
+    title: "Enable, don't replace",
+    copy:
+      "Technology should strengthen organizational capability, not create new dependency.",
+  },
+  {
+    title: "Build for the next decade",
+    copy:
+      "We are building the foundation for organizations that learn, adapt and evolve over time.",
   },
 ] as const;
 
 function Hero() {
   return (
     <section className="hero">
-      <div className="hero-content">
-        <p className="eyebrow">
-          {getEditableContent("home.hero.eyebrow", "Das OIS")}
+      <div className="landing-hero-content">
+        <h1>The future belongs to organizations that understand themselves.</h1>
+        <p className="hero-subheadline">
+          Organizations already know more than they can use.
+          <br />
+          For the first time, that knowledge can become understanding.
         </p>
-        <h1>
-          <span className="headline-desktop">
-            {getEditableContent("home.hero.title", "Ihre Organisation weiß mehr, als Ihre KI nutzen kann.")}
-          </span>
-          <span className="headline-mobile">
-            {getEditableContent("home.hero.title", "Ihre Organisation weiß mehr, als Ihre KI nutzen kann.")}
-          </span>
-        </h1>
-        <p>
-          {getEditableContent(
-            "home.hero.intro",
-            "Das Organizational Intelligence System von aiio macht verstreutes Organisationswissen erstmals als gemeinsame Handlungsbasis für Menschen, KI-Agenten und bestehende Unternehmenssysteme nutzbar. So wird aus Dokumenten, Prozessen, Strukturen und Erfahrungswissen eine aktivierbare Intelligenzschicht für die Organisation.",
-          )}
-        </p>
-        <div className="actions" aria-label="Primäre Aktionen">
-          <a className="button" href="#architektur">
-            Plattform verstehen
+        <div className="actions hero-actions" aria-label="Primary actions">
+          <a className="button hero-button" href="#organizational-intelligence">
+            Explore OIS
           </a>
-          <a className="button secondary" href="/live-demo/kontakt">
-            Demo anfordern
+          <a className="button hero-button secondary" href="/live-demo/kontakt">
+            See it in action
           </a>
+        </div>
+      </div>
+      <div className="hero-visual" aria-hidden="true">
+        <BrandIllustration priority variant="BC-001" />
+      </div>
+    </section>
+  );
+}
+
+function ProblemSection() {
+  return (
+    <section className="problem-section" id="problem">
+      <div className="problem-inner">
+        <p className="dark-eyebrow">The problem</p>
+        <h2>Organizations are losing themselves.</h2>
+        <div className="problem-grid">
+          {problemCards.map((card) => (
+            <article className="problem-card" key={card.title}>
+              <h3>{card.title}</h3>
+              <p>{card.copy}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+      <div className="problem-atmosphere" aria-hidden="true">
+        <span />
+        <span />
+        <span />
+      </div>
+    </section>
+  );
+}
+
+function ConceptBreakthrough() {
+  return (
+    <section className="concept-section" id="organizational-intelligence">
+      <div className="concept-inner">
+        <div className="concept-copy">
+          <p className="dark-eyebrow">The missing layer</p>
+          <h2>The missing layer is understanding.</h2>
+          <div className="concept-statement">
+            <p>More information was never enough.</p>
+            <p>Meaning emerges when context connects.</p>
+          </div>
+          <p className="concept-support">
+            Organizational Intelligence begins where scattered knowledge becomes
+            shared meaning.
+          </p>
+        </div>
+        <ol
+          aria-label="Missing layer progression"
+          className="intelligence-progression"
+        >
+          {intelligenceProgression.map((step) => (
+            <li key={step}>{step}</li>
+          ))}
+        </ol>
+      </div>
+    </section>
+  );
+}
+
+function NewKindOrganization() {
+  return (
+    <section className="organization-section" id="self-enabling-organization">
+      <div className="organization-ambient" aria-hidden="true">
+        <span />
+        <span />
+        <span />
+      </div>
+      <div className="organization-inner">
+        <div className="organization-header">
+          <p className="dark-eyebrow">A New Kind of Organization</p>
+          <h2>
+            The next generation will be defined by how quickly it learns.
+            <br />
+            And how reliably it turns learning into capability.
+          </h2>
+          <p>Knowledge stays. Decisions improve. Capabilities compound.</p>
+        </div>
+        <div className="organization-closing-block">
+          <div className="organization-closing-statement">
+            Tomorrow&apos;s leading organizations keep getting better at change.
+          </div>
+        </div>
+        <div className="organization-bottom-statement">
+          <p>Understanding is the prerequisite for intelligence.</p>
+          <p>Capability is how understanding becomes visible.</p>
         </div>
       </div>
     </section>
   );
 }
 
-function Architecture() {
+function ImagineFuture() {
   return (
-    <section className="section" id="architektur">
-      <p className="eyebrow">{getEditableContent("home.architecture.eyebrow", "Das System")}</p>
-      <h2>
-        {getEditableContent(
-          "home.architecture.title",
-          "Von verstreutem Wissen zu aktivierbarer Organisationsintelligenz.",
-        )}
-      </h2>
-      <div className="section-intro rich-text">
-        <RichText
-          html={getEditableContent(
-            "home.architecture.intro",
-            "Das OIS verbindet drei aufeinander aufbauende Layer: ProcessCollector sichert und strukturiert Organisationswissen, ProcessMagnet erkennt daraus Prozesse, Zusammenhänge und Modelle, ProcessForge aktiviert dieses Wissen für KI-Agenten, APIs, Chats und bestehende Systeme.",
-          )}
-        />
-      </div>
-      <div className="architecture-grid architecture-copy-grid">
-        <p>
-          Der Einstieg beginnt dort, wo Organisationen zuerst Klarheit brauchen:
-          beim Wissen. ProcessCollector sichert Interviews, Dokumente und
-          vorhandenes Prozesswissen als belastbare Grundlage. ProcessMagnet
-          erkennt daraus mithilfe von Multimodal Retrieval Prozesse,
-          Zusammenhänge und BPMN-konforme Modelle.
-        </p>
-        <p>
-          ProcessForge aktiviert dieses geschmiedete Wissen für Agenten, APIs,
-          MCP, Chats und Umsysteme. So entsteht kein Nebeneinander einzelner
-          Tools, sondern ein aufbauender Produkt-Stack: vom eigenständigen Use
-          Case bis zum vollständigen Organizational Intelligence System.
-        </p>
-      </div>
-      <div className="cards architecture-cards" aria-label="Stacking Product">
-        {cards.map((card) => (
-          <a className="card card-link" href={card.href} key={card.title}>
-            <span>{card.eyebrow}</span>
-            <h3>{card.title}</h3>
-            <div className="card-copy rich-text">{card.copy}</div>
-            <span className="card-click-icon" aria-hidden="true" />
-          </a>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-function Layers() {
-  return (
-    <>
-      {layerSections.map((layer) => (
-        <section className={`layer ${layer.tone}`} id={layer.id} key={layer.id}>
-          <div className="layer-inner">
-            <div className="layer-copy">
-              <p className="eyebrow">{layer.eyebrow}</p>
-              <h2>{layer.title}</h2>
-              <div className="layer-copy-text rich-text">{layer.copy}</div>
-              <div className="note">
-                {typeof layer.noteTitle === "string" ? (
-                  <strong>{layer.noteTitle}</strong>
-                ) : (
-                  layer.noteTitle
-                )}
-                <br />
-                {layer.note}
-              </div>
-              <a
-                className="layer-website-link"
-                href={layer.website}
-                rel="noreferrer"
-                target="_blank"
-              >
-                <span>{layer.websiteLabel}</span>
-                <span className="card-click-icon layer-website-icon" aria-hidden="true" />
-              </a>
-            </div>
-            <figure className="visual layer-system-visual">
-              <span
-                aria-label={layer.visualAlt}
-                className="layer-system-image layer-system-image-base"
-                role="img"
-                style={{ backgroundImage: `url(${layer.visualBaseImage})` }}
-              />
-              <span
-                aria-hidden="true"
-                className="layer-system-image layer-system-image-focus"
-                style={{ backgroundImage: `url(${layer.visualImage})` }}
-              />
-              <figcaption className="visual-stack layer-system-caption">
-                {layer.stack.map((item) => (
-                  <span key={item}>{item}</span>
-                ))}
-              </figcaption>
-            </figure>
+    <section className="imagine-section" id="imagine">
+      <p className="imagine-section-title">Imagine...</p>
+      {imagineMoments.map((moment) => (
+        <section className="imagine-moment" key={moment.statement}>
+          <div className="imagine-copy">
+            <h2>{moment.statement}</h2>
+            <p>{moment.support}</p>
           </div>
         </section>
       ))}
-    </>
+      <section className="imagine-moment imagine-final">
+        <div className="imagine-copy">
+          <h2>This is the Self-Enabling Organization.</h2>
+        </div>
+      </section>
+    </section>
   );
 }
 
-function Demo() {
+function OisArchitecture() {
   return (
-    <section className="demo-section" id="demo">
-      <div className="demo">
-        <div>
-          <p className="eyebrow">{getEditableContent("home.demo.eyebrow", "Demo")}</p>
-          <h2>
-            {getEditableContent(
-              "home.demo.title",
-              "Zeigen, was die Organisation schon weiß.",
-            )}
-          </h2>
+    <section className="ois-section" id="architektur">
+      <div className="ois-intro">
+        <p className="ois-section-title">The Platform</p>
+        <h2>The system behind the journey.</h2>
+        <div className="ois-body">
+          <p>aiio connects knowledge, people, systems and AI into one operating context.</p>
         </div>
-        <div className="demo-copy rich-text">
-          <RichText
-            html={getEditableContent(
-              "home.demo.copy",
-              "Die beste aiio-Demo beginnt nicht mit einem Tool, sondern mit echtem Organisationswissen: sammeln, strukturieren, modellieren und als aktivierbaren Produkt-Stack in die passenden Umsysteme bringen.",
-            )}
-          />
+      </div>
+
+      <div
+        aria-label="Organizational Intelligence layered architecture"
+        className="ois-visual-wrap"
+      >
+        <BrandIllustration variant="BC-002" />
+      </div>
+
+      <div className="ois-bottom-statement">
+        <p>The OIS is not another application.</p>
+        <p>It is how the journey becomes operational.</p>
+      </div>
+    </section>
+  );
+}
+
+function CompanyPurpose() {
+  return (
+    <section className="company-purpose-section" id="company">
+      <div className="company-purpose-inner">
+        <div className="company-purpose-copy">
+          <p className="company-purpose-title">Company</p>
+          <h2>Why aiio exists</h2>
+          <div>
+            <p>
+              Organizations should not depend on scattered memory or isolated
+              projects to evolve.
+            </p>
+            <p>
+              aiio exists to make understanding a durable organizational
+              capability.
+            </p>
+            <p>
+              That conviction guides everything we build.
+            </p>
+          </div>
         </div>
-        <a className="button" href="/live-demo/kontakt">
-          Demo anfordern
-        </a>
+        <div className="company-principles" aria-label="aiio principles">
+          {companyPrinciples.map((principle) => (
+            <article className="company-principle" key={principle.title}>
+              <h3>{principle.title}</h3>
+              <p>{principle.copy}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+      <div className="company-quiet-image" aria-hidden="true">
+        <span />
       </div>
     </section>
   );
@@ -284,9 +276,16 @@ export default function Home() {
     <main>
       <MainHeader />
       <Hero />
-      <Architecture />
-      <Layers />
-      <Demo />
+      <CapabilityJourney />
+      <OisArchitecture />
+      <ProblemSection />
+      <ConceptBreakthrough />
+      <NewKindOrganization />
+      <ImagineFuture />
+      <CeoMondayMoment />
+      <OrganizationMirror />
+      <CategoryEvolution />
+      <CompanyPurpose />
     </main>
   );
 }
