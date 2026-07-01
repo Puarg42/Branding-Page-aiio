@@ -9282,3 +9282,161 @@ section[id],
     flex-basis: calc(100% - 38px);
   }
 }
+
+/* Premium Brand V1 navigation */
+.topbar-shell,
+.topbar-shell.is-scrolled,
+.site-header.solid,
+.site-header.solid.is-scrolled,
+.legal-page .topbar-shell.is-scrolled,
+.request-demo-page .topbar-shell.is-scrolled {
+  --header-backdrop: blur(calc(10px * var(--header-progress, 0)));
+  background-color: rgb(3 3 7 / calc(0.02 + (0.84 * var(--header-progress, 0))));
+  border-bottom-color: rgb(255 255 255 / calc(0.06 * var(--header-progress, 0)));
+  box-shadow: 0 calc(18px * var(--header-progress, 0)) calc(52px * var(--header-progress, 0))
+    rgb(0 0 0 / calc(0.26 * var(--header-progress, 0)));
+  backdrop-filter: var(--header-backdrop);
+  transition:
+    background-color 520ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 520ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 520ms cubic-bezier(0.22, 1, 0.36, 1),
+    backdrop-filter 520ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.site-header.solid,
+.site-header.solid.is-scrolled,
+.topbar-shell.is-menu-open,
+.site-header.solid.is-menu-open {
+  --header-progress: 1;
+}
+
+.topbar-shell.is-scrolled,
+.site-header.solid,
+.site-header.solid.is-scrolled,
+.legal-page .topbar-shell.is-scrolled,
+.request-demo-page .topbar-shell.is-scrolled {
+  --header-backdrop: blur(10px);
+  backdrop-filter: var(--header-backdrop);
+}
+
+.topbar,
+.site-header-inner {
+  width: min(1180px, calc(100% - 40px));
+}
+
+.aiio-logo,
+.topbar-shell:not(.is-scrolled) .aiio-logo,
+.topbar-shell.is-scrolled .aiio-logo,
+.site-header.solid .aiio-logo,
+.site-header.solid.is-scrolled .aiio-logo,
+.legal-page .topbar-shell.is-scrolled .aiio-logo,
+.request-demo-page .topbar-shell.is-scrolled .aiio-logo {
+  filter: brightness(2.25) saturate(1.08) drop-shadow(0 0 14px rgb(104 62 180 / 16%));
+  opacity: 0.96;
+}
+
+.main-nav {
+  gap: clamp(30px, 3.8vw, 60px);
+}
+
+.main-nav > a,
+.topbar-shell:not(.is-scrolled) .main-nav > a,
+.topbar-shell.is-scrolled .main-nav > a,
+.site-header.solid .main-nav > a,
+.legal-page .topbar-shell.is-scrolled .main-nav > a,
+.request-demo-page .topbar-shell.is-scrolled .main-nav > a {
+  color: rgb(255 255 255 / 72%);
+  font-family: var(--font-aiio-heading);
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.main-nav > a::after {
+  background: rgb(173 126 255 / 92%);
+  border-radius: 999px;
+  bottom: 2px;
+  height: 4px;
+  left: 50%;
+  opacity: 0;
+  transform: translateX(-50%) translateY(4px) scale(0.66);
+  transition:
+    opacity 220ms ease,
+    transform 220ms ease;
+  width: 4px;
+}
+
+.main-nav > a:hover,
+.main-nav > a.is-active,
+.topbar-shell:not(.is-scrolled) .main-nav > a:hover,
+.topbar-shell.is-scrolled .main-nav > a:hover,
+.site-header.solid .main-nav > a:hover,
+.legal-page .topbar-shell.is-scrolled .main-nav > a:hover,
+.request-demo-page .topbar-shell.is-scrolled .main-nav > a:hover {
+  color: rgb(232 220 255 / 96%);
+}
+
+.main-nav > a:hover::after,
+.main-nav > a.is-active::after {
+  opacity: 0.9;
+  transform: translateX(-50%) translateY(0) scale(1);
+}
+
+@media (max-width: 860px) {
+  .topbar,
+  .site-header-inner {
+    width: min(1180px, calc(100% - 32px));
+  }
+
+  .mobile-menu-toggle,
+  .topbar-shell.is-scrolled:not(.is-menu-open) .mobile-menu-toggle,
+  .site-header.solid:not(.is-menu-open) .mobile-menu-toggle {
+    background: rgb(255 255 255 / 6%);
+    border-color: rgb(255 255 255 / 16%);
+    color: rgb(255 255 255 / 82%);
+    font-family: var(--font-aiio-heading);
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+
+  .mobile-menu-toggle:hover,
+  .topbar-shell.is-scrolled:not(.is-menu-open) .mobile-menu-toggle:hover,
+  .site-header.solid:not(.is-menu-open) .mobile-menu-toggle:hover {
+    background: rgb(173 126 255 / 10%);
+    border-color: rgb(173 126 255 / 32%);
+    color: #ffffff;
+  }
+
+  .mobile-menu-panel {
+    --header-backdrop: blur(18px);
+    background:
+      radial-gradient(circle at 82% 16%, rgb(90 50 138 / 16%), transparent 34%),
+      rgb(3 3 7 / 96%);
+    border-top: 1px solid rgb(255 255 255 / 9%);
+    backdrop-filter: var(--header-backdrop);
+  }
+
+  .mobile-menu-nav a {
+    color: rgb(255 255 255 / 72%);
+    font-family: var(--font-aiio-heading);
+    font-weight: 600;
+    letter-spacing: 0;
+    position: relative;
+  }
+
+  .mobile-menu-nav a:hover,
+  .mobile-menu-nav a.is-active {
+    color: rgb(232 220 255 / 96%);
+  }
+
+  .mobile-menu-nav a.is-active::before {
+    background: rgb(173 126 255 / 92%);
+    border-radius: 999px;
+    content: "";
+    height: 5px;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+  }
+}
