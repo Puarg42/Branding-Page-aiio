@@ -5745,128 +5745,355 @@ h1 {
   border-color: rgb(255 255 255 / 42%);
 }
 
-.theory-book-section {
-  border-bottom: 1px solid rgb(255 255 255 / 8%);
-  padding: clamp(110px, 13vw, 220px) 0 clamp(140px, 15vw, 260px);
+.theory-book-page {
+  background:
+    radial-gradient(circle at 72% 0%, rgb(102 70 170 / 16%), transparent 34%),
+    radial-gradient(circle at 22% 16%, rgb(168 117 255 / 10%), transparent 28%),
+    linear-gradient(180deg, #0b0614 0%, #090510 42%, #07040c 100%);
+  color: #ffffff;
+  min-height: 100vh;
 }
 
-.theory-book-grid {
-  align-items: start;
+.theory-book-layout {
   display: grid;
-  gap: clamp(48px, 7vw, 110px);
-  grid-template-columns: minmax(220px, 300px) minmax(0, 760px);
+  grid-template-columns: minmax(240px, 320px) minmax(0, 1fr);
+  min-height: 100vh;
 }
 
-.theory-toc {
+.theory-sidebar {
+  background:
+    linear-gradient(180deg, rgb(23 12 42 / 96%), rgb(10 5 19 / 98%)),
+    radial-gradient(circle at 30% 0%, rgb(170 124 255 / 12%), transparent 46%);
+  border-right: 1px solid rgb(255 255 255 / 14%);
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+  height: 100vh;
+  padding: 40px 26px 28px;
   position: sticky;
-  top: 108px;
+  top: 0;
 }
 
-.theory-toc .website-eyebrow {
-  margin-bottom: 28px;
-}
-
-.theory-toc ol {
-  border-left: 1px solid rgb(255 255 255 / 12%);
+.theory-sidebar-intro {
   display: grid;
-  gap: 0;
+  gap: 18px;
+}
+
+.theory-sidebar-eyebrow,
+.theory-sidebar-nav > p {
+  color: rgb(186 139 255 / 92%);
+  font-size: 0.72rem;
+  font-weight: 820;
+  letter-spacing: 0.28em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.theory-sidebar h2 {
+  color: #ffffff;
+  font-family: var(--font-aiio-heading);
+  font-size: clamp(1.9rem, 2.1vw, 2.45rem);
+  font-weight: 620;
+  letter-spacing: 0;
+  line-height: 1.08;
+  margin: 0;
+}
+
+.theory-sidebar-intro p:last-child {
+  color: rgb(255 255 255 / 68%);
+  font-size: 1.02rem;
+  line-height: 1.4;
+  margin: 0;
+  max-width: 230px;
+}
+
+.theory-progress {
+  display: grid;
+  gap: 14px;
+}
+
+.theory-progress-meta {
+  color: rgb(255 255 255 / 62%);
+  display: flex;
+  font-size: 0.82rem;
+  justify-content: space-between;
+}
+
+.theory-progress-track {
+  background: rgb(255 255 255 / 16%);
+  border-radius: 999px;
+  height: 3px;
+  overflow: hidden;
+}
+
+.theory-progress-track span {
+  background: linear-gradient(90deg, rgb(185 139 255), rgb(255 255 255 / 78%));
+  border-radius: inherit;
+  display: block;
+  height: 100%;
+  transition: width 160ms linear;
+}
+
+.theory-sidebar-nav {
+  display: grid;
+  gap: 20px;
+  min-height: 0;
+}
+
+.theory-sidebar-nav ol {
+  display: grid;
+  gap: 6px;
   list-style: none;
   margin: 0;
-  padding: 0 0 0 24px;
+  max-height: min(52vh, 660px);
+  overflow: auto;
+  padding: 0 4px 0 0;
+  scrollbar-color: rgb(186 139 255 / 36%) transparent;
+  scrollbar-width: thin;
 }
 
-.theory-toc li {
-  color: rgb(255 255 255 / 54%);
-  line-height: 1.42;
-  padding: 0;
+.theory-sidebar-nav li {
+  margin: 0;
 }
 
-.theory-toc a {
-  color: inherit;
+.theory-sidebar-nav a {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: rgb(255 255 255 / 58%);
   display: grid;
-  font-size: 0.98rem;
-  gap: 8px;
-  grid-template-columns: 34px minmax(0, 1fr);
-  padding: 11px 0;
+  font-size: 0.94rem;
+  gap: 14px;
+  grid-template-columns: 28px minmax(0, 1fr);
+  line-height: 1.25;
+  padding: 12px 14px;
   text-decoration: none;
-  transition: color 180ms ease;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
 }
 
-.theory-toc a:hover {
-  color: rgb(255 255 255 / 82%);
+.theory-sidebar-nav a:hover,
+.theory-sidebar-nav a.is-active {
+  background: rgb(255 255 255 / 7%);
+  border-color: rgb(186 139 255 / 18%);
+  color: #ffffff;
+  transform: translateX(2px);
 }
 
-.theory-toc li > a > span:first-child {
-  color: rgb(179 145 255 / 72%);
-  font-size: 0.76rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
+.theory-sidebar-nav a.is-active {
+  box-shadow: inset 3px 0 0 rgb(186 139 255 / 88%);
 }
 
-.theory-toc-title {
+.theory-sidebar-nav a span:first-child {
+  color: rgb(186 139 255 / 92%);
+  font-family: var(--font-aiio-heading);
+  font-size: 0.88rem;
+  font-weight: 650;
+}
+
+.theory-sidebar-note {
+  align-items: start;
+  border: 1px solid rgb(255 255 255 / 10%);
+  border-radius: 12px;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 24px minmax(0, 1fr);
+  margin-top: auto;
+  padding: 18px;
+}
+
+.theory-sidebar-note > span {
+  color: rgb(186 139 255);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.theory-sidebar-note p {
+  color: rgb(255 255 255 / 62%);
+  font-size: 0.92rem;
+  line-height: 1.42;
+  margin: 0;
+}
+
+.theory-sidebar-note strong {
+  color: #ffffff;
+  display: block;
+  font-weight: 720;
+  margin-bottom: 3px;
+}
+
+.theory-book-main {
   min-width: 0;
+}
+
+.theory-book-hero {
+  border-bottom: 1px solid rgb(255 255 255 / 13%);
+  min-height: clamp(560px, 57vw, 780px);
+  overflow: hidden;
+  position: relative;
+}
+
+.theory-book-hero-image {
+  height: 100%;
+  inset: 0;
+  object-fit: cover;
+  object-position: 50% 46%;
+  opacity: 0.7;
+  position: absolute;
+  width: 100%;
+}
+
+.theory-book-hero-shade {
+  background:
+    radial-gradient(circle at 66% 47%, transparent 0 22%, rgb(10 5 18 / 30%) 48%, rgb(10 5 18 / 78%) 100%),
+    linear-gradient(90deg, rgb(10 5 18 / 93%) 0%, rgb(10 5 18 / 50%) 38%, rgb(10 5 18 / 16%) 64%, rgb(10 5 18 / 54%) 100%),
+    linear-gradient(180deg, rgb(10 5 18 / 58%) 0%, transparent 36%, rgb(10 5 18 / 86%) 100%);
+  inset: 0;
+  position: absolute;
+}
+
+.theory-book-hero-content {
+  display: grid;
+  gap: 26px;
+  max-width: 840px;
+  padding: clamp(96px, 9vw, 150px) clamp(36px, 8vw, 132px);
+  position: relative;
+  z-index: 1;
+}
+
+.theory-book-hero-content h1 {
+  color: #ffffff;
+  font-family: var(--font-aiio-heading);
+  font-size: clamp(4.1rem, 8.6vw, 9rem);
+  font-weight: 650;
+  letter-spacing: 0;
+  line-height: 0.93;
+  margin: 0;
+  max-width: 860px;
+  text-wrap: balance;
+}
+
+.theory-book-hero-content > p:last-child {
+  color: rgb(255 255 255 / 72%);
+  font-size: clamp(1.2rem, 1.7vw, 1.65rem);
+  line-height: 1.42;
+  margin: 0;
 }
 
 .theory-reading-area {
   display: grid;
-  gap: clamp(68px, 7vw, 110px);
-  max-width: 760px;
+  margin: 0;
+  max-width: 820px;
+  padding: clamp(70px, 8vw, 108px) clamp(32px, 8vw, 132px) clamp(120px, 12vw, 190px);
 }
 
-.theory-chapter-placeholder {
+.theory-chapter {
   border-top: 1px solid rgb(255 255 255 / 12%);
-  min-height: clamp(180px, 22vw, 300px);
-  padding-top: clamp(34px, 4vw, 56px);
+  padding: clamp(40px, 5vw, 66px) 0 clamp(70px, 8vw, 116px);
+  scroll-margin-top: 42px;
 }
 
-.theory-chapter-placeholder h2 {
+.theory-chapter:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.theory-chapter-marker {
+  align-items: center;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: auto minmax(90px, 190px);
+  margin-bottom: 24px;
+}
+
+.theory-chapter-marker span {
+  color: rgb(186 139 255);
+  font-family: var(--font-aiio-heading);
+  font-size: 1.15rem;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+}
+
+.theory-chapter-marker i {
+  background: linear-gradient(90deg, rgb(255 255 255 / 28%), transparent);
+  display: block;
+  height: 1px;
+}
+
+.theory-chapter h2 {
   color: #ffffff;
   font-family: var(--font-aiio-heading);
-  font-size: clamp(2.5rem, 4.8vw, 5.6rem);
-  font-weight: 600;
+  font-size: clamp(3rem, 5vw, 5.4rem);
+  font-weight: 650;
   letter-spacing: 0;
-  line-height: 0.98;
+  line-height: 0.96;
   margin: 0;
+  max-width: 740px;
   text-wrap: balance;
 }
 
-.theory-chapter-placeholder p {
-  color: rgb(255 255 255 / 68%);
-  font-size: clamp(1.05rem, 1.35vw, 1.2rem);
-  line-height: 1.82;
-  margin: 34px 0 0;
+.theory-chapter-body {
+  margin-top: clamp(32px, 4.8vw, 56px);
+}
+
+.theory-chapter-body p {
+  color: rgb(255 255 255 / 69%);
+  font-size: clamp(1.05rem, 1.22vw, 1.18rem);
+  line-height: 1.78;
+  margin: 0;
+  max-width: 700px;
+}
+
+.theory-chapter-body p + p {
+  margin-top: 24px;
+}
+
+.theory-chapter-body blockquote {
+  display: grid;
+  gap: 0;
+  grid-template-columns: 42px minmax(0, 1fr);
+  margin: 0 0 clamp(34px, 4vw, 54px);
   max-width: 680px;
+  padding: 0;
 }
 
-.theory-chapter-placeholder p + p {
-  margin-top: 22px;
+.theory-chapter-body blockquote > span {
+  color: rgb(186 139 255);
+  font-family: var(--font-aiio-heading);
+  font-size: 4.8rem;
+  line-height: 0.8;
 }
 
-.theory-chapter-placeholder strong {
-  color: #ffffff;
-  font-weight: 720;
+.theory-chapter-body blockquote p {
+  border-left: 1px solid rgb(255 255 255 / 20%);
+  color: rgb(255 255 255 / 82%);
+  font-style: italic;
+  line-height: 1.85;
+  padding-left: 38px;
 }
 
 .theory-formula {
   background:
-    radial-gradient(circle at 12% 0%, rgb(94 222 255 / 12%), transparent 40%),
+    radial-gradient(circle at 18% 0%, rgb(186 139 255 / 15%), transparent 38%),
     linear-gradient(180deg, rgb(255 255 255 / 7%), rgb(255 255 255 / 2%));
   border: 1px solid rgb(255 255 255 / 12%);
-  border-radius: 24px;
+  border-radius: 22px;
   display: grid;
-  gap: 14px;
-  margin: 46px 0 10px;
+  gap: 13px;
+  margin: 42px 0;
   max-width: 560px;
-  padding: clamp(30px, 4vw, 46px);
+  padding: clamp(28px, 3.5vw, 42px);
 }
 
 .theory-formula span {
-  color: rgb(255 255 255 / 72%);
+  color: rgb(255 255 255 / 68%);
   font-family: var(--font-aiio-heading);
-  font-size: clamp(1.25rem, 2vw, 2rem);
+  font-size: clamp(1.2rem, 1.7vw, 1.78rem);
   font-weight: 560;
   letter-spacing: 0;
-  line-height: 1.12;
+  line-height: 1.14;
 }
 
 .theory-formula span:first-child,
@@ -6227,35 +6454,53 @@ h1 {
     flex-direction: column;
   }
 
-  .theory-book-section {
-    padding: 96px 0 132px;
-  }
-
-  .theory-book-grid {
-    gap: 72px;
+  .theory-book-layout {
     grid-template-columns: 1fr;
   }
 
-  .theory-toc {
+  .theory-sidebar {
+    border-bottom: 1px solid rgb(255 255 255 / 14%);
+    border-right: 0;
+    height: auto;
+    padding: 34px 22px 26px;
     position: static;
   }
 
-  .theory-toc ol {
-    border-left: 0;
-    border-top: 1px solid rgb(255 255 255 / 12%);
-    padding: 20px 0 0;
+  .theory-sidebar-nav ol {
+    max-height: none;
+    overflow: visible;
+  }
+
+  .theory-sidebar-note {
+    display: none;
+  }
+
+  .theory-book-hero {
+    min-height: 540px;
+  }
+
+  .theory-book-hero-content {
+    padding: 78px 22px 96px;
+  }
+
+  .theory-book-hero-content h1 {
+    font-size: clamp(3.8rem, 16vw, 6.2rem);
   }
 
   .theory-reading-area {
-    gap: 72px;
+    padding: 72px 22px 118px;
   }
 
-  .theory-chapter-placeholder {
-    min-height: 180px;
+  .theory-chapter h2 {
+    font-size: clamp(2.8rem, 13vw, 4.4rem);
   }
 
-  .theory-chapter-placeholder h2 {
-    font-size: clamp(2.4rem, 12vw, 4rem);
+  .theory-chapter-body blockquote {
+    grid-template-columns: 32px minmax(0, 1fr);
+  }
+
+  .theory-chapter-body blockquote p {
+    padding-left: 24px;
   }
 
   .request-demo-shell {
