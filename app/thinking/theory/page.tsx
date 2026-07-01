@@ -181,6 +181,25 @@ function getTheoryChapters(): TheoryChapter[] {
     });
 }
 
+function renderOpeningSentence(text: string, isOpening: boolean) {
+  if (!isOpening) {
+    return text;
+  }
+
+  const match = text.match(/^(.+?[.!?])(\s+.*)?$/);
+
+  if (!match) {
+    return <span className="theory-opening-sentence">{text}</span>;
+  }
+
+  return (
+    <>
+      <span className="theory-opening-sentence">{match[1]}</span>
+      {match[2] ?? ""}
+    </>
+  );
+}
+
 const chapters = getTheoryChapters();
 const sidebarChapters = chapters.map(({ id, title }) => ({ id, title }));
 
@@ -192,11 +211,6 @@ export default function TheoryPage() {
 
         <div className="theory-book-main">
           <section className="theory-book-hero" aria-label="Theory introduction">
-            <div className="theory-book-hero-content">
-              <p className="theory-sidebar-eyebrow">Theory</p>
-              <h1>Organizational Intelligence</h1>
-              <p>A Theory of Organizational Understanding</p>
-            </div>
             <div className="theory-book-hero-artwork" aria-hidden="true">
               <img
                 alt=""
@@ -205,6 +219,11 @@ export default function TheoryPage() {
                 src="/brand-canon/001-organizational-mind-theory.png"
               />
               <div className="theory-book-hero-shade" />
+            </div>
+            <div className="theory-book-hero-content">
+              <p className="theory-sidebar-eyebrow">Theory</p>
+              <h1>Organizational Intelligence</h1>
+              <p>A Theory of Organizational Understanding</p>
             </div>
           </section>
 
@@ -236,7 +255,7 @@ export default function TheoryPage() {
                       </blockquote>
                     ) : (
                       <p className={openingClassName.trim()} key={`${chapter.id}-paragraph-${index}`}>
-                        {block.text}
+                        {renderOpeningSentence(block.text, Boolean(openingClassName))}
                       </p>
                     );
                   })}

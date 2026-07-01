@@ -5746,6 +5746,7 @@ h1 {
 }
 
 .theory-book-page {
+  --theory-nav-offset: 0px;
   background:
     radial-gradient(circle at 72% 0%, rgb(102 70 170 / 16%), transparent 34%),
     radial-gradient(circle at 22% 16%, rgb(168 117 255 / 10%), transparent 28%),
@@ -5770,17 +5771,43 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 42px;
-  height: 100svh;
-  max-height: 100svh;
+  height: calc(100svh - var(--theory-nav-offset));
+  max-height: calc(100svh - var(--theory-nav-offset));
   overflow: hidden;
   padding: 40px 26px 28px;
   position: sticky;
-  top: 0;
+  top: var(--theory-nav-offset);
 }
 
 .theory-sidebar-intro {
   display: grid;
   gap: 18px;
+}
+
+.theory-back-link {
+  align-items: center;
+  color: rgb(255 255 255 / 56%);
+  display: inline-flex;
+  font-size: 0.84rem;
+  font-weight: 720;
+  gap: 9px;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
+  width: fit-content;
+}
+
+.theory-back-link:hover {
+  color: #ffffff;
+  transform: translateX(-2px);
+}
+
+.theory-back-link span {
+  color: rgb(186 139 255 / 92%);
+  font-size: 1rem;
+  line-height: 1;
 }
 
 .theory-sidebar-eyebrow,
@@ -5932,21 +5959,25 @@ h1 {
 }
 
 .theory-book-hero {
+  align-items: center;
   border-bottom: 1px solid rgb(255 255 255 / 13%);
+  display: grid;
+  min-height: clamp(620px, 62vw, 860px);
   overflow: hidden;
-  padding-top: clamp(92px, 9vw, 142px);
+  padding: clamp(94px, 10vw, 148px) clamp(36px, 8vw, 132px);
   position: relative;
 }
 
 .theory-book-hero-artwork {
+  bottom: 0;
   box-shadow:
-    0 0 90px rgb(117 77 190 / 18%),
+    0 0 120px rgb(117 77 190 / 20%),
     inset 0 1px 0 rgb(255 255 255 / 8%);
-  margin-top: clamp(54px, 7vw, 104px);
-  min-height: clamp(380px, 38vw, 660px);
+  left: 0;
   overflow: hidden;
-  position: relative;
-  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .theory-book-hero-artwork::before,
@@ -5974,17 +6005,17 @@ h1 {
   height: 100%;
   inset: 0;
   object-fit: cover;
-  object-position: 50% 50%;
-  opacity: 0.78;
+  object-position: 56% 50%;
+  opacity: 0.58;
   position: absolute;
   width: 100%;
 }
 
 .theory-book-hero-shade {
   background:
-    radial-gradient(circle at 54% 46%, rgb(186 139 255 / 12%), transparent 0 28%, rgb(9 5 16 / 18%) 62%, rgb(9 5 16 / 74%) 100%),
-    linear-gradient(90deg, rgb(9 5 16 / 76%) 0%, transparent 23%, transparent 74%, rgb(9 5 16 / 68%) 100%),
-    linear-gradient(180deg, #090510 0%, rgb(9 5 16 / 4%) 21%, rgb(9 5 16 / 14%) 68%, #090510 100%);
+    radial-gradient(circle at 62% 48%, rgb(186 139 255 / 14%), transparent 0 30%, rgb(9 5 16 / 28%) 62%, rgb(9 5 16 / 80%) 100%),
+    linear-gradient(90deg, rgb(9 5 16 / 88%) 0%, rgb(9 5 16 / 56%) 32%, rgb(9 5 16 / 18%) 62%, rgb(9 5 16 / 74%) 100%),
+    linear-gradient(180deg, #090510 0%, rgb(9 5 16 / 10%) 24%, rgb(9 5 16 / 22%) 68%, #090510 100%);
   inset: 0;
   position: absolute;
   z-index: 1;
@@ -5994,9 +6025,8 @@ h1 {
   display: grid;
   gap: 26px;
   max-width: 840px;
-  padding: 0 clamp(36px, 8vw, 132px);
   position: relative;
-  z-index: 1;
+  z-index: 3;
 }
 
 .theory-book-hero-content h1 {
@@ -6021,13 +6051,13 @@ h1 {
 .theory-reading-area {
   display: grid;
   margin: 0;
-  max-width: 900px;
-  padding: clamp(92px, 10vw, 142px) clamp(32px, 8vw, 132px) clamp(140px, 13vw, 210px);
+  max-width: 920px;
+  padding: clamp(110px, 11vw, 158px) clamp(32px, 8vw, 132px) clamp(150px, 13vw, 220px);
 }
 
 .theory-chapter {
   border-top: 1px solid rgb(255 255 255 / 12%);
-  padding: clamp(58px, 6vw, 88px) 0 clamp(92px, 9vw, 142px);
+  padding: clamp(72px, 7vw, 104px) 0 clamp(104px, 10vw, 156px);
   scroll-margin-top: 54px;
 }
 
@@ -6072,20 +6102,25 @@ h1 {
 .theory-chapter-body p {
   color: rgb(255 255 255 / 69%);
   font-size: clamp(1.08rem, 1.18vw, 1.22rem);
-  line-height: 1.84;
+  line-height: 1.88;
   margin: 0;
   max-width: 76ch;
 }
 
 .theory-chapter-body p + p {
-  margin-top: 30px;
+  margin-top: 34px;
 }
 
 .theory-chapter-body > p.is-opening {
   color: rgb(255 255 255 / 84%);
-  font-size: clamp(1.18rem, 1.35vw, 1.36rem);
+  font-size: clamp(1.14rem, 1.3vw, 1.3rem);
   line-height: 1.72;
   margin-bottom: clamp(34px, 4vw, 52px);
+}
+
+.theory-opening-sentence {
+  color: #ffffff;
+  font-weight: 650;
 }
 
 .theory-chapter-body blockquote {
@@ -6521,11 +6556,12 @@ h1 {
   }
 
   .theory-book-hero {
-    padding-top: 76px;
+    min-height: 560px;
+    padding: 88px 22px 112px;
   }
 
   .theory-book-hero-content {
-    padding: 0 22px;
+    padding: 0;
   }
 
   .theory-book-hero-content h1 {
@@ -6533,8 +6569,8 @@ h1 {
   }
 
   .theory-book-hero-artwork {
-    margin-top: 52px;
-    min-height: 360px;
+    margin-top: 0;
+    min-height: 0;
   }
 
   .theory-book-hero-image {

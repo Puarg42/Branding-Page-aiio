@@ -1,5 +1,6 @@
 "use client";
 
+import type { MouseEvent } from "react";
 import { useEffect, useState } from "react";
 
 type TheorySidebarChapter = {
@@ -14,6 +15,18 @@ type TheorySidebarProps = {
 export function TheorySidebar({ chapters }: TheorySidebarProps) {
   const [activeId, setActiveId] = useState(chapters[0]?.id ?? "");
   const [progress, setProgress] = useState(0);
+
+  function handleChapterClick(event: MouseEvent<HTMLAnchorElement>, id: string) {
+    const chapter = document.getElementById(id);
+
+    if (!chapter) {
+      return;
+    }
+
+    event.preventDefault();
+    chapter.scrollIntoView({ behavior: "smooth", block: "start" });
+    window.history.replaceState(null, "", `#${id}`);
+  }
 
   useEffect(() => {
     let animationFrame = 0;
@@ -66,6 +79,11 @@ export function TheorySidebar({ chapters }: TheorySidebarProps) {
 
   return (
     <aside className="theory-sidebar" aria-label="Theory table of contents">
+      <a className="theory-back-link" href="/thinking">
+        <span aria-hidden="true">&larr;</span>
+        Back to Thinking
+      </a>
+
       <div className="theory-sidebar-intro">
         <p className="theory-sidebar-eyebrow">Theory</p>
         <h2>Organizational Intelligence</h2>
@@ -87,7 +105,11 @@ export function TheorySidebar({ chapters }: TheorySidebarProps) {
         <ol>
           {chapters.map((chapter, index) => (
             <li key={chapter.id}>
-              <a className={chapter.id === activeId ? "is-active" : ""} href={`#${chapter.id}`}>
+              <a
+                className={chapter.id === activeId ? "is-active" : ""}
+                href={`#${chapter.id}`}
+                onClick={(event) => handleChapterClick(event, chapter.id)}
+              >
                 <span>{String(index + 1).padStart(2, "0")}</span>
                 <span>{chapter.title}</span>
               </a>
