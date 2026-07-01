@@ -88,7 +88,7 @@ function Hero() {
         </p>
         <div className="actions hero-actions" aria-label="Primary actions">
           <a className="button hero-button" href="#organizational-intelligence">
-            Explore OIS
+            See the system
           </a>
           <a className="button hero-button secondary" href="/live-demo/kontakt">
             See it in action
@@ -167,9 +167,7 @@ function NewKindOrganization() {
         <div className="organization-header">
           <p className="dark-eyebrow">A New Kind of Organization</p>
           <h2>
-            The next generation will be defined by how quickly it learns.
-            <br />
-            And how reliably it turns learning into capability.
+            The next generation turns learning into capability.
           </h2>
           <p>Knowledge stays. Decisions improve. Capabilities compound.</p>
         </div>
@@ -213,7 +211,7 @@ function OisArchitecture() {
     <section className="ois-section" id="architektur">
       <div className="ois-intro">
         <p className="ois-section-title">The Platform</p>
-        <h2>The system behind the journey.</h2>
+        <h2>Organizational Intelligence needs an operating system.</h2>
         <div className="ois-body">
           <p>aiio connects knowledge, people, systems and AI into one operating context.</p>
         </div>

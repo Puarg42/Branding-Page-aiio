@@ -76,7 +76,7 @@ export function CapabilityTeaserGrid({
       <div className="website-page-shell">
         <div className="website-section-heading">
           <p className="website-eyebrow">Capabilities</p>
-          <h2>One platform. Four capabilities.</h2>
+          <h2>Four capabilities. One system.</h2>
         </div>
         <div className="website-capability-grid">
           {capabilities.map((capability) => (
@@ -95,7 +95,7 @@ export function CapabilityTeaserGrid({
               </div>
               <BrandIllustration className="website-card-canon" variant="BC-003" />
               <Link className="website-text-link" href={capability.href}>
-                Explore {capability.product} <span aria-hidden="true">→</span>
+                See {capability.product} <span aria-hidden="true">→</span>
               </Link>
             </article>
           ))}

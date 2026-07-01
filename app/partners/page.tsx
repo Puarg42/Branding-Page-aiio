@@ -30,8 +30,8 @@ export default function PartnersPage() {
   return (
     <WebsiteArchitecturePage
       eyebrow="Partners"
-      intro="Organizational Intelligence creates a new partner opportunity: helping customers build durable capability instead of isolated project outcomes."
-      title="Build the capability era with aiio."
+      intro="Partners help turn Organizational Intelligence into lasting customer capability."
+      title="Help organizations build lasting capability."
     >
       <section className="website-architecture-section">
         <div className="website-page-shell">

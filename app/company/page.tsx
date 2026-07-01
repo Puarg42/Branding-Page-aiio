@@ -36,15 +36,12 @@ export default function CompanyPage() {
         <div className="website-page-shell">
           <div className="website-section-heading">
             <p className="website-eyebrow">Mission</p>
-            <h2>
-              We are helping define the next generation of organizational
-              management.
-            </h2>
+            <h2>Organizations need understanding that lasts.</h2>
           </div>
           <div className="website-contact-panel">
             <p>
-              Our mission is to make organizational understanding durable,
-              usable and capable of improving how organizations act.
+              Our mission is to make organizational understanding durable and
+              usable.
             </p>
             <p>
               The software matters because the capability matters.
@@ -57,7 +54,7 @@ export default function CompanyPage() {
         <div className="website-page-shell">
           <div className="website-section-heading">
             <p className="website-eyebrow">Principles</p>
-            <h2>What guides aiio.</h2>
+            <h2>Principles guide the work.</h2>
           </div>
           <div className="website-architecture-grid">
             {principles.map((principle) => (

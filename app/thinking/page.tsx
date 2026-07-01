@@ -65,20 +65,17 @@ export default function ThinkingPage() {
     <WebsiteArchitecturePage
       eyebrow="Thinking"
       intro="Organizational Intelligence is a structural shift in how organizations preserve knowledge, form judgment and build capability."
-      title="Why this shift is inevitable."
+      title="A new discipline needs a theory."
     >
       <section className="website-architecture-section" id="theory">
         <div className="website-page-shell">
           <div className="website-section-heading">
             <p className="website-eyebrow">Core Thesis</p>
-            <h2>
-              The defining innovation of the AI era is not that machines become
-              intelligent.
-            </h2>
+            <h2>The breakthrough is organizational understanding.</h2>
           </div>
           <div className="website-contact-panel">
             <p>
-              The theory describes why future organizations will need a
+              The theory explains why future organizations need a
               continuous foundation for memory, context, judgment and
               capability.
             </p>
@@ -106,7 +103,7 @@ export default function ThinkingPage() {
         <div className="website-page-shell website-visual-theory-grid">
           <div className="website-section-heading">
             <p className="website-eyebrow">Framework</p>
-            <h2>The same architecture guides every visual theory.</h2>
+            <h2>The visual system follows the theory.</h2>
           </div>
           <BrandIllustration variant="BC-004" />
         </div>

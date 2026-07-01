@@ -44,8 +44,8 @@ export default function PlatformPage() {
   return (
     <WebsiteArchitecturePage
       eyebrow="Platform"
-      intro="aiio turns the capability journey into an operating system for organizational knowledge, understanding, action and evolution."
-      title="How Organizational Intelligence becomes operational."
+      intro="The platform connects knowledge, understanding, action and evolution in one continuous system."
+      title="Where Organizational Intelligence becomes operational."
     >
       <section
         className="website-architecture-section website-platform-visual-section"

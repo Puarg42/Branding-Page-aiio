@@ -11,13 +11,13 @@ export default function ContactPage() {
   return (
     <WebsiteArchitecturePage
       eyebrow="Contact"
-      intro="A simple entry point for demos, platform conversations and partnership discussions."
-      title="Start the conversation."
+      intro="For demos, platform questions and partnership conversations."
+      title="Start with the right conversation."
     >
       <section className="website-contact-section">
         <div className="website-page-shell">
           <div className="website-contact-panel">
-            <p>For demos, partnerships and strategic conversations.</p>
+            <p>Tell us what you want to understand, build or evaluate.</p>
             <Link className="website-final-button" href="/live-demo/kontakt">
               Request Demo
             </Link>

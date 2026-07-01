@@ -56,7 +56,7 @@ export function CapabilityJourney() {
           whileInView="visible"
         >
           <p className="capability-section-title">The Capability Journey</p>
-          <h2>How organizations become intelligent.</h2>
+          <h2>From knowledge to capability.</h2>
           <p>Knowledge becomes understanding. Understanding enables action. Action enables continuous evolution.</p>
         </motion.div>
 

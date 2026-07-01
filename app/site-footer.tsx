@@ -70,7 +70,7 @@ export function SiteFooter() {
               Request a Demo
             </Link>
             <Link className="footer-final-button" href="/platform">
-              Explore the Platform
+              See the Platform
             </Link>
           </div>
         </div>
