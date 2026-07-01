@@ -1,5 +1,9 @@
 import { ResourcePage } from "../resource-pages";
 
 export default function DatenschutzPage() {
-  return <ResourcePage slug="datenschutz" />;
+  return (
+    <div className="legal-brand-page">
+      <ResourcePage slug="datenschutz" />
+    </div>
+  );
 }

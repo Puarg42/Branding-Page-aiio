@@ -1,5 +1,9 @@
 import { ResourcePage } from "../resource-pages";
 
 export default function ImpressumPage() {
-  return <ResourcePage slug="impressum" />;
+  return (
+    <div className="legal-brand-page">
+      <ResourcePage slug="impressum" />
+    </div>
+  );
 }
