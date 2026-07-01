@@ -5745,6 +5745,76 @@ h1 {
   border-color: rgb(255 255 255 / 42%);
 }
 
+.theory-book-section {
+  border-bottom: 1px solid rgb(255 255 255 / 8%);
+  padding: clamp(110px, 13vw, 220px) 0 clamp(140px, 15vw, 260px);
+}
+
+.theory-book-grid {
+  align-items: start;
+  display: grid;
+  gap: clamp(48px, 7vw, 110px);
+  grid-template-columns: minmax(220px, 300px) minmax(0, 760px);
+}
+
+.theory-toc {
+  position: sticky;
+  top: 108px;
+}
+
+.theory-toc .website-eyebrow {
+  margin-bottom: 28px;
+}
+
+.theory-toc ol {
+  border-left: 1px solid rgb(255 255 255 / 12%);
+  display: grid;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 24px;
+}
+
+.theory-toc li {
+  color: rgb(255 255 255 / 54%);
+  display: grid;
+  font-size: 0.98rem;
+  gap: 8px;
+  grid-template-columns: 34px minmax(0, 1fr);
+  line-height: 1.42;
+  padding: 11px 0;
+}
+
+.theory-toc li span {
+  color: rgb(179 145 255 / 72%);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.theory-reading-area {
+  display: grid;
+  gap: clamp(68px, 7vw, 110px);
+  max-width: 760px;
+}
+
+.theory-chapter-placeholder {
+  border-top: 1px solid rgb(255 255 255 / 12%);
+  min-height: clamp(180px, 22vw, 300px);
+  padding-top: clamp(34px, 4vw, 56px);
+}
+
+.theory-chapter-placeholder h2 {
+  color: #ffffff;
+  font-family: var(--font-aiio-heading);
+  font-size: clamp(2.5rem, 4.8vw, 5.6rem);
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 0.98;
+  margin: 0;
+  text-wrap: balance;
+}
+
 .request-demo-page {
   background:
     radial-gradient(circle at 82% 8%, rgb(90 50 138 / 18%), transparent 34%),
@@ -6096,6 +6166,37 @@ h1 {
   .website-contact-panel {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .theory-book-section {
+    padding: 96px 0 132px;
+  }
+
+  .theory-book-grid {
+    gap: 72px;
+    grid-template-columns: 1fr;
+  }
+
+  .theory-toc {
+    position: static;
+  }
+
+  .theory-toc ol {
+    border-left: 0;
+    border-top: 1px solid rgb(255 255 255 / 12%);
+    padding: 20px 0 0;
+  }
+
+  .theory-reading-area {
+    gap: 72px;
+  }
+
+  .theory-chapter-placeholder {
+    min-height: 180px;
+  }
+
+  .theory-chapter-placeholder h2 {
+    font-size: clamp(2.4rem, 12vw, 4rem);
   }
 
   .request-demo-shell {
