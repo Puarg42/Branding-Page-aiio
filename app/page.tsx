@@ -2,6 +2,7 @@ import { MainHeader } from "./main-navigation";
 import { CapabilityJourney } from "./capability-journey";
 import { CategoryEvolution, CeoMondayMoment } from "./category-reinforcement";
 import { BrandIllustration } from "../components/brand/BrandIllustration";
+import { TheoryReference } from "../components/brand/TheoryReference";
 
 const problemCards = [
   {
@@ -135,9 +136,9 @@ function ConceptBreakthrough() {
           </div>
           <p className="concept-support">
             Organizational Intelligence creates the context layer that makes
-            knowledge usable for people, AI and enterprise systems.{" "}
-            <a href="/thinking/theory">Read the underlying theory</a>.
+            knowledge usable for people, AI and enterprise systems.
           </p>
+          <TheoryReference />
         </div>
         <ol
           aria-label="Missing layer progression"
