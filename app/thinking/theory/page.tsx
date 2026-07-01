@@ -192,17 +192,19 @@ export default function TheoryPage() {
 
         <div className="theory-book-main">
           <section className="theory-book-hero" aria-label="Theory introduction">
-            <img
-              alt=""
-              className="theory-book-hero-image"
-              loading="eager"
-              src="/brand-canon/001-organizational-mind.png"
-            />
-            <div className="theory-book-hero-shade" />
             <div className="theory-book-hero-content">
               <p className="theory-sidebar-eyebrow">Theory</p>
               <h1>Organizational Intelligence</h1>
               <p>A Theory of Organizational Understanding</p>
+            </div>
+            <div className="theory-book-hero-artwork" aria-hidden="true">
+              <img
+                alt=""
+                className="theory-book-hero-image"
+                loading="eager"
+                src="/brand-canon/001-organizational-mind-theory.png"
+              />
+              <div className="theory-book-hero-shade" />
             </div>
           </section>
 

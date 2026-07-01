@@ -5930,26 +5930,34 @@ h1 {
 
 .theory-book-hero {
   border-bottom: 1px solid rgb(255 255 255 / 13%);
-  min-height: clamp(560px, 57vw, 780px);
+  overflow: hidden;
+  padding-top: clamp(92px, 9vw, 142px);
+  position: relative;
+}
+
+.theory-book-hero-artwork {
+  margin-top: clamp(54px, 7vw, 104px);
+  min-height: clamp(380px, 38vw, 660px);
   overflow: hidden;
   position: relative;
+  width: 100%;
 }
 
 .theory-book-hero-image {
   height: 100%;
   inset: 0;
   object-fit: cover;
-  object-position: 50% 46%;
-  opacity: 0.7;
+  object-position: 50% 50%;
+  opacity: 0.78;
   position: absolute;
   width: 100%;
 }
 
 .theory-book-hero-shade {
   background:
-    radial-gradient(circle at 66% 47%, transparent 0 22%, rgb(10 5 18 / 30%) 48%, rgb(10 5 18 / 78%) 100%),
-    linear-gradient(90deg, rgb(10 5 18 / 93%) 0%, rgb(10 5 18 / 50%) 38%, rgb(10 5 18 / 16%) 64%, rgb(10 5 18 / 54%) 100%),
-    linear-gradient(180deg, rgb(10 5 18 / 58%) 0%, transparent 36%, rgb(10 5 18 / 86%) 100%);
+    linear-gradient(180deg, #090510 0%, rgb(9 5 16 / 6%) 20%, rgb(9 5 16 / 12%) 68%, #090510 100%),
+    linear-gradient(90deg, rgb(9 5 16 / 72%) 0%, transparent 22%, transparent 72%, rgb(9 5 16 / 64%) 100%),
+    radial-gradient(circle at 54% 48%, transparent 0 34%, rgb(9 5 16 / 24%) 62%, rgb(9 5 16 / 72%) 100%);
   inset: 0;
   position: absolute;
 }
@@ -5958,7 +5966,7 @@ h1 {
   display: grid;
   gap: 26px;
   max-width: 840px;
-  padding: clamp(96px, 9vw, 150px) clamp(36px, 8vw, 132px);
+  padding: 0 clamp(36px, 8vw, 132px);
   position: relative;
   z-index: 1;
 }
@@ -6476,15 +6484,24 @@ h1 {
   }
 
   .theory-book-hero {
-    min-height: 540px;
+    padding-top: 76px;
   }
 
   .theory-book-hero-content {
-    padding: 78px 22px 96px;
+    padding: 0 22px;
   }
 
   .theory-book-hero-content h1 {
     font-size: clamp(3.8rem, 16vw, 6.2rem);
+  }
+
+  .theory-book-hero-artwork {
+    margin-top: 52px;
+    min-height: 360px;
+  }
+
+  .theory-book-hero-image {
+    object-position: 56% 50%;
   }
 
   .theory-reading-area {
