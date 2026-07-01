@@ -81,7 +81,7 @@ export default function ThinkingPage() {
             </p>
             <Link
               className="website-text-link"
-              href="https://github.com/Puarg42/Branding-Page-aiio/blob/feature/category-design-v1/docs/00_FOUNDATION/AIIO_OPERATING_SYSTEM.md"
+              href="/thinking/theory"
             >
               Read the Theory <span aria-hidden="true">→</span>
             </Link>
