@@ -1,10 +1,6 @@
 import { MainHeader } from "./main-navigation";
 import { CapabilityJourney } from "./capability-journey";
-import {
-  CategoryEvolution,
-  CeoMondayMoment,
-  OrganizationMirror,
-} from "./category-reinforcement";
+import { CategoryEvolution, CeoMondayMoment } from "./category-reinforcement";
 import { BrandIllustration } from "../components/brand/BrandIllustration";
 
 const problemCards = [
@@ -140,7 +136,7 @@ function ConceptBreakthrough() {
           <p className="concept-support">
             Organizational Intelligence creates the context layer that makes
             knowledge usable for people, AI and enterprise systems.{" "}
-            <a href="/thinking/theory">Why Organizational Understanding matters</a>.
+            <a href="/thinking/theory">Read the underlying theory</a>.
           </p>
         </div>
         <ol
@@ -167,19 +163,17 @@ function NewKindOrganization() {
       <div className="organization-inner">
         <div className="organization-header">
           <p className="dark-eyebrow">A New Kind of Organization</p>
-          <h2>
-            The next generation turns knowledge into operating advantage.
-          </h2>
+          <h2>Use what your organization already knows.</h2>
           <p>Less rework. Faster decisions. Stronger organizational capability.</p>
         </div>
         <div className="organization-closing-block">
           <div className="organization-closing-statement">
-            The organizations that lead tomorrow will make better use of what they already know.
+            Shared context turns existing knowledge into business value.
           </div>
         </div>
         <div className="organization-bottom-statement">
-          <p>Understanding is the prerequisite for intelligence.</p>
-          <p>Capability is how understanding becomes visible.</p>
+          <p>Better use of knowledge creates better decisions.</p>
+          <p>Better decisions create stronger capability.</p>
         </div>
       </div>
     </section>
@@ -253,7 +247,7 @@ function CompanyPurpose() {
               business capability.
             </p>
             <p>
-              The theory explains the foundation. The platform makes it usable.
+              The platform makes that foundation usable.
             </p>
           </div>
         </div>
@@ -278,14 +272,12 @@ export default function Home() {
     <main>
       <MainHeader />
       <Hero />
-      <CapabilityJourney />
-      <OisArchitecture />
       <ProblemSection />
       <ConceptBreakthrough />
       <NewKindOrganization />
-      <ImagineFuture />
+      <CapabilityJourney />
+      <OisArchitecture />
       <CeoMondayMoment />
-      <OrganizationMirror />
       <CategoryEvolution />
       <CompanyPurpose />
     </main>

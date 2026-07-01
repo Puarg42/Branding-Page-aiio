@@ -1,7 +1,11 @@
 "use client";
 
-import { motion, useReducedMotion, type Transition, type Variants } from "framer-motion";
-import { BrandIllustration } from "../components/brand/BrandIllustration";
+import {
+  motion,
+  useReducedMotion,
+  type Transition,
+  type Variants,
+} from "framer-motion";
 
 const motionEase = [0.2, 0, 0, 1] as const;
 
@@ -11,10 +15,22 @@ const fadeIn: Variants = {
 };
 
 const capabilitySequence = [
-  "Capture Knowledge",
-  "Build Understanding",
-  "Enable Action",
-  "Evolve Organizations",
+  {
+    title: "Capture Knowledge",
+    copy: "Knowledge is captured before it disappears.",
+  },
+  {
+    title: "Build Understanding",
+    copy: "Context is connected so people and AI work from the same reality.",
+  },
+  {
+    title: "Enable Action",
+    copy: "Action becomes coordinated because decisions share the same context.",
+  },
+  {
+    title: "Evolve Organizations",
+    copy: "Capabilities improve continuously as learning becomes reusable.",
+  },
 ] as const;
 
 export function CapabilityJourney() {
@@ -33,58 +49,45 @@ export function CapabilityJourney() {
     <section className="capability-journey-section" id="capabilities">
       <div className="capability-journey-inner">
         <motion.div
-          className="capability-model-stage"
-          initial="hidden"
-          transition={transition}
-          variants={variants}
-          viewport={{ amount: 0.28, once: true }}
-          whileInView="visible"
-        >
-          <BrandIllustration variant="BC-002" />
-        </motion.div>
-
-        <motion.div
           className="capability-journey-intro"
           initial="hidden"
-          transition={
-            shouldReduceMotion
-              ? { duration: 0 }
-              : { duration: 0.95, ease: motionEase, delay: 0.08 }
-          }
+          transition={transition}
           variants={variants}
           viewport={{ amount: 0.45, once: true }}
           whileInView="visible"
         >
           <p className="capability-section-title">The Capability Journey</p>
           <h2>From knowledge to capability.</h2>
-          <p>Knowledge becomes understanding. Understanding enables action. Action enables continuous evolution.</p>
+          <p>
+            Knowledge is captured. Context is connected. Action becomes
+            coordinated. Capabilities improve continuously.
+          </p>
         </motion.div>
 
-        <div className="capability-sequence" aria-label="Capability progression">
+        <div className="capability-journey-map" aria-label="Capability progression">
+          <span className="capability-journey-line" aria-hidden="true" />
           {capabilitySequence.map((capability, index) => (
-            <div className="capability-sequence-step" key={capability}>
-              <span>{capability}</span>
-              {index < capabilitySequence.length - 1 ? (
-                <em aria-hidden="true">↓</em>
-              ) : null}
-            </div>
+            <motion.article
+              className="capability-step"
+              initial="hidden"
+              key={capability.title}
+              transition={
+                shouldReduceMotion
+                  ? { duration: 0 }
+                  : { duration: 0.85, ease: motionEase, delay: index * 0.06 }
+              }
+              variants={variants}
+              viewport={{ amount: 0.32, once: true }}
+              whileInView="visible"
+            >
+              <span className="capability-step-number">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <h3>{capability.title}</h3>
+              <p>{capability.copy}</p>
+            </motion.article>
           ))}
         </div>
-
-        <motion.div
-          className="capability-stack-stage"
-          initial="hidden"
-          transition={
-            shouldReduceMotion
-              ? { duration: 0 }
-              : { duration: 0.95, ease: motionEase, delay: 0.08 }
-          }
-          variants={variants}
-          viewport={{ amount: 0.28, once: true }}
-          whileInView="visible"
-        >
-          <BrandIllustration variant="BC-002" />
-        </motion.div>
 
         <motion.div
           className="capability-closing"
@@ -98,11 +101,11 @@ export function CapabilityJourney() {
           viewport={{ amount: 0.42, once: true }}
           whileInView="visible"
         >
-          <p>Understanding creates intelligence.</p>
-          <span aria-hidden="true">↓</span>
-          <p>Intelligence creates capability.</p>
-          <span aria-hidden="true">↓</span>
-          <p>Capability creates resilience.</p>
+          <p>Less rework.</p>
+          <span aria-hidden="true">&darr;</span>
+          <p>Faster decisions.</p>
+          <span aria-hidden="true">&darr;</span>
+          <p>Stronger capability.</p>
         </motion.div>
       </div>
     </section>
