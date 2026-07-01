@@ -61,9 +61,9 @@ export function SiteFooter() {
           <h2>
             Every organization has knowledge.
             <br />
-            Few organizations truly understand themselves.
+            The next step is understanding.
             <br />
-            The future belongs to those who do.
+            Start there.
           </h2>
           <div className="footer-closing-actions" aria-label="Footer actions">
             <Link className="footer-final-button primary" href="/live-demo/kontakt">

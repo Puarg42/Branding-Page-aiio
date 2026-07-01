@@ -114,11 +114,11 @@ export function OrganizationMirror() {
     <section className="organization-mirror-section" id="organization-mirror">
       <motion.div className="organization-mirror-intro" {...reveal}>
         <p className="mirror-section-title">The Organization Mirror</p>
-        <h2>Every organization already contains intelligence.</h2>
+        <h2>Fragmented knowledge needs a mirror.</h2>
         <p>
-          Organizational knowledge already exists.
+          The knowledge already exists.
           <br />
-          The challenge is making it visible.
+          The challenge is seeing the relationships.
         </p>
       </motion.div>
 

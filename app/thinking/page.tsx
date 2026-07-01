@@ -64,8 +64,8 @@ export default function ThinkingPage() {
   return (
     <WebsiteArchitecturePage
       eyebrow="Thinking"
-      intro="The emergence of Artificial Intelligence changes far more than software. For the first time, organizations can continuously understand themselves. This creates an entirely new management discipline: Organizational Intelligence."
-      title="Ideas shape organizations. Organizations shape the future."
+      intro="Organizational Intelligence is a structural shift in how organizations preserve knowledge, form judgment and build capability."
+      title="Why this shift is inevitable."
     >
       <section className="website-architecture-section" id="theory">
         <div className="website-page-shell">
@@ -78,10 +78,9 @@ export default function ThinkingPage() {
           </div>
           <div className="website-contact-panel">
             <p>
-              It is that organizations can finally become understandable.
-              Organizational Intelligence describes how organizations
-              continuously develop better understanding, better decisions and
-              continuously evolving organizational capabilities.
+              The theory describes why future organizations will need a
+              continuous foundation for memory, context, judgment and
+              capability.
             </p>
             <Link
               className="website-text-link"
@@ -97,7 +96,7 @@ export default function ThinkingPage() {
         <div className="website-page-shell website-visual-theory-grid">
           <div className="website-section-heading">
             <p className="website-eyebrow">Model</p>
-            <h2>Knowledge becomes capability through understanding.</h2>
+            <h2>A theory of organizational capability.</h2>
           </div>
           <BrandIllustration variant="BC-001" />
         </div>

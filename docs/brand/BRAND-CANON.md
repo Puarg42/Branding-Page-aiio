@@ -18,6 +18,10 @@ Every future illustration, animation, presentation and website component must de
 
 ### BC-001
 
+Organizational Understanding
+
+Former name
+
 Organizational Mind
 
 Purpose
@@ -36,6 +40,10 @@ Used on
 Never use as a product illustration.
 
 ### BC-002
+
+Capability Journey
+
+Former name
 
 Organizational Intelligence Engine
 
@@ -70,6 +78,10 @@ Defines
 Every future illustration inherits this material.
 
 ### BC-004
+
+Organizational Intelligence Elements
+
+Former name
 
 Visual Language Library
 

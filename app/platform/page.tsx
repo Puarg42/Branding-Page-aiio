@@ -44,8 +44,8 @@ export default function PlatformPage() {
   return (
     <WebsiteArchitecturePage
       eyebrow="Platform"
-      intro="The aiio Platform is the first Organizational Intelligence System (OIS). It continuously captures organizational knowledge, develops Organizational Understanding, enables better organizational decisions and supports the continuous evolution of organizational capabilities."
-      title="The platform for Organizational Intelligence."
+      intro="aiio turns the capability journey into an operating system for organizational knowledge, understanding, action and evolution."
+      title="How Organizational Intelligence becomes operational."
     >
       <section
         className="website-architecture-section website-platform-visual-section"

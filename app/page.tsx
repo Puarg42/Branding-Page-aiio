@@ -27,13 +27,9 @@ const problemCards = [
 ] as const;
 
 const intelligenceProgression = [
-  "Knowledge",
-  "Living Organizational Memory",
-  "Organizational Understanding",
-  "Organizational Intelligence",
-  "Organizational Capabilities",
-  "Organizational Resilience",
-  "Self-Enabling Organization",
+  "Fragmented knowledge",
+  "Connected context",
+  "Shared meaning",
 ] as const;
 
 const imagineMoments = [
@@ -42,8 +38,8 @@ const imagineMoments = [
     support: "Knowledge stays.",
   },
   {
-    statement: "Imagine an organization that truly understands itself.",
-    support: "Everything becomes shared understanding.",
+    statement: "Imagine an organization where context is never lost.",
+    support: "Every decision carries memory forward.",
   },
   {
     statement:
@@ -66,17 +62,17 @@ const companyPrinciples = [
   {
     title: "Understanding before Intelligence",
     copy:
-      "Artificial Intelligence creates value only when it is grounded in organizational understanding.",
+      "Intelligence matters when it improves how organizations decide and act.",
   },
   {
     title: "Enable, don't replace",
     copy:
-      "Technology should strengthen organizations rather than create new dependencies.",
+      "Technology should strengthen organizational capability, not create new dependency.",
   },
   {
     title: "Build for the next decade",
     copy:
-      "We are not building software for today's workflows. We are building the foundation for the next generation of organizations.",
+      "We are building the foundation for organizations that learn, adapt and evolve over time.",
   },
 ] as const;
 
@@ -88,7 +84,7 @@ function Hero() {
         <p className="hero-subheadline">
           Organizations already know more than they can use.
           <br />
-          aiio turns that hidden knowledge into Organizational Intelligence.
+          For the first time, that knowledge can become understanding.
         </p>
         <div className="actions hero-actions" aria-label="Primary actions">
           <a className="button hero-button" href="#organizational-intelligence">
@@ -136,20 +132,18 @@ function ConceptBreakthrough() {
       <div className="concept-inner">
         <div className="concept-copy">
           <p className="dark-eyebrow">The missing layer</p>
-          <h2>The missing layer is not more software. It is Organizational Intelligence.</h2>
+          <h2>The missing layer is understanding.</h2>
           <div className="concept-statement">
-            <p>
-              The breakthrough is not machines understanding organizations.
-            </p>
-            <p>It is organizations understanding themselves.</p>
+            <p>More information was never enough.</p>
+            <p>Meaning emerges when context connects.</p>
           </div>
           <p className="concept-support">
-            aiio creates the living foundation for memory, understanding and
-            capability.
+            Organizational Intelligence begins where scattered knowledge becomes
+            shared meaning.
           </p>
         </div>
         <ol
-          aria-label="Organizational Intelligence progression"
+          aria-label="Missing layer progression"
           className="intelligence-progression"
         >
           {intelligenceProgression.map((step) => (
@@ -173,21 +167,20 @@ function NewKindOrganization() {
         <div className="organization-header">
           <p className="dark-eyebrow">A New Kind of Organization</p>
           <h2>
-            The next generation will not be defined by AI alone.
+            The next generation will be defined by how quickly it learns.
             <br />
-            It will be defined by self-understanding.
+            And how reliably it turns learning into capability.
           </h2>
-          <p>Knowledge stays. Understanding grows. Capabilities compound.</p>
+          <p>Knowledge stays. Decisions improve. Capabilities compound.</p>
         </div>
         <div className="organization-closing-block">
           <div className="organization-closing-statement">
-            Tomorrow&apos;s leading organizations continuously understand themselves
-            and develop new capabilities.
+            Tomorrow&apos;s leading organizations keep getting better at change.
           </div>
         </div>
         <div className="organization-bottom-statement">
           <p>Understanding is the prerequisite for intelligence.</p>
-          <p>Self-understanding is the prerequisite for self-enablement.</p>
+          <p>Capability is how understanding becomes visible.</p>
         </div>
       </div>
     </section>
@@ -220,9 +213,9 @@ function OisArchitecture() {
     <section className="ois-section" id="architektur">
       <div className="ois-intro">
         <p className="ois-section-title">The Platform</p>
-        <h2>How aiio enables the journey.</h2>
+        <h2>The system behind the journey.</h2>
         <div className="ois-body">
-          <p>The Organizational Intelligence System connects knowledge, people, systems and AI into one shared context.</p>
+          <p>aiio connects knowledge, people, systems and AI into one operating context.</p>
         </div>
       </div>
 
@@ -235,7 +228,7 @@ function OisArchitecture() {
 
       <div className="ois-bottom-statement">
         <p>The OIS is not another application.</p>
-        <p>It is the infrastructure for self-understanding.</p>
+        <p>It is how the journey becomes operational.</p>
       </div>
     </section>
   );
@@ -250,15 +243,15 @@ function CompanyPurpose() {
           <h2>Why aiio exists</h2>
           <div>
             <p>
-              Artificial Intelligence alone is not enough. It creates value only
-              when it is grounded in organizational understanding.
+              Organizations should not depend on scattered memory or isolated
+              projects to evolve.
             </p>
             <p>
-              Organizations first need to understand themselves.
+              aiio exists to make understanding a durable organizational
+              capability.
             </p>
             <p>
-              aiio exists to enable that transformation with long-term
-              conviction.
+              That conviction guides everything we build.
             </p>
           </div>
         </div>

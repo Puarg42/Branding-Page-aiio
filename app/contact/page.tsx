@@ -11,7 +11,7 @@ export default function ContactPage() {
   return (
     <WebsiteArchitecturePage
       eyebrow="Contact"
-      intro="A simple entry point for conversations about Organizational Intelligence, platform strategy and partnership."
+      intro="A simple entry point for demos, platform conversations and partnership discussions."
       title="Start the conversation."
     >
       <section className="website-contact-section">

@@ -8,11 +8,11 @@ const brandCanonAssets: Record<
   }
 > = {
   "BC-001": {
-    alt: "Organizational Mind brand illustration",
+    alt: "Organizational Understanding brand illustration",
     src: "/brand-canon/001-organizational-mind.png",
   },
   "BC-002": {
-    alt: "Organizational Intelligence Engine platform illustration",
+    alt: "Capability Journey platform illustration",
     src: "/brand-canon/002-intelligence-engine.png",
   },
   "BC-003": {
@@ -20,7 +20,7 @@ const brandCanonAssets: Record<
     src: "/brand-canon/003-transparent-intelligence-material.png",
   },
   "BC-004": {
-    alt: "Visual Language Library brand illustration",
+    alt: "Organizational Intelligence Elements brand illustration",
     src: "/brand-canon/004-visual-language-library.png",
   },
 };

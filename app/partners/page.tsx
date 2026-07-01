@@ -30,7 +30,7 @@ export default function PartnersPage() {
   return (
     <WebsiteArchitecturePage
       eyebrow="Partners"
-      intro="Partners help organizations develop Organizational Intelligence. Their role evolves from delivering knowledge toward enabling continuously improving organizations."
+      intro="Organizational Intelligence creates a new partner opportunity: helping customers build durable capability instead of isolated project outcomes."
       title="Build the capability era with aiio."
     >
       <section className="website-architecture-section">
@@ -54,8 +54,8 @@ export default function PartnersPage() {
         <div className="website-page-shell">
           <div className="website-contact-panel">
             <p>
-              Partnership with aiio means helping organizations build the
-              capability to understand, decide and evolve continuously.
+              Partnership with aiio means helping organizations turn strategic
+              ambition into lasting capability.
             </p>
             <Link className="website-final-button" href="/contact">
               Start a partner conversation

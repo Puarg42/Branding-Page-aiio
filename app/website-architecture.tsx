@@ -95,7 +95,7 @@ export function CapabilityTeaserGrid({
               </div>
               <BrandIllustration className="website-card-canon" variant="BC-003" />
               <Link className="website-text-link" href={capability.href}>
-                Learn more <span aria-hidden="true">→</span>
+                Explore {capability.product} <span aria-hidden="true">→</span>
               </Link>
             </article>
           ))}

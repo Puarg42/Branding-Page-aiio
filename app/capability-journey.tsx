@@ -57,7 +57,7 @@ export function CapabilityJourney() {
         >
           <p className="capability-section-title">The Capability Journey</p>
           <h2>How organizations become intelligent.</h2>
-          <p>Knowledge becomes understanding. Understanding becomes action. Action becomes capability.</p>
+          <p>Knowledge becomes understanding. Understanding enables action. Action enables continuous evolution.</p>
         </motion.div>
 
         <div className="capability-sequence" aria-label="Capability progression">
@@ -98,11 +98,11 @@ export function CapabilityJourney() {
           viewport={{ amount: 0.42, once: true }}
           whileInView="visible"
         >
-          <p>Understanding creates Intelligence.</p>
+          <p>Understanding creates intelligence.</p>
           <span aria-hidden="true">↓</span>
-          <p>Intelligence creates Capability.</p>
+          <p>Intelligence creates capability.</p>
           <span aria-hidden="true">↓</span>
-          <p>Capability creates Resilience.</p>
+          <p>Capability creates resilience.</p>
         </motion.div>
       </div>
     </section>

@@ -11,12 +11,12 @@ const principles = [
   {
     title: "Understanding before intelligence",
     purpose:
-      "Artificial Intelligence creates value only when it is grounded in organizational understanding.",
+      "Intelligence creates value when it improves how organizations decide and act.",
   },
   {
     title: "Capability before dependency",
     purpose:
-      "Technology should enable organizations to develop their own understanding, decisions and capabilities.",
+      "Technology should help organizations become more capable, not more dependent.",
   },
   {
     title: "Built for the next decade",
@@ -29,7 +29,7 @@ export default function CompanyPage() {
   return (
     <WebsiteArchitecturePage
       eyebrow="Company"
-      intro="aiio exists because organizations deserve the ability to continuously understand themselves. The defining challenge of the coming decade is no longer digitalization. It is Organizational Intelligence."
+      intro="aiio exists because organizations need a better way to preserve what they know and turn it into durable capability."
       title="Why aiio exists."
     >
       <section className="website-architecture-section">
@@ -43,13 +43,11 @@ export default function CompanyPage() {
           </div>
           <div className="website-contact-panel">
             <p>
-              Our mission is to develop the first Organizational Intelligence
-              System that enables organizations to continuously improve
-              understanding, decisions and capabilities.
+              Our mission is to make organizational understanding durable,
+              usable and capable of improving how organizations act.
             </p>
             <p>
-              We are building software. But more importantly, we are building a
-              way for organizations to become more capable over time.
+              The software matters because the capability matters.
             </p>
           </div>
         </div>
