@@ -9403,6 +9403,35 @@ section[id],
   right: 0;
 }
 
+.topbar-shell .brand .aiio-logo,
+.topbar-shell .brand-mark .aiio-logo,
+.site-header .brand .aiio-logo,
+.site-header .brand-mark .aiio-logo,
+.site-header.solid .brand .aiio-logo,
+.site-header.solid .brand-mark .aiio-logo {
+  background: url("/brand-canon/logo-aiio-v2.svg") center / contain no-repeat;
+}
+
+.topbar-shell .brand .aiio-logo::before,
+.topbar-shell .brand .aiio-logo::after,
+.topbar-shell .brand-mark .aiio-logo::before,
+.topbar-shell .brand-mark .aiio-logo::after,
+.site-header .brand .aiio-logo::before,
+.site-header .brand .aiio-logo::after,
+.site-header .brand-mark .aiio-logo::before,
+.site-header .brand-mark .aiio-logo::after {
+  display: none;
+}
+
+.theory-publisher-logo .aiio-logo {
+  background: url("/brand-canon/logo-aiio-v1.svg") center / contain no-repeat;
+}
+
+.theory-publisher-logo .aiio-logo::before,
+.theory-publisher-logo .aiio-logo::after {
+  display: none;
+}
+
 .main-nav {
   gap: clamp(30px, 3.8vw, 60px);
 }
