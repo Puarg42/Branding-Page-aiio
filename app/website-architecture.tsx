@@ -1,7 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { MainHeader } from "./main-navigation";
-import { BrandIllustration } from "../components/brand/BrandIllustration";
 
 export type ArchitectureSection = {
   title: string;
@@ -62,6 +61,10 @@ export type CapabilityTeaser = {
   badge?: string;
   copy: string;
   href: string;
+  illustration?: {
+    alt: string;
+    src: string;
+  };
   product: "ProcessCollector" | "ProcessMagnet" | "ProcessForge" | "DataForge";
   quote?: string;
   secondaryCopy?: string;
@@ -85,18 +88,21 @@ export function CapabilityTeaserGrid({
           </p>
         </div>
         <div className="website-capability-grid">
-          {capabilities.map((capability) => (
+          {capabilities.map((capability, index) => (
             <article
               className="website-capability-card"
               id={capability.product.toLowerCase()}
               key={capability.title}
             >
               <div>
+                <span className="website-capability-index">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <h3>{capability.title}</h3>
                 <div className="website-card-topline">
                   <span>Powered by {capability.product}</span>
                   {capability.badge ? <em>{capability.badge}</em> : null}
                 </div>
-                <h3>{capability.title}</h3>
                 <p>{capability.copy}</p>
                 {capability.secondaryCopy ? <p>{capability.secondaryCopy}</p> : null}
                 {capability.quote ? (
@@ -105,7 +111,16 @@ export function CapabilityTeaserGrid({
                   </blockquote>
                 ) : null}
               </div>
-              <BrandIllustration className="website-card-canon" variant="BC-003" />
+              {capability.illustration ? (
+                <figure className="website-card-canon">
+                  <img
+                    alt={capability.illustration.alt}
+                    className="website-card-canon-image"
+                    loading="lazy"
+                    src={capability.illustration.src}
+                  />
+                </figure>
+              ) : null}
               <Link className="website-text-link" href={capability.href}>
                 Learn more <span aria-hidden="true">-&gt;</span>
               </Link>

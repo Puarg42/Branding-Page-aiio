@@ -5698,6 +5698,10 @@ h1 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.website-capability-grid {
+  position: relative;
+}
+
 .website-capability-card,
 .website-architecture-card,
 .website-contact-panel {
@@ -5717,19 +5721,33 @@ h1 {
   justify-content: space-between;
   min-height: 430px;
   padding: clamp(28px, 3vw, 42px);
+  position: relative;
+}
+
+@media (min-width: 1101px) {
+  .website-capability-card:not(:last-child)::after {
+    background: linear-gradient(90deg, rgb(179 145 255 / 44%), transparent);
+    content: "";
+    height: 1px;
+    left: calc(100% + 1px);
+    position: absolute;
+    top: 54px;
+    width: 16px;
+  }
 }
 
 .website-card-topline {
   align-items: center;
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
-  justify-content: space-between;
-  margin-bottom: 42px;
+  justify-content: flex-start;
+  margin: 20px 0 0;
 }
 
 .website-card-topline span,
 .website-card-topline em {
-  color: rgb(179 145 255 / 88%);
+  color: rgb(179 145 255 / 72%);
   font-size: 0.76rem;
   font-style: normal;
   font-weight: 800;
@@ -5741,6 +5759,16 @@ h1 {
   border: 1px solid rgb(179 145 255 / 24%);
   border-radius: 999px;
   padding: 7px 10px;
+}
+
+.website-capability-index {
+  color: rgb(179 145 255 / 82%);
+  display: inline-flex;
+  font-family: var(--font-aiio-heading);
+  font-size: 0.86rem;
+  font-weight: 620;
+  letter-spacing: 0.08em;
+  margin-bottom: 24px;
 }
 
 .website-capability-card h3,
@@ -9414,19 +9442,48 @@ section[id],
   object-fit: cover;
 }
 
+.website-capability-layer-visual .brand-canon-image {
+  object-fit: contain;
+}
+
 .website-card-canon {
+  align-items: center;
   aspect-ratio: 1.35 / 1;
+  background:
+    radial-gradient(circle at 50% 50%, rgb(24 214 255 / 9%), transparent 42%),
+    linear-gradient(180deg, rgb(255 255 255 / 5%), rgb(255 255 255 / 2%));
   border: 1px solid rgb(255 255 255 / 12%);
   border-radius: 16px;
   box-shadow:
     inset 0 1px 0 rgb(255 255 255 / 12%),
     0 28px 80px rgb(0 0 0 / 18%);
+  display: flex;
   height: auto;
+  justify-content: center;
+  margin: 48px 0 0;
+  overflow: hidden;
+  padding: clamp(16px, 2.2vw, 28px);
+  position: relative;
 }
 
-.website-card-canon .brand-canon-image {
-  object-fit: cover;
+.website-card-canon::after {
+  background:
+    linear-gradient(180deg, rgb(5 5 7 / 18%), transparent 18%, transparent 82%, rgb(5 5 7 / 22%)),
+    linear-gradient(90deg, rgb(5 5 7 / 22%), transparent 16%, transparent 84%, rgb(5 5 7 / 22%));
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.website-card-canon-image {
+  display: block;
+  height: 100%;
+  object-fit: contain;
   object-position: center;
+  position: relative;
+  width: 100%;
+  z-index: 1;
 }
 
 @media (max-width: 720px) {

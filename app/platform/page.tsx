@@ -17,6 +17,10 @@ const capabilities: CapabilityTeaser[] = [
     title: "Understand Your Organization",
     copy:
       "Create, model and continuously refine the human-readable representation of your organization. It becomes the organizational source code that explains how your organization works and why.",
+    illustration: {
+      alt: "Organizational representation layer",
+      src: "/system-layers/collector-layer-single-v1.png",
+    },
     product: "ProcessCollector",
     quote:
       "When software works, nobody looks at the source code. When it doesn't, the source code explains why. The same is true for organizations.",
@@ -28,6 +32,10 @@ const capabilities: CapabilityTeaser[] = [
       "AI agents continuously capture and connect organizational reality from people, systems, documents, operational data, standards, market knowledge and external intelligence.",
     secondaryCopy:
       "Everything modeled in ProcessCollector continuously expands this understanding, making ProcessCollector and ProcessMagnet two perspectives of one system.",
+    illustration: {
+      alt: "Organizational understanding layer",
+      src: "/system-layers/magnet-layer-single-v1.png",
+    },
     product: "ProcessMagnet",
     href: "#processmagnet",
   },
@@ -37,6 +45,10 @@ const capabilities: CapabilityTeaser[] = [
       "Transform organizational understanding into executable organizational capabilities.",
     secondaryCopy:
       "These capabilities help people make better decisions every day.",
+    illustration: {
+      alt: "Organizational capability layer",
+      src: "/system-layers/forge-layer-single-v1.png",
+    },
     product: "ProcessForge",
     href: "#processforge",
   },
@@ -46,6 +58,10 @@ const capabilities: CapabilityTeaser[] = [
       "Continuously evolve organizational capabilities using goals, scenarios, operational reality and Organizational Intelligence.",
     secondaryCopy:
       "Organizational resilience becomes the business outcome of continuous evolution.",
+    illustration: {
+      alt: "Organizational evolution layer",
+      src: "/system-layers/transformation-layer-system-v2.jpg",
+    },
     product: "DataForge",
     href: "#dataforge",
     badge: "Coming Soon",
