@@ -29,7 +29,7 @@ const ceoMoments = [
   },
   {
     statement: "AI supports a critical decision.",
-    support: "Because it works from organizational context, not generic knowledge.",
+    support: "Because it works from organizational context, not generic answers.",
   },
   {
     statement: "A team improves a process.",
@@ -48,7 +48,7 @@ const infrastructureStages = [
   },
   {
     era: "Digital Age",
-    foundation: "Knowledge Management",
+    foundation: "Digital Knowledge Systems",
   },
   {
     era: "AI Age",
@@ -146,7 +146,7 @@ export function CategoryEvolution() {
     <section className="category-evolution-section" id="category-evolution">
       <motion.div className="category-evolution-intro" {...reveal}>
         <p className="category-evolution-title">Why Now?</p>
-        <h2>AI creates value when organizations become understandable.</h2>
+        <h2>A new era of complexity requires a new organizational capability.</h2>
       </motion.div>
 
       <div className="category-timeline" aria-label="Why Now infrastructure progression">

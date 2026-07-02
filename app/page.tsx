@@ -6,16 +6,16 @@ import { TheoryReference } from "../components/brand/TheoryReference";
 
 const problemCards = [
   {
-    title: "Knowledge is hard to reuse.",
-    copy: "Critical experience stays scattered across people, projects and tools.",
-  },
-  {
-    title: "AI answers without context.",
-    copy: "Without organizational context, AI remains generic.",
+    title: "Complexity outpaces understanding.",
+    copy: "More systems, documentation and AI do not automatically create better decisions.",
   },
   {
     title: "Context fragments.",
     copy: "Processes, systems and decisions drift apart as the organization grows.",
+  },
+  {
+    title: "AI remains generic.",
+    copy: "Without organizational context, AI cannot support decisions with confidence.",
   },
   {
     title: "Decisions slow down.",
@@ -24,9 +24,9 @@ const problemCards = [
 ] as const;
 
 const intelligenceProgression = [
-  "Stored knowledge",
-  "Continuous self-understanding",
-  "Better decisions",
+  "Fragmented context",
+  "Organizational self-understanding",
+  "Organizational capability",
 ] as const;
 
 const imagineMoments = [
@@ -59,7 +59,7 @@ const companyPrinciples = [
   {
     title: "Understanding before Intelligence",
     copy:
-      "AI creates value when it is grounded in organizational context.",
+      "AI creates value when the organization can interpret its own context.",
   },
   {
     title: "Enable, don't replace",
@@ -69,7 +69,7 @@ const companyPrinciples = [
   {
     title: "Build for the next decade",
     copy:
-      "aiio builds the foundation for organizations that decide, adapt and improve over time.",
+      "aiio builds the foundation for organizations that understand, decide and improve over time.",
   },
 ] as const;
 
@@ -79,9 +79,9 @@ function Hero() {
       <div className="landing-hero-content">
         <h1>The future belongs to organizations that understand themselves.</h1>
         <p className="hero-subheadline">
-          Organizations already know more than they can use.
+          Organizations have entered an era where complexity grows faster than human understanding.
           <br />
-          aiio makes that knowledge continuously understandable, so leaders, teams and AI can make better decisions faster.
+          aiio enables an organization to continuously understand itself, continuously develop new organizational capabilities and empower every person to make better decisions.
         </p>
         <div className="actions hero-actions" aria-label="Primary actions">
           <a className="button hero-button" href="#organizational-intelligence">
@@ -132,13 +132,14 @@ function ConceptBreakthrough() {
           <h2>Organizations need a shared understanding of how they work.</h2>
           <div className="concept-statement">
             <p>The problem is not missing information.</p>
-            <p>It is missing organizational context.</p>
+            <p>It is the absence of organizational self-understanding.</p>
           </div>
           <p className="concept-support">
-            Organizational Self-Understanding is not simply people knowing more.
-            It means the organization itself can continuously interpret its
-            knowledge, decisions, processes and capabilities, so people and AI
-            work from the same context.
+            When an organization continuously understands itself, it continuously
+            develops new capabilities that help people make better decisions.
+            This does not mean people simply know more. It means the organization
+            itself can continuously interpret its knowledge, decisions, processes
+            and capabilities.
           </p>
           <TheoryReference />
         </div>
@@ -166,8 +167,8 @@ function NewKindOrganization() {
       <div className="organization-inner">
         <div className="organization-header">
           <p className="dark-eyebrow">A New Kind of Organization</p>
-          <h2>When the organization understands itself, decisions move faster.</h2>
-          <p>Teams reuse what already exists. Decisions carry context forward. Capability improves with every cycle.</p>
+          <h2>A more capable organization creates better work.</h2>
+          <p>Your organization reuses what already exists. Decisions carry context forward. Capability improves with every cycle.</p>
         </div>
         <div className="organization-closing-block">
           <div className="organization-closing-statement">
@@ -175,8 +176,8 @@ function NewKindOrganization() {
           </div>
         </div>
         <div className="organization-bottom-statement">
-          <p>Self-understanding turns knowledge into action.</p>
-          <p>Action turns capability into resilience.</p>
+          <p>Self-understanding turns context into coordinated action.</p>
+          <p>Coordinated action strengthens resilience.</p>
         </div>
       </div>
     </section>
@@ -209,11 +210,12 @@ function OisArchitecture() {
     <section className="ois-section" id="architektur">
       <div className="ois-intro">
         <p className="ois-section-title">The System</p>
-        <h2>aiio makes self-understanding operational.</h2>
+        <h2>aiio gives self-understanding a system.</h2>
         <div className="ois-body">
           <p>
-            The Organizational Intelligence System connects knowledge, people,
-            systems and AI into one shared context for decisions and action.
+            The Organizational Intelligence System connects people, processes,
+            systems, AI and organizational context into one foundation for
+            decisions and action.
           </p>
         </div>
       </div>
@@ -227,7 +229,7 @@ function OisArchitecture() {
 
       <div className="ois-bottom-statement">
         <p>The OIS is infrastructure, not another application.</p>
-        <p>It helps organizations use what they know and improve how they decide.</p>
+        <p>It helps your organization build capability from every decision.</p>
       </div>
     </section>
   );
