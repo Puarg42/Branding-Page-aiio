@@ -92,15 +92,53 @@ Organizational Mind
 BC002  
 Organizational Intelligence Engine
 
-Purpose: illustrates how an Organizational Intelligence System transforms organizational reality into continuously evolving organizational capabilities.
+Purpose: visualizes how an Organizational Intelligence System transforms real organizational reality into continuously evolving organizational capabilities.
 
-Narrative:
+Unlike BC001, BC002 is not inspirational.
 
-- Real organizational world
-- ProcessCollector as grounding
-- ProcessMagnet as Organizational Understanding
-- ProcessForge as getting into action
-- DataForge as continuous evolution
+It is explanatory.
+
+BC002 explains one single management principle:
+
+An organization continuously develops organizational capabilities by transforming organizational reality into organizational understanding.
+
+The illustration visualizes four complementary capability layers.
+
+1. ProcessCollector  
+Grounding
+
+The human-readable organizational source code.
+
+Organizational reality becomes understandable, modelable and explainable.
+
+2. ProcessMagnet  
+Organizational Understanding
+
+Continuously captures and connects organizational reality from every relevant source.
+
+Creates continuously evolving organizational understanding.
+
+3. ProcessForge  
+Getting into Action
+
+Transforms organizational understanding into executable organizational capabilities.
+
+Processes.
+
+Projects.
+
+Services.
+
+Agents.
+
+Operating models.
+
+4. DataForge  
+Continuous Evolution
+
+Uses goals, scenarios, operational reality and external intelligence to continuously evolve organizational capabilities.
+
+The organizational outcome is resilience.
 
 BC002 is explanatory. It is not a decorative hero image.
 
@@ -120,6 +158,48 @@ Organizational Evolution
 
 This structure may grow over time, but every addition must preserve the same visual logic, editorial discipline and conceptual restraint.
 
+## Architectural Reference
+
+BC002 is the architectural master illustration of the Organizational Intelligence System.
+
+Future Brand Canon illustrations extending the platform architecture should remain visually and conceptually consistent with BC002.
+
+BC001 remains the visual reference for the editorial illustration style.
+
+BC002 becomes the reference for organizational architecture.
+
+## Brand Canon Rules
+
+### BC Rule 05
+
+Every Brand Canon illustration belongs to exactly one category.
+
+Vision.
+
+Architecture.
+
+Capability.
+
+Theory.
+
+Never combine categories.
+
+### BC Rule 06
+
+Hero illustrations inspire.
+
+Architectural illustrations explain.
+
+Capability illustrations communicate one organizational capability.
+
+Theory illustrations support reasoning.
+
+### BC Rule 07
+
+Brand Canon assets are never adapted to pages.
+
+Pages adapt to the Brand Canon.
+
 ## BC002 Usage Rules
 
 BC002 is an explanatory figure.
@@ -133,6 +213,16 @@ It must never occupy a hero section.
 It must never be used as decorative background artwork.
 
 The approved BC002 asset contains no typography, no labels and no cropped elements. It fades naturally into the background, is suitable for dark mode and follows the Brand Canon.
+
+Current website usage must keep BC002 integrated into the reading flow as an editorial explanatory figure.
+
+BC002 may support a Platform explanation or an OIS explanation, but it must not receive visual dominance comparable to a hero section.
+
+## Future Capability Series
+
+The future capability illustrations BC101 Organizational Source Code, BC102 Organizational Understanding, BC103 Organizational Capability and BC104 Organizational Evolution should be conceived as detailed explorations of the architectural principles introduced by BC002.
+
+BC002 therefore acts as the architectural bridge between the Foundation illustrations and the Capability illustrations.
 
 ## Reference Style
 
