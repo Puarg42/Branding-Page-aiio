@@ -5676,6 +5676,14 @@ h1 {
   text-wrap: balance;
 }
 
+.website-section-heading > p:not(.website-eyebrow) {
+  color: rgb(255 255 255 / 58%);
+  font-size: clamp(1.08rem, 1.45vw, 1.24rem);
+  line-height: 1.5;
+  margin: 0;
+  max-width: 660px;
+}
+
 .website-capability-section,
 .website-architecture-section,
 .website-contact-section {
@@ -6765,6 +6773,14 @@ h1 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .website-platform-system-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .website-capability-layer-visual {
+    max-height: 520px;
+  }
+
   .thinking-journal-entry-body,
   .thinking-publication-grid,
   .thinking-editorial-panel {
@@ -6795,6 +6811,10 @@ h1 {
     padding: 110px 0;
   }
 
+  .website-platform-system-section {
+    padding: 104px 0;
+  }
+
   .website-section-heading {
     margin-bottom: 58px;
   }
@@ -6810,6 +6830,11 @@ h1 {
 
   .website-capability-card {
     min-height: 330px;
+  }
+
+  .website-capability-layer-visual {
+    aspect-ratio: 1 / 1;
+    max-height: 420px;
   }
 
   .website-architecture-card {
@@ -8601,8 +8626,53 @@ h1 {
 .vl-mind-node.node-7 { left: 42%; top: 10%; }
 .vl-mind-node.node-8 { left: 41%; bottom: 10%; }
 
-.website-platform-visual-section {
-  padding-bottom: 0;
+.website-platform-system-section {
+  padding: clamp(120px, 13vw, 220px) 0;
+}
+
+.website-platform-system-layout {
+  align-items: center;
+  display: grid;
+  gap: clamp(42px, 6vw, 92px);
+  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1fr);
+}
+
+.website-platform-system-copy {
+  margin-bottom: 0;
+}
+
+.website-platform-system-copy h2 {
+  font-size: clamp(3rem, 4.8vw, 5.9rem);
+}
+
+.website-capability-layer-visual {
+  aspect-ratio: 1.18 / 1;
+  max-height: 560px;
+}
+
+.website-platform-conclusion {
+  display: grid;
+  gap: clamp(28px, 4vw, 54px);
+  margin: 0 auto;
+  max-width: 980px;
+  text-align: center;
+}
+
+.website-platform-conclusion h2 {
+  color: #ffffff;
+  font-size: clamp(3.2rem, 5.6vw, 7rem);
+  letter-spacing: 0;
+  line-height: 0.98;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.website-platform-conclusion p:last-child {
+  color: rgb(255 255 255 / 62%);
+  font-size: clamp(1.12rem, 1.45vw, 1.28rem);
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 760px;
 }
 
 section[id],

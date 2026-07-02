@@ -78,7 +78,11 @@ export function CapabilityTeaserGrid({
       <div className="website-page-shell">
         <div className="website-section-heading">
           <p className="website-eyebrow">Capabilities</p>
-          <h2>Four capabilities. One system.</h2>
+          <h2>Complementary capabilities, not separate products.</h2>
+          <p>
+            The following capabilities are complementary perspectives of one
+            Organizational Intelligence System.
+          </p>
         </div>
         <div className="website-capability-grid">
           {capabilities.map((capability) => (
