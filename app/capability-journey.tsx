@@ -17,19 +17,19 @@ const fadeIn: Variants = {
 const capabilitySequence = [
   {
     title: "Capture Knowledge",
-    copy: "Knowledge is captured before it disappears.",
+    copy: "Preserve experience before it disappears.",
   },
   {
     title: "Build Understanding",
-    copy: "Context is connected so people and AI work from the same reality.",
+    copy: "Connect context across people, systems, processes and decisions.",
   },
   {
     title: "Enable Action",
-    copy: "Action becomes coordinated because decisions share the same context.",
+    copy: "Turn shared context into coordinated decisions and execution.",
   },
   {
     title: "Evolve Organizations",
-    copy: "Capabilities improve continuously as learning becomes reusable.",
+    copy: "Feed outcomes back into learning so capability improves continuously.",
   },
 ] as const;
 
@@ -57,10 +57,10 @@ export function CapabilityJourney() {
           whileInView="visible"
         >
           <p className="capability-section-title">The Capability Journey</p>
-          <h2>From knowledge to capability.</h2>
+          <h2>From knowledge to organizational capability.</h2>
           <p>
-            Knowledge is captured. Context is connected. Action becomes
-            coordinated. Capabilities improve continuously.
+            Capture what the organization knows. Connect the context.
+            Coordinate action. Improve the capability.
           </p>
         </motion.div>
 
@@ -101,11 +101,11 @@ export function CapabilityJourney() {
           viewport={{ amount: 0.42, once: true }}
           whileInView="visible"
         >
-          <p>Less rework.</p>
+          <p>Better use of knowledge.</p>
           <span aria-hidden="true">&darr;</span>
           <p>Faster decisions.</p>
           <span aria-hidden="true">&darr;</span>
-          <p>Stronger capability.</p>
+          <p>More resilient organizations.</p>
         </motion.div>
       </div>
     </section>

@@ -7,11 +7,11 @@ import { TheoryReference } from "../components/brand/TheoryReference";
 const problemCards = [
   {
     title: "Knowledge disappears.",
-    copy: "Critical context leaves with people, projects and tools.",
+    copy: "Critical experience leaves with people, projects and tools.",
   },
   {
     title: "AI lacks context.",
-    copy: "Answers remain generic when they are not grounded in the organization.",
+    copy: "Without organizational context, AI can only answer generically.",
   },
   {
     title: "Complexity costs.",
@@ -19,14 +19,14 @@ const problemCards = [
   },
   {
     title: "Decisions slow down.",
-    copy: "Teams spend too much time reconstructing what the organization already knows.",
+    copy: "Teams rebuild context before they can act.",
   },
 ] as const;
 
 const intelligenceProgression = [
-  "Fragmented knowledge",
-  "Connected context",
-  "Shared meaning",
+  "Stored knowledge",
+  "Continuous self-understanding",
+  "Better decisions",
 ] as const;
 
 const imagineMoments = [
@@ -59,7 +59,7 @@ const companyPrinciples = [
   {
     title: "Understanding before Intelligence",
     copy:
-      "AI creates value when it is grounded in how the organization actually works.",
+      "AI creates value when it is grounded in organizational context.",
   },
   {
     title: "Enable, don't replace",
@@ -69,7 +69,7 @@ const companyPrinciples = [
   {
     title: "Build for the next decade",
     copy:
-      "aiio builds the foundation for organizations that learn, adapt and evolve over time.",
+      "aiio builds the foundation for organizations that decide, adapt and improve over time.",
   },
 ] as const;
 
@@ -79,16 +79,16 @@ function Hero() {
       <div className="landing-hero-content">
         <h1>The future belongs to organizations that understand themselves.</h1>
         <p className="hero-subheadline">
-          aiio turns scattered organizational knowledge into a shared basis for better decisions.
+          Organizations already know more than they can use.
           <br />
-          So leaders, teams and AI can act with the same context.
+          aiio makes that knowledge continuously understandable, so leaders, teams and AI can make faster, better decisions.
         </p>
         <div className="actions hero-actions" aria-label="Primary actions">
           <a className="button hero-button" href="#organizational-intelligence">
-            See the system
+            Explore the system
           </a>
           <a className="button hero-button secondary" href="/live-demo/kontakt">
-            See it in action
+            Request a demo
           </a>
         </div>
       </div>
@@ -128,15 +128,17 @@ function ConceptBreakthrough() {
     <section className="concept-section" id="organizational-intelligence">
       <div className="concept-inner">
         <div className="concept-copy">
-          <p className="dark-eyebrow">The missing layer</p>
-          <h2>Business value begins with shared understanding.</h2>
+          <p className="dark-eyebrow">The missing capability</p>
+          <h2>Organizations need self-understanding.</h2>
           <div className="concept-statement">
-            <p>More information does not improve decisions.</p>
-            <p>Connected context does.</p>
+            <p>The problem is not missing information.</p>
+            <p>It is missing organizational context.</p>
           </div>
           <p className="concept-support">
-            Organizational Intelligence creates the context layer that makes
-            knowledge usable for people, AI and enterprise systems.
+            Organizational Self-Understanding is not simply people knowing more.
+            It means the organization itself can continuously interpret its
+            knowledge, decisions, processes and capabilities. aiio builds the
+            system that makes this operational.
           </p>
           <TheoryReference />
         </div>
@@ -164,17 +166,17 @@ function NewKindOrganization() {
       <div className="organization-inner">
         <div className="organization-header">
           <p className="dark-eyebrow">A New Kind of Organization</p>
-          <h2>Use what your organization already knows.</h2>
-          <p>Less rework. Faster decisions. Stronger organizational capability.</p>
+          <h2>When the organization understands itself, work gets faster.</h2>
+          <p>Teams reuse what already exists. Decisions carry context forward. Capability improves with every cycle.</p>
         </div>
         <div className="organization-closing-block">
           <div className="organization-closing-statement">
-            Shared context turns existing knowledge into business value.
+            Less rework. Faster decisions. Stronger organizational capability.
           </div>
         </div>
         <div className="organization-bottom-statement">
-          <p>Better use of knowledge creates better decisions.</p>
-          <p>Better decisions create stronger capability.</p>
+          <p>Self-understanding turns knowledge into action.</p>
+          <p>Action turns capability into resilience.</p>
         </div>
       </div>
     </section>
@@ -206,12 +208,12 @@ function OisArchitecture() {
   return (
     <section className="ois-section" id="architektur">
       <div className="ois-intro">
-        <p className="ois-section-title">The Platform</p>
-        <h2>aiio makes Organizational Intelligence operational.</h2>
+        <p className="ois-section-title">The System</p>
+        <h2>aiio makes self-understanding operational.</h2>
         <div className="ois-body">
           <p>
-            The OIS connects knowledge, people, systems and AI into one operating
-            context for decisions and action.
+            The Organizational Intelligence System connects knowledge, people,
+            systems and AI into one shared context for decisions and action.
           </p>
         </div>
       </div>
@@ -225,7 +227,7 @@ function OisArchitecture() {
 
       <div className="ois-bottom-statement">
         <p>The OIS is not another application.</p>
-        <p>It is the infrastructure for organizations that want to use what they know.</p>
+        <p>It is the foundation for organizations that want to use what they know and improve how they decide.</p>
       </div>
     </section>
   );
@@ -244,11 +246,11 @@ function CompanyPurpose() {
               decisions.
             </p>
             <p>
-              aiio exists to turn organizational understanding into a durable
+              aiio exists to turn organizational self-understanding into a durable
               business capability.
             </p>
             <p>
-              The platform makes that foundation usable.
+              The platform turns that capability into better decisions, stronger execution and continuous improvement.
             </p>
           </div>
         </div>

@@ -18,22 +18,22 @@ const staticReveal: Variants = {
 
 const ceoMoments = [
   {
-    statement: "Your most experienced expert retires.",
+    statement: "A key expert leaves.",
     support: (
       <>
-        Nothing is lost.
+        The knowledge remains.
         <br />
         Your organization remembers.
       </>
     ),
   },
   {
-    statement: "Artificial Intelligence answers with confidence.",
-    support: "Because it understands your organization.",
+    statement: "AI supports a critical decision.",
+    support: "Because it works from organizational context, not generic knowledge.",
   },
   {
-    statement: "Your organization continuously develops new capabilities.",
-    support: "Without starting from zero.",
+    statement: "A team improves a process.",
+    support: "The learning strengthens the organization, not just the project.",
   },
 ] as const;
 
@@ -146,7 +146,7 @@ export function CategoryEvolution() {
     <section className="category-evolution-section" id="category-evolution">
       <motion.div className="category-evolution-intro" {...reveal}>
         <p className="category-evolution-title">Why Now?</p>
-        <h2>Every technological revolution required new infrastructure.</h2>
+        <h2>AI creates value when organizations become understandable.</h2>
       </motion.div>
 
       <div className="category-timeline" aria-label="Why Now infrastructure progression">
