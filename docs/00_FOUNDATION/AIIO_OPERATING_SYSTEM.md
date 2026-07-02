@@ -270,7 +270,85 @@ The emergence of this missing layer represents more than another technological i
 
 It represents the beginning of a new stage in the evolution of organizations.
 
-# 3. Organizational Understanding
+# 3. Organizations Cannot Understand Themselves
+
+People can understand an organization.
+
+Employees understand their roles.
+
+Leaders understand strategies.
+
+Experts understand processes.
+
+Consultants understand patterns.
+
+Yet none of these forms of understanding is identical with an organization understanding itself.
+
+An organization is not simply the sum of the people currently working inside it.
+
+Within the Organizational Intelligence Theory, an organization is treated as an autonomous socio-technical system.
+
+It consists of people, processes, knowledge, technologies, routines, decisions, responsibilities, constraints and relationships.
+
+Its behavior emerges from the interaction of these elements.
+
+No individual person contains the organization.
+
+No department contains it.
+
+No process model contains it.
+
+No enterprise system contains it.
+
+Each perspective may be valid.
+
+None is complete.
+
+This distinction is fundamental.
+
+People may understand parts of the organization.
+
+The organization itself does not yet possess a continuous capability to understand itself as a whole.
+
+It cannot continuously preserve its own experience.
+
+It cannot continuously connect its own knowledge.
+
+It cannot continuously interpret its own context.
+
+It cannot continuously recognize how its elements influence each other.
+
+This does not imply that an organization is conscious.
+
+Nor does it imply that an organization thinks like a human being.
+
+It means that the organization lacks a persistent self-representation through which its knowledge, context, relationships and experience can remain available for future interpretation.
+
+Organizational Self-Understanding names this missing capability.
+
+Within the Organizational Intelligence Theory, Organizational Self-Understanding is defined as:
+
+**The continuously evolving capability of an organization, understood as a socio-technical system, to preserve, connect and interpret its own knowledge, context, relationships and experience.**
+
+Organizational Self-Understanding precedes Organizational Intelligence.
+
+Without it, intelligence can only be applied to fragments.
+
+Artificial Intelligence may reason about documents.
+
+It may reason about processes.
+
+It may reason about data.
+
+But it cannot reliably reason about the organization itself unless the organization first becomes understandable as a connected system.
+
+The decisive transition is therefore not from human work to machine intelligence.
+
+It is from externally interpreted organizations to organizations capable of continuously developing their own self-understanding.
+
+Only once this capability exists can Organizational Intelligence emerge.
+
+# 4. Organizational Understanding
 
 The concept of understanding is often used intuitively.
 
@@ -328,7 +406,7 @@ It is the capability that enables organizations to continuously interpret themse
 
 Only once this capability exists can Organizational Intelligence emerge.
 
-# 4. Organizational Intelligence
+# 5. Organizational Intelligence
 
 Understanding alone does not create intelligence.
 
@@ -406,7 +484,7 @@ Resilience
 
 Self-Enabling Organizations
 
-# 5. Organizational Capabilities
+# 6. Organizational Capabilities
 
 Organizational Intelligence cannot be observed directly.
 
@@ -462,7 +540,7 @@ Organizational Intelligence
 
 Organizational Capabilities
 
-# 6. Organizational Resilience
+# 7. Organizational Resilience
 
 Organizations operate in environments that continuously change.
 
@@ -536,7 +614,7 @@ Organizational Capabilities
 
 Organizational Resilience
 
-# 7. The Self-Enabling Cycle
+# 8. The Self-Enabling Cycle
 
 The development of Organizational Intelligence does not end with resilience.
 
@@ -618,7 +696,7 @@ creates new Knowledge
 
 ↺
 
-# 8. The Organizational Intelligence Hypothesis
+# 9. The Organizational Intelligence Hypothesis
 
 Every generation of management has attempted to improve organizational performance.
 
@@ -686,7 +764,7 @@ If this hypothesis proves correct, Organizational Intelligence represents not me
 
 It represents a new management discipline.
 
-# 9. The Evolution of Organizational Management
+# 10. The Evolution of Organizational Management
 
 Management has always evolved by expanding the capabilities of organizations.
 
@@ -768,7 +846,7 @@ Artificial Intelligence
 
 Organizational Intelligence
 
-# 10. Why Now?
+# 11. Why Now?
 
 Every major management discipline emerged when technological progress made a previously impossible capability achievable.
 
@@ -826,7 +904,7 @@ The defining innovation of this era is therefore not Artificial Intelligence its
 
 It is the emergence of organizations that can continuously understand and improve themselves.
 
-# 11. The Transformation of Consulting
+# 12. The Transformation of Consulting
 
 Organizations have always relied on external expertise to compensate for missing organizational understanding.
 
@@ -886,7 +964,7 @@ Organizations remain responsible for their own development.
 
 Consultants increasingly become architects of organizational capabilities rather than providers of organizational knowledge.
 
-# 12. Organizational Memory
+# 13. Organizational Memory
 
 Human beings learn because they possess memory.
 
@@ -972,7 +1050,7 @@ Action
 
 New Experience
 
-# 13. Emergence
+# 14. Emergence
 
 Organizations cannot understand themselves through isolated information.
 
@@ -1024,7 +1102,7 @@ Organizational Intelligence should therefore not be understood as a collection o
 
 It should be understood as the capability of an organization to continuously generate organizational understanding from its own evolving representation.
 
-# 14. The Organizational Intelligence Model
+# 15. The Organizational Intelligence Model
 
 Organizational Intelligence does not emerge suddenly.
 

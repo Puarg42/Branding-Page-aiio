@@ -2,6 +2,7 @@
 
 import type { MouseEvent } from "react";
 import { useEffect, useState } from "react";
+import { theoryPublication } from "../publication-model";
 
 type TheorySidebarChapter = {
   id: string;
@@ -96,10 +97,12 @@ export function TheorySidebar({ chapters }: TheorySidebarProps) {
       </div>
 
       <div className="theory-publication-meta" aria-label="Publication details">
-        <span>Theory</span>
-        <span>Version 0.9</span>
+        <span>{theoryPublication.title}</span>
+        <span>{theoryPublication.version}</span>
+        <span>{theoryPublication.edition}</span>
+        <span>Last updated {theoryPublication.lastUpdated}</span>
         <span>{chapters.length} Chapters</span>
-        <span>Approx. 35 min reading</span>
+        <span>{theoryPublication.readingTime}</span>
       </div>
 
       <div className="theory-progress" aria-label="Reading progress">

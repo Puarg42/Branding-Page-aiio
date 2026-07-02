@@ -5827,6 +5827,160 @@ h1 {
   border-color: rgb(255 255 255 / 42%);
 }
 
+.thinking-journal-section .website-section-heading {
+  max-width: 960px;
+}
+
+.thinking-journal-list {
+  display: grid;
+  gap: 24px;
+}
+
+.thinking-journal-entry,
+.thinking-publication-card {
+  background:
+    linear-gradient(180deg, rgb(255 255 255 / 7%), rgb(255 255 255 / 2%)),
+    rgb(255 255 255 / 2%);
+  border: 1px solid rgb(255 255 255 / 11%);
+  border-radius: 18px;
+  box-shadow:
+    0 34px 90px rgb(0 0 0 / 24%),
+    inset 0 1px 0 rgb(255 255 255 / 9%);
+}
+
+.thinking-journal-entry {
+  display: grid;
+  gap: clamp(44px, 5vw, 74px);
+  padding: clamp(34px, 5vw, 74px);
+}
+
+.thinking-journal-entry-header,
+.thinking-publication-meta {
+  color: rgb(255 255 255 / 58%);
+  display: flex;
+  flex-wrap: wrap;
+  font-family: var(--font-aiio-heading);
+  font-size: 0.88rem;
+  font-weight: 640;
+  gap: 12px 22px;
+  letter-spacing: 0;
+}
+
+.thinking-journal-entry-header span,
+.thinking-publication-meta span:first-child {
+  color: #ffffff;
+}
+
+.thinking-journal-entry-header time,
+.thinking-publication-meta span {
+  color: rgb(255 255 255 / 56%);
+}
+
+.thinking-journal-entry-body {
+  display: grid;
+  gap: clamp(34px, 5vw, 64px);
+  grid-template-columns: minmax(0, 1.45fr) minmax(240px, 0.8fr) minmax(220px, 0.7fr);
+}
+
+.thinking-journal-label {
+  color: rgb(179 145 255 / 88%);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin: 0 0 18px;
+  text-transform: uppercase;
+}
+
+.thinking-journal-entry h3 {
+  color: #ffffff;
+  font-family: var(--font-aiio-heading);
+  font-size: clamp(2rem, 3.5vw, 4.15rem);
+  font-weight: 610;
+  letter-spacing: 0;
+  line-height: 1.02;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.thinking-journal-detail p:not(.thinking-journal-label),
+.thinking-publication-card > p,
+.thinking-editorial-panel li {
+  color: rgb(255 255 255 / 62%);
+  font-size: 1.03rem;
+  line-height: 1.62;
+  margin: 0;
+}
+
+.thinking-journal-detail ul,
+.thinking-editorial-panel ol {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.thinking-journal-detail li {
+  border-top: 1px solid rgb(255 255 255 / 10%);
+  color: rgb(255 255 255 / 72%);
+  font-family: var(--font-aiio-heading);
+  font-size: 1rem;
+  line-height: 1.28;
+  padding-top: 12px;
+}
+
+.thinking-publication-grid {
+  display: grid;
+  gap: clamp(44px, 7vw, 100px);
+  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 0.65fr);
+}
+
+.thinking-publication-card {
+  align-self: start;
+  display: grid;
+  gap: 42px;
+  padding: clamp(32px, 4.5vw, 58px);
+}
+
+.thinking-publication-meta {
+  border-bottom: 1px solid rgb(255 255 255 / 10%);
+  display: grid;
+  gap: 10px;
+  padding-bottom: 28px;
+}
+
+.thinking-publication-card .website-text-link {
+  margin-top: 0;
+  width: fit-content;
+}
+
+.thinking-editorial-panel {
+  align-items: start;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.85fr);
+}
+
+.thinking-editorial-panel .website-eyebrow {
+  margin-bottom: 22px;
+}
+
+.thinking-editorial-panel h2 {
+  color: #ffffff;
+  font-family: var(--font-aiio-heading);
+  font-size: clamp(2.7rem, 5.4vw, 6rem);
+  font-weight: 610;
+  letter-spacing: 0;
+  line-height: 0.98;
+  margin: 0;
+  max-width: 720px;
+  text-wrap: balance;
+}
+
+.thinking-editorial-panel li {
+  border-top: 1px solid rgb(255 255 255 / 10%);
+  padding-top: 16px;
+}
+
 .theory-book-page {
   --theory-nav-offset: 0px;
   background:
@@ -6599,6 +6753,12 @@ h1 {
   .website-architecture-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .thinking-journal-entry-body,
+  .thinking-publication-grid,
+  .thinking-editorial-panel {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 720px) {
@@ -6648,6 +6808,20 @@ h1 {
   .website-contact-panel {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .thinking-journal-entry,
+  .thinking-publication-card {
+    border-radius: 14px;
+    padding: 28px;
+  }
+
+  .thinking-journal-entry-body {
+    gap: 32px;
+  }
+
+  .thinking-journal-entry h3 {
+    font-size: clamp(1.75rem, 9vw, 2.75rem);
   }
 
   .theory-book-layout {

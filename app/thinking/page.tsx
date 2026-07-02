@@ -1,124 +1,103 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { BrandIllustration } from "../../components/brand/BrandIllustration";
 import { WebsiteArchitecturePage } from "../website-architecture";
+import { theoryEditorialRules, theoryJournalEntries, theoryPublication } from "./publication-model";
 
 export const metadata: Metadata = {
   title: "Thinking | aiio",
   description:
-    "The public home for the Theory of Organizational Intelligence and the future of organizations.",
+    "The living Theory Journal for Organizational Intelligence and the evolution of organizational self-understanding.",
 };
-
-const researchTopics = [
-  "The Theory of Organizational Intelligence",
-  "Organizational Understanding",
-  "Organizational Memory",
-  "Organizational Capabilities",
-  "Organizational Resilience",
-  "Self-Enabling Organizations",
-] as const;
-
-const essays = [
-  "Why BPM was never the destination",
-  "The Future of Consulting",
-  "Why Organizational Memory matters",
-  "The emergence of Organizational Understanding",
-  "Decision Quality as the new management KPI",
-] as const;
-
-const whitepapers = [
-  "Executive publications",
-  "Industry papers",
-  "Partner papers",
-] as const;
-
-function TopicGrid({
-  eyebrow,
-  title,
-  topics,
-}: {
-  eyebrow: string;
-  title: string;
-  topics: readonly string[];
-}) {
-  return (
-    <section className="website-architecture-section">
-      <div className="website-page-shell">
-        <div className="website-section-heading">
-          <p className="website-eyebrow">{eyebrow}</p>
-          <h2>{title}</h2>
-        </div>
-        <div className="website-architecture-grid">
-          {topics.map((topic) => (
-            <article className="website-architecture-card" key={topic}>
-              <h3>{topic}</h3>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 export default function ThinkingPage() {
   return (
     <WebsiteArchitecturePage
       eyebrow="Thinking"
-      intro="Organizational Intelligence is a structural shift in how organizations preserve knowledge, form judgment and build capability."
-      title="A new discipline needs a theory."
+      intro="Thinking is the public journal of the Theory of Organizational Intelligence. It records what changed, why it matters and which chapters were affected."
+      title="The theory evolves in public."
     >
-      <section className="website-architecture-section" id="theory">
+      <section className="website-architecture-section thinking-journal-section" id="journal">
         <div className="website-page-shell">
           <div className="website-section-heading">
-            <p className="website-eyebrow">Core Thesis</p>
-            <h2>The breakthrough is organizational understanding.</h2>
+            <p className="website-eyebrow">Theory Journal</p>
+            <h2>What changed in the theory?</h2>
           </div>
-          <div className="website-contact-panel">
+
+          <div className="thinking-journal-list">
+            {theoryJournalEntries.map((entry) => (
+              <article className="thinking-journal-entry" key={entry.version}>
+                <div className="thinking-journal-entry-header">
+                  <span>Version {entry.version}</span>
+                  <time>{entry.date}</time>
+                </div>
+
+                <div className="thinking-journal-entry-body">
+                  <div>
+                    <p className="thinking-journal-label">New Core Thesis</p>
+                    <h3>{entry.coreThesis}</h3>
+                  </div>
+
+                  <div className="thinking-journal-detail">
+                    <p className="thinking-journal-label">Why it matters</p>
+                    <p>{entry.whyItMatters}</p>
+                  </div>
+
+                  <div className="thinking-journal-detail">
+                    <p className="thinking-journal-label">Affected Theory Chapters</p>
+                    <ul>
+                      {entry.affectedChapters.map((chapter) => (
+                        <li key={chapter.id}>{chapter.title}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="website-architecture-section thinking-publication-section" id="publication">
+        <div className="website-page-shell thinking-publication-grid">
+          <div className="website-section-heading">
+            <p className="website-eyebrow">Current Publication</p>
+            <h2>The consolidated theory lives here.</h2>
+          </div>
+
+          <div className="thinking-publication-card">
+            <div className="thinking-publication-meta">
+              <span>{theoryPublication.title}</span>
+              <span>{theoryPublication.version}</span>
+              <span>{theoryPublication.edition}</span>
+              <span>Last updated {theoryPublication.lastUpdated}</span>
+              <span>{theoryPublication.readingTime}</span>
+            </div>
+
             <p>
-              The theory explains why future organizations need a
-              continuous foundation for memory, context, judgment and
-              capability.
+              Thinking documents the evolution. The Theory page contains the current consolidated
+              state of the publication.
             </p>
-            <Link
-              className="website-text-link"
-              href="/thinking/theory"
-            >
-              Read the Theory <span aria-hidden="true">→</span>
+
+            <Link className="website-text-link" href="/thinking/theory">
+              Read the current Theory <span aria-hidden="true">&rarr;</span>
             </Link>
           </div>
         </div>
       </section>
 
-      <section className="website-architecture-section" id="organizational-mind">
-        <div className="website-page-shell website-visual-theory-grid">
-          <div className="website-section-heading">
-            <p className="website-eyebrow">Model</p>
-            <h2>A theory of organizational capability.</h2>
-          </div>
-          <BrandIllustration variant="BC-001" />
-        </div>
-      </section>
-
-      <section className="website-architecture-section" id="visual-framework">
-        <div className="website-page-shell website-visual-theory-grid">
-          <div className="website-section-heading">
-            <p className="website-eyebrow">Framework</p>
-            <h2>The visual system follows the theory.</h2>
-          </div>
-          <BrandIllustration variant="BC-004" />
-        </div>
-      </section>
-
-      <TopicGrid eyebrow="Research" title="The discipline begins here." topics={researchTopics} />
-      <TopicGrid eyebrow="Essays" title="Essays on the future of organizations." topics={essays} />
-      <TopicGrid eyebrow="Whitepapers" title="Publications for executives, industries and partners." topics={whitepapers} />
-
-      <section className="website-contact-section">
+      <section className="website-contact-section thinking-editorial-section" id="editorial-model">
         <div className="website-page-shell">
-          <div className="website-contact-panel">
-            <p className="website-eyebrow">Podcast</p>
-            <h2>The Organizational Intelligence Podcast</h2>
-            <p>Conversations about the future of organizations.</p>
+          <div className="website-contact-panel thinking-editorial-panel">
+            <div>
+              <p className="website-eyebrow">Editorial Model</p>
+              <h2>Every revision has a visible trace.</h2>
+            </div>
+
+            <ol>
+              {theoryEditorialRules.map((rule) => (
+                <li key={rule}>{rule}</li>
+              ))}
+            </ol>
           </div>
         </div>
       </section>
