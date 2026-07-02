@@ -1,5 +1,9 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import {
+  BrandIllustration,
+  type BrandIllustrationVariant,
+} from "../components/brand/BrandIllustration";
 import { MainHeader } from "./main-navigation";
 
 export type ArchitectureSection = {
@@ -65,6 +69,7 @@ export type CapabilityTeaser = {
     alt: string;
     src: string;
   };
+  illustrationVariant?: BrandIllustrationVariant;
   illustrationSlot?: "BC002A" | "BC002B" | "BC002C" | "BC002D";
   product: "ProcessCollector" | "ProcessMagnet" | "ProcessForge" | "DataForge";
   quote?: string;
@@ -112,7 +117,13 @@ export function CapabilityTeaserGrid({
                   </blockquote>
                 ) : null}
               </div>
-              {capability.illustration ? (
+              {capability.illustrationVariant ? (
+                <BrandIllustration
+                  className="website-card-canon"
+                  decorative={false}
+                  variant={capability.illustrationVariant}
+                />
+              ) : capability.illustration ? (
                 <figure className="website-card-canon">
                   <img
                     alt={capability.illustration.alt}

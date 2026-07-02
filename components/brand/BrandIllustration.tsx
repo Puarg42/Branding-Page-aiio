@@ -1,4 +1,4 @@
-type BrandIllustrationVariant =
+export type BrandIllustrationVariant =
   | "BC-001"
   | "BC-002"
   | "BC-003"

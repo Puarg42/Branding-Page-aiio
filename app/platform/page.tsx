@@ -16,8 +16,8 @@ const capabilities: CapabilityTeaser[] = [
   {
     title: "Understand Your Organization",
     copy:
-      "Create, model and continuously refine the human-readable representation of your organization. It becomes the organizational source code that explains how your organization works and why.",
-    illustrationSlot: "BC002A",
+      "Create and continuously refine the human-readable representation of your organization. It becomes the organizational source code that explains how your organization works and why.",
+    illustrationVariant: "BC201",
     product: "ProcessCollector",
     quote:
       "When software works, nobody looks at the source code. When it doesn't, the source code explains why. The same is true for organizations.",
@@ -26,10 +26,10 @@ const capabilities: CapabilityTeaser[] = [
   {
     title: "Build Organizational Understanding",
     copy:
-      "AI agents continuously capture and connect organizational reality from people, systems, documents, operational data, standards, market knowledge and external intelligence.",
+      "Connect organizational reality from people, systems, documents, operational data, standards, market knowledge and external intelligence.",
     secondaryCopy:
-      "Everything modeled in ProcessCollector continuously expands this understanding, making ProcessCollector and ProcessMagnet two perspectives of one system.",
-    illustrationSlot: "BC002B",
+      "Everything modeled in ProcessCollector expands this understanding, making ProcessCollector and ProcessMagnet two perspectives of one system.",
+    illustrationVariant: "BC202",
     product: "ProcessMagnet",
     href: "#processmagnet",
   },
@@ -38,8 +38,8 @@ const capabilities: CapabilityTeaser[] = [
     copy:
       "Transform organizational understanding into executable organizational capabilities.",
     secondaryCopy:
-      "These capabilities help people make better decisions every day.",
-    illustrationSlot: "BC002C",
+      "These capabilities help people make better decisions and coordinate action every day.",
+    illustrationVariant: "BC203",
     product: "ProcessForge",
     href: "#processforge",
   },
@@ -48,8 +48,8 @@ const capabilities: CapabilityTeaser[] = [
     copy:
       "Continuously evolve organizational capabilities using goals, scenarios, operational reality and Organizational Intelligence.",
     secondaryCopy:
-      "Organizational resilience becomes the business outcome of continuous evolution.",
-    illustrationSlot: "BC002D",
+      "Resilience becomes the business outcome of continuous organizational evolution.",
+    illustrationVariant: "BC204",
     product: "DataForge",
     href: "#dataforge",
     badge: "Coming Soon",
@@ -60,7 +60,7 @@ export default function PlatformPage() {
   return (
     <WebsiteArchitecturePage
       eyebrow="Platform"
-      intro="aiio is one Organizational Intelligence System with four complementary capabilities. It exists so your organization can understand itself, develop new capabilities and evolve continuously."
+      intro="aiio is one Organizational Intelligence System with four complementary capabilities: understand your organization, build organizational understanding, enable organizational capabilities and evolve continuously."
       title="One system for organizations that continuously evolve."
     >
       <section
@@ -73,9 +73,8 @@ export default function PlatformPage() {
               <p className="website-eyebrow">The System</p>
               <h2>Four capabilities that work as one.</h2>
               <p>
-                Each capability gives your organization a different perspective
-                on the same system: how it works, what it understands, how it
-                acts and how it evolves.
+                Together, they create one continuous path from organizational
+                reality to organizational evolution.
               </p>
             </div>
             <div className="website-capability-layer-visual" aria-hidden="true">

@@ -8662,7 +8662,7 @@ h1 {
   align-items: center;
   display: grid;
   gap: clamp(42px, 6vw, 92px);
-  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 0.94fr) minmax(0, 0.86fr);
 }
 
 .website-platform-system-copy {
@@ -8675,7 +8675,7 @@ h1 {
 
 .website-capability-layer-visual {
   aspect-ratio: 1.18 / 1;
-  max-height: 560px;
+  max-height: 500px;
 }
 
 .website-platform-conclusion {
@@ -9448,7 +9448,7 @@ section[id],
 
 .website-card-canon {
   align-items: center;
-  aspect-ratio: 1.35 / 1;
+  aspect-ratio: 1.42 / 1;
   background:
     radial-gradient(circle at 50% 50%, rgb(24 214 255 / 9%), transparent 42%),
     linear-gradient(180deg, rgb(255 255 255 / 5%), rgb(255 255 255 / 2%));
@@ -9460,9 +9460,9 @@ section[id],
   display: flex;
   height: auto;
   justify-content: center;
-  margin: 48px 0 0;
+  margin: 38px 0 0;
   overflow: hidden;
-  padding: clamp(16px, 2.2vw, 28px);
+  padding: clamp(12px, 1.8vw, 24px);
   position: relative;
 }
 
@@ -9477,6 +9477,16 @@ section[id],
 }
 
 .website-card-canon-image {
+  display: block;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.website-card-canon .brand-canon-image {
   display: block;
   height: 100%;
   object-fit: contain;
