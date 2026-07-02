@@ -6,15 +6,15 @@ import { TheoryReference } from "../components/brand/TheoryReference";
 
 const problemCards = [
   {
-    title: "Knowledge disappears.",
-    copy: "Critical experience leaves with people, projects and tools.",
+    title: "Knowledge is hard to reuse.",
+    copy: "Critical experience stays scattered across people, projects and tools.",
   },
   {
-    title: "AI lacks context.",
-    copy: "Without organizational context, AI can only answer generically.",
+    title: "AI answers without context.",
+    copy: "Without organizational context, AI remains generic.",
   },
   {
-    title: "Complexity costs.",
+    title: "Context fragments.",
     copy: "Processes, systems and decisions drift apart as the organization grows.",
   },
   {
@@ -81,7 +81,7 @@ function Hero() {
         <p className="hero-subheadline">
           Organizations already know more than they can use.
           <br />
-          aiio makes that knowledge continuously understandable, so leaders, teams and AI can make faster, better decisions.
+          aiio makes that knowledge continuously understandable, so leaders, teams and AI can make better decisions faster.
         </p>
         <div className="actions hero-actions" aria-label="Primary actions">
           <a className="button hero-button" href="#organizational-intelligence">
@@ -104,7 +104,7 @@ function ProblemSection() {
     <section className="problem-section" id="problem">
       <div className="problem-inner">
         <p className="dark-eyebrow">The problem</p>
-        <h2>Organizations are losing themselves.</h2>
+        <h2>Organizations know more than they can use.</h2>
         <div className="problem-grid">
           {problemCards.map((card) => (
             <article className="problem-card" key={card.title}>
@@ -129,7 +129,7 @@ function ConceptBreakthrough() {
       <div className="concept-inner">
         <div className="concept-copy">
           <p className="dark-eyebrow">The missing capability</p>
-          <h2>Organizations need self-understanding.</h2>
+          <h2>Organizations need a shared understanding of how they work.</h2>
           <div className="concept-statement">
             <p>The problem is not missing information.</p>
             <p>It is missing organizational context.</p>
@@ -137,8 +137,8 @@ function ConceptBreakthrough() {
           <p className="concept-support">
             Organizational Self-Understanding is not simply people knowing more.
             It means the organization itself can continuously interpret its
-            knowledge, decisions, processes and capabilities. aiio builds the
-            system that makes this operational.
+            knowledge, decisions, processes and capabilities, so people and AI
+            work from the same context.
           </p>
           <TheoryReference />
         </div>
@@ -166,7 +166,7 @@ function NewKindOrganization() {
       <div className="organization-inner">
         <div className="organization-header">
           <p className="dark-eyebrow">A New Kind of Organization</p>
-          <h2>When the organization understands itself, work gets faster.</h2>
+          <h2>When the organization understands itself, decisions move faster.</h2>
           <p>Teams reuse what already exists. Decisions carry context forward. Capability improves with every cycle.</p>
         </div>
         <div className="organization-closing-block">
@@ -226,8 +226,8 @@ function OisArchitecture() {
       </div>
 
       <div className="ois-bottom-statement">
-        <p>The OIS is not another application.</p>
-        <p>It is the foundation for organizations that want to use what they know and improve how they decide.</p>
+        <p>The OIS is infrastructure, not another application.</p>
+        <p>It helps organizations use what they know and improve how they decide.</p>
       </div>
     </section>
   );
