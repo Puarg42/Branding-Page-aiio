@@ -5755,6 +5755,17 @@ h1 {
   margin: 26px 0 0;
 }
 
+.website-capability-quote {
+  border-left: 1px solid rgb(179 145 255 / 42%);
+  color: rgb(255 255 255 / 76%);
+  font-family: var(--font-aiio-heading);
+  font-size: 1.04rem;
+  font-weight: 520;
+  line-height: 1.46;
+  margin: 32px 0 0;
+  padding-left: 18px;
+}
+
 .website-text-link {
   align-items: center;
   border: 1px solid rgb(255 255 255 / 20%);

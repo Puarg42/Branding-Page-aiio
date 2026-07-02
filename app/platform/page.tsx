@@ -9,31 +9,43 @@ import { BrandIllustration } from "../../components/brand/BrandIllustration";
 export const metadata: Metadata = {
   title: "Platform | aiio",
   description:
-    "The Organizational Intelligence System as one integrated aiio platform.",
+    "The Organizational Intelligence System for organizations that continuously develop new capabilities.",
 };
 
 const capabilities: CapabilityTeaser[] = [
   {
-    title: "Capture Knowledge",
-    copy: "Continuously capture organizational knowledge before it disappears and preserve it as the foundation for future understanding.",
+    title: "Understand Your Organization",
+    copy:
+      "Create, model and continuously refine the human-readable representation of your organization. It becomes the organizational source code that explains how your organization works and why.",
     product: "ProcessCollector",
+    quote:
+      "When software works, nobody looks at the source code. When it doesn't, the source code explains why. The same is true for organizations.",
     href: "#processcollector",
   },
   {
-    title: "Build Understanding",
-    copy: "Transform fragmented knowledge into Organizational Understanding so relationships, context and meaning become visible.",
+    title: "Build Organizational Understanding",
+    copy:
+      "AI agents continuously capture and connect organizational reality from people, systems, documents, operational data, standards, market knowledge and external intelligence to build organizational understanding.",
+    secondaryCopy:
+      "Everything modeled in ProcessCollector also becomes part of this continuously evolving organizational understanding.",
     product: "ProcessMagnet",
     href: "#processmagnet",
   },
   {
-    title: "Enable Action",
-    copy: "Turn contextual understanding into better organizational decisions and coordinated action across people and systems.",
+    title: "Enable Organizational Capabilities",
+    copy:
+      "Continuously develop new organizational capabilities from complete organizational understanding, not only from documented processes.",
+    secondaryCopy:
+      "These capabilities help people make better decisions every day.",
     product: "ProcessForge",
     href: "#processforge",
   },
   {
     title: "Evolve Organizations",
-    copy: "Measure how capabilities develop over time and make organizational evolution continuously visible.",
+    copy:
+      "Continuously evolve your organization using goals, scenarios, operational reality and Organizational Intelligence.",
+    secondaryCopy:
+      "Organizational resilience becomes the business outcome of continuous evolution.",
     product: "DataForge",
     href: "#dataforge",
     badge: "Coming Soon",
@@ -44,8 +56,8 @@ export default function PlatformPage() {
   return (
     <WebsiteArchitecturePage
       eyebrow="Platform"
-      intro="The platform connects knowledge, understanding, action and evolution in one continuous system."
-      title="Where Organizational Intelligence becomes operational."
+      intro="The Organizational Intelligence System connects organizational reality, AI and action so your organization can understand itself, develop new capabilities and become more resilient over time."
+      title="The system for organizations that continuously evolve."
     >
       <section
         className="website-architecture-section website-platform-visual-section"

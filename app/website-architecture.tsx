@@ -63,6 +63,8 @@ export type CapabilityTeaser = {
   copy: string;
   href: string;
   product: "ProcessCollector" | "ProcessMagnet" | "ProcessForge" | "DataForge";
+  quote?: string;
+  secondaryCopy?: string;
   title: string;
 };
 
@@ -92,10 +94,16 @@ export function CapabilityTeaserGrid({
                 </div>
                 <h3>{capability.title}</h3>
                 <p>{capability.copy}</p>
+                {capability.secondaryCopy ? <p>{capability.secondaryCopy}</p> : null}
+                {capability.quote ? (
+                  <blockquote className="website-capability-quote">
+                    {capability.quote}
+                  </blockquote>
+                ) : null}
               </div>
               <BrandIllustration className="website-card-canon" variant="BC-003" />
               <Link className="website-text-link" href={capability.href}>
-                See {capability.product} <span aria-hidden="true">→</span>
+                Learn more <span aria-hidden="true">-&gt;</span>
               </Link>
             </article>
           ))}
