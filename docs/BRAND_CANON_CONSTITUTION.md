@@ -82,23 +82,41 @@ They should be used when the reader needs to understand how organizational conce
 
 ## Brand Canon Structure
 
-The Brand Canon begins with a clear structure.
+The Brand Canon now follows a scalable architecture.
 
-### Foundation
+The numbering has evolved.
 
-BC001  
+Existing image filenames remain unchanged until a later technical migration.
+
+### BC100
+
+FOUNDATION
+
+Foundation illustrations define the core visual language of aiio.
+
+They establish the visual principles for Organizational Intelligence as a category.
+
+#### BC101
+
 Organizational Mind
 
-BC002  
+Previous identifier: legacy 001.
+
+BC101 remains the visual reference for the editorial illustration style.
+
+#### BC102
+
 Organizational Intelligence Engine
+
+Previous identifier: legacy 002.
 
 Purpose: visualizes how an Organizational Intelligence System transforms real organizational reality into continuously evolving organizational capabilities.
 
-Unlike BC001, BC002 is not inspirational.
+Unlike BC101, BC102 is not inspirational.
 
 It is explanatory.
 
-BC002 explains one single management principle:
+BC102 explains one single management principle:
 
 An organization continuously develops organizational capabilities by transforming organizational reality into organizational understanding.
 
@@ -140,33 +158,73 @@ Uses goals, scenarios, operational reality and external intelligence to continuo
 
 The organizational outcome is resilience.
 
-BC002 is explanatory. It is not a decorative hero image.
+BC102 is explanatory. It is not a decorative hero image.
 
-### Capabilities
+### BC200
 
-BC101  
+ORGANIZATIONAL CAPABILITIES
+
+Capability illustrations explain one organizational capability in detail.
+
+They do not introduce independent visual worlds.
+
+They are editorial enlargements of the four architectural layers introduced by BC102.
+
+#### BC201
+
 Organizational Source Code
 
-BC102  
+Reserved. No image file exists yet.
+
+#### BC202
+
 Organizational Understanding
 
-BC103  
+Reserved. No image file exists yet.
+
+#### BC203
+
 Organizational Capability
 
-BC104  
+Reserved. No image file exists yet.
+
+#### BC204
+
 Organizational Evolution
+
+Reserved. No image file exists yet.
+
+### BC300
+
+THEORY
+
+Theory illustrations support reasoning.
+
+They make theoretical relationships, distinctions and conceptual models easier to understand.
+
+This range is reserved for future Theory illustrations.
+
+### BC400
+
+EDITORIAL
+
+Editorial illustrations and explanatory diagrams clarify adjacent arguments.
+
+They should support reading flow and never become decorative.
+
+This range is reserved for future explanatory diagrams.
 
 This structure may grow over time, but every addition must preserve the same visual logic, editorial discipline and conceptual restraint.
 
 ## Architectural Reference
 
-BC002 is the architectural master illustration of the Organizational Intelligence System.
+BC102 is the architectural master illustration of the Organizational Intelligence System.
 
-Future Brand Canon illustrations extending the platform architecture should remain visually and conceptually consistent with BC002.
+Future Brand Canon illustrations extending the platform architecture should remain visually and conceptually consistent with BC102.
 
-BC001 remains the visual reference for the editorial illustration style.
+BC101 remains the visual reference for the editorial illustration style.
 
-BC002 becomes the reference for organizational architecture.
+BC102 becomes the reference for organizational architecture.
 
 ## Brand Canon Rules
 
@@ -200,9 +258,9 @@ Brand Canon assets are never adapted to pages.
 
 Pages adapt to the Brand Canon.
 
-## BC002 Usage Rules
+## BC102 Usage Rules
 
-BC002 is an explanatory figure.
+BC102 is an explanatory figure.
 
 It should only appear beside explanatory content, inside articles, inside theory or inside the Platform explanation.
 
@@ -212,17 +270,21 @@ It must never occupy a hero section.
 
 It must never be used as decorative background artwork.
 
-The approved BC002 asset contains no typography, no labels and no cropped elements. It fades naturally into the background, is suitable for dark mode and follows the Brand Canon.
+The approved BC102 asset contains no typography, no labels and no cropped elements. It fades naturally into the background, is suitable for dark mode and follows the Brand Canon.
 
-Current website usage must keep BC002 integrated into the reading flow as an editorial explanatory figure.
+Current website usage must keep BC102 integrated into the reading flow as an editorial explanatory figure.
 
-BC002 may support a Platform explanation or an OIS explanation, but it must not receive visual dominance comparable to a hero section.
+BC102 may support a Platform explanation or an OIS explanation, but it must not receive visual dominance comparable to a hero section.
 
 ## Future Capability Series
 
-The future capability illustrations BC101 Organizational Source Code, BC102 Organizational Understanding, BC103 Organizational Capability and BC104 Organizational Evolution should be conceived as detailed explorations of the architectural principles introduced by BC002.
+The future capability illustrations BC201 Organizational Source Code, BC202 Organizational Understanding, BC203 Organizational Capability and BC204 Organizational Evolution must derive visually from BC102.
 
-BC002 therefore acts as the architectural bridge between the Foundation illustrations and the Capability illustrations.
+They are editorial enlargements of the four architectural layers.
+
+They are not independent illustrations.
+
+BC102 therefore acts as the architectural bridge between the Foundation illustrations and the Capability illustrations.
 
 ## Reference Style
 

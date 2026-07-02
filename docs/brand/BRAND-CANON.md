@@ -14,19 +14,29 @@ No regeneration is allowed.
 
 Every future illustration, animation, presentation and website component must derive from these assets.
 
-## Brand Assets
+## Brand Canon Architecture V2
 
-### BC-001
+The Brand Canon now uses a scalable numbering architecture.
 
-Organizational Understanding
+Existing image filenames remain unchanged until a later technical migration.
 
-Former name
+### BC100
+
+FOUNDATION
+
+Foundation illustrations define the core visual language of aiio.
+
+#### BC101
 
 Organizational Mind
 
+Previous identifier
+
+legacy 001
+
 Purpose
 
-Brand illustration.
+Editorial foundation illustration.
 
 Used on
 
@@ -39,9 +49,13 @@ Used on
 
 Never use as a product illustration.
 
-### BC-002
+#### BC102
 
 Organizational Intelligence Engine
+
+Previous identifier
+
+legacy 002
 
 Purpose
 
@@ -70,44 +84,75 @@ Never use as decorative background artwork.
 
 Never allow it to dominate a page.
 
-### BC-003
+### BC200
 
-Transparent Intelligence
+ORGANIZATIONAL CAPABILITIES
+
+Capability illustrations are reserved for detailed explorations of the four architectural layers introduced by BC102.
+
+They are not independent illustrations.
+
+#### BC201
+
+Organizational Source Code
+
+Reserved. No image file exists yet.
+
+#### BC202
+
+Organizational Understanding
+
+Reserved. No image file exists yet.
+
+#### BC203
+
+Organizational Capability
+
+Reserved. No image file exists yet.
+
+#### BC204
+
+Organizational Evolution
+
+Reserved. No image file exists yet.
+
+### BC300
+
+THEORY
+
+Reserved for future Theory illustrations.
+
+Theory illustrations support reasoning and make conceptual relationships easier to understand.
+
+### BC400
+
+EDITORIAL
+
+Reserved for explanatory diagrams.
+
+Editorial illustrations clarify adjacent arguments without becoming decorative.
+
+## Legacy Implementation Assets
+
+Some current files and component variants still use earlier technical labels.
+
+They remain valid implementation references until a dedicated technical migration is performed.
+
+### Transparent Intelligence
 
 Purpose
 
 Master material.
 
-Defines
+Defines transparency, optical behavior, edge treatment, reflections and lighting.
 
-- transparency
-- optical behavior
-- edge treatment
-- reflections
-- lighting
-
-Every future illustration inherits this material.
-
-### BC-004
-
-Organizational Intelligence Elements
-
-Former name
-
-Visual Language Library
+### Organizational Intelligence Elements
 
 Purpose
 
 Visual vocabulary.
 
-Defines
-
-- Knowledge Artifacts
-- Semantic Relationships
-- Capability Structures
-- Evolution Language
-
-Every future illustration must be composed from these primitives.
+Defines Knowledge Artifacts, Semantic Relationships, Capability Structures and Evolution Language.
 
 ## Immutable Principles
 

@@ -8,17 +8,30 @@ The Brand Canon is treated as an official design system.
 
 Only approved Brand Canon assets live at this level. Website code may reference these files directly.
 
-### BC002
+## Numbering architecture
+
+The Brand Canon uses the V2 numbering architecture:
+
+- BC100: Foundation
+- BC200: Organizational Capabilities
+- BC300: Theory
+- BC400: Editorial
+
+Existing image filenames remain unchanged until a later technical migration.
+
+### BC102
 
 `002-organizational-intelligence-engine.png`
 
-Official name: BC002 - Organizational Intelligence Engine.
+Official name: BC102 - Organizational Intelligence Engine.
 
-Purpose: explanatory figure for how an Organizational Intelligence System transforms organizational reality into continuously evolving organizational capabilities.
+Previous identifier: legacy 002.
+
+Purpose: architectural reference for how an Organizational Intelligence System transforms organizational reality into continuously evolving organizational capabilities.
 
 Usage: beside explanatory content, inside articles, inside theory or inside the Platform explanation.
 
-Never use BC002 as hero artwork, decorative background artwork or a dominant page visual.
+Never use BC102 as hero artwork, decorative background artwork or a dominant page visual.
 
 ## Incoming assets
 
