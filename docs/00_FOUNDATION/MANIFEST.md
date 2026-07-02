@@ -1,0 +1,35 @@
+# Manifest
+
+## Purpose
+
+This document is the concise strategic source for future website, theory, platform, sales and investor content.
+
+It defines the core convictions behind aiio.
+
+## Principles
+
+1. Organizations are autonomous socio-technical systems.
+
+2. Organizations are more than the people currently working inside them.
+
+3. People may understand parts of an organization, but the organization itself lacks continuous self-understanding.
+
+4. Organizational Understanding connects knowledge, context, relationships and reasoning.
+
+5. Organizational Self-Understanding is the capability of the organization itself to continuously interpret its own structures, decisions, processes and capabilities.
+
+6. Organizational Self-Understanding precedes Organizational Intelligence.
+
+7. Business value leads. Theory proves. Product delivers.
+
+8. aiio exists to make organizations continuously understandable and improvable.
+
+9. The Theory never exists for its own sake. It exists to make the business value inevitable.
+
+10. AI improves Organizations is the origin of the aiio name, not the main marketing claim.
+
+11. Platform capabilities translate the Theory into organizational value.
+
+## Future Use
+
+Future content should start from business value, use the theory as proof, and connect back to platform capabilities.

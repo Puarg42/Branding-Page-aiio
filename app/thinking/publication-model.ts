@@ -27,6 +27,14 @@ export const theoryEditorialRules = [
 ] as const;
 
 export const theoryChapterReferences = {
+  prologue: {
+    id: "prologue",
+    title: "Prologue",
+  },
+  observation: {
+    id: "1-observation",
+    title: "Observation",
+  },
   missingLayer: {
     id: "2-the-missing-layer",
     title: "The Missing Layer",
@@ -48,6 +56,8 @@ export const theoryChapterReferences = {
 export const theoryJournalEntries: TheoryJournalEntry[] = [
   {
     affectedChapters: [
+      theoryChapterReferences.prologue,
+      theoryChapterReferences.observation,
       theoryChapterReferences.missingLayer,
       theoryChapterReferences.organizationalSelfUnderstanding,
       theoryChapterReferences.organizationalUnderstanding,
@@ -58,6 +68,6 @@ export const theoryJournalEntries: TheoryJournalEntry[] = [
     date: "July 2, 2026",
     version: "0.10",
     whyItMatters:
-      "This revision separates individual understanding from organizational self-understanding and clarifies why Organizational Intelligence must begin before Artificial Intelligence can create reliable organizational value.",
+      "This revision clarifies the terminology between Organizational Understanding and Organizational Self-Understanding. Organizational Understanding connects knowledge, context, relationships and reasoning. Organizational Self-Understanding names the capability of the organization itself to continuously interpret its own structures, decisions, processes and capabilities.",
   },
 ];

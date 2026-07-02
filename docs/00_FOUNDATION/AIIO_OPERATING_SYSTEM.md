@@ -14,7 +14,7 @@ Computing amplified information processing.
 
 Artificial Intelligence will amplify something fundamentally different.
 
-An organization's ability to understand itself.
+An organization's ability to develop self-understanding.
 
 For decades organizations have invested enormous effort into documenting themselves.
 
@@ -41,6 +41,8 @@ Yet one fundamental limitation has remained unchanged.
 Organizations have always documented themselves.
 
 They have never been able to understand themselves.
+
+More precisely, they have never possessed a continuous capability for Organizational Self-Understanding.
 
 Documentation is static.
 
@@ -140,6 +142,10 @@ Each perspective improves one part of the organization.
 
 None of them understands the organization as a whole.
 
+They describe perspectives.
+
+They do not create continuous self-understanding for the organization itself.
+
 As a consequence, organizations possess enormous amounts of knowledge while simultaneously suffering from a growing lack of organizational understanding.
 
 This paradox has become one of the defining challenges of modern organizations.
@@ -200,7 +206,7 @@ Each discipline solved an important problem.
 
 None of them solved the fundamental one.
 
-Organizations still do not understand themselves.
+Organizations still do not possess continuous Organizational Self-Understanding.
 
 The reason is deceptively simple.
 
@@ -360,6 +366,14 @@ It is considered an emergent capability.
 
 Organizational Understanding is the continuously evolving capability of an organization to interpret itself through the integration of knowledge, context, relationships and reasoning.
 
+Organizational Understanding is the broader concept.
+
+It describes how organizational knowledge becomes connected, contextualized and interpretable.
+
+Organizational Self-Understanding is more specific.
+
+It describes the capability of the organization itself to continuously interpret its own structures, decisions, processes and capabilities.
+
 Knowledge alone is insufficient.
 
 Context explains where knowledge applies.
@@ -414,7 +428,7 @@ Understanding enables intelligence.
 
 This distinction is fundamental.
 
-An organization may understand itself without consistently acting upon that understanding.
+An organization may develop self-understanding without consistently acting upon that understanding.
 
 Intelligence begins when understanding is continuously transformed into coherent decisions and effective action.
 
