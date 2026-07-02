@@ -33,6 +33,38 @@ Usage: beside explanatory content, inside articles, inside theory or inside the 
 
 Never use BC102 as hero artwork, decorative background artwork or a dominant page visual.
 
+### BC201
+
+`201-organizational-source-code.png`
+
+Official name: BC201 - Organizational Source Code.
+
+Purpose: capability illustration derived from the grounding layer of BC102.
+
+### BC202
+
+`202-organizational-understanding.png`
+
+Official name: BC202 - Organizational Understanding.
+
+Purpose: capability illustration derived from the Organizational Understanding layer of BC102.
+
+### BC203
+
+`203-organizational-capability.png`
+
+Official name: BC203 - Organizational Capability.
+
+Purpose: capability illustration derived from the getting-into-action layer of BC102.
+
+### BC204
+
+`204-organizational-evolution.png`
+
+Official name: BC204 - Organizational Evolution.
+
+Purpose: capability illustration derived from the continuous evolution layer of BC102.
+
 ## Incoming assets
 
 `public/brand-canon/_incoming/`

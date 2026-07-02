@@ -174,25 +174,49 @@ They are editorial enlargements of the four architectural layers introduced by B
 
 Organizational Source Code
 
-Reserved. No image file exists yet.
+Official asset:
+
+`public/brand-canon/201-organizational-source-code.png`
+
+Purpose: visualizes the human-readable organizational source code: processes, structures, policies, documentation, responsibilities, rules and operational models.
+
+BC201 derives from the grounding layer of BC102.
 
 #### BC202
 
 Organizational Understanding
 
-Reserved. No image file exists yet.
+Official asset:
+
+`public/brand-canon/202-organizational-understanding.png`
+
+Purpose: visualizes continuously connected organizational context across people, processes, systems, rules, relationships, events, documents and operational reality.
+
+BC202 derives from the Organizational Understanding layer of BC102.
 
 #### BC203
 
 Organizational Capability
 
-Reserved. No image file exists yet.
+Official asset:
+
+`public/brand-canon/203-organizational-capability.png`
+
+Purpose: visualizes the transformation of organizational understanding into executable organizational capabilities, including operating models, systems, services and coordinated action.
+
+BC203 derives from the getting-into-action layer of BC102.
 
 #### BC204
 
 Organizational Evolution
 
-Reserved. No image file exists yet.
+Official asset:
+
+`public/brand-canon/204-organizational-evolution.png`
+
+Purpose: visualizes continuous evolution through goals, scenarios, operational reality, external intelligence and resilient organizational capability development.
+
+BC204 derives from the continuous evolution layer of BC102.
 
 ### BC300
 

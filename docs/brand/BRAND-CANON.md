@@ -96,25 +96,49 @@ They are not independent illustrations.
 
 Organizational Source Code
 
-Reserved. No image file exists yet.
+Asset
+
+`public/brand-canon/201-organizational-source-code.png`
+
+Purpose
+
+Visualizes the human-readable organizational source code: processes, structures, policies, documentation, responsibilities, rules and operational models.
 
 #### BC202
 
 Organizational Understanding
 
-Reserved. No image file exists yet.
+Asset
+
+`public/brand-canon/202-organizational-understanding.png`
+
+Purpose
+
+Visualizes continuously connected organizational context across people, processes, systems, rules, relationships, events, documents and operational reality.
 
 #### BC203
 
 Organizational Capability
 
-Reserved. No image file exists yet.
+Asset
+
+`public/brand-canon/203-organizational-capability.png`
+
+Purpose
+
+Visualizes the transformation of organizational understanding into executable organizational capabilities, including operating models, systems, services and coordinated action.
 
 #### BC204
 
 Organizational Evolution
 
-Reserved. No image file exists yet.
+Asset
+
+`public/brand-canon/204-organizational-evolution.png`
+
+Purpose
+
+Visualizes continuous evolution through goals, scenarios, operational reality, external intelligence and resilient organizational capability development.
 
 ### BC300
 
