@@ -30,6 +30,50 @@ It defines the core convictions behind aiio.
 
 11. Platform capabilities translate the Theory into organizational value.
 
+12. Knowledge is not Understanding.
+
+## Knowledge is not Understanding
+
+Data becomes information.
+
+Information becomes knowledge.
+
+Knowledge becomes understanding.
+
+Understanding enables intelligence.
+
+Intelligence enables organizational capability.
+
+Knowledge can be stored.
+
+Understanding must be continuously created.
+
+Organizational Self-Understanding is therefore an active organizational capability rather than a repository of knowledge.
+
+## Platform Alignment
+
+ProcessCollector structures knowledge.
+
+ProcessMagnet creates organizational context.
+
+ProcessForge generates new organizational knowledge.
+
+DataForge validates understanding against operational reality.
+
+AgentSphere acts upon Organizational Intelligence.
+
+The platform should be explained through this progression without becoming product-first.
+
 ## Future Use
 
 Future content should start from business value, use the theory as proof, and connect back to platform capabilities.
+
+Every future website statement should ultimately be traceable back to one or more Manifest principles.
+
+The Manifest is the source of truth.
+
+From this point forward, the primary objective is no longer expanding theory.
+
+The objective becomes communicating business value through the website.
+
+Theory exists to support this communication.
