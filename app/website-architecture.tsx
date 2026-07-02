@@ -100,7 +100,7 @@ export function CapabilityTeaserGrid({
               id={capability.product.toLowerCase()}
               key={capability.title}
             >
-              <div>
+              <div className="website-capability-card-copy">
                 <span className="website-capability-index">
                   {String(index + 1).padStart(2, "0")}
                 </span>

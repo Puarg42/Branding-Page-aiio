@@ -5716,12 +5716,16 @@ h1 {
 }
 
 .website-capability-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 430px;
+  display: grid;
+  gap: clamp(22px, 2.4vw, 34px);
+  grid-template-rows: minmax(clamp(360px, 28vw, 450px), auto) auto auto;
+  min-height: 0;
   padding: clamp(28px, 3vw, 42px);
   position: relative;
+}
+
+.website-capability-card-copy {
+  min-height: clamp(360px, 28vw, 450px);
 }
 
 @media (min-width: 1101px) {
@@ -5872,6 +5876,12 @@ h1 {
 .website-final-button:hover {
   background: rgb(255 255 255 / 8%);
   border-color: rgb(255 255 255 / 42%);
+}
+
+.website-capability-card > .website-text-link {
+  align-self: end;
+  margin-top: 0;
+  width: fit-content;
 }
 
 .thinking-journal-section .website-section-heading {
@@ -6801,6 +6811,18 @@ h1 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .website-capability-card {
+    grid-template-rows: minmax(clamp(250px, 30vw, 340px), auto) auto auto;
+  }
+
+  .website-capability-card-copy {
+    min-height: clamp(250px, 30vw, 340px);
+  }
+
+  .website-card-canon {
+    height: clamp(190px, 28vw, 300px);
+  }
+
   .website-platform-system-layout {
     grid-template-columns: 1fr;
   }
@@ -6857,7 +6879,16 @@ h1 {
   }
 
   .website-capability-card {
+    grid-template-rows: auto auto auto;
     min-height: 330px;
+  }
+
+  .website-capability-card-copy {
+    min-height: 0;
+  }
+
+  .website-card-canon {
+    height: clamp(190px, 50vw, 260px);
   }
 
   .website-capability-layer-visual {
@@ -9448,37 +9479,46 @@ section[id],
 
 .website-card-canon {
   align-items: center;
-  aspect-ratio: 1.42 / 1;
+  aspect-ratio: auto;
   background:
-    radial-gradient(circle at 50% 50%, rgb(24 214 255 / 9%), transparent 42%),
-    linear-gradient(180deg, rgb(255 255 255 / 5%), rgb(255 255 255 / 2%));
-  border: 1px solid rgb(255 255 255 / 12%);
+    radial-gradient(circle at 50% 50%, rgb(24 214 255 / 8%), transparent 48%),
+    linear-gradient(180deg, rgb(255 255 255 / 4%), rgb(255 255 255 / 1%));
+  border: 1px solid rgb(255 255 255 / 8%);
   border-radius: 16px;
   box-shadow:
-    inset 0 1px 0 rgb(255 255 255 / 12%),
-    0 28px 80px rgb(0 0 0 / 18%);
+    inset 0 1px 0 rgb(255 255 255 / 8%),
+    0 24px 70px rgb(0 0 0 / 14%);
   display: flex;
-  height: auto;
+  height: clamp(160px, 11.5vw, 205px);
   justify-content: center;
-  margin: 38px 0 0;
+  margin: 0;
   overflow: hidden;
-  padding: clamp(12px, 1.8vw, 24px);
+  padding: clamp(10px, 1.35vw, 18px);
   position: relative;
 }
 
 .website-card-canon::after {
   background:
-    linear-gradient(180deg, rgb(5 5 7 / 18%), transparent 18%, transparent 82%, rgb(5 5 7 / 22%)),
-    linear-gradient(90deg, rgb(5 5 7 / 22%), transparent 16%, transparent 84%, rgb(5 5 7 / 22%));
+    linear-gradient(180deg, rgb(5 5 7 / 28%), transparent 20%, transparent 78%, rgb(5 5 7 / 34%)),
+    linear-gradient(90deg, rgb(5 5 7 / 30%), transparent 18%, transparent 82%, rgb(5 5 7 / 30%));
   content: "";
   inset: 0;
   pointer-events: none;
   position: absolute;
+  z-index: 2;
 }
 
 .website-card-canon-image {
   display: block;
   height: 100%;
+  -webkit-mask-image:
+    linear-gradient(180deg, transparent 0%, #000 14%, #000 84%, transparent 100%),
+    linear-gradient(90deg, transparent 0%, #000 10%, #000 90%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+  mask-image:
+    linear-gradient(180deg, transparent 0%, #000 14%, #000 84%, transparent 100%),
+    linear-gradient(90deg, transparent 0%, #000 10%, #000 90%, transparent 100%);
   object-fit: contain;
   object-position: center;
   position: relative;
@@ -9489,6 +9529,14 @@ section[id],
 .website-card-canon .brand-canon-image {
   display: block;
   height: 100%;
+  -webkit-mask-image:
+    linear-gradient(180deg, transparent 0%, #000 14%, #000 84%, transparent 100%),
+    linear-gradient(90deg, transparent 0%, #000 10%, #000 90%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+  mask-image:
+    linear-gradient(180deg, transparent 0%, #000 14%, #000 84%, transparent 100%),
+    linear-gradient(90deg, transparent 0%, #000 10%, #000 90%, transparent 100%);
   object-fit: contain;
   object-position: center;
   position: relative;
