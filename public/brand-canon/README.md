@@ -8,6 +8,18 @@ The Brand Canon is treated as an official design system.
 
 Only approved Brand Canon assets live at this level. Website code may reference these files directly.
 
+### BC002
+
+`002-organizational-intelligence-engine.png`
+
+Official name: BC002 - Organizational Intelligence Engine.
+
+Purpose: explanatory figure for how an Organizational Intelligence System transforms organizational reality into continuously evolving organizational capabilities.
+
+Usage: beside explanatory content, inside articles, inside theory or inside the Platform explanation.
+
+Never use BC002 as hero artwork, decorative background artwork or a dominant page visual.
+
 ## Incoming assets
 
 `public/brand-canon/_incoming/`

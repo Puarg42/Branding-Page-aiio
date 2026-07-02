@@ -90,7 +90,19 @@ BC001
 Organizational Mind
 
 BC002  
-Organizational Intelligence System
+Organizational Intelligence Engine
+
+Purpose: illustrates how an Organizational Intelligence System transforms organizational reality into continuously evolving organizational capabilities.
+
+Narrative:
+
+- Real organizational world
+- ProcessCollector as grounding
+- ProcessMagnet as Organizational Understanding
+- ProcessForge as getting into action
+- DataForge as continuous evolution
+
+BC002 is explanatory. It is not a decorative hero image.
 
 ### Capabilities
 
@@ -107,6 +119,20 @@ BC104
 Organizational Evolution
 
 This structure may grow over time, but every addition must preserve the same visual logic, editorial discipline and conceptual restraint.
+
+## BC002 Usage Rules
+
+BC002 is an explanatory figure.
+
+It should only appear beside explanatory content, inside articles, inside theory or inside the Platform explanation.
+
+It must never dominate a page.
+
+It must never occupy a hero section.
+
+It must never be used as decorative background artwork.
+
+The approved BC002 asset contains no typography, no labels and no cropped elements. It fades naturally into the background, is suitable for dark mode and follows the Brand Canon.
 
 ## Reference Style
 

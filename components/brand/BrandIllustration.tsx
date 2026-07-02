@@ -12,8 +12,8 @@ const brandCanonAssets: Record<
     src: "/brand-canon/001-organizational-mind.png",
   },
   "BC-002": {
-    alt: "Capability Journey platform illustration",
-    src: "/brand-canon/002-intelligence-engine.png",
+    alt: "Organizational Intelligence Engine brand illustration",
+    src: "/brand-canon/002-organizational-intelligence-engine.png",
   },
   "BC-003": {
     alt: "Transparent Intelligence material illustration",

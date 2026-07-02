@@ -41,23 +41,34 @@ Never use as a product illustration.
 
 ### BC-002
 
-Capability Journey
-
-Former name
-
 Organizational Intelligence Engine
 
 Purpose
 
-Platform explanation.
+Explanatory illustration.
+
+Illustrates how an Organizational Intelligence System transforms organizational reality into continuously evolving organizational capabilities.
+
+Narrative
+
+- Real organizational world
+- ProcessCollector: Grounding
+- ProcessMagnet: Organizational Understanding
+- ProcessForge: Getting into Action
+- DataForge: Continuous Evolution
 
 Used on
 
 - Platform
-- Product pages
-- Capability explanation
+- Articles
+- Theory
+- Capability explanations
 
 Never use as Hero artwork.
+
+Never use as decorative background artwork.
+
+Never allow it to dominate a page.
 
 ### BC-003
 
