@@ -16,20 +16,20 @@ const fadeIn: Variants = {
 
 const capabilitySequence = [
   {
-    title: "Capture Knowledge",
-    copy: "Capture the raw material of organizational experience before it disappears.",
+    title: "Self-Understanding",
+    copy: "Your organization continuously interprets its context, decisions, processes and capabilities.",
   },
   {
-    title: "Build Understanding",
-    copy: "Connect context across people, systems, processes and decisions.",
+    title: "New Capabilities",
+    copy: "What your organization learns becomes a capability it can use again.",
   },
   {
-    title: "Enable Action",
-    copy: "Help teams and AI act from the same organizational context.",
+    title: "Better Decisions",
+    copy: "People and AI work from shared context instead of rebuilding it.",
   },
   {
-    title: "Evolve Organizations",
-    copy: "Turn outcomes into continuous capability improvement.",
+    title: "Coordinated Action",
+    copy: "Teams move with clearer priorities, less rework and stronger execution.",
   },
 ] as const;
 
@@ -57,10 +57,10 @@ export function CapabilityJourney() {
           whileInView="visible"
         >
           <p className="capability-section-title">The Capability Journey</p>
-          <h2>From understanding to organizational capability.</h2>
+          <h2>From Organizational Self-Understanding to Organizational Resilience</h2>
           <p>
-            Your organization captures experience, connects context, coordinates
-            action and improves with every cycle.
+            Your organization becomes resilient when understanding turns into
+            capability, decisions and coordinated action.
           </p>
         </motion.div>
 
@@ -101,11 +101,15 @@ export function CapabilityJourney() {
           viewport={{ amount: 0.42, once: true }}
           whileInView="visible"
         >
-          <p>Context becomes shared.</p>
+          <p>Organizational Self-Understanding</p>
           <span aria-hidden="true">&darr;</span>
-          <p>Decisions become faster.</p>
+          <p>New Organizational Capabilities</p>
           <span aria-hidden="true">&darr;</span>
-          <p>Capability becomes stronger.</p>
+          <p>Better Decisions</p>
+          <span aria-hidden="true">&darr;</span>
+          <p>Coordinated Action</p>
+          <span aria-hidden="true">&darr;</span>
+          <p>Organizational Resilience</p>
         </motion.div>
       </div>
     </section>

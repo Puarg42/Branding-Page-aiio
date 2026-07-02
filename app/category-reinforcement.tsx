@@ -21,7 +21,7 @@ const ceoMoments = [
     statement: "A key expert leaves.",
     support: (
       <>
-        The knowledge remains.
+        The experience remains.
         <br />
         Your organization remembers.
       </>
@@ -48,7 +48,7 @@ const infrastructureStages = [
   },
   {
     era: "Digital Age",
-    foundation: "Digital Knowledge Systems",
+    foundation: "Digital Systems",
   },
   {
     era: "AI Age",

@@ -24,9 +24,9 @@ const problemCards = [
 ] as const;
 
 const intelligenceProgression = [
-  "Fragmented context",
-  "Organizational self-understanding",
-  "Organizational capability",
+  "Information and AI",
+  "Organizational Self-Understanding",
+  "Coordinated action",
 ] as const;
 
 const imagineMoments = [
@@ -131,15 +131,13 @@ function ConceptBreakthrough() {
           <p className="dark-eyebrow">The missing capability</p>
           <h2>Organizations need a shared understanding of how they work.</h2>
           <div className="concept-statement">
-            <p>The problem is not missing information.</p>
-            <p>It is the absence of organizational self-understanding.</p>
+            <p>Organizations collect information, document processes and introduce AI.</p>
+            <p>Yet they still struggle to turn all of this into coordinated action.</p>
+            <p>Not because information is missing, but because continuous Organizational Self-Understanding is.</p>
           </div>
           <p className="concept-support">
             When an organization continuously understands itself, it continuously
             develops new capabilities that help people make better decisions.
-            This does not mean people simply know more. It means the organization
-            itself can continuously interpret its knowledge, decisions, processes
-            and capabilities.
           </p>
           <TheoryReference />
         </div>
@@ -168,7 +166,7 @@ function NewKindOrganization() {
         <div className="organization-header">
           <p className="dark-eyebrow">A New Kind of Organization</p>
           <h2>A more capable organization creates better work.</h2>
-          <p>Your organization reuses what already exists. Decisions carry context forward. Capability improves with every cycle.</p>
+          <p>Your organization makes better decisions, executes with less rework and improves with every cycle.</p>
         </div>
         <div className="organization-closing-block">
           <div className="organization-closing-statement">
@@ -176,8 +174,8 @@ function NewKindOrganization() {
           </div>
         </div>
         <div className="organization-bottom-statement">
-          <p>Self-understanding turns context into coordinated action.</p>
-          <p>Coordinated action strengthens resilience.</p>
+          <p>Self-understanding creates capability.</p>
+          <p>Capability creates resilience.</p>
         </div>
       </div>
     </section>
@@ -210,12 +208,12 @@ function OisArchitecture() {
     <section className="ois-section" id="architektur">
       <div className="ois-intro">
         <p className="ois-section-title">The System</p>
-        <h2>aiio gives self-understanding a system.</h2>
+        <h2>aiio makes organizational capability continuous.</h2>
         <div className="ois-body">
           <p>
             The Organizational Intelligence System connects people, processes,
             systems, AI and organizational context into one foundation for
-            decisions and action.
+            decisions, execution and continuous improvement.
           </p>
         </div>
       </div>
@@ -229,7 +227,7 @@ function OisArchitecture() {
 
       <div className="ois-bottom-statement">
         <p>The OIS is infrastructure, not another application.</p>
-        <p>It helps your organization build capability from every decision.</p>
+        <p>It helps your organization become more capable with every decision.</p>
       </div>
     </section>
   );
@@ -248,11 +246,11 @@ function CompanyPurpose() {
               decisions.
             </p>
             <p>
-              aiio exists to turn organizational self-understanding into a durable
-              business capability.
+              aiio exists to help organizations continuously understand, decide
+              and improve.
             </p>
             <p>
-              The platform turns that capability into better decisions, stronger execution and continuous improvement.
+              The result is better decisions, stronger execution and more resilient organizations.
             </p>
           </div>
         </div>
