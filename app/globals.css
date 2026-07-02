@@ -9486,6 +9486,23 @@ section[id],
   z-index: 1;
 }
 
+.website-card-canon.is-empty {
+  min-height: clamp(160px, 15vw, 230px);
+  opacity: 0.46;
+}
+
+.website-card-canon.is-empty::before {
+  background:
+    radial-gradient(circle at 50% 50%, rgb(179 145 255 / 12%), transparent 46%),
+    linear-gradient(90deg, transparent, rgb(255 255 255 / 12%), transparent);
+  content: "";
+  height: 1px;
+  left: 18%;
+  position: absolute;
+  right: 18%;
+  top: 50%;
+}
+
 @media (max-width: 720px) {
   .hero-visual .brand-canon-image {
     object-position: 50% 50%;

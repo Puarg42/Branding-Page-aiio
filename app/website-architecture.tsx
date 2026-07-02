@@ -65,6 +65,7 @@ export type CapabilityTeaser = {
     alt: string;
     src: string;
   };
+  illustrationSlot?: "BC002A" | "BC002B" | "BC002C" | "BC002D";
   product: "ProcessCollector" | "ProcessMagnet" | "ProcessForge" | "DataForge";
   quote?: string;
   secondaryCopy?: string;
@@ -120,6 +121,12 @@ export function CapabilityTeaserGrid({
                     src={capability.illustration.src}
                   />
                 </figure>
+              ) : capability.illustrationSlot ? (
+                <figure
+                  aria-hidden="true"
+                  className="website-card-canon is-empty"
+                  data-slot={capability.illustrationSlot}
+                />
               ) : null}
               <Link className="website-text-link" href={capability.href}>
                 Learn more <span aria-hidden="true">-&gt;</span>
