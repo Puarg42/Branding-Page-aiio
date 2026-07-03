@@ -5764,6 +5764,12 @@ h1 {
 .website-capability-card {
   --capability-accent: 179 145 255;
   --capability-border: 179 145 255;
+  --capability-image-height: clamp(288px, 21vw, 388px);
+  --capability-index-height: 1.35rem;
+  --capability-heading-height: 5.12rem;
+  --capability-product-height: 3.7rem;
+  --capability-copy-height: 7.9rem;
+  --capability-quote-height: 9rem;
   align-content: stretch;
   background:
     linear-gradient(180deg, rgb(255 255 255 / 5%), rgb(255 255 255 / 1.6%)),
@@ -5777,14 +5783,14 @@ h1 {
   display: grid;
   gap: clamp(14px, 1.25vw, 22px);
   grid-template-rows:
-    clamp(280px, 20vw, 370px)
-    auto
-    minmax(5.1rem, auto)
-    minmax(3.5rem, auto)
-    minmax(7.7rem, auto)
-    minmax(8.8rem, 1fr)
+    var(--capability-image-height)
+    var(--capability-index-height)
+    var(--capability-heading-height)
+    var(--capability-product-height)
+    var(--capability-copy-height)
+    minmax(var(--capability-quote-height), 1fr)
     auto;
-  min-height: clamp(790px, 62vw, 940px);
+  min-height: clamp(805px, 63vw, 960px);
   overflow: hidden;
   padding: 0 0 clamp(26px, 2.5vw, 40px);
   position: relative;
@@ -5866,7 +5872,7 @@ h1 {
   gap: 6px;
   justify-content: start;
   margin: 0 clamp(26px, 2.5vw, 40px);
-  min-height: 3.5rem;
+  min-height: var(--capability-product-height);
   order: 4;
   position: relative;
   z-index: 1;
@@ -5895,8 +5901,8 @@ h1 {
 .website-card-topline span::before {
   color: rgb(var(--capability-accent) / 76%);
   content: "POWERED BY";
-  font-size: 0.68rem;
-  font-weight: 820;
+  font-size: 0.62rem;
+  font-weight: 780;
   letter-spacing: 0.1em;
 }
 
@@ -5904,8 +5910,8 @@ h1 {
   color: rgb(var(--capability-accent) / 94%);
   display: inline-block;
   font-family: var(--font-aiio-heading);
-  font-size: 0.88rem;
-  font-weight: 860;
+  font-size: 1rem;
+  font-weight: 780;
   letter-spacing: 0;
   line-height: 1.08;
   text-transform: none;
@@ -5946,7 +5952,7 @@ h1 {
   font-weight: 600;
   line-height: 1.08;
   margin: 0 clamp(26px, 2.5vw, 40px);
-  min-height: 3.24em;
+  min-height: var(--capability-heading-height);
   order: 3;
   position: relative;
   text-wrap: balance;
@@ -5975,7 +5981,7 @@ h1 {
 
 .website-capability-card-copy > p {
   margin: 0 clamp(26px, 2.5vw, 40px);
-  min-height: 7.7rem;
+  min-height: var(--capability-copy-height);
   order: 5;
   position: relative;
   z-index: 1;
@@ -5989,7 +5995,7 @@ h1 {
   font-weight: 520;
   line-height: 1.46;
   margin: 0 clamp(26px, 2.5vw, 40px);
-  min-height: 8.8rem;
+  min-height: var(--capability-quote-height);
   order: 6;
   padding-left: 18px;
   position: relative;
@@ -7014,13 +7020,16 @@ h1 {
   }
 
   .website-capability-card {
+    --capability-image-height: clamp(260px, 31vw, 360px);
+    --capability-copy-height: 7.2rem;
+    --capability-quote-height: 8rem;
     grid-template-rows:
-      clamp(260px, 31vw, 360px)
-      auto
-      minmax(5.02rem, auto)
-      minmax(2.2rem, auto)
-      minmax(6.4rem, auto)
-      minmax(7.4rem, 1fr)
+      var(--capability-image-height)
+      var(--capability-index-height)
+      var(--capability-heading-height)
+      var(--capability-product-height)
+      var(--capability-copy-height)
+      minmax(var(--capability-quote-height), 1fr)
       auto;
     min-height: clamp(720px, 72vw, 850px);
   }
@@ -7030,7 +7039,7 @@ h1 {
   }
 
   .website-card-canon {
-    height: clamp(260px, 31vw, 360px);
+    height: var(--capability-image-height);
   }
 
   .website-platform-system-layout {
@@ -8939,7 +8948,7 @@ h1 {
   align-items: start;
   display: grid;
   gap: 0;
-  grid-template-columns: minmax(0, 0.78fr) minmax(420px, 1.18fr);
+  grid-template-columns: minmax(0, 0.64fr) minmax(480px, 1.36fr);
   min-height: clamp(560px, 48vw, 800px);
   position: relative;
 }
@@ -8949,14 +8958,18 @@ h1 {
   grid-column: 1 / -1;
   grid-row: 1;
   margin-bottom: 0;
-  max-width: 900px;
+  max-width: 780px;
   position: relative;
   z-index: 2;
 }
 
 .website-platform-system-copy h2 {
   font-size: clamp(2.56rem, 4.1vw, 5rem);
-  max-width: 920px;
+  max-width: 760px;
+}
+
+.website-platform-system-copy > p:not(.website-eyebrow) {
+  max-width: 560px;
 }
 
 .website-capability-layer-visual {
@@ -8965,13 +8978,13 @@ h1 {
   grid-column: 2 / -1;
   grid-row: 1;
   justify-self: end;
-  margin-top: 0;
+  margin-top: clamp(-22px, -1.6vw, -10px);
   min-height: clamp(500px, 41vw, 720px);
-  opacity: 0.9;
+  opacity: 0.88;
   pointer-events: none;
   position: relative;
-  transform: translateX(clamp(18px, 3vw, 54px));
-  width: min(75vw, 980px);
+  transform: translateX(clamp(24px, 4vw, 68px));
+  width: min(80vw, 1060px);
   z-index: 1;
 }
 
@@ -10128,13 +10141,13 @@ section[id],
 .website-platform-system-section .website-capability-layer-visual .brand-canon-image {
   filter: brightness(1.04) contrast(1.03);
   -webkit-mask-image:
-    linear-gradient(180deg, transparent 0%, #000 7%, #000 91%, transparent 100%),
-    linear-gradient(90deg, transparent 0%, #000 3%, #000 97%, transparent 100%);
+    linear-gradient(180deg, #000 0%, #000 88%, transparent 100%),
+    linear-gradient(90deg, #000 0%, #000 86%, transparent 100%);
   -webkit-mask-composite: source-in;
   mask-composite: intersect;
   mask-image:
-    linear-gradient(180deg, transparent 0%, #000 7%, #000 91%, transparent 100%),
-    linear-gradient(90deg, transparent 0%, #000 3%, #000 97%, transparent 100%);
+    linear-gradient(180deg, #000 0%, #000 88%, transparent 100%),
+    linear-gradient(90deg, #000 0%, #000 86%, transparent 100%);
   object-fit: contain;
 }
 
@@ -10146,7 +10159,7 @@ section[id],
   border-radius: 0;
   box-shadow: none;
   display: flex;
-  height: clamp(270px, 20vw, 370px);
+  height: var(--capability-image-height);
   justify-content: center;
   justify-self: stretch;
   margin: 0;
@@ -10179,13 +10192,14 @@ section[id],
   mask-composite: intersect;
   mask-image:
     linear-gradient(180deg, #000 0%, #000 84%, transparent 100%);
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
   position: relative;
   transition:
     filter 360ms ease,
     opacity 360ms ease,
     transform 520ms cubic-bezier(0.16, 1, 0.3, 1);
+  transform: scale(1.08);
   width: 100%;
   z-index: 1;
 }
@@ -10199,13 +10213,14 @@ section[id],
   mask-composite: intersect;
   mask-image:
     linear-gradient(180deg, #000 0%, #000 84%, transparent 100%);
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
   position: relative;
   transition:
     filter 360ms ease,
     opacity 360ms ease,
     transform 520ms cubic-bezier(0.16, 1, 0.3, 1);
+  transform: scale(1.08);
   width: 100%;
   z-index: 1;
 }
@@ -10219,7 +10234,7 @@ section[id],
 .website-capability-card:hover .website-card-canon .brand-canon-image {
   filter: saturate(1.06) brightness(1.06) contrast(1.05);
   opacity: 1;
-  transform: none;
+  transform: scale(1.08);
 }
 
 .website-capability-card[data-capability="collector"] .website-card-canon {
@@ -10230,11 +10245,13 @@ section[id],
 .website-capability-card[data-capability="collector"] .brand-canon-image {
   filter: saturate(0.08) grayscale(0.82) brightness(1.32) contrast(1.1);
   opacity: 1;
+  transform: scale(1.08);
 }
 
 .website-capability-card[data-capability="collector"]:hover .brand-canon-image {
   filter: saturate(0.1) grayscale(0.78) brightness(1.36) contrast(1.12);
   opacity: 1;
+  transform: scale(1.08);
 }
 
 .website-card-canon.is-empty {
