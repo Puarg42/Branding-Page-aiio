@@ -165,7 +165,7 @@ function ConceptBreakthrough() {
           ariaLabel="Missing layer progression"
           className="intelligence-progression"
           items={intelligenceProgression.map((step) => ({
-            label: step.label,
+            label: <TheoryReference>{step.label}</TheoryReference>,
             meta: step.meta,
             tone: step.tone,
           }))}

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import type { ReactNode } from "react";
 import {
   CapabilityTeaserGrid,
@@ -9,6 +8,8 @@ import {
 import { BrandIllustration } from "../../components/brand/BrandIllustration";
 import { EditorialJumpArrow } from "../../components/brand/EditorialJumpArrow";
 import { EditorialProgression } from "../../components/brand/EditorialProgression";
+import { TheoryLink } from "../../components/brand/TheoryLink";
+import { canonicalTheoryLinks } from "../../components/brand/theory-links";
 import { PlatformEditorialExperience } from "./platform-editorial-experience";
 
 export const metadata: Metadata = {
@@ -87,10 +88,10 @@ const platformHeroTitle = (
 ) as unknown as string;
 
 const theoryLinks = {
-  capabilities: "/thinking/theory#6-organizational-capabilities",
-  intelligence: "/thinking/theory#5-organizational-intelligence",
-  resilience: "/thinking/theory#7-organizational-resilience",
-  selfUnderstanding: "/thinking/theory#3-organizations-cannot-understand-themselves",
+  capabilities: canonicalTheoryLinks.organizationalCapabilities,
+  intelligence: canonicalTheoryLinks.organizationalIntelligence,
+  resilience: canonicalTheoryLinks.organizationalResilience,
+  selfUnderstanding: canonicalTheoryLinks.organizationalSelfUnderstanding,
 } as const;
 
 function TheoryTerm({
@@ -103,7 +104,7 @@ function TheoryTerm({
   const label = typeof children === "string" ? children : "this concept";
 
   return (
-    <Link
+    <TheoryLink
       aria-label={`Read theoretical foundation for ${label}`}
       className="platform-theory-term"
       href={href}
@@ -111,7 +112,7 @@ function TheoryTerm({
     >
       <span className="platform-theory-text">{children}</span>
       <EditorialJumpArrow />
-    </Link>
+    </TheoryLink>
   );
 }
 
@@ -154,7 +155,10 @@ export default function PlatformPage() {
                   organizational capabilities
                 </TheoryTerm>{" "}
                 and driving continuous
-                evolution. Together, they form one Organizational Intelligence
+                evolution. Together, they form one{" "}
+                <TheoryTerm href={theoryLinks.intelligence}>
+                  Organizational Intelligence
+                </TheoryTerm>{" "}
                 System.
               </p>
             </div>
@@ -231,7 +235,11 @@ export default function PlatformPage() {
               capabilities.
             </p>
             <p className="website-platform-conclusion-thesis">
-              This is the foundation of Organizational Resilience.
+              This is the foundation of{" "}
+              <TheoryTerm href={theoryLinks.resilience}>
+                Organizational Resilience
+              </TheoryTerm>
+              .
             </p>
             <p className="website-platform-conclusion-final">
               The goal is not better documentation. The goal is not another AI

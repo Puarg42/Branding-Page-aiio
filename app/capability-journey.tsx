@@ -7,6 +7,7 @@ import {
   type Variants,
 } from "framer-motion";
 import { EditorialEyebrow } from "../components/brand/EditorialEyebrow";
+import { TheoryReference } from "../components/brand/TheoryReference";
 
 const motionEase = [0.2, 0, 0, 1] as const;
 
@@ -66,7 +67,11 @@ export function CapabilityJourney() {
           whileInView="visible"
         >
           <EditorialEyebrow>The Capability Journey</EditorialEyebrow>
-          <h2>From Organizational Self-Understanding to Organizational Resilience</h2>
+          <h2>
+            From{" "}
+            <TheoryReference>Organizational Self-Understanding</TheoryReference>{" "}
+            to <TheoryReference>Organizational Resilience</TheoryReference>
+          </h2>
           <p>
             Your organization becomes resilient when understanding turns into
             capability, decisions and coordinated action.
@@ -94,7 +99,9 @@ export function CapabilityJourney() {
               <span className="capability-step-number">
                 {String(index + 1).padStart(2, "0")}
               </span>
-              <h3>{capability.title}</h3>
+              <h3>
+                <TheoryReference>{capability.title}</TheoryReference>
+              </h3>
               <p>{capability.copy}</p>
             </motion.article>
           ))}

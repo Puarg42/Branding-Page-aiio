@@ -1,6 +1,9 @@
-import Link from "next/link";
+"use client";
+
 import type { ReactNode } from "react";
 import { EditorialJumpArrow } from "./EditorialJumpArrow";
+import { TheoryLink } from "./TheoryLink";
+import { getCanonicalTheoryLinkForLabel } from "./theory-links";
 
 type TheoryReferenceProps = {
   children: ReactNode;
@@ -9,19 +12,24 @@ type TheoryReferenceProps = {
 
 export function TheoryReference({
   children,
-  href = "/thinking/theory",
+  href,
 }: TheoryReferenceProps) {
   const label = typeof children === "string" ? children : "this concept";
+  const theoryHref =
+    href ??
+    (typeof children === "string"
+      ? getCanonicalTheoryLinkForLabel(children)
+      : "/thinking/theory");
 
   return (
-    <Link
+    <TheoryLink
       aria-label={`Read theoretical foundation for ${label}`}
       className="theory-reference"
-      href={href}
+      href={theoryHref}
       title="Read theoretical foundation"
     >
       <span className="theory-reference-text">{children}</span>
       <EditorialJumpArrow />
-    </Link>
+    </TheoryLink>
   );
 }

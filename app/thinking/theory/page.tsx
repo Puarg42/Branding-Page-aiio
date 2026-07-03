@@ -5,6 +5,7 @@ import {
   EditorialProgression,
   type EditorialProgressionItem,
 } from "../../../components/brand/EditorialProgression";
+import { getCanonicalTheoryChapterId } from "../../../components/brand/theory-links";
 import { TheorySidebar } from "./theory-sidebar";
 
 export const metadata: Metadata = {
@@ -180,7 +181,7 @@ function getTheoryChapters(): TheoryChapter[] {
 
       return {
         blocks,
-        id: slugify(title),
+        id: getCanonicalTheoryChapterId(title, slugify(title)),
         title,
       };
     });

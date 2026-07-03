@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { EditorialJumpArrow } from "../../components/brand/EditorialJumpArrow";
+import { TheoryLink } from "../../components/brand/TheoryLink";
 import { WebsiteArchitecturePage } from "../website-architecture";
 import { theoryJournalEntries, theoryPublication } from "./publication-model";
 
@@ -21,9 +21,9 @@ export default function ThinkingPage() {
     <WebsiteArchitecturePage
       eyebrow="Thinking"
       heroActions={
-        <Link className="website-text-link" href="/thinking/theory">
+        <TheoryLink className="website-text-link" href="/thinking/theory">
           Read the current Theory <EditorialJumpArrow />
-        </Link>
+        </TheoryLink>
       }
       heroId="thinking-hero"
       intro="Thinking is the public journal of the Theory of Organizational Intelligence. It records what changed, why it matters and which chapters were affected."
@@ -88,9 +88,9 @@ export default function ThinkingPage() {
               state of the publication.
             </p>
 
-            <Link className="website-text-link" href="/thinking/theory">
+            <TheoryLink className="website-text-link" href="/thinking/theory">
               Read the current Theory <EditorialJumpArrow />
-            </Link>
+            </TheoryLink>
           </div>
         </div>
       </section>

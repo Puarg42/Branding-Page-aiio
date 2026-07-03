@@ -2,6 +2,11 @@
 
 import type { MouseEvent } from "react";
 import { useEffect, useState } from "react";
+import {
+  theoryRestoreStorageKey,
+  theoryReturnStorageKey,
+  type TheoryReturnState,
+} from "../../../components/brand/theory-links";
 import { theoryPublication } from "../publication-model";
 
 type TheorySidebarChapter = {
@@ -16,6 +21,7 @@ type TheorySidebarProps = {
 export function TheorySidebar({ chapters }: TheorySidebarProps) {
   const [activeId, setActiveId] = useState(chapters[0]?.id ?? "");
   const [progress, setProgress] = useState(0);
+  const [returnState, setReturnState] = useState<TheoryReturnState | null>(null);
 
   function handleChapterClick(event: MouseEvent<HTMLAnchorElement>, id: string) {
     const chapter = document.getElementById(id);
@@ -26,7 +32,24 @@ export function TheorySidebar({ chapters }: TheorySidebarProps) {
 
     event.preventDefault();
     chapter.scrollIntoView({ behavior: "smooth", block: "start" });
-    window.history.replaceState(null, "", `#${id}`);
+    window.history.pushState(null, "", `#${id}`);
+  }
+
+  function handleReturnClick(event: MouseEvent<HTMLAnchorElement>) {
+    if (!returnState) {
+      return;
+    }
+
+    event.preventDefault();
+    try {
+      sessionStorage.setItem(theoryRestoreStorageKey, JSON.stringify(returnState));
+    } catch {
+      // The fallback URL still returns the reader to the originating page.
+    }
+
+    const returnHash = returnState.sectionId ? `#${returnState.sectionId}` : returnState.hash;
+
+    window.location.assign(`${returnState.path}${returnState.search}${returnHash}`);
   }
 
   useEffect(() => {
@@ -42,6 +65,22 @@ export function TheorySidebar({ chapters }: TheorySidebarProps) {
     function onScroll() {
       window.cancelAnimationFrame(animationFrame);
       animationFrame = window.requestAnimationFrame(updateProgress);
+    }
+
+    const hashId = window.location.hash.replace(/^#/, "");
+
+    if (hashId && chapters.some((chapter) => chapter.id === hashId)) {
+      setActiveId(hashId);
+    }
+
+    try {
+      const storedReturnState = sessionStorage.getItem(theoryReturnStorageKey);
+
+      if (storedReturnState) {
+        setReturnState(JSON.parse(storedReturnState) as TheoryReturnState);
+      }
+    } catch {
+      setReturnState(null);
     }
 
     const observer = new IntersectionObserver(
@@ -78,6 +117,12 @@ export function TheorySidebar({ chapters }: TheorySidebarProps) {
     };
   }, [chapters]);
 
+  const returnHash = returnState?.sectionId ? `#${returnState.sectionId}` : returnState?.hash ?? "";
+  const returnHref = returnState
+    ? `${returnState.path}${returnState.search}${returnHash}`
+    : "/thinking";
+  const returnLabel = returnState ? `Back to ${returnState.sourceLabel}` : "Back to Thinking";
+
   return (
     <aside className="theory-sidebar" aria-label="Theory table of contents">
       <a className="theory-publisher-logo" href="/" aria-label="aiio Startseite">
@@ -85,9 +130,9 @@ export function TheorySidebar({ chapters }: TheorySidebarProps) {
         <span className="sr-only">aiio</span>
       </a>
 
-      <a className="theory-back-link" href="/thinking">
+      <a className="theory-back-link" href={returnHref} onClick={handleReturnClick}>
         <span aria-hidden="true">&larr;</span>
-        Back to Thinking
+        {returnLabel}
       </a>
 
       <div className="theory-sidebar-intro">

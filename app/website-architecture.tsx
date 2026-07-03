@@ -9,6 +9,7 @@ import {
   EditorialSectionNavigator,
   type EditorialSectionNavigatorItem,
 } from "../components/brand/EditorialSectionNavigator";
+import { TheoryReference } from "../components/brand/TheoryReference";
 import { MainHeader } from "./main-navigation";
 
 export type ArchitectureSection = {
@@ -120,8 +121,22 @@ export function CapabilityTeaserGrid({
 }) {
   const journey = [
     { key: "collector", label: "Understand Your Organization" },
-    { key: "magnet", label: "Build Organizational Self-Understanding" },
-    { key: "forge", label: "Enable Organizational Capabilities" },
+    {
+      key: "magnet",
+      label: (
+        <>
+          Build <TheoryReference>Organizational Self-Understanding</TheoryReference>
+        </>
+      ),
+    },
+    {
+      key: "forge",
+      label: (
+        <>
+          Enable <TheoryReference>Organizational Capabilities</TheoryReference>
+        </>
+      ),
+    },
     { key: "dataforge", label: "Continuously Evolve" },
   ];
 

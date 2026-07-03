@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { NavigationMemory } from "../components/brand/NavigationMemory";
 import { SiteFooter } from "./site-footer";
 import { siteUrl } from "./site-url";
 
@@ -56,6 +57,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <NavigationMemory />
         {children}
         <SiteFooter />
       </body>

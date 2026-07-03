@@ -1,3 +1,5 @@
+import { canonicalTheoryIds } from "../../components/brand/theory-links";
+
 export type TheoryChapterReference = {
   id: string;
   title: string;
@@ -16,7 +18,7 @@ export const theoryPublication = {
   lastUpdated: "July 3, 2026",
   readingTime: "Approx. 40 min reading",
   title: "Theory",
-  version: "Version 0.10",
+  version: "Version 0.11",
 } as const;
 
 export const theoryEditorialRules = [
@@ -40,28 +42,42 @@ export const theoryChapterReferences = {
     title: "The Missing Layer",
   },
   organizationalSelfUnderstanding: {
-    id: "3-organizations-cannot-understand-themselves",
+    id: canonicalTheoryIds.organizationalSelfUnderstanding,
     title: "Organizations Cannot Understand Themselves",
   },
   organizationalUnderstanding: {
-    id: "4-organizational-understanding",
+    id: canonicalTheoryIds.organizationalUnderstanding,
     title: "Organizational Understanding",
   },
   organizationalIntelligence: {
-    id: "5-organizational-intelligence",
+    id: canonicalTheoryIds.organizationalIntelligence,
     title: "Organizational Intelligence",
   },
   organizationalCapabilities: {
-    id: "6-organizational-capabilities",
+    id: canonicalTheoryIds.organizationalCapabilities,
     title: "Organizational Capabilities",
   },
   organizationalResilience: {
-    id: "7-organizational-resilience",
+    id: canonicalTheoryIds.organizationalResilience,
     title: "Organizational Resilience",
   },
 } satisfies Record<string, TheoryChapterReference>;
 
 export const theoryJournalEntries: TheoryJournalEntry[] = [
+  {
+    affectedChapters: [
+      theoryChapterReferences.organizationalSelfUnderstanding,
+      theoryChapterReferences.organizationalIntelligence,
+      theoryChapterReferences.organizationalCapabilities,
+      theoryChapterReferences.organizationalResilience,
+    ],
+    coreThesis:
+      "Theory becomes the canonical knowledge reference for the aiio website.",
+    date: "July 3, 2026",
+    version: "0.11",
+    whyItMatters:
+      "This revision introduces canonical chapter anchors, context-aware return navigation, alignment with Platform terminology, an updated capability hierarchy and the deep-link architecture that connects website concepts to their consolidated Theory chapters.",
+  },
   {
     affectedChapters: [
       theoryChapterReferences.prologue,
