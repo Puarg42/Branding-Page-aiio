@@ -1,3 +1,5 @@
+"use client";
+
 export type BrandIllustrationVariant =
   | "BC-001"
   | "BC-002"
@@ -8,7 +10,7 @@ export type BrandIllustrationVariant =
   | "BC203"
   | "BC204";
 
-const brandCanonAssets: Record<
+export const brandCanonAssets: Record<
   BrandIllustrationVariant,
   {
     alt: string;
@@ -52,29 +54,56 @@ const brandCanonAssets: Record<
 type BrandIllustrationProps = {
   className?: string;
   decorative?: boolean;
+  interactive?: boolean;
   priority?: boolean;
   variant: BrandIllustrationVariant;
 };
 
+function openBrandCanonLightbox(variant: BrandIllustrationVariant) {
+  window.dispatchEvent(
+    new CustomEvent("aiio:brand-canon-open", {
+      detail: { variant },
+    }),
+  );
+}
+
 export function BrandIllustration({
   className = "",
   decorative = true,
+  interactive = false,
   priority = false,
   variant,
 }: BrandIllustrationProps) {
   const asset = brandCanonAssets[variant];
+  const image = (
+    <img
+      alt={decorative && !interactive ? "" : asset.alt}
+      className="brand-canon-image"
+      loading={priority ? "eager" : "lazy"}
+      src={asset.src}
+    />
+  );
 
   return (
     <figure
-      aria-hidden={decorative ? "true" : undefined}
-      className={`brand-canon-figure is-${variant.toLowerCase()} ${className}`.trim()}
+      aria-hidden={decorative && !interactive ? "true" : undefined}
+      className={`brand-canon-figure is-${variant.toLowerCase()}${
+        interactive ? " is-interactive" : ""
+      } ${className}`.trim()}
+      data-brand-canon-variant={variant}
     >
-      <img
-        alt={decorative ? "" : asset.alt}
-        className="brand-canon-image"
-        loading={priority ? "eager" : "lazy"}
-        src={asset.src}
-      />
+      {interactive ? (
+        <button
+          aria-label={`Open ${asset.alt}`}
+          className="brand-canon-trigger"
+          onClick={() => openBrandCanonLightbox(variant)}
+          type="button"
+        >
+          {image}
+        </button>
+      ) : (
+        image
+      )}
     </figure>
   );
 }

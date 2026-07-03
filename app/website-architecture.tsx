@@ -14,6 +14,7 @@ export type ArchitectureSection = {
 type WebsiteArchitecturePageProps = {
   children?: ReactNode;
   eyebrow: string;
+  heroId?: string;
   intro: string;
   sections?: readonly ArchitectureSection[];
   title: string;
@@ -22,6 +23,7 @@ type WebsiteArchitecturePageProps = {
 export function WebsiteArchitecturePage({
   children,
   eyebrow,
+  heroId,
   intro,
   sections = [],
   title,
@@ -29,7 +31,7 @@ export function WebsiteArchitecturePage({
   return (
     <main className="website-page">
       <MainHeader />
-      <section className="website-hero">
+      <section className="website-hero" id={heroId}>
         <div className="website-page-shell">
           <p className="website-eyebrow">{eyebrow}</p>
           <h1>{title}</h1>
@@ -92,8 +94,10 @@ function capabilityKey(product: CapabilityTeaser["product"]) {
 
 export function CapabilityTeaserGrid({
   capabilities,
+  sectionId,
 }: {
   capabilities: CapabilityTeaser[];
+  sectionId?: string;
 }) {
   const journey = [
     { key: "collector", label: "Understand Your Organization" },
@@ -103,7 +107,11 @@ export function CapabilityTeaserGrid({
   ];
 
   return (
-    <section className="website-capability-section" aria-label="Platform capabilities">
+    <section
+      className="website-capability-section"
+      id={sectionId}
+      aria-label="Platform capabilities"
+    >
       <div className="website-page-shell">
         <div className="website-section-heading">
           <p className="website-eyebrow">Capabilities</p>
@@ -157,6 +165,7 @@ export function CapabilityTeaserGrid({
                 <BrandIllustration
                   className="website-card-canon"
                   decorative={false}
+                  interactive
                   variant={capability.illustrationVariant}
                 />
               ) : capability.illustration ? (

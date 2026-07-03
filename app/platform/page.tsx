@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import type { ReactNode } from "react";
 import {
   CapabilityTeaserGrid,
   WebsiteArchitecturePage,
   type CapabilityTeaser,
 } from "../website-architecture";
 import { BrandIllustration } from "../../components/brand/BrandIllustration";
+import { PlatformEditorialExperience } from "./platform-editorial-experience";
 
 export const metadata: Metadata = {
   title: "Platform | aiio",
@@ -74,10 +77,40 @@ const platformHeroTitle = (
   </>
 ) as unknown as string;
 
+const theoryLinks = {
+  capabilities: "/thinking/theory#6-organizational-capabilities",
+  intelligence: "/thinking/theory#5-organizational-intelligence",
+  resilience: "/thinking/theory#7-organizational-resilience",
+  selfUnderstanding: "/thinking/theory#3-organizations-cannot-understand-themselves",
+} as const;
+
+function TheoryTerm({
+  children,
+  href,
+}: {
+  children: ReactNode;
+  href: string;
+}) {
+  return (
+    <span className="platform-theory-term">
+      {children}
+      <Link
+        aria-label={`Read theoretical foundation for ${children}`}
+        className="platform-theory-indicator"
+        href={href}
+        title="Read theoretical foundation"
+      >
+        ↗ Theory
+      </Link>
+    </span>
+  );
+}
+
 export default function PlatformPage() {
   return (
     <WebsiteArchitecturePage
       eyebrow="Platform"
+      heroId="platform-hero"
       intro="Organizations need more than disconnected software. They need a system that turns organizational reality into understanding, understanding into capabilities and capabilities into continuous evolution."
       title={platformHeroTitle}
     >
@@ -89,28 +122,52 @@ export default function PlatformPage() {
           <div className="website-platform-system-layout">
             <div className="website-section-heading website-platform-system-copy">
               <p className="website-eyebrow">The System</p>
-              <h2>Organizational Intelligence emerges through four capabilities.</h2>
+              <h2>
+                <TheoryTerm href={theoryLinks.intelligence}>
+                  Organizational Intelligence
+                </TheoryTerm>{" "}
+                emerges through four capabilities.
+              </h2>
               <p>
-                Organizational Intelligence does not emerge from isolated tools.
+                <TheoryTerm href={theoryLinks.intelligence}>
+                  Organizational Intelligence
+                </TheoryTerm>{" "}
+                does not emerge from isolated tools.
                 It emerges when four capabilities work together: understanding
-                the organization, developing Organizational Self-Understanding,
-                enabling organizational capabilities and driving continuous
+                the organization, developing{" "}
+                <TheoryTerm href={theoryLinks.selfUnderstanding}>
+                  Organizational Self-Understanding
+                </TheoryTerm>
+                , enabling{" "}
+                <TheoryTerm href={theoryLinks.capabilities}>
+                  organizational capabilities
+                </TheoryTerm>{" "}
+                and driving continuous
                 evolution. Together, they form one Organizational Intelligence
                 System.
               </p>
             </div>
             <div className="website-capability-layer-visual">
-              <BrandIllustration variant="BC-002" />
+              <BrandIllustration decorative={false} interactive variant="BC-002" />
             </div>
           </div>
         </div>
       </section>
-      <CapabilityTeaserGrid capabilities={capabilities} />
-      <section className="website-architecture-section website-platform-outcome-section">
+      <CapabilityTeaserGrid capabilities={capabilities} sectionId="platform-capabilities" />
+      <section
+        className="website-architecture-section website-platform-outcome-section"
+        id="platform-outcome"
+      >
         <div className="website-page-shell">
           <div className="website-platform-conclusion">
             <p className="website-eyebrow">Outcome</p>
-            <h2>The outcome is organizational resilience.</h2>
+            <h2>
+              The outcome is{" "}
+              <TheoryTerm href={theoryLinks.resilience}>
+                organizational resilience
+              </TheoryTerm>
+              .
+            </h2>
             <p>
               The outcome is not another software platform.
             </p>
@@ -125,19 +182,35 @@ export default function PlatformPage() {
             >
               <div>
                 <span>Level 1</span>
-                <strong>Organizational Self-Understanding</strong>
+                <strong>
+                  <TheoryTerm href={theoryLinks.selfUnderstanding}>
+                    Organizational Self-Understanding
+                  </TheoryTerm>
+                </strong>
               </div>
               <div>
                 <span>Level 2</span>
-                <strong>Organizational Intelligence</strong>
+                <strong>
+                  <TheoryTerm href={theoryLinks.intelligence}>
+                    Organizational Intelligence
+                  </TheoryTerm>
+                </strong>
               </div>
               <div>
                 <span>Level 3</span>
-                <strong>Organizational Capabilities</strong>
+                <strong>
+                  <TheoryTerm href={theoryLinks.capabilities}>
+                    Organizational Capabilities
+                  </TheoryTerm>
+                </strong>
               </div>
               <div>
                 <span>Business Outcome</span>
-                <strong>Organizational Resilience</strong>
+                <strong>
+                  <TheoryTerm href={theoryLinks.resilience}>
+                    Organizational Resilience
+                  </TheoryTerm>
+                </strong>
               </div>
             </div>
             <p>
@@ -147,7 +220,11 @@ export default function PlatformPage() {
               capabilities.
             </p>
             <p className="website-platform-conclusion-thesis">
-              This is the foundation of Organizational Resilience.
+              This is the foundation of{" "}
+              <TheoryTerm href={theoryLinks.resilience}>
+                Organizational Resilience
+              </TheoryTerm>
+              .
             </p>
             <p className="website-platform-conclusion-final">
               The goal is not better documentation. The goal is not another AI
@@ -162,6 +239,7 @@ export default function PlatformPage() {
           </div>
         </div>
       </section>
+      <PlatformEditorialExperience />
     </WebsiteArchitecturePage>
   );
 }
