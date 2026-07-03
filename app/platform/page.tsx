@@ -16,7 +16,7 @@ const capabilities: CapabilityTeaser[] = [
   {
     title: "Understand Your Organization",
     copy:
-      "Create and continuously refine the human-readable representation of your organization: how it works, why it works and where decisions depend on it.",
+      "Create a human-readable representation of your organization so teams can see its structure, responsibilities and decisions clearly.",
     illustrationVariant: "BC201",
     product: "ProcessCollector",
     quote:
@@ -26,9 +26,7 @@ const capabilities: CapabilityTeaser[] = [
   {
     title: "Build Organizational Self-Understanding",
     copy:
-      "Develop Organizational Self-Understanding by continuously connecting organizational reality across people, systems, documents, operations, standards and external intelligence.",
-    secondaryCopy:
-      "ProcessCollector creates the representation. ProcessMagnet connects it with reality so your organization can continuously interpret itself.",
+      "Connect organizational reality into self-understanding so your organization can interpret its structures, relationships and decisions.",
     illustrationVariant: "BC202",
     product: "ProcessMagnet",
     quote:
@@ -38,9 +36,7 @@ const capabilities: CapabilityTeaser[] = [
   {
     title: "Enable Organizational Capabilities",
     copy:
-      "Turn organizational understanding into capabilities your organization can repeat, improve and trust.",
-    secondaryCopy:
-      "Those capabilities help people make better decisions and coordinate action every day.",
+      "Turn self-understanding into capabilities your organization can repeat, improve and trust in daily execution.",
     illustrationVariant: "BC203",
     product: "ProcessForge",
     quote:
@@ -48,11 +44,9 @@ const capabilities: CapabilityTeaser[] = [
     href: "#processforge",
   },
   {
-    title: "Continuously Evolve",
+    title: "Continuously Evolve Your Organization",
     copy:
-      "Use goals, scenarios, operational reality and Organizational Intelligence to keep capabilities improving.",
-    secondaryCopy:
-      "Resilience becomes the outcome of continuous organizational evolution.",
+      "Use goals, scenarios and operational reality to evolve capabilities and strengthen resilience under change.",
     illustrationVariant: "BC204",
     product: "DataForge",
     quote:
@@ -81,8 +75,9 @@ export default function PlatformPage() {
                 Organizational Intelligence does not emerge from isolated tools.
                 It emerges when four capabilities work together: understanding
                 the organization, developing Organizational Self-Understanding,
-                enabling capabilities and driving continuous evolution. Together,
-                they form one Organizational Intelligence System.
+                enabling organizational capabilities and driving continuous
+                evolution. Together, they form one Organizational Intelligence
+                System.
               </p>
             </div>
             <div className="website-capability-layer-visual">

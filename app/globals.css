@@ -5719,6 +5719,7 @@ h1 {
 .website-capability-card {
   --capability-accent: 179 145 255;
   --capability-border: 179 145 255;
+  align-content: start;
   background:
     linear-gradient(180deg, rgb(255 255 255 / 5%), rgb(255 255 255 / 1.6%)),
     rgb(255 255 255 / 1.4%);
@@ -5729,12 +5730,23 @@ h1 {
     0 0 60px rgb(var(--capability-accent) / 5%),
     inset 0 1px 0 rgb(255 255 255 / 9%);
   display: grid;
-  gap: clamp(32px, 3.5vw, 50px);
-  grid-template-rows: minmax(clamp(390px, 29vw, 480px), auto) auto auto;
-  min-height: 0;
+  gap: clamp(16px, 1.4vw, 24px);
+  grid-template-rows:
+    auto
+    auto
+    minmax(5.1rem, auto)
+    auto
+    minmax(6.6rem, auto)
+    minmax(7.8rem, auto)
+    auto;
+  min-height: clamp(760px, 61vw, 920px);
   overflow: hidden;
-  padding: clamp(34px, 3.6vw, 54px);
+  padding: clamp(26px, 2.5vw, 40px);
   position: relative;
+  transition:
+    border-color 260ms ease,
+    box-shadow 260ms ease,
+    transform 260ms ease;
 }
 
 .website-capability-card[data-capability="collector"],
@@ -5770,12 +5782,25 @@ h1 {
   opacity: 0.92;
   pointer-events: none;
   position: absolute;
+  transition: opacity 260ms ease;
 }
 
 .website-capability-card-copy {
-  min-height: clamp(390px, 29vw, 480px);
-  position: relative;
-  z-index: 1;
+  display: contents;
+  min-height: 0;
+}
+
+.website-capability-card:hover {
+  border-color: rgb(var(--capability-border) / 28%);
+  box-shadow:
+    0 48px 128px rgb(0 0 0 / 32%),
+    0 0 92px rgb(var(--capability-accent) / 10%),
+    inset 0 1px 0 rgb(255 255 255 / 12%);
+  transform: translateY(-2px);
+}
+
+.website-capability-card:hover::before {
+  opacity: 1;
 }
 
 @media (min-width: 1101px) {
@@ -5796,7 +5821,10 @@ h1 {
   flex-wrap: wrap;
   gap: 12px;
   justify-content: flex-start;
-  margin: 20px 0 0;
+  margin: 0;
+  order: 4;
+  position: relative;
+  z-index: 1;
 }
 
 .website-card-topline span,
@@ -5827,10 +5855,25 @@ h1 {
   font-size: 0.86rem;
   font-weight: 620;
   letter-spacing: 0.08em;
-  margin-bottom: 24px;
+  margin: 6px 0 0;
+  order: 2;
+  position: relative;
+  z-index: 1;
 }
 
-.website-capability-card h3,
+.website-capability-card h3 {
+  color: #ffffff;
+  font-family: var(--font-aiio-heading);
+  font-size: clamp(1.24rem, 1.18vw, 1.48rem);
+  font-weight: 600;
+  line-height: 1.08;
+  margin: 0;
+  order: 3;
+  position: relative;
+  text-wrap: balance;
+  z-index: 1;
+}
+
 .website-architecture-card h3 {
   color: #ffffff;
   font-family: var(--font-aiio-heading);
@@ -5850,6 +5893,14 @@ h1 {
   margin: 26px 0 0;
 }
 
+.website-capability-card-copy > p {
+  margin: 0;
+  min-height: 6.6rem;
+  order: 5;
+  position: relative;
+  z-index: 1;
+}
+
 .website-capability-quote {
   border-left: 1px solid rgb(var(--capability-accent) / 42%);
   color: rgb(255 255 255 / 76%);
@@ -5857,8 +5908,12 @@ h1 {
   font-size: 1.04rem;
   font-weight: 520;
   line-height: 1.46;
-  margin: 32px 0 0;
+  margin: 0;
+  min-height: 7.8rem;
+  order: 6;
   padding-left: 18px;
+  position: relative;
+  z-index: 1;
 }
 
 .website-text-link {
@@ -5938,6 +5993,7 @@ h1 {
   border-color: rgb(var(--capability-accent) / 30%);
   color: rgb(255 255 255 / 88%);
   margin-top: 0;
+  order: 7;
   position: relative;
   width: fit-content;
   z-index: 1;
@@ -6876,15 +6932,23 @@ h1 {
   }
 
   .website-capability-card {
-    grid-template-rows: minmax(clamp(300px, 34vw, 390px), auto) auto auto;
+    grid-template-rows:
+      auto
+      auto
+      minmax(4.8rem, auto)
+      auto
+      minmax(5.9rem, auto)
+      minmax(6.8rem, auto)
+      auto;
+    min-height: 0;
   }
 
   .website-capability-card-copy {
-    min-height: clamp(300px, 34vw, 390px);
+    min-height: 0;
   }
 
   .website-card-canon {
-    height: clamp(250px, 32vw, 360px);
+    height: clamp(260px, 31vw, 360px);
   }
 
   .website-platform-system-layout {
@@ -6943,8 +7007,17 @@ h1 {
   }
 
   .website-capability-card {
-    grid-template-rows: auto auto auto;
+    gap: 18px;
+    grid-template-rows:
+      auto
+      auto
+      auto
+      auto
+      auto
+      auto
+      auto;
     min-height: 330px;
+    padding: clamp(24px, 7vw, 34px);
   }
 
   .website-capability-card-copy {
@@ -6953,6 +7026,20 @@ h1 {
 
   .website-card-canon {
     height: clamp(230px, 62vw, 320px);
+    margin:
+      clamp(-34px, -7vw, -24px)
+      clamp(-34px, -7vw, -24px)
+      6px;
+    width: calc(100% + clamp(48px, 14vw, 68px));
+  }
+
+  .website-capability-card h3 {
+    font-size: clamp(1.48rem, 7vw, 1.9rem);
+  }
+
+  .website-capability-card-copy > p,
+  .website-capability-quote {
+    min-height: 0;
   }
 
   .website-capability-layer-visual {
@@ -9765,27 +9852,35 @@ section[id],
   align-items: center;
   aspect-ratio: auto;
   background:
-    radial-gradient(circle at 50% 48%, rgb(var(--capability-accent) / 12%), transparent 58%),
-    linear-gradient(180deg, rgb(255 255 255 / 2%), transparent 74%);
-  border: 1px solid rgb(var(--capability-accent) / 10%);
-  border-radius: 24px;
+    radial-gradient(circle at 50% 50%, rgb(var(--capability-accent) / 15%), transparent 62%),
+    linear-gradient(180deg, rgb(255 255 255 / 2%), transparent 82%);
+  border: 0;
+  border-radius: 26px 26px 18px 18px;
   box-shadow:
-    inset 0 1px 0 rgb(255 255 255 / 7%),
-    0 30px 90px rgb(var(--capability-accent) / 7%);
+    0 24px 84px rgb(var(--capability-accent) / 6%),
+    inset 0 1px 0 rgb(255 255 255 / 4%);
   display: flex;
-  height: clamp(230px, 17vw, 320px);
+  height: clamp(270px, 20vw, 370px);
   justify-content: center;
   justify-self: stretch;
-  margin: 0;
+  margin:
+    clamp(-40px, -2.5vw, -26px)
+    clamp(-40px, -2.5vw, -26px)
+    8px;
+  order: 1;
   overflow: hidden;
-  padding: clamp(8px, 1.1vw, 14px);
+  padding: clamp(4px, 0.6vw, 10px);
   position: relative;
+  transition:
+    background 260ms ease,
+    box-shadow 260ms ease;
+  width: calc(100% + clamp(52px, 5vw, 80px));
 }
 
 .website-card-canon::after {
   background:
-    linear-gradient(180deg, rgb(5 5 7 / 22%), transparent 18%, transparent 82%, rgb(5 5 7 / 26%)),
-    linear-gradient(90deg, rgb(5 5 7 / 24%), transparent 14%, transparent 86%, rgb(5 5 7 / 24%));
+    linear-gradient(180deg, rgb(5 5 7 / 44%), transparent 18%, transparent 78%, rgb(5 5 7 / 62%)),
+    linear-gradient(90deg, rgb(5 5 7 / 38%), transparent 14%, transparent 86%, rgb(5 5 7 / 38%));
   content: "";
   inset: 0;
   pointer-events: none;
@@ -9797,16 +9892,20 @@ section[id],
   display: block;
   height: 100%;
   -webkit-mask-image:
-    linear-gradient(180deg, transparent 0%, #000 10%, #000 88%, transparent 100%),
-    linear-gradient(90deg, transparent 0%, #000 7%, #000 93%, transparent 100%);
+    linear-gradient(180deg, transparent 0%, #000 7%, #000 86%, transparent 100%),
+    linear-gradient(90deg, transparent 0%, #000 5%, #000 95%, transparent 100%);
   -webkit-mask-composite: source-in;
   mask-composite: intersect;
   mask-image:
-    linear-gradient(180deg, transparent 0%, #000 10%, #000 88%, transparent 100%),
-    linear-gradient(90deg, transparent 0%, #000 7%, #000 93%, transparent 100%);
+    linear-gradient(180deg, transparent 0%, #000 7%, #000 86%, transparent 100%),
+    linear-gradient(90deg, transparent 0%, #000 5%, #000 95%, transparent 100%);
   object-fit: contain;
   object-position: center;
   position: relative;
+  transition:
+    filter 360ms ease,
+    opacity 360ms ease,
+    transform 520ms cubic-bezier(0.16, 1, 0.3, 1);
   width: 100%;
   z-index: 1;
 }
@@ -9815,32 +9914,57 @@ section[id],
   display: block;
   height: 100%;
   -webkit-mask-image:
-    linear-gradient(180deg, transparent 0%, #000 10%, #000 88%, transparent 100%),
-    linear-gradient(90deg, transparent 0%, #000 7%, #000 93%, transparent 100%);
+    linear-gradient(180deg, transparent 0%, #000 7%, #000 86%, transparent 100%),
+    linear-gradient(90deg, transparent 0%, #000 5%, #000 95%, transparent 100%);
   -webkit-mask-composite: source-in;
   mask-composite: intersect;
   mask-image:
-    linear-gradient(180deg, transparent 0%, #000 10%, #000 88%, transparent 100%),
-    linear-gradient(90deg, transparent 0%, #000 7%, #000 93%, transparent 100%);
+    linear-gradient(180deg, transparent 0%, #000 7%, #000 86%, transparent 100%),
+    linear-gradient(90deg, transparent 0%, #000 5%, #000 95%, transparent 100%);
   object-fit: contain;
   object-position: center;
   position: relative;
+  transition:
+    filter 360ms ease,
+    opacity 360ms ease,
+    transform 520ms cubic-bezier(0.16, 1, 0.3, 1);
   width: 100%;
   z-index: 1;
 }
 
+.website-capability-card:hover .website-card-canon {
+  background:
+    radial-gradient(circle at 50% 50%, rgb(var(--capability-accent) / 20%), transparent 64%),
+    linear-gradient(180deg, rgb(255 255 255 / 2.8%), transparent 82%);
+  box-shadow:
+    0 30px 104px rgb(var(--capability-accent) / 11%),
+    inset 0 1px 0 rgb(255 255 255 / 6%);
+}
+
+.website-capability-card:hover .website-card-canon-image,
+.website-capability-card:hover .website-card-canon .brand-canon-image {
+  filter: saturate(1.06) brightness(1.06) contrast(1.05);
+  opacity: 1;
+  transform: scale(1.07);
+}
+
 .website-capability-card[data-capability="collector"] .website-card-canon {
   background:
-    radial-gradient(circle at 50% 48%, rgb(150 156 166 / 10%), transparent 58%),
-    linear-gradient(180deg, rgb(255 255 255 / 2%), transparent 74%);
+    radial-gradient(circle at 50% 50%, rgb(150 156 166 / 13%), transparent 62%),
+    linear-gradient(180deg, rgb(255 255 255 / 2%), transparent 82%);
   box-shadow:
-    inset 0 1px 0 rgb(255 255 255 / 7%),
-    0 30px 90px rgb(150 156 166 / 6%);
+    0 24px 84px rgb(150 156 166 / 7%),
+    inset 0 1px 0 rgb(255 255 255 / 4%);
 }
 
 .website-capability-card[data-capability="collector"] .brand-canon-image {
-  filter: saturate(0.36) grayscale(0.28) brightness(0.92) contrast(1.08);
-  opacity: 0.9;
+  filter: saturate(0.26) grayscale(0.46) brightness(1.02) contrast(1.07);
+  opacity: 0.94;
+}
+
+.website-capability-card[data-capability="collector"]:hover .brand-canon-image {
+  filter: saturate(0.28) grayscale(0.42) brightness(1.08) contrast(1.1);
+  opacity: 1;
 }
 
 .website-card-canon.is-empty {
