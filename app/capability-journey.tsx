@@ -6,7 +6,7 @@ import {
   type Transition,
   type Variants,
 } from "framer-motion";
-import { EditorialProgression } from "../components/brand/EditorialProgression";
+import { EditorialEyebrow } from "../components/brand/EditorialEyebrow";
 
 const motionEase = [0.2, 0, 0, 1] as const;
 
@@ -65,7 +65,7 @@ export function CapabilityJourney() {
           viewport={{ amount: 0.45, once: true }}
           whileInView="visible"
         >
-          <p className="capability-section-title">The Capability Journey</p>
+          <EditorialEyebrow>The Capability Journey</EditorialEyebrow>
           <h2>From Organizational Self-Understanding to Organizational Resilience</h2>
           <p>
             Your organization becomes resilient when understanding turns into
@@ -99,30 +99,6 @@ export function CapabilityJourney() {
             </motion.article>
           ))}
         </div>
-
-        <motion.div
-          className="capability-closing"
-          initial="hidden"
-          transition={
-            shouldReduceMotion
-              ? { duration: 0 }
-              : { duration: 0.95, ease: motionEase }
-          }
-          variants={variants}
-          viewport={{ amount: 0.42, once: true }}
-          whileInView="visible"
-        >
-          <EditorialProgression
-            ariaLabel="Capability outcome progression"
-            items={[
-              { label: "Organizational Self-Understanding", meta: "Level 1", tone: "cyan" },
-              { label: "Organizational Intelligence", meta: "Level 2", tone: "purple" },
-              { label: "Organizational Capabilities", meta: "Level 3", tone: "amber" },
-              { label: "Organizational Resilience", meta: "Outcome", tone: "violet" },
-            ]}
-            orientation="horizontal"
-          />
-        </motion.div>
       </div>
     </section>
   );

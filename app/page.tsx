@@ -1,7 +1,10 @@
+import Link from "next/link";
 import { MainHeader } from "./main-navigation";
 import { CapabilityJourney } from "./capability-journey";
 import { CategoryEvolution, CeoMondayMoment } from "./category-reinforcement";
 import { BrandIllustration } from "../components/brand/BrandIllustration";
+import { EditorialEyebrow } from "../components/brand/EditorialEyebrow";
+import { EditorialJumpArrow } from "../components/brand/EditorialJumpArrow";
 import { EditorialSectionNavigator } from "../components/brand/EditorialSectionNavigator";
 import { EditorialProgression } from "../components/brand/EditorialProgression";
 import { TheoryReference } from "../components/brand/TheoryReference";
@@ -84,6 +87,7 @@ const homeSectionNavigator = [
   { id: "capabilities", label: "Journey" },
   { id: "architektur", label: "System" },
   { id: "self-enabling-organization", label: "Outcome" },
+  { id: "monday-morning", label: "Monday" },
 ] as const;
 
 function Hero() {
@@ -116,7 +120,7 @@ function ProblemSection() {
   return (
     <section className="problem-section" id="problem">
       <div className="problem-inner">
-        <p className="dark-eyebrow">The problem</p>
+        <EditorialEyebrow>The problem</EditorialEyebrow>
         <h2>Organizations know more than they can use.</h2>
         <div className="problem-grid">
           {problemCards.map((card) => (
@@ -141,7 +145,7 @@ function ConceptBreakthrough() {
     <section className="concept-section" id="organizational-intelligence">
       <div className="concept-inner">
         <div className="concept-copy">
-          <p className="dark-eyebrow">The missing capability</p>
+          <EditorialEyebrow>The missing capability</EditorialEyebrow>
           <h2>The missing capability is continuous self-understanding.</h2>
           <div className="concept-statement">
             <p>Organizations collect information, document processes and introduce AI.</p>
@@ -181,7 +185,7 @@ function NewKindOrganization() {
       </div>
       <div className="organization-inner">
         <div className="organization-header">
-          <p className="dark-eyebrow">Outcome</p>
+          <EditorialEyebrow>Outcome</EditorialEyebrow>
           <h2>A more resilient organization creates better work.</h2>
           <p>Your organization makes better decisions, executes with less rework and adapts with more confidence.</p>
         </div>
@@ -225,7 +229,12 @@ function OisArchitecture() {
     <section className="ois-section" id="architektur">
       <div className="ois-editorial-layout">
         <div className="ois-intro">
-          <p className="ois-section-title">The System</p>
+          <div className="home-section-kicker">
+            <EditorialEyebrow>The System</EditorialEyebrow>
+            <Link className="home-platform-link" href="/platform">
+              Platform <EditorialJumpArrow />
+            </Link>
+          </div>
           <h2>The Organizational Intelligence System gives this capability a place to operate.</h2>
           <div className="ois-body">
             <p>
@@ -256,7 +265,7 @@ function CompanyPurpose() {
     <section className="company-purpose-section" id="company">
       <div className="company-purpose-inner">
         <div className="company-purpose-copy">
-          <p className="company-purpose-title">Company</p>
+          <EditorialEyebrow>Company</EditorialEyebrow>
           <h2>Why aiio exists</h2>
           <div>
             <p>

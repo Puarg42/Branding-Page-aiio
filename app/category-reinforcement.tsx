@@ -3,6 +3,7 @@
 import { motion, useReducedMotion, type Transition, type Variants } from "framer-motion";
 
 import { BrandIllustration } from "../components/brand/BrandIllustration";
+import { EditorialEyebrow } from "../components/brand/EditorialEyebrow";
 
 const motionEase = [0.2, 0, 0, 1] as const;
 
@@ -56,12 +57,14 @@ const infrastructureStages = [
   },
   {
     era: "Next Age",
-    foundation: "Organizational Intelligence",
+    foundation: "Organizational Self-Understanding",
+    tone: "cyan",
   },
   {
     era: "Outcome",
-    foundation: "Self-Enabling Organizations",
+    foundation: "Organizational Resilience",
     featured: true,
+    tone: "violet",
   },
 ] as const;
 
@@ -86,11 +89,12 @@ export function CeoMondayMoment() {
 
   return (
     <section className="ceo-moment-section" id="monday-morning">
-      <p className="ceo-moment-title">Imagine Monday Morning.</p>
+      <EditorialEyebrow className="ceo-moment-title">Imagine Monday Morning</EditorialEyebrow>
       {ceoMoments.map((moment, index) => (
         <section className="ceo-moment" key={moment.statement}>
           <motion.div
-            className="ceo-moment-copy"
+            className="ceo-moment-copy ceo-moment-card"
+            data-step={String(index + 1).padStart(2, "0")}
             {...reveal}
             transition={{
               ...reveal.transition,
@@ -145,7 +149,7 @@ export function CategoryEvolution() {
   return (
     <section className="category-evolution-section" id="category-evolution">
       <motion.div className="category-evolution-intro" {...reveal}>
-        <p className="category-evolution-title">Why Now?</p>
+        <EditorialEyebrow className="category-evolution-title">Why Now</EditorialEyebrow>
         <h2>A new era of complexity requires a new organizational capability.</h2>
       </motion.div>
 
@@ -153,9 +157,13 @@ export function CategoryEvolution() {
         <div className="category-timeline-line" aria-hidden="true" />
         {infrastructureStages.map((stage, index) => (
           <motion.article
-            className={`category-timeline-stage${
-              "featured" in stage && stage.featured ? " is-featured" : ""
-            }`}
+            className={[
+              "category-timeline-stage",
+              "featured" in stage && stage.featured ? "is-featured" : "",
+              "tone" in stage ? `is-${stage.tone}` : "",
+            ]
+              .filter(Boolean)
+              .join(" ")}
             initial="hidden"
             key={stage.era}
             transition={{
