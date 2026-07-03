@@ -10608,13 +10608,13 @@ section[id],
 }
 
 .website-capability-card[data-capability="collector"] .brand-canon-image {
-  filter: saturate(0.08) grayscale(0.82) brightness(1.32) contrast(1.1);
+  filter: saturate(1.03) brightness(1.08) contrast(1.04);
   opacity: 1;
   transform: translateY(var(--editorial-parallax, 0px)) scale(1.06);
 }
 
 .website-capability-card[data-capability="collector"]:hover .brand-canon-image {
-  filter: saturate(0.1) grayscale(0.78) brightness(1.36) contrast(1.12);
+  filter: saturate(1.08) brightness(1.1) contrast(1.06);
   opacity: 1;
   transform: translateY(var(--editorial-parallax, 0px)) scale(1.09);
 }

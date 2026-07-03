@@ -35,7 +35,7 @@ export const brandCanonAssets: Record<
   },
   BC201: {
     alt: "Organizational Source Code brand illustration",
-    src: "/brand-canon/201-organizational-source-code.png",
+    src: "/brand-canon/201-organizational-source-code.png?v=20260704",
   },
   BC202: {
     alt: "Organizational Understanding brand illustration",
