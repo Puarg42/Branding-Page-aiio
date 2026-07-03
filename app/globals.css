@@ -9557,21 +9557,9 @@ section[id],
   transform: translateY(var(--editorial-parallax, 0px)) scale(1.09);
 }
 
-.platform-editorial-motion .website-section-heading,
-.platform-editorial-motion .website-platform-conclusion > .website-eyebrow,
-.platform-editorial-motion .website-platform-conclusion > h2,
-.platform-editorial-motion .website-platform-conclusion > p,
-.platform-editorial-motion .website-platform-outcome-ladder {
+.platform-editorial-motion .website-section-heading {
   opacity: 0;
   transform: translateY(18px);
-  transition:
-    opacity 520ms cubic-bezier(0.22, 1, 0.36, 1),
-    transform 520ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.platform-editorial-motion .website-platform-outcome-ladder > div {
-  opacity: 0;
-  transform: translateY(14px);
   transition:
     opacity 520ms cubic-bezier(0.22, 1, 0.36, 1),
     transform 520ms cubic-bezier(0.22, 1, 0.36, 1);
@@ -9580,27 +9568,6 @@ section[id],
 .platform-editorial-motion .is-visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-.platform-editorial-motion .website-platform-outcome-ladder.is-visible > div,
-.platform-editorial-motion .website-platform-outcome-ladder > div.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.platform-editorial-motion .website-platform-outcome-ladder.is-visible > div:nth-child(2),
-.platform-editorial-motion .website-platform-outcome-ladder > div:nth-child(2).is-visible {
-  transition-delay: 90ms;
-}
-
-.platform-editorial-motion .website-platform-outcome-ladder.is-visible > div:nth-child(3),
-.platform-editorial-motion .website-platform-outcome-ladder > div:nth-child(3).is-visible {
-  transition-delay: 180ms;
-}
-
-.platform-editorial-motion .website-platform-outcome-ladder.is-visible > div:nth-child(4),
-.platform-editorial-motion .website-platform-outcome-ladder > div:nth-child(4).is-visible {
-  transition-delay: 270ms;
 }
 
 @media (max-width: 1180px) {
@@ -9656,12 +9623,7 @@ section[id],
   .website-capability-card,
   .website-card-canon-image,
   .website-card-canon .brand-canon-image,
-  .platform-editorial-motion .website-section-heading,
-  .platform-editorial-motion .website-platform-conclusion > .website-eyebrow,
-  .platform-editorial-motion .website-platform-conclusion > h2,
-  .platform-editorial-motion .website-platform-conclusion > p,
-  .platform-editorial-motion .website-platform-outcome-ladder,
-  .platform-editorial-motion .website-platform-outcome-ladder > div {
+  .platform-editorial-motion .website-section-heading {
     animation: none;
     transition: none;
   }
@@ -9670,12 +9632,7 @@ section[id],
     transform: none !important;
   }
 
-  .platform-editorial-motion .website-section-heading,
-  .platform-editorial-motion .website-platform-conclusion > .website-eyebrow,
-  .platform-editorial-motion .website-platform-conclusion > h2,
-  .platform-editorial-motion .website-platform-conclusion > p,
-  .platform-editorial-motion .website-platform-outcome-ladder,
-  .platform-editorial-motion .website-platform-outcome-ladder > div {
+  .platform-editorial-motion .website-section-heading {
     opacity: 1;
     transform: none;
   }

@@ -7,10 +7,6 @@ const capabilityCardSelector = ".website-capability-card[data-capability]";
 const revealSelector = [
   ".website-platform-system-section .website-section-heading",
   ".website-capability-section .website-section-heading",
-  ".website-platform-outcome-section .website-eyebrow",
-  ".website-platform-outcome-section h2",
-  ".website-platform-outcome-section p",
-  ".website-platform-outcome-ladder",
 ].join(",");
 
 function getPrefersReducedMotion() {
@@ -19,22 +15,6 @@ function getPrefersReducedMotion() {
 
 function clamp(value: number, min: number, max: number) {
   return Math.min(max, Math.max(min, value));
-}
-
-function revealOutcomeItems(target: Element) {
-  if (!(target instanceof HTMLElement)) {
-    return;
-  }
-
-  if (!target.classList.contains("website-platform-outcome-ladder")) {
-    return;
-  }
-
-  Array.from(target.children).forEach((child) => {
-    if (child instanceof HTMLElement) {
-      child.classList.add("is-visible");
-    }
-  });
 }
 
 export function PlatformEditorialExperience() {
@@ -99,7 +79,6 @@ export function PlatformEditorialExperience() {
     if (getPrefersReducedMotion()) {
       revealTargets.forEach((target) => {
         target.classList.add("is-visible");
-        revealOutcomeItems(target);
       });
       return;
     }
@@ -109,7 +88,6 @@ export function PlatformEditorialExperience() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("is-visible");
-            revealOutcomeItems(entry.target);
             observer.unobserve(entry.target);
           }
         });
