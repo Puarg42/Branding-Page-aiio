@@ -26,14 +26,23 @@ const partnerRoles = [
   },
 ] as const;
 
+const partnersSectionNavigator = [
+  { id: "partners-hero", label: "Hero" },
+  { id: "partners-ecosystem", label: "Ecosystem" },
+  { id: "partners-conversation", label: "Conversation" },
+] as const;
+
 export default function PartnersPage() {
   return (
     <WebsiteArchitecturePage
       eyebrow="Partners"
+      heroId="partners-hero"
       intro="Partners help turn Organizational Intelligence into lasting customer capability."
+      sectionNavigator={partnersSectionNavigator}
+      sectionNavigatorLabel="Partners sections"
       title="Help organizations build lasting capability."
     >
-      <section className="website-architecture-section">
+      <section className="website-architecture-section" id="partners-ecosystem">
         <div className="website-page-shell">
           <div className="website-section-heading">
             <p className="website-eyebrow">Partner Ecosystem</p>
@@ -50,7 +59,7 @@ export default function PartnersPage() {
         </div>
       </section>
 
-      <section className="website-contact-section">
+      <section className="website-contact-section" id="partners-conversation">
         <div className="website-page-shell">
           <div className="website-contact-panel">
             <p>

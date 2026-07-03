@@ -1,4 +1,8 @@
 import Link from "next/link";
+import {
+  EditorialSectionNavigator,
+  type EditorialSectionNavigatorItem,
+} from "../components/brand/EditorialSectionNavigator";
 import { getEditableContent, RichText } from "./editor/content";
 import { MainHeader } from "./main-navigation";
 
@@ -790,7 +794,19 @@ function editableResourceText(slug: ResourceSlug, field: string, fallback: strin
   return getEditableContent(`resource.${slug}.${field}`, fallback);
 }
 
-function ResourceForm({ form, slug }: { form: ResourceForm; slug: ResourceSlug }) {
+function getResourceSectionId(slug: ResourceSlug, sectionIndex: number) {
+  return `${slug}-section-${sectionIndex + 1}`;
+}
+
+function ResourceForm({
+  form,
+  id,
+  slug,
+}: {
+  form: ResourceForm;
+  id: string;
+  slug: ResourceSlug;
+}) {
   const formTitle = editableResourceText(slug, "form.title", form.title);
   const formCopy = editableResourceText(slug, "form.copy", form.copy);
   const interestLabel = editableResourceText(
@@ -801,7 +817,7 @@ function ResourceForm({ form, slug }: { form: ResourceForm; slug: ResourceSlug }
   const buttonLabel = editableResourceText(slug, "form.buttonLabel", form.buttonLabel);
 
   return (
-    <section className="resource-form-section">
+    <section className="resource-form-section" id={id}>
       <div>
         <p className="eyebrow">Formular</p>
         <h2>{formTitle}</h2>
@@ -908,11 +924,19 @@ export function ResourcePage({ slug }: { slug: ResourceSlug }) {
   const pageTitle = editableResourceText(slug, "title", page.title);
   const pageIntro = editableResourceText(slug, "intro", page.intro);
   const ctaLabel = page.cta ? editableResourceText(slug, "cta.label", page.cta.label) : null;
+  const sectionNavigator: EditorialSectionNavigatorItem[] = [
+    { id: `${slug}-hero`, label: "Hero" },
+    ...page.sections.map((section, sectionIndex) => ({
+      id: getResourceSectionId(slug, sectionIndex),
+      label: section.eyebrow ?? section.title,
+    })),
+    ...(page.form ? [{ id: `${slug}-form`, label: "Contact" }] : []),
+  ];
 
   return (
     <main className="resource-page">
       <MainHeader variant="solid" />
-      <section className="resource-hero">
+      <section className="resource-hero" id={`${slug}-hero`}>
         <div className="resource-hero-copy">
           <p className="eyebrow">{pageEyebrow}</p>
           <h1>{pageTitle}</h1>
@@ -949,7 +973,11 @@ export function ResourcePage({ slug }: { slug: ResourceSlug }) {
           : null;
 
         return (
-          <section className="resource-section" key={sectionIndex}>
+          <section
+            className="resource-section"
+            id={getResourceSectionId(slug, sectionIndex)}
+            key={sectionIndex}
+          >
             <div className="resource-section-heading">
               {sectionEyebrow ? <p className="eyebrow">{sectionEyebrow}</p> : null}
               <h2>{sectionTitle}</h2>
@@ -969,7 +997,11 @@ export function ResourcePage({ slug }: { slug: ResourceSlug }) {
         );
       })}
 
-      {page.form ? <ResourceForm form={page.form} slug={slug} /> : null}
+      {page.form ? <ResourceForm form={page.form} id={`${slug}-form`} slug={slug} /> : null}
+      <EditorialSectionNavigator
+        ariaLabel={`${pageTitle} sections`}
+        sections={sectionNavigator}
+      />
     </main>
   );
 }

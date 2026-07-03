@@ -7,14 +7,22 @@ export const metadata: Metadata = {
   description: "Contact aiio.",
 };
 
+const contactSectionNavigator = [
+  { id: "contact-hero", label: "Hero" },
+  { id: "contact-conversation", label: "Conversation" },
+] as const;
+
 export default function ContactPage() {
   return (
     <WebsiteArchitecturePage
       eyebrow="Contact"
+      heroId="contact-hero"
       intro="For demos, platform questions and partnership conversations."
+      sectionNavigator={contactSectionNavigator}
+      sectionNavigatorLabel="Contact sections"
       title="Start with the right conversation."
     >
-      <section className="website-contact-section">
+      <section className="website-contact-section" id="contact-conversation">
         <div className="website-page-shell">
           <div className="website-contact-panel">
             <p>Tell us what you want to understand, build or evaluate.</p>

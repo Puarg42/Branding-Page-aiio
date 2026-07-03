@@ -85,7 +85,7 @@ export function EditorialSectionNavigator({
     setActiveId(id);
   }
 
-  if (items.length === 0) {
+  if (items.length < 2) {
     return null;
   }
 

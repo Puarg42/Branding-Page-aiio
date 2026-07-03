@@ -1,4 +1,5 @@
 import { MainHeader } from "../../main-navigation";
+import { EditorialSectionNavigator } from "../../../components/brand/EditorialSectionNavigator";
 
 const expectationItems = [
   "A conversation about your organizational challenges.",
@@ -7,12 +8,22 @@ const expectationItems = [
   "No sales pressure.",
 ];
 
+const requestDemoSectionNavigator = [
+  { id: "request-demo-hero", label: "Hero" },
+  { id: "request-demo-expectations", label: "Expectations" },
+  { id: "request-demo-form", label: "Request" },
+] as const;
+
 export default function DemoKontaktPage() {
   return (
     <main className="request-demo-page">
       <MainHeader />
 
-      <section className="request-demo-hero" aria-labelledby="request-demo-title">
+      <section
+        className="request-demo-hero"
+        id="request-demo-hero"
+        aria-labelledby="request-demo-title"
+      >
         <div className="request-demo-shell request-demo-hero-grid">
           <div className="request-demo-copy">
             <p className="request-demo-eyebrow">Request Demo</p>
@@ -43,7 +54,11 @@ export default function DemoKontaktPage() {
         </div>
       </section>
 
-      <section className="request-demo-section" aria-labelledby="request-demo-expect">
+      <section
+        className="request-demo-section"
+        id="request-demo-expectations"
+        aria-labelledby="request-demo-expect"
+      >
         <div className="request-demo-shell request-demo-expect-grid">
           <div>
             <p className="request-demo-eyebrow">What to expect</p>
@@ -115,6 +130,10 @@ export default function DemoKontaktPage() {
           </form>
         </div>
       </section>
+      <EditorialSectionNavigator
+        ariaLabel="Request demo sections"
+        sections={requestDemoSectionNavigator}
+      />
     </main>
   );
 }
