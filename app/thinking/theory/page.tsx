@@ -2,10 +2,6 @@ import { readFileSync } from "fs";
 import path from "path";
 import type { Metadata } from "next";
 import {
-  EditorialSectionNavigator,
-  type EditorialSectionNavigatorItem,
-} from "../../../components/brand/EditorialSectionNavigator";
-import {
   EditorialProgression,
   type EditorialProgressionItem,
 } from "../../../components/brand/EditorialProgression";
@@ -287,22 +283,6 @@ function isCircularTheoryModel(lines: string[]) {
 
 const chapters = getTheoryChapters();
 const sidebarChapters = chapters.map(({ id, title }) => ({ id, title }));
-const theoryNavigatorSections = [
-  { id: "theory-hero", label: "Hero" },
-  { id: chapters.find((chapter) => chapter.title === "Prologue")?.id, label: "Foundation" },
-  {
-    id: chapters.find((chapter) => chapter.title.includes("Missing Layer"))?.id,
-    label: "Core Thesis",
-  },
-  {
-    id: chapters.find((chapter) => chapter.title.includes("Organizational Understanding"))?.id,
-    label: "Understanding",
-  },
-  {
-    id: chapters.find((chapter) => chapter.title.includes("Organizational Resilience"))?.id,
-    label: "Outcome",
-  },
-].filter((section): section is EditorialSectionNavigatorItem => Boolean(section.id));
 
 export default function TheoryPage() {
   return (
@@ -376,10 +356,6 @@ export default function TheoryPage() {
           </article>
         </div>
       </div>
-      <EditorialSectionNavigator
-        ariaLabel="Theory sections"
-        sections={theoryNavigatorSections}
-      />
     </main>
   );
 }
