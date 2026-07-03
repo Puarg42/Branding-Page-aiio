@@ -39,7 +39,7 @@ Never use BC102 as hero artwork, decorative background artwork or a dominant pag
 
 Official name: BC201 - Organizational Source Code.
 
-Purpose: capability illustration derived from the grounding layer of BC102.
+Purpose: official ProcessCollector capability illustration for the human-readable representation of the organization: documentation, structure, responsibilities, process logic, rules, models and organizational reality.
 
 ### BC202
 
