@@ -24,7 +24,7 @@ const capabilities: CapabilityTeaser[] = [
     href: "#processcollector",
   },
   {
-    title: "Build Organizational\nSelf-\nUnderstanding",
+    title: "Build\nOrganizational\nSelf-Understanding",
     copy:
       "Connect organizational reality into self-understanding so your organization can interpret its structures, relationships and decisions.",
     illustrationVariant: "BC202",

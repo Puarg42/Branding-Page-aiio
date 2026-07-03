@@ -5733,7 +5733,7 @@ h1 {
 
 .website-page:has(.website-platform-system-section) .website-capability-section,
 .website-page:has(.website-platform-system-section) .website-architecture-section {
-  padding: clamp(74px, 7.4vw, 124px) 0;
+  padding: clamp(66px, 6.6vw, 112px) 0;
 }
 
 .website-capability-grid,
@@ -5779,12 +5779,12 @@ h1 {
   grid-template-rows:
     clamp(280px, 20vw, 370px)
     auto
-    minmax(5.02rem, auto)
-    minmax(2.2rem, auto)
-    minmax(7.4rem, auto)
-    minmax(8.6rem, 1fr)
+    minmax(5.1rem, auto)
+    minmax(3.5rem, auto)
+    minmax(7.7rem, auto)
+    minmax(8.8rem, 1fr)
     auto;
-  min-height: clamp(780px, 61vw, 930px);
+  min-height: clamp(790px, 62vw, 940px);
   overflow: hidden;
   padding: 0 0 clamp(26px, 2.5vw, 40px);
   position: relative;
@@ -5861,12 +5861,12 @@ h1 {
 }
 
 .website-card-topline {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: flex-start;
+  align-items: start;
+  display: grid;
+  gap: 6px;
+  justify-content: start;
   margin: 0 clamp(26px, 2.5vw, 40px);
+  min-height: 3.5rem;
   order: 4;
   position: relative;
   z-index: 1;
@@ -5882,9 +5882,42 @@ h1 {
   text-transform: uppercase;
 }
 
+.website-card-topline span {
+  display: grid;
+  gap: 4px;
+  line-height: 1;
+}
+
+.website-card-topline span {
+  font-size: 0;
+}
+
+.website-card-topline span::before {
+  color: rgb(var(--capability-accent) / 76%);
+  content: "POWERED BY";
+  font-size: 0.68rem;
+  font-weight: 820;
+  letter-spacing: 0.1em;
+}
+
 .website-card-topline strong {
   color: rgb(var(--capability-accent) / 94%);
+  display: inline-block;
+  font-family: var(--font-aiio-heading);
+  font-size: 0.88rem;
   font-weight: 860;
+  letter-spacing: 0;
+  line-height: 1.08;
+  text-transform: none;
+}
+
+.website-card-topline strong::after {
+  content: "\2122";
+  font-size: 0.54em;
+  line-height: 0;
+  margin-left: 0.08em;
+  position: relative;
+  top: -0.42em;
 }
 
 .website-card-topline em {
@@ -5942,7 +5975,7 @@ h1 {
 
 .website-capability-card-copy > p {
   margin: 0 clamp(26px, 2.5vw, 40px);
-  min-height: 7.4rem;
+  min-height: 7.7rem;
   order: 5;
   position: relative;
   z-index: 1;
@@ -5956,7 +5989,7 @@ h1 {
   font-weight: 520;
   line-height: 1.46;
   margin: 0 clamp(26px, 2.5vw, 40px);
-  min-height: 8.6rem;
+  min-height: 8.8rem;
   order: 6;
   padding-left: 18px;
   position: relative;
@@ -8899,7 +8932,7 @@ h1 {
 .vl-mind-node.node-8 { left: 41%; bottom: 10%; }
 
 .website-platform-system-section {
-  padding: clamp(70px, 7vw, 116px) 0 clamp(60px, 6vw, 98px);
+  padding: clamp(60px, 6vw, 104px) 0 clamp(54px, 5.4vw, 90px);
 }
 
 .website-platform-system-layout {
@@ -8907,7 +8940,7 @@ h1 {
   display: grid;
   gap: 0;
   grid-template-columns: minmax(0, 0.78fr) minmax(420px, 1.18fr);
-  min-height: clamp(620px, 51vw, 860px);
+  min-height: clamp(560px, 48vw, 800px);
   position: relative;
 }
 
@@ -8923,7 +8956,7 @@ h1 {
 
 .website-platform-system-copy h2 {
   font-size: clamp(2.56rem, 4.1vw, 5rem);
-  max-width: 890px;
+  max-width: 920px;
 }
 
 .website-capability-layer-visual {
@@ -8932,11 +8965,13 @@ h1 {
   grid-column: 2 / -1;
   grid-row: 1;
   justify-self: end;
-  margin-top: clamp(138px, 12.4vw, 216px);
-  min-height: clamp(470px, 39vw, 700px);
+  margin-top: 0;
+  min-height: clamp(500px, 41vw, 720px);
+  opacity: 0.9;
+  pointer-events: none;
   position: relative;
-  transform: translateX(clamp(12px, 2vw, 34px));
-  width: min(74vw, 920px);
+  transform: translateX(clamp(18px, 3vw, 54px));
+  width: min(75vw, 980px);
   z-index: 1;
 }
 
@@ -9072,7 +9107,7 @@ h1 {
   display: grid;
   gap: clamp(22px, 2.7vw, 44px);
   margin: 0 auto;
-  max-width: 1080px;
+  max-width: 1180px;
   text-align: center;
 }
 
@@ -9080,7 +9115,7 @@ h1 {
   background:
     radial-gradient(circle at 50% 0%, rgb(179 145 255 / 8%), transparent 36%),
     linear-gradient(180deg, transparent, rgb(255 255 255 / 1.8%) 44%, transparent);
-  padding: clamp(96px, 9.4vw, 168px) 0 clamp(124px, 11.8vw, 216px);
+  padding: clamp(86px, 8.4vw, 150px) 0 clamp(116px, 11vw, 202px);
 }
 
 .website-platform-conclusion h2 {
@@ -9105,7 +9140,7 @@ h1 {
   border-top: 1px solid rgb(255 255 255 / 10%);
   display: grid;
   gap: 0;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1.22fr) repeat(3, minmax(0, 1fr));
   margin: clamp(8px, 1.2vw, 18px) 0 clamp(14px, 2vw, 32px);
 }
 
@@ -10127,8 +10162,7 @@ section[id],
 
 .website-card-canon::after {
   background:
-    linear-gradient(180deg, rgb(5 5 7 / 42%), transparent 15%, transparent 74%, rgb(5 5 7 / 82%)),
-    linear-gradient(90deg, rgb(5 5 7 / 38%), transparent 10%, transparent 90%, rgb(5 5 7 / 38%));
+    linear-gradient(180deg, rgb(5 5 7 / 20%), transparent 10%, transparent 76%, rgb(5 5 7 / 78%));
   content: "";
   inset: 0;
   pointer-events: none;
@@ -10140,13 +10174,11 @@ section[id],
   display: block;
   height: 100%;
   -webkit-mask-image:
-    linear-gradient(180deg, transparent 0%, #000 6%, #000 82%, transparent 100%),
-    linear-gradient(90deg, transparent 0%, #000 4%, #000 96%, transparent 100%);
+    linear-gradient(180deg, #000 0%, #000 84%, transparent 100%);
   -webkit-mask-composite: source-in;
   mask-composite: intersect;
   mask-image:
-    linear-gradient(180deg, transparent 0%, #000 6%, #000 82%, transparent 100%),
-    linear-gradient(90deg, transparent 0%, #000 4%, #000 96%, transparent 100%);
+    linear-gradient(180deg, #000 0%, #000 84%, transparent 100%);
   object-fit: contain;
   object-position: center;
   position: relative;
@@ -10162,13 +10194,11 @@ section[id],
   display: block;
   height: 100%;
   -webkit-mask-image:
-    linear-gradient(180deg, transparent 0%, #000 6%, #000 82%, transparent 100%),
-    linear-gradient(90deg, transparent 0%, #000 4%, #000 96%, transparent 100%);
+    linear-gradient(180deg, #000 0%, #000 84%, transparent 100%);
   -webkit-mask-composite: source-in;
   mask-composite: intersect;
   mask-image:
-    linear-gradient(180deg, transparent 0%, #000 6%, #000 82%, transparent 100%),
-    linear-gradient(90deg, transparent 0%, #000 4%, #000 96%, transparent 100%);
+    linear-gradient(180deg, #000 0%, #000 84%, transparent 100%);
   object-fit: contain;
   object-position: center;
   position: relative;
@@ -10198,12 +10228,12 @@ section[id],
 }
 
 .website-capability-card[data-capability="collector"] .brand-canon-image {
-  filter: saturate(0.1) grayscale(0.72) brightness(1.2) contrast(1.08);
-  opacity: 0.98;
+  filter: saturate(0.08) grayscale(0.82) brightness(1.32) contrast(1.1);
+  opacity: 1;
 }
 
 .website-capability-card[data-capability="collector"]:hover .brand-canon-image {
-  filter: saturate(0.12) grayscale(0.68) brightness(1.24) contrast(1.1);
+  filter: saturate(0.1) grayscale(0.78) brightness(1.36) contrast(1.12);
   opacity: 1;
 }
 
