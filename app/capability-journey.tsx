@@ -66,7 +66,7 @@ export function CapabilityJourney() {
           viewport={{ amount: 0.45, once: true }}
           whileInView="visible"
         >
-          <EditorialEyebrow>The Capability Journey</EditorialEyebrow>
+          <EditorialEyebrow>The Journey</EditorialEyebrow>
           <h2>
             From{" "}
             <TheoryReference>Organizational Self-Understanding</TheoryReference>{" "}

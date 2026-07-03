@@ -5,6 +5,7 @@ import {
   type BrandIllustrationVariant,
 } from "../components/brand/BrandIllustration";
 import { EditorialJumpArrow } from "../components/brand/EditorialJumpArrow";
+import { EditorialEyebrow } from "../components/brand/EditorialEyebrow";
 import {
   EditorialSectionNavigator,
   type EditorialSectionNavigatorItem,
@@ -45,7 +46,7 @@ export function WebsiteArchitecturePage({
       <MainHeader />
       <section className="website-hero" id={heroId}>
         <div className="website-page-shell">
-          <p className="website-eyebrow">{eyebrow}</p>
+          <EditorialEyebrow>{eyebrow}</EditorialEyebrow>
           <h1>{title}</h1>
           <p>{intro}</p>
           {heroActions ? <div className="website-hero-actions">{heroActions}</div> : null}
@@ -58,7 +59,7 @@ export function WebsiteArchitecturePage({
         <section className="website-architecture-section">
           <div className="website-page-shell">
             <div className="website-section-heading">
-              <p className="website-eyebrow">Structure</p>
+              <EditorialEyebrow>Structure</EditorialEyebrow>
               <h2>Page architecture</h2>
             </div>
             <div className="website-architecture-grid">
@@ -148,7 +149,7 @@ export function CapabilityTeaserGrid({
     >
       <div className="website-page-shell">
         <div className="website-section-heading">
-          <p className="website-eyebrow">Capabilities</p>
+          <EditorialEyebrow>Capabilities</EditorialEyebrow>
           <h2>Complementary capabilities, not separate products.</h2>
           <p>
             The following capabilities are complementary perspectives of one

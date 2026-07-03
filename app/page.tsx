@@ -88,6 +88,7 @@ const homeSectionNavigator = [
   { id: "architektur", label: "System" },
   { id: "self-enabling-organization", label: "Outcome" },
   { id: "monday-morning", label: "Monday" },
+  { id: "company", label: "Company" },
 ] as const;
 
 function Hero() {
@@ -120,7 +121,7 @@ function ProblemSection() {
   return (
     <section className="problem-section" id="problem">
       <div className="problem-inner">
-        <EditorialEyebrow>The problem</EditorialEyebrow>
+        <EditorialEyebrow>The Problem</EditorialEyebrow>
         <h2>Organizations know more than they can use.</h2>
         <div className="problem-grid">
           {problemCards.map((card) => (
@@ -145,7 +146,7 @@ function ConceptBreakthrough() {
     <section className="concept-section" id="organizational-intelligence">
       <div className="concept-inner">
         <div className="concept-copy">
-          <EditorialEyebrow>The missing capability</EditorialEyebrow>
+          <EditorialEyebrow>The Missing Capability</EditorialEyebrow>
           <h2>The missing capability is continuous self-understanding.</h2>
           <div className="concept-statement">
             <p>Organizations collect information, document processes and introduce AI.</p>

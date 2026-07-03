@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { EditorialEyebrow } from "../../components/brand/EditorialEyebrow";
 import { EditorialJumpArrow } from "../../components/brand/EditorialJumpArrow";
 import { TheoryLink } from "../../components/brand/TheoryLink";
 import { WebsiteArchitecturePage } from "../website-architecture";
@@ -34,7 +35,7 @@ export default function ThinkingPage() {
       <section className="website-architecture-section thinking-journal-section" id="journal">
         <div className="website-page-shell">
           <div className="website-section-heading">
-            <p className="website-eyebrow">Theory Journal</p>
+            <EditorialEyebrow>Theory Journal</EditorialEyebrow>
             <h2>What has changed recently at Theory?</h2>
           </div>
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { EditorialEyebrow } from "../../components/brand/EditorialEyebrow";
 import { WebsiteArchitecturePage } from "../website-architecture";
 
 export const metadata: Metadata = {
@@ -44,7 +45,7 @@ export default function CompanyPage() {
       <section className="website-architecture-section" id="company-mission">
         <div className="website-page-shell">
           <div className="website-section-heading">
-            <p className="website-eyebrow">Mission</p>
+            <EditorialEyebrow>Mission</EditorialEyebrow>
             <h2>Organizations need understanding that lasts.</h2>
           </div>
           <div className="website-contact-panel">
@@ -62,7 +63,7 @@ export default function CompanyPage() {
       <section className="website-architecture-section" id="company-principles">
         <div className="website-page-shell">
           <div className="website-section-heading">
-            <p className="website-eyebrow">Principles</p>
+            <EditorialEyebrow>Principles</EditorialEyebrow>
             <h2>Principles guide the work.</h2>
           </div>
           <div className="website-architecture-grid">

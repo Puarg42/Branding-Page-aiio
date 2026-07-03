@@ -1,6 +1,14 @@
 "use client";
 
-import { motion, useReducedMotion, type Transition, type Variants } from "framer-motion";
+import { useRef, useState } from "react";
+import {
+  motion,
+  useMotionValueEvent,
+  useReducedMotion,
+  useScroll,
+  type Transition,
+  type Variants,
+} from "framer-motion";
 
 import { BrandIllustration } from "../components/brand/BrandIllustration";
 import { EditorialEyebrow } from "../components/brand/EditorialEyebrow";
@@ -20,21 +28,17 @@ const staticReveal: Variants = {
 const ceoMoments = [
   {
     statement: "A key expert leaves.",
-    support: (
-      <>
-        The experience remains.
-        <br />
-        Your organization remembers.
-      </>
-    ),
+    support: "The context remains available. Decisions do not start from zero.",
   },
   {
-    statement: "AI supports a critical decision.",
-    support: "Because it works from organizational context, not generic answers.",
+    statement: "A production issue occurs.",
+    support:
+      "Your organization can trace what changed, what depends on it and who needs to act.",
   },
   {
-    statement: "A team improves a process.",
-    support: "The learning strengthens the organization, not just the project.",
+    statement: "A new regulation appears.",
+    support:
+      "Obligations connect to processes, owners and capabilities before work fragments.",
   },
 ] as const;
 
@@ -84,28 +88,77 @@ function useReveal(duration = 0.95) {
 }
 
 export function CeoMondayMoment() {
-  const shouldReduceMotion = useReducedMotion();
-  const reveal = useReveal(1);
+  const sectionRef = useRef<HTMLElement>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end end"],
+  });
+
+  useMotionValueEvent(scrollYProgress, "change", (progress) => {
+    const nextIndex = Math.min(
+      ceoMoments.length - 1,
+      Math.max(0, Math.floor(progress * ceoMoments.length)),
+    );
+
+    setActiveIndex((currentIndex) =>
+      currentIndex === nextIndex ? currentIndex : nextIndex,
+    );
+  });
 
   return (
-    <section className="ceo-moment-section" id="monday-morning">
-      <EditorialEyebrow className="ceo-moment-title">Imagine Monday Morning</EditorialEyebrow>
-      {ceoMoments.map((moment, index) => (
-        <section className="ceo-moment" key={moment.statement}>
-          <motion.div
-            className="ceo-moment-copy ceo-moment-card"
-            data-step={String(index + 1).padStart(2, "0")}
-            {...reveal}
-            transition={{
-              ...reveal.transition,
-              delay: shouldReduceMotion ? 0 : index * 0.04,
-            }}
-          >
-            <h2>{moment.statement}</h2>
-            <p>{moment.support}</p>
-          </motion.div>
-        </section>
-      ))}
+    <section className="ceo-moment-section" id="monday-morning" ref={sectionRef}>
+      <div className="ceo-scrolly-sticky">
+        <div className="ceo-scrolly-shell">
+          <div className="ceo-scrolly-chapter">
+            <EditorialEyebrow className="ceo-moment-title">
+              Imagine Monday Morning
+            </EditorialEyebrow>
+            <ol className="ceo-scenario-indicator" aria-label="Monday Morning scenarios">
+              {ceoMoments.map((moment, index) => (
+                <li
+                  className={[
+                    index === activeIndex ? "is-active" : "",
+                    index < activeIndex ? "is-complete" : "",
+                  ]
+                    .filter(Boolean)
+                    .join(" ")}
+                  key={moment.statement}
+                >
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <span>{moment.statement}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+
+          <div className="ceo-scenario-stage" aria-live="polite">
+            {ceoMoments.map((moment, index) => {
+              const cardState =
+                index === activeIndex
+                  ? "is-active"
+                  : index < activeIndex
+                    ? "is-previous"
+                    : "is-upcoming";
+
+              return (
+                <article
+                  aria-hidden={index !== activeIndex}
+                  className={`ceo-moment-card ${cardState}`}
+                  data-step={String(index + 1).padStart(2, "0")}
+                  key={moment.statement}
+                >
+                  <span className="ceo-scenario-number">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <h2>{moment.statement}</h2>
+                  <p>{moment.support}</p>
+                </article>
+              );
+            })}
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

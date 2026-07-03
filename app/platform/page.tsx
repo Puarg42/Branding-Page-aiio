@@ -6,6 +6,7 @@ import {
   type CapabilityTeaser,
 } from "../website-architecture";
 import { BrandIllustration } from "../../components/brand/BrandIllustration";
+import { EditorialEyebrow } from "../../components/brand/EditorialEyebrow";
 import { EditorialJumpArrow } from "../../components/brand/EditorialJumpArrow";
 import { EditorialProgression } from "../../components/brand/EditorialProgression";
 import { TheoryLink } from "../../components/brand/TheoryLink";
@@ -133,7 +134,7 @@ export default function PlatformPage() {
         <div className="website-page-shell">
           <div className="website-platform-system-layout">
             <div className="website-section-heading website-platform-system-copy">
-              <p className="website-eyebrow">The System</p>
+              <EditorialEyebrow>The System</EditorialEyebrow>
               <h2>
                 <TheoryTerm href={theoryLinks.intelligence}>
                   Organizational Intelligence
@@ -175,7 +176,7 @@ export default function PlatformPage() {
       >
         <div className="website-page-shell">
           <div className="website-platform-conclusion">
-            <p className="website-eyebrow">Outcome</p>
+            <EditorialEyebrow>Outcome</EditorialEyebrow>
             <h2>The outcome is organizational resilience.</h2>
             <p>
               The outcome is not another software platform.

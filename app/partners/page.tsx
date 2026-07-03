@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { EditorialEyebrow } from "../../components/brand/EditorialEyebrow";
 import { WebsiteArchitecturePage } from "../website-architecture";
 
 export const metadata: Metadata = {
@@ -45,7 +46,7 @@ export default function PartnersPage() {
       <section className="website-architecture-section" id="partners-ecosystem">
         <div className="website-page-shell">
           <div className="website-section-heading">
-            <p className="website-eyebrow">Partner Ecosystem</p>
+            <EditorialEyebrow>Partner Ecosystem</EditorialEyebrow>
             <h2>Partners become capability builders.</h2>
           </div>
           <div className="website-architecture-grid">
