@@ -144,13 +144,16 @@ function ConceptBreakthrough() {
           <div className="concept-statement">
             <p>Organizations collect information, document processes and introduce AI.</p>
             <p>Yet they still struggle to turn all of this into coordinated action.</p>
-            <p>Not because information is missing, but because continuous Organizational Self-Understanding is.</p>
+            <p>
+              Not because information is missing, but because continuous{" "}
+              <TheoryReference>Organizational Self-Understanding</TheoryReference>{" "}
+              is.
+            </p>
           </div>
           <p className="concept-support">
             When an organization continuously understands itself, it continuously
             develops new capabilities that help people make better decisions.
           </p>
-          <TheoryReference />
         </div>
         <EditorialProgression
           ariaLabel="Missing layer progression"

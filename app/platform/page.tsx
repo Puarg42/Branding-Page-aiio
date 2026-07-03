@@ -103,17 +103,15 @@ function TheoryTerm({
   const label = typeof children === "string" ? children : "this concept";
 
   return (
-    <span className="platform-theory-term">
+    <Link
+      aria-label={`Read theoretical foundation for ${label}`}
+      className="platform-theory-term"
+      href={href}
+      title="Read theoretical foundation"
+    >
       <span className="platform-theory-text">{children}</span>
-      <Link
-        aria-label={`Read theoretical foundation for ${label}`}
-        className="platform-theory-indicator"
-        href={href}
-        title="Read theoretical foundation"
-      >
-        <EditorialJumpArrow />
-      </Link>
-    </span>
+      <EditorialJumpArrow />
+    </Link>
   );
 }
 
