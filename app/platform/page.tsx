@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 const capabilities: CapabilityTeaser[] = [
   {
-    title: "Understand Your Organization",
+    title: "Understand\nYour\nOrganization",
     copy:
       "Create a human-readable representation of your organization so teams can see its structure, responsibilities and decisions clearly.",
     illustrationVariant: "BC201",
@@ -24,7 +24,7 @@ const capabilities: CapabilityTeaser[] = [
     href: "#processcollector",
   },
   {
-    title: "Build Organizational Self-Understanding",
+    title: "Build Organizational\nSelf-\nUnderstanding",
     copy:
       "Connect organizational reality into self-understanding so your organization can interpret its structures, relationships and decisions.",
     illustrationVariant: "BC202",
@@ -34,7 +34,7 @@ const capabilities: CapabilityTeaser[] = [
     href: "#processmagnet",
   },
   {
-    title: "Enable Organizational Capabilities",
+    title: "Enable\nOrganizational\nCapabilities",
     copy:
       "Turn self-understanding into capabilities your organization can repeat, improve and trust in daily execution.",
     illustrationVariant: "BC203",
@@ -44,7 +44,7 @@ const capabilities: CapabilityTeaser[] = [
     href: "#processforge",
   },
   {
-    title: "Continuously Evolve Your Organization",
+    title: "Continuously Evolve\nYour\nOrganization",
     copy:
       "Use goals, scenarios and operational reality to evolve capabilities and strengthen resilience under change.",
     illustrationVariant: "BC204",
@@ -157,7 +157,7 @@ export default function PlatformPage() {
             </p>
             <p className="website-platform-final-statement">
               Organizations that truly understand themselves continuously
-              develop new capabilities—and become increasingly resilient.
+              develop new capabilities&mdash;and become increasingly resilient.
             </p>
           </div>
         </div>
