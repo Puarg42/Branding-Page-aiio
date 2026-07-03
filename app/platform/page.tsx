@@ -60,7 +60,7 @@ export default function PlatformPage() {
     <WebsiteArchitecturePage
       eyebrow="Platform"
       intro="Organizations need more than disconnected software. They need a system that turns organizational reality into understanding, understanding into capabilities and capabilities into continuous evolution."
-      title="One Organizational Intelligence System for organizations that continuously understand, develop and evolve."
+      title={"One Organizational\nIntelligence System\n\nfor organizations that\ncontinuously understand themselves,\ndevelop new capabilities\nand become resilient."}
     >
       <section
         className="website-architecture-section website-platform-system-section"

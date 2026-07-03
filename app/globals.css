@@ -5634,7 +5634,7 @@ h1 {
 }
 
 .website-page:has(.website-platform-system-section) .website-hero {
-  padding: clamp(154px, 16.6vw, 258px) 0 clamp(96px, 10.4vw, 174px);
+  padding: clamp(166px, 17.2vw, 268px) 0 clamp(94px, 9.4vw, 156px);
 }
 
 .website-eyebrow {
@@ -5657,7 +5657,11 @@ h1 {
 }
 
 .website-page:has(.website-platform-system-section) .website-hero h1 {
-  font-size: clamp(4rem, 7.48vw, 8.58rem);
+  font-size: clamp(3.38rem, 5.85vw, 7.05rem);
+  font-weight: 560;
+  line-height: 1.08;
+  max-width: 1040px;
+  white-space: pre-line;
 }
 
 .website-hero > .website-page-shell > p:last-child {
@@ -5684,8 +5688,14 @@ h1 {
   text-wrap: balance;
 }
 
+.website-page:has(.website-platform-system-section) .website-hero > .website-page-shell > p:last-child {
+  font-size: clamp(1.1rem, 1.36vw, 1.26rem);
+  margin-top: clamp(48px, 5.2vw, 76px);
+  max-width: 720px;
+}
+
 .website-page:has(.website-platform-system-section) .website-section-heading h2 {
-  font-size: clamp(2.82rem, 5vw, 6.08rem);
+  font-size: clamp(2.66rem, 4.72vw, 5.68rem);
 }
 
 .website-section-heading > p:not(.website-eyebrow) {
@@ -5705,7 +5715,7 @@ h1 {
 
 .website-page:has(.website-platform-system-section) .website-capability-section,
 .website-page:has(.website-platform-system-section) .website-architecture-section {
-  padding: clamp(112px, 11.8vw, 192px) 0;
+  padding: clamp(96px, 10.2vw, 168px) 0;
 }
 
 .website-capability-grid,
@@ -5758,7 +5768,7 @@ h1 {
     auto;
   min-height: clamp(760px, 61vw, 920px);
   overflow: hidden;
-  padding: clamp(26px, 2.5vw, 40px);
+  padding: 0 clamp(26px, 2.5vw, 40px) clamp(26px, 2.5vw, 40px);
   position: relative;
   transition:
     border-color 260ms ease,
@@ -5872,7 +5882,7 @@ h1 {
   font-size: 0.86rem;
   font-weight: 620;
   letter-spacing: 0.08em;
-  margin: 6px 0 0;
+  margin: clamp(10px, 1.2vw, 18px) 0 0;
   order: 2;
   position: relative;
   z-index: 1;
@@ -7034,7 +7044,7 @@ h1 {
       auto
       auto;
     min-height: 330px;
-    padding: clamp(24px, 7vw, 34px);
+    padding: 0 clamp(24px, 7vw, 34px) clamp(24px, 7vw, 34px);
   }
 
   .website-capability-card-copy {
@@ -7044,7 +7054,7 @@ h1 {
   .website-card-canon {
     height: clamp(230px, 62vw, 320px);
     margin:
-      clamp(-34px, -7vw, -24px)
+      0
       clamp(-34px, -7vw, -24px)
       6px;
     width: calc(100% + clamp(48px, 14vw, 68px));
@@ -8854,14 +8864,14 @@ h1 {
 .vl-mind-node.node-8 { left: 41%; bottom: 10%; }
 
 .website-platform-system-section {
-  padding: clamp(92px, 9.2vw, 158px) 0 clamp(84px, 8.4vw, 148px);
+  padding: clamp(82px, 8vw, 134px) 0 clamp(76px, 7.4vw, 128px);
 }
 
 .website-platform-system-layout {
   align-items: stretch;
   display: grid;
-  gap: clamp(44px, 6.2vw, 96px);
-  grid-template-columns: minmax(0, 0.76fr) minmax(0, 1.18fr);
+  gap: clamp(36px, 5vw, 78px);
+  grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
 }
 
 .website-platform-system-copy {
@@ -8871,13 +8881,13 @@ h1 {
 }
 
 .website-platform-system-copy h2 {
-  font-size: clamp(2.62rem, 4.08vw, 5.05rem);
+  font-size: clamp(2.5rem, 3.8vw, 4.72rem);
 }
 
 .website-capability-layer-visual {
   align-self: stretch;
   display: flex;
-  min-height: clamp(430px, 34vw, 620px);
+  min-height: clamp(500px, 40vw, 720px);
 }
 
 .website-figure-caption {
@@ -8908,8 +8918,8 @@ h1 {
   display: grid;
   gap: 0;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  margin: calc(clamp(48px, 5vw, 82px) * -0.2) 0 clamp(34px, 4.2vw, 62px);
-  padding: 16px 0 4px;
+  margin: calc(clamp(42px, 4.4vw, 72px) * -0.24) 0 clamp(22px, 2.8vw, 42px);
+  padding: 10px 0 0;
   position: relative;
 }
 
@@ -8926,7 +8936,7 @@ h1 {
   left: 10%;
   position: absolute;
   right: 10%;
-  top: 40px;
+  top: 35px;
 }
 
 .website-capability-journey::after {
@@ -8937,7 +8947,7 @@ h1 {
   opacity: 0.5;
   position: absolute;
   right: 10%;
-  top: 40px;
+  top: 35px;
 }
 
 .website-capability-journey-step {
@@ -8948,10 +8958,10 @@ h1 {
   font-family: var(--font-aiio-heading);
   font-size: clamp(0.86rem, 0.92vw, 1rem);
   font-weight: 560;
-  gap: 10px;
+  gap: 8px;
   justify-content: center;
   line-height: 1.18;
-  min-height: 94px;
+  min-height: 82px;
   padding: 0 clamp(10px, 1.6vw, 20px);
   position: relative;
   text-align: center;
@@ -8975,13 +8985,13 @@ h1 {
 }
 
 .website-capability-journey-step:not(:last-child)::after {
-  color: rgb(var(--capability-accent) / 72%);
-  content: "->";
-  font-size: 0.8rem;
-  font-weight: 700;
+  background: linear-gradient(90deg, rgb(var(--capability-accent) / 54%), transparent);
+  content: "";
+  height: 1px;
   position: absolute;
-  right: -8px;
+  right: -22px;
   top: 35px;
+  width: 44px;
   z-index: 1;
 }
 
@@ -9022,7 +9032,7 @@ h1 {
 
 .website-platform-conclusion h2 {
   color: #ffffff;
-  font-size: clamp(3rem, 5.18vw, 6.48rem);
+  font-size: clamp(2.82rem, 4.86vw, 6.08rem);
   letter-spacing: 0;
   line-height: 0.98;
   margin: 0;
@@ -9873,7 +9883,6 @@ section[id],
 .ois-visual-wrap .brand-canon-figure,
 .capability-model-stage .brand-canon-figure,
 .capability-stack-stage .brand-canon-figure,
-.website-capability-layer-visual .brand-canon-figure,
 .website-visual-theory-grid .brand-canon-figure,
 .organization-mirror-visual .brand-canon-figure {
   border: 1px solid rgb(255 255 255 / 9%);
@@ -9886,7 +9895,6 @@ section[id],
 .ois-visual-wrap .brand-canon-image,
 .capability-model-stage .brand-canon-image,
 .capability-stack-stage .brand-canon-image,
-.website-capability-layer-visual .brand-canon-image,
 .website-visual-theory-grid .brand-canon-image,
 .organization-mirror-visual .brand-canon-image {
   object-fit: cover;
@@ -9933,9 +9941,9 @@ section[id],
   justify-content: center;
   justify-self: stretch;
   margin:
+    0
     clamp(-40px, -2.5vw, -26px)
-    clamp(-40px, -2.5vw, -26px)
-    8px;
+    6px;
   order: 1;
   overflow: hidden;
   padding: clamp(4px, 0.6vw, 10px);
@@ -9948,7 +9956,7 @@ section[id],
 
 .website-card-canon::after {
   background:
-    linear-gradient(180deg, rgb(5 5 7 / 56%), transparent 20%, transparent 76%, rgb(5 5 7 / 72%)),
+    linear-gradient(180deg, rgb(5 5 7 / 34%), transparent 16%, transparent 72%, rgb(5 5 7 / 76%)),
     linear-gradient(90deg, rgb(5 5 7 / 46%), transparent 12%, transparent 88%, rgb(5 5 7 / 46%));
   content: "";
   inset: 0;
@@ -10023,12 +10031,12 @@ section[id],
 }
 
 .website-capability-card[data-capability="collector"] .brand-canon-image {
-  filter: saturate(0.16) grayscale(0.62) brightness(1.12) contrast(1.08);
-  opacity: 0.96;
+  filter: saturate(0.1) grayscale(0.72) brightness(1.2) contrast(1.08);
+  opacity: 0.98;
 }
 
 .website-capability-card[data-capability="collector"]:hover .brand-canon-image {
-  filter: saturate(0.18) grayscale(0.58) brightness(1.16) contrast(1.1);
+  filter: saturate(0.12) grayscale(0.68) brightness(1.24) contrast(1.1);
   opacity: 1;
 }
 
@@ -10201,13 +10209,13 @@ section[id],
 .site-header.solid.is-scrolled,
 .legal-page .topbar-shell.is-scrolled,
 .request-demo-page .topbar-shell.is-scrolled {
-  --header-backdrop: blur(calc(16px * var(--header-progress, 0))) saturate(calc(100% + (32% * var(--header-progress, 0))));
-  background-color: rgb(18 18 24 / calc(0.02 + (0.68 * var(--header-progress, 0))));
+  --header-backdrop: blur(calc(18px * var(--header-progress, 0))) saturate(calc(100% + (36% * var(--header-progress, 0))));
+  background-color: rgb(32 32 38 / calc(0.02 + (0.62 * var(--header-progress, 0))));
   border-bottom-color: rgb(255 255 255 / calc(0.1 * var(--header-progress, 0)));
   box-shadow:
-    0 calc(16px * var(--header-progress, 0)) calc(48px * var(--header-progress, 0))
-      rgb(0 0 0 / calc(0.22 * var(--header-progress, 0))),
-    inset 0 1px 0 rgb(255 255 255 / calc(0.05 * var(--header-progress, 0)));
+    0 calc(14px * var(--header-progress, 0)) calc(42px * var(--header-progress, 0))
+      rgb(0 0 0 / calc(0.18 * var(--header-progress, 0))),
+    inset 0 1px 0 rgb(255 255 255 / calc(0.07 * var(--header-progress, 0)));
   backdrop-filter: var(--header-backdrop);
   transition:
     background-color 520ms cubic-bezier(0.22, 1, 0.36, 1),
@@ -10228,7 +10236,7 @@ section[id],
 .site-header.solid.is-scrolled,
 .legal-page .topbar-shell.is-scrolled,
 .request-demo-page .topbar-shell.is-scrolled {
-  --header-backdrop: blur(16px) saturate(132%);
+  --header-backdrop: blur(18px) saturate(136%);
   backdrop-filter: var(--header-backdrop);
 }
 
