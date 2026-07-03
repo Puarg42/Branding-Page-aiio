@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { EditorialJumpArrow } from "../../components/brand/EditorialJumpArrow";
 import { WebsiteArchitecturePage } from "../website-architecture";
 import { theoryEditorialRules, theoryJournalEntries, theoryPublication } from "./publication-model";
 
@@ -89,7 +90,7 @@ export default function ThinkingPage() {
             </p>
 
             <Link className="website-text-link" href="/thinking/theory">
-              Read the current Theory <span aria-hidden="true">&rarr;</span>
+              Read the current Theory <EditorialJumpArrow />
             </Link>
           </div>
         </div>

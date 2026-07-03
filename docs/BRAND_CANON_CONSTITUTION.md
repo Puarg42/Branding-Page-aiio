@@ -238,6 +238,55 @@ They should support reading flow and never become decorative.
 
 This range is reserved for future explanatory diagrams.
 
+### BC-ICON
+
+INTERFACE ELEMENTS
+
+Interface elements guide editorial reading behavior.
+
+They are not illustrations.
+
+They are not application controls.
+
+They exist only where the interface helps the reader move to a deeper level of understanding.
+
+#### BC-ICON-001
+
+Editorial Jump Arrow
+
+Purpose: use the Editorial Jump Arrow whenever content leads the reader to a deeper level of understanding.
+
+It communicates:
+
+Explore further.
+
+It must not communicate:
+
+Next.
+
+Usage:
+
+- Learn More links
+- Theory references
+- Thinking references
+- Company references
+- Brand Canon references
+- Whitepaper references
+- Editorial cross-links
+
+Prohibited usage:
+
+- Main navigation
+- Menus
+- Pagination
+- Carousel controls
+- Application UI
+- Directional navigation
+
+The Editorial Jump Arrow is exclusively an editorial interaction element.
+
+It must remain thin, calm, lightweight and precise.
+
 This structure may grow over time, but every addition must preserve the same visual logic, editorial discipline and conceptual restraint.
 
 ## Architectural Reference
@@ -281,6 +330,12 @@ Theory illustrations support reasoning.
 Brand Canon assets are never adapted to pages.
 
 Pages adapt to the Brand Canon.
+
+### BC Rule 08
+
+Editorial interface elements guide reading depth.
+
+They must never become generic UI controls.
 
 ## BC102 Usage Rules
 

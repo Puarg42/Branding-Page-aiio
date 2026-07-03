@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { EditorialJumpArrow } from "./EditorialJumpArrow";
 
 type TheoryReferenceProps = {
   href?: string;
@@ -29,7 +30,7 @@ export function TheoryReference({
       </span>
       <span className="theory-reference-label">{label}</span>
       <strong>{title}</strong>
-      <em aria-hidden="true">-&gt;</em>
+      <EditorialJumpArrow />
     </Link>
   );
 }

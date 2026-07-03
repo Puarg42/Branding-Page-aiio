@@ -16,6 +16,7 @@ The Brand Canon uses the V2 numbering architecture:
 - BC200: Organizational Capabilities
 - BC300: Theory
 - BC400: Editorial
+- BC-ICON: Interface Elements
 
 Existing image filenames remain unchanged until a later technical migration.
 
@@ -64,6 +65,16 @@ Purpose: capability illustration derived from the getting-into-action layer of B
 Official name: BC204 - Organizational Evolution.
 
 Purpose: capability illustration derived from the continuous evolution layer of BC102.
+
+### BC-ICON-001
+
+Official name: BC-ICON-001 - Editorial Jump Arrow.
+
+Purpose: reusable editorial navigation symbol for links that guide readers to a deeper level of understanding.
+
+Usage: Learn More links, Theory references, Thinking references, Company references, Brand Canon references, whitepaper references and editorial cross-links.
+
+Never use BC-ICON-001 for main navigation, menus, pagination, carousel controls, application UI or directional navigation.
 
 ## Incoming assets
 

@@ -156,6 +156,41 @@ Reserved for explanatory diagrams.
 
 Editorial illustrations clarify adjacent arguments without becoming decorative.
 
+### BC-ICON
+
+INTERFACE ELEMENTS
+
+Interface elements guide editorial reading behavior.
+
+They are not illustrations and not application controls.
+
+#### BC-ICON-001
+
+Editorial Jump Arrow
+
+Purpose
+
+Use the Editorial Jump Arrow whenever content leads the reader to a deeper level of understanding.
+
+Use for
+
+- Learn More links
+- Theory references
+- Thinking references
+- Company references
+- Brand Canon references
+- Whitepaper references
+- Editorial cross-links
+
+Do not use for
+
+- Main navigation
+- Menus
+- Pagination
+- Carousel controls
+- Application UI
+- Directional navigation
+
 ## Legacy Implementation Assets
 
 Some current files and component variants still use earlier technical labels.

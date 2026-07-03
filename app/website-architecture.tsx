@@ -4,6 +4,7 @@ import {
   BrandIllustration,
   type BrandIllustrationVariant,
 } from "../components/brand/BrandIllustration";
+import { EditorialJumpArrow } from "../components/brand/EditorialJumpArrow";
 import {
   EditorialSectionNavigator,
   type EditorialSectionNavigatorItem,
@@ -200,7 +201,7 @@ export function CapabilityTeaserGrid({
                 />
               ) : null}
               <Link className="website-text-link" href={capability.href}>
-                Learn more <span aria-hidden="true">-&gt;</span>
+                Learn more <EditorialJumpArrow />
               </Link>
             </article>
           ))}

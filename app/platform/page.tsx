@@ -7,6 +7,7 @@ import {
   type CapabilityTeaser,
 } from "../website-architecture";
 import { BrandIllustration } from "../../components/brand/BrandIllustration";
+import { EditorialJumpArrow } from "../../components/brand/EditorialJumpArrow";
 import { PlatformEditorialExperience } from "./platform-editorial-experience";
 
 export const metadata: Metadata = {
@@ -107,7 +108,7 @@ function TheoryTerm({
         href={href}
         title="Read theoretical foundation"
       >
-        ↗ Theory
+        Theory <EditorialJumpArrow />
       </Link>
     </span>
   );
