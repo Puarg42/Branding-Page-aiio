@@ -8705,8 +8705,62 @@ h1 {
 }
 
 .website-capability-layer-visual {
-  aspect-ratio: 1.18 / 1;
-  max-height: 500px;
+  display: grid;
+  gap: 18px;
+}
+
+.website-figure-caption {
+  align-items: center;
+  color: rgb(255 255 255 / 46%);
+  display: flex;
+  font-size: 0.82rem;
+  gap: 12px;
+  letter-spacing: 0.01em;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.website-figure-caption span {
+  color: rgb(179 145 255 / 78%);
+  font-family: var(--font-aiio-heading);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.website-capability-journey {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: calc(clamp(68px, 8vw, 124px) * -0.42) 0 clamp(34px, 5vw, 72px);
+}
+
+.website-capability-journey-step {
+  align-items: center;
+  background:
+    linear-gradient(180deg, rgb(255 255 255 / 5%), rgb(255 255 255 / 2%)),
+    rgb(255 255 255 / 2%);
+  border: 1px solid rgb(255 255 255 / 9%);
+  border-radius: 999px;
+  color: rgb(255 255 255 / 72%);
+  display: flex;
+  font-family: var(--font-aiio-heading);
+  font-size: clamp(0.92rem, 1vw, 1.02rem);
+  font-weight: 560;
+  gap: 12px;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 18px;
+  white-space: nowrap;
+}
+
+.website-capability-journey-step em {
+  color: rgb(179 145 255 / 82%);
+  font-size: 0.72rem;
+  font-style: normal;
+  font-weight: 720;
+  letter-spacing: 0.08em;
 }
 
 .website-platform-conclusion {
@@ -8743,6 +8797,58 @@ section[id],
 .website-capability-layer-visual .vl-architecture-platform {
   margin-bottom: 0;
   margin-top: 0;
+}
+
+.website-capability-layer-visual .brand-canon-figure {
+  height: clamp(280px, 32vw, 430px);
+  max-height: 430px;
+}
+
+.website-capability-layer-visual .brand-canon-image {
+  object-fit: contain;
+}
+
+@media (max-width: 1100px) {
+  .website-capability-layer-visual {
+    max-height: none;
+  }
+
+  .website-capability-layer-visual .brand-canon-figure {
+    height: clamp(260px, 48vw, 410px);
+  }
+
+  .website-capability-journey {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: -24px;
+  }
+}
+
+@media (max-width: 720px) {
+  .website-capability-layer-visual {
+    aspect-ratio: auto;
+    max-height: none;
+  }
+
+  .website-capability-layer-visual .brand-canon-figure {
+    height: clamp(230px, 70vw, 330px);
+  }
+
+  .website-capability-journey {
+    gap: 10px;
+    grid-template-columns: 1fr;
+    margin: -18px 0 42px;
+  }
+
+  .website-capability-journey-step {
+    justify-content: flex-start;
+    white-space: normal;
+  }
+
+  .website-figure-caption {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
 }
 
 .organization-mirror-visual {

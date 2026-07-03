@@ -82,6 +82,13 @@ export function CapabilityTeaserGrid({
 }: {
   capabilities: CapabilityTeaser[];
 }) {
+  const journey = [
+    "Understand",
+    "Build Understanding",
+    "Enable Capabilities",
+    "Evolve",
+  ];
+
   return (
     <section className="website-capability-section" aria-label="Platform capabilities">
       <div className="website-page-shell">
@@ -92,6 +99,15 @@ export function CapabilityTeaserGrid({
             The following capabilities are complementary perspectives of one
             Organizational Intelligence System.
           </p>
+        </div>
+        <div className="website-capability-journey" aria-label="Capability journey">
+          {journey.map((step, index) => (
+            <span className="website-capability-journey-step" key={step}>
+              <em>{String(index + 1).padStart(2, "0")}</em>
+              {" "}
+              {step}
+            </span>
+          ))}
         </div>
         <div className="website-capability-grid">
           {capabilities.map((capability, index) => (
