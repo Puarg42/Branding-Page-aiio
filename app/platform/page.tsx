@@ -55,12 +55,31 @@ const capabilities: CapabilityTeaser[] = [
   },
 ];
 
+const platformHeroTitle = (
+  <>
+    <span className="website-platform-hero-title">
+      One Organizational
+      <br />
+      Intelligence System
+    </span>
+    <span className="website-platform-hero-subtitle">
+      for organizations that
+      <br />
+      continuously understand themselves,
+      <br />
+      develop new capabilities
+      <br />
+      and become resilient.
+    </span>
+  </>
+) as unknown as string;
+
 export default function PlatformPage() {
   return (
     <WebsiteArchitecturePage
       eyebrow="Platform"
       intro="Organizations need more than disconnected software. They need a system that turns organizational reality into understanding, understanding into capabilities and capabilities into continuous evolution."
-      title={"One Organizational\nIntelligence System\n\nfor organizations that\ncontinuously understand themselves,\ndevelop new capabilities\nand become resilient."}
+      title={platformHeroTitle}
     >
       <section
         className="website-architecture-section website-platform-system-section"
@@ -135,6 +154,10 @@ export default function PlatformPage() {
               platform. The goal is an organization that continuously
               understands itself, develops new capabilities and becomes
               increasingly resilient.
+            </p>
+            <p className="website-platform-final-statement">
+              Organizations that truly understand themselves continuously
+              develop new capabilities—and become increasingly resilient.
             </p>
           </div>
         </div>
