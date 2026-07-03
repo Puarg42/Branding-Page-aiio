@@ -9,14 +9,14 @@ import { BrandIllustration } from "../../components/brand/BrandIllustration";
 export const metadata: Metadata = {
   title: "Platform | aiio",
   description:
-    "One Organizational Intelligence System that helps organizations understand, develop capabilities and evolve continuously.",
+    "One Organizational Intelligence System for organizations that continuously understand, develop and evolve.",
 };
 
 const capabilities: CapabilityTeaser[] = [
   {
     title: "Understand Your Organization",
     copy:
-      "Create and continuously refine the human-readable representation of your organization. It becomes the organizational source code that explains how your organization works and why.",
+      "Create and continuously refine the human-readable source code of your organization: how it works, why it works and where decisions depend on it.",
     illustrationVariant: "BC201",
     product: "ProcessCollector",
     quote:
@@ -26,9 +26,9 @@ const capabilities: CapabilityTeaser[] = [
   {
     title: "Build Organizational Understanding",
     copy:
-      "Connect organizational reality from people, systems, documents, operational data, standards, market knowledge and external intelligence.",
+      "Connect organizational reality across people, systems, documents, operations, standards and external intelligence.",
     secondaryCopy:
-      "Everything modeled in ProcessCollector expands this understanding, making ProcessCollector and ProcessMagnet two perspectives of one system.",
+      "What ProcessCollector models becomes part of the same living understanding, making ProcessCollector and ProcessMagnet two perspectives of one system.",
     illustrationVariant: "BC202",
     product: "ProcessMagnet",
     href: "#processmagnet",
@@ -36,9 +36,9 @@ const capabilities: CapabilityTeaser[] = [
   {
     title: "Enable Organizational Capabilities",
     copy:
-      "Turn organizational understanding into capabilities your organization can use repeatedly.",
+      "Turn organizational understanding into capabilities your organization can repeat, improve and trust.",
     secondaryCopy:
-      "These capabilities help people make better decisions and coordinate action every day.",
+      "Those capabilities help people make better decisions and coordinate action every day.",
     illustrationVariant: "BC203",
     product: "ProcessForge",
     href: "#processforge",
@@ -46,9 +46,9 @@ const capabilities: CapabilityTeaser[] = [
   {
     title: "Evolve Organizations",
     copy:
-      "Continuously evolve organizational capabilities using goals, scenarios, operational reality and Organizational Intelligence.",
+      "Use goals, scenarios, operational reality and Organizational Intelligence to keep capabilities improving.",
     secondaryCopy:
-      "Resilience becomes the business outcome of continuous organizational evolution.",
+      "Resilience becomes the outcome of continuous organizational evolution.",
     illustrationVariant: "BC204",
     product: "DataForge",
     href: "#dataforge",
@@ -60,8 +60,8 @@ export default function PlatformPage() {
   return (
     <WebsiteArchitecturePage
       eyebrow="Platform"
-      intro="Organizations need more than disconnected software. They need one system that turns organizational reality into understanding, capability and continuous evolution."
-      title="One system for organizations that continuously evolve."
+      intro="Organizations need more than disconnected software. They need a system that turns organizational reality into understanding, understanding into capabilities and capabilities into continuous evolution."
+      title="One Organizational Intelligence System for organizations that continuously understand, develop and evolve."
     >
       <section
         className="website-architecture-section website-platform-system-section"
@@ -73,10 +73,11 @@ export default function PlatformPage() {
               <p className="website-eyebrow">The System</p>
               <h2>Organizational Intelligence emerges through four capabilities.</h2>
               <p>
-                Every organization must understand itself, build organizational
-                understanding, turn understanding into capabilities and evolve
-                continuously. Together, these capabilities form one
-                Organizational Intelligence System.
+                Organizational Intelligence does not emerge from isolated tools.
+                It emerges when four capabilities work together: understanding
+                the organization, building organizational understanding, enabling
+                capabilities and driving continuous evolution. Together, they
+                form one Organizational Intelligence System.
               </p>
             </div>
             <div className="website-capability-layer-visual">
@@ -95,12 +96,12 @@ export default function PlatformPage() {
         <div className="website-page-shell">
           <div className="website-platform-conclusion">
             <p className="website-eyebrow">Outcome</p>
-            <h2>One continuously evolving Organizational Intelligence System.</h2>
+            <h2>Organizations that understand themselves evolve.</h2>
             <p>
               Organizations that continuously understand themselves continuously
               develop new capabilities. Organizations that continuously develop
-              new capabilities continuously evolve. aiio is the Organizational
-              Intelligence System enabling that capability.
+              new capabilities continuously evolve. That is Organizational
+              Intelligence. aiio is the system that enables it.
             </p>
           </div>
         </div>
