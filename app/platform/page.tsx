@@ -170,13 +170,7 @@ export default function PlatformPage() {
         <div className="website-page-shell">
           <div className="website-platform-conclusion">
             <p className="website-eyebrow">Outcome</p>
-            <h2>
-              The outcome is{" "}
-              <TheoryTerm href={theoryLinks.resilience}>
-                organizational resilience
-              </TheoryTerm>
-              .
-            </h2>
+            <h2>The outcome is organizational resilience.</h2>
             <p>
               The outcome is not another software platform.
             </p>
@@ -229,11 +223,7 @@ export default function PlatformPage() {
               capabilities.
             </p>
             <p className="website-platform-conclusion-thesis">
-              This is the foundation of{" "}
-              <TheoryTerm href={theoryLinks.resilience}>
-                Organizational Resilience
-              </TheoryTerm>
-              .
+              This is the foundation of Organizational Resilience.
             </p>
             <p className="website-platform-conclusion-final">
               The goal is not better documentation. The goal is not another AI
