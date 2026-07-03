@@ -8942,6 +8942,7 @@ h1 {
 .vl-mind-node.node-8 { left: 41%; bottom: 10%; }
 
 .website-platform-system-section {
+  overflow-x: clip;
   padding: clamp(60px, 6vw, 104px) 0 clamp(54px, 5.4vw, 90px);
 }
 
@@ -8974,6 +8975,8 @@ h1 {
 }
 
 .website-capability-layer-visual {
+  --website-shell-width: min(1180px, calc(100vw - 40px));
+  --website-viewport-bleed-right: max(0px, calc((100vw - var(--website-shell-width)) / 2));
   align-self: start;
   display: flex;
   grid-column: 2 / -1;
@@ -8984,8 +8987,8 @@ h1 {
   opacity: 0.88;
   pointer-events: none;
   position: relative;
-  transform: translateX(clamp(24px, 4vw, 68px));
-  width: min(80vw, 1060px);
+  transform: translateX(var(--website-viewport-bleed-right));
+  width: min(calc(80vw + var(--website-viewport-bleed-right)), 1180px);
   z-index: 1;
 }
 
@@ -9285,6 +9288,8 @@ section[id],
 @media (max-width: 1100px) {
   .website-capability-layer-visual {
     max-height: none;
+    transform: none;
+    width: 100%;
   }
 
   .website-capability-layer-visual .brand-canon-figure {
