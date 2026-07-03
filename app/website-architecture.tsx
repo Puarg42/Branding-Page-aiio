@@ -23,6 +23,7 @@ type WebsiteArchitecturePageProps = {
   eyebrow: string;
   heroActions?: ReactNode;
   heroId?: string;
+  heroVisual?: ReactNode;
   intro: string;
   sectionNavigator?: readonly EditorialSectionNavigatorItem[];
   sectionNavigatorLabel?: string;
@@ -35,6 +36,7 @@ export function WebsiteArchitecturePage({
   eyebrow,
   heroActions,
   heroId,
+  heroVisual,
   intro,
   sectionNavigator,
   sectionNavigatorLabel,
@@ -46,6 +48,7 @@ export function WebsiteArchitecturePage({
       <MainHeader />
       <section className="website-hero" id={heroId}>
         <div className="website-page-shell">
+          {heroVisual ? <div className="website-hero-visual">{heroVisual}</div> : null}
           <EditorialEyebrow>{eyebrow}</EditorialEyebrow>
           <h1>{title}</h1>
           <p>{intro}</p>

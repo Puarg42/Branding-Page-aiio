@@ -26,8 +26,8 @@ export const brandCanonAssets: Record<
     src: "/brand-canon/002-organizational-intelligence-engine.png",
   },
   "BC-003": {
-    alt: "Transparent Intelligence material illustration",
-    src: "/brand-canon/003-transparent-intelligence-material.png",
+    alt: "Organizational Intelligence Core platform hero illustration",
+    src: "/brand-canon/003-organizational-intelligence-core.png",
   },
   "BC-004": {
     alt: "Organizational Intelligence Elements brand illustration",

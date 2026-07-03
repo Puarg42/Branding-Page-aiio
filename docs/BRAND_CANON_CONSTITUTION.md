@@ -160,6 +160,26 @@ The organizational outcome is resilience.
 
 BC102 is explanatory. It is not a decorative hero image.
 
+#### BC003
+
+Organizational Intelligence Core
+
+Purpose: dedicated Platform Hero illustration.
+
+BC003 visualizes the transformation from fragmented organizational reality into one connected Organizational Intelligence System.
+
+It is the visual opening for the Platform page only.
+
+It must not replace BC101 / BC001 Organizational Mind.
+
+It must not replace BC102 / BC002 Organizational Intelligence Engine.
+
+BC101 remains the primary Theory Hero.
+
+BC102 remains the Platform Explanation Illustration.
+
+BC003 becomes the Platform Hero Illustration.
+
 ### BC200
 
 ORGANIZATIONAL CAPABILITIES

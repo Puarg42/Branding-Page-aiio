@@ -34,6 +34,20 @@ Usage: beside explanatory content, inside articles, inside theory or inside the 
 
 Never use BC102 as hero artwork, decorative background artwork or a dominant page visual.
 
+### BC003
+
+`003-organizational-intelligence-core.png`
+
+Official name: BC003 - Organizational Intelligence Core.
+
+Purpose: dedicated Platform Hero illustration.
+
+Narrative: visualizes the transformation from fragmented organizational reality into one connected Organizational Intelligence System. Fragmented documents, process diagrams, structures, forms and organizational artefacts enter from the left in neutral monochrome; the Organizational Intelligence sphere remains the central focal point; the semantic organizational network extends to the right with its approved color, lighting and composition.
+
+Usage: Platform Hero only.
+
+Never use BC003 to replace BC001, BC002 or any capability illustration. BC001 remains the Organizational Mind illustration. BC002 remains the Platform explanation illustration.
+
 ### BC201
 
 `201-organizational-source-code.png`

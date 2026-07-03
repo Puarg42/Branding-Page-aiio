@@ -122,6 +122,14 @@ export default function PlatformPage() {
     <WebsiteArchitecturePage
       eyebrow="Platform"
       heroId="platform-hero"
+      heroVisual={
+        <BrandIllustration
+          className="website-platform-hero-artwork"
+          decorative={false}
+          priority
+          variant="BC-003"
+        />
+      }
       intro="Organizations need more than disconnected software. They need a system that turns organizational reality into understanding, understanding into capabilities and capabilities into continuous evolution."
       sectionNavigator={platformSectionNavigator}
       sectionNavigatorLabel="Platform sections"

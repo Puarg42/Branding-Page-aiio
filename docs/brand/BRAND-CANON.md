@@ -248,6 +248,24 @@ Some current files and component variants still use earlier technical labels.
 
 They remain valid implementation references until a dedicated technical migration is performed.
 
+### Organizational Intelligence Core
+
+Identifier
+
+BC003
+
+Purpose
+
+Platform Hero Illustration.
+
+Visualizes the transformation from fragmented organizational reality into one connected Organizational Intelligence System.
+
+Use only for the Platform Hero.
+
+BC001 remains the Organizational Mind illustration.
+
+BC002 remains the Platform Explanation Illustration.
+
 ### Transparent Intelligence
 
 Purpose

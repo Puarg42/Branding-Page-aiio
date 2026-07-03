@@ -12047,6 +12047,40 @@ section[id],
   z-index: 1;
 }
 
+.website-hero-visual {
+  margin: 0 0 clamp(36px, 5vw, 76px);
+  width: 100%;
+}
+
+.website-platform-hero-artwork.brand-canon-figure {
+  aspect-ratio: 1960 / 806;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  height: auto;
+  max-height: min(42vw, 520px);
+  min-height: 260px;
+  overflow: visible;
+  width: 100%;
+}
+
+.website-platform-hero-artwork .brand-canon-image {
+  filter: brightness(1.04) contrast(1.04);
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  -webkit-mask-image:
+    linear-gradient(180deg, transparent 0%, #000 12%, #000 88%, transparent 100%),
+    linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+  mask-image:
+    linear-gradient(180deg, transparent 0%, #000 12%, #000 88%, transparent 100%),
+    linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+}
+
 .website-hero-actions {
   display: flex;
   flex-wrap: wrap;
