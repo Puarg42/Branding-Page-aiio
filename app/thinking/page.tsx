@@ -29,7 +29,7 @@ export default function ThinkingPage() {
       intro="Thinking is the public journal of the Theory of Organizational Intelligence. It records what changed, why it matters and which chapters were affected."
       sectionNavigator={thinkingSectionNavigator}
       sectionNavigatorLabel="Thinking sections"
-      title="The Theory behind the aiio Model"
+      title="The Theory behind aiio's Organizational Intelligence System"
     >
       <section className="website-architecture-section thinking-journal-section" id="journal">
         <div className="website-page-shell">
