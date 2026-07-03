@@ -96,10 +96,10 @@ export function CapabilityTeaserGrid({
   capabilities: CapabilityTeaser[];
 }) {
   const journey = [
-    { key: "collector", label: "Understand" },
-    { key: "magnet", label: "Build Understanding" },
-    { key: "forge", label: "Enable Capabilities" },
-    { key: "dataforge", label: "Evolve" },
+    { key: "collector", label: "Understand Your Organization" },
+    { key: "magnet", label: "Build Organizational Self-Understanding" },
+    { key: "forge", label: "Enable Organizational Capabilities" },
+    { key: "dataforge", label: "Continuously Evolve" },
   ];
 
   return (
@@ -140,7 +140,9 @@ export function CapabilityTeaserGrid({
                 </span>
                 <h3>{capability.title}</h3>
                 <div className="website-card-topline">
-                  <span>Powered by {capability.product}</span>
+                  <span>
+                    Powered by <strong>{capability.product}</strong>
+                  </span>
                   {capability.badge ? <em>{capability.badge}</em> : null}
                 </div>
                 <p>{capability.copy}</p>
