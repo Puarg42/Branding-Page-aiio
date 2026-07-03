@@ -9389,7 +9389,7 @@ section[id],
   }
 }
 
-.platform-section-navigator {
+.editorial-section-navigator {
   display: grid;
   gap: 14px;
   opacity: 0.72;
@@ -9401,11 +9401,11 @@ section[id],
   z-index: 60;
 }
 
-.platform-section-navigator:hover {
+.editorial-section-navigator:hover {
   opacity: 1;
 }
 
-.platform-section-navigator a {
+.editorial-section-navigator a {
   align-items: center;
   color: rgb(255 255 255 / 48%);
   display: grid;
@@ -9421,7 +9421,7 @@ section[id],
     transform 180ms ease;
 }
 
-.platform-section-navigator a::before {
+.editorial-section-navigator a::before {
   background: rgb(255 255 255 / 28%);
   border-radius: 999px;
   content: "";
@@ -9433,12 +9433,12 @@ section[id],
   width: 6px;
 }
 
-.platform-section-navigator a:hover,
-.platform-section-navigator a.is-active {
+.editorial-section-navigator a:hover,
+.editorial-section-navigator a.is-active {
   color: rgb(255 255 255 / 84%);
 }
 
-.platform-section-navigator a.is-active::before {
+.editorial-section-navigator a.is-active::before {
   background: #5a328a;
   box-shadow: 0 0 18px rgb(90 50 138 / 56%);
   transform: scale(1.22);
@@ -9579,7 +9579,7 @@ section[id],
 }
 
 @media (max-width: 1180px) {
-  .platform-section-navigator {
+  .editorial-section-navigator {
     display: none;
   }
 }
@@ -9621,8 +9621,8 @@ section[id],
   .brand-canon-lightbox-image,
   .brand-canon-lightbox-close,
   .brand-canon-lightbox-nav,
-  .platform-section-navigator,
-  .platform-section-navigator a,
+  .editorial-section-navigator,
+  .editorial-section-navigator a,
   .website-capability-journey,
   .website-capability-journey-step,
   .website-capability-journey-step::before,

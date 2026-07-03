@@ -58,6 +58,13 @@ const capabilities: CapabilityTeaser[] = [
   },
 ];
 
+const platformSectionNavigator = [
+  { id: "platform-hero", label: "Hero" },
+  { id: "capability-layer", label: "The System" },
+  { id: "platform-capabilities", label: "Capabilities" },
+  { id: "platform-outcome", label: "Outcome" },
+] as const;
+
 const platformHeroTitle = (
   <>
     <span className="website-platform-hero-title">
@@ -112,6 +119,8 @@ export default function PlatformPage() {
       eyebrow="Platform"
       heroId="platform-hero"
       intro="Organizations need more than disconnected software. They need a system that turns organizational reality into understanding, understanding into capabilities and capabilities into continuous evolution."
+      sectionNavigator={platformSectionNavigator}
+      sectionNavigatorLabel="Platform sections"
       title={platformHeroTitle}
     >
       <section

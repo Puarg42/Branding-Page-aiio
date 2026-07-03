@@ -1,14 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { BrandCanonLightbox } from "../../components/brand/BrandCanonLightbox";
-
-const sections = [
-  { id: "platform-hero", label: "Hero" },
-  { id: "capability-layer", label: "The System" },
-  { id: "platform-capabilities", label: "Capabilities" },
-  { id: "platform-outcome", label: "Outcome" },
-] as const;
 
 const capabilityCardSelector = ".website-capability-card[data-capability]";
 const revealSelector = [
@@ -45,8 +38,6 @@ function revealOutcomeItems(target: Element) {
 }
 
 export function PlatformEditorialExperience() {
-  const [activeSection, setActiveSection] = useState<string>(sections[0].id);
-
   useEffect(() => {
     const page = document.querySelector(".website-page");
 
@@ -58,34 +49,6 @@ export function PlatformEditorialExperience() {
 
     return () => {
       page.classList.remove("platform-editorial-motion");
-    };
-  }, []);
-
-  useEffect(() => {
-    const sectionElements = sections
-      .map((section) => document.getElementById(section.id))
-      .filter((section): section is HTMLElement => Boolean(section));
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visibleEntry = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((first, second) => first.boundingClientRect.top - second.boundingClientRect.top)[0];
-
-        if (visibleEntry?.target.id) {
-          setActiveSection(visibleEntry.target.id);
-        }
-      },
-      {
-        rootMargin: "-34% 0px -54% 0px",
-        threshold: [0, 0.08, 0.2],
-      },
-    );
-
-    sectionElements.forEach((section) => observer.observe(section));
-
-    return () => {
-      observer.disconnect();
     };
   }, []);
 
@@ -203,20 +166,5 @@ export function PlatformEditorialExperience() {
     };
   }, []);
 
-  return (
-    <>
-      <BrandCanonLightbox />
-      <nav aria-label="Platform sections" className="platform-section-navigator">
-        {sections.map((section) => (
-          <a
-            className={section.id === activeSection ? "is-active" : undefined}
-            href={`#${section.id}`}
-            key={section.id}
-          >
-            <span>{section.label}</span>
-          </a>
-        ))}
-      </nav>
-    </>
-  );
+  return <BrandCanonLightbox />;
 }

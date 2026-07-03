@@ -2,6 +2,7 @@ import { MainHeader } from "./main-navigation";
 import { CapabilityJourney } from "./capability-journey";
 import { CategoryEvolution, CeoMondayMoment } from "./category-reinforcement";
 import { BrandIllustration } from "../components/brand/BrandIllustration";
+import { EditorialSectionNavigator } from "../components/brand/EditorialSectionNavigator";
 import { TheoryReference } from "../components/brand/TheoryReference";
 
 const problemCards = [
@@ -73,9 +74,18 @@ const companyPrinciples = [
   },
 ] as const;
 
+const homeSectionNavigator = [
+  { id: "home-hero", label: "Hero" },
+  { id: "problem", label: "Why Now" },
+  { id: "organizational-intelligence", label: "Understanding" },
+  { id: "capabilities", label: "Capability" },
+  { id: "architektur", label: "System" },
+  { id: "category-evolution", label: "Outcome" },
+] as const;
+
 function Hero() {
   return (
-    <section className="hero">
+    <section className="hero" id="home-hero">
       <div className="landing-hero-content">
         <h1>The future belongs to organizations that understand themselves.</h1>
         <p className="hero-subheadline">
@@ -283,6 +293,10 @@ export default function Home() {
       <CeoMondayMoment />
       <CategoryEvolution />
       <CompanyPurpose />
+      <EditorialSectionNavigator
+        ariaLabel="Home sections"
+        sections={homeSectionNavigator}
+      />
     </main>
   );
 }

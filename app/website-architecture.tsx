@@ -4,6 +4,10 @@ import {
   BrandIllustration,
   type BrandIllustrationVariant,
 } from "../components/brand/BrandIllustration";
+import {
+  EditorialSectionNavigator,
+  type EditorialSectionNavigatorItem,
+} from "../components/brand/EditorialSectionNavigator";
 import { MainHeader } from "./main-navigation";
 
 export type ArchitectureSection = {
@@ -16,6 +20,8 @@ type WebsiteArchitecturePageProps = {
   eyebrow: string;
   heroId?: string;
   intro: string;
+  sectionNavigator?: readonly EditorialSectionNavigatorItem[];
+  sectionNavigatorLabel?: string;
   sections?: readonly ArchitectureSection[];
   title: string;
 };
@@ -25,6 +31,8 @@ export function WebsiteArchitecturePage({
   eyebrow,
   heroId,
   intro,
+  sectionNavigator,
+  sectionNavigatorLabel,
   sections = [],
   title,
 }: WebsiteArchitecturePageProps) {
@@ -58,6 +66,13 @@ export function WebsiteArchitecturePage({
             </div>
           </div>
         </section>
+      ) : null}
+
+      {sectionNavigator?.length ? (
+        <EditorialSectionNavigator
+          ariaLabel={sectionNavigatorLabel}
+          sections={sectionNavigator}
+        />
       ) : null}
     </main>
   );

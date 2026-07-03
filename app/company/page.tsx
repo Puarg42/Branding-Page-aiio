@@ -25,14 +25,23 @@ const principles = [
   },
 ] as const;
 
+const companySectionNavigator = [
+  { id: "company-hero", label: "Hero" },
+  { id: "company-mission", label: "Mission" },
+  { id: "company-principles", label: "Principles" },
+] as const;
+
 export default function CompanyPage() {
   return (
     <WebsiteArchitecturePage
       eyebrow="Company"
+      heroId="company-hero"
       intro="aiio exists because organizations need a better way to preserve what they know and turn it into durable capability."
+      sectionNavigator={companySectionNavigator}
+      sectionNavigatorLabel="Company sections"
       title="Why aiio exists."
     >
-      <section className="website-architecture-section">
+      <section className="website-architecture-section" id="company-mission">
         <div className="website-page-shell">
           <div className="website-section-heading">
             <p className="website-eyebrow">Mission</p>
@@ -50,7 +59,7 @@ export default function CompanyPage() {
         </div>
       </section>
 
-      <section className="website-architecture-section">
+      <section className="website-architecture-section" id="company-principles">
         <div className="website-page-shell">
           <div className="website-section-heading">
             <p className="website-eyebrow">Principles</p>

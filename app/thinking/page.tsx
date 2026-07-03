@@ -9,11 +9,21 @@ export const metadata: Metadata = {
     "The living Theory Journal for Organizational Intelligence and the evolution of organizational self-understanding.",
 };
 
+const thinkingSectionNavigator = [
+  { id: "thinking-hero", label: "Hero" },
+  { id: "journal", label: "Journal" },
+  { id: "publication", label: "Publication" },
+  { id: "editorial-model", label: "Editorial" },
+] as const;
+
 export default function ThinkingPage() {
   return (
     <WebsiteArchitecturePage
       eyebrow="Thinking"
+      heroId="thinking-hero"
       intro="Thinking is the public journal of the Theory of Organizational Intelligence. It records what changed, why it matters and which chapters were affected."
+      sectionNavigator={thinkingSectionNavigator}
+      sectionNavigatorLabel="Thinking sections"
       title="The theory evolves in public."
     >
       <section className="website-architecture-section thinking-journal-section" id="journal">

@@ -1,6 +1,10 @@
 import { readFileSync } from "fs";
 import path from "path";
 import type { Metadata } from "next";
+import {
+  EditorialSectionNavigator,
+  type EditorialSectionNavigatorItem,
+} from "../../../components/brand/EditorialSectionNavigator";
 import { TheorySidebar } from "./theory-sidebar";
 
 export const metadata: Metadata = {
@@ -202,6 +206,22 @@ function renderOpeningSentence(text: string, isOpening: boolean) {
 
 const chapters = getTheoryChapters();
 const sidebarChapters = chapters.map(({ id, title }) => ({ id, title }));
+const theoryNavigatorSections = [
+  { id: "theory-hero", label: "Hero" },
+  { id: chapters.find((chapter) => chapter.title === "Prologue")?.id, label: "Foundation" },
+  {
+    id: chapters.find((chapter) => chapter.title.includes("Missing Layer"))?.id,
+    label: "Core Thesis",
+  },
+  {
+    id: chapters.find((chapter) => chapter.title.includes("Organizational Understanding"))?.id,
+    label: "Understanding",
+  },
+  {
+    id: chapters.find((chapter) => chapter.title.includes("Organizational Resilience"))?.id,
+    label: "Outcome",
+  },
+].filter((section): section is EditorialSectionNavigatorItem => Boolean(section.id));
 
 export default function TheoryPage() {
   return (
@@ -210,7 +230,7 @@ export default function TheoryPage() {
         <TheorySidebar chapters={sidebarChapters} />
 
         <div className="theory-book-main">
-          <section className="theory-book-hero" aria-label="Theory introduction">
+          <section className="theory-book-hero" id="theory-hero" aria-label="Theory introduction">
             <div className="theory-book-hero-artwork" aria-hidden="true">
               <img
                 alt=""
@@ -265,6 +285,10 @@ export default function TheoryPage() {
           </article>
         </div>
       </div>
+      <EditorialSectionNavigator
+        ariaLabel="Theory sections"
+        sections={theoryNavigatorSections}
+      />
     </main>
   );
 }
