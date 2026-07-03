@@ -9457,40 +9457,47 @@ section[id],
 }
 
 .platform-theory-term {
+  color: inherit;
   display: inline;
+}
+
+.platform-theory-text {
+  color: inherit;
+  transition: color 180ms ease;
 }
 
 .platform-theory-indicator {
   align-items: center;
-  border-bottom: 1px solid rgb(90 50 138 / 36%);
-  color: rgb(197 172 255 / 78%);
+  color: rgb(90 50 138 / 82%);
   display: inline-flex;
-  font-family: var(--font-aiio-heading);
-  font-size: 0.56em;
-  font-weight: 680;
-  gap: 0.2em;
   letter-spacing: 0;
   line-height: 1;
-  margin-left: 0.42em;
+  margin-left: 0.08em;
   text-decoration: none;
-  transform: translateY(-0.1em);
-  transition:
-    border-color 180ms ease,
-    color 180ms ease;
+  transform: translateY(-0.36em);
+  transition: color 180ms ease;
+  vertical-align: baseline;
   white-space: nowrap;
 }
 
-.platform-theory-indicator:hover {
-  border-color: rgb(90 50 138 / 74%);
-  color: #ffffff;
+.platform-theory-term:hover .platform-theory-text,
+.platform-theory-term:focus-within .platform-theory-text {
+  color: rgb(179 145 255 / 92%);
+}
+
+.platform-theory-term:hover .platform-theory-indicator,
+.platform-theory-term:focus-within .platform-theory-indicator {
+  color: rgb(179 145 255 / 88%);
 }
 
 .platform-theory-indicator .editorial-jump-arrow {
   color: currentColor;
-  height: 0.82em;
-  width: 0.82em;
+  height: 0.62em;
+  width: 0.62em;
 }
 
+.platform-theory-term:hover .editorial-jump-arrow,
+.platform-theory-term:focus-within .editorial-jump-arrow,
 .platform-theory-indicator:hover .editorial-jump-arrow,
 .platform-theory-indicator:focus-visible .editorial-jump-arrow {
   transform: translate(4px, -3px);
@@ -9604,7 +9611,7 @@ section[id],
   }
 
   .platform-theory-indicator {
-    font-size: 0.62em;
+    font-size: 1em;
   }
 }
 
