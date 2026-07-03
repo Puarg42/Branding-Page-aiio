@@ -17,20 +17,28 @@ const fadeIn: Variants = {
 
 const capabilitySequence = [
   {
-    title: "Self-Understanding",
+    meta: "Level 1",
+    title: "Organizational Self-Understanding",
     copy: "Your organization continuously interprets its context, decisions, processes and capabilities.",
+    tone: "cyan",
   },
   {
-    title: "New Capabilities",
-    copy: "What your organization learns becomes a capability it can use again.",
+    meta: "Level 2",
+    title: "Organizational Intelligence",
+    copy: "Understanding becomes coherent decisions, shared direction and organizational learning.",
+    tone: "purple",
   },
   {
-    title: "Better Decisions",
-    copy: "People and AI work from shared context instead of rebuilding it.",
+    meta: "Level 3",
+    title: "Organizational Capabilities",
+    copy: "What your organization learns becomes repeatable execution it can improve.",
+    tone: "amber",
   },
   {
-    title: "Coordinated Action",
-    copy: "Teams move with clearer priorities, less rework and stronger execution.",
+    meta: "Outcome",
+    title: "Organizational Resilience",
+    copy: "Your organization adapts with less rework, stronger execution and more confidence.",
+    tone: "violet",
   },
 ] as const;
 
@@ -70,6 +78,7 @@ export function CapabilityJourney() {
           {capabilitySequence.map((capability, index) => (
             <motion.article
               className="capability-step"
+              data-tone={capability.tone}
               initial="hidden"
               key={capability.title}
               transition={
@@ -81,6 +90,7 @@ export function CapabilityJourney() {
               viewport={{ amount: 0.32, once: true }}
               whileInView="visible"
             >
+              <span className="capability-step-level">{capability.meta}</span>
               <span className="capability-step-number">
                 {String(index + 1).padStart(2, "0")}
               </span>
@@ -105,12 +115,12 @@ export function CapabilityJourney() {
           <EditorialProgression
             ariaLabel="Capability outcome progression"
             items={[
-              { label: "Organizational Self-Understanding", tone: "cyan" },
-              { label: "New Organizational Capabilities", tone: "purple" },
-              { label: "Better Decisions", tone: "purple" },
-              { label: "Coordinated Action", tone: "purple" },
-              { label: "Organizational Resilience", tone: "amber" },
+              { label: "Organizational Self-Understanding", meta: "Level 1", tone: "cyan" },
+              { label: "Organizational Intelligence", meta: "Level 2", tone: "purple" },
+              { label: "Organizational Capabilities", meta: "Level 3", tone: "amber" },
+              { label: "Organizational Resilience", meta: "Outcome", tone: "violet" },
             ]}
+            orientation="horizontal"
           />
         </motion.div>
       </div>

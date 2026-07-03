@@ -17,6 +17,10 @@ function getPrefersReducedMotion() {
   return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
 
+function getScrollOffset() {
+  return window.matchMedia("(max-width: 720px)").matches ? 84 : 112;
+}
+
 export function EditorialSectionNavigator({
   ariaLabel = "Page sections",
   sections,
@@ -71,9 +75,11 @@ export function EditorialSectionNavigator({
     }
 
     event.preventDefault();
-    section.scrollIntoView({
+    const targetTop = section.getBoundingClientRect().top + window.scrollY - getScrollOffset();
+
+    window.scrollTo({
       behavior: getPrefersReducedMotion() ? "auto" : "smooth",
-      block: "start",
+      top: Math.max(0, targetTop),
     });
     window.history.replaceState(null, "", `#${id}`);
     setActiveId(id);

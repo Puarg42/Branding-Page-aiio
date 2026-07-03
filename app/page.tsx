@@ -26,9 +26,10 @@ const problemCards = [
 ] as const;
 
 const intelligenceProgression = [
-  "Information and AI",
-  "Organizational Self-Understanding",
-  "Coordinated action",
+  { label: "Organizational Self-Understanding", meta: "Missing capability", tone: "cyan" },
+  { label: "Organizational Intelligence", meta: "Decision quality", tone: "purple" },
+  { label: "Organizational Capabilities", meta: "Execution", tone: "amber" },
+  { label: "Organizational Resilience", meta: "Business outcome", tone: "violet" },
 ] as const;
 
 const imagineMoments = [
@@ -77,11 +78,12 @@ const companyPrinciples = [
 
 const homeSectionNavigator = [
   { id: "home-hero", label: "Hero" },
-  { id: "problem", label: "Why Now" },
-  { id: "organizational-intelligence", label: "Understanding" },
-  { id: "capabilities", label: "Capability" },
+  { id: "category-evolution", label: "Why Now" },
+  { id: "problem", label: "Problem" },
+  { id: "organizational-intelligence", label: "Missing Capability" },
+  { id: "capabilities", label: "Journey" },
   { id: "architektur", label: "System" },
-  { id: "category-evolution", label: "Outcome" },
+  { id: "self-enabling-organization", label: "Outcome" },
 ] as const;
 
 function Hero() {
@@ -140,7 +142,7 @@ function ConceptBreakthrough() {
       <div className="concept-inner">
         <div className="concept-copy">
           <p className="dark-eyebrow">The missing capability</p>
-          <h2>Organizations need a shared understanding of how they work.</h2>
+          <h2>The missing capability is continuous self-understanding.</h2>
           <div className="concept-statement">
             <p>Organizations collect information, document processes and introduce AI.</p>
             <p>Yet they still struggle to turn all of this into coordinated action.</p>
@@ -151,16 +153,17 @@ function ConceptBreakthrough() {
             </p>
           </div>
           <p className="concept-support">
-            When an organization continuously understands itself, it continuously
-            develops new capabilities that help people make better decisions.
+            When an organization continuously understands itself, understanding becomes
+            intelligence, intelligence becomes capability and capability becomes resilience.
           </p>
         </div>
         <EditorialProgression
           ariaLabel="Missing layer progression"
           className="intelligence-progression"
-          items={intelligenceProgression.map((step, index) => ({
-            label: step,
-            tone: index === 1 ? "cyan" : index === 2 ? "purple" : "graphite",
+          items={intelligenceProgression.map((step) => ({
+            label: step.label,
+            meta: step.meta,
+            tone: step.tone,
           }))}
         />
       </div>
@@ -178,9 +181,9 @@ function NewKindOrganization() {
       </div>
       <div className="organization-inner">
         <div className="organization-header">
-          <p className="dark-eyebrow">A New Kind of Organization</p>
-          <h2>A more capable organization creates better work.</h2>
-          <p>Your organization makes better decisions, executes with less rework and improves with every cycle.</p>
+          <p className="dark-eyebrow">Outcome</p>
+          <h2>A more resilient organization creates better work.</h2>
+          <p>Your organization makes better decisions, executes with less rework and adapts with more confidence.</p>
         </div>
         <div className="organization-closing-block">
           <div className="organization-closing-statement">
@@ -220,28 +223,29 @@ function ImagineFuture() {
 function OisArchitecture() {
   return (
     <section className="ois-section" id="architektur">
-      <div className="ois-intro">
-        <p className="ois-section-title">The System</p>
-        <h2>aiio makes organizational capability continuous.</h2>
-        <div className="ois-body">
-          <p>
-            The Organizational Intelligence System connects people, processes,
-            systems, AI and organizational context into one foundation for
-            decisions, execution and continuous improvement.
-          </p>
+      <div className="ois-editorial-layout">
+        <div className="ois-intro">
+          <p className="ois-section-title">The System</p>
+          <h2>The Organizational Intelligence System gives this capability a place to operate.</h2>
+          <div className="ois-body">
+            <p>
+              It connects organizational reality, context, decisions and action
+              into one foundation for continuous capability development.
+            </p>
+          </div>
+        </div>
+
+        <div
+          aria-label="Organizational Intelligence layered architecture"
+          className="ois-visual-wrap"
+        >
+          <BrandIllustration variant="BC-002" />
         </div>
       </div>
 
-      <div
-        aria-label="Organizational Intelligence layered architecture"
-        className="ois-visual-wrap"
-      >
-        <BrandIllustration variant="BC-002" />
-      </div>
-
       <div className="ois-bottom-statement">
-        <p>The OIS is infrastructure, not another application.</p>
-        <p>It helps your organization become more capable with every decision.</p>
+        <p>The system is not the destination.</p>
+        <p>The outcome is a more capable and resilient organization.</p>
       </div>
     </section>
   );
@@ -289,13 +293,13 @@ export default function Home() {
     <main>
       <MainHeader />
       <Hero />
+      <CategoryEvolution />
       <ProblemSection />
       <ConceptBreakthrough />
-      <NewKindOrganization />
       <CapabilityJourney />
       <OisArchitecture />
+      <NewKindOrganization />
       <CeoMondayMoment />
-      <CategoryEvolution />
       <CompanyPurpose />
       <EditorialSectionNavigator
         ariaLabel="Home sections"
