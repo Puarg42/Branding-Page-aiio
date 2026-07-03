@@ -9557,20 +9557,23 @@ section[id],
   transform: translateY(0);
 }
 
-.platform-editorial-motion .website-platform-outcome-section.is-visible .website-platform-outcome-ladder > div,
+.platform-editorial-motion .website-platform-outcome-ladder.is-visible > div,
 .platform-editorial-motion .website-platform-outcome-ladder > div.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
 
+.platform-editorial-motion .website-platform-outcome-ladder.is-visible > div:nth-child(2),
 .platform-editorial-motion .website-platform-outcome-ladder > div:nth-child(2).is-visible {
   transition-delay: 90ms;
 }
 
+.platform-editorial-motion .website-platform-outcome-ladder.is-visible > div:nth-child(3),
 .platform-editorial-motion .website-platform-outcome-ladder > div:nth-child(3).is-visible {
   transition-delay: 180ms;
 }
 
+.platform-editorial-motion .website-platform-outcome-ladder.is-visible > div:nth-child(4),
 .platform-editorial-motion .website-platform-outcome-ladder > div:nth-child(4).is-visible {
   transition-delay: 270ms;
 }
