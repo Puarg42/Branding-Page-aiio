@@ -30,8 +30,9 @@ const problemCards = [
 
 const intelligenceProgression = [
   { label: "Organizational Self-Understanding", meta: "Missing capability", tone: "cyan" },
-  { label: "Organizational Intelligence", meta: "Decision quality", tone: "purple" },
-  { label: "Organizational Capabilities", meta: "Execution", tone: "amber" },
+  { label: "Organizational Intelligence", meta: "Capability foundation", tone: "purple" },
+  { label: "Organizational Capabilities", meta: "Reusable abilities", tone: "amber" },
+  { label: "Organizational Self-Empowering", meta: "Continuous improvement", tone: "amber" },
   { label: "Organizational Resilience", meta: "Business outcome", tone: "violet" },
 ] as const;
 
@@ -86,7 +87,7 @@ const homeSectionNavigator = [
   { id: "organizational-intelligence", label: "Missing Capability" },
   { id: "capabilities", label: "Journey" },
   { id: "architektur", label: "System" },
-  { id: "self-enabling-organization", label: "Outcome" },
+  { id: "self-empowering-organization", label: "Outcome" },
   { id: "monday-morning", label: "Monday" },
   { id: "company", label: "Company" },
 ] as const;
@@ -159,7 +160,7 @@ function ConceptBreakthrough() {
           </div>
           <p className="concept-support">
             When an organization continuously understands itself, understanding becomes
-            intelligence, intelligence becomes capability and capability becomes resilience.
+            intelligence, intelligence becomes capability and capability becomes self-empowerment.
           </p>
         </div>
         <EditorialProgression
@@ -178,7 +179,7 @@ function ConceptBreakthrough() {
 
 function NewKindOrganization() {
   return (
-    <section className="organization-section" id="self-enabling-organization">
+    <section className="organization-section" id="self-empowering-organization">
       <div className="organization-ambient" aria-hidden="true">
         <span />
         <span />
@@ -197,7 +198,8 @@ function NewKindOrganization() {
         </div>
         <div className="organization-bottom-statement">
           <p>Self-understanding creates capability.</p>
-          <p>Capability creates resilience.</p>
+          <p>Capability creates self-empowerment.</p>
+          <p>Self-empowerment creates resilience.</p>
         </div>
       </div>
     </section>
@@ -218,7 +220,7 @@ function ImagineFuture() {
       ))}
       <section className="imagine-moment imagine-final">
         <div className="imagine-copy">
-          <h2>This is the Self-Enabling Organization.</h2>
+          <h2>This is the Self-Empowering Organization.</h2>
         </div>
       </section>
     </section>

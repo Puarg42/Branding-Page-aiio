@@ -16,10 +16,10 @@ Understanding is the prerequisite for intelligence.
 
 ## Core Thesis 003
 
-Self-understanding is the prerequisite for self-enablement.
+Self-understanding is the prerequisite for Organizational Intelligence.
 
 ---
 
 ## Core Thesis 004
 
-A self-enabling organization is an organization that continuously preserves its knowledge, understands itself and continuously develops new organizational capabilities.
+Organizational Self-Empowering is the capability of an organization to continuously develop, validate and evolve its own organizational capabilities.

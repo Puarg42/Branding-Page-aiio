@@ -6,24 +6,72 @@ Collect the theoretical foundation for Organizational Intelligence.
 
 ## Current Publication
 
-- Version: 0.11
+- Version: 0.12
 - Status: Living Publication
-- Last updated: July 3, 2026
+- Last updated: July 4, 2026
 - Canonical page: `/thinking/theory`
 
-Version 0.11 establishes the Theory as the canonical knowledge reference for the aiio website. Core concepts now resolve to stable chapter anchors, including Organizational Self-Understanding, Organizational Intelligence, Organizational Capabilities and Organizational Resilience.
+Version 0.12 synchronizes the Brand Book, Theory and Platform narrative around the canonical organizational evolution. Core concepts now resolve to stable chapter anchors, including Organizational Self-Understanding, Organizational Intelligence, Organizational Capabilities, Organizational Self-Empowering and Organizational Resilience.
 
 ## Core Progression
 
-Knowledge
+Reality
 
 ↓
 
-Understanding
+Understand Your Organization
+
+(ProcessCollector)
 
 ↓
 
-Capabilities
+Organizational Self-Understanding
+
+↓
+
+Develop Organizational Intelligence
+
+(ProcessMagnet)
+
+↓
+
+Organizational Intelligence
+
+↓
+
+Forge Organizational Capabilities
+
+(ProcessForge)
+
+↓
+
+Organizational Capabilities
+
+↓
+
+Enable Organizational Self-Empowering
+
+(DataForge)
+
+↓
+
+Organizational Self-Empowering
+
+↓
+
+Business Outcome
+
+Organizational Resilience
+
+## Design Principle
+
+Products do not create business outcomes directly.
+
+Products create organizational capabilities.
+
+Capabilities enable Organizational Self-Empowering.
+
+Organizational Self-Empowering creates Organizational Resilience.
 
 ## Table of Contents
 

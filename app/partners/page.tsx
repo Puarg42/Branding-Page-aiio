@@ -23,7 +23,7 @@ const partnerRoles = [
   {
     title: "Support evolution",
     purpose:
-      "Guide organizations as decision quality, resilience and self-enablement become operating principles.",
+      "Guide organizations as decision quality, Organizational Self-Empowering and resilience become operating principles.",
   },
 ] as const;
 

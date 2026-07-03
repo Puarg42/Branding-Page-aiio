@@ -23,7 +23,7 @@ const capabilities: CapabilityTeaser[] = [
   {
     title: "Understand\nYour\nOrganization",
     copy:
-      "Create a human-readable representation of your organization so teams can see its structure, responsibilities and decisions clearly.",
+      "Create a trusted, human-readable representation of your organization so people and AI share the same understanding of structures, responsibilities, decisions and documentation.",
     illustrationVariant: "BC201",
     product: "ProcessCollector",
     quote:
@@ -31,33 +31,33 @@ const capabilities: CapabilityTeaser[] = [
     href: "#processcollector",
   },
   {
-    title: "Build\nOrganizational\nSelf-Understanding",
+    title: "Develop\nOrganizational\nIntelligence",
     copy:
-      "Connect organizational reality into self-understanding so your organization can interpret its structures, relationships and decisions.",
+      "Transform Organizational Self-Understanding into continuously evolving Organizational Intelligence by connecting organizational reality, context and knowledge.",
     illustrationVariant: "BC202",
     product: "ProcessMagnet",
     quote:
-      "A library stores knowledge. Understanding begins when every piece of knowledge becomes connected.",
+      "Knowledge becomes valuable when every piece of organizational reality becomes connected.",
     href: "#processmagnet",
   },
   {
-    title: "Enable\nOrganizational\nCapabilities",
+    title: "Forge\nOrganizational\nCapabilities",
     copy:
-      "Turn self-understanding into capabilities your organization can repeat, improve and trust in daily execution.",
+      "Transform Organizational Intelligence into reusable organizational capabilities that people and AI can continuously apply.",
     illustrationVariant: "BC203",
     product: "ProcessForge",
     quote:
-      "A recipe doesn't cook dinner. A capability turns knowledge into repeatable execution.",
+      "Knowledge alone changes nothing. Capabilities transform intelligence into repeatable organizational action.",
     href: "#processforge",
   },
   {
-    title: "Continuously Evolve\nYour\nOrganization",
+    title: "Enable\nOrganizational\nSelf-Empowering",
     copy:
-      "Use goals, scenarios and operational reality to evolve capabilities and strengthen resilience under change.",
+      "Continuously validate and evolve organizational capabilities using operational reality, KPIs, goals and scenarios until the organization increasingly empowers itself.",
     illustrationVariant: "BC204",
     product: "DataForge",
     quote:
-      "Organizations don't become resilient by standing still. They become resilient by continuously evolving their capabilities.",
+      "Organizations become resilient because they continuously learn from reality, not because they remain unchanged.",
     href: "#dataforge",
   },
 ];
@@ -92,6 +92,7 @@ const theoryLinks = {
   capabilities: canonicalTheoryLinks.organizationalCapabilities,
   intelligence: canonicalTheoryLinks.organizationalIntelligence,
   resilience: canonicalTheoryLinks.organizationalResilience,
+  selfEmpowering: canonicalTheoryLinks.organizationalSelfEmpowering,
   selfUnderstanding: canonicalTheoryLinks.organizationalSelfUnderstanding,
 } as const;
 
@@ -130,7 +131,7 @@ export default function PlatformPage() {
           variant="BC-003"
         />
       }
-      intro="Organizations need more than disconnected software. They need a system that turns organizational reality into understanding, understanding into capabilities and capabilities into continuous evolution."
+      intro="Organizations need more than disconnected software. They need a system that turns organizational reality into self-understanding, self-understanding into Organizational Intelligence, intelligence into capabilities and capabilities into continuous self-empowering."
       sectionNavigator={platformSectionNavigator}
       sectionNavigatorLabel="Platform sections"
       title={platformHeroTitle}
@@ -147,28 +148,27 @@ export default function PlatformPage() {
                 <TheoryTerm href={theoryLinks.intelligence}>
                   Organizational Intelligence
                 </TheoryTerm>{" "}
-                emerges through four capabilities.
+                becomes the foundation for organizational capabilities.
               </h2>
               <p>
                 <TheoryTerm href={theoryLinks.intelligence}>
                   Organizational Intelligence
                 </TheoryTerm>{" "}
-                does not emerge from isolated tools.
-                It emerges when four capabilities work together: understanding
-                the organization, developing{" "}
+                is not the final objective. It is the organization's
+                continuously evolving capability to interpret itself. It begins
+                with{" "}
                 <TheoryTerm href={theoryLinks.selfUnderstanding}>
                   Organizational Self-Understanding
                 </TheoryTerm>
-                , enabling{" "}
+                , develops into reusable{" "}
                 <TheoryTerm href={theoryLinks.capabilities}>
                   organizational capabilities
+                </TheoryTerm>
+                , enables{" "}
+                <TheoryTerm href={theoryLinks.selfEmpowering}>
+                  Organizational Self-Empowering
                 </TheoryTerm>{" "}
-                and driving continuous
-                evolution. Together, they form one{" "}
-                <TheoryTerm href={theoryLinks.intelligence}>
-                  Organizational Intelligence
-                </TheoryTerm>{" "}
-                System.
+                and ultimately creates resilience.
               </p>
             </div>
             <div className="website-capability-layer-visual">
@@ -190,9 +190,9 @@ export default function PlatformPage() {
               The outcome is not another software platform.
             </p>
             <p>
-              The outcome is an organization that continuously understands
-              itself, develops new capabilities and increasingly empowers itself
-              to adapt, improve and respond to change.
+              The outcome is an organization that continuously develops its own
+              capabilities, increasingly empowers itself and becomes more
+              resilient under change.
             </p>
             <EditorialProgression
               ariaLabel="Organizational Intelligence outcome hierarchy"
@@ -200,8 +200,8 @@ export default function PlatformPage() {
               items={[
                 {
                   label: (
-                    <TheoryTerm href={theoryLinks.selfUnderstanding}>
-                      Organizational Self-Understanding
+                    <TheoryTerm href={theoryLinks.intelligence}>
+                      Organizational Intelligence
                     </TheoryTerm>
                   ),
                   meta: "Level 1",
@@ -209,8 +209,8 @@ export default function PlatformPage() {
                 },
                 {
                   label: (
-                    <TheoryTerm href={theoryLinks.intelligence}>
-                      Organizational Intelligence
+                    <TheoryTerm href={theoryLinks.capabilities}>
+                      Organizational Capabilities
                     </TheoryTerm>
                   ),
                   meta: "Level 2",
@@ -218,8 +218,8 @@ export default function PlatformPage() {
                 },
                 {
                   label: (
-                    <TheoryTerm href={theoryLinks.capabilities}>
-                      Organizational Capabilities
+                    <TheoryTerm href={theoryLinks.selfEmpowering}>
+                      Organizational Self-Empowering
                     </TheoryTerm>
                   ),
                   meta: "Level 3",
@@ -238,13 +238,13 @@ export default function PlatformPage() {
               orientation="horizontal"
             />
             <p>
-              Organizations that continuously understand themselves gradually
-              become self-empowering. They no longer rely solely on individual
-              knowledge. They continuously develop new organizational
-              capabilities.
+              Organizations become self-empowering when their capabilities
+              continuously evolve. They no longer rely solely on individual
+              knowledge. They continuously develop the conditions for their own
+              improvement.
             </p>
             <p className="website-platform-conclusion-thesis">
-              This is the foundation of{" "}
+              This is the direct precursor of{" "}
               <TheoryTerm href={theoryLinks.resilience}>
                 Organizational Resilience
               </TheoryTerm>
@@ -252,13 +252,13 @@ export default function PlatformPage() {
             </p>
             <p className="website-platform-conclusion-final">
               The goal is not better documentation. The goal is not another AI
-              platform. The goal is an organization that continuously
-              understands itself, develops new capabilities and becomes
-              increasingly resilient.
+              platform. The goal is an organization that turns self-understanding
+              into intelligence, intelligence into capabilities and capabilities
+              into self-empowerment.
             </p>
             <p className="website-platform-final-statement">
-              Organizations that truly understand themselves continuously
-              develop new capabilities&mdash;and become increasingly resilient.
+              Organizations that continuously empower themselves become
+              increasingly resilient.
             </p>
           </div>
         </div>

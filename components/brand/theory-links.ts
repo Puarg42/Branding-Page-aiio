@@ -2,6 +2,7 @@ export const canonicalTheoryIds = {
   organizationalCapabilities: "organizational-capabilities",
   organizationalIntelligence: "organizational-intelligence",
   organizationalResilience: "organizational-resilience",
+  organizationalSelfEmpowering: "organizational-self-empowering",
   organizationalSelfUnderstanding: "organizational-self-understanding",
   organizationalUnderstanding: "organizational-understanding",
 } as const;
@@ -10,6 +11,7 @@ export const canonicalTheoryLinks = {
   organizationalCapabilities: `/thinking/theory#${canonicalTheoryIds.organizationalCapabilities}`,
   organizationalIntelligence: `/thinking/theory#${canonicalTheoryIds.organizationalIntelligence}`,
   organizationalResilience: `/thinking/theory#${canonicalTheoryIds.organizationalResilience}`,
+  organizationalSelfEmpowering: `/thinking/theory#${canonicalTheoryIds.organizationalSelfEmpowering}`,
   organizationalSelfUnderstanding: `/thinking/theory#${canonicalTheoryIds.organizationalSelfUnderstanding}`,
   organizationalUnderstanding: `/thinking/theory#${canonicalTheoryIds.organizationalUnderstanding}`,
 } as const;
@@ -31,8 +33,11 @@ const canonicalIdsByChapterTitle: Record<string, string> = {
   "Organizational Capabilities": canonicalTheoryIds.organizationalCapabilities,
   "Organizational Intelligence": canonicalTheoryIds.organizationalIntelligence,
   "Organizational Resilience": canonicalTheoryIds.organizationalResilience,
+  "Organizational Self-Empowering": canonicalTheoryIds.organizationalSelfEmpowering,
   "Organizational Understanding": canonicalTheoryIds.organizationalUnderstanding,
   "Organizations Cannot Understand Themselves": canonicalTheoryIds.organizationalSelfUnderstanding,
+  "Self-Empowering Organization": canonicalTheoryIds.organizationalSelfEmpowering,
+  "Self-Empowering Organizations": canonicalTheoryIds.organizationalSelfEmpowering,
 };
 
 export function getCanonicalTheoryChapterId(title: string, fallbackId: string) {
@@ -61,6 +66,14 @@ export function getCanonicalTheoryLinkForLabel(label: string) {
 
   if (normalized === "organizational resilience") {
     return canonicalTheoryLinks.organizationalResilience;
+  }
+
+  if (
+    normalized === "organizational self-empowering" ||
+    normalized === "self-empowering organization" ||
+    normalized === "self-empowering organizations"
+  ) {
+    return canonicalTheoryLinks.organizationalSelfEmpowering;
   }
 
   if (normalized === "organizational understanding") {

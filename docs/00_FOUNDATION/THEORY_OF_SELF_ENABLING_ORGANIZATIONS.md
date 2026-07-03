@@ -1,8 +1,8 @@
-# Theory of Self-Enabling Organizations
+# Theory of Organizational Self-Empowering
 
 ## Purpose
 
-Defines the future theory behind Self-Enabling Organizations and its implications for aiio, the OIS, product strategy and category design.
+Defines the future theory behind Organizational Self-Empowering and its implications for aiio, the OIS, product strategy and category design.
 
 ## Table of Contents
 
@@ -31,4 +31,4 @@ Defines the future theory behind Self-Enabling Organizations and its implication
 
 ## 7. Organizational Resilience
 
-## 8. Self-Enabling Organizations
+## 8. Organizational Self-Empowering

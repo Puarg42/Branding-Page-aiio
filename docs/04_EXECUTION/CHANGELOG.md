@@ -13,6 +13,14 @@ Tracks relevant documentation, strategy and website preparation changes over tim
 - Product Narrative Changes
 - Archive
 
+## 2026-07-04 - Theory 0.12
+
+- Synchronized the Brand Book, Theory page, Thinking journal and Platform narrative around Version 0.12.
+- Clarified the canonical organizational evolution from organizational reality to self-understanding, Organizational Intelligence, organizational capabilities, Organizational Self-Empowering and Organizational Resilience.
+- Positioned Organizational Intelligence as an intermediate organizational capability rather than the final objective.
+- Introduced Organizational Self-Empowering as the direct outcome of continuously evolving capabilities.
+- Refined the product-to-capability mapping across ProcessCollector, ProcessMagnet, ProcessForge and DataForge.
+
 ## 2026-07-03 - Theory 0.11
 
 - Synchronized the Theory page, Thinking journal and Brand Book around Version 0.11.

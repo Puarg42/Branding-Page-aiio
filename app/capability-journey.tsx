@@ -19,26 +19,26 @@ const fadeIn: Variants = {
 const capabilitySequence = [
   {
     meta: "Level 1",
-    title: "Organizational Self-Understanding",
-    copy: "Your organization continuously interprets its context, decisions, processes and capabilities.",
+    title: "Organizational Intelligence",
+    copy: "Your organization continuously interprets itself and turns self-understanding into direction.",
     tone: "cyan",
   },
   {
     meta: "Level 2",
-    title: "Organizational Intelligence",
-    copy: "Understanding becomes coherent decisions, shared direction and organizational learning.",
+    title: "Organizational Capabilities",
+    copy: "Intelligence becomes reusable organizational abilities people and AI can apply.",
     tone: "purple",
   },
   {
     meta: "Level 3",
-    title: "Organizational Capabilities",
-    copy: "What your organization learns becomes repeatable execution it can improve.",
+    title: "Organizational Self-Empowering",
+    copy: "Capabilities evolve until the organization increasingly empowers itself to improve.",
     tone: "amber",
   },
   {
-    meta: "Outcome",
+    meta: "Business Outcome",
     title: "Organizational Resilience",
-    copy: "Your organization adapts with less rework, stronger execution and more confidence.",
+    copy: "Self-empowering organizations adapt with less rework, stronger execution and more confidence.",
     tone: "violet",
   },
 ] as const;
@@ -69,12 +69,12 @@ export function CapabilityJourney() {
           <EditorialEyebrow>The Journey</EditorialEyebrow>
           <h2>
             From{" "}
-            <TheoryReference>Organizational Self-Understanding</TheoryReference>{" "}
+            <TheoryReference>Organizational Intelligence</TheoryReference>{" "}
             to <TheoryReference>Organizational Resilience</TheoryReference>
           </h2>
           <p>
-            Your organization becomes resilient when understanding turns into
-            capability, decisions and coordinated action.
+            Your organization becomes resilient when intelligence creates
+            capabilities and capabilities create self-empowerment.
           </p>
         </motion.div>
 

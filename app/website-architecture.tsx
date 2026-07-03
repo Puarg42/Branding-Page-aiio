@@ -129,7 +129,7 @@ export function CapabilityTeaserGrid({
       key: "magnet",
       label: (
         <>
-          Build <TheoryReference>Organizational Self-Understanding</TheoryReference>
+          Develop <TheoryReference>Organizational Intelligence</TheoryReference>
         </>
       ),
     },
@@ -137,11 +137,18 @@ export function CapabilityTeaserGrid({
       key: "forge",
       label: (
         <>
-          Enable <TheoryReference>Organizational Capabilities</TheoryReference>
+          Forge <TheoryReference>Organizational Capabilities</TheoryReference>
         </>
       ),
     },
-    { key: "dataforge", label: "Continuously Evolve" },
+    {
+      key: "dataforge",
+      label: (
+        <>
+          Enable <TheoryReference>Organizational Self-Empowering</TheoryReference>
+        </>
+      ),
+    },
   ];
 
   return (
@@ -187,7 +194,7 @@ export function CapabilityTeaserGrid({
                 <h3>{capability.title}</h3>
                 <div className="website-card-topline">
                   <span>
-                    Powered by <strong>{capability.product}</strong>
+                    Powered by <strong>{capability.product}<sup>™</sup></strong>
                   </span>
                   {capability.badge ? <em>{capability.badge}</em> : null}
                 </div>

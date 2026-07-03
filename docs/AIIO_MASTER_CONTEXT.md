@@ -53,7 +53,7 @@ Page roles:
 
 The Platform story should be simple:
 
-Understand -> Build Understanding -> Enable Capabilities -> Evolve
+Understand Your Organization -> Develop Organizational Intelligence -> Forge Organizational Capabilities -> Enable Organizational Self-Empowering -> Organizational Resilience
 
 This is the business architecture. It is the story shown to customers.
 
@@ -79,29 +79,29 @@ When software works, nobody looks at the source code. When it doesn't, the sourc
 
 ### ProcessMagnet
 
-Capability: Build Organizational Understanding.
+Capability: Develop Organizational Intelligence.
 
-ProcessMagnet captures and connects organizational reality from people, systems, documents, operational data, standards, market knowledge and external intelligence.
+ProcessMagnet transforms Organizational Self-Understanding into continuously evolving Organizational Intelligence by connecting organizational reality, context and knowledge.
 
-It builds organizational understanding. Everything modeled in ProcessCollector also expands this organizational understanding.
+Everything modeled in ProcessCollector becomes part of this continuously evolving Organizational Intelligence.
 
 Do not explain it publicly as vector DB, knowledge graph or RAG on the Platform page.
 
 ### ProcessForge
 
-Capability: Enable Organizational Capabilities.
+Capability: Forge Organizational Capabilities.
 
-ProcessForge turns organizational understanding into executable organizational capabilities: playbooks, operating models, policies, recommendations, agent workflows, processes and organizational action.
+ProcessForge turns Organizational Intelligence into reusable organizational capabilities: playbooks, operating models, policies, recommendations, agent workflows, processes and organizational action.
 
 It is not merely workflow automation. It makes organizational intelligence operational.
 
 ### DataForge
 
-Capability: Evolve Organizations.
+Capability: Enable Organizational Self-Empowering.
 
-DataForge continuously evolves organizational capabilities using goals, scenarios, operational reality and Organizational Intelligence.
+DataForge continuously validates and evolves organizational capabilities using goals, scenarios, operational reality and Organizational Intelligence.
 
-Resilience is the outcome of continuous organizational evolution, not the product itself.
+Organizational Self-Empowering is the direct outcome of continuously evolving capabilities. Resilience is the business outcome, not the product itself.
 
 ### AgentSphere
 
@@ -182,11 +182,11 @@ AI makes decisions.
 
 People are important, but they are not the primary subject of the theory. People benefit from an organization that continuously understands itself.
 
-Knowledge is a raw material. Capability is the outcome.
+Knowledge is a raw material. Capability is the reusable organizational asset.
 
 Value chain:
 
-Data -> Information -> Knowledge -> Understanding -> Self-Understanding -> Organizational Intelligence -> Organizational Capability
+Data -> Information -> Knowledge -> Understanding -> Self-Understanding -> Organizational Intelligence -> Organizational Capabilities -> Organizational Self-Empowering -> Organizational Resilience
 
 ## 11. Company Narrative
 

@@ -15,10 +15,10 @@ export type TheoryJournalEntry = {
 
 export const theoryPublication = {
   edition: "Living Publication",
-  lastUpdated: "July 3, 2026",
+  lastUpdated: "July 4, 2026",
   readingTime: "Approx. 40 min reading",
   title: "Theory",
-  version: "Version 0.11",
+  version: "Version 0.12",
 } as const;
 
 export const theoryEditorialRules = [
@@ -57,6 +57,10 @@ export const theoryChapterReferences = {
     id: canonicalTheoryIds.organizationalCapabilities,
     title: "Organizational Capabilities",
   },
+  organizationalSelfEmpowering: {
+    id: canonicalTheoryIds.organizationalSelfEmpowering,
+    title: "Organizational Self-Empowering",
+  },
   organizationalResilience: {
     id: canonicalTheoryIds.organizationalResilience,
     title: "Organizational Resilience",
@@ -64,6 +68,21 @@ export const theoryChapterReferences = {
 } satisfies Record<string, TheoryChapterReference>;
 
 export const theoryJournalEntries: TheoryJournalEntry[] = [
+  {
+    affectedChapters: [
+      theoryChapterReferences.organizationalSelfUnderstanding,
+      theoryChapterReferences.organizationalIntelligence,
+      theoryChapterReferences.organizationalCapabilities,
+      theoryChapterReferences.organizationalSelfEmpowering,
+      theoryChapterReferences.organizationalResilience,
+    ],
+    coreThesis:
+      "Organizational evolution now progresses from reality to self-understanding, intelligence, capabilities, self-empowering and resilience.",
+    date: "July 4, 2026",
+    version: "0.12",
+    whyItMatters:
+      "This major conceptual refinement positions Organizational Intelligence as an intermediate organizational capability, introduces Organizational Self-Empowering as the direct outcome of continuously evolving capabilities, refines the product-to-capability mapping and synchronizes the Brand Book, Theory and Platform narrative.",
+  },
   {
     affectedChapters: [
       theoryChapterReferences.organizationalSelfUnderstanding,

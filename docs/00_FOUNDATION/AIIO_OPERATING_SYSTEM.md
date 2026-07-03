@@ -264,7 +264,11 @@ Organizational Understanding becomes Organizational Self-Understanding.
 
 Organizational Self-Understanding enables Organizational Intelligence.
 
-Organizational Intelligence develops Organizational Capabilities.
+Organizational Intelligence becomes the foundation for Organizational Capabilities.
+
+Organizational Capabilities enable Organizational Self-Empowering.
+
+Organizational Self-Empowering creates Organizational Resilience.
 
 Knowledge Management and Organizational Intelligence therefore solve different problems.
 
@@ -276,7 +280,7 @@ Knowledge stores.
 
 Understanding interprets.
 
-Organizational Intelligence enables action.
+Organizational Intelligence enables capability development.
 
 Understanding is the capability that emerges when knowledge becomes continuously connected, contextualized and interpreted.
 
@@ -470,21 +474,27 @@ Only once this capability exists can Organizational Intelligence emerge.
 
 Understanding alone does not create intelligence.
 
-Understanding enables intelligence.
+Self-understanding enables intelligence.
 
 This distinction is fundamental.
 
 An organization may develop Organizational Self-Understanding without consistently acting upon that understanding.
 
-Intelligence begins when understanding is continuously transformed into coherent decisions and effective action.
+Intelligence begins when Organizational Self-Understanding is continuously transformed into coherent decisions, reusable interpretation and capability development.
 
 Within the Organizational Intelligence Theory, Organizational Intelligence is defined as:
 
-**The continuously evolving capability of an organization to transform organizational understanding into coherent decisions, coordinated action and continuous improvement.**
+**The continuously evolving capability of an organization to interpret itself and transform Organizational Self-Understanding into coherent decisions, coordinated action and capability development.**
 
-Organizational Intelligence therefore does not replace Organizational Understanding.
+Organizational Intelligence therefore does not replace Organizational Understanding or Organizational Self-Understanding.
 
 It builds upon it.
+
+Organizational Intelligence is not the final objective.
+
+It is the organization's continuously evolving capability to interpret itself.
+
+It becomes the foundation from which Organizational Capabilities are forged.
 
 The relationship can be understood as a progression.
 
@@ -494,13 +504,13 @@ Understanding creates meaning.
 
 Organizational Self-Understanding turns meaning toward the organization itself.
 
-Intelligence transforms Organizational Self-Understanding into action.
+Intelligence transforms Organizational Self-Understanding into capability development.
 
-Action develops capabilities.
+Capabilities become reusable organizational assets.
 
-Capabilities strengthen resilience.
+Capabilities enable Organizational Self-Empowering.
 
-Resilience enables organizations to continuously evolve themselves.
+Organizational Self-Empowering creates Organizational Resilience.
 
 Organizational Intelligence is therefore not a technology.
 
@@ -514,7 +524,7 @@ It cannot substitute it.
 
 The objective is not intelligent software.
 
-The objective is intelligent organizations.
+The objective is organizations that use intelligence to continuously develop their own capabilities.
 
 --------------------------------------------------
 
@@ -536,19 +546,15 @@ Organizational Intelligence
 
 ↓
 
-Action
-
-↓
-
 Organizational Capabilities
 
 ↓
 
-Organizational Resilience
+Organizational Self-Empowering
 
 ↓
 
-Self-Empowering Organizations
+Organizational Resilience
 
 # 6. Organizational Capabilities
 
@@ -556,7 +562,7 @@ Organizational Intelligence cannot be observed directly.
 
 It becomes visible through the capabilities an organization develops.
 
-Capabilities are therefore the observable manifestation of Organizational Intelligence.
+Capabilities are therefore the reusable organizational assets forged from Organizational Intelligence.
 
 Every decision an organization makes contributes either to strengthening or weakening its capabilities.
 
@@ -570,7 +576,7 @@ They must continuously evolve.
 
 Within the Organizational Intelligence Theory, Organizational Capabilities are defined as:
 
-**The continuously evolving organizational abilities that emerge when understanding is consistently transformed into coordinated action.**
+**The continuously evolving organizational abilities that emerge when Organizational Intelligence is consistently transformed into repeatable, coordinated action.**
 
 Action alone does not create capabilities.
 
@@ -580,6 +586,10 @@ Every capability increases the organization's ability to respond to future situa
 
 Capabilities therefore represent accumulated organizational learning.
 
+They become reusable organizational assets.
+
+Once a capability exists, the organization can apply it again, improve it and transfer it across future situations.
+
 The development of capabilities marks the transition from reacting to individual situations toward systematically improving organizational performance.
 
 Organizations with stronger capabilities require less external coordination.
@@ -588,35 +598,65 @@ They become increasingly capable of improving themselves.
 
 Capabilities therefore represent the first measurable outcome of Organizational Intelligence.
 
+They also create the conditions for Organizational Self-Empowering.
+
 --------------------------------------------------
 
 Capability Evolution Model
 
+Reality
+
+↓
+
 Understand Your Organization
 
-↓
-
-Build Organizational Self-Understanding
+(ProcessCollector)
 
 ↓
 
-Enable Organizational Capabilities
+Organizational Self-Understanding
 
 ↓
 
-Continuously Evolve Your Organization
+Develop Organizational Intelligence
+
+(ProcessMagnet)
 
 ↓
 
-Become a Self-Empowering Organization
+Organizational Intelligence
 
 ↓
 
-Achieve Organizational Resilience
+Forge Organizational Capabilities
 
-The first four stages describe organizational capabilities.
+(ProcessForge)
 
-The final two stages describe organizational outcomes.
+↓
+
+Organizational Capabilities
+
+↓
+
+Enable Organizational Self-Empowering
+
+(DataForge)
+
+↓
+
+Organizational Self-Empowering
+
+↓
+
+Business Outcome
+
+Organizational Resilience
+
+The product stages create organizational capabilities.
+
+Organizational capabilities enable Organizational Self-Empowering.
+
+Organizational Self-Empowering creates Organizational Resilience.
 
 --------------------------------------------------
 
@@ -628,7 +668,7 @@ The organization continuously develops new organizational capabilities.
 
 Outcome
 
-The organization becomes a Self-Empowering Organization capable of continuously improving itself.
+The organization becomes increasingly self-empowering and capable of continuously improving itself.
 
 Business Value
 
@@ -636,7 +676,7 @@ The organization becomes increasingly resilient, adaptive and sustainable.
 
 An Organizational Intelligence Platform delivers capabilities.
 
-The organization develops self-empowerment.
+The organization develops Organizational Self-Empowering.
 
 The business realizes resilience.
 
@@ -657,6 +697,14 @@ Organizational Intelligence
 ↓
 
 Organizational Capabilities
+
+↓
+
+Organizational Self-Empowering
+
+↓
+
+Organizational Resilience
 
 # 7. Organizational Resilience
 
@@ -682,9 +730,11 @@ Within the Organizational Intelligence Theory, Organizational Resilience is defi
 
 **The continuously evolving capability of an organization to preserve its ability to understand, decide and act under changing conditions.**
 
-Resilience is not the consequence of isolated organizational capabilities.
+Resilience is not produced directly by software.
 
-It emerges from the coordinated interaction of multiple capabilities.
+It emerges from Organizational Self-Empowering.
+
+Organizational Self-Empowering emerges when capabilities continuously evolve, reinforce each other and allow the organization to improve itself.
 
 Every additional capability strengthens the organization's ability to respond to future situations.
 
@@ -696,9 +746,9 @@ Adaptation becomes systematic.
 
 Improvement becomes sustainable.
 
-Resilience therefore represents the stabilization of Organizational Intelligence.
+Resilience therefore represents the stabilization of Organizational Self-Empowering.
 
-It is the stage at which organizational intelligence remains effective despite continuous change.
+It is the stage at which continuously evolving capabilities remain effective despite continuous change.
 
 Resilient organizations do not merely survive disruption.
 
@@ -708,11 +758,11 @@ Every disruption becomes additional organizational understanding.
 
 Every adaptation strengthens future capabilities.
 
-Resilience therefore transforms Organizational Intelligence from a temporary advantage into a permanent organizational characteristic.
+Resilience therefore transforms Organizational Self-Empowering from a temporary advantage into a permanent organizational characteristic.
 
 Organizations do not become resilient because they possess more knowledge.
 
-They become resilient because they continuously develop new capabilities based on Organizational Self-Understanding.
+They become resilient because Organizational Self-Empowering continuously develops, validates and improves their capabilities.
 
 --------------------------------------------------
 
@@ -736,11 +786,11 @@ Organizational Capabilities
 
 Organizational Resilience
 
-# 8. The Self-Enabling Cycle
+# 8. Organizational Self-Empowering
 
-The development of Organizational Intelligence does not end with resilience.
+The development of Organizational Intelligence does not end with capabilities.
 
-It begins again.
+It becomes self-empowering.
 
 Every capability an organization develops influences the way it generates new knowledge.
 
@@ -750,41 +800,33 @@ Every adaptation creates new organizational context.
 
 Every improvement changes the organization itself.
 
-Organizations therefore continuously recreate the knowledge from which future understanding emerges.
+Organizational Intelligence is therefore not the final objective.
 
-Organizational Intelligence is therefore not a linear progression.
+It is the foundation from which capabilities are continuously forged.
 
-It is a continuously reinforcing cycle.
+Capabilities become self-empowering when they continuously improve the organization's ability to develop further capabilities.
 
-Knowledge creates Understanding.
+Within the Organizational Intelligence Theory, Organizational Self-Empowering is defined as:
 
-Understanding enables Intelligence.
+**Organizational Self-Empowering is the capability of an organization to continuously develop, validate and evolve its own organizational capabilities.**
 
-Intelligence develops Capabilities.
+Organizations become self-empowering when capability development is no longer episodic.
 
-Capabilities strengthen Resilience.
+Learning becomes continuous.
 
-Resilience enables organizations to continuously improve themselves.
+Improvement becomes endogenous.
 
-Every improvement creates new Organizational Knowledge.
+Capability development becomes self-reinforcing.
 
-The cycle begins again.
+The organization continuously generates the conditions required for its own future development.
 
-This continuous feedback loop defines the transition from adaptive organizations to Self-Enabling Organizations.
+This is the direct precursor of Organizational Resilience.
 
-Self-enabling organizations do not merely react to change.
+Resilience emerges when Organizational Self-Empowering remains effective under changing conditions.
 
-They continuously generate the knowledge required for their own future evolution.
+The defining characteristic of Organizational Self-Empowering is therefore not autonomy.
 
-Learning therefore becomes endogenous.
-
-Improvement becomes continuous.
-
-Organizational evolution becomes self-reinforcing.
-
-The defining characteristic of a Self-Enabling Organization is therefore not autonomy.
-
-It is the ability to continuously generate the conditions required for its own development.
+It is the ability to continuously develop the capabilities required for the organization's own evolution.
 
 --------------------------------------------------
 
@@ -806,18 +848,17 @@ Capabilities
 
 ↓
 
-Resilience
+Organizational Self-Empowering
 
 ↓
 
-Self-Enabling
+Organizational Resilience
 
 ↓
 
 creates new Knowledge
 
 ↺
-
 # 9. The Organizational Intelligence Hypothesis
 
 Every generation of management has attempted to improve organizational performance.
@@ -846,19 +887,7 @@ This leads to the central hypothesis of Organizational Intelligence.
 
 Decision quality itself does not emerge randomly.
 
-It emerges from Organizational Understanding.
-
-Organizations that understand themselves make better decisions.
-
-Better decisions create stronger organizational capabilities.
-
-Stronger capabilities create resilience.
-
-Resilience enables continuous self-improvement.
-
-The relationship can therefore be expressed as a causal chain.
-
-Organizational Understanding
+It emerges from Organizational Understanding
 
 ↓
 
@@ -870,12 +899,15 @@ Organizational Capabilities
 
 ↓
 
+Organizational Self-Empowering
+
+↓
+
 Organizational Resilience
 
 ↓
 
-Self-Enabling Organization
-
+Self-Empowering Organization
 This hypothesis fundamentally changes the purpose of organizational software.
 
 Its objective is no longer the management of information.
@@ -1234,33 +1266,55 @@ Every organization evolves through a sequence of capabilities.
 
 Each capability enables the next.
 
-The model proposed in this document consists of six stages of capability evolution.
+The model proposed in this document describes the canonical organizational evolution of Version 0.12.
+
+Reality
+
+↓
 
 Understand Your Organization
 
-↓
-
-Build Organizational Self-Understanding
+(ProcessCollector)
 
 ↓
 
-Enable Organizational Capabilities
+Organizational Self-Understanding
 
 ↓
 
-Continuously Evolve Your Organization
+Develop Organizational Intelligence
+
+(ProcessMagnet)
 
 ↓
 
-Become a Self-Empowering Organization
+Organizational Intelligence
 
 ↓
 
-Achieve Organizational Resilience
+Forge Organizational Capabilities
 
-The first four stages describe organizational capabilities.
+(ProcessForge)
 
-The final two stages describe organizational outcomes.
+↓
+
+Organizational Capabilities
+
+↓
+
+Enable Organizational Self-Empowering
+
+(DataForge)
+
+↓
+
+Organizational Self-Empowering
+
+↓
+
+Business Outcome
+
+Organizational Resilience
 
 Understanding the organization forms the foundation.
 
@@ -1270,19 +1324,25 @@ Yet knowledge alone does not create Organizational Intelligence.
 
 Organizational Self-Understanding emerges when the organization continuously interprets its own organizational reality.
 
-Action becomes possible when Organizational Self-Understanding guides decisions instead of isolated information.
+Organizational Intelligence develops when that self-understanding becomes a continuously evolving capability to interpret the organization and guide decisions.
 
-Repeated action develops organizational capabilities.
+Organizational Capabilities are forged when Organizational Intelligence becomes reusable action the organization can repeat, improve and trust.
 
-Capabilities allow organizations to perform consistently, adapt reliably and improve deliberately.
+Organizational Self-Empowering emerges when those capabilities continuously evolve and increasingly enable the organization to improve itself.
 
-As capabilities mature, organizational resilience emerges.
+Organizational Resilience is the business outcome.
 
-Resilience is the ability to remain effective despite uncertainty, disruption and continuous change.
+Resilience is not produced directly by software.
 
-Ultimately, resilient organizations become capable of empowering themselves.
+Resilience emerges from Organizational Self-Empowering.
 
-A Self-Empowering Organization continuously learns, understands, improves and evolves without depending on permanent external intervention.
+Products do not create business outcomes directly.
+
+Products create organizational capabilities.
+
+Capabilities enable Organizational Self-Empowering.
+
+Organizational Self-Empowering creates Organizational Resilience.
 
 This progression represents more than a maturity model.
 
@@ -1294,7 +1354,7 @@ It accelerates the transition between them.
 
 The objective is therefore not Artificial Intelligence itself.
 
-The objective is the emergence of Self-Empowering Organizations that become increasingly resilient, adaptive and sustainable.
+The objective is the emergence of organizations that continuously understand themselves, develop new capabilities, empower themselves and become increasingly resilient, adaptive and sustainable.
 
 --------------------------------------------------
 
@@ -1304,22 +1364,22 @@ Understand Your Organization answers:
 
 "What exists?"
 
-Build Organizational Self-Understanding answers:
+Organizational Self-Understanding answers:
 
 "How does the organization work as a connected system?"
 
-Enable Organizational Capabilities answers:
+Develop Organizational Intelligence answers:
+
+"How does the organization continuously interpret itself?"
+
+Forge Organizational Capabilities answers:
 
 "What can the organization now consistently do?"
 
-Continuously Evolve Your Organization answers:
-
-"How does the organization improve itself over time?"
-
-Self-Empowering Organizations answer:
+Enable Organizational Self-Empowering answers:
 
 "How does the organization continuously develop the conditions for its own improvement?"
 
 Organizational Resilience answers:
 
-"How do we remain effective under change?"
+"How does the organization remain effective under change?"

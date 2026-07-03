@@ -236,7 +236,7 @@ function getTheoryModelTone(value: string): EditorialProgressionItem["tone"] {
 
   if (
     normalized.includes("resilience") ||
-    normalized.includes("self-enabling") ||
+    normalized.includes("self-empowering") ||
     normalized.includes("evolution") ||
     normalized.includes("improvement")
   ) {

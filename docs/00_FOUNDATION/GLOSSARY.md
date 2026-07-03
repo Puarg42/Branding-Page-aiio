@@ -10,6 +10,6 @@
 
 ## Organizational Capabilities
 
-## Self-Enabling Organization
+## Organizational Self-Empowering
 
 ## Organizational Intelligence System
