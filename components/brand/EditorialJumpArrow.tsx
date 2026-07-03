@@ -1,6 +1,9 @@
-import type { SVGProps } from "react";
+import {
+  EditorialReferenceMarker,
+  type EditorialReferenceMarkerProps,
+} from "./EditorialReferenceMarker";
 
-type EditorialJumpArrowProps = SVGProps<SVGSVGElement>;
+type EditorialJumpArrowProps = EditorialReferenceMarkerProps;
 
 export function EditorialJumpArrow({
   className,
@@ -10,26 +13,5 @@ export function EditorialJumpArrow({
     .filter(Boolean)
     .join(" ");
 
-  return (
-    <svg
-      aria-hidden="true"
-      className={classNames}
-      focusable="false"
-      viewBox="0 0 14 14"
-      {...props}
-    >
-      <circle cx="7" cy="7" fill="currentColor" r="5.5" />
-      <text
-        fill="#ffffff"
-        fontFamily="Arial, Helvetica, sans-serif"
-        fontSize="7.7"
-        fontWeight="700"
-        textAnchor="middle"
-        x="7"
-        y="9.8"
-      >
-        i
-      </text>
-    </svg>
-  );
+  return <EditorialReferenceMarker className={classNames} {...props} />;
 }
