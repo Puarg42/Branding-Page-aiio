@@ -87,24 +87,54 @@ export default function PlatformPage() {
         </div>
       </section>
       <CapabilityTeaserGrid capabilities={capabilities} />
-      <section className="website-architecture-section website-platform-conclusion-section">
+      <section className="website-architecture-section website-platform-outcome-section">
         <div className="website-page-shell">
           <div className="website-platform-conclusion">
             <p className="website-eyebrow">Outcome</p>
-            <h2>Organizations that understand themselves evolve.</h2>
+            <h2>The outcome is organizational resilience.</h2>
             <p>
-              Organizations that understand themselves develop new capabilities
-              with confidence.
+              The outcome is not another software platform.
             </p>
             <p>
-              As these capabilities continuously evolve, the organization becomes
-              more resilient, more adaptive and better prepared for change.
+              The outcome is an organization that continuously understands
+              itself, develops new capabilities and increasingly empowers itself
+              to adapt, improve and respond to change.
+            </p>
+            <div
+              aria-label="Organizational Intelligence outcome hierarchy"
+              className="website-platform-outcome-ladder"
+            >
+              <div>
+                <span>Level 1</span>
+                <strong>Organizational Self-Understanding</strong>
+              </div>
+              <div>
+                <span>Level 2</span>
+                <strong>Organizational Intelligence</strong>
+              </div>
+              <div>
+                <span>Level 3</span>
+                <strong>Organizational Capabilities</strong>
+              </div>
+              <div>
+                <span>Business Outcome</span>
+                <strong>Organizational Resilience</strong>
+              </div>
+            </div>
+            <p>
+              Organizations that continuously understand themselves gradually
+              become self-empowering. They no longer rely solely on individual
+              knowledge. They continuously develop new organizational
+              capabilities.
             </p>
             <p className="website-platform-conclusion-thesis">
-              That is Organizational Intelligence.
+              This is the foundation of Organizational Resilience.
             </p>
             <p className="website-platform-conclusion-final">
-              aiio is the Organizational Intelligence System that enables it.
+              The goal is not better documentation. The goal is not another AI
+              platform. The goal is an organization that continuously
+              understands itself, develops new capabilities and becomes
+              increasingly resilient.
             </p>
           </div>
         </div>

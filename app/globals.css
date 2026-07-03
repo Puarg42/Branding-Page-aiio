@@ -9024,17 +9024,24 @@ h1 {
 
 .website-platform-conclusion {
   display: grid;
-  gap: clamp(20px, 2.7vw, 38px);
+  gap: clamp(24px, 3vw, 48px);
   margin: 0 auto;
-  max-width: 1040px;
+  max-width: 1080px;
   text-align: center;
+}
+
+.website-platform-outcome-section {
+  background:
+    radial-gradient(circle at 50% 0%, rgb(179 145 255 / 8%), transparent 36%),
+    linear-gradient(180deg, transparent, rgb(255 255 255 / 1.8%) 44%, transparent);
+  padding: clamp(128px, 12vw, 220px) 0 clamp(148px, 14vw, 260px);
 }
 
 .website-platform-conclusion h2 {
   color: #ffffff;
-  font-size: clamp(2.82rem, 4.86vw, 6.08rem);
+  font-size: clamp(2.64rem, 4.56vw, 5.72rem);
   letter-spacing: 0;
-  line-height: 0.98;
+  line-height: 1;
   margin: 0;
   text-wrap: balance;
 }
@@ -9047,17 +9054,68 @@ h1 {
   max-width: 760px;
 }
 
+.website-platform-outcome-ladder {
+  border-bottom: 1px solid rgb(255 255 255 / 10%);
+  border-top: 1px solid rgb(255 255 255 / 10%);
+  display: grid;
+  gap: 0;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: clamp(10px, 1.4vw, 20px) 0;
+}
+
+.website-platform-outcome-ladder > div {
+  display: grid;
+  gap: 14px;
+  min-height: clamp(160px, 15vw, 220px);
+  padding: clamp(24px, 2.6vw, 38px);
+  position: relative;
+  text-align: left;
+}
+
+.website-platform-outcome-ladder > div:not(:last-child) {
+  border-right: 1px solid rgb(255 255 255 / 8%);
+}
+
+.website-platform-outcome-ladder > div:not(:last-child)::after {
+  background: linear-gradient(90deg, rgb(179 145 255 / 58%), transparent);
+  content: "";
+  height: 1px;
+  position: absolute;
+  right: -28px;
+  top: 50%;
+  width: 56px;
+  z-index: 1;
+}
+
+.website-platform-outcome-ladder span {
+  color: rgb(179 145 255 / 82%);
+  font-size: 0.72rem;
+  font-weight: 780;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.website-platform-outcome-ladder strong {
+  align-self: end;
+  color: #ffffff;
+  font-family: var(--font-aiio-heading);
+  font-size: clamp(1.18rem, 1.5vw, 1.6rem);
+  font-weight: 560;
+  line-height: 1.18;
+  text-wrap: balance;
+}
+
 .website-platform-conclusion .website-platform-conclusion-thesis {
   color: #ffffff;
   font-family: var(--font-aiio-heading);
-  font-size: clamp(1.65rem, 2.2vw, 2.55rem);
+  font-size: clamp(1.5rem, 2vw, 2.32rem);
   line-height: 1.16;
   margin-top: clamp(8px, 1vw, 16px);
 }
 
 .website-platform-conclusion .website-platform-conclusion-final {
   color: rgb(255 255 255 / 82%);
-  max-width: 680px;
+  max-width: 780px;
 }
 
 section[id],
@@ -9117,6 +9175,18 @@ section[id],
   .website-capability-journey-step:not(:last-child)::after {
     right: -6px;
   }
+
+  .website-platform-outcome-ladder {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .website-platform-outcome-ladder > div:nth-child(2) {
+    border-right: 0;
+  }
+
+  .website-platform-outcome-ladder > div:nth-child(2)::after {
+    display: none;
+  }
 }
 
 @media (max-width: 720px) {
@@ -9171,6 +9241,31 @@ section[id],
     align-items: flex-start;
     flex-direction: column;
     gap: 6px;
+  }
+
+  .website-platform-outcome-ladder {
+    grid-template-columns: 1fr;
+  }
+
+  .website-platform-outcome-ladder > div {
+    min-height: 0;
+    padding: 26px 0;
+  }
+
+  .website-platform-outcome-ladder > div:not(:last-child) {
+    border-right: 0;
+    border-bottom: 1px solid rgb(255 255 255 / 8%);
+  }
+
+  .website-platform-outcome-ladder > div:not(:last-child)::after {
+    background: linear-gradient(180deg, rgb(179 145 255 / 58%), transparent);
+    display: block;
+    height: 34px;
+    left: 0;
+    right: auto;
+    top: auto;
+    bottom: -18px;
+    width: 1px;
   }
 }
 
