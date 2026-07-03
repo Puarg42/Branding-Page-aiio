@@ -5769,6 +5769,7 @@ h1 {
   --capability-heading-height: 5.12rem;
   --capability-product-height: 3.7rem;
   --capability-copy-height: 7.9rem;
+  --capability-quote-offset: clamp(24px, 2vw, 32px);
   --capability-quote-height: 9rem;
   align-content: stretch;
   background:
@@ -5994,7 +5995,7 @@ h1 {
   font-size: 1.04rem;
   font-weight: 520;
   line-height: 1.46;
-  margin: 0 clamp(26px, 2.5vw, 40px);
+  margin: var(--capability-quote-offset) clamp(26px, 2.5vw, 40px) 0;
   min-height: var(--capability-quote-height);
   order: 6;
   padding-left: 18px;
