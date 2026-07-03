@@ -98,10 +98,18 @@ export default function PlatformPage() {
             <p className="website-eyebrow">Outcome</p>
             <h2>Organizations that understand themselves evolve.</h2>
             <p>
-              Organizations that continuously understand themselves continuously
-              develop new capabilities. Organizations that continuously develop
-              new capabilities continuously evolve. That is Organizational
-              Intelligence. aiio is the system that enables it.
+              Organizations that understand themselves develop new capabilities
+              with confidence.
+            </p>
+            <p>
+              As these capabilities continuously evolve, the organization becomes
+              more resilient, more adaptive and better prepared for change.
+            </p>
+            <p>
+              That is Organizational Intelligence.
+            </p>
+            <p>
+              aiio is the Organizational Intelligence System that enables it.
             </p>
           </div>
         </div>
