@@ -6,33 +6,30 @@ export function EditorialJumpArrow({
   className,
   ...props
 }: EditorialJumpArrowProps) {
-  const classNames = ["editorial-jump-arrow", className].filter(Boolean).join(" ");
+  const classNames = ["editorial-jump-arrow", "editorial-reference-icon", className]
+    .filter(Boolean)
+    .join(" ");
 
   return (
     <svg
       aria-hidden="true"
       className={classNames}
-      fill="none"
       focusable="false"
-      viewBox="0 0 18 18"
+      viewBox="0 0 14 14"
       {...props}
     >
-      <path
-        d="M5.25 12.75 12.75 5.25"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="1.5"
-        vectorEffect="non-scaling-stroke"
-      />
-      <path
-        d="M7.1 5.25h5.65v5.65"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="1.5"
-        vectorEffect="non-scaling-stroke"
-      />
+      <circle cx="7" cy="7" fill="currentColor" r="5.5" />
+      <text
+        fill="#ffffff"
+        fontFamily="Arial, Helvetica, sans-serif"
+        fontSize="7.7"
+        fontWeight="700"
+        textAnchor="middle"
+        x="7"
+        y="9.8"
+      >
+        i
+      </text>
     </svg>
   );
 }

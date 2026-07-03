@@ -310,21 +310,24 @@ They exist only where the interface helps the reader move to a deeper level of u
 
 #### BC-ICON-001
 
-Editorial Jump Arrow
+Editorial Reference Icon
 
-Purpose: use the Editorial Jump Arrow whenever content leads the reader to a deeper level of understanding.
+Purpose: use the Editorial Reference Icon whenever a concept offers deeper editorial context.
 
 It communicates:
 
-Explore further.
+There is additional context.
 
 It must not communicate:
 
 Next.
 
+It appears as a very small violet circular badge with a white lowercase "i".
+
+It behaves like a premium publication footnote, not like a button.
+
 Usage:
 
-- Learn More links
 - Theory references
 - Thinking references
 - Company references
@@ -340,10 +343,11 @@ Prohibited usage:
 - Carousel controls
 - Application UI
 - Directional navigation
+- Primary calls to action
 
-The Editorial Jump Arrow is exclusively an editorial interaction element.
+The Editorial Reference Icon is exclusively an editorial interaction element.
 
-It must remain thin, calm, lightweight and precise.
+It must remain small, calm, lightweight and precise.
 
 This structure may grow over time, but every addition must preserve the same visual logic, editorial discipline and conceptual restraint.
 

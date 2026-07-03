@@ -7,12 +7,13 @@ type FooterLink = {
 };
 
 const footerNav: FooterLink[] = [
-  { href: "/", label: "Home" },
-  { href: "/thinking", label: "Thinking" },
   { href: "/platform", label: "Platform" },
+  { href: "/thinking", label: "Thinking" },
+  { href: "/success-stories", label: "Use Cases" },
+  { href: "/live-demo/kontakt", label: "Get Started" },
   { href: "/partners", label: "Partners" },
+  { href: "/academy", label: "Events" },
   { href: "/company", label: "Company" },
-  { href: "/contact", label: "Contact" },
 ];
 
 const legalLinks: FooterLink[] = [

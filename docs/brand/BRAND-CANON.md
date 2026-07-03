@@ -213,15 +213,18 @@ They are not illustrations and not application controls.
 
 #### BC-ICON-001
 
-Editorial Jump Arrow
+Editorial Reference Icon
 
 Purpose
 
-Use the Editorial Jump Arrow whenever content leads the reader to a deeper level of understanding.
+Use the Editorial Reference Icon whenever a concept offers deeper editorial context.
+
+It appears as a very small violet circular badge with a white lowercase "i".
+
+It behaves like a premium publication footnote, not like a button.
 
 Use for
 
-- Learn More links
 - Theory references
 - Thinking references
 - Company references
@@ -237,6 +240,7 @@ Do not use for
 - Carousel controls
 - Application UI
 - Directional navigation
+- Primary calls to action
 
 ## Legacy Implementation Assets
 

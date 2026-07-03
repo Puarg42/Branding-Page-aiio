@@ -93,7 +93,7 @@ export function TheorySidebar({ chapters }: TheorySidebarProps) {
       <div className="theory-sidebar-intro">
         <p className="theory-sidebar-eyebrow">Theory</p>
         <h2>Organizational Intelligence</h2>
-        <p>A Theory of Organizational Understanding</p>
+        <p>The Theory of Organizational Understanding</p>
       </div>
 
       <div className="theory-publication-meta" aria-label="Publication details">

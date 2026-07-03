@@ -19,6 +19,7 @@ export const metadata: Metadata = {
 type TheoryBlock =
   | {
       lines: string[];
+      title?: string;
       type: "model";
     }
   | {
@@ -273,6 +274,17 @@ function getTheoryModelItems(lines: string[]): EditorialProgressionItem[] {
   return items;
 }
 
+function getTheoryModelTitle(lines: string[]) {
+  const title = lines.find((line) => modelLabels.has(line));
+
+  return title ? `${title}:` : "Conceptual Model:";
+}
+
+function isCircularTheoryModel(lines: string[]) {
+  return lines.some((line) => line === "↺" || line === "â†º") &&
+    lines.some((line) => line.toLowerCase().includes("creates new knowledge"));
+}
+
 const chapters = getTheoryChapters();
 const sidebarChapters = chapters.map(({ id, title }) => ({ id, title }));
 const theoryNavigatorSections = [
@@ -312,7 +324,7 @@ export default function TheoryPage() {
             <div className="theory-book-hero-content">
               <p className="theory-sidebar-eyebrow">Theory</p>
               <h1>Organizational Intelligence</h1>
-              <p>A Theory of Organizational Understanding</p>
+              <p>The Theory of Organizational Understanding</p>
             </div>
           </section>
 
@@ -332,12 +344,21 @@ export default function TheoryPage() {
                     const openingClassName = index === firstTextBlockIndex ? " is-opening" : "";
 
                     return block.type === "model" ? (
-                      <EditorialProgression
-                        ariaLabel={`${chapter.title} conceptual model`}
-                        className="theory-formula"
-                        items={getTheoryModelItems(block.lines)}
+                      <div
+                        className={`theory-formula-shell${
+                          isCircularTheoryModel(block.lines) ? " is-circular" : ""
+                        }`}
                         key={`${chapter.id}-model-${index}`}
-                      />
+                      >
+                        <p className="theory-formula-heading">
+                          {getTheoryModelTitle(block.lines)}
+                        </p>
+                        <EditorialProgression
+                          ariaLabel={`${chapter.title} conceptual model`}
+                          className="theory-formula"
+                          items={getTheoryModelItems(block.lines)}
+                        />
+                      </div>
                     ) : block.type === "quote" ? (
                       <blockquote className={openingClassName.trim()} key={`${chapter.id}-quote-${index}`}>
                         <span aria-hidden="true">&ldquo;</span>

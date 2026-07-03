@@ -19,6 +19,7 @@ export type ArchitectureSection = {
 type WebsiteArchitecturePageProps = {
   children?: ReactNode;
   eyebrow: string;
+  heroActions?: ReactNode;
   heroId?: string;
   intro: string;
   sectionNavigator?: readonly EditorialSectionNavigatorItem[];
@@ -30,6 +31,7 @@ type WebsiteArchitecturePageProps = {
 export function WebsiteArchitecturePage({
   children,
   eyebrow,
+  heroActions,
   heroId,
   intro,
   sectionNavigator,
@@ -45,6 +47,7 @@ export function WebsiteArchitecturePage({
           <p className="website-eyebrow">{eyebrow}</p>
           <h1>{title}</h1>
           <p>{intro}</p>
+          {heroActions ? <div className="website-hero-actions">{heroActions}</div> : null}
         </div>
       </section>
 
