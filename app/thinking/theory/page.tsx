@@ -5,6 +5,10 @@ import {
   EditorialSectionNavigator,
   type EditorialSectionNavigatorItem,
 } from "../../../components/brand/EditorialSectionNavigator";
+import {
+  EditorialProgression,
+  type EditorialProgressionItem,
+} from "../../../components/brand/EditorialProgression";
 import { TheorySidebar } from "./theory-sidebar";
 
 export const metadata: Metadata = {
@@ -204,6 +208,71 @@ function renderOpeningSentence(text: string, isOpening: boolean) {
   );
 }
 
+function getTheoryModelTone(value: string): EditorialProgressionItem["tone"] {
+  const normalized = value.toLowerCase();
+
+  if (
+    normalized.includes("data") ||
+    normalized.includes("information") ||
+    normalized.includes("knowledge") ||
+    normalized.includes("experience")
+  ) {
+    return "graphite";
+  }
+
+  if (
+    normalized.includes("understanding") ||
+    normalized.includes("memory") ||
+    normalized.includes("context")
+  ) {
+    return "cyan";
+  }
+
+  if (
+    normalized.includes("intelligence") ||
+    normalized.includes("action") ||
+    normalized.includes("capabilit")
+  ) {
+    return "purple";
+  }
+
+  if (
+    normalized.includes("resilience") ||
+    normalized.includes("self-enabling") ||
+    normalized.includes("evolution") ||
+    normalized.includes("improvement")
+  ) {
+    return "amber";
+  }
+
+  return "white";
+}
+
+function getTheoryModelItems(lines: string[]): EditorialProgressionItem[] {
+  const items: EditorialProgressionItem[] = [];
+  let connectorBefore = "↓";
+
+  lines.forEach((line) => {
+    if (modelLabels.has(line)) {
+      return;
+    }
+
+    if (line === "+" || line === "â†“" || line === "↓" || line === "â†º" || line === "↺") {
+      connectorBefore = line === "+" ? "+" : line === "â†º" || line === "↺" ? "↺" : "↓";
+      return;
+    }
+
+    items.push({
+      connectorBefore: items.length === 0 ? undefined : connectorBefore,
+      label: line,
+      tone: getTheoryModelTone(line),
+    });
+    connectorBefore = "↓";
+  });
+
+  return items;
+}
+
 const chapters = getTheoryChapters();
 const sidebarChapters = chapters.map(({ id, title }) => ({ id, title }));
 const theoryNavigatorSections = [
@@ -263,11 +332,12 @@ export default function TheoryPage() {
                     const openingClassName = index === firstTextBlockIndex ? " is-opening" : "";
 
                     return block.type === "model" ? (
-                      <div className="theory-formula" key={`${chapter.id}-model-${index}`}>
-                        {block.lines.map((line, lineIndex) => (
-                          <span key={`${chapter.id}-model-${index}-${lineIndex}`}>{line}</span>
-                        ))}
-                      </div>
+                      <EditorialProgression
+                        ariaLabel={`${chapter.title} conceptual model`}
+                        className="theory-formula"
+                        items={getTheoryModelItems(block.lines)}
+                        key={`${chapter.id}-model-${index}`}
+                      />
                     ) : block.type === "quote" ? (
                       <blockquote className={openingClassName.trim()} key={`${chapter.id}-quote-${index}`}>
                         <span aria-hidden="true">&ldquo;</span>

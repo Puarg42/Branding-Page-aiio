@@ -238,6 +238,64 @@ They should support reading flow and never become decorative.
 
 This range is reserved for future explanatory diagrams.
 
+#### BC-DIAGRAM-001
+
+Editorial Progression
+
+Purpose: visualizes conceptual progression.
+
+It is used when aiio explains how one idea leads to another.
+
+It must not be used for process execution, software architecture or workflow.
+
+Usage:
+
+- Conceptual chains.
+- Theory figures.
+- Capability models.
+- Cause-and-effect models.
+- Management progression models.
+
+Composition rules:
+
+- No surrounding container.
+- No filled boxes.
+- No dashboard appearance.
+- No UI cards.
+- Use generous whitespace.
+- Use elegant typography.
+- Use subtle connecting lines.
+- Use minimal arrows.
+- Preserve calm visual rhythm.
+
+Color usage:
+
+- Graphite: current organizational reality.
+- Cyan: understanding.
+- Purple: Organizational Intelligence or capability generation.
+- Amber: business outcome.
+
+Color must reinforce meaning.
+
+Color must never decorate.
+
+Prohibited styles:
+
+- Presentation-slide cards.
+- Application interface components.
+- Decorative graphics.
+- Heavy arrows.
+- Workflow notation.
+- Process diagrams.
+
+Editorial principle:
+
+Illustrations explain systems.
+
+Editorial diagrams explain ideas.
+
+Never mix the two.
+
 ### BC-ICON
 
 INTERFACE ELEMENTS

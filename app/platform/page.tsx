@@ -8,6 +8,7 @@ import {
 } from "../website-architecture";
 import { BrandIllustration } from "../../components/brand/BrandIllustration";
 import { EditorialJumpArrow } from "../../components/brand/EditorialJumpArrow";
+import { EditorialProgression } from "../../components/brand/EditorialProgression";
 import { PlatformEditorialExperience } from "./platform-editorial-experience";
 
 export const metadata: Metadata = {
@@ -182,43 +183,49 @@ export default function PlatformPage() {
               itself, develops new capabilities and increasingly empowers itself
               to adapt, improve and respond to change.
             </p>
-            <div
-              aria-label="Organizational Intelligence outcome hierarchy"
+            <EditorialProgression
+              ariaLabel="Organizational Intelligence outcome hierarchy"
               className="website-platform-outcome-ladder"
-            >
-              <div>
-                <span>Level 1</span>
-                <strong>
-                  <TheoryTerm href={theoryLinks.selfUnderstanding}>
-                    Organizational Self-Understanding
-                  </TheoryTerm>
-                </strong>
-              </div>
-              <div>
-                <span>Level 2</span>
-                <strong>
-                  <TheoryTerm href={theoryLinks.intelligence}>
-                    Organizational Intelligence
-                  </TheoryTerm>
-                </strong>
-              </div>
-              <div>
-                <span>Level 3</span>
-                <strong>
-                  <TheoryTerm href={theoryLinks.capabilities}>
-                    Organizational Capabilities
-                  </TheoryTerm>
-                </strong>
-              </div>
-              <div>
-                <span>Business Outcome</span>
-                <strong>
-                  <TheoryTerm href={theoryLinks.resilience}>
-                    Organizational Resilience
-                  </TheoryTerm>
-                </strong>
-              </div>
-            </div>
+              items={[
+                {
+                  label: (
+                    <TheoryTerm href={theoryLinks.selfUnderstanding}>
+                      Organizational Self-Understanding
+                    </TheoryTerm>
+                  ),
+                  meta: "Level 1",
+                  tone: "cyan",
+                },
+                {
+                  label: (
+                    <TheoryTerm href={theoryLinks.intelligence}>
+                      Organizational Intelligence
+                    </TheoryTerm>
+                  ),
+                  meta: "Level 2",
+                  tone: "purple",
+                },
+                {
+                  label: (
+                    <TheoryTerm href={theoryLinks.capabilities}>
+                      Organizational Capabilities
+                    </TheoryTerm>
+                  ),
+                  meta: "Level 3",
+                  tone: "amber",
+                },
+                {
+                  label: (
+                    <TheoryTerm href={theoryLinks.resilience}>
+                      Organizational Resilience
+                    </TheoryTerm>
+                  ),
+                  meta: "Business Outcome",
+                  tone: "violet",
+                },
+              ]}
+              orientation="horizontal"
+            />
             <p>
               Organizations that continuously understand themselves gradually
               become self-empowering. They no longer rely solely on individual

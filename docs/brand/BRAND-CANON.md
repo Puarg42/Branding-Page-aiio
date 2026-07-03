@@ -156,6 +156,53 @@ Reserved for explanatory diagrams.
 
 Editorial illustrations clarify adjacent arguments without becoming decorative.
 
+#### BC-DIAGRAM-001
+
+Editorial Progression
+
+Purpose
+
+Visualizes conceptual progression.
+
+It explains relationships between ideas, not process execution, software architecture or workflow.
+
+Typical usage
+
+- Information + AI
+- Organizational Self-Understanding
+- Coordinated Action
+
+Composition rules
+
+- No surrounding container.
+- No filled boxes.
+- No dashboard appearance.
+- No UI cards.
+- Use generous whitespace.
+- Use elegant typography.
+- Use subtle connecting lines.
+- Use minimal arrows.
+- Keep the progression readable without surrounding explanation.
+
+Color usage
+
+Color may reinforce meaning:
+
+- Graphite: current organizational reality.
+- Cyan: understanding.
+- Purple: Organizational Intelligence or capability generation.
+- Amber: business outcome.
+
+Color must never decorate.
+
+Prohibited usage
+
+- Process execution diagrams.
+- Workflow charts.
+- Product architecture diagrams.
+- Decorative section graphics.
+- Presentation-slide card layouts.
+
 ### BC-ICON
 
 INTERFACE ELEMENTS

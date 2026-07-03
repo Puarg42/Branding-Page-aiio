@@ -3,6 +3,7 @@ import { CapabilityJourney } from "./capability-journey";
 import { CategoryEvolution, CeoMondayMoment } from "./category-reinforcement";
 import { BrandIllustration } from "../components/brand/BrandIllustration";
 import { EditorialSectionNavigator } from "../components/brand/EditorialSectionNavigator";
+import { EditorialProgression } from "../components/brand/EditorialProgression";
 import { TheoryReference } from "../components/brand/TheoryReference";
 
 const problemCards = [
@@ -151,14 +152,14 @@ function ConceptBreakthrough() {
           </p>
           <TheoryReference />
         </div>
-        <ol
-          aria-label="Missing layer progression"
+        <EditorialProgression
+          ariaLabel="Missing layer progression"
           className="intelligence-progression"
-        >
-          {intelligenceProgression.map((step) => (
-            <li key={step}>{step}</li>
-          ))}
-        </ol>
+          items={intelligenceProgression.map((step, index) => ({
+            label: step,
+            tone: index === 1 ? "cyan" : index === 2 ? "purple" : "graphite",
+          }))}
+        />
       </div>
     </section>
   );

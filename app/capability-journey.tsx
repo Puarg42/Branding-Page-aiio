@@ -6,6 +6,7 @@ import {
   type Transition,
   type Variants,
 } from "framer-motion";
+import { EditorialProgression } from "../components/brand/EditorialProgression";
 
 const motionEase = [0.2, 0, 0, 1] as const;
 
@@ -101,15 +102,16 @@ export function CapabilityJourney() {
           viewport={{ amount: 0.42, once: true }}
           whileInView="visible"
         >
-          <p>Organizational Self-Understanding</p>
-          <span aria-hidden="true">&darr;</span>
-          <p>New Organizational Capabilities</p>
-          <span aria-hidden="true">&darr;</span>
-          <p>Better Decisions</p>
-          <span aria-hidden="true">&darr;</span>
-          <p>Coordinated Action</p>
-          <span aria-hidden="true">&darr;</span>
-          <p>Organizational Resilience</p>
+          <EditorialProgression
+            ariaLabel="Capability outcome progression"
+            items={[
+              { label: "Organizational Self-Understanding", tone: "cyan" },
+              { label: "New Organizational Capabilities", tone: "purple" },
+              { label: "Better Decisions", tone: "purple" },
+              { label: "Coordinated Action", tone: "purple" },
+              { label: "Organizational Resilience", tone: "amber" },
+            ]}
+          />
         </motion.div>
       </div>
     </section>
