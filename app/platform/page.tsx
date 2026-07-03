@@ -82,11 +82,6 @@ export default function PlatformPage() {
             </div>
             <div className="website-capability-layer-visual">
               <BrandIllustration variant="BC-002" />
-              <p className="website-figure-caption">
-                <span>Figure 1</span>
-                {" "}
-                The Organizational Intelligence System
-              </p>
             </div>
           </div>
         </div>
