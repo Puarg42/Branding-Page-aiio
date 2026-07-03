@@ -12355,6 +12355,19 @@ section[id],
   color: #ffffff;
 }
 
+.category-timeline-stage h3 {
+  font-size: clamp(1.42rem, 1.65vw, 1.95rem);
+  line-height: 1.06;
+  max-width: 11.6rem;
+}
+
+.category-timeline-stage.is-cyan h3,
+.category-timeline-stage.is-violet h3,
+.category-timeline-stage.is-violet.is-featured h3 {
+  font-size: clamp(1.36rem, 1.32vw, 1.56rem);
+  max-width: 12.8rem;
+}
+
 .capability-journey-map {
   gap: clamp(18px, 2.4vw, 34px);
 }
@@ -12429,12 +12442,39 @@ section[id],
 }
 
 @media (max-width: 1180px) {
+  .category-timeline {
+    gap: clamp(18px, 2vw, 28px);
+  }
+
+  .category-timeline-stage h3 {
+    font-size: clamp(1.32rem, 1.8vw, 1.62rem);
+    max-width: 10.8rem;
+  }
+
+  .category-timeline-stage.is-cyan h3,
+  .category-timeline-stage.is-violet h3,
+  .category-timeline-stage.is-violet.is-featured h3 {
+    font-size: clamp(1.24rem, 1.68vw, 1.42rem);
+    max-width: 11.8rem;
+  }
+
   .capability-journey-map {
     gap: 22px;
   }
 
   .capability-step h3 {
     max-width: 20rem;
+  }
+}
+
+@media (max-width: 920px) {
+  .category-timeline-stage h3,
+  .category-timeline-stage.is-featured h3,
+  .category-timeline-stage.is-cyan h3,
+  .category-timeline-stage.is-violet h3,
+  .category-timeline-stage.is-violet.is-featured h3 {
+    font-size: clamp(1.62rem, 4.1vw, 2rem);
+    max-width: 13.6rem;
   }
 }
 
