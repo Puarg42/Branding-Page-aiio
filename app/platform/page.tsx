@@ -58,7 +58,7 @@ const capabilities: CapabilityTeaser[] = [
 const platformHeroTitle = (
   <>
     <span className="website-platform-hero-title">
-      One Organizational
+      The Organizational
       <br />
       Intelligence System
     </span>
