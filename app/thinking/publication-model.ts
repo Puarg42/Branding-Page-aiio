@@ -13,7 +13,7 @@ export type TheoryJournalEntry = {
 
 export const theoryPublication = {
   edition: "Living Publication",
-  lastUpdated: "July 2, 2026",
+  lastUpdated: "July 3, 2026",
   readingTime: "Approx. 40 min reading",
   title: "Theory",
   version: "Version 0.10",
@@ -51,6 +51,14 @@ export const theoryChapterReferences = {
     id: "5-organizational-intelligence",
     title: "Organizational Intelligence",
   },
+  organizationalCapabilities: {
+    id: "6-organizational-capabilities",
+    title: "Organizational Capabilities",
+  },
+  organizationalResilience: {
+    id: "7-organizational-resilience",
+    title: "Organizational Resilience",
+  },
 } satisfies Record<string, TheoryChapterReference>;
 
 export const theoryJournalEntries: TheoryJournalEntry[] = [
@@ -62,12 +70,14 @@ export const theoryJournalEntries: TheoryJournalEntry[] = [
       theoryChapterReferences.organizationalSelfUnderstanding,
       theoryChapterReferences.organizationalUnderstanding,
       theoryChapterReferences.organizationalIntelligence,
+      theoryChapterReferences.organizationalCapabilities,
+      theoryChapterReferences.organizationalResilience,
     ],
     coreThesis:
-      "Organizations are not their people. An organization is an autonomous socio-technical system that currently lacks the capability to understand itself continuously. Organizational Self-Understanding closes this gap.",
-    date: "July 2, 2026",
+      "Organizational Self-Understanding as the Missing Management Capability",
+    date: "July 3, 2026",
     version: "0.10",
     whyItMatters:
-      "This revision clarifies the terminology between Organizational Understanding and Organizational Self-Understanding. Organizational Understanding connects knowledge, context, relationships and reasoning. Organizational Self-Understanding names the capability of the organization itself to continuously interpret its own structures, decisions, processes and capabilities.",
+      "This revision formalizes Organizational Self-Understanding as a management capability, introduces the Capability Model, clarifies the Capability -> Outcome -> Business Value distinction, separates Knowledge from Understanding and positions Organizational Resilience as the business outcome of continuously developed organizational capabilities.",
   },
 ];

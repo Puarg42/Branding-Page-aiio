@@ -14,7 +14,7 @@ Computing amplified information processing.
 
 Artificial Intelligence will amplify something fundamentally different.
 
-An organization's ability to develop self-understanding.
+An organization's ability to develop continuous Organizational Self-Understanding.
 
 For decades organizations have invested enormous effort into documenting themselves.
 
@@ -122,6 +122,10 @@ In the decisions made every day.
 
 The larger an organization becomes, the more fragmented this knowledge becomes.
 
+Complexity therefore creates more than an information problem.
+
+It creates a capability gap.
+
 To cope with this complexity, organizations have spent decades building systems that document different aspects of themselves.
 
 Business Process Management describes activities.
@@ -144,7 +148,7 @@ None of them understands the organization as a whole.
 
 They describe perspectives.
 
-They do not create continuous self-understanding for the organization itself.
+They do not create continuous Organizational Self-Understanding for the organization itself.
 
 As a consequence, organizations possess enormous amounts of knowledge while simultaneously suffering from a growing lack of organizational understanding.
 
@@ -172,7 +176,7 @@ Software landscapes grow without shared understanding.
 
 The problem is therefore not a lack of information.
 
-It is the absence of an integrated understanding.
+It is the absence of continuous Organizational Self-Understanding.
 
 For decades this limitation had to be accepted.
 
@@ -247,6 +251,32 @@ This distinction changes the way organizations must be understood.
 Knowledge is not the destination.
 
 It is the raw material.
+
+Knowledge is not Understanding.
+
+Data becomes information.
+
+Information becomes knowledge.
+
+Knowledge becomes Organizational Understanding.
+
+Organizational Understanding becomes Organizational Self-Understanding.
+
+Organizational Self-Understanding enables Organizational Intelligence.
+
+Organizational Intelligence develops Organizational Capabilities.
+
+Knowledge Management and Organizational Intelligence therefore solve different problems.
+
+Knowledge Management improves access to knowledge.
+
+Organizational Intelligence improves the organization's ability to interpret knowledge and transform it into action.
+
+Knowledge stores.
+
+Understanding interprets.
+
+Organizational Intelligence enables action.
 
 Understanding is the capability that emerges when knowledge becomes continuously connected, contextualized and interpreted.
 
@@ -334,7 +364,23 @@ Organizational Self-Understanding names this missing capability.
 
 Within the Organizational Intelligence Theory, Organizational Self-Understanding is defined as:
 
-**The continuously evolving capability of an organization, understood as a socio-technical system, to preserve, connect and interpret its own knowledge, context, relationships and experience.**
+**Organizational Self-Understanding is the capability of an organization to continuously interpret, connect and understand its own organizational reality.**
+
+Organizational reality includes structures, processes, decisions, relationships, rules, responsibilities, capabilities and operational reality.
+
+Organizational Self-Understanding is not documentation.
+
+It is not Knowledge Management.
+
+It is not Business Process Management.
+
+It is not enterprise search.
+
+It is not an AI assistant.
+
+It is not information retrieval.
+
+It is continuous organizational interpretation.
 
 Organizational Self-Understanding precedes Organizational Intelligence.
 
@@ -350,7 +396,7 @@ But it cannot reliably reason about the organization itself unless the organizat
 
 The decisive transition is therefore not from human work to machine intelligence.
 
-It is from externally interpreted organizations to organizations capable of continuously developing their own self-understanding.
+It is from externally interpreted organizations to organizations capable of continuously developing their own Organizational Self-Understanding.
 
 Only once this capability exists can Organizational Intelligence emerge.
 
@@ -372,7 +418,7 @@ It describes how organizational knowledge becomes connected, contextualized and 
 
 Organizational Self-Understanding is more specific.
 
-It describes the capability of the organization itself to continuously interpret its own structures, decisions, processes and capabilities.
+It describes the capability of the organization itself to continuously interpret its own structures, decisions, processes, relationships, responsibilities, capabilities and operational reality.
 
 Knowledge alone is insufficient.
 
@@ -428,7 +474,7 @@ Understanding enables intelligence.
 
 This distinction is fundamental.
 
-An organization may develop self-understanding without consistently acting upon that understanding.
+An organization may develop Organizational Self-Understanding without consistently acting upon that understanding.
 
 Intelligence begins when understanding is continuously transformed into coherent decisions and effective action.
 
@@ -446,7 +492,9 @@ Knowledge provides the foundation.
 
 Understanding creates meaning.
 
-Intelligence transforms meaning into action.
+Organizational Self-Understanding turns meaning toward the organization itself.
+
+Intelligence transforms Organizational Self-Understanding into action.
 
 Action develops capabilities.
 
@@ -480,6 +528,10 @@ Organizational Understanding
 
 ↓
 
+Organizational Self-Understanding
+
+↓
+
 Organizational Intelligence
 
 ↓
@@ -488,15 +540,15 @@ Action
 
 ↓
 
-Capabilities
+Organizational Capabilities
 
 ↓
 
-Resilience
+Organizational Resilience
 
 ↓
 
-Self-Enabling Organizations
+Self-Empowering Organizations
 
 # 6. Organizational Capabilities
 
@@ -535,6 +587,58 @@ Organizations with stronger capabilities require less external coordination.
 They become increasingly capable of improving themselves.
 
 Capabilities therefore represent the first measurable outcome of Organizational Intelligence.
+
+--------------------------------------------------
+
+Capability Evolution Model
+
+Understand Your Organization
+
+↓
+
+Build Organizational Self-Understanding
+
+↓
+
+Enable Organizational Capabilities
+
+↓
+
+Continuously Evolve Your Organization
+
+↓
+
+Become a Self-Empowering Organization
+
+↓
+
+Achieve Organizational Resilience
+
+The first four stages describe organizational capabilities.
+
+The final two stages describe organizational outcomes.
+
+--------------------------------------------------
+
+From Organizational Capability to Business Value
+
+Capability
+
+The organization continuously develops new organizational capabilities.
+
+Outcome
+
+The organization becomes a Self-Empowering Organization capable of continuously improving itself.
+
+Business Value
+
+The organization becomes increasingly resilient, adaptive and sustainable.
+
+An Organizational Intelligence Platform delivers capabilities.
+
+The organization develops self-empowerment.
+
+The business realizes resilience.
 
 --------------------------------------------------
 
@@ -605,6 +709,10 @@ Every disruption becomes additional organizational understanding.
 Every adaptation strengthens future capabilities.
 
 Resilience therefore transforms Organizational Intelligence from a temporary advantage into a permanent organizational characteristic.
+
+Organizations do not become resilient because they possess more knowledge.
+
+They become resilient because they continuously develop new capabilities based on Organizational Self-Understanding.
 
 --------------------------------------------------
 
@@ -1126,39 +1234,43 @@ Every organization evolves through a sequence of capabilities.
 
 Each capability enables the next.
 
-The model proposed in this document consists of six consecutive stages.
+The model proposed in this document consists of six stages of capability evolution.
 
-Knowledge
-
-↓
-
-Understanding
+Understand Your Organization
 
 ↓
 
-Action
+Build Organizational Self-Understanding
 
 ↓
 
-Capabilities
+Enable Organizational Capabilities
 
 ↓
 
-Resilience
+Continuously Evolve Your Organization
 
 ↓
 
-Self-Enabling Organization
+Become a Self-Empowering Organization
 
-Knowledge forms the foundation.
+↓
+
+Achieve Organizational Resilience
+
+The first four stages describe organizational capabilities.
+
+The final two stages describe organizational outcomes.
+
+Understanding the organization forms the foundation.
 
 Every organization possesses knowledge.
 
-Yet knowledge alone does not create organizational intelligence.
+Yet knowledge alone does not create Organizational Intelligence.
 
-Understanding emerges when knowledge becomes continuously connected, contextualized and interpreted.
+Organizational Self-Understanding emerges when the organization continuously interprets its own organizational reality.
 
-Action becomes possible when understanding guides decisions instead of isolated information.
+Action becomes possible when Organizational Self-Understanding guides decisions instead of isolated information.
 
 Repeated action develops organizational capabilities.
 
@@ -1168,13 +1280,13 @@ As capabilities mature, organizational resilience emerges.
 
 Resilience is the ability to remain effective despite uncertainty, disruption and continuous change.
 
-Ultimately, resilient organizations become capable of enabling themselves.
+Ultimately, resilient organizations become capable of empowering themselves.
 
-A Self-Enabling Organization continuously learns, understands, improves and evolves without depending on permanent external intervention.
+A Self-Empowering Organization continuously learns, understands, improves and evolves without depending on permanent external intervention.
 
 This progression represents more than a maturity model.
 
-It describes the natural evolution of organizational intelligence.
+It describes the natural evolution of Organizational Intelligence.
 
 Artificial Intelligence does not replace any stage of this model.
 
@@ -1182,32 +1294,32 @@ It accelerates the transition between them.
 
 The objective is therefore not Artificial Intelligence itself.
 
-The objective is the emergence of Self-Enabling Organizations.
+The objective is the emergence of Self-Empowering Organizations that become increasingly resilient, adaptive and sustainable.
 
 --------------------------------------------------
 
 Conceptual Interpretation
 
-Knowledge answers:
+Understand Your Organization answers:
 
 "What exists?"
 
-Understanding answers:
+Build Organizational Self-Understanding answers:
 
-"Why does it exist?"
+"How does the organization work as a connected system?"
 
-Action answers:
+Enable Organizational Capabilities answers:
 
-"What should we do?"
+"What can the organization now consistently do?"
 
-Capabilities answer:
+Continuously Evolve Your Organization answers:
 
-"What are we consistently able to do?"
+"How does the organization improve itself over time?"
 
-Resilience answers:
+Self-Empowering Organizations answer:
+
+"How does the organization continuously develop the conditions for its own improvement?"
+
+Organizational Resilience answers:
 
 "How do we remain effective under change?"
-
-Self-Enabling Organizations answer:
-
-"How do we continuously improve ourselves?"
