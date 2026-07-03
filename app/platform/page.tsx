@@ -52,7 +52,6 @@ const capabilities: CapabilityTeaser[] = [
     illustrationVariant: "BC204",
     product: "DataForge",
     href: "#dataforge",
-    badge: "Coming Soon",
   },
 ];
 
@@ -105,10 +104,10 @@ export default function PlatformPage() {
               As these capabilities continuously evolve, the organization becomes
               more resilient, more adaptive and better prepared for change.
             </p>
-            <p>
+            <p className="website-platform-conclusion-thesis">
               That is Organizational Intelligence.
             </p>
-            <p>
+            <p className="website-platform-conclusion-final">
               aiio is the Organizational Intelligence System that enables it.
             </p>
           </div>

@@ -77,16 +77,29 @@ export type CapabilityTeaser = {
   title: string;
 };
 
+function capabilityKey(product: CapabilityTeaser["product"]) {
+  switch (product) {
+    case "ProcessCollector":
+      return "collector";
+    case "ProcessMagnet":
+      return "magnet";
+    case "ProcessForge":
+      return "forge";
+    case "DataForge":
+      return "dataforge";
+  }
+}
+
 export function CapabilityTeaserGrid({
   capabilities,
 }: {
   capabilities: CapabilityTeaser[];
 }) {
   const journey = [
-    "Understand",
-    "Build Understanding",
-    "Enable Capabilities",
-    "Evolve",
+    { key: "collector", label: "Understand" },
+    { key: "magnet", label: "Build Understanding" },
+    { key: "forge", label: "Enable Capabilities" },
+    { key: "dataforge", label: "Evolve" },
   ];
 
   return (
@@ -102,10 +115,14 @@ export function CapabilityTeaserGrid({
         </div>
         <div className="website-capability-journey" aria-label="Capability journey">
           {journey.map((step, index) => (
-            <span className="website-capability-journey-step" key={step}>
+            <span
+              className="website-capability-journey-step"
+              data-capability={step.key}
+              key={step.key}
+            >
               <em>{String(index + 1).padStart(2, "0")}</em>
               {" "}
-              {step}
+              {step.label}
             </span>
           ))}
         </div>
@@ -113,6 +130,7 @@ export function CapabilityTeaserGrid({
           {capabilities.map((capability, index) => (
             <article
               className="website-capability-card"
+              data-capability={capabilityKey(capability.product)}
               id={capability.product.toLowerCase()}
               key={capability.title}
             >
