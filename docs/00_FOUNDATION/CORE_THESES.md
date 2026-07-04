@@ -23,3 +23,13 @@ Self-understanding is the prerequisite for Organizational Intelligence.
 ## Core Thesis 004
 
 Organizational Self-Empowering is the capability of an organization to continuously develop, validate and evolve its own organizational capabilities.
+
+---
+
+## Core Thesis 005
+
+Products do not create business outcomes directly.
+
+They create, represent, forge and evolve organizational capabilities.
+
+Organizational Self-Empowering is the maturity state in which those capabilities continuously improve the organization itself.

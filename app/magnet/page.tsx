@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { LayerPage } from "../layer-page";
 
 export const metadata: Metadata = {
-  title: "ProcessMagnet | aiio Recognition Layer",
+  title: "ProcessMagnet | aiio Self-Understanding Capability",
   description:
-    "ProcessMagnet überführt multimodale Inhalte in wertorientierte, BPMN-konforme Prozess- und Organisationsmodelle.",
+    "ProcessMagnet interpretiert organisatorische Realität kontinuierlich und erzeugt Organizational Self-Understanding.",
 };
 
 export default function MagnetPage() {

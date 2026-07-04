@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { EditorialEyebrow } from "../../components/brand/EditorialEyebrow";
+import { TheoryReference } from "../../components/brand/TheoryReference";
 import { WebsiteArchitecturePage } from "../website-architecture";
 
 export const metadata: Metadata = {
@@ -37,7 +38,13 @@ export default function CompanyPage() {
     <WebsiteArchitecturePage
       eyebrow="Company"
       heroId="company-hero"
-      intro="aiio exists because organizations need a better way to preserve what they know and turn it into durable capability."
+      intro={
+        <>
+          aiio exists because organizations need a better way to preserve what
+          they know and turn it into durable{" "}
+          <TheoryReference>Organizational Capabilities</TheoryReference>.
+        </>
+      }
       sectionNavigator={companySectionNavigator}
       sectionNavigatorLabel="Company sections"
       title="Why aiio exists."

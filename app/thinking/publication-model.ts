@@ -18,7 +18,7 @@ export const theoryPublication = {
   lastUpdated: "July 4, 2026",
   readingTime: "Approx. 40 min reading",
   title: "Theory",
-  version: "Version 0.12",
+  version: "Version 0.13",
 } as const;
 
 export const theoryEditorialRules = [
@@ -68,6 +68,21 @@ export const theoryChapterReferences = {
 } satisfies Record<string, TheoryChapterReference>;
 
 export const theoryJournalEntries: TheoryJournalEntry[] = [
+  {
+    affectedChapters: [
+      theoryChapterReferences.organizationalSelfUnderstanding,
+      theoryChapterReferences.organizationalIntelligence,
+      theoryChapterReferences.organizationalCapabilities,
+      theoryChapterReferences.organizationalSelfEmpowering,
+      theoryChapterReferences.organizationalResilience,
+    ],
+    coreThesis:
+      "Theory Version 0.13 introduces a major conceptual refinement of the Organizational Intelligence narrative.",
+    date: "July 4, 2026",
+    version: "0.13",
+    whyItMatters:
+      "This revision clarifies the distinction between Business Narrative and Theory, refines Organizational Self-Understanding, repositions Organizational Intelligence, clarifies Organizational Capabilities, introduces Organizational Self-Empowering as organizational maturity, synchronizes the website and Platform narrative, restructures the journey and rewrites the capability cards.",
+  },
   {
     affectedChapters: [
       theoryChapterReferences.organizationalSelfUnderstanding,

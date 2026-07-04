@@ -696,7 +696,7 @@ export const resourcePages: Record<ResourceSlug, ResourcePageData> = {
   },
   facts: {
     eyebrow: "Facts",
-    title: "Grounding Pages für aiio.",
+    title: "Reference Pages für aiio.",
     intro:
       "Die Facts-Seite bündelt indexierbare Kurzprofile zur aiio GmbH, zur Plattform und zu zentralen Konzepten.",
     heroImage: "/aiio-architecture.png",
@@ -718,7 +718,7 @@ export const resourcePages: Record<ResourceSlug, ResourcePageData> = {
           {
             title: "Prozess-Staubsauger",
             text:
-              "Grounding-Ansatz für schnelle Erfolge mit Prozessen und digitalem Organisationswissen.",
+              "Einstieg in die menschenlesbare Organisationsrepräsentation und das Organizational Intelligence System.",
           },
         ],
       },

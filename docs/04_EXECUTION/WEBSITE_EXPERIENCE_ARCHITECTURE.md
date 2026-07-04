@@ -77,19 +77,21 @@ Platform presents capabilities before products.
 
 The visitor should first understand what becomes possible:
 
-1. Capture Knowledge
-2. Build Understanding
-3. Enable Action
-4. Evolve Organizations
+1. Understand Your Organization
+2. Build Organizational Self-Understanding
+3. Forge Organizational Capabilities
+4. Enable Organizational Self-Empowering
+5. Organizational Resilience
 
 Only afterwards should the enabling products be revealed:
 
 | Capability | Powered by |
 | --- | --- |
-| Capture Knowledge | ProcessCollector |
-| Build Understanding | ProcessMagnet |
-| Enable Action | ProcessForge |
-| Evolve Organizations | DataForge |
+| Understand Your Organization | ProcessCollector |
+| Build Organizational Self-Understanding | ProcessMagnet |
+| Forge Organizational Capabilities | ProcessForge |
+| Enable Organizational Self-Empowering | DataForge |
+| Organizational Resilience | Business outcome |
 
 ## Navigation Intent
 

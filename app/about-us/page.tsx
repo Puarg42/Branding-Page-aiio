@@ -93,7 +93,7 @@ const milestones: TimelineMilestone[] = [
     image: "/history/aiio-apri-invest.jpg",
     peopleMotion: true,
     copy:
-      "Das Unternehmen sichert sich ein Series-A-Investment und schärft den Weg zu einem Produkt-Stack, der Wissen, Recognition und Activation enger miteinander verbindet.",
+      "Das Unternehmen sichert sich ein Series-A-Investment und schärft den Weg zu einem Organizational Intelligence System, das Wissen, Interpretation und Capability-Entwicklung enger verbindet.",
   },
   {
     year: "2025",
@@ -395,7 +395,7 @@ export default function AboutUsPage() {
           <h2>
             {getEditableContent(
               "about.demo.title",
-              "Lass uns zeigen, wie Wissen als Produkt-Stack aktiviert wird.",
+              "Lass uns zeigen, wie Organizational Intelligence in konkrete Capabilities übersetzt wird.",
             )}
           </h2>
         </div>

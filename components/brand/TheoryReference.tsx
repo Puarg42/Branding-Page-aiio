@@ -1,7 +1,7 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { EditorialJumpArrow } from "./EditorialJumpArrow";
+import { EditorialReferenceMarker } from "./EditorialReferenceMarker";
 import { TheoryLink } from "./TheoryLink";
 import { getCanonicalTheoryLinkForLabel } from "./theory-links";
 
@@ -29,7 +29,7 @@ export function TheoryReference({
       title="Read theoretical foundation"
     >
       <span className="theory-reference-text">{children}</span>
-      <EditorialJumpArrow />
+      <EditorialReferenceMarker className="editorial-reference-icon" />
     </TheoryLink>
   );
 }

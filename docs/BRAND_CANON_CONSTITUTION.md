@@ -122,19 +122,19 @@ An organization continuously develops organizational capabilities by transformin
 
 The illustration visualizes four complementary capability layers.
 
-1. ProcessCollector  
-Grounding
+1. ProcessMagnet
+Continuous interpretation
+
+Organizational reality becomes continuously connected and interpreted.
+
+Creates Organizational Self-Understanding.
+
+2. ProcessCollector
+Human-readable representation
 
 The human-readable organizational source code.
 
-Organizational reality becomes understandable, modelable and explainable.
-
-2. ProcessMagnet  
-Organizational Understanding
-
-Continuously captures and connects organizational reality from every relevant source.
-
-Creates continuously evolving organizational understanding.
+Organizational Intelligence becomes understandable, modelable and explainable.
 
 3. ProcessForge  
 Getting into Action

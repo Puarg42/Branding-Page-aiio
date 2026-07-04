@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { EditorialEyebrow } from "../../components/brand/EditorialEyebrow";
+import { TheoryReference } from "../../components/brand/TheoryReference";
 import { WebsiteArchitecturePage } from "../website-architecture";
 
 export const metadata: Metadata = {
@@ -22,8 +23,13 @@ const partnerRoles = [
   },
   {
     title: "Support evolution",
-    purpose:
-      "Guide organizations as decision quality, Organizational Self-Empowering and resilience become operating principles.",
+    purpose: (
+      <>
+        Guide organizations as decision quality,{" "}
+        <TheoryReference>Organizational Self-Empowering</TheoryReference> and
+        resilience become operating principles.
+      </>
+    ),
   },
 ] as const;
 
@@ -38,7 +44,13 @@ export default function PartnersPage() {
     <WebsiteArchitecturePage
       eyebrow="Partners"
       heroId="partners-hero"
-      intro="Partners help turn Organizational Intelligence into lasting customer capability."
+      intro={
+        <>
+          Partners help turn{" "}
+          <TheoryReference>Organizational Intelligence</TheoryReference> into
+          lasting customer capability.
+        </>
+      }
       sectionNavigator={partnersSectionNavigator}
       sectionNavigatorLabel="Partners sections"
       title="Help organizations build lasting capability."

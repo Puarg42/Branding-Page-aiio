@@ -30,9 +30,9 @@ const problemCards = [
 
 const intelligenceProgression = [
   { label: "Organizational Self-Understanding", meta: "Missing capability", tone: "cyan" },
-  { label: "Organizational Intelligence", meta: "Capability foundation", tone: "purple" },
-  { label: "Organizational Capabilities", meta: "Reusable abilities", tone: "amber" },
-  { label: "Organizational Self-Empowering", meta: "Continuous improvement", tone: "amber" },
+  { label: "Organizational Intelligence", meta: "Interpretation capability", tone: "cyan" },
+  { label: "Organizational Capabilities", meta: "Reusable behavior", tone: "purple" },
+  { label: "Organizational Self-Empowering", meta: "Organizational maturity", tone: "amber" },
   { label: "Organizational Resilience", meta: "Business outcome", tone: "violet" },
 ] as const;
 
@@ -159,8 +159,9 @@ function ConceptBreakthrough() {
             </p>
           </div>
           <p className="concept-support">
-            When an organization continuously understands itself, understanding becomes
-            intelligence, intelligence becomes capability and capability becomes self-empowerment.
+            When an organization continuously understands itself, it can develop
+            intelligence, forge new capabilities and become increasingly
+            self-empowering.
           </p>
         </div>
         <EditorialProgression
@@ -197,8 +198,8 @@ function NewKindOrganization() {
           </div>
         </div>
         <div className="organization-bottom-statement">
-          <p>Self-understanding creates capability.</p>
-          <p>Capability creates self-empowerment.</p>
+          <p>Self-understanding creates intelligence.</p>
+          <p>Intelligence creates capability.</p>
           <p>Self-empowerment creates resilience.</p>
         </div>
       </div>

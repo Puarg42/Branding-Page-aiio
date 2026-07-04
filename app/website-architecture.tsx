@@ -24,7 +24,7 @@ type WebsiteArchitecturePageProps = {
   heroActions?: ReactNode;
   heroId?: string;
   heroVisual?: ReactNode;
-  intro: string;
+  intro: ReactNode;
   sectionNavigator?: readonly EditorialSectionNavigatorItem[];
   sectionNavigatorLabel?: string;
   sections?: readonly ArchitectureSection[];
@@ -89,7 +89,7 @@ export function WebsiteArchitecturePage({
 
 export type CapabilityTeaser = {
   badge?: string;
-  copy: string;
+  copy: ReactNode;
   href: string;
   illustration?: {
     alt: string;
@@ -129,7 +129,7 @@ export function CapabilityTeaserGrid({
       key: "magnet",
       label: (
         <>
-          Develop <TheoryReference>Organizational Intelligence</TheoryReference>
+          Build <TheoryReference>Organizational Self-Understanding</TheoryReference>
         </>
       ),
     },

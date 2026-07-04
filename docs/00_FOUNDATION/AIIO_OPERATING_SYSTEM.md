@@ -534,7 +534,7 @@ Knowledge
 
 ↓
 
-Organizational Understanding
+Understanding
 
 ↓
 
@@ -602,15 +602,15 @@ They also create the conditions for Organizational Self-Empowering.
 
 --------------------------------------------------
 
-Capability Evolution Model
+Canonical Theory Mechanism
 
-Reality
+Organizational Reality
 
 ↓
 
-Understand Your Organization
+ProcessMagnet
 
-(ProcessCollector)
+(continuous interpretation)
 
 ↓
 
@@ -618,29 +618,25 @@ Organizational Self-Understanding
 
 ↓
 
-Develop Organizational Intelligence
-
-(ProcessMagnet)
-
-↓
-
 Organizational Intelligence
 
 ↓
 
-Forge Organizational Capabilities
+ProcessCollector
 
-(ProcessForge)
-
-↓
-
-Organizational Capabilities
+(human-readable representation)
 
 ↓
 
-Enable Organizational Self-Empowering
+ProcessForge
 
-(DataForge)
+(capability forging)
+
+↓
+
+DataForge
+
+(continuous evolution)
 
 ↓
 
@@ -648,11 +644,13 @@ Organizational Self-Empowering
 
 ↓
 
-Business Outcome
-
 Organizational Resilience
 
-The product stages create organizational capabilities.
+ProcessCollector does not create Organizational Self-Understanding.
+
+ProcessCollector creates and maintains the human-readable representation of the Organizational Intelligence continuously developed by ProcessMagnet.
+
+The product stages create organizational capabilities and maturity.
 
 Organizational capabilities enable Organizational Self-Empowering.
 
@@ -688,7 +686,11 @@ Knowledge
 
 ↓
 
-Organizational Understanding
+Understanding
+
+↓
+
+Organizational Self-Understanding
 
 ↓
 
@@ -1266,15 +1268,15 @@ Every organization evolves through a sequence of capabilities.
 
 Each capability enables the next.
 
-The model proposed in this document describes the canonical organizational evolution of Version 0.12.
+The model proposed in this document describes the canonical organizational evolution of Version 0.13.
 
-Reality
+Organizational Reality
 
 ↓
 
-Understand Your Organization
+ProcessMagnet
 
-(ProcessCollector)
+(continuous interpretation)
 
 ↓
 
@@ -1282,29 +1284,25 @@ Organizational Self-Understanding
 
 ↓
 
-Develop Organizational Intelligence
-
-(ProcessMagnet)
-
-↓
-
 Organizational Intelligence
 
 ↓
 
-Forge Organizational Capabilities
+ProcessCollector
 
-(ProcessForge)
-
-↓
-
-Organizational Capabilities
+(human-readable representation)
 
 ↓
 
-Enable Organizational Self-Empowering
+ProcessForge
 
-(DataForge)
+(capability forging)
+
+↓
+
+DataForge
+
+(continuous evolution)
 
 ↓
 
@@ -1312,11 +1310,9 @@ Organizational Self-Empowering
 
 ↓
 
-Business Outcome
-
 Organizational Resilience
 
-Understanding the organization forms the foundation.
+ProcessMagnet continuously interprets organizational reality.
 
 Every organization possesses knowledge.
 
@@ -1325,6 +1321,10 @@ Yet knowledge alone does not create Organizational Intelligence.
 Organizational Self-Understanding emerges when the organization continuously interprets its own organizational reality.
 
 Organizational Intelligence develops when that self-understanding becomes a continuously evolving capability to interpret the organization and guide decisions.
+
+ProcessCollector does not create Organizational Self-Understanding.
+
+ProcessCollector creates the human-readable representation of the Organizational Intelligence continuously developed by ProcessMagnet.
 
 Organizational Capabilities are forged when Organizational Intelligence becomes reusable action the organization can repeat, improve and trust.
 
@@ -1360,23 +1360,23 @@ The objective is the emergence of organizations that continuously understand the
 
 Conceptual Interpretation
 
-Understand Your Organization answers:
+ProcessMagnet answers:
 
-"What exists?"
+"How does organizational reality become continuously interpreted?"
 
 Organizational Self-Understanding answers:
 
 "How does the organization work as a connected system?"
 
-Develop Organizational Intelligence answers:
+ProcessCollector answers:
 
-"How does the organization continuously interpret itself?"
+"How does Organizational Intelligence become human-readable and shared?"
 
-Forge Organizational Capabilities answers:
+ProcessForge answers:
 
 "What can the organization now consistently do?"
 
-Enable Organizational Self-Empowering answers:
+DataForge answers:
 
 "How does the organization continuously develop the conditions for its own improvement?"
 

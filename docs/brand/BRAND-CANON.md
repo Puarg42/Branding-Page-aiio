@@ -66,10 +66,10 @@ Illustrates how an Organizational Intelligence System transforms organizational 
 Narrative
 
 - Real organizational world
-- ProcessCollector: Grounding
-- ProcessMagnet: Organizational Understanding
-- ProcessForge: Getting into Action
-- DataForge: Continuous Evolution
+- ProcessMagnet: continuous interpretation of organizational reality
+- ProcessCollector: human-readable representation
+- ProcessForge: capability forging
+- DataForge: continuous capability evolution
 
 Used on
 

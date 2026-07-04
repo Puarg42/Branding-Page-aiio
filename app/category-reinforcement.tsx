@@ -12,6 +12,7 @@ import {
 
 import { BrandIllustration } from "../components/brand/BrandIllustration";
 import { EditorialEyebrow } from "../components/brand/EditorialEyebrow";
+import { TheoryReference } from "../components/brand/TheoryReference";
 
 const motionEase = [0.2, 0, 0, 1] as const;
 
@@ -230,7 +231,14 @@ export function CategoryEvolution() {
           >
             <span className="category-stage-dot" aria-hidden="true" />
             <p>{stage.era}</p>
-            <h3>{stage.foundation}</h3>
+            <h3>
+              {stage.foundation === "Organizational Self-Understanding" ||
+              stage.foundation === "Organizational Resilience" ? (
+                <TheoryReference>{stage.foundation}</TheoryReference>
+              ) : (
+                stage.foundation
+              )}
+            </h3>
           </motion.article>
         ))}
       </div>

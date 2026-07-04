@@ -4,7 +4,7 @@
 
 This document defines the first conceptual model for Organizational Intelligence.
 
-The model describes how organizational reality develops into self-understanding, Organizational Intelligence, organizational capabilities, Organizational Self-Empowering and ultimately Organizational Resilience.
+The model describes how organizational reality is continuously interpreted into Organizational Self-Understanding, developed into Organizational Intelligence, represented for humans, forged into capabilities, evolved into Organizational Self-Empowering and ultimately realized as Organizational Resilience.
 
 ## Status
 
@@ -16,7 +16,9 @@ Reality
 
 ->
 
-Understand Your Organization
+ProcessMagnet
+
+continuous interpretation
 
 ->
 
@@ -28,7 +30,21 @@ Organizational Intelligence
 
 ->
 
-Organizational Capabilities
+ProcessCollector
+
+human-readable representation
+
+->
+
+ProcessForge
+
+capability forging
+
+->
+
+DataForge
+
+continuous evolution
 
 ->
 

@@ -13,6 +13,15 @@ Tracks relevant documentation, strategy and website preparation changes over tim
 - Product Narrative Changes
 - Archive
 
+## 2026-07-04 - Theory 0.13
+
+- Synchronized Brand Book, Theory, Thinking, Platform and Website around Version 0.13.
+- Clarified the distinction between Business Narrative, Product Narrative and Scientific Theory.
+- Repositioned ProcessMagnet as the mechanism that continuously interprets organizational reality into Organizational Self-Understanding.
+- Clarified that ProcessCollector does not create Organizational Self-Understanding, but maintains the human-readable representation of Organizational Intelligence.
+- Rewrote the Platform capability cards around one Organizational Intelligence System with four complementary capabilities.
+- Established Organizational Self-Empowering as organizational maturity and Organizational Resilience as the business outcome.
+
 ## 2026-07-04 - Theory 0.12
 
 - Synchronized the Brand Book, Theory page, Thinking journal and Platform narrative around Version 0.12.

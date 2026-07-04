@@ -7,7 +7,7 @@ import {
 } from "../website-architecture";
 import { BrandIllustration } from "../../components/brand/BrandIllustration";
 import { EditorialEyebrow } from "../../components/brand/EditorialEyebrow";
-import { EditorialJumpArrow } from "../../components/brand/EditorialJumpArrow";
+import { EditorialReferenceMarker } from "../../components/brand/EditorialReferenceMarker";
 import { EditorialProgression } from "../../components/brand/EditorialProgression";
 import { TheoryLink } from "../../components/brand/TheoryLink";
 import { canonicalTheoryLinks } from "../../components/brand/theory-links";
@@ -16,14 +16,22 @@ import { PlatformEditorialExperience } from "./platform-editorial-experience";
 export const metadata: Metadata = {
   title: "Platform | aiio",
   description:
-    "One Organizational Intelligence System for organizations that continuously understand, develop and evolve.",
+    "One Organizational Intelligence System with four complementary capabilities for organizations that continuously understand, develop and evolve.",
 };
+
+const theoryLinks = {
+  capabilities: canonicalTheoryLinks.organizationalCapabilities,
+  intelligence: canonicalTheoryLinks.organizationalIntelligence,
+  resilience: canonicalTheoryLinks.organizationalResilience,
+  selfEmpowering: canonicalTheoryLinks.organizationalSelfEmpowering,
+  selfUnderstanding: canonicalTheoryLinks.organizationalSelfUnderstanding,
+} as const;
 
 const capabilities: CapabilityTeaser[] = [
   {
     title: "Understand\nYour\nOrganization",
     copy:
-      "Create a trusted, human-readable representation of your organization so people and AI share the same understanding of structures, responsibilities, decisions and documentation.",
+      "Create a trusted human-readable representation of your organization. People and AI share one consistent organizational representation.",
     illustrationVariant: "BC201",
     product: "ProcessCollector",
     quote:
@@ -31,19 +39,39 @@ const capabilities: CapabilityTeaser[] = [
     href: "#processcollector",
   },
   {
-    title: "Develop\nOrganizational\nIntelligence",
-    copy:
-      "Transform Organizational Self-Understanding into continuously evolving Organizational Intelligence by connecting organizational reality, context and knowledge.",
+    title: "Build\nOrganizational\nSelf-Understanding",
+    copy: (
+      <>
+        Continuously interpret organizational reality. Connect people, systems,
+        documents, operational data, standards, market knowledge and experience.
+        Create{" "}
+        <TheoryTerm href={theoryLinks.selfUnderstanding}>
+          Organizational Self-Understanding
+        </TheoryTerm>
+        .
+      </>
+    ),
     illustrationVariant: "BC202",
     product: "ProcessMagnet",
     quote:
-      "Knowledge becomes valuable when every piece of organizational reality becomes connected.",
+      "A library stores knowledge. Understanding begins when every piece of organizational reality becomes connected.",
     href: "#processmagnet",
   },
   {
     title: "Forge\nOrganizational\nCapabilities",
-    copy:
-      "Transform Organizational Intelligence into reusable organizational capabilities that people and AI can continuously apply.",
+    copy: (
+      <>
+        Transform{" "}
+        <TheoryTerm href={theoryLinks.intelligence}>
+          Organizational Intelligence
+        </TheoryTerm>{" "}
+        into reusable{" "}
+        <TheoryTerm href={theoryLinks.capabilities}>
+          organizational capabilities
+        </TheoryTerm>
+        . Capabilities become executable organizational behavior.
+      </>
+    ),
     illustrationVariant: "BC203",
     product: "ProcessForge",
     quote:
@@ -52,12 +80,20 @@ const capabilities: CapabilityTeaser[] = [
   },
   {
     title: "Enable\nOrganizational\nSelf-Empowering",
-    copy:
-      "Continuously validate and evolve organizational capabilities using operational reality, KPIs, goals and scenarios until the organization increasingly empowers itself.",
+    copy: (
+      <>
+        Continuously validate and evolve{" "}
+        <TheoryTerm href={theoryLinks.capabilities}>
+          organizational capabilities
+        </TheoryTerm>{" "}
+        through operational reality, KPIs, goals and scenarios. Organizations
+        increasingly empower themselves.
+      </>
+    ),
     illustrationVariant: "BC204",
     product: "DataForge",
     quote:
-      "Organizations become resilient because they continuously learn from reality, not because they remain unchanged.",
+      "Organizations become resilient because they continuously learn from reality.",
     href: "#dataforge",
   },
 ];
@@ -88,14 +124,6 @@ const platformHeroTitle = (
   </>
 ) as unknown as string;
 
-const theoryLinks = {
-  capabilities: canonicalTheoryLinks.organizationalCapabilities,
-  intelligence: canonicalTheoryLinks.organizationalIntelligence,
-  resilience: canonicalTheoryLinks.organizationalResilience,
-  selfEmpowering: canonicalTheoryLinks.organizationalSelfEmpowering,
-  selfUnderstanding: canonicalTheoryLinks.organizationalSelfUnderstanding,
-} as const;
-
 function TheoryTerm({
   children,
   href,
@@ -113,7 +141,7 @@ function TheoryTerm({
       title="Read theoretical foundation"
     >
       <span className="platform-theory-text">{children}</span>
-      <EditorialJumpArrow />
+      <EditorialReferenceMarker className="editorial-reference-icon" />
     </TheoryLink>
   );
 }
@@ -131,7 +159,18 @@ export default function PlatformPage() {
           variant="BC-003"
         />
       }
-      intro="Organizations need more than disconnected software. They need a system that turns organizational reality into self-understanding, self-understanding into Organizational Intelligence, intelligence into capabilities and capabilities into continuous self-empowering."
+      intro={
+        <>
+          Organizations need more than disconnected software. They need a system
+          that turns organizational reality into self-understanding,
+          self-understanding into{" "}
+          <TheoryTerm href={theoryLinks.intelligence}>
+            Organizational Intelligence
+          </TheoryTerm>
+          , intelligence into capabilities and capabilities into continuous
+          self-empowering.
+        </>
+      }
       sectionNavigator={platformSectionNavigator}
       sectionNavigatorLabel="Platform sections"
       title={platformHeroTitle}
@@ -169,6 +208,16 @@ export default function PlatformPage() {
                   Organizational Self-Empowering
                 </TheoryTerm>{" "}
                 and ultimately creates resilience.
+              </p>
+              <p>
+                The capabilities below are not independent products. They are
+                complementary perspectives of one Organizational Intelligence
+                System.
+              </p>
+              <p>
+                ProcessMagnet continuously interprets organizational reality.
+                ProcessCollector makes the resulting intelligence readable,
+                reliable and shared.
               </p>
             </div>
             <div className="website-capability-layer-visual">

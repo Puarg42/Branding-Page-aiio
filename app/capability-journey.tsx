@@ -19,27 +19,38 @@ const fadeIn: Variants = {
 const capabilitySequence = [
   {
     meta: "Level 1",
-    title: "Organizational Intelligence",
-    copy: "Your organization continuously interprets itself and turns self-understanding into direction.",
-    tone: "cyan",
+    title: "Understand Your Organization",
+    result: "Organizational Self-Understanding",
+    copy: "Your organization gains one trusted representation of how it works.",
+    tone: "graphite",
   },
   {
     meta: "Level 2",
-    title: "Organizational Capabilities",
-    copy: "Intelligence becomes reusable organizational abilities people and AI can apply.",
-    tone: "purple",
+    title: "Build Organizational Self-Understanding",
+    result: "Organizational Intelligence",
+    copy: "Organizational reality becomes connected, interpreted and usable for better decisions.",
+    tone: "cyan",
   },
   {
     meta: "Level 3",
-    title: "Organizational Self-Empowering",
-    copy: "Capabilities evolve until the organization increasingly empowers itself to improve.",
+    title: "Forge Organizational Capabilities",
+    result: "Organizational Capabilities",
+    copy: "Intelligence becomes repeatable organizational behavior people and AI can apply.",
+    tone: "purple",
+  },
+  {
+    meta: "Level 4",
+    title: "Enable Organizational Self-Empowering",
+    result: "Organizational Self-Empowering",
+    copy: "Capabilities continuously evolve through operational reality, goals and scenarios.",
     tone: "amber",
   },
   {
     meta: "Business Outcome",
     title: "Organizational Resilience",
-    copy: "Self-empowering organizations adapt with less rework, stronger execution and more confidence.",
-    tone: "violet",
+    result: "Business Outcome",
+    copy: "The organization becomes more adaptive, resilient and prepared for change.",
+    tone: "white",
   },
 ] as const;
 
@@ -68,13 +79,12 @@ export function CapabilityJourney() {
         >
           <EditorialEyebrow>The Journey</EditorialEyebrow>
           <h2>
-            From{" "}
-            <TheoryReference>Organizational Intelligence</TheoryReference>{" "}
-            to <TheoryReference>Organizational Resilience</TheoryReference>
+            From understanding your organization to{" "}
+            <TheoryReference>Organizational Resilience</TheoryReference>
           </h2>
           <p>
-            Your organization becomes resilient when intelligence creates
-            capabilities and capabilities create self-empowerment.
+            The journey is the business narrative. Each level creates a new
+            organizational result before resilience becomes visible.
           </p>
         </motion.div>
 
@@ -99,9 +109,15 @@ export function CapabilityJourney() {
               <span className="capability-step-number">
                 {String(index + 1).padStart(2, "0")}
               </span>
-              <h3>
-                <TheoryReference>{capability.title}</TheoryReference>
-              </h3>
+              <h3>{capability.title}</h3>
+              <span className="capability-step-result">
+                Result:{" "}
+                {capability.result === "Business Outcome" ? (
+                  capability.result
+                ) : (
+                  <TheoryReference>{capability.result}</TheoryReference>
+                )}
+              </span>
               <p>{capability.copy}</p>
             </motion.article>
           ))}

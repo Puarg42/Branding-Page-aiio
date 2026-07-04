@@ -4,7 +4,7 @@ This document is the current strategic source of truth for the aiio branding and
 
 ## 1. Core Vision
 
-aiio is building the first Organizational Intelligence System (OIS): a system that enables organizations to continuously understand themselves, develop new organizational capabilities and evolve.
+aiio is building the first Organizational Intelligence System (OIS): a system that enables organizations to continuously understand themselves, develop new organizational capabilities, become increasingly self-empowering and resiliently evolve.
 
 The category is not BPM, process mining, knowledge management, document management, AI tooling, RAG or agent automation. These can be ingredients or comparisons, but they are not the category.
 
@@ -18,7 +18,7 @@ Organizations collect information, people create knowledge, AI generates answers
 
 The missing capability is Organizational Self-Understanding.
 
-Organizational Intelligence is the capability of an organization to continuously understand itself, develop new capabilities and evolve.
+Organizational Intelligence is the capability that emerges when Organizational Self-Understanding is continuously transformed into coherent interpretation, decisions and capability development.
 
 The organization is not just the people working inside it. It is an autonomous socio-technical system of decisions, processes, structures, rules, relationships, capabilities, experience and operational reality.
 
@@ -51,13 +51,17 @@ Page roles:
 
 ## 5. Organizational Intelligence System
 
-The Platform story should be simple:
+The Platform story should distinguish business journey from scientific mechanism.
 
-Understand Your Organization -> Develop Organizational Intelligence -> Forge Organizational Capabilities -> Enable Organizational Self-Empowering -> Organizational Resilience
+Business journey:
 
-This is the business architecture. It is the story shown to customers.
+Understand Your Organization -> Organizational Self-Understanding -> Build Organizational Self-Understanding -> Organizational Intelligence -> Forge Organizational Capabilities -> Organizational Capabilities -> Enable Organizational Self-Empowering -> Organizational Self-Empowering -> Organizational Resilience
 
-Technically, ProcessMagnet is central because it captures organizational reality and builds the semantic organizational understanding. ProcessCollector, ProcessForge and DataForge are different perspectives and uses of the same organizational intelligence. But the website should not lead with technical internals.
+Scientific mechanism:
+
+Organizational Reality -> ProcessMagnet -> Organizational Self-Understanding -> Organizational Intelligence -> ProcessCollector -> ProcessForge -> DataForge -> Organizational Self-Empowering -> Organizational Resilience
+
+ProcessMagnet is central because it continuously interprets organizational reality. ProcessCollector does not create Organizational Self-Understanding. It creates and maintains the human-readable representation of the Organizational Intelligence continuously developed by ProcessMagnet. But the website should not lead with technical internals.
 
 No knowledge graph, vector database, embeddings or RAG language on Home or Platform unless explicitly needed in a technical or theory context.
 
@@ -79,11 +83,11 @@ When software works, nobody looks at the source code. When it doesn't, the sourc
 
 ### ProcessMagnet
 
-Capability: Develop Organizational Intelligence.
+Capability: Build Organizational Self-Understanding.
 
-ProcessMagnet transforms Organizational Self-Understanding into continuously evolving Organizational Intelligence by connecting organizational reality, context and knowledge.
+ProcessMagnet continuously interprets organizational reality by connecting people, systems, documents, operational data, standards, market knowledge and experience.
 
-Everything modeled in ProcessCollector becomes part of this continuously evolving Organizational Intelligence.
+It creates Organizational Self-Understanding and develops the foundation from which Organizational Intelligence emerges.
 
 Do not explain it publicly as vector DB, knowledge graph or RAG on the Platform page.
 
@@ -116,9 +120,9 @@ Current structure:
 1. Hero: one system for organizations that continuously evolve.
 2. System section: Organizational Intelligence emerges through four capabilities.
 3. BC102 as explanatory architectural figure, not as hero image.
-4. Capability journey: 01 Understand, 02 Build Understanding, 03 Enable Capabilities, 04 Evolve.
+4. Capability journey: 01 Understand, 02 Build Organizational Self-Understanding, 03 Forge Capabilities, 04 Enable Self-Empowering.
 5. Four capability cards using BC201-BC204.
-6. Outcome conclusion: continuous self-understanding leads to new capabilities; new capabilities lead to continuous evolution; that is Organizational Intelligence.
+6. Outcome conclusion: self-understanding develops intelligence; intelligence forges capabilities; capabilities enable Organizational Self-Empowering; Organizational Self-Empowering creates resilience.
 
 The next work on Platform should be polish: executive copy, visual hierarchy, rhythm and conversion clarity. Do not reopen the architecture.
 
@@ -215,7 +219,7 @@ These should be treated as stable unless explicitly reopened:
 - Four-capability Platform story.
 - Product order: ProcessCollector, ProcessMagnet, ProcessForge, DataForge.
 - ProcessCollector as human-readable organizational source code.
-- ProcessMagnet as capture/connect organizational reality.
+- ProcessMagnet as continuous interpretation of organizational reality.
 - ProcessForge as enabling organizational capabilities.
 - DataForge as continuous organizational evolution.
 - Brand Canon dark mode and no generic AI imagery.

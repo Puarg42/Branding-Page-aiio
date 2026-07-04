@@ -128,9 +128,13 @@ It is not a product catalogue.
 Capability sequence:
 
 1. Understand Your Organization / ProcessCollector
-2. Build Organizational Understanding / ProcessMagnet
-3. Enable Organizational Capabilities / ProcessForge
-4. Evolve Organizations / DataForge
+2. Build Organizational Self-Understanding / ProcessMagnet
+3. Forge Organizational Capabilities / ProcessForge
+4. Enable Organizational Self-Empowering / DataForge
+
+Business outcome:
+
+Organizational Resilience
 
 The Platform page should feel like an executive story:
 

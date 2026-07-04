@@ -17,9 +17,9 @@ export function LayerPage({ slug }: { slug: LayerSlug }) {
   );
   const modulesTitle = getEditableContent(
     `layer.${slug}.modules.title`,
-    "Direkt anschlussfähig an den aiio Produkt-Stack.",
+    "Direkt anschlussfähig an das aiio Organizational Intelligence System.",
   );
-  const relatedTitle = getEditableContent(`layer.${slug}.related.title`, "Der Stack bleibt verbunden.");
+  const relatedTitle = getEditableContent(`layer.${slug}.related.title`, "Das System bleibt verbunden.");
 
   return (
     <main>
