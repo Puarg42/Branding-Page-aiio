@@ -62,7 +62,7 @@ const infrastructureStages = [
   },
   {
     era: "Next Age",
-    foundation: "Organizational Self-Understanding",
+    foundation: "Organizational Intelligence",
     tone: "cyan",
   },
   {
@@ -232,7 +232,7 @@ export function CategoryEvolution() {
             <span className="category-stage-dot" aria-hidden="true" />
             <p>{stage.era}</p>
             <h3>
-              {stage.foundation === "Organizational Self-Understanding" ||
+              {stage.foundation === "Organizational Intelligence" ||
               stage.foundation === "Organizational Resilience" ? (
                 <TheoryReference>{stage.foundation}</TheoryReference>
               ) : (
