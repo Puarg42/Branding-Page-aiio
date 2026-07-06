@@ -6,7 +6,6 @@ import { BrandIllustration } from "../components/brand/BrandIllustration";
 import { EditorialEyebrow } from "../components/brand/EditorialEyebrow";
 import { EditorialJumpArrow } from "../components/brand/EditorialJumpArrow";
 import { EditorialSectionNavigator } from "../components/brand/EditorialSectionNavigator";
-import { EditorialProgression } from "../components/brand/EditorialProgression";
 import { TheoryReference } from "../components/brand/TheoryReference";
 
 const problemCards = [
@@ -26,14 +25,6 @@ const problemCards = [
     title: "Decisions slow down.",
     copy: "Teams rebuild context before they can act.",
   },
-] as const;
-
-const intelligenceProgression = [
-  { label: "Organizational Self-Understanding", meta: "Missing capability", tone: "cyan" },
-  { label: "Organizational Intelligence", meta: "Interpretation capability", tone: "cyan" },
-  { label: "Organizational Capabilities", meta: "Reusable behavior", tone: "purple" },
-  { label: "Organizational Self-Empowering", meta: "Organizational maturity", tone: "amber" },
-  { label: "Organizational Resilience", meta: "Business outcome", tone: "violet" },
 ] as const;
 
 const imagineMoments = [
@@ -62,21 +53,21 @@ const imagineMoments = [
   },
 ] as const;
 
-const companyPrinciples = [
+const trustSignals = [
   {
-    title: "Understanding before Intelligence",
+    title: "Designed for enterprise complexity.",
     copy:
-      "AI creates value when the organization can interpret its own context.",
+      "Built for organizations where decisions depend on context, ownership, processes and operational reality.",
   },
   {
-    title: "Enable, don't replace",
+    title: "Built on a theory of Organizational Intelligence.",
     copy:
-      "Technology should make organizations more capable, not more dependent.",
+      "The product narrative is grounded in a coherent management theory rather than feature language.",
   },
   {
-    title: "Build for the next decade",
+    title: "Created for leaders, teams and AI.",
     copy:
-      "aiio builds the foundation for organizations that understand, decide and improve over time.",
+      "One organizational foundation supports better decisions across people, teams and intelligent systems.",
   },
 ] as const;
 
@@ -89,7 +80,7 @@ const homeSectionNavigator = [
   { id: "capabilities", label: "Journey" },
   { id: "architektur", label: "System" },
   { id: "self-empowering-organization", label: "Outcome" },
-  { id: "company", label: "Company" },
+  { id: "trust", label: "Trust" },
 ] as const;
 
 function Hero() {
@@ -159,20 +150,32 @@ function ConceptBreakthrough() {
             </p>
           </div>
           <p className="concept-support">
-            When an organization continuously understands itself, it can develop
-            intelligence, forge new capabilities and become increasingly
-            self-empowering.
+            This is why the category needs to exist: organizations need a
+            foundation that makes context continuously understandable before
+            decisions and action depend on scattered memory.
           </p>
         </div>
-        <EditorialProgression
-          ariaLabel="Missing layer progression"
-          className="intelligence-progression"
-          items={intelligenceProgression.map((step) => ({
-            label: <TheoryReference>{step.label}</TheoryReference>,
-            meta: step.meta,
-            tone: step.tone,
-          }))}
-        />
+        <div
+          aria-label="More information does not create more understanding"
+          className="missing-layer-visual"
+        >
+          <div className="missing-layer-inputs" aria-label="Existing inputs">
+            <span>Information</span>
+            <span>Documents</span>
+            <span>Processes</span>
+            <span>AI</span>
+          </div>
+          <div className="missing-layer-operator" aria-hidden="true">
+            &ne;
+          </div>
+          <div className="missing-layer-outcome">
+            <span>More understanding</span>
+            <strong>
+              Still no continuous{" "}
+              <TheoryReference>Organizational Self-Understanding</TheoryReference>
+            </strong>
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -198,9 +201,10 @@ function NewKindOrganization() {
           </div>
         </div>
         <div className="organization-bottom-statement">
-          <p>Self-understanding creates intelligence.</p>
-          <p>Intelligence creates capability.</p>
-          <p>Self-empowerment creates resilience.</p>
+          <p>Faster decisions.</p>
+          <p>Less rework.</p>
+          <p>Stronger execution.</p>
+          <p>More resilience.</p>
         </div>
       </div>
     </section>
@@ -264,37 +268,36 @@ function OisArchitecture() {
   );
 }
 
-function CompanyPurpose() {
+function TrustReferences() {
   return (
-    <section className="company-purpose-section" id="company">
-      <div className="company-purpose-inner">
-        <div className="company-purpose-copy">
-          <EditorialEyebrow>Company</EditorialEyebrow>
-          <h2>Why aiio exists</h2>
+    <section className="trust-reference-section" id="trust">
+      <div className="trust-reference-inner">
+        <div className="trust-reference-copy">
+          <EditorialEyebrow>Trust</EditorialEyebrow>
+          <h2>Built for organizations that need to understand, decide and adapt.</h2>
           <div>
             <p>
-              Organizations should not depend on scattered memory to make important
-              decisions.
+              aiio is designed for enterprise complexity: distributed knowledge,
+              operational dependencies, regulatory pressure and decisions that
+              depend on context.
             </p>
             <p>
-              aiio exists to help organizations continuously understand, decide
-              and improve.
-            </p>
-            <p>
-              The result is better decisions, stronger execution and more resilient organizations.
+              It gives leaders, teams and AI one organizational foundation for
+              understanding how the organization works and where value can be
+              created.
             </p>
           </div>
         </div>
-        <div className="company-principles" aria-label="aiio principles">
-          {companyPrinciples.map((principle) => (
-            <article className="company-principle" key={principle.title}>
-              <h3>{principle.title}</h3>
-              <p>{principle.copy}</p>
+        <div className="trust-reference-grid" aria-label="Trust foundations">
+          {trustSignals.map((signal) => (
+            <article className="trust-reference-card" key={signal.title}>
+              <h3>{signal.title}</h3>
+              <p>{signal.copy}</p>
             </article>
           ))}
         </div>
       </div>
-      <div className="company-quiet-image" aria-hidden="true">
+      <div className="trust-reference-quiet-image" aria-hidden="true">
         <span />
       </div>
     </section>
@@ -313,7 +316,7 @@ export default function Home() {
       <CapabilityJourney />
       <OisArchitecture />
       <NewKindOrganization />
-      <CompanyPurpose />
+      <TrustReferences />
       <EditorialSectionNavigator
         ariaLabel="Home sections"
         sections={homeSectionNavigator}

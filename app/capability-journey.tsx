@@ -7,7 +7,6 @@ import {
   type Variants,
 } from "framer-motion";
 import { EditorialEyebrow } from "../components/brand/EditorialEyebrow";
-import { TheoryReference } from "../components/brand/TheoryReference";
 
 const motionEase = [0.2, 0, 0, 1] as const;
 
@@ -19,38 +18,27 @@ const fadeIn: Variants = {
 const capabilitySequence = [
   {
     meta: "Level 1",
-    title: "Understand Your Organization",
-    result: "Organizational Self-Understanding",
-    copy: "Your organization gains one trusted representation of how it works.",
+    title: "Understand itself",
+    copy: "Your organization gains a shared view of how work, context and decisions connect.",
     tone: "graphite",
   },
   {
     meta: "Level 2",
-    title: "Build Organizational Self-Understanding",
-    result: "Organizational Intelligence",
-    copy: "Organizational reality becomes connected, interpreted and usable for better decisions.",
+    title: "Develop intelligence",
+    copy: "That shared context becomes continuously interpretable and usable for better decisions.",
     tone: "cyan",
   },
   {
     meta: "Level 3",
-    title: "Forge Organizational Capabilities",
-    result: "Organizational Capabilities",
-    copy: "Intelligence becomes repeatable organizational behavior people and AI can apply.",
+    title: "Create capabilities",
+    copy: "Interpretation becomes repeatable behavior that people and AI can apply in daily work.",
     tone: "purple",
   },
   {
     meta: "Level 4",
-    title: "Enable Organizational Self-Empowering",
-    result: "Organizational Self-Empowering",
-    copy: "Capabilities continuously evolve through operational reality, goals and scenarios.",
+    title: "Become resilient",
+    copy: "The organization adapts faster because its capabilities improve with feedback and change.",
     tone: "amber",
-  },
-  {
-    meta: "Business Outcome",
-    title: "Organizational Resilience",
-    result: "Business Outcome",
-    copy: "The organization becomes more adaptive, resilient and prepared for change.",
-    tone: "white",
   },
 ] as const;
 
@@ -78,13 +66,11 @@ export function CapabilityJourney() {
           whileInView="visible"
         >
           <EditorialEyebrow>The Journey</EditorialEyebrow>
-          <h2>
-            From understanding your organization to{" "}
-            <TheoryReference>Organizational Resilience</TheoryReference>
-          </h2>
+          <h2>From understanding itself to becoming resilient.</h2>
           <p>
-            The journey is the business narrative. Each level creates a new
-            organizational result before resilience becomes visible.
+            This is the customer transformation. aiio helps the organization
+            move from shared understanding to stronger capabilities and better
+            adaptation.
           </p>
         </motion.div>
 
@@ -110,14 +96,6 @@ export function CapabilityJourney() {
                 {String(index + 1).padStart(2, "0")}
               </span>
               <h3>{capability.title}</h3>
-              <span className="capability-step-result">
-                Result:{" "}
-                {capability.result === "Business Outcome" ? (
-                  capability.result
-                ) : (
-                  <TheoryReference>{capability.result}</TheoryReference>
-                )}
-              </span>
               <p>{capability.copy}</p>
             </motion.article>
           ))}
