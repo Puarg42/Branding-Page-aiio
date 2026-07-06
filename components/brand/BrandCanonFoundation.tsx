@@ -168,6 +168,7 @@ export function EditorialGrid({
 
 export type EditorialCardProps = FoundationProps & {
   as?: ElementType;
+  dataCapability?: string;
   hrefSlot?: ReactNode;
 };
 
@@ -175,11 +176,16 @@ export function EditorialCard({
   as: Component = "article",
   children,
   className,
+  dataCapability,
   hrefSlot,
   id,
 }: EditorialCardProps) {
   return (
-    <Component className={cx("editorial-card", className)} id={id}>
+    <Component
+      className={cx("editorial-card", className)}
+      data-capability={dataCapability}
+      id={id}
+    >
       <div className="editorial-card-body">{children}</div>
       {hrefSlot ? <div className="editorial-card-cta">{hrefSlot}</div> : null}
     </Component>
@@ -187,6 +193,7 @@ export function EditorialCard({
 }
 
 export type JourneyCardProps = FoundationProps & {
+  dataCapability?: string;
   index?: string;
   label?: ReactNode;
   tone?: "collector" | "magnet" | "forge" | "dataforge" | "neutral";
@@ -195,12 +202,13 @@ export type JourneyCardProps = FoundationProps & {
 export function JourneyCard({
   children,
   className,
+  dataCapability,
   index,
   label,
   tone = "neutral",
 }: JourneyCardProps) {
   return (
-    <EditorialCard className={cx("journey-card", className)}>
+    <EditorialCard className={cx("journey-card", className)} dataCapability={dataCapability}>
       {index ? <span className="journey-card-index">{index}</span> : null}
       {label ? <p className="journey-card-label">{label}</p> : null}
       <div data-level={tone}>{children}</div>
@@ -208,10 +216,18 @@ export function JourneyCard({
   );
 }
 
-export function ReferenceMarquee({ children, className }: FoundationProps) {
-  return <div className={cx("reference-marquee", className)}>{children}</div>;
+export function ReferenceMarquee({ ariaLabel, children, className, id }: FoundationProps) {
+  return (
+    <div aria-label={ariaLabel} className={cx("reference-marquee", className)} id={id}>
+      {children}
+    </div>
+  );
 }
 
-export function TrustRow({ children, className }: FoundationProps) {
-  return <div className={cx("trust-row", className)}>{children}</div>;
+export function TrustRow({ ariaLabel, children, className, id }: FoundationProps) {
+  return (
+    <div aria-label={ariaLabel} className={cx("trust-row", className)} id={id}>
+      {children}
+    </div>
+  );
 }

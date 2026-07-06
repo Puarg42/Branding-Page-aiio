@@ -1,4 +1,10 @@
 import { MainHeader } from "../main-navigation";
+import {
+  EditorialCard,
+  EditorialGrid,
+  EditorialSection,
+} from "../../components/brand/BrandCanonFoundation";
+import { EditorialEyebrow } from "../../components/brand/EditorialEyebrow";
 
 export const metadata = {
   title: "aiio Code-Wegweiser",
@@ -42,10 +48,10 @@ export default function EditorPage() {
   return (
     <main className="editor-page">
       <MainHeader variant="solid" />
-      <section className="editor-shell">
+      <EditorialSection className="editor-shell" shell={false}>
         <div className="editor-hero">
           <div>
-            <p className="eyebrow">Code-Wegweiser</p>
+            <EditorialEyebrow>Code-Wegweiser</EditorialEyebrow>
             <h1>Texte direkt im Projekt ändern.</h1>
             <p>
               Der frühere Editor ist deaktiviert. Dauerhafte Änderungen entstehen jetzt
@@ -59,7 +65,7 @@ export default function EditorPage() {
           </div>
         </div>
 
-        <div className="editor-layout">
+          <EditorialGrid className="editor-layout">
           <aside className="editor-sidebar" aria-label="Bearbeitungsbereiche">
             {editAreas.map((area) => (
               <a className="editor-block" href={`#${area.id}`} key={area.file}>
@@ -71,15 +77,15 @@ export default function EditorPage() {
 
           <div className="editor-workspace">
             {editAreas.map((area) => (
-              <article className="editor-panel" id={area.id} key={area.file}>
+              <EditorialCard className="editor-panel" id={area.id} key={area.file}>
                 <div className="editor-panel-heading">
                   <div>
-                    <p className="eyebrow">{area.file}</p>
+                    <EditorialEyebrow>{area.file}</EditorialEyebrow>
                     <h2>{area.title}</h2>
                     <p>{area.text}</p>
                   </div>
                 </div>
-              </article>
+              </EditorialCard>
             ))}
             <div className="editor-actions-panel">
               <p>
@@ -89,8 +95,8 @@ export default function EditorPage() {
               </p>
             </div>
           </div>
-        </div>
-      </section>
+        </EditorialGrid>
+      </EditorialSection>
     </main>
   );
 }

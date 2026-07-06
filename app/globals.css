@@ -443,6 +443,27 @@ section[id] {
   padding-top: var(--bc-space-md);
 }
 
+.website-capability-card > .editorial-card-body {
+  display: contents;
+}
+
+.website-capability-card > .editorial-card-cta {
+  align-self: end;
+  margin-top: 0;
+  padding: 0 clamp(24px, 2.4vw, 34px);
+}
+
+.journey-card.website-capability-journey-step {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.journey-card.website-capability-journey-step > .editorial-card-body {
+  display: contents;
+}
+
 .editorial-cta-group {
   align-items: center;
   display: flex;
@@ -9818,7 +9839,8 @@ h1 {
   z-index: 1;
 }
 
-.website-capability-journey-step em {
+.website-capability-journey-step em,
+.website-capability-journey-step .journey-card-index {
   color: rgb(179 145 255 / 82%);
   font-size: 0.72rem;
   font-style: normal;
@@ -9833,7 +9855,8 @@ h1 {
   content: none;
 }
 
-.website-capability-journey-step > span {
+.website-capability-journey-step > span,
+.website-capability-journey-step .editorial-card-body > div {
   color: rgb(var(--capability-accent) / 84%);
   display: block;
   font-size: 0.9em;

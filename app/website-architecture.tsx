@@ -11,9 +11,9 @@ import {
   EditorialNavigation,
   EditorialSection,
   EditorialSectionHeader,
+  JourneyCard,
 } from "../components/brand/BrandCanonFoundation";
 import { EditorialJumpArrow } from "../components/brand/EditorialJumpArrow";
-import { EditorialEyebrow } from "../components/brand/EditorialEyebrow";
 import type { EditorialSectionNavigatorItem } from "../components/brand/EditorialSectionNavigator";
 import { TheoryReference } from "../components/brand/TheoryReference";
 import { MainHeader } from "./main-navigation";
@@ -168,41 +168,50 @@ export function CapabilityTeaserGrid({
       ),
     },
   ];
+  const journeyTone = (key: (typeof journey)[number]["key"]) => {
+    if (key === "collector") return "collector";
+    if (key === "magnet") return "magnet";
+    if (key === "forge") return "forge";
+    return "dataforge";
+  };
 
   return (
-    <section
+    <EditorialSection
       className="website-capability-section"
       id={sectionId}
-      aria-label="Platform capabilities"
+      ariaLabel="Platform capabilities"
+      shellClassName="website-page-shell"
     >
-      <div className="website-page-shell">
-        <div className="website-section-heading">
-          <EditorialEyebrow>Journey</EditorialEyebrow>
-          <h2>How aiio creates organizational capabilities.</h2>
-          <p>
-            Every platform layer turns organizational reality into a stronger
-            capability. Each level creates the prerequisite for the next.
-          </p>
-        </div>
+        <EditorialSectionHeader
+          className="website-section-heading"
+          eyebrow="Journey"
+          lead="Every platform layer turns organizational reality into a stronger capability. Each level creates the prerequisite for the next."
+          title="How aiio creates organizational capabilities."
+        />
         <div className="website-capability-journey" aria-label="Capability journey">
           {journey.map((step, index) => (
-            <span
+            <JourneyCard
               className="website-capability-journey-step"
-              data-capability={step.key}
+              dataCapability={step.key}
+              index={String(index + 1).padStart(2, "0")}
               key={step.key}
+              tone={journeyTone(step.key)}
             >
-              <em>{String(index + 1).padStart(2, "0")}</em>
-              {" "}
               {step.label}
-            </span>
+            </JourneyCard>
           ))}
         </div>
-        <div className="website-capability-grid">
+        <EditorialGrid className="website-capability-grid">
           {capabilities.map((capability, index) => (
-            <article
+            <EditorialCard
               className="website-capability-card"
-              data-capability={capabilityKey(capability.product)}
+              dataCapability={capabilityKey(capability.product)}
               id={capability.product.toLowerCase()}
+              hrefSlot={
+                <Link className="website-text-link" href={capability.href}>
+                  Learn more <EditorialJumpArrow />
+                </Link>
+              }
               key={capability.title}
             >
               <div className="website-capability-card-copy">
@@ -248,13 +257,9 @@ export function CapabilityTeaserGrid({
                   data-slot={capability.illustrationSlot}
                 />
               ) : null}
-              <Link className="website-text-link" href={capability.href}>
-                Learn more <EditorialJumpArrow />
-              </Link>
-            </article>
+            </EditorialCard>
           ))}
-        </div>
-      </div>
-    </section>
+        </EditorialGrid>
+    </EditorialSection>
   );
 }

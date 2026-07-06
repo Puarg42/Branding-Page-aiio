@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { EditorialEyebrow } from "../../components/brand/EditorialEyebrow";
+import {
+  EditorialCard,
+  EditorialGrid,
+  EditorialSection,
+  EditorialSectionHeader,
+} from "../../components/brand/BrandCanonFoundation";
 import { TheoryReference } from "../../components/brand/TheoryReference";
 import { WebsiteArchitecturePage } from "../website-architecture";
 
@@ -55,25 +60,31 @@ export default function PartnersPage() {
       sectionNavigatorLabel="Partners sections"
       title="Help organizations build lasting capability."
     >
-      <section className="website-architecture-section" id="partners-ecosystem">
-        <div className="website-page-shell">
-          <div className="website-section-heading">
-            <EditorialEyebrow>Partner Ecosystem</EditorialEyebrow>
-            <h2>Partners become capability builders.</h2>
-          </div>
-          <div className="website-architecture-grid">
+      <EditorialSection
+        className="website-architecture-section"
+        id="partners-ecosystem"
+        shellClassName="website-page-shell"
+      >
+          <EditorialSectionHeader
+            className="website-section-heading"
+            eyebrow="Partner Ecosystem"
+            title="Partners become capability builders."
+          />
+          <EditorialGrid className="website-architecture-grid" columns="three">
             {partnerRoles.map((role) => (
-              <article className="website-architecture-card" key={role.title}>
+              <EditorialCard className="website-architecture-card" key={role.title}>
                 <h3>{role.title}</h3>
                 <p>{role.purpose}</p>
-              </article>
+              </EditorialCard>
             ))}
-          </div>
-        </div>
-      </section>
+          </EditorialGrid>
+      </EditorialSection>
 
-      <section className="website-contact-section" id="partners-conversation">
-        <div className="website-page-shell">
+      <EditorialSection
+        className="website-contact-section"
+        id="partners-conversation"
+        shellClassName="website-page-shell"
+      >
           <div className="website-contact-panel">
             <p>
               Partnership with aiio means helping organizations turn strategic
@@ -83,8 +94,7 @@ export default function PartnersPage() {
               Start a partner conversation
             </Link>
           </div>
-        </div>
-      </section>
+      </EditorialSection>
     </WebsiteArchitecturePage>
   );
 }

@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
-import { EditorialEyebrow } from "../../components/brand/EditorialEyebrow";
+import {
+  EditorialCard,
+  EditorialSection,
+  EditorialSectionHeader,
+} from "../../components/brand/BrandCanonFoundation";
 import { EditorialJumpArrow } from "../../components/brand/EditorialJumpArrow";
 import { TheoryLink } from "../../components/brand/TheoryLink";
 import { WebsiteArchitecturePage } from "../website-architecture";
@@ -32,16 +36,20 @@ export default function ThinkingPage() {
       sectionNavigatorLabel="Thinking sections"
       title="The Theory behind aiio's Organizational Intelligence System"
     >
-      <section className="website-architecture-section thinking-journal-section" id="journal">
-        <div className="website-page-shell">
-          <div className="website-section-heading">
-            <EditorialEyebrow>Theory Journal</EditorialEyebrow>
-            <h2>What has changed recently at Theory?</h2>
-          </div>
+      <EditorialSection
+        className="website-architecture-section thinking-journal-section"
+        id="journal"
+        shellClassName="website-page-shell"
+      >
+          <EditorialSectionHeader
+            className="website-section-heading"
+            eyebrow="Theory Journal"
+            title="What has changed recently at Theory?"
+          />
 
           <div className="thinking-journal-list">
             {theoryJournalEntries.map((entry) => (
-              <article className="thinking-journal-entry" key={entry.version}>
+              <EditorialCard className="thinking-journal-entry" key={entry.version}>
                 <div className="thinking-journal-entry-header">
                   <span>Version {entry.version}</span>
                   <time>{entry.date}</time>
@@ -67,15 +75,17 @@ export default function ThinkingPage() {
                     </ul>
                   </div>
                 </div>
-              </article>
+              </EditorialCard>
             ))}
           </div>
-        </div>
-      </section>
+      </EditorialSection>
 
-      <section className="website-architecture-section thinking-publication-section" id="publication">
-        <div className="website-page-shell thinking-publication-grid">
-          <div className="thinking-publication-card">
+      <EditorialSection
+        className="website-architecture-section thinking-publication-section"
+        id="publication"
+        shellClassName="website-page-shell thinking-publication-grid"
+      >
+          <EditorialCard className="thinking-publication-card">
             <div className="thinking-publication-meta">
               <span>{theoryPublication.title}</span>
               <span>{theoryPublication.version}</span>
@@ -92,9 +102,8 @@ export default function ThinkingPage() {
             <TheoryLink className="website-text-link" href="/thinking/theory">
               Read the current Theory <EditorialJumpArrow />
             </TheoryLink>
-          </div>
-        </div>
-      </section>
+          </EditorialCard>
+      </EditorialSection>
     </WebsiteArchitecturePage>
   );
 }

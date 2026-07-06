@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { EditorialEyebrow } from "../../components/brand/EditorialEyebrow";
+import {
+  EditorialCard,
+  EditorialGrid,
+  EditorialSection,
+  EditorialSectionHeader,
+} from "../../components/brand/BrandCanonFoundation";
 import { TheoryReference } from "../../components/brand/TheoryReference";
 import { WebsiteArchitecturePage } from "../website-architecture";
 
@@ -49,12 +54,16 @@ export default function CompanyPage() {
       sectionNavigatorLabel="Company sections"
       title="Why aiio exists."
     >
-      <section className="website-architecture-section" id="company-mission">
-        <div className="website-page-shell">
-          <div className="website-section-heading">
-            <EditorialEyebrow>Mission</EditorialEyebrow>
-            <h2>Organizations need understanding that lasts.</h2>
-          </div>
+      <EditorialSection
+        className="website-architecture-section"
+        id="company-mission"
+        shellClassName="website-page-shell"
+      >
+          <EditorialSectionHeader
+            className="website-section-heading"
+            eyebrow="Mission"
+            title="Organizations need understanding that lasts."
+          />
           <div className="website-contact-panel">
             <p>
               Our mission is to make organizational understanding durable and
@@ -64,25 +73,27 @@ export default function CompanyPage() {
               The software matters because the capability matters.
             </p>
           </div>
-        </div>
-      </section>
+      </EditorialSection>
 
-      <section className="website-architecture-section" id="company-principles">
-        <div className="website-page-shell">
-          <div className="website-section-heading">
-            <EditorialEyebrow>Principles</EditorialEyebrow>
-            <h2>Principles guide the work.</h2>
-          </div>
-          <div className="website-architecture-grid">
+      <EditorialSection
+        className="website-architecture-section"
+        id="company-principles"
+        shellClassName="website-page-shell"
+      >
+          <EditorialSectionHeader
+            className="website-section-heading"
+            eyebrow="Principles"
+            title="Principles guide the work."
+          />
+          <EditorialGrid className="website-architecture-grid" columns="three">
             {principles.map((principle) => (
-              <article className="website-architecture-card" key={principle.title}>
+              <EditorialCard className="website-architecture-card" key={principle.title}>
                 <h3>{principle.title}</h3>
                 <p>{principle.purpose}</p>
-              </article>
+              </EditorialCard>
             ))}
-          </div>
-        </div>
-      </section>
+          </EditorialGrid>
+      </EditorialSection>
     </WebsiteArchitecturePage>
   );
 }

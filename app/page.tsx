@@ -3,9 +3,16 @@ import { MainHeader } from "./main-navigation";
 import { CapabilityJourney } from "./capability-journey";
 import { CategoryEvolution, CeoMondayMoment } from "./category-reinforcement";
 import { BrandIllustration } from "../components/brand/BrandIllustration";
+import {
+  EditorialCard,
+  EditorialCTAGroup,
+  EditorialGrid,
+  EditorialNavigation,
+  ReferenceMarquee,
+  TrustRow,
+} from "../components/brand/BrandCanonFoundation";
 import { EditorialEyebrow } from "../components/brand/EditorialEyebrow";
 import { EditorialJumpArrow } from "../components/brand/EditorialJumpArrow";
-import { EditorialSectionNavigator } from "../components/brand/EditorialSectionNavigator";
 import { TheoryReference } from "../components/brand/TheoryReference";
 
 const problemCards = [
@@ -158,14 +165,14 @@ function Hero() {
           <br />
           aiio enables an organization to continuously understand itself, continuously develop new organizational capabilities and empower every person to make better decisions.
         </p>
-        <div className="actions hero-actions" aria-label="Primary actions">
+        <EditorialCTAGroup className="actions hero-actions" ariaLabel="Primary actions">
           <a className="button hero-button" href="#organizational-intelligence">
             Explore the system
           </a>
           <a className="button hero-button secondary" href="/live-demo/kontakt">
             Request a demo
           </a>
-        </div>
+        </EditorialCTAGroup>
       </div>
       <div className="hero-visual" aria-hidden="true">
         <BrandIllustration priority variant="BC-001" />
@@ -180,14 +187,14 @@ function ProblemSection() {
       <div className="problem-inner">
         <EditorialEyebrow>The Problem</EditorialEyebrow>
         <h2>Organizations know more than they can use.</h2>
-        <div className="problem-grid">
+        <EditorialGrid className="problem-grid" columns="four">
           {problemCards.map((card) => (
-            <article className="problem-card" key={card.title}>
+            <EditorialCard className="problem-card" key={card.title}>
               <h3>{card.title}</h3>
               <p>{card.copy}</p>
-            </article>
+            </EditorialCard>
           ))}
-        </div>
+        </EditorialGrid>
       </div>
       <div className="problem-atmosphere" aria-hidden="true">
         <span />
@@ -349,7 +356,7 @@ function TrustReferences() {
           </p>
         </div>
 
-        <div className="trust-reference-marquee" aria-label="Enterprise references">
+        <ReferenceMarquee className="trust-reference-marquee" ariaLabel="Enterprise references">
           {trustMarqueeRows.map((row, rowIndex) => (
             <div
               className="trust-reference-marquee-row"
@@ -373,16 +380,16 @@ function TrustReferences() {
               </div>
             </div>
           ))}
-        </div>
+        </ReferenceMarquee>
 
-        <div className="trust-reference-grid" aria-label="Trust foundations">
+        <TrustRow className="trust-reference-grid" ariaLabel="Trust foundations">
           {trustSignals.map((signal) => (
-            <article className="trust-reference-card" key={signal.title}>
+            <EditorialCard className="trust-reference-card" key={signal.title}>
               <h3>{signal.title}</h3>
               <p>{signal.copy}</p>
-            </article>
+            </EditorialCard>
           ))}
-        </div>
+        </TrustRow>
       </div>
       <div className="trust-reference-quiet-image" aria-hidden="true">
         <span />
@@ -404,7 +411,7 @@ export default function Home() {
       <OisArchitecture />
       <NewKindOrganization />
       <TrustReferences />
-      <EditorialSectionNavigator
+      <EditorialNavigation
         ariaLabel="Home sections"
         sections={homeSectionNavigator}
       />

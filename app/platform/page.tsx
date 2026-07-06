@@ -5,6 +5,7 @@ import {
   WebsiteArchitecturePage,
   type CapabilityTeaser,
 } from "../website-architecture";
+import { EditorialSection } from "../../components/brand/BrandCanonFoundation";
 import { BrandIllustration } from "../../components/brand/BrandIllustration";
 import { EditorialEyebrow } from "../../components/brand/EditorialEyebrow";
 import { EditorialReferenceMarker } from "../../components/brand/EditorialReferenceMarker";
@@ -193,11 +194,11 @@ export default function PlatformPage() {
       sectionNavigatorLabel="Platform sections"
       title={platformHeroTitle}
     >
-      <section
+      <EditorialSection
         className="website-architecture-section website-platform-missing-section"
         id="platform-missing-capability"
+        shellClassName="website-page-shell"
       >
-        <div className="website-page-shell">
           <div className="website-platform-missing-layout">
             <div className="website-section-heading website-platform-missing-copy">
               <EditorialEyebrow>Missing Capability</EditorialEyebrow>
@@ -226,14 +227,13 @@ export default function PlatformPage() {
               ))}
             </ol>
           </div>
-        </div>
-      </section>
+      </EditorialSection>
       <CapabilityTeaserGrid capabilities={capabilities} sectionId="platform-journey" />
-      <section
+      <EditorialSection
         className="website-architecture-section website-platform-system-section"
         id="capability-layer"
+        shellClassName="website-page-shell"
       >
-        <div className="website-page-shell">
           <div className="website-platform-system-layout">
             <div className="website-section-heading website-platform-system-copy">
               <EditorialEyebrow>The System</EditorialEyebrow>
@@ -257,13 +257,12 @@ export default function PlatformPage() {
               <BrandIllustration decorative={false} interactive variant="BC-002" />
             </div>
           </div>
-        </div>
-      </section>
-      <section
+      </EditorialSection>
+      <EditorialSection
         className="website-architecture-section website-platform-outcome-section"
         id="platform-outcome"
+        shellClassName="website-page-shell"
       >
-        <div className="website-page-shell">
           <div className="website-platform-conclusion">
             <EditorialEyebrow>Outcome</EditorialEyebrow>
             <h2>
@@ -351,8 +350,7 @@ export default function PlatformPage() {
               .
             </p>
           </div>
-        </div>
-      </section>
+      </EditorialSection>
       <PlatformEditorialExperience />
     </WebsiteArchitecturePage>
   );

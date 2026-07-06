@@ -823,9 +823,9 @@ function ResourceForm({
   const buttonLabel = editableResourceText(slug, "form.buttonLabel", form.buttonLabel);
 
   return (
-    <section className="resource-form-section" id={id}>
+    <EditorialSection className="resource-form-section" id={id} shell={false}>
       <div>
-        <p className="eyebrow">Formular</p>
+        <EditorialEyebrow>Formular</EditorialEyebrow>
         <h2>{formTitle}</h2>
         <p>{formCopy}</p>
       </div>
@@ -863,7 +863,7 @@ function ResourceForm({
           {buttonLabel}
         </button>
       </form>
-    </section>
+    </EditorialSection>
   );
 }
 
