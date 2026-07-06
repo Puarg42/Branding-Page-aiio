@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": ">=22.13.0"
+    "node": "22.x"
   },
   "scripts": {
     "dev": "vinext dev",
     "build": "vinext build",
-    "build:vercel": "next build",
+    "build:vercel": "npm run theory:check && next build",
+    "theory:compile": "node scripts/compile-theory.mjs",
+    "theory:check": "node scripts/compile-theory.mjs --check",
     "start": "vinext start",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate"
