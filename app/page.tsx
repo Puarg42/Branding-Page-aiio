@@ -56,41 +56,78 @@ const imagineMoments = [
 const trustSignals = [
   {
     title: "Enterprise Complexity",
-    copy:
-      "Decisions depend on context, ownership and operational reality.",
+    copy: "For organizations where decisions depend on context, ownership and operational reality.",
   },
   {
     title: "Organizational Intelligence",
-    copy:
-      "Grounded in a coherent theory rather than isolated software features.",
+    copy: "A category foundation for making organizational context continuously usable.",
   },
   {
-    title: "People. Teams. AI.",
-    copy:
-      "One organizational foundation for management, teams and intelligent systems.",
+    title: "People • Teams • AI",
+    copy: "One shared organizational context for humans, teams and intelligent systems.",
   },
 ] as const;
 
 const trustReferenceLogos = [
   {
-    alt: "Euromobil",
-    src: "/aiio-pages/success-stories/image-03.png",
-  },
-  {
-    alt: "ABB",
-    src: "/aiio-pages/success-stories/image-09.png",
-  },
-  {
     alt: "Media Central",
-    src: "/aiio-pages/success-stories/image-10.png",
+    src: "/brand/references/media-central.png",
+  },
+  {
+    alt: "WKO",
+    src: "/brand/references/wko.svg",
+  },
+  {
+    alt: "Flexoffice",
+    src: "/brand/references/flexoffice.svg",
   },
   {
     alt: "HVLE",
-    src: "/aiio-pages/success-stories/image-07.png",
+    src: "/brand/references/hvle.jpg",
+  },
+  {
+    alt: "thyssenkrupp",
+    src: "/brand/references/thyssenkrupp.png",
+  },
+  {
+    alt: "Busch-Jaeger",
+    src: "/brand/references/busch-jaeger.svg",
+  },
+  {
+    alt: "ABB",
+    src: "/brand/references/abb.png",
+  },
+  {
+    alt: "Euromobil",
+    src: "/brand/references/euromobil.svg",
+  },
+  {
+    alt: "Windpunx",
+    src: "/brand/references/windpunx.svg",
   },
   {
     alt: "Symacon",
-    src: "/aiio-pages/success-stories/image-12.png",
+    src: "/brand/references/symacon.png",
+  },
+  {
+    alt: "VTG",
+    src: "/brand/references/vtg.png",
+  },
+  {
+    alt: "Volkswagen",
+    src: "/brand/references/volkswagen.png",
+  },
+  {
+    alt: "VDE",
+    src: "/brand/references/vde.png",
+  },
+  {
+    alt: "Total",
+    src: "/brand/references/total.png",
+  },
+  {
+    alt: "De Giradi",
+    src: "/brand/references/de-giradi.png",
   },
 ] as const;
 
@@ -297,7 +334,10 @@ function TrustReferences() {
       <div className="trust-reference-inner">
         <div className="trust-reference-copy">
           <EditorialEyebrow>Trust</EditorialEyebrow>
-          <h2>Built for organizations that need to understand, decide and adapt.</h2>
+          <h2>
+            Trusted by organizations operating in complex, regulated and
+            knowledge-intensive environments.
+          </h2>
         </div>
         <div className="trust-reference-logo-grid" aria-label="Enterprise references">
           {trustReferenceLogos.map((logo) => (
@@ -307,8 +347,8 @@ function TrustReferences() {
           ))}
         </div>
         <p className="trust-reference-lead">
-          aiio has been developed together with organizations operating in regulated,
-          knowledge-intensive and transformation-driven environments.
+          Organizations from industry, mobility, healthcare, consulting and the
+          public sector use aiio to build Organizational Intelligence.
         </p>
         <div className="trust-reference-grid" aria-label="Trust foundations">
           {trustSignals.map((signal) => (
