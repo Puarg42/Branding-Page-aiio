@@ -82,13 +82,13 @@ const companyPrinciples = [
 
 const homeSectionNavigator = [
   { id: "home-hero", label: "Hero" },
-  { id: "category-evolution", label: "Why Now" },
+  { id: "monday-morning", label: "Monday" },
   { id: "problem", label: "Problem" },
+  { id: "category-evolution", label: "Why Now" },
   { id: "organizational-intelligence", label: "Missing Capability" },
   { id: "capabilities", label: "Journey" },
   { id: "architektur", label: "System" },
   { id: "self-empowering-organization", label: "Outcome" },
-  { id: "monday-morning", label: "Monday" },
   { id: "company", label: "Company" },
 ] as const;
 
@@ -306,13 +306,13 @@ export default function Home() {
     <main>
       <MainHeader />
       <Hero />
-      <CategoryEvolution />
+      <CeoMondayMoment />
       <ProblemSection />
+      <CategoryEvolution />
       <ConceptBreakthrough />
       <CapabilityJourney />
       <OisArchitecture />
       <NewKindOrganization />
-      <CeoMondayMoment />
       <CompanyPurpose />
       <EditorialSectionNavigator
         ariaLabel="Home sections"
