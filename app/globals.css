@@ -5907,10 +5907,9 @@ h1 {
   --capability-index-height: 1.35rem;
   --capability-heading-height: 4.5rem;
   --capability-product-height: 3.7rem;
-  --capability-outcome-height: 4.55rem;
-  --capability-copy-height: 6.9rem;
-  --capability-quote-offset: clamp(24px, 2vw, 32px);
-  --capability-quote-height: 9rem;
+  --capability-copy-height: 7.5rem;
+  --capability-quote-offset: clamp(30px, 2.6vw, 42px);
+  --capability-quote-height: 10.2rem;
   align-content: stretch;
   background:
     linear-gradient(180deg, rgb(255 255 255 / 5%), rgb(255 255 255 / 1.6%)),
@@ -5926,13 +5925,12 @@ h1 {
   grid-template-rows:
     var(--capability-image-height)
     var(--capability-index-height)
-    var(--capability-heading-height)
     var(--capability-product-height)
-    var(--capability-outcome-height)
+    var(--capability-heading-height)
     var(--capability-copy-height)
     minmax(var(--capability-quote-height), 1fr)
     auto;
-  min-height: clamp(850px, 66vw, 1010px);
+  min-height: clamp(805px, 63vw, 960px);
   overflow: hidden;
   padding: 0 0 clamp(26px, 2.5vw, 40px);
   position: relative;
@@ -6020,7 +6018,7 @@ h1 {
   justify-content: start;
   margin: 0 clamp(26px, 2.5vw, 40px);
   min-height: var(--capability-product-height);
-  order: 4;
+  order: 3;
   position: relative;
   z-index: 1;
 }
@@ -6100,7 +6098,7 @@ h1 {
   line-height: 1.12;
   margin: 0 clamp(26px, 2.5vw, 40px);
   min-height: var(--capability-heading-height);
-  order: 3;
+  order: 4;
   position: relative;
   text-wrap: balance;
   white-space: normal;
@@ -6126,67 +6124,47 @@ h1 {
   margin: 26px 0 0;
 }
 
-.website-capability-card-copy > p:not(.website-capability-outcome) {
+.website-capability-card-copy > p {
   margin: 0 clamp(26px, 2.5vw, 40px);
   min-height: var(--capability-copy-height);
-  order: 6;
-  position: relative;
-  z-index: 1;
-}
-
-.website-capability-card .website-capability-outcome {
-  align-self: start;
-  display: grid;
-  gap: 8px;
-  margin: 0 clamp(26px, 2.5vw, 40px);
-  min-height: var(--capability-outcome-height);
   order: 5;
   position: relative;
   z-index: 1;
 }
 
-.website-capability-card .website-capability-outcome span {
-  color: rgb(var(--capability-accent) / 72%);
+.website-capability-quote {
+  border-left: 0;
+  border-top: 1px solid rgb(var(--capability-accent) / 24%);
+  color: rgb(255 255 255 / 68%);
   font-family: var(--font-aiio-heading);
-  font-size: 0.66rem;
-  font-weight: 760;
-  letter-spacing: 0.1em;
+  font-size: 0.98rem;
+  font-weight: 520;
+  line-height: 1.48;
+  margin: var(--capability-quote-offset) clamp(26px, 2.5vw, 40px) 0;
+  min-height: var(--capability-quote-height);
+  order: 6;
+  padding-top: clamp(20px, 1.8vw, 28px);
+  position: relative;
+  z-index: 1;
+}
+
+.website-capability-quote span {
+  color: rgb(var(--capability-accent) / 72%);
+  display: block;
+  font-size: 0.62rem;
+  font-weight: 780;
+  letter-spacing: 0.12em;
   line-height: 1;
+  margin-bottom: 14px;
   text-transform: uppercase;
 }
 
-.website-capability-card .website-capability-outcome strong {
-  color: rgb(255 255 255 / 88%);
-  font-family: var(--font-aiio-heading);
-  font-size: clamp(1rem, 1vw, 1.18rem);
-  font-weight: 560;
-  letter-spacing: 0;
-  line-height: 1.2;
-}
-
-.website-capability-card .website-capability-outcome .platform-theory-term,
-.website-capability-card .website-capability-outcome .platform-theory-text {
+.website-capability-quote p {
   color: inherit;
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  letter-spacing: inherit;
+  font: inherit;
   line-height: inherit;
-}
-
-.website-capability-quote {
-  border-left: 1px solid rgb(var(--capability-accent) / 42%);
-  color: rgb(255 255 255 / 76%);
-  font-family: var(--font-aiio-heading);
-  font-size: 1.04rem;
-  font-weight: 520;
-  line-height: 1.46;
-  margin: var(--capability-quote-offset) clamp(26px, 2.5vw, 40px) 0;
-  min-height: var(--capability-quote-height);
-  order: 7;
-  padding-left: 18px;
-  position: relative;
-  z-index: 1;
+  margin: 0;
+  min-height: 0;
 }
 
 .website-text-link {
@@ -6272,7 +6250,7 @@ h1 {
   margin-left: clamp(26px, 2.5vw, 40px);
   margin-top: 0;
   margin-right: clamp(26px, 2.5vw, 40px);
-  order: 8;
+  order: 7;
   position: relative;
   width: fit-content;
   z-index: 1;
@@ -7213,15 +7191,13 @@ h1 {
   .website-capability-card {
     --capability-image-height: clamp(260px, 31vw, 360px);
     --capability-heading-height: 4rem;
-    --capability-outcome-height: 4.2rem;
     --capability-copy-height: 7.2rem;
     --capability-quote-height: 8rem;
     grid-template-rows:
       var(--capability-image-height)
       var(--capability-index-height)
-      var(--capability-heading-height)
       var(--capability-product-height)
-      var(--capability-outcome-height)
+      var(--capability-heading-height)
       var(--capability-copy-height)
       minmax(var(--capability-quote-height), 1fr)
       auto;
@@ -7350,10 +7326,6 @@ h1 {
     min-height: 0;
   }
 
-  .website-capability-card .website-capability-outcome strong {
-    font-size: clamp(1.06rem, 5vw, 1.28rem);
-  }
-
   .website-platform-capability-spine {
     gap: 28px;
   }
@@ -7363,7 +7335,6 @@ h1 {
   }
 
   .website-capability-card-copy > p,
-  .website-capability-card .website-capability-outcome,
   .website-capability-quote {
     min-height: 0;
   }
@@ -9238,10 +9209,9 @@ h1 {
   --magnet-accent: 24 214 255;
   --forge-accent: 157 93 255;
   --dataforge-accent: 255 173 46;
-  --outcome-accent: 236 238 244;
   display: grid;
   gap: 0;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   margin: calc(clamp(32px, 3.6vw, 56px) * -0.12) 0 clamp(10px, 1.8vw, 26px);
   padding: 0;
   position: relative;
@@ -9253,8 +9223,7 @@ h1 {
     rgb(var(--collector-accent) / 34%),
     rgb(var(--magnet-accent) / 42%),
     rgb(var(--forge-accent) / 42%),
-    rgb(var(--dataforge-accent) / 40%),
-    rgb(var(--outcome-accent) / 34%)
+    rgb(var(--dataforge-accent) / 40%)
   );
   content: "";
   height: 1px;
@@ -9882,7 +9851,7 @@ section[id],
   }
 
   .website-capability-journey {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     margin-top: -8px;
   }
 

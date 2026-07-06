@@ -100,7 +100,6 @@ export type CapabilityTeaser = {
   };
   illustrationVariant?: BrandIllustrationVariant;
   illustrationSlot?: "BC002A" | "BC002B" | "BC002C" | "BC002D";
-  outcome?: ReactNode;
   product: "ProcessCollector" | "ProcessMagnet" | "ProcessForge" | "DataForge";
   quote?: string;
   secondaryCopy?: string;
@@ -132,8 +131,7 @@ export function CapabilityTeaserGrid({
       key: "collector",
       label: (
         <>
-          Understand Your Organization
-          <span>Organizational Understanding</span>
+          Organizational Understanding
         </>
       ),
     },
@@ -141,8 +139,7 @@ export function CapabilityTeaserGrid({
       key: "magnet",
       label: (
         <>
-          Build Organizational Intelligence
-          <span><TheoryReference>Organizational Intelligence</TheoryReference></span>
+          <TheoryReference>Organizational Intelligence</TheoryReference>
         </>
       ),
     },
@@ -150,8 +147,7 @@ export function CapabilityTeaserGrid({
       key: "forge",
       label: (
         <>
-          Forge Organizational Capabilities
-          <span><TheoryReference>Organizational Capabilities</TheoryReference></span>
+          <TheoryReference>Organizational Capabilities</TheoryReference>
         </>
       ),
     },
@@ -159,17 +155,7 @@ export function CapabilityTeaserGrid({
       key: "dataforge",
       label: (
         <>
-          Enable Organizational Self-Empowerment
-          <span>Organizational Self-Empowerment</span>
-        </>
-      ),
-    },
-    {
-      key: "outcome",
-      label: (
-        <>
-          Business Outcome
-          <span><TheoryReference>Organizational Resilience</TheoryReference></span>
+          Organizational Self-Empowerment
         </>
       ),
     },
@@ -184,11 +170,10 @@ export function CapabilityTeaserGrid({
       <div className="website-page-shell">
         <div className="website-section-heading">
           <EditorialEyebrow>Journey</EditorialEyebrow>
-          <h2>From understanding your organization to Organizational Resilience.</h2>
+          <h2>How aiio creates organizational capabilities.</h2>
           <p>
-            Every platform layer transforms organizational reality into a new
-            organizational outcome. Each level creates the prerequisite for the
-            next until organizational resilience becomes achievable.
+            Every platform layer turns organizational reality into a stronger
+            capability. Each level creates the prerequisite for the next.
           </p>
         </div>
         <div className="website-capability-journey" aria-label="Capability journey">
@@ -223,17 +208,12 @@ export function CapabilityTeaserGrid({
                   </span>
                   {capability.badge ? <em>{capability.badge}</em> : null}
                 </div>
-                {capability.outcome ? (
-                  <p className="website-capability-outcome">
-                    <span>Customer Outcome</span>
-                    <strong>{capability.outcome}</strong>
-                  </p>
-                ) : null}
                 <p>{capability.copy}</p>
                 {capability.secondaryCopy ? <p>{capability.secondaryCopy}</p> : null}
                 {capability.quote ? (
                   <blockquote className="website-capability-quote">
-                    {capability.quote}
+                    <span>Insight</span>
+                    <p>{capability.quote}</p>
                   </blockquote>
                 ) : null}
               </div>

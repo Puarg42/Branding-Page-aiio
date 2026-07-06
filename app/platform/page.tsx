@@ -30,28 +30,23 @@ const capabilities: CapabilityTeaser[] = [
   {
     title: "Understand Your Organization",
     copy:
-      "Create a human-readable representation of your organization so people, structures and decisions become understandable.",
+      "ProcessCollector models structures, responsibilities, rules and process logic into a human-readable representation people and AI can work from.",
     illustrationVariant: "BC201",
-    outcome: "Organizational Understanding",
     product: "ProcessCollector",
     quote:
       "When software works, nobody looks at the source code. When it doesn't, the source code explains why. The same is true for organizations.",
     href: "#processcollector",
   },
   {
-    title: "Build Organizational Intelligence",
+    title: "Develop Organizational Intelligence",
     copy: (
       <>
-        Connect organizational knowledge into coherent intelligence that
-        continuously understands your organization.
+        ProcessMagnet makes organizational reality continuously interpretable by
+        connecting signals from people, systems, documents and operations into
+        one coherent context.
       </>
     ),
     illustrationVariant: "BC202",
-    outcome: (
-      <TheoryTerm href={theoryLinks.intelligence}>
-        Organizational Intelligence
-      </TheoryTerm>
-    ),
     product: "ProcessMagnet",
     quote:
       "A library stores knowledge. Understanding begins when every piece of organizational reality becomes connected.",
@@ -61,16 +56,12 @@ const capabilities: CapabilityTeaser[] = [
     title: "Forge Organizational Capabilities",
     copy: (
       <>
-        Transform organizational intelligence into repeatable organizational
-        capabilities that people and AI can continuously execute.
+        ProcessForge turns interpreted context into reusable behavior:
+        decisions, workflows, assistants and execution patterns people and AI
+        can apply.
       </>
     ),
     illustrationVariant: "BC203",
-    outcome: (
-      <TheoryTerm href={theoryLinks.capabilities}>
-        Organizational Capabilities
-      </TheoryTerm>
-    ),
     product: "ProcessForge",
     quote:
       "Knowledge alone changes nothing. Capabilities transform intelligence into repeatable organizational action.",
@@ -79,9 +70,8 @@ const capabilities: CapabilityTeaser[] = [
   {
     title: "Enable Organizational Self-Empowerment",
     copy:
-      "Continuously evolve organizational capabilities using operational data, goals, scenarios and real organizational feedback.",
+      "DataForge feeds goals, scenarios, KPIs and operational feedback back into the system so those behaviors improve continuously.",
     illustrationVariant: "BC204",
-    outcome: "Organizational Self-Empowerment",
     product: "DataForge",
     quote:
       "Resilience emerges when capabilities continuously improve against reality.",
