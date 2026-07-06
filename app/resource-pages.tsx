@@ -923,58 +923,70 @@ function ResourceCardList({
 const businessImpactScenarioDetails = {
   Euromobil: {
     challenge:
-      "Organizational knowledge existed in documents and routines, but it was difficult to turn into coordinated work.",
+      "Operational knowledge was available, but scattered across documents, routines and local experience.",
     capability:
-      "A continuous way to make organizational reality understandable and reusable.",
+      "The organization needed a way to turn existing knowledge into a shared operating context.",
     solution:
-      "Organizational Intelligence structures scattered inputs into a shared representation that teams can work from.",
+      "Organizational Intelligence made relevant knowledge visible, structured and usable for daily coordination.",
     impact:
-      "Unused documents become usable organizational context for more efficient work.",
+      "Teams gained a more reliable foundation for execution, reducing the friction caused by hidden or duplicated context.",
   },
   Windpunx: {
     challenge:
-      "A platform transition risked slowing process work and separating teams from existing context.",
+      "A process platform migration had to preserve momentum without forcing teams to rebuild their organizational context.",
     capability:
-      "A faster way to carry organizational context into a new operating model.",
+      "The missing ability was to transfer process knowledge into a new working environment quickly and coherently.",
     solution:
-      "Organizational Intelligence connects existing process work with AI-supported interpretation.",
+      "Organizational Intelligence connected existing process material with AI-supported interpretation and structured migration work.",
     impact:
-      "Migration momentum increases without forcing teams to rebuild understanding from zero.",
+      "The transformation moved forward faster because teams could continue from existing understanding instead of starting from zero.",
   },
   HVLE: {
     challenge:
-      "Audit readiness and improvement work were connected to the same organization, but treated as separate efforts.",
+      "Audit readiness, operational documentation and improvement work were connected in reality, but handled as separate streams.",
     capability:
-      "A shared organizational understanding that supports compliance and continuous improvement.",
+      "The organization needed one shared understanding that could support compliance and improvement at the same time.",
     solution:
-      "Organizational Intelligence connects requirements, processes and operational context.",
+      "Organizational Intelligence connected requirements, process logic and operational context into one usable management foundation.",
     impact:
-      "Audit work becomes part of the same capability system that improves the organization.",
+      "Compliance work became more connected to how the organization improves, instead of remaining a parallel documentation effort.",
   },
   "ABB Busch-Jaeger": {
     challenge:
-      "Target processes and real process behavior needed one common view before analysis could become reliable.",
+      "Target processes and real organizational behavior needed to be compared before process analysis could become dependable.",
     capability:
-      "A representation that keeps process intent and organizational reality connected.",
+      "The missing ability was to connect process intent with operational reality in one understandable view.",
     solution:
-      "Organizational Intelligence makes process differences visible and usable for decision-making.",
+      "Organizational Intelligence made deviations, relationships and improvement potential easier to interpret.",
     impact:
-      "Process analysis becomes more grounded, comparable and actionable.",
+      "Decision-making became more grounded because process discussions were based on a clearer shared representation.",
   },
 } as const;
 
-const businessImpactCapabilityPath = [
-  "Organizational Understanding",
-  "Organizational Intelligence",
-  "Organizational Capabilities",
-  "Organizational Self-Empowerment",
+const businessImpactChallenges = [
+  "Transformation",
+  "Compliance",
+  "Operational Excellence",
+  "Knowledge",
+  "Mergers & Integration",
+  "AI Enablement",
+] as const;
+
+const businessImpactOutcomes = [
+  { label: "Transformation" },
+  { label: "Compliance" },
+  { label: "Operational Excellence" },
+  { label: "Knowledge" },
+  { label: "AI Enablement" },
+  { label: "Organizational Intelligence", descriptor: "One common capability" },
 ] as const;
 
 const businessImpactSectionNavigator: EditorialSectionNavigatorItem[] = [
   { id: "business-impact-hero", label: "Hero" },
-  { id: "business-impact-intro", label: "Value" },
-  { id: "business-impact-scenarios", label: "Scenarios" },
-  { id: "business-impact-capability", label: "Capability" },
+  { id: "business-impact-intro", label: "Insight" },
+  { id: "business-impact-landscape", label: "Challenges" },
+  { id: "business-impact-scenarios", label: "Proof" },
+  { id: "business-impact-outcomes", label: "Outcomes" },
   { id: "business-impact-closing", label: "Outcome" },
 ];
 
@@ -996,10 +1008,10 @@ function BusinessImpactPage() {
           <EditorialEyebrow>Business Impact</EditorialEyebrow>
           <h1>Organizational Intelligence creates measurable business value.</h1>
           <div className="business-impact-lead">
-            <p>Different organizations face different challenges.</p>
+            <p>Different business problems reveal the same organizational gap.</p>
             <p>
-              The Organizational Intelligence System solves them through one common
-              capability:
+              The Organizational Intelligence System turns organizational reality into
+              one continuous capability:
             </p>
             <p>continuous Organizational Intelligence.</p>
           </div>
@@ -1008,7 +1020,7 @@ function BusinessImpactPage() {
               Explore the Platform <EditorialJumpArrow />
             </Link>
             <Link className="button secondary" href="/thinking/theory">
-              Read the Theory <EditorialJumpArrow />
+              Understand the Theory <EditorialJumpArrow />
             </Link>
           </div>
         </div>
@@ -1017,21 +1029,41 @@ function BusinessImpactPage() {
       <section className="business-impact-intro" id="business-impact-intro">
         <div className="business-impact-shell">
           <p>
-            Different organizations. Different challenges. One Organizational
-            Intelligence System. One continuously developing organizational capability.
+            Every transformation looks different. Yet most organizations fail for the
+            same reason: they continuously generate information, but rarely develop
+            continuous Organizational Intelligence.
           </p>
+        </div>
+      </section>
+
+      <section className="business-impact-landscape" id="business-impact-landscape">
+        <div className="business-impact-shell">
+          <div className="business-impact-section-heading">
+            <EditorialEyebrow>Business Challenge Landscape</EditorialEyebrow>
+            <h2>The business contexts differ. The missing capability repeats.</h2>
+            <p>
+              These are not product categories. They are the business conditions where
+              organizations need a stronger way to understand, decide and adapt.
+            </p>
+          </div>
+          <div className="business-impact-landscape-grid" aria-label="Business challenge landscape">
+            {businessImpactChallenges.map((challenge) => (
+              <div className="business-impact-landscape-item" key={challenge}>
+                {challenge}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       <section className="business-impact-scenarios" id="business-impact-scenarios">
         <div className="business-impact-shell">
           <div className="business-impact-section-heading">
-            <EditorialEyebrow>Business Scenarios</EditorialEyebrow>
-            <h2>Business value appears where organizational capability was missing.</h2>
+            <EditorialEyebrow>Category Proof</EditorialEyebrow>
+            <h2>Customer scenarios become proof of a larger category.</h2>
             <p>
-              Each scenario starts with a different business challenge. Each is
-              resolved by the same underlying capability: continuous Organizational
-              Intelligence.
+              Each scenario starts with a specific business problem. Each shows where
+              Organizational Intelligence creates measurable organizational value.
             </p>
           </div>
           <div className="business-impact-scenario-grid">
@@ -1058,7 +1090,7 @@ function BusinessImpactPage() {
                       <p>{scenario.capability}</p>
                     </div>
                     <div>
-                      <span>Organizational Intelligence Solution</span>
+                      <span>Organizational Intelligence in Action</span>
                       <p>{scenario.solution}</p>
                     </div>
                     <div>
@@ -1073,17 +1105,26 @@ function BusinessImpactPage() {
         </div>
       </section>
 
-      <section className="business-impact-capability" id="business-impact-capability">
+      <section className="business-impact-outcomes" id="business-impact-outcomes">
         <div className="business-impact-shell">
           <div className="business-impact-section-heading">
-            <EditorialEyebrow>Capability Reference</EditorialEyebrow>
-            <h2>One capability path supports every business outcome.</h2>
+            <EditorialEyebrow>Business Outcomes</EditorialEyebrow>
+            <h2>One Capability. Many Business Outcomes.</h2>
+            <p>
+              The outcomes vary by context. The underlying organizational capability
+              remains the same.
+            </p>
           </div>
-          <div className="business-impact-capability-path" aria-label="Capability path">
-            {businessImpactCapabilityPath.map((item, index) => (
-              <div className="business-impact-capability-step" key={item}>
+          <div className="business-impact-outcome-path" aria-label="Business outcomes">
+            {businessImpactOutcomes.map((item, index) => (
+              <div
+                className="business-impact-outcome-step"
+                data-primary={item.label === "Organizational Intelligence" ? "true" : undefined}
+                key={item.label}
+              >
                 <span>{String(index + 1).padStart(2, "0")}</span>
-                <strong>{item}</strong>
+                {"descriptor" in item ? <em>{item.descriptor}</em> : null}
+                <strong>{item.label}</strong>
               </div>
             ))}
           </div>
@@ -1093,15 +1134,15 @@ function BusinessImpactPage() {
       <section className="business-impact-closing" id="business-impact-closing">
         <div className="business-impact-shell">
           <p>
-            Every organization faces different business challenges. The capability that
-            solves them is always the same. Organizational Intelligence.
+            Organizations face different business challenges. The organizational
+            capability that solves them is always the same. Organizational Intelligence.
           </p>
           <div className="business-impact-actions" aria-label="Business Impact closing actions">
             <Link className="button" href="/platform">
               Explore the Platform <EditorialJumpArrow />
             </Link>
             <Link className="button secondary" href="/thinking/theory">
-              Read the Theory <EditorialJumpArrow />
+              Understand the Theory <EditorialJumpArrow />
             </Link>
           </div>
         </div>
