@@ -3,6 +3,8 @@ import {
   EditorialSectionNavigator,
   type EditorialSectionNavigatorItem,
 } from "../components/brand/EditorialSectionNavigator";
+import { EditorialEyebrow } from "../components/brand/EditorialEyebrow";
+import { EditorialJumpArrow } from "../components/brand/EditorialJumpArrow";
 import { getEditableContent, RichText } from "./editor/content";
 import { MainHeader } from "./main-navigation";
 
@@ -199,21 +201,21 @@ export const resourcePages: Record<ResourceSlug, ResourcePageData> = {
     ],
   },
   "success-stories": {
-    eyebrow: "Success Stories",
+    eyebrow: "Business Impact",
     title: getEditableContent(
       "resource.success.title",
-      "Erfolge, die Organisationswissen nutzbar machen.",
+      "Organizational Intelligence creates measurable business value.",
     ),
     intro: getEditableContent(
       "resource.success.intro",
       "Die Erfolgsgeschichten zeigen, wie Unternehmen mit aiio Transparenz schaffen, Migration beschleunigen und Audits sicherer bewältigen.",
     ),
     heroImage: "/aiio-pages/success-stories/image-02.jpeg",
-    heroImageAlt: "Autoschlüssel als Bildmotiv für die Euromobil Success Story.",
-    cta: { href: "/live-demo/kontakt", label: "Eigene Story starten" },
+    heroImageAlt: "Business Impact visual for the Euromobil scenario.",
+    cta: { href: "/platform", label: "Explore the Platform" },
     sections: [
       {
-        eyebrow: "Kundenergebnisse",
+        eyebrow: "Scenarios",
         title: "Vier Beispiele für messbaren Fortschritt.",
         cards: [
           {
@@ -918,7 +920,206 @@ function ResourceCardList({
   );
 }
 
+const businessImpactScenarioDetails = {
+  Euromobil: {
+    challenge:
+      "Organizational knowledge existed in documents and routines, but it was difficult to turn into coordinated work.",
+    capability:
+      "A continuous way to make organizational reality understandable and reusable.",
+    solution:
+      "Organizational Intelligence structures scattered inputs into a shared representation that teams can work from.",
+    impact:
+      "Unused documents become usable organizational context for more efficient work.",
+  },
+  Windpunx: {
+    challenge:
+      "A platform transition risked slowing process work and separating teams from existing context.",
+    capability:
+      "A faster way to carry organizational context into a new operating model.",
+    solution:
+      "Organizational Intelligence connects existing process work with AI-supported interpretation.",
+    impact:
+      "Migration momentum increases without forcing teams to rebuild understanding from zero.",
+  },
+  HVLE: {
+    challenge:
+      "Audit readiness and improvement work were connected to the same organization, but treated as separate efforts.",
+    capability:
+      "A shared organizational understanding that supports compliance and continuous improvement.",
+    solution:
+      "Organizational Intelligence connects requirements, processes and operational context.",
+    impact:
+      "Audit work becomes part of the same capability system that improves the organization.",
+  },
+  "ABB Busch-Jaeger": {
+    challenge:
+      "Target processes and real process behavior needed one common view before analysis could become reliable.",
+    capability:
+      "A representation that keeps process intent and organizational reality connected.",
+    solution:
+      "Organizational Intelligence makes process differences visible and usable for decision-making.",
+    impact:
+      "Process analysis becomes more grounded, comparable and actionable.",
+  },
+} as const;
+
+const businessImpactCapabilityPath = [
+  "Organizational Understanding",
+  "Organizational Intelligence",
+  "Organizational Capabilities",
+  "Organizational Self-Empowerment",
+] as const;
+
+const businessImpactSectionNavigator: EditorialSectionNavigatorItem[] = [
+  { id: "business-impact-hero", label: "Hero" },
+  { id: "business-impact-intro", label: "Value" },
+  { id: "business-impact-scenarios", label: "Scenarios" },
+  { id: "business-impact-capability", label: "Capability" },
+  { id: "business-impact-closing", label: "Outcome" },
+];
+
+function getBusinessImpactScenario(card: ResourceCard) {
+  return businessImpactScenarioDetails[
+    card.title as keyof typeof businessImpactScenarioDetails
+  ];
+}
+
+function BusinessImpactPage() {
+  const page = resourcePages["success-stories"];
+  const scenarioCards = page.sections[0]?.cards ?? [];
+
+  return (
+    <main className="business-impact-page">
+      <MainHeader variant="solid" />
+      <section className="business-impact-hero" id="business-impact-hero">
+        <div className="business-impact-shell">
+          <EditorialEyebrow>Business Impact</EditorialEyebrow>
+          <h1>Organizational Intelligence creates measurable business value.</h1>
+          <div className="business-impact-lead">
+            <p>Different organizations face different challenges.</p>
+            <p>
+              The Organizational Intelligence System solves them through one common
+              capability:
+            </p>
+            <p>continuous Organizational Intelligence.</p>
+          </div>
+          <div className="business-impact-actions" aria-label="Business Impact actions">
+            <Link className="button" href="/platform">
+              Explore the Platform <EditorialJumpArrow />
+            </Link>
+            <Link className="button secondary" href="/thinking/theory">
+              Read the Theory <EditorialJumpArrow />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="business-impact-intro" id="business-impact-intro">
+        <div className="business-impact-shell">
+          <p>
+            Different organizations. Different challenges. One Organizational
+            Intelligence System. One continuously developing organizational capability.
+          </p>
+        </div>
+      </section>
+
+      <section className="business-impact-scenarios" id="business-impact-scenarios">
+        <div className="business-impact-shell">
+          <div className="business-impact-section-heading">
+            <EditorialEyebrow>Business Scenarios</EditorialEyebrow>
+            <h2>Business value appears where organizational capability was missing.</h2>
+            <p>
+              Each scenario starts with a different business challenge. Each is
+              resolved by the same underlying capability: continuous Organizational
+              Intelligence.
+            </p>
+          </div>
+          <div className="business-impact-scenario-grid">
+            {scenarioCards.map((card, index) => {
+              const scenario = getBusinessImpactScenario(card);
+
+              if (!scenario) {
+                return null;
+              }
+
+              return (
+                <article className="business-impact-scenario-card" key={card.title}>
+                  <span className="business-impact-scenario-index">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <h3>{card.title}</h3>
+                  <div className="business-impact-scenario-steps">
+                    <div>
+                      <span>Business Challenge</span>
+                      <p>{scenario.challenge}</p>
+                    </div>
+                    <div>
+                      <span>Missing Organizational Capability</span>
+                      <p>{scenario.capability}</p>
+                    </div>
+                    <div>
+                      <span>Organizational Intelligence Solution</span>
+                      <p>{scenario.solution}</p>
+                    </div>
+                    <div>
+                      <span>Business Impact</span>
+                      <p>{scenario.impact}</p>
+                    </div>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="business-impact-capability" id="business-impact-capability">
+        <div className="business-impact-shell">
+          <div className="business-impact-section-heading">
+            <EditorialEyebrow>Capability Reference</EditorialEyebrow>
+            <h2>One capability path supports every business outcome.</h2>
+          </div>
+          <div className="business-impact-capability-path" aria-label="Capability path">
+            {businessImpactCapabilityPath.map((item, index) => (
+              <div className="business-impact-capability-step" key={item}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <strong>{item}</strong>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="business-impact-closing" id="business-impact-closing">
+        <div className="business-impact-shell">
+          <p>
+            Every organization faces different business challenges. The capability that
+            solves them is always the same. Organizational Intelligence.
+          </p>
+          <div className="business-impact-actions" aria-label="Business Impact closing actions">
+            <Link className="button" href="/platform">
+              Explore the Platform <EditorialJumpArrow />
+            </Link>
+            <Link className="button secondary" href="/thinking/theory">
+              Read the Theory <EditorialJumpArrow />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <EditorialSectionNavigator
+        ariaLabel="Business Impact sections"
+        sections={businessImpactSectionNavigator}
+      />
+    </main>
+  );
+}
+
 export function ResourcePage({ slug }: { slug: ResourceSlug }) {
+  if (slug === "success-stories") {
+    return <BusinessImpactPage />;
+  }
+
   const page = resourcePages[slug];
   const pageEyebrow = editableResourceText(slug, "eyebrow", page.eyebrow);
   const pageTitle = editableResourceText(slug, "title", page.title);

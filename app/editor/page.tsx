@@ -16,7 +16,7 @@ const editAreas = [
     file: "app/resource-pages.tsx",
     id: "ressourcen",
     title: "Ressourcen-Seiten",
-    text: "Kontakt, Downloadcenter, Success Stories, Services, Support, Presse, Impressum und weitere Ressourcenseiten.",
+    text: "Kontakt, Downloadcenter, Business Impact, Services, Support, Presse, Impressum und weitere Ressourcenseiten.",
   },
   {
     file: "app/about-us/page.tsx",

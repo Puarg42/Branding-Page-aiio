@@ -9,7 +9,7 @@ type FooterLink = {
 const footerNav: FooterLink[] = [
   { href: "/platform", label: "Platform" },
   { href: "/thinking", label: "Thinking" },
-  { href: "/success-stories", label: "Use Cases" },
+  { href: "/success-stories", label: "Business Impact" },
   { href: "/live-demo/kontakt", label: "Get Started" },
   { href: "/partners", label: "Partners" },
   { href: "/academy", label: "Events" },

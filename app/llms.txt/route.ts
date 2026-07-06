@@ -6,7 +6,7 @@ const pages = [
   ["/collector", "ProcessCollector als menschenlesbare Organisationsrepraesentation."],
   ["/magnet", "ProcessMagnet als kontinuierliche Interpretationsfaehigkeit fuer Organizational Self-Understanding."],
   ["/forge", "ProcessForge als Activation Layer fuer Agenten, APIs und Umsysteme."],
-  ["/success-stories", "Kundenbeispiele und Wirkung von aiio."],
+  ["/success-stories", "Business Impact: organisatorische Herausforderungen und Wertbeitrag von Organizational Intelligence."],
   ["/downloadcenter", "Dokumente, Sicherheit, AVV und technische Downloads."],
   ["/kontakt", "Kontakt und Anfragewege."],
 ] as const;
