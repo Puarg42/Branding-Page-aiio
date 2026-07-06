@@ -4,12 +4,17 @@ import {
   BrandIllustration,
   type BrandIllustrationVariant,
 } from "../components/brand/BrandIllustration";
+import {
+  EditorialCard,
+  EditorialGrid,
+  EditorialHero,
+  EditorialNavigation,
+  EditorialSection,
+  EditorialSectionHeader,
+} from "../components/brand/BrandCanonFoundation";
 import { EditorialJumpArrow } from "../components/brand/EditorialJumpArrow";
 import { EditorialEyebrow } from "../components/brand/EditorialEyebrow";
-import {
-  EditorialSectionNavigator,
-  type EditorialSectionNavigatorItem,
-} from "../components/brand/EditorialSectionNavigator";
+import type { EditorialSectionNavigatorItem } from "../components/brand/EditorialSectionNavigator";
 import { TheoryReference } from "../components/brand/TheoryReference";
 import { MainHeader } from "./main-navigation";
 
@@ -29,7 +34,7 @@ type WebsiteArchitecturePageProps = {
   sectionNavigator?: readonly EditorialSectionNavigatorItem[];
   sectionNavigatorLabel?: string;
   sections?: readonly ArchitectureSection[];
-  title: string;
+  title: ReactNode;
 };
 
 export function WebsiteArchitecturePage({
@@ -48,40 +53,43 @@ export function WebsiteArchitecturePage({
   return (
     <main className="website-page">
       <MainHeader />
-      <section className="website-hero" id={heroId}>
-        <div className="website-page-shell">
-          {heroVisual ? <div className="website-hero-visual">{heroVisual}</div> : null}
-          <EditorialEyebrow>{eyebrow}</EditorialEyebrow>
-          <h1>{title}</h1>
-          {heroLead ? <p className="website-hero-lead">{heroLead}</p> : null}
-          <p>{intro}</p>
-          {heroActions ? <div className="website-hero-actions">{heroActions}</div> : null}
-        </div>
-      </section>
+      <EditorialHero
+        actions={heroActions}
+        className="website-hero"
+        eyebrow={eyebrow}
+        id={heroId}
+        intro={intro}
+        lead={heroLead}
+        shellClassName="website-page-shell"
+        title={title}
+        visual={heroVisual ? <div className="website-hero-visual">{heroVisual}</div> : null}
+      />
 
       {children}
 
       {sections.length > 0 ? (
-        <section className="website-architecture-section">
-          <div className="website-page-shell">
-            <div className="website-section-heading">
-              <EditorialEyebrow>Structure</EditorialEyebrow>
-              <h2>Page architecture</h2>
-            </div>
-            <div className="website-architecture-grid">
-              {sections.map((section) => (
-                <article className="website-architecture-card" key={section.title}>
-                  <h3>{section.title}</h3>
-                  {section.purpose ? <p>{section.purpose}</p> : null}
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
+        <EditorialSection
+          className="website-architecture-section"
+          shellClassName="website-page-shell"
+        >
+          <EditorialSectionHeader
+            className="website-section-heading"
+            eyebrow="Structure"
+            title="Page architecture"
+          />
+          <EditorialGrid className="website-architecture-grid">
+            {sections.map((section) => (
+              <EditorialCard className="website-architecture-card" key={section.title}>
+                <h3>{section.title}</h3>
+                {section.purpose ? <p>{section.purpose}</p> : null}
+              </EditorialCard>
+            ))}
+          </EditorialGrid>
+        </EditorialSection>
       ) : null}
 
       {sectionNavigator?.length ? (
-        <EditorialSectionNavigator
+        <EditorialNavigation
           ariaLabel={sectionNavigatorLabel}
           sections={sectionNavigator}
         />

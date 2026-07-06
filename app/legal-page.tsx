@@ -1,4 +1,10 @@
-import { EditorialSectionNavigator } from "../components/brand/EditorialSectionNavigator";
+import {
+  EditorialCard,
+  EditorialGrid,
+  EditorialHero,
+  EditorialNavigation,
+  EditorialSection,
+} from "../components/brand/BrandCanonFoundation";
 import { MainHeader } from "./main-navigation";
 import { resourcePages } from "./resource-pages";
 
@@ -15,18 +21,25 @@ export function LegalPage({ slug }: { slug: LegalSlug }) {
     <main className="legal-page">
       <MainHeader />
 
-      <section className="legal-hero" id={`${slug}-hero`} aria-labelledby={`${slug}-title`}>
-        <div className="legal-shell">
-          <p className="legal-eyebrow">{page.eyebrow}</p>
-          <h1 id={`${slug}-title`}>{page.title}</h1>
-          <p>{page.intro}</p>
-        </div>
-      </section>
+      <EditorialHero
+        className="legal-hero"
+        eyebrow={page.eyebrow}
+        id={`${slug}-hero`}
+        intro={page.intro}
+        shellClassName="legal-shell"
+        title={page.title}
+        titleId={`${slug}-title`}
+      />
 
-      <section className="legal-content" id={`${slug}-content`} aria-label={page.title}>
-        <div className="legal-shell legal-card-stack">
+      <EditorialSection
+        ariaLabel={page.title}
+        className="legal-content"
+        id={`${slug}-content`}
+        shellClassName="legal-shell"
+      >
+        <EditorialGrid className="legal-card-stack" columns="two">
           {page.sections.map((section) => (
-            <article className="legal-card" key={section.title}>
+            <EditorialCard className="legal-card" key={section.title}>
               <h2>{section.title}</h2>
               {section.copy ? <p>{section.copy}</p> : null}
               {section.items ? (
@@ -36,11 +49,11 @@ export function LegalPage({ slug }: { slug: LegalSlug }) {
                   ))}
                 </ul>
               ) : null}
-            </article>
+            </EditorialCard>
           ))}
-        </div>
-      </section>
-      <EditorialSectionNavigator
+        </EditorialGrid>
+      </EditorialSection>
+      <EditorialNavigation
         ariaLabel={`${page.title} sections`}
         sections={sectionNavigator}
       />

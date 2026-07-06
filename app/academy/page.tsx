@@ -1,12 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BrandIllustration } from "../../components/brand/BrandIllustration";
+import {
+  EditorialCard,
+  EditorialCTAGroup,
+  EditorialGrid,
+  EditorialNavigation,
+  EditorialSection,
+  EditorialSectionHeader,
+} from "../../components/brand/BrandCanonFoundation";
 import { EditorialEyebrow } from "../../components/brand/EditorialEyebrow";
 import { EditorialJumpArrow } from "../../components/brand/EditorialJumpArrow";
-import {
-  EditorialSectionNavigator,
-  type EditorialSectionNavigatorItem,
-} from "../../components/brand/EditorialSectionNavigator";
+import type { EditorialSectionNavigatorItem } from "../../components/brand/EditorialSectionNavigator";
 import { MainHeader } from "../main-navigation";
 
 export const metadata: Metadata = {
@@ -106,7 +111,7 @@ export default function AcademyPage() {
     <main className="academy-page">
       <MainHeader variant="solid" />
 
-      <section className="academy-hero" id="academy-hero">
+      <section className="academy-hero editorial-hero" id="academy-hero">
         <div className="academy-shell">
           <div className="academy-hero-visual" aria-hidden="true">
             <BrandIllustration decorative priority variant="BC-004" />
@@ -123,123 +128,140 @@ export default function AcademyPage() {
               This Academy combines tutorials, live sessions, practical examples
               and executive knowledge into one continuous learning experience.
             </p>
-            <div className="academy-actions" aria-label="Academy actions">
+            <EditorialCTAGroup className="academy-actions" aria-label="Academy actions">
               <Link className="button" href="#academy-journey">
                 Start Learning <EditorialJumpArrow />
               </Link>
               <Link className="button secondary" href="/platform">
                 Explore the Platform <EditorialJumpArrow />
               </Link>
-            </div>
+            </EditorialCTAGroup>
           </div>
         </div>
       </section>
 
-      <section className="academy-section academy-journey-section" id="academy-journey">
-        <div className="academy-shell">
-          <div className="academy-section-heading">
-            <EditorialEyebrow>Learning Journey</EditorialEyebrow>
-            <h2>How organizations learn Organizational Intelligence.</h2>
-            <p>
+      <EditorialSection
+        className="academy-section academy-journey-section"
+        id="academy-journey"
+        shellClassName="academy-shell"
+      >
+        <EditorialSectionHeader
+          className="academy-section-heading"
+          eyebrow="Learning Journey"
+          title="How organizations learn Organizational Intelligence."
+          lead={
+            <>
               The Academy follows the same path organizations take when they build
               Organizational Intelligence: from understanding how work happens to
               developing capabilities that improve how decisions are made.
-            </p>
-          </div>
+            </>
+          }
+        />
 
-          <div className="academy-journey-grid">
-            {learningJourney.map((level, index) => (
-              <article className="academy-journey-card" key={level.title}>
-                <span className="academy-level-index">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <p className="academy-level-label">{level.level}</p>
-                <h3>{level.title}</h3>
-                <p className="academy-powered">
-                  Powered by <strong>{level.product}</strong>
-                </p>
-                <p>{level.copy}</p>
-                <Link className="academy-text-link" href={level.href}>
-                  View learning resources <EditorialJumpArrow />
-                </Link>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
+        <EditorialGrid className="academy-journey-grid" columns="four">
+          {learningJourney.map((level, index) => (
+            <EditorialCard className="academy-journey-card" key={level.title}>
+              <span className="academy-level-index">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <p className="academy-level-label">{level.level}</p>
+              <h3>{level.title}</h3>
+              <p className="academy-powered">
+                Powered by <strong>{level.product}</strong>
+              </p>
+              <p>{level.copy}</p>
+              <Link className="academy-text-link" href={level.href}>
+                View learning resources <EditorialJumpArrow />
+              </Link>
+            </EditorialCard>
+          ))}
+        </EditorialGrid>
+      </EditorialSection>
 
-      <section className="academy-section academy-resources-section" id="academy-resources">
-        <div className="academy-shell">
-          <div className="academy-section-heading">
-            <EditorialEyebrow>Learning Resources</EditorialEyebrow>
-            <h2>Existing Academy content, organized by learning maturity.</h2>
-            <p>
+      <EditorialSection
+        className="academy-section academy-resources-section"
+        id="academy-resources"
+        shellClassName="academy-shell"
+      >
+        <EditorialSectionHeader
+          className="academy-section-heading"
+          eyebrow="Learning Resources"
+          title="Existing Academy content, organized by learning maturity."
+          lead={
+            <>
               The tutorials remain available. They are now organized around the
               learning outcomes that help teams build Organizational Intelligence.
-            </p>
-          </div>
+            </>
+          }
+        />
 
-          <div className="academy-resource-grid">
-            {learningResources.map((resource) => (
-              <article className="academy-resource-card" id={resource.id} key={resource.stage}>
-                <p className="academy-resource-stage">{resource.stage}</p>
-                <h3>{resource.title}</h3>
-                <p>{resource.copy}</p>
-                <ul>
-                  {resource.items.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
+        <EditorialGrid className="academy-resource-grid" columns="four">
+          {learningResources.map((resource) => (
+            <EditorialCard className="academy-resource-card" id={resource.id} key={resource.stage}>
+              <p className="academy-resource-stage">{resource.stage}</p>
+              <h3>{resource.title}</h3>
+              <p>{resource.copy}</p>
+              <ul>
+                {resource.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </EditorialCard>
+          ))}
+        </EditorialGrid>
+      </EditorialSection>
 
-      <section className="academy-section academy-live-section" id="academy-live">
-        <div className="academy-shell academy-live-grid">
-          <div className="academy-section-heading">
-            <EditorialEyebrow>Live Learning</EditorialEyebrow>
-            <h2>Learning becomes stronger when people work through real questions.</h2>
-            <p>
+      <EditorialSection
+        className="academy-section academy-live-section"
+        id="academy-live"
+        shellClassName="academy-shell academy-live-grid"
+      >
+        <EditorialSectionHeader
+          className="academy-section-heading"
+          eyebrow="Live Learning"
+          title="Learning becomes stronger when people work through real questions."
+          lead={
+            <>
               Live formats connect executive context, implementation practice and
               continuous learning. They help organizations apply the discipline to
               their own reality instead of only watching product instruction.
-            </p>
-          </div>
+            </>
+          }
+        />
 
-          <div className="academy-live-panel">
-            {liveLearningFormats.map((format) => (
-              <div className="academy-live-item" key={format}>
-                <span aria-hidden="true" />
-                <p>{format}</p>
-              </div>
-            ))}
-          </div>
+        <div className="academy-live-panel">
+          {liveLearningFormats.map((format) => (
+            <div className="academy-live-item" key={format}>
+              <span aria-hidden="true" />
+              <p>{format}</p>
+            </div>
+          ))}
         </div>
-      </section>
+      </EditorialSection>
 
-      <section className="academy-section academy-thinking-section" id="academy-thinking">
-        <div className="academy-shell academy-thinking-panel">
-          <EditorialEyebrow>Continue in Thinking</EditorialEyebrow>
-          <h2>The Academy teaches. Thinking explains.</h2>
-          <p>
-            Continue your learning through the Theory, whitepapers, research and
-            Organizational Intelligence articles that explain the management
-            discipline behind the system.
-          </p>
-          <div className="academy-actions" aria-label="Academy Thinking actions">
-            <Link className="button" href="/thinking/theory">
-              Read the Theory <EditorialJumpArrow />
-            </Link>
-            <Link className="button secondary" href="/thinking">
-              Visit Thinking <EditorialJumpArrow />
-            </Link>
-          </div>
-        </div>
-      </section>
+      <EditorialSection
+        className="academy-section academy-thinking-section"
+        id="academy-thinking"
+        shellClassName="academy-shell academy-thinking-panel"
+      >
+        <EditorialEyebrow>Continue in Thinking</EditorialEyebrow>
+        <h2>The Academy teaches. Thinking explains.</h2>
+        <p>
+          Continue your learning through the Theory, whitepapers, research and
+          Organizational Intelligence articles that explain the management
+          discipline behind the system.
+        </p>
+        <EditorialCTAGroup className="academy-actions" aria-label="Academy Thinking actions">
+          <Link className="button" href="/thinking/theory">
+            Read the Theory <EditorialJumpArrow />
+          </Link>
+          <Link className="button secondary" href="/thinking">
+            Visit Thinking <EditorialJumpArrow />
+          </Link>
+        </EditorialCTAGroup>
+      </EditorialSection>
 
-      <EditorialSectionNavigator
+      <EditorialNavigation
         ariaLabel="Academy sections"
         sections={academySectionNavigator}
       />

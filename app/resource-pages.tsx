@@ -1,8 +1,12 @@
 import Link from "next/link";
 import {
-  EditorialSectionNavigator,
-  type EditorialSectionNavigatorItem,
-} from "../components/brand/EditorialSectionNavigator";
+  EditorialCard,
+  EditorialGrid,
+  EditorialNavigation,
+  EditorialSection,
+  EditorialSectionHeader,
+} from "../components/brand/BrandCanonFoundation";
+import type { EditorialSectionNavigatorItem } from "../components/brand/EditorialSectionNavigator";
 import { EditorialEyebrow } from "../components/brand/EditorialEyebrow";
 import { EditorialJumpArrow } from "../components/brand/EditorialJumpArrow";
 import { getEditableContent, RichText } from "./editor/content";
@@ -873,7 +877,7 @@ function ResourceCardList({
   slug: ResourceSlug;
 }) {
   return (
-    <div className="resource-card-grid">
+    <EditorialGrid className="resource-card-grid">
       {cards.map((card, cardIndex) => {
         const cardTitle = editableResourceText(
           slug,
@@ -896,7 +900,7 @@ function ResourceCardList({
           : null;
 
         return (
-          <article className="resource-card" key={`${sectionIndex}-${cardIndex}`}>
+          <EditorialCard className="resource-card" key={`${sectionIndex}-${cardIndex}`}>
             {card.image ? (
               <span
                 aria-label={cardTitle}
@@ -913,10 +917,10 @@ function ResourceCardList({
                 {linkLabel ?? "Mehr ansehen"}
               </Link>
             ) : null}
-          </article>
+          </EditorialCard>
         );
       })}
-    </div>
+    </EditorialGrid>
   );
 }
 
@@ -1182,7 +1186,7 @@ function BusinessImpactPage() {
         </div>
       </section>
 
-      <EditorialSectionNavigator
+      <EditorialNavigation
         ariaLabel="Business Impact sections"
         sections={businessImpactSectionNavigator}
       />
@@ -1212,9 +1216,13 @@ export function ResourcePage({ slug }: { slug: ResourceSlug }) {
   return (
     <main className="resource-page">
       <MainHeader variant="solid" />
-      <section className="resource-hero" id={`${slug}-hero`}>
+      <EditorialSection
+        className="resource-hero editorial-hero"
+        id={`${slug}-hero`}
+        shell={false}
+      >
         <div className="resource-hero-copy">
-          <p className="eyebrow">{pageEyebrow}</p>
+          <EditorialEyebrow>{pageEyebrow}</EditorialEyebrow>
           <h1>{pageTitle}</h1>
           <div className="resource-hero-intro rich-text">
             <RichText html={pageIntro} />
@@ -1233,7 +1241,7 @@ export function ResourcePage({ slug }: { slug: ResourceSlug }) {
             style={{ backgroundImage: `url(${page.heroImage})` }}
           />
         ) : null}
-      </section>
+      </EditorialSection>
 
       {page.sections.map((section, sectionIndex) => {
         const sectionTitle = editableResourceText(
@@ -1249,16 +1257,18 @@ export function ResourcePage({ slug }: { slug: ResourceSlug }) {
           : null;
 
         return (
-          <section
+          <EditorialSection
             className="resource-section"
             id={getResourceSectionId(slug, sectionIndex)}
             key={sectionIndex}
+            shell={false}
           >
-            <div className="resource-section-heading">
-              {sectionEyebrow ? <p className="eyebrow">{sectionEyebrow}</p> : null}
-              <h2>{sectionTitle}</h2>
-              {sectionCopy ? <p>{sectionCopy}</p> : null}
-            </div>
+            <EditorialSectionHeader
+              className="resource-section-heading"
+              eyebrow={sectionEyebrow}
+              lead={sectionCopy}
+              title={sectionTitle}
+            />
             {section.items ? (
               <ul className="resource-list">
                 {section.items.map((item) => (
@@ -1269,12 +1279,12 @@ export function ResourcePage({ slug }: { slug: ResourceSlug }) {
             {section.cards ? (
               <ResourceCardList cards={section.cards} sectionIndex={sectionIndex} slug={slug} />
             ) : null}
-          </section>
+          </EditorialSection>
         );
       })}
 
       {page.form ? <ResourceForm form={page.form} id={`${slug}-form`} slug={slug} /> : null}
-      <EditorialSectionNavigator
+      <EditorialNavigation
         ariaLabel={`${pageTitle} sections`}
         sections={sectionNavigator}
       />
