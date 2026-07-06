@@ -124,12 +124,21 @@ export function CapabilityTeaserGrid({
   sectionId?: string;
 }) {
   const journey = [
-    { key: "collector", label: "Understand Your Organization" },
+    {
+      key: "collector",
+      label: (
+        <>
+          Understand Your Organization
+          <span>Organizational Understanding</span>
+        </>
+      ),
+    },
     {
       key: "magnet",
       label: (
         <>
-          Build <TheoryReference>Organizational Self-Understanding</TheoryReference>
+          Develop Organizational Intelligence
+          <span><TheoryReference>Organizational Intelligence</TheoryReference></span>
         </>
       ),
     },
@@ -137,7 +146,8 @@ export function CapabilityTeaserGrid({
       key: "forge",
       label: (
         <>
-          Forge <TheoryReference>Organizational Capabilities</TheoryReference>
+          Forge Organizational Capabilities
+          <span><TheoryReference>Organizational Capabilities</TheoryReference></span>
         </>
       ),
     },
@@ -145,7 +155,17 @@ export function CapabilityTeaserGrid({
       key: "dataforge",
       label: (
         <>
-          Enable <TheoryReference>Organizational Self-Empowering</TheoryReference>
+          Enable Organizational Self-Empowerment
+          <span>Organizational Self-Empowerment</span>
+        </>
+      ),
+    },
+    {
+      key: "outcome",
+      label: (
+        <>
+          Ultimate Business Outcome
+          <span><TheoryReference>Organizational Resilience</TheoryReference></span>
         </>
       ),
     },
