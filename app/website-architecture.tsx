@@ -127,6 +127,44 @@ function capabilityKey(product: CapabilityTeaser["product"]) {
   }
 }
 
+function CapabilityVisual({ capability }: { capability: CapabilityTeaser }) {
+  if (capability.illustrationVariant) {
+    return (
+      <BrandIllustration
+        className="website-card-canon"
+        decorative={false}
+        interactive
+        variant={capability.illustrationVariant}
+      />
+    );
+  }
+
+  if (capability.illustration) {
+    return (
+      <figure className="website-card-canon">
+        <img
+          alt={capability.illustration.alt}
+          className="website-card-canon-image"
+          loading="lazy"
+          src={capability.illustration.src}
+        />
+      </figure>
+    );
+  }
+
+  if (capability.illustrationSlot) {
+    return (
+      <figure
+        aria-hidden="true"
+        className="website-card-canon is-empty"
+        data-slot={capability.illustrationSlot}
+      />
+    );
+  }
+
+  return null;
+}
+
 export function CapabilityTeaserGrid({
   capabilities,
   sectionId,
@@ -203,61 +241,28 @@ export function CapabilityTeaserGrid({
         </div>
         <EditorialGrid className="website-capability-grid">
           {capabilities.map((capability, index) => (
-            <EditorialCard
-              className="website-capability-card"
-              dataCapability={capabilityKey(capability.product)}
-              id={capability.product.toLowerCase()}
-              hrefSlot={
+            <JourneyCard
+              cta={
                 <Link className="website-text-link" href={capability.href}>
                   Learn more <EditorialJumpArrow />
                 </Link>
               }
+              className="website-capability-card"
+              dataCapability={capabilityKey(capability.product)}
+              description={
+                <>
+                  <p>{capability.copy}</p>
+                  {capability.secondaryCopy ? <p>{capability.secondaryCopy}</p> : null}
+                </>
+              }
+              headline={capability.title}
+              id={capability.product.toLowerCase()}
+              index={String(index + 1).padStart(2, "0")}
+              insight={capability.quote}
               key={capability.title}
-            >
-              <div className="website-capability-card-copy">
-                <span className="website-capability-index">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <h3>{capability.title}</h3>
-                <div className="website-card-topline">
-                  <span>
-                    Powered by <strong>{capability.product}<sup>™</sup></strong>
-                  </span>
-                  {capability.badge ? <em>{capability.badge}</em> : null}
-                </div>
-                <p>{capability.copy}</p>
-                {capability.secondaryCopy ? <p>{capability.secondaryCopy}</p> : null}
-                {capability.quote ? (
-                  <blockquote className="website-capability-quote">
-                    <span>Insight</span>
-                    <p>{capability.quote}</p>
-                  </blockquote>
-                ) : null}
-              </div>
-              {capability.illustrationVariant ? (
-                <BrandIllustration
-                  className="website-card-canon"
-                  decorative={false}
-                  interactive
-                  variant={capability.illustrationVariant}
-                />
-              ) : capability.illustration ? (
-                <figure className="website-card-canon">
-                  <img
-                    alt={capability.illustration.alt}
-                    className="website-card-canon-image"
-                    loading="lazy"
-                    src={capability.illustration.src}
-                  />
-                </figure>
-              ) : capability.illustrationSlot ? (
-                <figure
-                  aria-hidden="true"
-                  className="website-card-canon is-empty"
-                  data-slot={capability.illustrationSlot}
-                />
-              ) : null}
-            </EditorialCard>
+              poweredBy={capability.product}
+              visual={<CapabilityVisual capability={capability} />}
+            />
           ))}
         </EditorialGrid>
     </EditorialSection>

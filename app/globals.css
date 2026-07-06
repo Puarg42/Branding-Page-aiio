@@ -6473,10 +6473,10 @@ h1 {
   display: grid;
   gap: clamp(14px, 1.25vw, 22px);
   grid-template-rows:
-    var(--capability-image-height)
     var(--capability-index-height)
-    var(--capability-product-height)
     var(--capability-heading-height)
+    var(--capability-product-height)
+    var(--capability-image-height)
     var(--capability-copy-height)
     minmax(var(--capability-quote-height), 1fr)
     auto;
@@ -6536,6 +6536,59 @@ h1 {
   min-height: 0;
 }
 
+.journey-card-canonical {
+  isolation: isolate;
+}
+
+.journey-card-visual {
+  align-self: stretch;
+  height: var(--capability-image-height);
+  min-height: 0;
+  order: 4;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.journey-card-visual .website-card-canon {
+  height: 100%;
+}
+
+.journey-card-description {
+  color: rgb(255 255 255 / 58%);
+  font-size: 1.02rem;
+  line-height: 1.5;
+  margin: 0 clamp(26px, 2.5vw, 40px);
+  min-height: var(--capability-copy-height);
+  order: 5;
+  position: relative;
+  z-index: 1;
+}
+
+.journey-card-description p {
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  margin: 0;
+}
+
+.journey-card-description p + p {
+  margin-top: 0.85em;
+}
+
+.journey-card-cta {
+  align-self: end;
+  margin-top: auto;
+  order: 7;
+  padding: 0 clamp(26px, 2.5vw, 40px);
+  position: relative;
+  z-index: 1;
+}
+
+.journey-card-cta .website-text-link {
+  margin-top: 0;
+}
+
 .website-capability-card:hover {
   border-color: rgb(var(--capability-border) / 28%);
   box-shadow:
@@ -6561,7 +6614,8 @@ h1 {
   }
 }
 
-.website-card-topline {
+.website-card-topline,
+.journey-card-powered-by {
   align-items: start;
   display: grid;
   gap: 6px;
@@ -6574,7 +6628,8 @@ h1 {
 }
 
 .website-card-topline span,
-.website-card-topline em {
+.website-card-topline em,
+.journey-card-powered-by span {
   color: rgb(var(--capability-accent) / 82%);
   font-size: 0.76rem;
   font-style: normal;
@@ -6583,17 +6638,20 @@ h1 {
   text-transform: uppercase;
 }
 
-.website-card-topline span {
+.website-card-topline span,
+.journey-card-powered-by span {
   display: grid;
   gap: 4px;
   line-height: 1;
 }
 
-.website-card-topline span {
+.website-card-topline span,
+.journey-card-powered-by span {
   font-size: 0;
 }
 
-.website-card-topline span::before {
+.website-card-topline span::before,
+.journey-card-powered-by span::before {
   color: rgb(var(--capability-accent) / 76%);
   content: "POWERED BY";
   font-size: 0.62rem;
@@ -6601,7 +6659,8 @@ h1 {
   letter-spacing: 0.1em;
 }
 
-.website-card-topline strong {
+.website-card-topline strong,
+.journey-card-powered-by strong {
   color: rgb(var(--capability-accent) / 94%);
   display: inline-block;
   font-family: var(--font-aiio-heading);
@@ -6612,7 +6671,8 @@ h1 {
   text-transform: none;
 }
 
-.website-card-topline strong::after {
+.website-card-topline strong::after,
+.journey-card-powered-by strong::after {
   content: "\2122";
   font-size: 0.54em;
   line-height: 0;
@@ -6627,7 +6687,8 @@ h1 {
   padding: 7px 10px;
 }
 
-.website-capability-index {
+.website-capability-index,
+.journey-card-level {
   color: rgb(var(--capability-accent) / 86%);
   display: inline-flex;
   font-family: var(--font-aiio-heading);
@@ -6635,7 +6696,7 @@ h1 {
   font-weight: 620;
   letter-spacing: 0.08em;
   margin: clamp(10px, 1.2vw, 18px) clamp(26px, 2.5vw, 40px) 0;
-  order: 2;
+  order: 1;
   position: relative;
   z-index: 1;
 }
@@ -6648,7 +6709,7 @@ h1 {
   line-height: 1.12;
   margin: 0 clamp(26px, 2.5vw, 40px);
   min-height: var(--capability-heading-height);
-  order: 4;
+  order: 2;
   position: relative;
   text-wrap: balance;
   white-space: normal;
@@ -6674,6 +6735,17 @@ h1 {
   margin: 26px 0 0;
 }
 
+.website-capability-card .journey-card-description p {
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  margin: 0;
+}
+
+.website-capability-card .journey-card-description p + p {
+  margin-top: 0.85em;
+}
+
 .website-capability-card-copy > p {
   margin: 0 clamp(26px, 2.5vw, 40px);
   min-height: var(--capability-copy-height);
@@ -6682,7 +6754,8 @@ h1 {
   z-index: 1;
 }
 
-.website-capability-quote {
+.website-capability-quote,
+.journey-card-insight {
   border-left: 0;
   border-top: 1px solid rgb(var(--capability-accent) / 24%);
   color: rgb(255 255 255 / 68%);
@@ -6698,7 +6771,8 @@ h1 {
   z-index: 1;
 }
 
-.website-capability-quote span {
+.website-capability-quote span,
+.journey-card-insight span {
   color: rgb(var(--capability-accent) / 72%);
   display: block;
   font-size: 0.62rem;
@@ -6709,7 +6783,8 @@ h1 {
   text-transform: uppercase;
 }
 
-.website-capability-quote p {
+.website-capability-quote p,
+.journey-card-insight p {
   color: inherit;
   font: inherit;
   line-height: inherit;

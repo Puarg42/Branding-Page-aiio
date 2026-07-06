@@ -193,20 +193,64 @@ export function EditorialCard({
 }
 
 export type JourneyCardProps = FoundationProps & {
+  cta?: ReactNode;
   dataCapability?: string;
+  description?: ReactNode;
+  headline?: ReactNode;
   index?: string;
+  insight?: ReactNode;
   label?: ReactNode;
+  poweredBy?: ReactNode;
   tone?: "collector" | "magnet" | "forge" | "dataforge" | "neutral";
+  visual?: ReactNode;
 };
 
 export function JourneyCard({
   children,
   className,
+  cta,
+  ariaLabel,
   dataCapability,
+  description,
+  headline,
+  id,
   index,
+  insight,
   label,
+  poweredBy,
   tone = "neutral",
+  visual,
 }: JourneyCardProps) {
+  if (headline || visual || description || insight || cta || poweredBy) {
+    return (
+      <article
+        aria-label={ariaLabel}
+        className={cx("journey-card", "journey-card-canonical", className)}
+        data-capability={dataCapability}
+        id={id}
+      >
+        {index ? <span className="journey-card-level">{index}</span> : null}
+        {headline ? <h3>{headline}</h3> : null}
+        {poweredBy ? (
+          <div className="journey-card-powered-by">
+            <span>
+              Powered by <strong>{poweredBy}</strong>
+            </span>
+          </div>
+        ) : null}
+        {visual ? <div className="journey-card-visual">{visual}</div> : null}
+        {description ? <div className="journey-card-description">{description}</div> : null}
+        {insight ? (
+          <blockquote className="journey-card-insight">
+            <span>Insight</span>
+            <p>{insight}</p>
+          </blockquote>
+        ) : null}
+        {cta ? <div className="journey-card-cta">{cta}</div> : null}
+      </article>
+    );
+  }
+
   return (
     <EditorialCard className={cx("journey-card", className)} dataCapability={dataCapability}>
       {index ? <span className="journey-card-index">{index}</span> : null}
