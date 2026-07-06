@@ -12,7 +12,7 @@
     "brand-review": "node scripts/review/export-brand-review.mjs",
     "theory:compile": "node scripts/compile-theory.mjs",
     "theory:check": "node scripts/compile-theory.mjs --check",
-    "review": "npm run brand-review",
+    "review": "node scripts/review/export-brand-review.mjs",
     "start": "vinext start",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate"
