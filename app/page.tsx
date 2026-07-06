@@ -131,6 +131,11 @@ const trustReferenceLogos = [
   },
 ] as const;
 
+const trustMarqueeRows = [
+  trustReferenceLogos.slice(0, 8),
+  trustReferenceLogos.slice(8),
+] as const;
+
 const homeSectionNavigator = [
   { id: "home-hero", label: "Hero" },
   { id: "monday-morning", label: "Monday" },
@@ -338,18 +343,38 @@ function TrustReferences() {
             Trusted by organizations operating in complex, regulated and
             knowledge-intensive environments.
           </h2>
+          <p className="trust-reference-lead">
+            Organizations across industry, mobility, healthcare, consulting and
+            the public sector use aiio to build Organizational Intelligence.
+          </p>
         </div>
-        <div className="trust-reference-logo-grid" aria-label="Enterprise references">
-          {trustReferenceLogos.map((logo) => (
-            <figure className="trust-reference-logo" key={logo.alt}>
-              <img alt={logo.alt} loading="lazy" src={logo.src} />
-            </figure>
+
+        <div className="trust-reference-marquee" aria-label="Enterprise references">
+          {trustMarqueeRows.map((row, rowIndex) => (
+            <div
+              className="trust-reference-marquee-row"
+              data-direction={rowIndex === 0 ? "left" : "right"}
+              key={rowIndex}
+            >
+              <div className="trust-reference-marquee-track">
+                {[...row, ...row].map((logo, logoIndex) => (
+                  <figure
+                    aria-hidden={logoIndex >= row.length ? "true" : undefined}
+                    className="trust-reference-logo"
+                    key={`${rowIndex}-${logo.alt}-${logoIndex}`}
+                  >
+                    <img
+                      alt={logoIndex >= row.length ? "" : logo.alt}
+                      loading="lazy"
+                      src={logo.src}
+                    />
+                  </figure>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
-        <p className="trust-reference-lead">
-          Organizations from industry, mobility, healthcare, consulting and the
-          public sector use aiio to build Organizational Intelligence.
-        </p>
+
         <div className="trust-reference-grid" aria-label="Trust foundations">
           {trustSignals.map((signal) => (
             <article className="trust-reference-card" key={signal.title}>
