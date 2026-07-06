@@ -12279,31 +12279,59 @@ section[id],
 }
 
 .trust-reference-inner {
-  align-items: start;
   display: grid;
-  gap: clamp(58px, 6vw, 104px);
-  grid-template-columns: minmax(0, 0.82fr) minmax(320px, 0.68fr);
+  gap: clamp(52px, 6vw, 92px);
+  grid-template-columns: 1fr;
   margin: 0 auto;
   position: relative;
   z-index: 2;
 }
 
 .trust-reference-copy {
-  max-width: 760px;
+  max-width: 920px;
 }
 
 .trust-reference-copy h2 {
-  max-width: 780px;
+  max-width: 980px;
 }
 
-.trust-reference-copy div {
-  color: rgb(255 255 255 / 62%);
+.trust-reference-logo-grid {
   display: grid;
-  font-size: clamp(1.08rem, 1.28vw, 1.22rem);
-  gap: 18px;
-  line-height: 1.56;
-  margin-top: clamp(34px, 4vw, 58px);
-  max-width: 620px;
+  gap: 1px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  overflow: hidden;
+}
+
+.trust-reference-logo {
+  align-items: center;
+  background:
+    linear-gradient(180deg, rgb(255 255 255 / 6%), rgb(255 255 255 / 2%)),
+    rgb(255 255 255 / 3%);
+  border: 1px solid rgb(255 255 255 / 10%);
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  min-height: clamp(112px, 11vw, 156px);
+  padding: clamp(24px, 3vw, 42px);
+}
+
+.trust-reference-logo img {
+  filter: grayscale(1) contrast(0.88) brightness(1.38);
+  max-height: clamp(42px, 5vw, 74px);
+  max-width: min(100%, 170px);
+  mix-blend-mode: luminosity;
+  object-fit: contain;
+  opacity: 0.74;
+}
+
+.trust-reference-lead {
+  color: rgb(255 255 255 / 74%);
+  font-family: var(--font-aiio-heading);
+  font-size: clamp(1.42rem, 2.15vw, 2.35rem);
+  line-height: 1.18;
+  margin: 0;
+  max-width: 840px;
+  text-wrap: balance;
 }
 
 .trust-reference-copy p {
@@ -12312,14 +12340,17 @@ section[id],
 
 .trust-reference-grid {
   display: grid;
-  gap: 0;
+  gap: 1px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .trust-reference-card {
-  border-top: 1px solid rgb(255 255 255 / 12%);
+  background: rgb(255 255 255 / 3%);
+  border: 1px solid rgb(255 255 255 / 10%);
   display: grid;
-  gap: 14px;
-  padding: clamp(28px, 3vw, 44px) 0;
+  gap: 16px;
+  min-height: 210px;
+  padding: clamp(28px, 3.2vw, 46px);
 }
 
 .trust-reference-card h3 {
@@ -12333,10 +12364,11 @@ section[id],
 }
 
 .trust-reference-card p {
-  color: rgb(255 255 255 / 58%);
+  color: rgb(255 255 255 / 62%);
   font-size: clamp(0.98rem, 1.08vw, 1.08rem);
   line-height: 1.56;
   margin: 0;
+  max-width: 22rem;
 }
 
 .trust-reference-quiet-image {
@@ -12397,6 +12429,14 @@ section[id],
   .concept-inner,
   .ois-editorial-layout,
   .trust-reference-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .trust-reference-logo-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .trust-reference-grid {
     grid-template-columns: 1fr;
   }
 
@@ -13458,5 +13498,25 @@ section[id],
 
   .business-impact-actions .button {
     justify-content: center;
+  }
+}
+
+@media (max-width: 720px) {
+  .trust-reference-logo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .trust-reference-logo {
+    min-height: 108px;
+    padding: 22px;
+  }
+
+  .trust-reference-logo img {
+    max-height: 54px;
+    max-width: 138px;
+  }
+
+  .trust-reference-card {
+    min-height: 0;
   }
 }

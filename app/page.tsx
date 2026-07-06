@@ -55,19 +55,42 @@ const imagineMoments = [
 
 const trustSignals = [
   {
-    title: "Designed for enterprise complexity.",
+    title: "Enterprise Complexity",
     copy:
-      "Built for organizations where decisions depend on context, ownership, processes and operational reality.",
+      "Decisions depend on context, ownership and operational reality.",
   },
   {
-    title: "Built on a theory of Organizational Intelligence.",
+    title: "Organizational Intelligence",
     copy:
-      "The product narrative is grounded in a coherent management theory rather than feature language.",
+      "Grounded in a coherent theory rather than isolated software features.",
   },
   {
-    title: "Created for leaders, teams and AI.",
+    title: "People. Teams. AI.",
     copy:
-      "One organizational foundation supports better decisions across people, teams and intelligent systems.",
+      "One organizational foundation for management, teams and intelligent systems.",
+  },
+] as const;
+
+const trustReferenceLogos = [
+  {
+    alt: "Euromobil",
+    src: "/aiio-pages/success-stories/image-03.png",
+  },
+  {
+    alt: "ABB",
+    src: "/aiio-pages/success-stories/image-09.png",
+  },
+  {
+    alt: "Media Central",
+    src: "/aiio-pages/success-stories/image-10.png",
+  },
+  {
+    alt: "HVLE",
+    src: "/aiio-pages/success-stories/image-07.png",
+  },
+  {
+    alt: "Symacon",
+    src: "/aiio-pages/success-stories/image-12.png",
   },
 ] as const;
 
@@ -275,19 +298,18 @@ function TrustReferences() {
         <div className="trust-reference-copy">
           <EditorialEyebrow>Trust</EditorialEyebrow>
           <h2>Built for organizations that need to understand, decide and adapt.</h2>
-          <div>
-            <p>
-              aiio is designed for enterprise complexity: distributed knowledge,
-              operational dependencies, regulatory pressure and decisions that
-              depend on context.
-            </p>
-            <p>
-              It gives leaders, teams and AI one organizational foundation for
-              understanding how the organization works and where value can be
-              created.
-            </p>
-          </div>
         </div>
+        <div className="trust-reference-logo-grid" aria-label="Enterprise references">
+          {trustReferenceLogos.map((logo) => (
+            <figure className="trust-reference-logo" key={logo.alt}>
+              <img alt={logo.alt} loading="lazy" src={logo.src} />
+            </figure>
+          ))}
+        </div>
+        <p className="trust-reference-lead">
+          aiio has been developed together with organizations operating in regulated,
+          knowledge-intensive and transformation-driven environments.
+        </p>
         <div className="trust-reference-grid" aria-label="Trust foundations">
           {trustSignals.map((signal) => (
             <article className="trust-reference-card" key={signal.title}>
