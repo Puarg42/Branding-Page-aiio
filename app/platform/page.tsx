@@ -23,74 +23,65 @@ const theoryLinks = {
   capabilities: canonicalTheoryLinks.organizationalCapabilities,
   intelligence: canonicalTheoryLinks.organizationalIntelligence,
   resilience: canonicalTheoryLinks.organizationalResilience,
-  selfEmpowering: canonicalTheoryLinks.organizationalSelfEmpowering,
   selfUnderstanding: canonicalTheoryLinks.organizationalSelfUnderstanding,
 } as const;
 
 const capabilities: CapabilityTeaser[] = [
   {
-    title: "Understand\nYour\nOrganization",
+    title: "Understand Your Organization",
     copy:
-      "Create a trusted human-readable representation of your organization. Your organization becomes understandable to people, AI and management.",
+      "Create a human-readable representation of your organization so people, structures and decisions become understandable.",
     illustrationVariant: "BC201",
+    outcome: "Organizational Understanding",
     product: "ProcessCollector",
     quote:
       "When software works, nobody looks at the source code. When it doesn't, the source code explains why. The same is true for organizations.",
     href: "#processcollector",
   },
   {
-    title: "Develop\nOrganizational\nIntelligence",
+    title: "Build Organizational Intelligence",
     copy: (
       <>
-        Continuously interpret organizational reality. Connect people, systems,
-        documents, operational data, standards, market knowledge and experience
-        into{" "}
-        <TheoryTerm href={theoryLinks.intelligence}>
-          Organizational Intelligence
-        </TheoryTerm>
-        .
+        Connect organizational knowledge into coherent intelligence that
+        continuously understands your organization.
       </>
     ),
     illustrationVariant: "BC202",
+    outcome: (
+      <TheoryTerm href={theoryLinks.intelligence}>
+        Organizational Intelligence
+      </TheoryTerm>
+    ),
     product: "ProcessMagnet",
     quote:
       "A library stores knowledge. Understanding begins when every piece of organizational reality becomes connected.",
     href: "#processmagnet",
   },
   {
-    title: "Forge\nOrganizational\nCapabilities",
+    title: "Forge Organizational Capabilities",
     copy: (
       <>
-        Transform{" "}
-        <TheoryTerm href={theoryLinks.intelligence}>
-          Organizational Intelligence
-        </TheoryTerm>{" "}
-        into reusable{" "}
-        <TheoryTerm href={theoryLinks.capabilities}>
-          organizational capabilities
-        </TheoryTerm>
-        . Each capability creates reusable organizational behavior.
+        Transform organizational intelligence into repeatable organizational
+        capabilities that people and AI can continuously execute.
       </>
     ),
     illustrationVariant: "BC203",
+    outcome: (
+      <TheoryTerm href={theoryLinks.capabilities}>
+        Organizational Capabilities
+      </TheoryTerm>
+    ),
     product: "ProcessForge",
     quote:
       "Knowledge alone changes nothing. Capabilities transform intelligence into repeatable organizational action.",
     href: "#processforge",
   },
   {
-    title: "Enable\nOrganizational\nSelf-Empowerment",
-    copy: (
-      <>
-        Continuously validate and evolve{" "}
-        <TheoryTerm href={theoryLinks.capabilities}>
-          organizational capabilities
-        </TheoryTerm>{" "}
-        through operational reality, KPIs, goals and scenarios. Your
-        organization continuously improves its own capabilities.
-      </>
-    ),
+    title: "Enable Organizational Self-Empowerment",
+    copy:
+      "Continuously evolve organizational capabilities using operational data, goals, scenarios and real organizational feedback.",
     illustrationVariant: "BC204",
+    outcome: "Organizational Self-Empowerment",
     product: "DataForge",
     quote:
       "Resilience emerges when capabilities continuously improve against reality.",
@@ -98,10 +89,51 @@ const capabilities: CapabilityTeaser[] = [
   },
 ];
 
+const capabilitySpine = [
+  {
+    eyebrow: "Level 1",
+    label: "Organizational Understanding",
+    tone: "graphite",
+  },
+  {
+    eyebrow: "Level 2",
+    label: (
+      <TheoryTerm href={theoryLinks.intelligence}>
+        Organizational Intelligence
+      </TheoryTerm>
+    ),
+    tone: "cyan",
+  },
+  {
+    eyebrow: "Level 3",
+    label: (
+      <TheoryTerm href={theoryLinks.capabilities}>
+        Organizational Capabilities
+      </TheoryTerm>
+    ),
+    tone: "purple",
+  },
+  {
+    eyebrow: "Level 4",
+    label: "Organizational Self-Empowerment",
+    tone: "amber",
+  },
+  {
+    eyebrow: "Business Outcome",
+    label: (
+      <TheoryTerm href={theoryLinks.resilience}>
+        Organizational Resilience
+      </TheoryTerm>
+    ),
+    tone: "white",
+  },
+] as const;
+
 const platformSectionNavigator = [
   { id: "platform-hero", label: "Hero" },
+  { id: "platform-missing-capability", label: "Missing Capability" },
+  { id: "platform-journey", label: "Journey" },
   { id: "capability-layer", label: "The System" },
-  { id: "platform-capabilities", label: "Capabilities" },
   { id: "platform-outcome", label: "Outcome" },
 ] as const;
 
@@ -172,6 +204,42 @@ export default function PlatformPage() {
       title={platformHeroTitle}
     >
       <section
+        className="website-architecture-section website-platform-missing-section"
+        id="platform-missing-capability"
+      >
+        <div className="website-page-shell">
+          <div className="website-platform-missing-layout">
+            <div className="website-section-heading website-platform-missing-copy">
+              <EditorialEyebrow>Missing Capability</EditorialEyebrow>
+              <h2>
+                Organizations already collect more than they can continuously
+                understand.
+              </h2>
+              <p>
+                They collect information, documents, processes and AI. Yet they
+                still struggle to continuously understand themselves.
+              </p>
+              <p className="website-platform-missing-thesis">
+                The missing capability is not more information. It is continuous{" "}
+                <TheoryTerm href={theoryLinks.selfUnderstanding}>
+                  Organizational Self-Understanding
+                </TheoryTerm>
+                .
+              </p>
+            </div>
+            <ol className="website-platform-capability-spine" aria-label="Capability evolution">
+              {capabilitySpine.map((item, index) => (
+                <li data-tone={item.tone} key={index}>
+                  <span>{item.eyebrow}</span>
+                  <strong>{item.label}</strong>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </div>
+      </section>
+      <CapabilityTeaserGrid capabilities={capabilities} sectionId="platform-journey" />
+      <section
         className="website-architecture-section website-platform-system-section"
         id="capability-layer"
       >
@@ -180,40 +248,19 @@ export default function PlatformPage() {
             <div className="website-section-heading website-platform-system-copy">
               <EditorialEyebrow>The System</EditorialEyebrow>
               <h2>
-                <TheoryTerm href={theoryLinks.intelligence}>
-                  Organizational Intelligence
-                </TheoryTerm>{" "}
-                becomes the foundation for organizational capabilities.
+                One system turns organizational reality into continuously
+                evolving capability.
               </h2>
               <p>
-                <TheoryTerm href={theoryLinks.intelligence}>
-                  Organizational Intelligence
-                </TheoryTerm>{" "}
-                is not the final objective. It is the organization's
-                continuously evolving capability to interpret itself. It begins
-                with{" "}
-                <TheoryTerm href={theoryLinks.selfUnderstanding}>
-                  Organizational Self-Understanding
-                </TheoryTerm>
-                , develops into reusable{" "}
-                <TheoryTerm href={theoryLinks.capabilities}>
-                  organizational capabilities
-                </TheoryTerm>
-                , enables{" "}
-                <TheoryTerm href={theoryLinks.selfEmpowering}>
-                  Organizational Self-Empowering
-                </TheoryTerm>{" "}
-                and ultimately creates resilience.
+                The four capabilities do not work as isolated tools. They form
+                one Organizational Intelligence System that connects reality,
+                understanding, capability development and continuous evolution.
               </p>
               <p>
-                The capabilities below are not independent products. They are
-                complementary perspectives of one Organizational Intelligence
-                System.
-              </p>
-              <p>
-                ProcessMagnet continuously interprets organizational reality.
-                ProcessCollector makes the resulting intelligence readable,
-                reliable and shared.
+                ProcessCollector makes the organization readable. ProcessMagnet
+                builds organizational intelligence. ProcessForge turns that
+                intelligence into capabilities. DataForge evolves those
+                capabilities against operational reality.
               </p>
             </div>
             <div className="website-capability-layer-visual">
@@ -222,7 +269,6 @@ export default function PlatformPage() {
           </div>
         </div>
       </section>
-      <CapabilityTeaserGrid capabilities={capabilities} sectionId="platform-capabilities" />
       <section
         className="website-architecture-section website-platform-outcome-section"
         id="platform-outcome"

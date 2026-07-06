@@ -100,6 +100,7 @@ export type CapabilityTeaser = {
   };
   illustrationVariant?: BrandIllustrationVariant;
   illustrationSlot?: "BC002A" | "BC002B" | "BC002C" | "BC002D";
+  outcome?: ReactNode;
   product: "ProcessCollector" | "ProcessMagnet" | "ProcessForge" | "DataForge";
   quote?: string;
   secondaryCopy?: string;
@@ -140,7 +141,7 @@ export function CapabilityTeaserGrid({
       key: "magnet",
       label: (
         <>
-          Develop Organizational Intelligence
+          Build Organizational Intelligence
           <span><TheoryReference>Organizational Intelligence</TheoryReference></span>
         </>
       ),
@@ -167,7 +168,7 @@ export function CapabilityTeaserGrid({
       key: "outcome",
       label: (
         <>
-          Ultimate Business Outcome
+          Business Outcome
           <span><TheoryReference>Organizational Resilience</TheoryReference></span>
         </>
       ),
@@ -182,11 +183,12 @@ export function CapabilityTeaserGrid({
     >
       <div className="website-page-shell">
         <div className="website-section-heading">
-          <EditorialEyebrow>Capabilities</EditorialEyebrow>
-          <h2>Complementary capabilities, not separate products.</h2>
+          <EditorialEyebrow>Journey</EditorialEyebrow>
+          <h2>From understanding your organization to Organizational Resilience.</h2>
           <p>
-            The following capabilities are complementary perspectives of one
-            Organizational Intelligence System.
+            Every platform layer transforms organizational reality into a new
+            organizational outcome. Each level creates the prerequisite for the
+            next until organizational resilience becomes achievable.
           </p>
         </div>
         <div className="website-capability-journey" aria-label="Capability journey">
@@ -221,6 +223,12 @@ export function CapabilityTeaserGrid({
                   </span>
                   {capability.badge ? <em>{capability.badge}</em> : null}
                 </div>
+                {capability.outcome ? (
+                  <p className="website-capability-outcome">
+                    <span>Customer Outcome</span>
+                    <strong>{capability.outcome}</strong>
+                  </p>
+                ) : null}
                 <p>{capability.copy}</p>
                 {capability.secondaryCopy ? <p>{capability.secondaryCopy}</p> : null}
                 {capability.quote ? (
