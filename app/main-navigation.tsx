@@ -17,7 +17,7 @@ const navItems: MenuLink[] = [
   { href: "/success-stories", label: "Business Impact" },
   { href: "/live-demo/kontakt", label: "Get Started" },
   { href: "/partners", label: "Partners" },
-  { href: "/academy", label: "Events" },
+  { href: "/academy", label: "Academy" },
   { href: "/company", label: "Company" },
 ] as const;
 
