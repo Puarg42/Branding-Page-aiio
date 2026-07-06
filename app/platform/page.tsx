@@ -112,15 +112,6 @@ const platformHeroTitle = (
       <br />
       Intelligence System
     </span>
-    <span className="website-platform-hero-subtitle">
-      for organizations that
-      <br />
-      continuously understand themselves,
-      <br />
-      develop new capabilities
-      <br />
-      and become resilient.
-    </span>
   </>
 ) as unknown as string;
 
@@ -159,16 +150,21 @@ export default function PlatformPage() {
           variant="BC-003"
         />
       }
+      heroLead={
+        <>
+          For organizations that continuously understand themselves, develop new
+          capabilities and become resilient.
+        </>
+      }
       intro={
         <>
-          Organizations need more than disconnected software. They need a system
-          that turns organizational reality into self-understanding,
-          self-understanding into{" "}
+          Organizational reality continuously becomes self-understanding,
+          self-understanding becomes{" "}
           <TheoryTerm href={theoryLinks.intelligence}>
             Organizational Intelligence
           </TheoryTerm>
-          , intelligence into capabilities and capabilities into continuous
-          self-empowering.
+          , intelligence becomes capabilities and capabilities become
+          resilience.
         </>
       }
       sectionNavigator={platformSectionNavigator}
