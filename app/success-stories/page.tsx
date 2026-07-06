@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Business Impact | aiio",
   description:
-    "Business Impact examples for how Organizational Intelligence creates measurable value across different organizational challenges.",
+    "Business Impact as category proof for how Organizational Intelligence addresses different executive business challenges.",
 };
 
 export default function SuccessStoriesPage() {
