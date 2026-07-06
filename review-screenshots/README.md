@@ -78,6 +78,27 @@ Very long pages skip the single full-page PNG when the document height exceeds `
 - Company: `/company`
 - Get Started: `/live-demo/kontakt`
 
+## Footer Menu Coverage
+
+The export also covers footer-linked and footer-adjacent resource pages so legacy pages do not escape the Brand Canon review.
+
+The script collects internal links from the rendered footer at runtime. Every internal footer link that resolves to an existing route is captured automatically. External footer links are not captured; they are listed in the generated `manifest.json` under `externalFooterLinks`.
+
+The following currently available footer/resource routes are explicitly included as review pages:
+
+- Contact: `/contact`
+- Kontakt: `/kontakt`
+- Download Center: `/downloadcenter`
+- Services: `/services`
+- Support: `/support`
+- Press: `/presse`
+- Legal Notice / Impressum: `/impressum`
+- Privacy: `/datenschutz`
+
+Current external footer links:
+
+- LinkedIn: `https://www.linkedin.com/company/aiio-gmbh/`
+
 ## Animation Handling
 
 The script waits for fonts and images, then pauses CSS animations and transitions before capture. This keeps logo marquees, hero motion, floating effects and scroll transitions in static review states.

@@ -16,7 +16,7 @@ const maxSectionHeight = Number(process.env.REVIEW_MAX_SECTION_HEIGHT ?? 2600);
 const outputRoot = path.resolve("review-screenshots");
 const dryRun = process.argv.includes("--dry-run");
 
-const reviewPages = [
+const coreReviewPages = [
   {
     name: "home",
     path: "/",
@@ -118,6 +118,55 @@ const reviewPages = [
   },
 ];
 
+const footerResourcePages = [
+  {
+    name: "contact",
+    path: "/contact",
+    autoSections: true,
+  },
+  {
+    name: "kontakt",
+    path: "/kontakt",
+    autoSections: true,
+  },
+  {
+    name: "download-center",
+    path: "/downloadcenter",
+    autoSections: true,
+  },
+  {
+    name: "services",
+    path: "/services",
+    autoSections: true,
+  },
+  {
+    name: "support",
+    path: "/support",
+    autoSections: true,
+  },
+  {
+    name: "press",
+    path: "/presse",
+    autoSections: true,
+  },
+  {
+    name: "legal-notice",
+    path: "/impressum",
+    sections: [
+      ["impressum-hero", "hero"],
+      ["impressum-content", "legal-content"],
+    ],
+  },
+  {
+    name: "privacy",
+    path: "/datenschutz",
+    sections: [
+      ["datenschutz-hero", "hero"],
+      ["datenschutz-content", "privacy-content"],
+    ],
+  },
+];
+
 function getOutputId() {
   if (process.env.REVIEW_OUTPUT_ID) {
     return process.env.REVIEW_OUTPUT_ID;
@@ -137,6 +186,43 @@ function sanitizeFilename(value) {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
+}
+
+function normalizePagePath(pagePath) {
+  const url = new URL(pagePath, "http://review.local");
+  const normalizedPath = url.pathname.replace(/\/+$/, "") || "/";
+  return `${normalizedPath}${url.search}`;
+}
+
+function pageNameFromPath(pagePath) {
+  const normalizedPath = normalizePagePath(pagePath);
+
+  if (normalizedPath === "/") {
+    return "home";
+  }
+
+  return sanitizeFilename(normalizedPath.replace(/^\//, ""));
+}
+
+function mergePageConfigs(...pageGroups) {
+  const pages = new Map();
+
+  for (const pageGroup of pageGroups) {
+    for (const pageConfig of pageGroup) {
+      const key = normalizePagePath(pageConfig.path);
+
+      if (!pages.has(key)) {
+        pages.set(key, {
+          autoSections: false,
+          sections: [],
+          ...pageConfig,
+          path: key,
+        });
+      }
+    }
+  }
+
+  return Array.from(pages.values());
 }
 
 async function waitForUrl(url, timeoutMs = 60000) {
@@ -176,6 +262,66 @@ function startLocalServer(port) {
   server.stderr.on("data", (chunk) => process.stderr.write(chunk));
 
   return server;
+}
+
+async function collectFooterLinks(page, baseUrl) {
+  await page.goto(baseUrl, { waitUntil: "networkidle" });
+  await waitForStablePage(page);
+
+  const rawLinks = await page.evaluate(() =>
+    Array.from(document.querySelectorAll("footer a[href]")).map((anchor) => ({
+      href: anchor.getAttribute("href") ?? "",
+      label:
+        anchor.textContent?.replace(/\s+/g, " ").trim() ||
+        anchor.getAttribute("aria-label") ||
+        "Footer link",
+    })),
+  );
+
+  const base = new URL(baseUrl);
+  const internal = [];
+  const external = [];
+  const seenInternal = new Set();
+  const seenExternal = new Set();
+
+  for (const link of rawLinks) {
+    const href = link.href.trim();
+
+    if (!href || href.startsWith("#") || href.startsWith("mailto:") || href.startsWith("tel:")) {
+      continue;
+    }
+
+    const target = new URL(href, baseUrl);
+
+    if (target.origin === base.origin) {
+      const normalizedPath = normalizePagePath(`${target.pathname}${target.search}`);
+
+      if (!seenInternal.has(normalizedPath)) {
+        seenInternal.add(normalizedPath);
+        internal.push({
+          label: link.label,
+          path: normalizedPath,
+        });
+      }
+    } else if (!seenExternal.has(target.toString())) {
+      seenExternal.add(target.toString());
+      external.push({
+        label: link.label,
+        url: target.toString(),
+      });
+    }
+  }
+
+  return { external, internal };
+}
+
+async function routeExists(baseUrl, pagePath) {
+  try {
+    const response = await fetch(new URL(pagePath, baseUrl), { cache: "no-store" });
+    return response.status < 400;
+  } catch {
+    return false;
+  }
 }
 
 async function withBrowser() {
@@ -306,8 +452,44 @@ async function getSectionClip(page, id) {
   }, id);
 }
 
+async function getSemanticSections(page, fallbackPageName) {
+  const sections = await page.evaluate(() => {
+    const elements = Array.from(document.querySelectorAll("main section[id], main article[id]"));
+    const seen = new Set();
+
+    return elements
+      .map((element) => {
+        const id = element.id;
+
+        if (!id || seen.has(id)) {
+          return null;
+        }
+
+        seen.add(id);
+
+        const labelSource =
+          element.getAttribute("aria-label") ||
+          element.querySelector(".eyebrow, .legal-eyebrow")?.textContent ||
+          element.querySelector("h1, h2, h3")?.textContent ||
+          id;
+
+        return [id, labelSource.replace(/\s+/g, " ").trim()];
+      })
+      .filter(Boolean);
+  });
+
+  if (sections.length > 0) {
+    return sections;
+  }
+
+  return [["__viewport__", fallbackPageName]];
+}
+
 async function captureSection(page, pageOutputDir, pageName, index, [id, label]) {
-  const clip = await getSectionClip(page, id);
+  const clip =
+    id === "__viewport__"
+      ? { height: viewport.height, width: viewport.width, x: 0, y: 0 }
+      : await getSectionClip(page, id);
   const metrics = await getDocumentMetrics(page);
 
   if (!clip) {
@@ -375,8 +557,12 @@ async function capturePage(page, baseUrl, pageConfig, outputDir) {
     );
   }
 
+  const sections = pageConfig.autoSections
+    ? await getSemanticSections(page, pageConfig.name)
+    : pageConfig.sections;
   const sectionFiles = [];
-  for (const [sectionIndex, section] of pageConfig.sections.entries()) {
+
+  for (const [sectionIndex, section] of sections.entries()) {
     const files = await captureSection(
       page,
       pageOutputDir,
@@ -409,11 +595,18 @@ async function main() {
           maxFullPageHeight,
           maxSectionHeight,
           outputDir,
-          pages: reviewPages.map(({ name, path: pagePath, sections }) => ({
-            name,
-            path: pagePath,
-            sections: sections.map(([id, label]) => ({ id, label })),
-          })),
+          pages: mergePageConfigs(coreReviewPages, footerResourcePages).map(
+            ({ autoSections, name, path: pagePath, sections }) => ({
+              name,
+              path: pagePath,
+              autoSections,
+              sections: sections.map(([id, label]) => ({ id, label })),
+            }),
+          ),
+          footerLinks: {
+            note:
+              "Footer links are collected at runtime. Internal routes are captured; external URLs are listed in manifest.json and skipped.",
+          },
           viewport,
         },
         null,
@@ -433,6 +626,8 @@ async function main() {
   let browser = null;
   let context = null;
   const results = {};
+  const skippedPages = [];
+  let footerLinks = { external: [], internal: [] };
 
   try {
     await waitForUrl(baseUrl);
@@ -446,7 +641,25 @@ async function main() {
     });
     const page = await context.newPage();
 
+    footerLinks = await collectFooterLinks(page, baseUrl);
+    const footerPages = footerLinks.internal.map((link) => ({
+      autoSections: true,
+      name: pageNameFromPath(link.path),
+      path: link.path,
+    }));
+    const reviewPages = mergePageConfigs(coreReviewPages, footerResourcePages, footerPages);
+
     for (const pageConfig of reviewPages) {
+      if (!(await routeExists(baseUrl, pageConfig.path))) {
+        skippedPages.push({
+          name: pageConfig.name,
+          path: pageConfig.path,
+          reason: "Route returned 404 or could not be reached.",
+        });
+        console.log(`Skipped ${pageConfig.name}; route is not available.`);
+        continue;
+      }
+
       results[pageConfig.name] = await capturePage(page, baseUrl, pageConfig, outputDir);
       console.log(`Captured ${pageConfig.name}`);
     }
@@ -458,8 +671,11 @@ async function main() {
           baseUrl,
           createdAt: new Date().toISOString(),
           deviceScaleFactor,
+          externalFooterLinks: footerLinks.external,
+          internalFooterLinks: footerLinks.internal,
           outputId,
           pages: results,
+          skippedPages,
           viewport,
         },
         null,
