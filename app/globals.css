@@ -14392,3 +14392,114 @@ section[id],
     padding-top: 0;
   }
 }
+
+/* Platform journey final alignment */
+.website-capability-section > .editorial-shell.website-page-shell {
+  width: min(100% - 40px, 1440px);
+}
+
+.website-capability-journey,
+.website-capability-grid {
+  gap: clamp(16px, 1.35vw, 22px);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.website-capability-journey {
+  margin: clamp(20px, 2.2vw, 34px) 0 clamp(16px, 1.7vw, 26px);
+}
+
+.website-capability-journey-step {
+  min-height: 78px;
+  padding-inline: clamp(8px, 1vw, 14px);
+}
+
+.website-capability-card {
+  --capability-image-height: clamp(236px, 15.6vw, 306px);
+  --capability-index-height: 1.15rem;
+  --capability-heading-height: 4.05rem;
+  --capability-product-height: 3.08rem;
+  --capability-copy-height: 6.8rem;
+  --capability-quote-offset: clamp(22px, 1.7vw, 30px);
+  --capability-quote-height: 8.35rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: clamp(11px, 0.9vw, 16px);
+  min-height: clamp(688px, 49vw, 760px);
+  padding-bottom: clamp(24px, 2vw, 32px);
+}
+
+.website-capability-card h3 {
+  min-height: var(--capability-heading-height);
+}
+
+.journey-card-visual {
+  flex: 0 0 var(--capability-image-height);
+  height: var(--capability-image-height);
+}
+
+.journey-card-description {
+  flex: 0 0 auto;
+  min-height: var(--capability-copy-height);
+}
+
+.journey-card-insight {
+  flex: 1 1 auto;
+  min-height: var(--capability-quote-height);
+}
+
+.journey-card-cta {
+  margin-top: auto;
+}
+
+@media (max-width: 1180px) {
+  .website-capability-section > .editorial-shell.website-page-shell {
+    width: min(100% - 40px, 1180px);
+  }
+
+  .website-capability-journey,
+  .website-capability-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .website-capability-card {
+    --capability-image-height: clamp(250px, 30vw, 340px);
+    --capability-copy-height: 6.4rem;
+    --capability-quote-height: 7.5rem;
+    min-height: clamp(670px, 68vw, 810px);
+  }
+
+  .website-capability-journey::before,
+  .website-capability-journey::after {
+    display: none;
+  }
+
+  .website-capability-journey-step:not(:last-child)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .website-capability-section > .editorial-shell.website-page-shell {
+    width: min(100% - 28px, 1180px);
+  }
+
+  .website-capability-journey,
+  .website-capability-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .website-capability-card {
+    --capability-image-height: clamp(230px, 62vw, 320px);
+    --capability-heading-height: auto;
+    --capability-copy-height: auto;
+    --capability-quote-height: auto;
+    min-height: 0;
+  }
+
+  .website-capability-card h3,
+  .journey-card-description,
+  .journey-card-insight {
+    min-height: 0;
+  }
+}
