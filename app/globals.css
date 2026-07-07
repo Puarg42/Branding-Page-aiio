@@ -4106,7 +4106,7 @@ h1 {
   margin: 0;
 }
 
-.organization-header p {
+.organization-header p:not(.editorial-eyebrow) {
   color: rgb(255 255 255 / 58%);
   font-size: clamp(1.05rem, 1.55vw, 1.36rem);
   line-height: 1.42;
@@ -5722,7 +5722,7 @@ h1 {
     margin-bottom: 72px;
   }
 
-  .organization-header p,
+  .organization-header p:not(.editorial-eyebrow),
   .company-purpose-copy p,
   .company-principle p {
     font-size: 1.04rem;
@@ -12531,8 +12531,8 @@ section[id],
 }
 
 .organization-header {
-  display: block;
-  gap: 0;
+  display: grid;
+  gap: 24px;
   margin-bottom: clamp(72px, 7vw, 128px);
   max-width: 980px;
 }
@@ -12541,8 +12541,8 @@ section[id],
   margin: 0 auto;
 }
 
-.organization-header p {
-  margin: clamp(26px, 2.8vw, 42px) auto 0;
+.organization-header p:not(.editorial-eyebrow) {
+  margin: 0 auto;
 }
 
 .organization-closing-block {
