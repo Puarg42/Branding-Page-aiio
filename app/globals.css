@@ -4177,22 +4177,6 @@ h1 {
   width: 100%;
 }
 
-.imagine-section-title {
-  color: rgb(255 255 255 / 46%);
-  font-size: 0.78rem;
-  font-weight: 820;
-  left: 50%;
-  letter-spacing: 0.14em;
-  margin: 0;
-  position: sticky;
-  text-align: center;
-  text-transform: uppercase;
-  top: 108px;
-  transform: translateX(-50%);
-  width: max-content;
-  z-index: 2;
-}
-
 .imagine-moment {
   align-items: center;
   display: grid;
@@ -5761,10 +5745,6 @@ h1 {
 
   .organization-bottom-statement p {
     font-size: 2rem;
-  }
-
-  .imagine-section-title {
-    top: 82px;
   }
 
   .imagine-moment {
@@ -12596,6 +12576,7 @@ section[id],
 }
 
 .trust-reference-copy h2 {
+  color: var(--bc-color-heading);
   max-width: 1120px;
 }
 
@@ -14290,9 +14271,13 @@ section[id],
 }
 
 .hero-visual .brand-canon-image {
+  display: block;
   filter: saturate(1.2) contrast(1.24) brightness(1.02);
+  height: 100%;
+  object-fit: cover;
   object-position: 56% 48%;
   transform: scale(1.015);
+  width: 100%;
 }
 
 .hero-visual::after {
@@ -14315,52 +14300,16 @@ section[id],
 
 .concept-inner {
   align-items: center;
-  grid-template-columns: minmax(0, 0.92fr) minmax(360px, 0.72fr);
+  grid-template-columns: minmax(0, 940px);
+  justify-content: start;
 }
 
-.missing-capability-visual {
-  align-self: stretch;
-  background:
-    radial-gradient(circle at 50% 48%, rgb(179 145 255 / 20%), transparent 24%),
-    radial-gradient(circle at 58% 56%, rgb(24 214 255 / 12%), transparent 32%),
-    linear-gradient(135deg, rgb(255 255 255 / 7%), rgb(255 255 255 / 1.5%));
-  border: 1px solid rgb(255 255 255 / 10%);
-  border-radius: 2px;
-  box-shadow:
-    inset 0 1px 0 rgb(255 255 255 / 8%),
-    0 42px 120px rgb(0 0 0 / 28%);
-  isolation: isolate;
-  margin: 0;
-  min-height: clamp(420px, 36vw, 620px);
-  overflow: hidden;
-  position: relative;
+.concept-inner-text .concept-copy {
+  max-width: 940px;
 }
 
-.missing-capability-visual::before {
-  background:
-    linear-gradient(90deg, rgb(255 255 255 / 18%), transparent 18%, transparent 82%, rgb(255 255 255 / 14%)),
-    linear-gradient(180deg, transparent 0%, rgb(255 255 255 / 12%) 50%, transparent 100%);
-  content: "";
-  inset: 9% 7%;
-  opacity: 0.38;
-  position: absolute;
-  transform: perspective(800px) rotateX(60deg) rotateZ(-3deg);
-  transform-origin: center;
-  z-index: -1;
-}
-
-.missing-capability-visual::after {
-  background:
-    radial-gradient(circle, rgb(255 255 255 / 56%) 0 1px, transparent 2px),
-    radial-gradient(circle at 50% 50%, rgb(24 214 255 / 28%), transparent 22%),
-    radial-gradient(circle at 50% 50%, rgb(179 145 255 / 22%), transparent 36%);
-  background-size: 68px 68px, 100% 100%, 100% 100%;
-  content: "";
-  inset: 0;
-  opacity: 0.5;
-  position: absolute;
-  -webkit-mask-image: radial-gradient(ellipse at center, #000 0%, rgb(0 0 0 / 76%) 44%, transparent 82%);
-  mask-image: radial-gradient(ellipse at center, #000 0%, rgb(0 0 0 / 76%) 44%, transparent 82%);
+.concept-inner-text .concept-support {
+  max-width: 660px;
 }
 
 .executive-cta-section {
@@ -14411,10 +14360,6 @@ section[id],
     grid-template-columns: 1fr;
   }
 
-  .missing-capability-visual {
-    min-height: clamp(360px, 52vw, 560px);
-  }
-
   .executive-cta-actions {
     justify-content: flex-start;
   }
@@ -14436,10 +14381,6 @@ section[id],
   .concept-section,
   .executive-cta-section {
     padding: 96px 0 112px;
-  }
-
-  .missing-capability-visual {
-    min-height: clamp(300px, 84vw, 440px);
   }
 
   .executive-cta-inner {

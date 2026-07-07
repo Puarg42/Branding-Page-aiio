@@ -32,32 +32,6 @@ const problemCards = [
   },
 ] as const;
 
-const imagineMoments = [
-  {
-    statement: "Imagine an organization that never loses its knowledge.",
-    support: "Knowledge stays.",
-  },
-  {
-    statement: "Imagine an organization where context is never lost.",
-    support: "Every decision carries memory forward.",
-  },
-  {
-    statement:
-      "Imagine an organization that continuously develops new capabilities.",
-    support: "Every interaction strengthens it.",
-  },
-  {
-    statement: "Imagine an organization that is resilient by design.",
-    support: (
-      <>
-        Prepared for change.
-        <br />
-        Ready for the unknown.
-      </>
-    ),
-  },
-] as const;
-
 const trustSignals = [
   {
     title: "Enterprise Complexity",
@@ -206,7 +180,7 @@ function ProblemSection() {
 function ConceptBreakthrough() {
   return (
     <section className="concept-section" id="organizational-intelligence">
-      <div className="concept-inner">
+      <div className="concept-inner concept-inner-text">
         <div className="concept-copy">
           <EditorialEyebrow>The Missing Capability</EditorialEyebrow>
           <h2>The missing capability is continuous self-understanding.</h2>
@@ -225,10 +199,6 @@ function ConceptBreakthrough() {
             decisions and action depend on scattered memory.
           </p>
         </div>
-        <figure
-          aria-label="Reserved editorial space for BC005, the future Brand Canon illustration for Organizational Self-Understanding"
-          className="missing-capability-visual"
-        />
       </div>
     </section>
   );
@@ -260,27 +230,6 @@ function NewKindOrganization() {
           <p>More resilience.</p>
         </div>
       </div>
-    </section>
-  );
-}
-
-function ImagineFuture() {
-  return (
-    <section className="imagine-section" id="imagine">
-      <p className="imagine-section-title">Imagine...</p>
-      {imagineMoments.map((moment) => (
-        <section className="imagine-moment" key={moment.statement}>
-          <div className="imagine-copy">
-            <h2>{moment.statement}</h2>
-            <p>{moment.support}</p>
-          </div>
-        </section>
-      ))}
-      <section className="imagine-moment imagine-final">
-        <div className="imagine-copy">
-          <h2>This is the Self-Empowering Organization.</h2>
-        </div>
-      </section>
     </section>
   );
 }
