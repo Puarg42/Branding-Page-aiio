@@ -180,6 +180,22 @@ BC102 remains the Platform Explanation Illustration.
 
 BC003 becomes the Platform Hero Illustration.
 
+#### BC005
+
+Missing Capability
+
+Official asset:
+
+`public/brand-canon/005-missing-capability.png`
+
+Purpose: dedicated Home page illustration for the Missing Capability section.
+
+BC005 is placed directly between the editorial eyebrow and the Missing Capability headline.
+
+It bridges the editorial chapter label and the explanation of the missing organizational capability.
+
+BC005 must not be cropped, recolored, redrawn, labelled, overlaid or used as a generic decorative background.
+
 ### BC200
 
 ORGANIZATIONAL CAPABILITIES

@@ -179,6 +179,11 @@ function ConceptBreakthrough() {
       <div className="concept-inner concept-inner-text">
         <div className="concept-copy">
           <EditorialEyebrow>The Missing Capability</EditorialEyebrow>
+          <BrandIllustration
+            className="missing-capability-illustration"
+            decorative={false}
+            variant="BC-005"
+          />
           <h2>The missing capability is continuous self-understanding.</h2>
           <div className="concept-statement">
             <p>Organizations collect information, document processes and introduce AI.</p>
@@ -195,7 +200,6 @@ function ConceptBreakthrough() {
             decisions and action depend on scattered memory.
           </p>
         </div>
-        {/* Editorial Override: keep this text-led until the dedicated BC005 illustration exists. */}
       </div>
     </section>
   );

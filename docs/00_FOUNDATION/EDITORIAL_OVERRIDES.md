@@ -46,7 +46,7 @@ Future standardization must preserve documented Editorial Overrides unless a spr
 ### Home
 
 - The Hero is intentionally larger and more iconic than standard editorial heroes. It acts as the executive symbol of Organizational Intelligence, not as a generic page opening.
-- The Missing Capability section intentionally uses a dedicated Brand Canon illustration, BC005, once that asset exists. Until BC005 exists, the section is intentionally text-led and must not show temporary UI placeholders, blank image containers, or substitute diagrams.
+- The Missing Capability section intentionally uses the dedicated Brand Canon illustration BC005. It must not show temporary UI placeholders, blank image containers, substitute diagrams, dashboards, or generic UI graphics.
 - Enterprise Trust intentionally differs from ordinary editorial sections to create emotional trust before customer references. Its composition may use a more immersive trust rhythm while preserving canonical typography and eyebrow behavior.
 - The Monday Morning sequence intentionally behaves as editorial scrollytelling rather than a standard content section.
 

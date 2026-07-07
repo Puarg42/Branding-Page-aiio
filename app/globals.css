@@ -14322,6 +14322,22 @@ story rhythm. Preserve this art direction unless a sprint targets Home.
   max-width: 660px;
 }
 
+.missing-capability-illustration.brand-canon-figure {
+  border-radius: var(--bc-radius-card);
+  margin: 0 0 clamp(36px, 5vw, 72px);
+  max-width: min(100%, 1120px);
+  overflow: hidden;
+  width: 100%;
+}
+
+.missing-capability-illustration .brand-canon-image {
+  border-radius: inherit;
+  display: block;
+  height: auto;
+  object-fit: contain;
+  width: 100%;
+}
+
 .executive-cta-section {
   background:
     radial-gradient(circle at 50% 0%, rgb(179 145 255 / 13%), transparent 34%),

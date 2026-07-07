@@ -48,6 +48,18 @@ Usage: Platform Hero only.
 
 Never use BC003 to replace BC001, BC002 or any capability illustration. BC001 remains the Organizational Mind illustration. BC002 remains the Platform explanation illustration.
 
+### BC005
+
+`005-missing-capability.png`
+
+Official name: BC005 - Missing Capability.
+
+Purpose: dedicated Home page illustration for the Missing Capability section.
+
+Usage: Home Missing Capability section only, placed between the editorial eyebrow and the section headline.
+
+Never crop, recolor, redraw, add labels, add overlays or use BC005 as a generic decorative background.
+
 ### BC201
 
 `201-organizational-source-code.png`

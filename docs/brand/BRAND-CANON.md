@@ -84,6 +84,28 @@ Never use as decorative background artwork.
 
 Never allow it to dominate a page.
 
+#### BC005
+
+Missing Capability
+
+Asset
+
+`public/brand-canon/005-missing-capability.png`
+
+Purpose
+
+Dedicated Home page illustration for the Missing Capability section.
+
+Used on
+
+- Home Missing Capability section
+
+Placement
+
+Directly between the editorial eyebrow and the section headline.
+
+Never crop, recolor, redraw, add labels, add overlays or use as a generic decorative background.
+
 ### BC200
 
 ORGANIZATIONAL CAPABILITIES
