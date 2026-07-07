@@ -306,7 +306,13 @@ export default function PlatformPage() {
                   description:
                     "Your organization continuously develops and improves its own capabilities.",
                   label: "Organizational Self-Empowerment",
-                  meta: "Level 4 · DataForge",
+                  meta: (
+                    <>
+                      Level 4 ·
+                      <br />
+                      DATAFORGE
+                    </>
+                  ),
                   tone: "amber",
                 },
                 {

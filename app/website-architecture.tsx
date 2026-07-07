@@ -13,6 +13,7 @@ import {
   EditorialSectionHeader,
   JourneyCard,
 } from "../components/brand/BrandCanonFoundation";
+import { EditorialEyebrow } from "../components/brand/EditorialEyebrow";
 import { EditorialJumpArrow } from "../components/brand/EditorialJumpArrow";
 import type { EditorialSectionNavigatorItem } from "../components/brand/EditorialSectionNavigator";
 import { TheoryReference } from "../components/brand/TheoryReference";
@@ -220,12 +221,14 @@ export function CapabilityTeaserGrid({
       ariaLabel="Platform capabilities"
       shellClassName="website-page-shell"
     >
-        <EditorialSectionHeader
-          className="website-section-heading"
-          eyebrow="The Journey"
-          lead="Every platform layer turns organizational reality into a stronger capability. Each level creates the prerequisite for the next."
-          title="How aiio creates organizational capabilities."
-        />
+        <div className="website-section-heading">
+          <EditorialEyebrow>The Journey</EditorialEyebrow>
+          <h2>How aiio creates organizational capabilities.</h2>
+          <p>
+            Every platform layer turns organizational reality into a stronger
+            capability. Each level creates the prerequisite for the next.
+          </p>
+        </div>
         <div className="website-capability-journey" aria-label="Capability journey">
           {journey.map((step, index) => (
             <JourneyCard
