@@ -6,7 +6,18 @@ import {
   type BrandIllustrationVariant,
 } from "./BrandIllustration";
 
-const capabilityVariants: BrandIllustrationVariant[] = ["BC201", "BC202", "BC203", "BC204"];
+const brandCanonNavigationVariants: BrandIllustrationVariant[] = [
+  "BC-001",
+  "BC-002",
+  "BC-003",
+  "BC-004",
+  "BC-005",
+  "BC-006",
+  "BC201",
+  "BC202",
+  "BC203",
+  "BC204",
+];
 
 type BrandCanonOpenEvent = CustomEvent<{
   variant: BrandIllustrationVariant;
@@ -35,16 +46,16 @@ export function BrandCanonLightbox() {
   const touchDistanceRef = useRef(0);
 
   const activeAsset = activeVariant ? brandCanonAssets[activeVariant] : null;
-  const canSwitchCapabilities = activeVariant
-    ? capabilityVariants.includes(activeVariant)
+  const canNavigateBrandCanon = activeVariant
+    ? brandCanonNavigationVariants.includes(activeVariant)
     : false;
 
-  const activeCapabilityIndex = useMemo(() => {
+  const activeBrandCanonIndex = useMemo(() => {
     if (!activeVariant) {
       return -1;
     }
 
-    return capabilityVariants.indexOf(activeVariant);
+    return brandCanonNavigationVariants.indexOf(activeVariant);
   }, [activeVariant]);
 
   function closeLightbox() {
@@ -52,16 +63,17 @@ export function BrandCanonLightbox() {
     setZoom(1);
   }
 
-  function switchCapability(direction: -1 | 1) {
-    if (!canSwitchCapabilities || activeCapabilityIndex < 0) {
+  function switchBrandCanonAsset(direction: -1 | 1) {
+    if (!canNavigateBrandCanon || activeBrandCanonIndex < 0) {
       return;
     }
 
     const nextIndex =
-      (activeCapabilityIndex + direction + capabilityVariants.length) % capabilityVariants.length;
+      (activeBrandCanonIndex + direction + brandCanonNavigationVariants.length) %
+      brandCanonNavigationVariants.length;
 
     setZoom(1);
-    setActiveVariant(capabilityVariants[nextIndex]);
+    setActiveVariant(brandCanonNavigationVariants[nextIndex]);
   }
 
   function handleWheel(event: WheelEvent<HTMLDivElement>) {
@@ -117,11 +129,11 @@ export function BrandCanonLightbox() {
       }
 
       if (event.key === "ArrowLeft") {
-        switchCapability(-1);
+        switchBrandCanonAsset(-1);
       }
 
       if (event.key === "ArrowRight") {
-        switchCapability(1);
+        switchBrandCanonAsset(1);
       }
     }
 
@@ -133,7 +145,7 @@ export function BrandCanonLightbox() {
       document.documentElement.style.overflow = previousOverflow;
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [activeCapabilityIndex, activeVariant, canSwitchCapabilities]);
+  }, [activeBrandCanonIndex, activeVariant, canNavigateBrandCanon]);
 
   if (!activeVariant || !activeAsset) {
     return null;
@@ -160,20 +172,20 @@ export function BrandCanonLightbox() {
         Close
       </button>
 
-      {canSwitchCapabilities ? (
+      {canNavigateBrandCanon ? (
         <>
           <button
-            aria-label="Previous capability illustration"
+            aria-label="Previous Brand Canon illustration"
             className="brand-canon-lightbox-nav is-prev"
-            onClick={() => switchCapability(-1)}
+            onClick={() => switchBrandCanonAsset(-1)}
             type="button"
           >
             Prev
           </button>
           <button
-            aria-label="Next capability illustration"
+            aria-label="Next Brand Canon illustration"
             className="brand-canon-lightbox-nav is-next"
-            onClick={() => switchCapability(1)}
+            onClick={() => switchBrandCanonAsset(1)}
             type="button"
           >
             Next

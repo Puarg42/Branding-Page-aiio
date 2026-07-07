@@ -60,6 +60,18 @@ Usage: Home Missing Capability section only, placed between the editorial eyebro
 
 Never crop, recolor, redraw, add labels, add overlays or use BC005 as a generic decorative background.
 
+### BC006
+
+`006-organizational-intelligence-system.png`
+
+Official name: BC006 - The Organizational Intelligence System.
+
+Purpose: illustrates the complete Organizational Intelligence System and the relationship between Organizational Reality, ProcessCollector, ProcessMagnet, ProcessForge, DataForge, Organizational Self-Understanding, Organizational Intelligence, Organizational Capabilities, Organizational Self-Empowering and Organizational Resilience.
+
+Usage: Brand Canon system reference, executive explanation and editorial system context.
+
+Never crop, recolor, redraw, add labels, add overlays or reinterpret BC006. The Brand Canon adapts to the approved asset, not the other way around.
+
 ### BC201
 
 `201-organizational-source-code.png`

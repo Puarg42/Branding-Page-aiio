@@ -196,6 +196,20 @@ It bridges the editorial chapter label and the explanation of the missing organi
 
 BC005 must not be cropped, recolored, redrawn, labelled, overlaid or used as a generic decorative background.
 
+#### BC006
+
+The Organizational Intelligence System
+
+Official asset:
+
+`public/brand-canon/006-organizational-intelligence-system.png`
+
+Purpose: illustrates the complete Organizational Intelligence System and the relationship between Organizational Reality, ProcessCollector, ProcessMagnet, ProcessForge, DataForge, Organizational Self-Understanding, Organizational Intelligence, Organizational Capabilities, Organizational Self-Empowering and Organizational Resilience.
+
+BC006 is placed after BC005 in the Brand Canon and belongs to the official system illustration set.
+
+BC006 must not be cropped, recolored, redrawn, labelled, overlaid, reinterpreted or regenerated.
+
 ### BC200
 
 ORGANIZATIONAL CAPABILITIES

@@ -106,6 +106,37 @@ Directly between the editorial eyebrow and the section headline.
 
 Never crop, recolor, redraw, add labels, add overlays or use as a generic decorative background.
 
+#### BC006
+
+The Organizational Intelligence System
+
+Asset
+
+`public/brand-canon/006-organizational-intelligence-system.png`
+
+Purpose
+
+Illustrates the complete Organizational Intelligence System and the relationship between:
+
+- Organizational Reality
+- ProcessCollector
+- ProcessMagnet
+- ProcessForge
+- DataForge
+- Organizational Self-Understanding
+- Organizational Intelligence
+- Organizational Capabilities
+- Organizational Self-Empowering
+- Organizational Resilience
+
+Used on
+
+- Brand Canon system references
+- Executive explanations
+- Editorial system context
+
+Never crop, recolor, redraw, add labels, add overlays, reinterpret or regenerate the artwork.
+
 ### BC200
 
 ORGANIZATIONAL CAPABILITIES
