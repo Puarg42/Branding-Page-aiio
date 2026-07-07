@@ -4,6 +4,8 @@ The aiio Branding Website uses one editorial design system.
 
 Platform is the current reference implementation. Other pages should not define their own interpretation of common editorial elements. They should compose the shared Brand Canon foundation.
 
+Brand Canon is the reusable design system. It does not erase intentional page-specific art direction. Documented Editorial Overrides live in `docs/00_FOUNDATION/EDITORIAL_OVERRIDES.md` and must be preserved unless a sprint explicitly changes them.
+
 ## Components
 
 Use the shared components in `components/brand/BrandCanonFoundation.tsx`.
@@ -127,3 +129,13 @@ Future pages should compose the Brand Canon foundation first.
 Only add a page-specific class when the page has a real editorial reason.
 
 Business value leads. Theory proves. Product delivers. The visual system should support that hierarchy without becoming decorative.
+
+## Future Sprint Rule
+
+Future implementation sprints must follow this order:
+
+1. Respect Editorial Overrides.
+2. Apply Brand Canon.
+3. Implement requested changes.
+
+Do not perform cleanup or standardization that removes documented Editorial Overrides.

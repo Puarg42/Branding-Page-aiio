@@ -14258,7 +14258,10 @@ section[id],
   }
 }
 
-/* Home executive narrative */
+/*
+Editorial Override: Home uses a larger symbolic Hero and bespoke executive
+story rhythm. Preserve this art direction unless a sprint targets Home.
+*/
 .main-nav {
   gap: clamp(20px, 2.35vw, 42px);
 }

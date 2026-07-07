@@ -199,6 +199,7 @@ function ConceptBreakthrough() {
             decisions and action depend on scattered memory.
           </p>
         </div>
+        {/* Editorial Override: keep this text-led until the dedicated BC005 illustration exists. */}
       </div>
     </section>
   );
