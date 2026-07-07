@@ -31,7 +31,7 @@ export default function DemoKontaktPage() {
         shellClassName="request-demo-shell request-demo-hero-grid"
       >
           <div className="request-demo-copy">
-            <EditorialEyebrow>Request Demo</EditorialEyebrow>
+            <EditorialEyebrow>The Conversation</EditorialEyebrow>
             <h1 id="request-demo-title">Start with the right conversation.</h1>
             <p>
               For demos, platform questions and partnership conversations.

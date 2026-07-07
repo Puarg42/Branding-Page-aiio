@@ -118,7 +118,7 @@ export default function AcademyPage() {
           </div>
 
           <div className="academy-hero-copy">
-            <EditorialEyebrow>Academy</EditorialEyebrow>
+            <EditorialEyebrow>The Learning System</EditorialEyebrow>
             <h1>Learn Organizational Intelligence.</h1>
             <p>
               From understanding your organization to continuously developing

@@ -205,7 +205,7 @@ export const resourcePages: Record<ResourceSlug, ResourcePageData> = {
     ],
   },
   "success-stories": {
-    eyebrow: "Business Impact",
+    eyebrow: "The Impact",
     title: getEditableContent(
       "resource.success.title",
       "Organizational Intelligence creates measurable business value.",
@@ -1036,7 +1036,7 @@ function BusinessImpactPage() {
       <MainHeader variant="solid" />
       <section className="business-impact-hero" id="business-impact-hero">
         <div className="business-impact-shell">
-          <EditorialEyebrow>Business Impact</EditorialEyebrow>
+          <EditorialEyebrow>The Impact</EditorialEyebrow>
           <h1>Different business challenges. One missing capability.</h1>
           <div className="business-impact-lead">
             <p>

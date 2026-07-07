@@ -41,7 +41,7 @@ const companySectionNavigator = [
 export default function CompanyPage() {
   return (
     <WebsiteArchitecturePage
-      eyebrow="Company"
+      eyebrow="The Purpose"
       heroId="company-hero"
       intro={
         <>

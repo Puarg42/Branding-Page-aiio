@@ -185,7 +185,7 @@ function ProblemSection() {
   return (
     <section className="problem-section" id="problem">
       <div className="problem-inner">
-        <EditorialEyebrow>The Problem</EditorialEyebrow>
+        <EditorialEyebrow>The Challenge</EditorialEyebrow>
         <h2>Organizations know more than they can use.</h2>
         <EditorialGrid className="problem-grid" columns="four">
           {problemCards.map((card) => (
@@ -263,7 +263,7 @@ function NewKindOrganization() {
       </div>
       <div className="organization-inner">
         <div className="organization-header">
-          <EditorialEyebrow>Outcome</EditorialEyebrow>
+          <EditorialEyebrow>The Impact</EditorialEyebrow>
           <h2>A more resilient organization creates better work.</h2>
           <p>Your organization makes better decisions, executes with less rework and adapts with more confidence.</p>
         </div>
@@ -345,7 +345,7 @@ function TrustReferences() {
     <section className="trust-reference-section" id="trust">
       <div className="trust-reference-inner">
         <div className="trust-reference-copy">
-          <EditorialEyebrow>Trust</EditorialEyebrow>
+          <EditorialEyebrow>The Trust</EditorialEyebrow>
           <h2>
             Trusted by organizations operating in complex, regulated and
             knowledge-intensive environments.

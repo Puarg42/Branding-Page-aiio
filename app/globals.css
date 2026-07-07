@@ -13746,17 +13746,6 @@ section[id],
   }
 }
 
-/* Sprint E.1 - Home narrative refinement and Platform alignment */
-.editorial-eyebrow {
-  color: rgb(179 145 255 / 86%);
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  line-height: 1;
-  margin: 0 0 34px;
-  text-transform: uppercase;
-}
-
 .home-section-kicker {
   align-items: center;
   display: flex;
@@ -13806,13 +13795,7 @@ section[id],
   outline-offset: 4px;
 }
 
-.category-evolution-title.editorial-eyebrow,
-.capability-journey-intro .editorial-eyebrow {
-  margin-bottom: clamp(28px, 4vw, 52px);
-}
-
 .ceo-moment-title.editorial-eyebrow {
-  color: rgb(179 145 255 / 78%);
   left: 50%;
   margin: 0;
   position: sticky;
@@ -14026,28 +14009,24 @@ section[id],
 
 /* Sprint E.2 - Editorial scrollytelling completion */
 .editorial-eyebrow {
-  color: rgb(179 145 255 / 86%);
+  color: var(--bc-color-eyebrow);
   font-family: var(--font-aiio-heading);
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
+  font-size: var(--bc-type-eyebrow);
+  font-weight: 700;
+  letter-spacing: 0.16em;
   line-height: 1;
-  margin: 0 0 clamp(28px, 4vw, 52px);
+  margin: 0 0 clamp(24px, 3vw, 40px);
+  text-align: left;
   text-transform: uppercase;
 }
 
 .website-section-heading > .editorial-eyebrow,
 .website-hero .editorial-eyebrow {
-  margin-bottom: 22px;
+  margin-bottom: clamp(18px, 2.2vw, 28px);
 }
 
 .home-section-kicker .editorial-eyebrow {
   margin: 0;
-}
-
-.category-evolution-title.editorial-eyebrow,
-.capability-journey-intro .editorial-eyebrow {
-  margin-bottom: clamp(28px, 4vw, 52px);
 }
 
 .ceo-moment-section {

@@ -15,7 +15,7 @@ const contactSectionNavigator = [
 export default function ContactPage() {
   return (
     <WebsiteArchitecturePage
-      eyebrow="Contact"
+      eyebrow="The Conversation"
       heroId="contact-hero"
       intro="For demos, platform questions and partnership conversations."
       sectionNavigator={contactSectionNavigator}

@@ -222,7 +222,7 @@ export function CapabilityTeaserGrid({
     >
         <EditorialSectionHeader
           className="website-section-heading"
-          eyebrow="Journey"
+          eyebrow="The Journey"
           lead="Every platform layer turns organizational reality into a stronger capability. Each level creates the prerequisite for the next."
           title="How aiio creates organizational capabilities."
         />

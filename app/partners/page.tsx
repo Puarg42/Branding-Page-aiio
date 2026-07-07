@@ -47,7 +47,7 @@ const partnersSectionNavigator = [
 export default function PartnersPage() {
   return (
     <WebsiteArchitecturePage
-      eyebrow="Partners"
+      eyebrow="The Ecosystem"
       heroId="partners-hero"
       intro={
         <>

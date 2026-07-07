@@ -163,7 +163,7 @@ function TheoryTerm({
 export default function PlatformPage() {
   return (
     <WebsiteArchitecturePage
-      eyebrow="Platform"
+      eyebrow="The System"
       heroId="platform-hero"
       heroVisual={
         <BrandIllustration
@@ -201,7 +201,7 @@ export default function PlatformPage() {
       >
           <div className="website-platform-missing-layout">
             <div className="website-section-heading website-platform-missing-copy">
-              <EditorialEyebrow>Missing Capability</EditorialEyebrow>
+              <EditorialEyebrow>The Missing Capability</EditorialEyebrow>
               <h2>
                 Organizations already collect more than they can continuously
                 understand.
@@ -264,7 +264,7 @@ export default function PlatformPage() {
         shellClassName="website-page-shell"
       >
           <div className="website-platform-conclusion">
-            <EditorialEyebrow>Outcome</EditorialEyebrow>
+            <EditorialEyebrow>The Outcome</EditorialEyebrow>
             <h2>
               Every capability creates a measurable organizational outcome.
               The ultimate outcome is Organizational Resilience.
