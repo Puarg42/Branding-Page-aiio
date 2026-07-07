@@ -12671,8 +12671,8 @@ section[id],
 
 .trust-reference-section {
   background:
-    radial-gradient(circle at 76% 18%, rgb(179 145 255 / 5%), transparent 34%),
-    radial-gradient(circle at 30% 78%, rgb(24 214 255 / 3%), transparent 34%),
+    radial-gradient(circle at 64% 16%, rgb(255 255 255 / 3%), transparent 32%),
+    radial-gradient(circle at 30% 78%, rgb(24 214 255 / 2.5%), transparent 34%),
     linear-gradient(180deg, #030305 0%, #050507 100%);
   overflow: hidden;
   position: relative;
@@ -12812,8 +12812,8 @@ section[id],
 
 .trust-reference-quiet-image span {
   background:
-    radial-gradient(circle, rgb(179 145 255 / 18%), transparent 54%),
-    radial-gradient(circle, rgb(24 214 255 / 10%), transparent 48%);
+    radial-gradient(circle, rgb(255 255 255 / 8%), transparent 54%),
+    radial-gradient(circle, rgb(24 214 255 / 6%), transparent 48%);
   border: 1px solid rgb(255 255 255 / 9%);
   border-radius: 999px;
   filter: blur(0.2px);
@@ -13758,43 +13758,6 @@ section[id],
   margin: 0;
 }
 
-.home-platform-link {
-  align-items: center;
-  color: rgb(255 255 255 / 58%);
-  display: inline-flex;
-  font-family: var(--font-aiio-heading);
-  font-size: 0.78rem;
-  font-weight: 760;
-  gap: 7px;
-  letter-spacing: 0.08em;
-  line-height: 1;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: color 180ms ease;
-}
-
-.home-platform-link .editorial-jump-arrow {
-  color: #b391ff;
-  height: 0.76em;
-  width: 0.76em;
-}
-
-.home-platform-link:hover,
-.home-platform-link:focus-visible {
-  color: #ffffff;
-}
-
-.home-platform-link:hover .editorial-jump-arrow,
-.home-platform-link:focus-visible .editorial-jump-arrow {
-  transform: translate(4px, -3px);
-}
-
-.home-platform-link:focus-visible {
-  border-radius: 4px;
-  outline: 1px solid rgb(179 145 255 / 54%);
-  outline-offset: 4px;
-}
-
 .ceo-moment-title.editorial-eyebrow {
   left: 50%;
   margin: 0;
@@ -13959,8 +13922,7 @@ section[id],
 }
 
 @media (max-width: 720px) {
-  .editorial-eyebrow,
-  .home-platform-link {
+  .editorial-eyebrow {
     font-size: 0.74rem;
   }
 

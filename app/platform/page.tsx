@@ -264,7 +264,7 @@ export default function PlatformPage() {
         shellClassName="website-page-shell"
       >
           <div className="website-platform-conclusion">
-            <EditorialEyebrow>The Outcome</EditorialEyebrow>
+            <EditorialEyebrow>The Impact</EditorialEyebrow>
             <h2>
               Every capability creates a measurable organizational outcome.
               The ultimate outcome is Organizational Resilience.

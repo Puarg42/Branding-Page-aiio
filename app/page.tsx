@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { MainHeader } from "./main-navigation";
 import { CapabilityJourney } from "./capability-journey";
 import { CategoryEvolution, CeoMondayMoment } from "./category-reinforcement";
@@ -12,7 +11,6 @@ import {
   TrustRow,
 } from "../components/brand/BrandCanonFoundation";
 import { EditorialEyebrow } from "../components/brand/EditorialEyebrow";
-import { EditorialJumpArrow } from "../components/brand/EditorialJumpArrow";
 import { TheoryReference } from "../components/brand/TheoryReference";
 
 const problemCards = [
@@ -311,9 +309,6 @@ function OisArchitecture() {
         <div className="ois-intro">
           <div className="home-section-kicker">
             <EditorialEyebrow>The System</EditorialEyebrow>
-            <Link className="home-platform-link" href="/platform">
-              Platform <EditorialJumpArrow />
-            </Link>
           </div>
           <h2>The Organizational Intelligence System gives this capability a place to operate.</h2>
           <div className="ois-body">
