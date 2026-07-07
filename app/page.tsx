@@ -144,13 +144,13 @@ const trustMarqueeRows = [
 const homeSectionNavigator = [
   { id: "home-hero", label: "Hero" },
   { id: "monday-morning", label: "Monday" },
-  { id: "problem", label: "Problem" },
   { id: "category-evolution", label: "Why Now" },
   { id: "organizational-intelligence", label: "Missing Capability" },
-  { id: "capabilities", label: "Journey" },
   { id: "architektur", label: "System" },
+  { id: "capabilities", label: "Journey" },
   { id: "self-empowering-organization", label: "Outcome" },
-  { id: "trust", label: "Trust" },
+  { id: "trust", label: "Enterprise Trust" },
+  { id: "executive-cta", label: "Start" },
 ] as const;
 
 function Hero() {
@@ -225,27 +225,10 @@ function ConceptBreakthrough() {
             decisions and action depend on scattered memory.
           </p>
         </div>
-        <div
-          aria-label="More information does not create more understanding"
-          className="missing-layer-visual"
-        >
-          <div className="missing-layer-inputs" aria-label="Existing inputs">
-            <span>Information</span>
-            <span>Documents</span>
-            <span>Processes</span>
-            <span>AI</span>
-          </div>
-          <div className="missing-layer-operator" aria-hidden="true">
-            &ne;
-          </div>
-          <div className="missing-layer-outcome">
-            <span>More understanding</span>
-            <strong>
-              Still no continuous{" "}
-              <TheoryReference>Organizational Self-Understanding</TheoryReference>
-            </strong>
-          </div>
-        </div>
+        <figure
+          aria-label="Reserved editorial space for BC005, the future Brand Canon illustration for Organizational Self-Understanding"
+          className="missing-capability-visual"
+        />
       </div>
     </section>
   );
@@ -261,7 +244,7 @@ function NewKindOrganization() {
       </div>
       <div className="organization-inner">
         <div className="organization-header">
-          <EditorialEyebrow>The Impact</EditorialEyebrow>
+          <EditorialEyebrow>Business Impact</EditorialEyebrow>
           <h2>A more resilient organization creates better work.</h2>
           <p>Your organization makes better decisions, executes with less rework and adapts with more confidence.</p>
         </div>
@@ -338,7 +321,7 @@ function TrustReferences() {
     <section className="trust-reference-section" id="trust">
       <div className="trust-reference-inner">
         <div className="trust-reference-copy">
-          <EditorialEyebrow>The Trust</EditorialEyebrow>
+          <EditorialEyebrow>Enterprise Trust</EditorialEyebrow>
           <h2>
             Trusted by organizations operating in complex, regulated and
             knowledge-intensive environments.
@@ -391,19 +374,44 @@ function TrustReferences() {
   );
 }
 
+function ExecutiveCTA() {
+  return (
+    <section className="executive-cta-section" id="executive-cta">
+      <div className="executive-cta-inner">
+        <div className="executive-cta-copy">
+          <EditorialEyebrow>Executive CTA</EditorialEyebrow>
+          <h2>Start with the right conversation.</h2>
+          <p>
+            Explore where Organizational Intelligence can create value in your
+            organization and what the first credible next step should be.
+          </p>
+        </div>
+        <EditorialCTAGroup className="executive-cta-actions" ariaLabel="Executive actions">
+          <a className="button hero-button" href="/live-demo/kontakt">
+            Request a demo
+          </a>
+          <a className="button hero-button secondary" href="/platform">
+            Explore the system
+          </a>
+        </EditorialCTAGroup>
+      </div>
+    </section>
+  );
+}
+
 export default function Home() {
   return (
     <main>
       <MainHeader />
       <Hero />
       <CeoMondayMoment />
-      <ProblemSection />
       <CategoryEvolution />
       <ConceptBreakthrough />
-      <CapabilityJourney />
       <OisArchitecture />
+      <CapabilityJourney />
       <NewKindOrganization />
       <TrustReferences />
+      <ExecutiveCTA />
       <EditorialNavigation
         ariaLabel="Home sections"
         sections={homeSectionNavigator}

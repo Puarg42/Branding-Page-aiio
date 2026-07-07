@@ -14276,3 +14276,173 @@ section[id],
     min-height: 0;
   }
 }
+
+/* Home executive narrative */
+.main-nav {
+  gap: clamp(20px, 2.35vw, 42px);
+}
+
+.hero-visual {
+  height: min(86vh, 900px);
+  opacity: 0.68;
+  right: clamp(-300px, -8vw, -80px);
+  width: min(82vw, 1420px);
+}
+
+.hero-visual .brand-canon-image {
+  filter: saturate(1.2) contrast(1.24) brightness(1.02);
+  object-position: 56% 48%;
+  transform: scale(1.015);
+}
+
+.hero-visual::after {
+  background:
+    linear-gradient(90deg, rgb(33 11 52 / 86%) 0%, rgb(33 11 52 / 54%) 22%, rgb(33 11 52 / 12%) 48%, transparent 80%),
+    linear-gradient(180deg, rgb(5 3 6 / 70%) 0%, transparent 22%, transparent 74%, rgb(5 3 6 / 72%) 100%),
+    radial-gradient(circle at 56% 52%, rgb(24 214 255 / 13%), transparent 34%),
+    radial-gradient(circle at 68% 43%, rgb(179 145 255 / 13%), transparent 36%);
+}
+
+.hero-visual,
+.hero-visual .brand-canon-figure {
+  -webkit-mask-image:
+    radial-gradient(ellipse at 60% 52%, #000 0%, #000 46%, rgb(0 0 0 / 64%) 62%, transparent 84%),
+    linear-gradient(90deg, transparent 0%, #000 18%, #000 100%);
+  mask-image:
+    radial-gradient(ellipse at 60% 52%, #000 0%, #000 46%, rgb(0 0 0 / 64%) 62%, transparent 84%),
+    linear-gradient(90deg, transparent 0%, #000 18%, #000 100%);
+}
+
+.concept-inner {
+  align-items: center;
+  grid-template-columns: minmax(0, 0.92fr) minmax(360px, 0.72fr);
+}
+
+.missing-capability-visual {
+  align-self: stretch;
+  background:
+    radial-gradient(circle at 50% 48%, rgb(179 145 255 / 20%), transparent 24%),
+    radial-gradient(circle at 58% 56%, rgb(24 214 255 / 12%), transparent 32%),
+    linear-gradient(135deg, rgb(255 255 255 / 7%), rgb(255 255 255 / 1.5%));
+  border: 1px solid rgb(255 255 255 / 10%);
+  border-radius: 2px;
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 8%),
+    0 42px 120px rgb(0 0 0 / 28%);
+  isolation: isolate;
+  margin: 0;
+  min-height: clamp(420px, 36vw, 620px);
+  overflow: hidden;
+  position: relative;
+}
+
+.missing-capability-visual::before {
+  background:
+    linear-gradient(90deg, rgb(255 255 255 / 18%), transparent 18%, transparent 82%, rgb(255 255 255 / 14%)),
+    linear-gradient(180deg, transparent 0%, rgb(255 255 255 / 12%) 50%, transparent 100%);
+  content: "";
+  inset: 9% 7%;
+  opacity: 0.38;
+  position: absolute;
+  transform: perspective(800px) rotateX(60deg) rotateZ(-3deg);
+  transform-origin: center;
+  z-index: -1;
+}
+
+.missing-capability-visual::after {
+  background:
+    radial-gradient(circle, rgb(255 255 255 / 56%) 0 1px, transparent 2px),
+    radial-gradient(circle at 50% 50%, rgb(24 214 255 / 28%), transparent 22%),
+    radial-gradient(circle at 50% 50%, rgb(179 145 255 / 22%), transparent 36%);
+  background-size: 68px 68px, 100% 100%, 100% 100%;
+  content: "";
+  inset: 0;
+  opacity: 0.5;
+  position: absolute;
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 0%, rgb(0 0 0 / 76%) 44%, transparent 82%);
+  mask-image: radial-gradient(ellipse at center, #000 0%, rgb(0 0 0 / 76%) 44%, transparent 82%);
+}
+
+.executive-cta-section {
+  background:
+    radial-gradient(circle at 50% 0%, rgb(179 145 255 / 13%), transparent 34%),
+    radial-gradient(circle at 78% 52%, rgb(24 214 255 / 6%), transparent 30%),
+    linear-gradient(180deg, #050507 0%, #030305 100%);
+  padding: clamp(108px, 10vw, 188px) 0 clamp(126px, 12vw, 224px);
+}
+
+.executive-cta-inner {
+  align-items: end;
+  display: grid;
+  gap: clamp(34px, 5vw, 76px);
+  grid-template-columns: minmax(0, 0.78fr) auto;
+  margin: 0 auto;
+  width: min(1180px, calc(100% - 40px));
+}
+
+.executive-cta-copy {
+  max-width: 860px;
+}
+
+.executive-cta-copy h2 {
+  font-size: clamp(2.72rem, 5.35vw, 6.15rem);
+  line-height: 1;
+  margin: 0;
+  max-width: 820px;
+}
+
+.executive-cta-copy p {
+  color: rgb(255 255 255 / 70%);
+  font-family: var(--font-aiio-heading);
+  font-size: clamp(1.18rem, 1.5vw, 1.56rem);
+  line-height: 1.34;
+  margin: clamp(26px, 3vw, 42px) 0 0;
+  max-width: 680px;
+}
+
+.executive-cta-actions {
+  justify-content: flex-end;
+  margin: 0;
+}
+
+@media (max-width: 1180px) {
+  .concept-inner,
+  .executive-cta-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .missing-capability-visual {
+    min-height: clamp(360px, 52vw, 560px);
+  }
+
+  .executive-cta-actions {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero-visual {
+    height: 430px;
+    opacity: 0.32;
+    right: -300px;
+    top: 108px;
+    width: 760px;
+  }
+
+  .hero-visual .brand-canon-image {
+    filter: saturate(1.18) contrast(1.2) brightness(0.98);
+  }
+
+  .concept-section,
+  .executive-cta-section {
+    padding: 96px 0 112px;
+  }
+
+  .missing-capability-visual {
+    min-height: clamp(300px, 84vw, 440px);
+  }
+
+  .executive-cta-inner {
+    width: min(calc(100% - 28px), 1180px);
+  }
+}
