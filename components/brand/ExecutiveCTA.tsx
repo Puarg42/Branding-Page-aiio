@@ -18,7 +18,7 @@ type ExecutiveCTAProps = {
 
 export function ExecutiveCTA({
   copy,
-  eyebrow = "Executive CTA",
+  eyebrow = "Start",
   headline,
   id,
   primary,

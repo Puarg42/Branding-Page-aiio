@@ -330,7 +330,7 @@ function ExecutiveCTA() {
     <section className="executive-cta-section" id="executive-cta">
       <div className="executive-cta-inner">
         <div className="executive-cta-copy">
-          <EditorialEyebrow>Executive CTA</EditorialEyebrow>
+          <EditorialEyebrow>Start</EditorialEyebrow>
           <h2>Start with the right conversation.</h2>
           <p>
             Explore where Organizational Intelligence can create value in your
