@@ -14401,3 +14401,19 @@ story rhythm. Preserve this art direction unless a sprint targets Home.
     width: min(calc(100% - 28px), 1180px);
   }
 }
+
+/* Canonical EditorialEyebrow guard: local paragraph styles must never override the Brand Canon eyebrow. */
+p.editorial-eyebrow.eyebrow,
+p.editorial-eyebrow,
+.editorial-eyebrow {
+  color: var(--bc-color-eyebrow);
+  font-family: var(--font-aiio-heading);
+  font-size: var(--bc-type-eyebrow);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  line-height: 1;
+  margin: 0 0 clamp(24px, 3vw, 40px);
+  max-width: none;
+  text-align: left;
+  text-transform: uppercase;
+}

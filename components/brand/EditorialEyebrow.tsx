@@ -5,5 +5,5 @@ type EditorialEyebrowProps = {
 };
 
 export function EditorialEyebrow({ children }: EditorialEyebrowProps) {
-  return <p className="editorial-eyebrow">{children}</p>;
+  return <p className="editorial-eyebrow eyebrow">{children}</p>;
 }
