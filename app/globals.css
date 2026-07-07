@@ -12590,7 +12590,7 @@ section[id],
   max-width: 1120px;
 }
 
-.trust-reference-copy p {
+.trust-reference-copy p:not(.editorial-eyebrow):not(.trust-reference-lead) {
   margin: 0;
 }
 
