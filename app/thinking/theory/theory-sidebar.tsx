@@ -7,6 +7,7 @@ import {
   theoryReturnStorageKey,
   type TheoryReturnState,
 } from "../../../components/brand/theory-links";
+import { EditorialEyebrow } from "../../../components/brand/EditorialEyebrow";
 import { theoryPublication } from "../publication-model";
 
 type TheorySidebarChapter = {
@@ -136,7 +137,7 @@ export function TheorySidebar({ chapters }: TheorySidebarProps) {
       </a>
 
       <div className="theory-sidebar-intro">
-        <p className="theory-sidebar-eyebrow">Theory</p>
+        <EditorialEyebrow>Theory</EditorialEyebrow>
         <h2>Organizational Intelligence</h2>
         <p>The Theory of Organizational Understanding</p>
       </div>

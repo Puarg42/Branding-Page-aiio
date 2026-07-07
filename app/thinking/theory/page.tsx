@@ -3,6 +3,7 @@ import {
   EditorialProgression,
   type EditorialProgressionItem,
 } from "../../../components/brand/EditorialProgression";
+import { EditorialEyebrow } from "../../../components/brand/EditorialEyebrow";
 import { theoryChapters } from "./theory-content.generated";
 import { TheorySidebar } from "./theory-sidebar";
 
@@ -138,7 +139,7 @@ export default function TheoryPage() {
               <div className="theory-book-hero-shade" />
             </div>
             <div className="theory-book-hero-content">
-              <p className="theory-sidebar-eyebrow">Theory</p>
+              <EditorialEyebrow>Theory</EditorialEyebrow>
               <h1>Organizational Intelligence</h1>
               <p>The Theory of Organizational Understanding</p>
             </div>

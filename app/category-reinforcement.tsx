@@ -112,9 +112,7 @@ export function CeoMondayMoment() {
       <div className="ceo-scrolly-sticky">
         <div className="ceo-scrolly-shell">
           <div className="ceo-scrolly-chapter">
-            <EditorialEyebrow className="ceo-moment-title">
-              Imagine Monday Morning
-            </EditorialEyebrow>
+            <EditorialEyebrow>Imagine Monday Morning</EditorialEyebrow>
             <ol className="ceo-scenario-indicator" aria-label="Monday Morning scenarios">
               {ceoMoments.map((moment, index) => (
                 <li
@@ -203,7 +201,7 @@ export function CategoryEvolution() {
   return (
     <section className="category-evolution-section" id="category-evolution">
       <motion.div className="category-evolution-intro" {...reveal}>
-        <EditorialEyebrow className="category-evolution-title">Why Now</EditorialEyebrow>
+        <EditorialEyebrow>Why Now</EditorialEyebrow>
         <h2>A new era of complexity requires a new organizational capability.</h2>
       </motion.div>
 

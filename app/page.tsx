@@ -307,9 +307,7 @@ function OisArchitecture() {
     <section className="ois-section" id="architektur">
       <div className="ois-editorial-layout">
         <div className="ois-intro">
-          <div className="home-section-kicker">
-            <EditorialEyebrow>The System</EditorialEyebrow>
-          </div>
+          <EditorialEyebrow>The System</EditorialEyebrow>
           <h2>The Organizational Intelligence System gives this capability a place to operate.</h2>
           <div className="ois-body">
             <p>
