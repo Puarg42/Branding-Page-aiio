@@ -123,6 +123,28 @@ const homeSectionNavigator = [
   { id: "executive-cta", label: "Start" },
 ] as const;
 
+function HomeLogoBand() {
+  return (
+    <div aria-hidden="true" className="home-logo-band-layer">
+      <ReferenceMarquee className="home-logo-band">
+        <div className="home-logo-band-row">
+          <div className="home-logo-band-track">
+            {Array.from({ length: 3 }, (_, setIndex) => (
+              <div className="home-logo-band-set" key={setIndex}>
+                {trustReferenceLogos.map((logo) => (
+                  <figure className="home-logo-band-logo" key={`${setIndex}-${logo.alt}`}>
+                    <img alt="" loading="lazy" src={logo.src} />
+                  </figure>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+      </ReferenceMarquee>
+    </div>
+  );
+}
+
 function Hero() {
   return (
     <section className="hero" id="home-hero">
@@ -281,34 +303,6 @@ function TrustReferences() {
             the public sector use aiio to build Organizational Intelligence.
           </p>
         </div>
-
-        <ReferenceMarquee className="trust-reference-marquee" ariaLabel="Enterprise references">
-          <div className="trust-reference-marquee-row">
-            <div className="trust-reference-marquee-track">
-              {Array.from({ length: 3 }, (_, setIndex) => (
-                <div
-                  aria-hidden={setIndex > 0 ? "true" : undefined}
-                  className="trust-reference-marquee-set"
-                  key={setIndex}
-                >
-                  {trustReferenceLogos.map((logo) => (
-                    <figure
-                      className="trust-reference-logo"
-                      key={`${setIndex}-${logo.alt}`}
-                    >
-                      <img
-                        alt={setIndex > 0 ? "" : logo.alt}
-                        loading="lazy"
-                        src={logo.src}
-                      />
-                    </figure>
-                  ))}
-                </div>
-              ))}
-            </div>
-          </div>
-        </ReferenceMarquee>
-
         <TrustRow className="trust-reference-grid" ariaLabel="Trust foundations">
           {trustSignals.map((signal) => (
             <EditorialCard className="trust-reference-card" key={signal.title}>
@@ -355,17 +349,20 @@ function ExecutiveCTA() {
 
 export default function Home() {
   return (
-    <main>
+    <main className="home-page">
       <MainHeader />
-      <Hero />
-      <CeoMondayMoment />
-      <CategoryEvolution />
-      <ConceptBreakthrough />
-      <OisArchitecture />
-      <CapabilityJourney />
-      <NewKindOrganization />
-      <TrustReferences />
-      <ExecutiveCTA />
+      <div className="home-page-story">
+        <HomeLogoBand />
+        <Hero />
+        <CeoMondayMoment />
+        <CategoryEvolution />
+        <ConceptBreakthrough />
+        <OisArchitecture />
+        <CapabilityJourney />
+        <NewKindOrganization />
+        <TrustReferences />
+        <ExecutiveCTA />
+      </div>
       <FooterClosing />
       <EditorialNavigation
         ariaLabel="Home sections"
