@@ -14310,12 +14310,13 @@ story rhythm. Preserve this art direction unless a sprint targets Home.
 
 .concept-inner {
   align-items: center;
-  grid-template-columns: minmax(0, 940px);
+  grid-template-columns: minmax(0, 1120px);
   justify-content: start;
 }
 
 .concept-inner-text .concept-copy {
-  max-width: 940px;
+  max-width: 1120px;
+  width: 100%;
 }
 
 .concept-inner-text .concept-support {
@@ -14323,8 +14324,15 @@ story rhythm. Preserve this art direction unless a sprint targets Home.
 }
 
 .missing-capability-illustration.brand-canon-figure {
+  aspect-ratio: 1672 / 941;
+  background:
+    radial-gradient(circle at 50% 42%, rgb(179 145 255 / 10%), transparent 54%),
+    rgb(255 255 255 / 2%);
+  border: 1px solid rgb(255 255 255 / 8%);
   border-radius: var(--bc-radius-card);
-  margin: 0 0 clamp(36px, 5vw, 72px);
+  height: auto;
+  line-height: 0;
+  margin: clamp(18px, 2.6vw, 34px) 0 clamp(42px, 5.4vw, 82px);
   max-width: min(100%, 1120px);
   overflow: hidden;
   width: 100%;
@@ -14333,17 +14341,104 @@ story rhythm. Preserve this art direction unless a sprint targets Home.
 .missing-capability-illustration .brand-canon-image {
   border-radius: inherit;
   display: block;
-  height: auto;
+  height: 100%;
   object-fit: contain;
   width: 100%;
 }
 
+.problem-section,
+.concept-section,
+.organization-section,
+.ois-section,
+.category-evolution-section,
+.capability-journey-section,
+.trust-reference-section,
+.executive-cta-section {
+  isolation: isolate;
+  overflow: clip;
+  position: relative;
+}
+
+.problem-section::after,
+.concept-section::after,
+.ois-section::after,
+.category-evolution-section::after,
+.capability-journey-section::after,
+.organization-section::after,
+.trust-reference-section::after,
+.executive-cta-section::after {
+  background: linear-gradient(90deg, transparent, rgb(255 255 255 / 11%), rgb(179 145 255 / 18%), transparent);
+  bottom: 0;
+  content: "";
+  height: 1px;
+  left: 50%;
+  opacity: 0.72;
+  pointer-events: none;
+  position: absolute;
+  transform: translateX(-50%);
+  width: min(1180px, calc(100% - 40px));
+  z-index: 2;
+}
+
+.concept-section {
+  background:
+    radial-gradient(circle at 72% 26%, rgb(24 214 255 / 11%), transparent 34%),
+    radial-gradient(circle at 18% 86%, rgb(179 145 255 / 12%), transparent 34%),
+    linear-gradient(180deg, #050507 0%, #030305 56%, #050507 100%);
+}
+
+.concept-section::before,
+.capability-journey-section::before,
+.organization-section::before,
+.executive-cta-section::before {
+  background:
+    linear-gradient(90deg, rgb(255 255 255 / 6%) 1px, transparent 1px),
+    linear-gradient(180deg, rgb(255 255 255 / 4%) 1px, transparent 1px);
+  background-size: 96px 96px;
+  content: "";
+  inset: 0;
+  opacity: 0.055;
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+}
+
+.concept-inner,
+.ois-editorial-layout,
+.capability-journey-inner,
+.organization-inner,
+.trust-reference-inner,
+.executive-cta-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.concept-inner-text .concept-statement {
+  max-width: 720px;
+}
+
+.capability-journey-section {
+  background:
+    radial-gradient(circle at 50% 8%, rgb(24 214 255 / 8%), transparent 32%),
+    radial-gradient(circle at 84% 64%, rgb(255 173 46 / 7%), transparent 28%),
+    radial-gradient(circle at 24% 50%, rgb(157 93 255 / 10%), transparent 34%),
+    linear-gradient(180deg, #030305 0%, #050507 56%, #07040c 100%);
+}
+
+.organization-section {
+  background:
+    radial-gradient(circle at 24% 22%, rgb(179 145 255 / 12%), transparent 32%),
+    radial-gradient(circle at 76% 74%, rgb(24 214 255 / 5%), transparent 30%),
+    linear-gradient(180deg, #050507 0%, #030305 100%);
+}
+
 .executive-cta-section {
   background:
-    radial-gradient(circle at 50% 0%, rgb(179 145 255 / 13%), transparent 34%),
-    radial-gradient(circle at 78% 52%, rgb(24 214 255 / 6%), transparent 30%),
+    radial-gradient(circle at 68% 30%, rgb(24 214 255 / 12%), transparent 34%),
+    radial-gradient(circle at 50% 0%, rgb(179 145 255 / 16%), transparent 34%),
     linear-gradient(180deg, #050507 0%, #030305 100%);
   padding: clamp(108px, 10vw, 188px) 0 clamp(126px, 12vw, 224px);
+  position: relative;
 }
 
 .executive-cta-inner {
@@ -14352,7 +14447,9 @@ story rhythm. Preserve this art direction unless a sprint targets Home.
   gap: clamp(34px, 5vw, 76px);
   grid-template-columns: minmax(0, 0.78fr) auto;
   margin: 0 auto;
+  position: relative;
   width: min(1180px, calc(100% - 40px));
+  z-index: 2;
 }
 
 .executive-cta-copy {
@@ -14397,7 +14494,38 @@ story rhythm. Preserve this art direction unless a sprint targets Home.
   gap: clamp(34px, 5vw, 76px);
   grid-template-columns: minmax(0, 0.86fr) auto;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
   width: min(1180px, calc(100% - 40px));
+}
+
+.executive-cta-visual {
+  height: clamp(420px, 50vw, 690px);
+  opacity: 0.84;
+  pointer-events: none;
+  position: absolute;
+  right: clamp(-440px, -24vw, -280px);
+  top: 50%;
+  transform: translateY(-48%);
+  width: min(78vw, 1220px);
+  z-index: 1;
+}
+
+.executive-cta-visual .brand-canon-figure {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  height: 100%;
+  overflow: visible;
+  width: 100%;
+}
+
+.executive-cta-visual .brand-canon-image {
+  filter: saturate(1.38) contrast(1.22) brightness(1.2);
+  height: 100%;
+  object-fit: cover;
+  object-position: 58% 50%;
+  width: 100%;
 }
 
 .contextual-executive-cta-copy {
@@ -14439,6 +14567,13 @@ story rhythm. Preserve this art direction unless a sprint targets Home.
   .contextual-executive-cta-actions {
     justify-content: flex-start;
   }
+
+  .executive-cta-visual {
+    height: 540px;
+    opacity: 0.42;
+    right: -430px;
+    width: 980px;
+  }
 }
 
 @media (max-width: 720px) {
@@ -14460,9 +14595,22 @@ story rhythm. Preserve this art direction unless a sprint targets Home.
     padding: 96px 0 112px;
   }
 
+  .missing-capability-illustration.brand-canon-figure {
+    border-radius: 14px;
+    margin: 8px 0 42px;
+  }
+
   .executive-cta-inner,
   .contextual-executive-cta-inner {
     width: min(calc(100% - 28px), 1180px);
+  }
+
+  .executive-cta-visual {
+    top: 54%;
+    height: 320px;
+    opacity: 0.34;
+    right: -360px;
+    width: 760px;
   }
 }
 

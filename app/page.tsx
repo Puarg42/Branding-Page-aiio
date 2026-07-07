@@ -328,6 +328,9 @@ function TrustReferences() {
 function ExecutiveCTA() {
   return (
     <section className="executive-cta-section" id="executive-cta">
+      <div className="executive-cta-visual" aria-hidden="true">
+        <BrandIllustration variant="BC-003" />
+      </div>
       <div className="executive-cta-inner">
         <div className="executive-cta-copy">
           <EditorialEyebrow>Start</EditorialEyebrow>
