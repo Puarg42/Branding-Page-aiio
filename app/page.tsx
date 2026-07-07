@@ -111,11 +111,6 @@ const trustReferenceLogos = [
   },
 ] as const;
 
-const trustMarqueeRows = [
-  trustReferenceLogos.slice(0, 8),
-  trustReferenceLogos.slice(8),
-] as const;
-
 const homeSectionNavigator = [
   { id: "home-hero", label: "Hero" },
   { id: "monday-morning", label: "Monday" },
@@ -284,29 +279,30 @@ function TrustReferences() {
         </div>
 
         <ReferenceMarquee className="trust-reference-marquee" ariaLabel="Enterprise references">
-          {trustMarqueeRows.map((row, rowIndex) => (
-            <div
-              className="trust-reference-marquee-row"
-              data-direction={rowIndex === 0 ? "left" : "right"}
-              key={rowIndex}
-            >
-              <div className="trust-reference-marquee-track">
-                {[...row, ...row].map((logo, logoIndex) => (
-                  <figure
-                    aria-hidden={logoIndex >= row.length ? "true" : undefined}
-                    className="trust-reference-logo"
-                    key={`${rowIndex}-${logo.alt}-${logoIndex}`}
-                  >
-                    <img
-                      alt={logoIndex >= row.length ? "" : logo.alt}
-                      loading="lazy"
-                      src={logo.src}
-                    />
-                  </figure>
-                ))}
-              </div>
+          <div className="trust-reference-marquee-row">
+            <div className="trust-reference-marquee-track">
+              {Array.from({ length: 3 }, (_, setIndex) => (
+                <div
+                  aria-hidden={setIndex > 0 ? "true" : undefined}
+                  className="trust-reference-marquee-set"
+                  key={setIndex}
+                >
+                  {trustReferenceLogos.map((logo) => (
+                    <figure
+                      className="trust-reference-logo"
+                      key={`${setIndex}-${logo.alt}`}
+                    >
+                      <img
+                        alt={setIndex > 0 ? "" : logo.alt}
+                        loading="lazy"
+                        src={logo.src}
+                      />
+                    </figure>
+                  ))}
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </ReferenceMarquee>
 
         <TrustRow className="trust-reference-grid" ariaLabel="Trust foundations">
