@@ -1543,183 +1543,6 @@ h1 {
   overflow: hidden;
 }
 
-.footer-closing {
-  align-items: center;
-  background:
-    radial-gradient(circle at 50% 44%, rgb(90 50 138 / 18%), transparent 34%),
-    radial-gradient(circle at 20% 100%, rgb(122 76 170 / 12%), transparent 30%),
-    #020204;
-  display: flex;
-  justify-content: center;
-  min-height: 100svh;
-  padding: clamp(120px, 12vw, 190px) 20px;
-  position: relative;
-  text-align: center;
-}
-
-.footer-particles {
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-  position: absolute;
-}
-
-.footer-particles span {
-  background: rgb(255 255 255 / 42%);
-  border-radius: 999px;
-  box-shadow: 0 0 18px rgb(154 109 214 / 30%);
-  height: 3px;
-  opacity: 0.45;
-  position: absolute;
-  width: 3px;
-}
-
-.footer-particles span:nth-child(1) {
-  left: 8%;
-  top: 18%;
-}
-
-.footer-particles span:nth-child(2) {
-  left: 16%;
-  top: 76%;
-}
-
-.footer-particles span:nth-child(3) {
-  left: 24%;
-  top: 38%;
-}
-
-.footer-particles span:nth-child(4) {
-  left: 31%;
-  top: 12%;
-}
-
-.footer-particles span:nth-child(5) {
-  left: 40%;
-  top: 82%;
-}
-
-.footer-particles span:nth-child(6) {
-  left: 48%;
-  top: 28%;
-}
-
-.footer-particles span:nth-child(7) {
-  left: 55%;
-  top: 66%;
-}
-
-.footer-particles span:nth-child(8) {
-  left: 64%;
-  top: 16%;
-}
-
-.footer-particles span:nth-child(9) {
-  left: 72%;
-  top: 78%;
-}
-
-.footer-particles span:nth-child(10) {
-  left: 82%;
-  top: 36%;
-}
-
-.footer-particles span:nth-child(11) {
-  left: 91%;
-  top: 62%;
-}
-
-.footer-particles span:nth-child(12) {
-  left: 6%;
-  top: 54%;
-}
-
-.footer-particles span:nth-child(13) {
-  left: 37%;
-  top: 54%;
-}
-
-.footer-particles span:nth-child(14) {
-  left: 60%;
-  top: 88%;
-}
-
-.footer-particles span:nth-child(15) {
-  left: 76%;
-  top: 8%;
-}
-
-.footer-particles span:nth-child(16) {
-  left: 88%;
-  top: 20%;
-}
-
-.footer-particles span:nth-child(17) {
-  left: 44%;
-  top: 6%;
-}
-
-.footer-particles span:nth-child(18) {
-  left: 14%;
-  top: 30%;
-}
-
-.footer-closing-inner {
-  align-self: center;
-  position: relative;
-  z-index: 1;
-}
-
-.footer-closing h2 {
-  color: #fff;
-  font-size: clamp(3.15rem, 7.1vw, 8.8rem);
-  line-height: 1.02;
-  margin: 0;
-  max-width: 1240px;
-  text-wrap: balance;
-}
-
-.footer-closing-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  justify-content: center;
-  margin-top: clamp(46px, 6vw, 86px);
-}
-
-.footer-final-button {
-  align-items: center;
-  border: 1px solid rgb(255 255 255 / 34%);
-  border-radius: 999px;
-  color: rgb(255 255 255 / 88%);
-  display: inline-flex;
-  font-weight: 700;
-  justify-content: center;
-  min-height: 48px;
-  padding: 0 22px;
-  transition:
-    background-color 220ms ease,
-    border-color 220ms ease,
-    color 220ms ease;
-}
-
-.footer-final-button:hover {
-  background: rgb(255 255 255 / 10%);
-  border-color: rgb(255 255 255 / 58%);
-  color: #fff;
-}
-
-.footer-final-button.primary {
-  background: #fff;
-  border-color: #fff;
-  color: #07020d;
-}
-
-.footer-final-button.primary:hover {
-  background: rgb(255 255 255 / 90%);
-  color: #07020d;
-}
-
 .site-footer-inner {
   padding: 0 0 34px;
   position: relative;
@@ -3489,8 +3312,7 @@ h1 {
 
   .section h2,
   .layer-copy h2,
-  .demo h2,
-  .footer-closing h2 {
+  .demo h2 {
     font-size: 2rem;
     line-height: 1.12;
   }
@@ -5966,25 +5788,6 @@ h1 {
     font-size: 1.02rem;
   }
 
-  .footer-closing {
-    min-height: 94svh;
-    padding: 112px 16px;
-  }
-
-  .footer-closing h2 {
-    font-size: clamp(2.15rem, 9vw, 3.2rem);
-    line-height: 1.08;
-  }
-
-  .footer-closing-actions {
-    width: 100%;
-  }
-
-  .footer-final-button {
-    min-height: 52px;
-    width: 100%;
-  }
-
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -6045,9 +5848,6 @@ h1 {
     transform: translate(-50%, -50%);
   }
 
-  .footer-particles span {
-    animation: none;
-  }
 }
 
 /* Website information architecture pages */
@@ -14646,35 +14446,6 @@ story rhythm. Preserve this art direction unless a sprint targets Home.
   width: min(1180px, calc(100% - 40px));
 }
 
-.executive-cta-visual {
-  height: clamp(420px, 50vw, 690px);
-  opacity: 0.84;
-  pointer-events: none;
-  position: absolute;
-  right: clamp(-440px, -24vw, -280px);
-  top: 50%;
-  transform: translateY(-48%);
-  width: min(78vw, 1220px);
-  z-index: 1;
-}
-
-.executive-cta-visual .brand-canon-figure {
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-  height: 100%;
-  overflow: visible;
-  width: 100%;
-}
-
-.executive-cta-visual .brand-canon-image {
-  filter: saturate(1.38) contrast(1.22) brightness(1.2);
-  height: 100%;
-  object-fit: cover;
-  object-position: 58% 50%;
-  width: 100%;
-}
-
 .contextual-executive-cta-copy {
   max-width: 900px;
 }
@@ -14715,12 +14486,6 @@ story rhythm. Preserve this art direction unless a sprint targets Home.
     justify-content: flex-start;
   }
 
-  .executive-cta-visual {
-    height: 540px;
-    opacity: 0.42;
-    right: -430px;
-    width: 980px;
-  }
 }
 
 @media (max-width: 720px) {
@@ -14755,13 +14520,6 @@ story rhythm. Preserve this art direction unless a sprint targets Home.
     width: min(calc(100% - 28px), 1180px);
   }
 
-  .executive-cta-visual {
-    top: 54%;
-    height: 320px;
-    opacity: 0.34;
-    right: -360px;
-    width: 760px;
-  }
 }
 
 /* Canonical EditorialEyebrow guard: local paragraph styles must never override the Brand Canon eyebrow. */

@@ -49,35 +49,6 @@ function SmartLink({
   );
 }
 
-export function FooterClosing() {
-  return (
-    <section className="footer-closing" aria-label="Closing statement">
-      <div className="footer-particles" aria-hidden="true">
-        {Array.from({ length: 18 }, (_, index) => (
-          <span key={index} />
-        ))}
-      </div>
-      <div className="footer-closing-inner">
-        <h2>
-          Every organization has knowledge.
-          <br />
-          The next step is understanding.
-          <br />
-          Start there.
-        </h2>
-        <div className="footer-closing-actions" aria-label="Footer actions">
-          <Link className="footer-final-button primary" href="/live-demo/kontakt">
-            Request a Demo
-          </Link>
-          <Link className="footer-final-button" href="/platform">
-            See the Platform
-          </Link>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 export function SiteFooter() {
   return (
     <footer className="site-footer">

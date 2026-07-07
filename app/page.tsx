@@ -1,5 +1,4 @@
 import { MainHeader } from "./main-navigation";
-import { FooterClosing } from "./site-footer";
 import { CapabilityJourney } from "./capability-journey";
 import { CategoryEvolution, CeoMondayMoment } from "./category-reinforcement";
 import { BrandIllustration } from "../components/brand/BrandIllustration";
@@ -322,9 +321,6 @@ function TrustReferences() {
 function ExecutiveCTA() {
   return (
     <section className="executive-cta-section" id="executive-cta">
-      <div className="executive-cta-visual" aria-hidden="true">
-        <BrandIllustration variant="BC-003" />
-      </div>
       <div className="executive-cta-inner">
         <div className="executive-cta-copy">
           <EditorialEyebrow>Start</EditorialEyebrow>
@@ -363,7 +359,6 @@ export default function Home() {
         <TrustReferences />
         <ExecutiveCTA />
       </div>
-      <FooterClosing />
       <EditorialNavigation
         ariaLabel="Home sections"
         sections={homeSectionNavigator}
