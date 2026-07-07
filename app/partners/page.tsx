@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import {
   EditorialCard,
   EditorialGrid,
   EditorialSection,
   EditorialSectionHeader,
 } from "../../components/brand/BrandCanonFoundation";
+import { ExecutiveCTA } from "../../components/brand/ExecutiveCTA";
 import { TheoryReference } from "../../components/brand/TheoryReference";
 import { WebsiteArchitecturePage } from "../website-architecture";
 
@@ -80,21 +80,13 @@ export default function PartnersPage() {
           </EditorialGrid>
       </EditorialSection>
 
-      <EditorialSection
-        className="website-contact-section"
+      <ExecutiveCTA
+        copy="Become part of the Organizational Intelligence ecosystem."
+        headline="Build Organizational Intelligence together."
         id="partners-conversation"
-        shellClassName="website-page-shell"
-      >
-          <div className="website-contact-panel">
-            <p>
-              Partnership with aiio means helping organizations turn strategic
-              ambition into lasting capability.
-            </p>
-            <Link className="website-final-button" href="/contact">
-              Start a partner conversation
-            </Link>
-          </div>
-      </EditorialSection>
+        primary={{ href: "/live-demo/kontakt", label: "Become a Partner" }}
+        secondary={{ href: "/contact", label: "Contact Us" }}
+      />
     </WebsiteArchitecturePage>
   );
 }

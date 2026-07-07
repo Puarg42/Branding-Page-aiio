@@ -10,6 +10,7 @@ import { BrandIllustration } from "../../components/brand/BrandIllustration";
 import { EditorialEyebrow } from "../../components/brand/EditorialEyebrow";
 import { EditorialReferenceMarker } from "../../components/brand/EditorialReferenceMarker";
 import { EditorialProgression } from "../../components/brand/EditorialProgression";
+import { ExecutiveCTA } from "../../components/brand/ExecutiveCTA";
 import { TheoryLink } from "../../components/brand/TheoryLink";
 import { canonicalTheoryLinks } from "../../components/brand/theory-links";
 import { PlatformEditorialExperience } from "./platform-editorial-experience";
@@ -357,6 +358,12 @@ export default function PlatformPage() {
             </p>
           </div>
       </EditorialSection>
+      <ExecutiveCTA
+        copy="Experience how the Organizational Intelligence System connects your organizational reality into one continuously evolving foundation."
+        headline="See Organizational Intelligence in action."
+        primary={{ href: "/live-demo/kontakt", label: "Request a Demo" }}
+        secondary={{ href: "/thinking/theory", label: "Explore the Theory" }}
+      />
       <PlatformEditorialExperience />
     </WebsiteArchitecturePage>
   );

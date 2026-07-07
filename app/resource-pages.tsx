@@ -9,6 +9,7 @@ import {
 import type { EditorialSectionNavigatorItem } from "../components/brand/EditorialSectionNavigator";
 import { EditorialEyebrow } from "../components/brand/EditorialEyebrow";
 import { EditorialJumpArrow } from "../components/brand/EditorialJumpArrow";
+import { ExecutiveCTA } from "../components/brand/ExecutiveCTA";
 import { getEditableContent, RichText } from "./editor/content";
 import { MainHeader } from "./main-navigation";
 
@@ -1185,6 +1186,12 @@ function BusinessImpactPage() {
           </div>
         </div>
       </section>
+      <ExecutiveCTA
+        copy="Discover how organizations transform knowledge into measurable business capability."
+        headline="Create measurable Organizational Intelligence."
+        primary={{ href: "/live-demo/kontakt", label: "Request a Demo" }}
+        secondary={{ href: "/platform", label: "Explore the Platform" }}
+      />
 
       <EditorialNavigation
         ariaLabel="Business Impact sections"

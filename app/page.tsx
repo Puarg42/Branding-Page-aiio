@@ -1,4 +1,5 @@
 import { MainHeader } from "./main-navigation";
+import { FooterClosing } from "./site-footer";
 import { CapabilityJourney } from "./capability-journey";
 import { CategoryEvolution, CeoMondayMoment } from "./category-reinforcement";
 import { BrandIllustration } from "../components/brand/BrandIllustration";
@@ -362,6 +363,7 @@ export default function Home() {
       <NewKindOrganization />
       <TrustReferences />
       <ExecutiveCTA />
+      <FooterClosing />
       <EditorialNavigation
         ariaLabel="Home sections"
         sections={homeSectionNavigator}

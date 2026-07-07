@@ -5,6 +5,7 @@ import {
   EditorialSectionHeader,
 } from "../../components/brand/BrandCanonFoundation";
 import { EditorialJumpArrow } from "../../components/brand/EditorialJumpArrow";
+import { ExecutiveCTA } from "../../components/brand/ExecutiveCTA";
 import { TheoryLink } from "../../components/brand/TheoryLink";
 import { WebsiteArchitecturePage } from "../website-architecture";
 import { theoryJournalEntries, theoryPublication } from "./publication-model";
@@ -104,6 +105,12 @@ export default function ThinkingPage() {
             </TheoryLink>
           </EditorialCard>
       </EditorialSection>
+      <ExecutiveCTA
+        copy="See how Organizational Intelligence becomes operational inside real organizations."
+        headline="Turn theory into organizational reality."
+        primary={{ href: "/live-demo/kontakt", label: "Request a Demo" }}
+        secondary={{ href: "/platform", label: "Explore the Platform" }}
+      />
     </WebsiteArchitecturePage>
   );
 }

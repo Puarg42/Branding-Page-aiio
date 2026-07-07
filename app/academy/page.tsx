@@ -12,6 +12,7 @@ import {
 import { EditorialEyebrow } from "../../components/brand/EditorialEyebrow";
 import { EditorialJumpArrow } from "../../components/brand/EditorialJumpArrow";
 import type { EditorialSectionNavigatorItem } from "../../components/brand/EditorialSectionNavigator";
+import { ExecutiveCTA } from "../../components/brand/ExecutiveCTA";
 import { MainHeader } from "../main-navigation";
 
 export const metadata: Metadata = {
@@ -260,6 +261,12 @@ export default function AcademyPage() {
           </Link>
         </EditorialCTAGroup>
       </EditorialSection>
+      <ExecutiveCTA
+        copy="Learn how your organization develops new capabilities through continuous Organizational Intelligence."
+        headline="Start building Organizational Intelligence."
+        primary={{ href: "/live-demo/kontakt", label: "Request a Demo" }}
+        secondary={{ href: "/platform", label: "Explore the Platform" }}
+      />
 
       <EditorialNavigation
         ariaLabel="Academy sections"

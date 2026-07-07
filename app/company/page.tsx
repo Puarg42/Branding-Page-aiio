@@ -5,6 +5,7 @@ import {
   EditorialSection,
   EditorialSectionHeader,
 } from "../../components/brand/BrandCanonFoundation";
+import { ExecutiveCTA } from "../../components/brand/ExecutiveCTA";
 import { TheoryReference } from "../../components/brand/TheoryReference";
 import { WebsiteArchitecturePage } from "../website-architecture";
 
@@ -94,6 +95,12 @@ export default function CompanyPage() {
             ))}
           </EditorialGrid>
       </EditorialSection>
+      <ExecutiveCTA
+        copy="Meet the team behind the Organizational Intelligence System."
+        headline="Let's shape the future of Organizational Intelligence."
+        primary={{ href: "/contact", label: "Contact Us" }}
+        secondary={{ href: "/platform", label: "Explore the Platform" }}
+      />
     </WebsiteArchitecturePage>
   );
 }

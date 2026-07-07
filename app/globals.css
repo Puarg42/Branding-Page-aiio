@@ -14368,13 +14368,62 @@ story rhythm. Preserve this art direction unless a sprint targets Home.
   margin: 0;
 }
 
+.contextual-executive-cta-section {
+  background:
+    radial-gradient(circle at 18% 0%, rgb(179 145 255 / 10%), transparent 32%),
+    radial-gradient(circle at 84% 58%, rgb(24 214 255 / 5%), transparent 30%),
+    linear-gradient(180deg, #030305 0%, #050507 100%);
+  border-top: 1px solid rgb(255 255 255 / 8%);
+  color: var(--bc-color-heading);
+  padding: clamp(92px, 10vw, 168px) 0;
+}
+
+.contextual-executive-cta-inner {
+  align-items: end;
+  display: grid;
+  gap: clamp(34px, 5vw, 76px);
+  grid-template-columns: minmax(0, 0.86fr) auto;
+  margin: 0 auto;
+  width: min(1180px, calc(100% - 40px));
+}
+
+.contextual-executive-cta-copy {
+  max-width: 900px;
+}
+
+.contextual-executive-cta-copy h2 {
+  color: var(--bc-color-heading);
+  font-size: clamp(2.42rem, 4.6vw, 5.35rem);
+  letter-spacing: 0;
+  line-height: 1;
+  margin: 0;
+  max-width: 880px;
+  text-wrap: balance;
+}
+
+.contextual-executive-cta-copy p:not(.editorial-eyebrow) {
+  color: rgb(255 255 255 / 70%);
+  font-family: var(--font-aiio-heading);
+  font-size: clamp(1.08rem, 1.42vw, 1.34rem);
+  line-height: 1.44;
+  margin: clamp(26px, 3vw, 42px) 0 0;
+  max-width: 720px;
+}
+
+.contextual-executive-cta-actions {
+  justify-content: flex-end;
+  margin: 0;
+}
+
 @media (max-width: 1180px) {
   .concept-inner,
-  .executive-cta-inner {
+  .executive-cta-inner,
+  .contextual-executive-cta-inner {
     grid-template-columns: 1fr;
   }
 
-  .executive-cta-actions {
+  .executive-cta-actions,
+  .contextual-executive-cta-actions {
     justify-content: flex-start;
   }
 }
@@ -14393,11 +14442,13 @@ story rhythm. Preserve this art direction unless a sprint targets Home.
   }
 
   .concept-section,
-  .executive-cta-section {
+  .executive-cta-section,
+  .contextual-executive-cta-section {
     padding: 96px 0 112px;
   }
 
-  .executive-cta-inner {
+  .executive-cta-inner,
+  .contextual-executive-cta-inner {
     width: min(calc(100% - 28px), 1180px);
   }
 }

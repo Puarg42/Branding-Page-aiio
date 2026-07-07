@@ -4,6 +4,7 @@ import {
   type EditorialProgressionItem,
 } from "../../../components/brand/EditorialProgression";
 import { EditorialEyebrow } from "../../../components/brand/EditorialEyebrow";
+import { ExecutiveCTA } from "../../../components/brand/ExecutiveCTA";
 import { theoryChapters } from "./theory-content.generated";
 import { TheorySidebar } from "./theory-sidebar";
 
@@ -191,6 +192,12 @@ export default function TheoryPage() {
               </section>
             ))}
           </article>
+          <ExecutiveCTA
+            copy="See how Organizational Intelligence becomes operational inside real organizations."
+            headline="Turn theory into organizational reality."
+            primary={{ href: "/live-demo/kontakt", label: "Request a Demo" }}
+            secondary={{ href: "/platform", label: "Explore the Platform" }}
+          />
         </div>
       </div>
     </main>
