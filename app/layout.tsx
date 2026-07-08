@@ -3,15 +3,19 @@ import "./globals.css";
 import { BrandCanonLightbox } from "../components/brand/BrandCanonLightbox";
 import { NavigationMemory } from "../components/brand/NavigationMemory";
 import { SiteFooter } from "./site-footer";
-import { siteUrl } from "./site-url";
+import { deploymentUrl, siteUrl } from "./site-url";
 
 const title = "aiio | Organizational Intelligence with System";
 const description = "Build organizations that continuously understand themselves.";
+const socialPreviewImageUrl = new URL(
+  "/og-home-bc002-1200x630.jpg",
+  deploymentUrl,
+);
 const socialPreviewImage = {
   alt: "BC002 Organizational Intelligence Engine",
-  height: 1024,
-  url: "/og-home-bc002.jpg",
-  width: 1536,
+  height: 630,
+  url: socialPreviewImageUrl,
+  width: 1200,
 };
 
 export const metadata: Metadata = {
