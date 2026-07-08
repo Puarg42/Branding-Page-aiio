@@ -12978,18 +12978,18 @@ section[id],
 
 .academy-hero {
   border-bottom: 1px solid rgb(255 255 255 / 8%);
-  padding: clamp(104px, 10vw, 156px) 0 clamp(104px, 12vw, 188px);
+  padding: clamp(84px, 8vw, 122px) 0 clamp(88px, 10vw, 150px);
 }
 
 .academy-hero-visual.brand-canon-figure {
-  aspect-ratio: 1677 / 940;
+  aspect-ratio: 1705 / 923;
   background: transparent;
   border: 0;
   border-radius: 0;
   box-shadow: none;
   height: auto;
   line-height: 0;
-  margin: clamp(8px, 0.9vw, 13px) 0 clamp(17px, 2.3vw, 34px);
+  margin: clamp(4px, 0.55vw, 8px) 0 clamp(10px, 1.35vw, 20px);
   max-height: min(46vw, 620px);
   min-height: 300px;
   overflow: visible;
@@ -13034,12 +13034,12 @@ section[id],
   color: rgb(255 255 255 / 68%);
   font-size: clamp(1.14rem, 1.5vw, 1.36rem);
   line-height: 1.52;
-  margin: clamp(28px, 3.2vw, 46px) 0 0;
+  margin: clamp(18px, 2vw, 28px) 0 0;
   max-width: 720px;
 }
 
 .academy-hero-copy > p + p {
-  margin-top: 16px;
+  margin-top: 12px;
 }
 
 .academy-actions {
@@ -13307,11 +13307,11 @@ section[id],
   }
 
   .academy-hero {
-    padding: 98px 0 94px;
+    padding: 86px 0 84px;
   }
 
   .academy-hero-visual.brand-canon-figure {
-    margin: 7px 0 17px;
+    margin: 4px 0 12px;
     min-height: 190px;
   }
 
