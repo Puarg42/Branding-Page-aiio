@@ -18,94 +18,73 @@ import { MainHeader } from "../main-navigation";
 export const metadata: Metadata = {
   title: "Academy | aiio",
   description:
-    "The aiio Academy teaches organizations how to build Organizational Intelligence through the Organizational Intelligence System.",
+    "The aiio Academy teaches leaders and organizations how to learn, apply and master Organizational Intelligence.",
 };
 
 const academySectionNavigator: EditorialSectionNavigatorItem[] = [
   { id: "academy-hero", label: "Hero" },
-  { id: "academy-journey", label: "Learning Journey" },
-  { id: "academy-resources", label: "Learning Resources" },
-  { id: "academy-live", label: "Live Learning" },
-  { id: "academy-thinking", label: "Continue in Thinking" },
+  { id: "academy-learning-path", label: "Learning Path" },
+  { id: "academy-formats", label: "Continue Learning" },
   { id: "start", label: "Start" },
 ];
 
-const learningJourney = [
+const learningModules = [
   {
-    level: "Level 1",
-    title: "Understand Your Organization",
-    product: "ProcessCollector",
+    module: "Foundation",
+    title: "Understand Organizational Reality",
     copy:
-      "Learn how to create a human-readable representation of how your organization works, where responsibilities live and how process logic becomes understandable.",
-    href: "#academy-resource-beginner",
+      "Learn how organizations become understandable by documenting structures, responsibilities, processes and knowledge.",
+    product: "ProcessCollector™",
+    outcome: "You understand how organizational reality becomes visible.",
   },
   {
-    level: "Level 2",
-    title: "Build Organizational Intelligence",
-    product: "ProcessMagnet",
+    module: "Understanding",
+    title: "Build Organizational Self-Understanding",
     copy:
-      "Learn how organizational reality becomes connected context so people, teams and intelligent systems can reason from the same understanding.",
-    href: "#academy-resource-intermediate",
+      "Learn how connected organizational reality becomes continuous Organizational Self-Understanding.",
+    product: "ProcessMagnet™",
+    outcome: "You understand how organizations continuously interpret themselves.",
   },
   {
-    level: "Level 3",
-    title: "Forge Organizational Capabilities",
-    product: "ProcessForge",
+    module: "Application",
+    title: "Transform Understanding into Organizational Capabilities",
     copy:
-      "Learn how understanding turns into reusable organizational capabilities that support better decisions, coordinated action and daily execution.",
-    href: "#academy-resource-advanced",
+      "Learn how Organizational Intelligence becomes reusable organizational capabilities that people and AI can apply.",
+    product: "ProcessForge™",
+    outcome: "You understand how organizational capabilities are created.",
   },
   {
-    level: "Level 4",
-    title: "Enable Organizational Self-Empowerment",
-    product: "DataForge",
+    module: "Mastery",
+    title: "Create Self-Empowering Organizations",
     copy:
-      "Learn how goals, scenarios and operational reality help organizations improve continuously and become more resilient over time.",
-    href: "#academy-resource-continuous",
-  },
-] as const;
-
-const learningResources = [
-  {
-    id: "academy-resource-beginner",
-    stage: "Beginner",
-    title: "Start with organizational representation.",
-    copy:
-      "Short learning modules help teams understand the foundations of process landscapes, responsibilities, documentation and organizational source code.",
-    items: ["Academy Basics", "Process models", "Responsibilities", "Documentation"],
-  },
-  {
-    id: "academy-resource-intermediate",
-    stage: "Intermediate",
-    title: "Connect context across the organization.",
-    copy:
-      "Practical examples show how existing structures, documents and operational inputs become shared organizational understanding.",
-    items: ["Context mapping", "Operational inputs", "Patterns", "Team learning"],
-  },
-  {
-    id: "academy-resource-advanced",
-    stage: "Advanced",
-    title: "Turn understanding into capability.",
-    copy:
-      "Advanced sessions focus on decision quality, capability design, coordinated action and the transition from knowledge to organizational intelligence.",
-    items: ["Capability design", "Decision support", "Execution patterns", "Improvement loops"],
-  },
-  {
-    id: "academy-resource-continuous",
-    stage: "Continuous Learning",
-    title: "Keep the discipline alive.",
-    copy:
-      "New sessions, recordings and practical examples help teams keep pace as the Organizational Intelligence System evolves.",
-    items: ["New releases", "Executive formats", "Office hours", "Community sessions"],
+      "Learn how continuously evolving organizational capabilities enable organizations to become increasingly self-empowering and resilient.",
+    product: "DataForge™",
+    outcome:
+      "You understand how Organizational Intelligence creates long-term organizational resilience.",
   },
 ] as const;
 
-const liveLearningFormats = [
-  "Live Webinars",
-  "Executive Sessions",
-  "Workshops",
-  "Office Hours",
-  "Community Events",
+const learningFormats = [
+  {
+    title: "Tutorials",
+    copy: "Structured learning modules for teams building a shared foundation.",
+  },
+  {
+    title: "Executive Sessions",
+    copy: "Focused formats for leaders who need to understand the discipline and its implications.",
+  },
+  {
+    title: "Practical Examples",
+    copy: "Applied scenarios that connect Organizational Intelligence to real organizational situations.",
+  },
+  {
+    title: "Articles",
+    copy: "Editorial thinking that explains concepts, terminology and management implications.",
+  },
+  {
+    title: "Live Learning",
+    copy: "Sessions, workshops and office hours for questions that emerge during implementation.",
+  },
 ] as const;
 
 export default function AcademyPage() {
@@ -125,19 +104,23 @@ export default function AcademyPage() {
             />
             <h1>Learn Organizational Intelligence.</h1>
             <p>
-              From understanding your organization to continuously developing
-              Organizational Intelligence.
+              Organizational Intelligence is not a feature to activate.
             </p>
             <p>
-              This Academy combines tutorials, live sessions, practical examples
-              and executive knowledge into one continuous learning experience.
+              It is an organizational capability that leaders, teams and AI
+              systems continuously develop together.
+            </p>
+            <p>
+              The Academy combines tutorials, executive sessions, practical
+              examples and applied learning into one continuous learning
+              experience.
             </p>
             <EditorialCTAGroup className="academy-actions" aria-label="Academy actions">
-              <Link className="button" href="#academy-journey">
+              <Link className="button" href="#academy-learning-path">
                 Start Learning <EditorialJumpArrow />
               </Link>
-              <Link className="button secondary" href="/platform">
-                Explore the Platform <EditorialJumpArrow />
+              <Link className="button secondary" href="/live-demo/kontakt">
+                Request a Demo <EditorialJumpArrow />
               </Link>
             </EditorialCTAGroup>
           </div>
@@ -146,36 +129,40 @@ export default function AcademyPage() {
 
       <EditorialSection
         className="academy-section academy-journey-section"
-        id="academy-journey"
+        id="academy-learning-path"
         shellClassName="academy-shell"
       >
         <EditorialSectionHeader
           className="academy-section-heading"
-          eyebrow="Learning Journey"
-          title="How organizations learn Organizational Intelligence."
+          eyebrow="Learning Path"
+          title="From Understanding to Organizational Capability."
           lead={
             <>
-              The Academy follows the same path organizations take when they build
-              Organizational Intelligence: from understanding how work happens to
-              developing capabilities that improve how decisions are made.
+              Every learning module builds on the previous one. Together they
+              explain how organizations continuously develop Organizational
+              Intelligence.
             </>
           }
         />
 
         <EditorialGrid className="academy-journey-grid" columns="four">
-          {learningJourney.map((level, index) => (
-            <EditorialCard className="academy-journey-card" key={level.title}>
+          {learningModules.map((module, index) => (
+            <EditorialCard className="academy-journey-card" key={module.title}>
               <span className="academy-level-index">
                 {String(index + 1).padStart(2, "0")}
               </span>
-              <p className="academy-level-label">{level.level}</p>
-              <h3>{level.title}</h3>
+              <p className="academy-level-label">{module.module}</p>
+              <h3>{module.title}</h3>
+              <p>{module.copy}</p>
               <p className="academy-powered">
-                Powered by <strong>{level.product}</strong>
+                Supported by <strong>{module.product}</strong>
               </p>
-              <p>{level.copy}</p>
-              <Link className="academy-text-link" href={level.href}>
-                View learning resources <EditorialJumpArrow />
+              <div className="academy-learning-outcome">
+                <span>Learning Outcome</span>
+                <p>{module.outcome}</p>
+              </div>
+              <Link className="academy-text-link" href="#academy-formats">
+                View Module <EditorialJumpArrow />
               </Link>
             </EditorialCard>
           ))}
@@ -183,89 +170,36 @@ export default function AcademyPage() {
       </EditorialSection>
 
       <EditorialSection
-        className="academy-section academy-resources-section"
-        id="academy-resources"
+        className="academy-section academy-formats-section"
+        id="academy-formats"
         shellClassName="academy-shell"
       >
         <EditorialSectionHeader
           className="academy-section-heading"
-          eyebrow="Learning Resources"
-          title="Existing Academy content, organized by learning maturity."
+          eyebrow="Continue Learning"
+          title="Choose the learning format that fits your role."
           lead={
             <>
-              The tutorials remain available. They are now organized around the
-              learning outcomes that help teams build Organizational Intelligence.
+              Choose the learning format that best fits your role and
+              organizational maturity.
             </>
           }
         />
 
-        <EditorialGrid className="academy-resource-grid" columns="four">
-          {learningResources.map((resource) => (
-            <EditorialCard className="academy-resource-card" id={resource.id} key={resource.stage}>
-              <p className="academy-resource-stage">{resource.stage}</p>
-              <h3>{resource.title}</h3>
-              <p>{resource.copy}</p>
-              <ul>
-                {resource.items.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
+        <EditorialGrid className="academy-format-grid">
+          {learningFormats.map((format, index) => (
+            <EditorialCard className="academy-format-card" key={format.title}>
+              <span className="academy-level-index">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <h3>{format.title}</h3>
+              <p>{format.copy}</p>
             </EditorialCard>
           ))}
         </EditorialGrid>
       </EditorialSection>
-
-      <EditorialSection
-        className="academy-section academy-live-section"
-        id="academy-live"
-        shellClassName="academy-shell academy-live-grid"
-      >
-        <EditorialSectionHeader
-          className="academy-section-heading"
-          eyebrow="Live Learning"
-          title="Learning becomes stronger when people work through real questions."
-          lead={
-            <>
-              Live formats connect executive context, implementation practice and
-              continuous learning. They help organizations apply the discipline to
-              their own reality instead of only watching product instruction.
-            </>
-          }
-        />
-
-        <div className="academy-live-panel">
-          {liveLearningFormats.map((format) => (
-            <div className="academy-live-item" key={format}>
-              <span aria-hidden="true" />
-              <p>{format}</p>
-            </div>
-          ))}
-        </div>
-      </EditorialSection>
-
-      <EditorialSection
-        className="academy-section academy-thinking-section"
-        id="academy-thinking"
-        shellClassName="academy-shell academy-thinking-panel"
-      >
-        <EditorialEyebrow>Continue in Thinking</EditorialEyebrow>
-        <h2>The Academy teaches. Thinking explains.</h2>
-        <p>
-          Continue your learning through the Theory, whitepapers, research and
-          Organizational Intelligence articles that explain the management
-          discipline behind the system.
-        </p>
-        <EditorialCTAGroup className="academy-actions" aria-label="Academy Thinking actions">
-          <Link className="button" href="/thinking/theory">
-            Read the Theory <EditorialJumpArrow />
-          </Link>
-          <Link className="button secondary" href="/thinking">
-            Visit Thinking <EditorialJumpArrow />
-          </Link>
-        </EditorialCTAGroup>
-      </EditorialSection>
       <ExecutiveCTA
-        copy="Learn how your organization develops new capabilities through continuous Organizational Intelligence."
+        copy="Every organization learns differently. The capability they develop is always the same. Organizational Intelligence."
         headline="Start building Organizational Intelligence."
         primary={{ href: "/live-demo/kontakt", label: "Request a Demo" }}
         secondary={{ href: "/platform", label: "Explore the Platform" }}
