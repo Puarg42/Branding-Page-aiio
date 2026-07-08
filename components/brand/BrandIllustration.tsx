@@ -12,6 +12,8 @@ export type BrandIllustrationVariant =
   | "BC203"
   | "BC204";
 
+export type BrandCanonViewerMode = "gallery" | "figure";
+
 export const brandCanonAssets: Record<
   BrandIllustrationVariant,
   {
@@ -67,12 +69,16 @@ type BrandIllustrationProps = {
   interactive?: boolean;
   priority?: boolean;
   variant: BrandIllustrationVariant;
+  viewerMode?: BrandCanonViewerMode;
 };
 
-function openBrandCanonLightbox(variant: BrandIllustrationVariant) {
+function openBrandCanonLightbox(
+  variant: BrandIllustrationVariant,
+  viewerMode: BrandCanonViewerMode,
+) {
   window.dispatchEvent(
     new CustomEvent("aiio:brand-canon-open", {
-      detail: { variant },
+      detail: { variant, viewerMode },
     }),
   );
 }
@@ -83,6 +89,7 @@ export function BrandIllustration({
   interactive = false,
   priority = false,
   variant,
+  viewerMode = "gallery",
 }: BrandIllustrationProps) {
   const asset = brandCanonAssets[variant];
   const image = (
@@ -106,7 +113,7 @@ export function BrandIllustration({
         <button
           aria-label={`Open ${asset.alt}`}
           className="brand-canon-trigger"
-          onClick={() => openBrandCanonLightbox(variant)}
+          onClick={() => openBrandCanonLightbox(variant, viewerMode)}
           type="button"
         >
           {image}

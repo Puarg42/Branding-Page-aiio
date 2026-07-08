@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState, type TouchEvent, type WheelEvent } from "react";
 import {
   brandCanonAssets,
+  type BrandCanonViewerMode,
   type BrandIllustrationVariant,
 } from "./BrandIllustration";
 
@@ -21,6 +22,7 @@ const brandCanonNavigationVariants: BrandIllustrationVariant[] = [
 
 type BrandCanonOpenEvent = CustomEvent<{
   variant: BrandIllustrationVariant;
+  viewerMode?: BrandCanonViewerMode;
 }>;
 
 function clamp(value: number, min: number, max: number) {
@@ -42,12 +44,13 @@ function getTouchDistance(touches: TouchEvent<HTMLDivElement>["touches"]) {
 
 export function BrandCanonLightbox() {
   const [activeVariant, setActiveVariant] = useState<BrandIllustrationVariant | null>(null);
+  const [viewerMode, setViewerMode] = useState<BrandCanonViewerMode>("gallery");
   const [zoom, setZoom] = useState(1);
   const touchDistanceRef = useRef(0);
 
   const activeAsset = activeVariant ? brandCanonAssets[activeVariant] : null;
   const canNavigateBrandCanon = activeVariant
-    ? brandCanonNavigationVariants.includes(activeVariant)
+    ? viewerMode === "gallery" && brandCanonNavigationVariants.includes(activeVariant)
     : false;
 
   const activeBrandCanonIndex = useMemo(() => {
@@ -60,6 +63,7 @@ export function BrandCanonLightbox() {
 
   function closeLightbox() {
     setActiveVariant(null);
+    setViewerMode("gallery");
     setZoom(1);
   }
 
@@ -106,8 +110,9 @@ export function BrandCanonLightbox() {
 
   useEffect(() => {
     function handleOpen(event: Event) {
-      const { variant } = (event as BrandCanonOpenEvent).detail;
+      const { variant, viewerMode: nextViewerMode = "gallery" } = (event as BrandCanonOpenEvent).detail;
       setZoom(1);
+      setViewerMode(nextViewerMode);
       setActiveVariant(variant);
     }
 
@@ -128,11 +133,11 @@ export function BrandCanonLightbox() {
         closeLightbox();
       }
 
-      if (event.key === "ArrowLeft") {
+      if (canNavigateBrandCanon && event.key === "ArrowLeft") {
         switchBrandCanonAsset(-1);
       }
 
-      if (event.key === "ArrowRight") {
+      if (canNavigateBrandCanon && event.key === "ArrowRight") {
         switchBrandCanonAsset(1);
       }
     }

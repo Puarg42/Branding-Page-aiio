@@ -136,6 +136,7 @@ function CapabilityVisual({ capability }: { capability: CapabilityTeaser }) {
         decorative={false}
         interactive
         variant={capability.illustrationVariant}
+        viewerMode="figure"
       />
     );
   }
