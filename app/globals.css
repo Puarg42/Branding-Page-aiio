@@ -13400,6 +13400,32 @@ section[id],
   transform: translate(4px, -0.02em);
 }
 
+.academy-journey-card > .editorial-card-body {
+  display: grid;
+  gap: 0;
+  grid-template-rows:
+    clamp(166px, 12.8vw, 184px)
+    clamp(88px, 7.4vw, 108px)
+    clamp(40px, 3.8vw, 48px)
+    clamp(108px, 8.4vw, 124px)
+    auto;
+  height: 100%;
+  row-gap: clamp(18px, 1.7vw, 24px);
+}
+
+.academy-journey-card .academy-module-copy,
+.academy-journey-card .academy-powered,
+.academy-journey-card .academy-learning-outcome {
+  align-self: start;
+  margin-top: 0;
+}
+
+.academy-journey-card .academy-text-link {
+  align-self: end;
+  margin-top: 0;
+  padding-top: 0;
+}
+
 .academy-format-grid {
   display: grid;
   gap: 18px;
@@ -13419,6 +13445,11 @@ section[id],
 
   .academy-journey-card {
     min-height: 520px;
+  }
+
+  .academy-journey-card > .editorial-card-body {
+    grid-template-rows: 158px 84px 44px 104px auto;
+    row-gap: 20px;
   }
 
   .academy-journey-card::after {
@@ -13457,6 +13488,28 @@ section[id],
 
   .academy-journey-card {
     padding: 28px;
+  }
+
+  .academy-journey-card > .editorial-card-body {
+    grid-template-rows: none;
+    row-gap: 0;
+  }
+
+  .academy-journey-card .academy-module-copy {
+    margin-top: 24px;
+  }
+
+  .academy-journey-card .academy-powered {
+    margin-top: 28px;
+  }
+
+  .academy-journey-card .academy-learning-outcome {
+    margin-top: 32px;
+  }
+
+  .academy-journey-card .academy-text-link {
+    margin-top: auto;
+    padding-top: 34px;
   }
 
   .academy-actions {
