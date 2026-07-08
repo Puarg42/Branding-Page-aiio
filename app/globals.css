@@ -13077,7 +13077,8 @@ section[id],
     linear-gradient(180deg, #020205 0%, #050507 48%, #030305 100%);
   color: #ffffff;
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: clip;
+  overflow-y: visible;
 }
 
 .academy-shell {
@@ -13481,7 +13482,8 @@ section[id],
 
 @media (max-width: 760px) {
   .academy-page {
-    overflow: clip;
+    overflow-x: clip;
+    overflow-y: visible;
   }
 
   .academy-shell {
