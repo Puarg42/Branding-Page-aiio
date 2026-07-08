@@ -12981,42 +12981,42 @@ section[id],
   padding: clamp(104px, 10vw, 156px) 0 clamp(104px, 12vw, 188px);
 }
 
-.academy-hero-visual {
-  margin: 0 0 clamp(22px, 3vw, 42px);
-}
-
-.academy-hero-visual .brand-canon-figure {
-  aspect-ratio: 1960 / 806;
+.academy-hero-visual.brand-canon-figure {
+  aspect-ratio: 1677 / 940;
   background: transparent;
   border: 0;
   border-radius: 0;
   box-shadow: none;
   height: auto;
-  margin: 0;
-  max-height: min(38vw, 470px);
-  min-height: 240px;
+  line-height: 0;
+  margin: clamp(16px, 1.8vw, 26px) 0 clamp(34px, 4.6vw, 68px);
+  max-height: min(46vw, 620px);
+  min-height: 300px;
   overflow: visible;
   width: 100%;
-}
-
-.academy-hero-visual .brand-canon-image {
-  filter: brightness(1.02) contrast(1.06) saturate(0.96);
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-  width: 100%;
   -webkit-mask-image:
-    linear-gradient(180deg, transparent 0%, #000 13%, #000 86%, transparent 100%),
-    linear-gradient(90deg, transparent 0%, #000 9%, #000 91%, transparent 100%);
+    radial-gradient(ellipse at 52% 50%, #000 0%, #000 54%, rgb(0 0 0 / 76%) 70%, transparent 92%),
+    linear-gradient(90deg, transparent 0%, #000 7%, #000 93%, transparent 100%),
+    linear-gradient(180deg, transparent 0%, #000 8%, #000 88%, transparent 100%);
   -webkit-mask-composite: source-in;
   mask-composite: intersect;
   mask-image:
-    linear-gradient(180deg, transparent 0%, #000 13%, #000 86%, transparent 100%),
-    linear-gradient(90deg, transparent 0%, #000 9%, #000 91%, transparent 100%);
+    radial-gradient(ellipse at 52% 50%, #000 0%, #000 54%, rgb(0 0 0 / 76%) 70%, transparent 92%),
+    linear-gradient(90deg, transparent 0%, #000 7%, #000 93%, transparent 100%),
+    linear-gradient(180deg, transparent 0%, #000 8%, #000 88%, transparent 100%);
+}
+
+.academy-hero-visual .brand-canon-image {
+  display: block;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  position: relative;
+  width: 100%;
 }
 
 .academy-hero-copy {
-  max-width: 920px;
+  max-width: none;
 }
 
 .academy-hero h1 {
@@ -13310,7 +13310,8 @@ section[id],
     padding: 98px 0 94px;
   }
 
-  .academy-hero-visual .brand-canon-figure {
+  .academy-hero-visual.brand-canon-figure {
+    margin: 14px 0 34px;
     min-height: 190px;
   }
 

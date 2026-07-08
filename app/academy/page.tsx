@@ -115,12 +115,14 @@ export default function AcademyPage() {
 
       <section className="academy-hero editorial-hero" id="academy-hero">
         <div className="academy-shell">
-          <div className="academy-hero-visual" aria-hidden="true">
-            <BrandIllustration decorative priority variant="BC-004" />
-          </div>
-
           <div className="academy-hero-copy">
             <EditorialEyebrow>The Learning System</EditorialEyebrow>
+            <BrandIllustration
+              className="academy-hero-visual"
+              decorative
+              priority
+              variant="BC-006"
+            />
             <h1>Learn Organizational Intelligence.</h1>
             <p>
               From understanding your organization to continuously developing
