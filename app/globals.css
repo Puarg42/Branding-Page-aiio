@@ -2778,13 +2778,14 @@ h1 {
 
 .legal-hero h1 {
   color: #ffffff;
-  font-size: clamp(4rem, 8vw, 8.5rem);
+  font-size: clamp(3.7rem, 6.2vw, 6rem);
   letter-spacing: 0;
-  line-height: 0.95;
+  hyphens: none;
+  line-height: 0.98;
   margin: 0;
-  max-width: 980px;
-  overflow-wrap: anywhere;
+  max-width: min(1160px, 100%);
   text-wrap: balance;
+  word-break: normal;
 }
 
 .legal-hero p:not(.editorial-eyebrow) {
@@ -7790,7 +7791,9 @@ h1 {
   }
 
   .legal-hero h1 {
-    font-size: clamp(3.05rem, 13vw, 4.7rem);
+    font-size: clamp(2.55rem, 11vw, 4rem);
+    hyphens: auto;
+    overflow-wrap: break-word;
   }
 
   .legal-hero p:not(.editorial-eyebrow) {
