@@ -9893,13 +9893,14 @@ section[id],
 }
 
 .editorial-section-navigator {
+  --editorial-section-navigator-top: clamp(104px, 13svh, 156px);
+
   display: grid;
   gap: 14px;
   opacity: 0.72;
   position: fixed;
   right: clamp(18px, 2.4vw, 42px);
-  top: 50%;
-  transform: translateY(-50%);
+  top: var(--editorial-section-navigator-top);
   transition: opacity 220ms ease;
   z-index: 60;
 }
