@@ -14877,11 +14877,13 @@ p.editorial-eyebrow,
   border: 0;
   height: auto;
   line-height: 0;
-  margin: 0 0 clamp(10px, 1.6vw, 28px);
-  max-height: min(58vw, 760px);
-  min-height: 340px;
+  margin: 0 0 clamp(-118px, -7.6vw, -58px);
+  max-height: min(55vw, 720px);
+  min-height: 320px;
   overflow: visible;
+  position: relative;
   width: 100%;
+  z-index: 1;
   -webkit-mask-image:
     radial-gradient(ellipse at 50% 52%, #000 0%, #000 58%, rgb(0 0 0 / 72%) 74%, transparent 94%),
     linear-gradient(90deg, transparent 0%, #000 7%, #000 93%, transparent 100%),
@@ -14907,7 +14909,9 @@ p.editorial-eyebrow,
   line-height: 0.94;
   margin: 0;
   max-width: 1120px;
+  position: relative;
   text-wrap: balance;
+  z-index: 2;
 }
 
 .company-executive-hero p:not(.editorial-eyebrow) {
@@ -15093,14 +15097,25 @@ p.editorial-eyebrow,
   background-color: rgb(255 255 255 / 4%);
   background-position: center;
   background-size: cover;
-  border: 1px solid rgb(255 255 255 / 12%);
+  border: 0;
   border-radius: 0;
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 7%);
   overflow: hidden;
   position: relative;
+  -webkit-mask-image:
+    linear-gradient(90deg, transparent 0%, #000 10%, #000 90%, transparent 100%),
+    linear-gradient(180deg, transparent 0%, #000 8%, #000 86%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+  mask-image:
+    linear-gradient(90deg, transparent 0%, #000 10%, #000 90%, transparent 100%),
+    linear-gradient(180deg, transparent 0%, #000 8%, #000 86%, transparent 100%);
 }
 
 .company-expert-portrait::after {
-  background: linear-gradient(180deg, transparent 42%, rgb(3 3 5 / 76%) 100%);
+  background:
+    radial-gradient(ellipse at 50% 40%, transparent 38%, rgb(3 3 5 / 18%) 78%, rgb(3 3 5 / 44%) 100%),
+    linear-gradient(180deg, transparent 42%, rgb(3 3 5 / 78%) 100%);
   content: "";
   inset: 0;
   position: absolute;
@@ -15155,6 +15170,7 @@ p.editorial-eyebrow,
   border-top: 1px solid rgb(255 255 255 / 10%);
   display: grid;
   gap: clamp(18px, 2vw, 28px);
+  grid-template-rows: auto 1fr;
   padding-top: clamp(24px, 3vw, 44px);
 }
 
@@ -15164,7 +15180,12 @@ p.editorial-eyebrow,
 
 .company-leadership-copy {
   display: grid;
-  gap: clamp(10px, 1.2vw, 16px);
+  grid-template-rows:
+    minmax(16px, auto)
+    minmax(clamp(58px, 4.7vw, 84px), auto)
+    minmax(clamp(44px, 3.6vw, 64px), auto)
+    1fr;
+  row-gap: clamp(10px, 1vw, 14px);
 }
 
 .company-leadership-copy h3 {
@@ -15316,6 +15337,7 @@ p.editorial-eyebrow,
   }
 
   .company-hero-visual.brand-canon-figure {
+    margin-bottom: -34px;
     min-height: 220px;
   }
 
@@ -15330,6 +15352,10 @@ p.editorial-eyebrow,
 
   .company-leadership-grid {
     grid-template-columns: 1fr;
+  }
+
+  .company-leadership-copy {
+    grid-template-rows: none;
   }
 
   .company-principles-list article {
