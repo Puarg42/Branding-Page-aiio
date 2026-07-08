@@ -14,8 +14,8 @@ type MenuLink = {
 const navItems: MenuLink[] = [
   { href: "/", label: "Home" },
   { href: "/platform", label: "Platform" },
-  { href: "/thinking", label: "Thinking" },
   { href: "/success-stories", label: "Business Impact" },
+  { href: "/thinking", label: "Thinking" },
   { href: "/live-demo/kontakt", label: "Get Started" },
   { href: "/partners", label: "Partners" },
   { href: "/academy", label: "Academy" },
