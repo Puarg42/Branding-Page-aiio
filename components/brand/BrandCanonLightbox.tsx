@@ -14,6 +14,7 @@ const brandCanonNavigationVariants: BrandIllustrationVariant[] = [
   "BC-004",
   "BC-005",
   "BC-006",
+  "BC-007",
   "BC201",
   "BC202",
   "BC203",

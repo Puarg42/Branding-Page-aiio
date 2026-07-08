@@ -210,6 +210,22 @@ BC006 is placed after BC005 in the Brand Canon and belongs to the official syste
 
 BC006 must not be cropped, recolored, redrawn, labelled, overlaid, reinterpreted or regenerated.
 
+#### BC007
+
+Company Organizational Intelligence
+
+Official asset:
+
+`public/brand-canon/007-company-organizational-intelligence.png`
+
+Purpose: dedicated Company page Hero illustration.
+
+BC007 visualizes interdisciplinary collaboration, science, organizational systems, leadership and intelligence emerging from multiple perspectives.
+
+BC007 belongs to the institutional side of the Brand Canon. It represents the people and expertise behind Organizational Intelligence rather than product functionality.
+
+BC007 must not be used as a generic teamwork image, software interface, dashboard, decorative background or stock-style company visual.
+
 ### BC200
 
 ORGANIZATIONAL CAPABILITIES

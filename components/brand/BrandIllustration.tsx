@@ -7,6 +7,7 @@ export type BrandIllustrationVariant =
   | "BC-004"
   | "BC-005"
   | "BC-006"
+  | "BC-007"
   | "BC201"
   | "BC202"
   | "BC203"
@@ -44,6 +45,10 @@ export const brandCanonAssets: Record<
   "BC-006": {
     alt: "The Organizational Intelligence System brand illustration",
     src: "/brand-canon/006-organizational-intelligence-system.png",
+  },
+  "BC-007": {
+    alt: "Company brand illustration for interdisciplinary Organizational Intelligence",
+    src: "/brand-canon/007-company-organizational-intelligence.png",
   },
   BC201: {
     alt: "Organizational Source Code brand illustration",

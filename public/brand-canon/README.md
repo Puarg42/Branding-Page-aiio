@@ -72,6 +72,20 @@ Usage: Brand Canon system reference, executive explanation and editorial system 
 
 Never crop, recolor, redraw, add labels, add overlays or reinterpret BC006. The Brand Canon adapts to the approved asset, not the other way around.
 
+### BC007
+
+`007-company-organizational-intelligence.png`
+
+Official name: BC007 - Company Organizational Intelligence.
+
+Purpose: dedicated Company Hero illustration.
+
+Narrative: visualizes interdisciplinary collaboration, science, organizational systems, leadership and intelligence emerging from multiple perspectives.
+
+Usage: Company page hero only.
+
+Never use BC007 as a software UI, dashboard, generic teamwork image or decorative background. It should remain an editorial illustration for the people and institutional foundation behind Organizational Intelligence.
+
 ### BC201
 
 `201-organizational-source-code.png`
