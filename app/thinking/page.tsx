@@ -20,6 +20,7 @@ const thinkingSectionNavigator = [
   { id: "thinking-hero", label: "Hero" },
   { id: "journal", label: "Journal" },
   { id: "publication", label: "Publication" },
+  { id: "start", label: "Start" },
 ] as const;
 
 export default function ThinkingPage() {

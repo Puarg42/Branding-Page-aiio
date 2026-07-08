@@ -41,7 +41,7 @@ const partnerRoles = [
 const partnersSectionNavigator = [
   { id: "partners-hero", label: "Hero" },
   { id: "partners-ecosystem", label: "Ecosystem" },
-  { id: "partners-conversation", label: "Conversation" },
+  { id: "start", label: "Start" },
 ] as const;
 
 export default function PartnersPage() {
@@ -83,7 +83,6 @@ export default function PartnersPage() {
       <ExecutiveCTA
         copy="Become part of the Organizational Intelligence ecosystem."
         headline="Build Organizational Intelligence together."
-        id="partners-conversation"
         primary={{ href: "/live-demo/kontakt", label: "Become a Partner" }}
         secondary={{ href: "/contact", label: "Contact Us" }}
       />

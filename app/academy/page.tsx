@@ -27,6 +27,7 @@ const academySectionNavigator: EditorialSectionNavigatorItem[] = [
   { id: "academy-resources", label: "Learning Resources" },
   { id: "academy-live", label: "Live Learning" },
   { id: "academy-thinking", label: "Continue in Thinking" },
+  { id: "start", label: "Start" },
 ];
 
 const learningJourney = [

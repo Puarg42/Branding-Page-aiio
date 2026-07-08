@@ -20,7 +20,7 @@ export function ExecutiveCTA({
   copy,
   eyebrow = "Start",
   headline,
-  id,
+  id = "start",
   primary,
   secondary,
 }: ExecutiveCTAProps) {

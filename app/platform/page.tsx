@@ -127,6 +127,7 @@ const platformSectionNavigator = [
   { id: "platform-journey", label: "Journey" },
   { id: "capability-layer", label: "The System" },
   { id: "platform-outcome", label: "Outcome" },
+  { id: "start", label: "Start" },
 ] as const;
 
 const platformHeroTitle = (

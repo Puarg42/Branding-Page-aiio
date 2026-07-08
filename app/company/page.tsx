@@ -37,6 +37,7 @@ const companySectionNavigator = [
   { id: "company-hero", label: "Hero" },
   { id: "company-mission", label: "Mission" },
   { id: "company-principles", label: "Principles" },
+  { id: "start", label: "Start" },
 ] as const;
 
 export default function CompanyPage() {

@@ -1020,6 +1020,7 @@ const businessImpactSectionNavigator: EditorialSectionNavigatorItem[] = [
   { id: "business-impact-scenarios", label: "Proof" },
   { id: "business-impact-insight", label: "Insight" },
   { id: "business-impact-closing", label: "Outcome" },
+  { id: "start", label: "Start" },
 ];
 
 function getBusinessImpactScenario(card: ResourceCard) {

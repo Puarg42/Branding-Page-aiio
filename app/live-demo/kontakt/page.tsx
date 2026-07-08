@@ -17,7 +17,7 @@ const expectationItems = [
 const requestDemoSectionNavigator = [
   { id: "request-demo-hero", label: "Hero" },
   { id: "request-demo-expectations", label: "Expectations" },
-  { id: "request-demo-form", label: "Request" },
+  { id: "request-demo-form", label: "Start" },
 ] as const;
 
 export default function DemoKontaktPage() {
