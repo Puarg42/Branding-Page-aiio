@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect } from "react";
-import { BrandCanonLightbox } from "../../components/brand/BrandCanonLightbox";
 
 const capabilityCardSelector = ".website-capability-card[data-capability]";
 const revealSelector = [
@@ -146,5 +145,5 @@ export function PlatformEditorialExperience() {
     };
   }, []);
 
-  return <BrandCanonLightbox />;
+  return null;
 }

@@ -171,6 +171,7 @@ export default function PlatformPage() {
         <BrandIllustration
           className="website-platform-hero-artwork"
           decorative={false}
+          interactive
           priority
           variant="BC-003"
         />

@@ -182,8 +182,13 @@ function Hero() {
           </a>
         </EditorialCTAGroup>
       </div>
-      <div className="hero-visual" aria-hidden="true">
-        <BrandIllustration priority variant="BC-001" />
+      <div className="hero-visual">
+        <BrandIllustration
+          decorative={false}
+          interactive
+          priority
+          variant="BC-001"
+        />
       </div>
     </section>
   );
@@ -222,6 +227,7 @@ function ConceptBreakthrough() {
           <BrandIllustration
             className="missing-capability-illustration"
             decorative={false}
+            interactive
             variant="BC-005"
           />
           <h2>The missing capability is continuous self-understanding.</h2>
@@ -294,7 +300,7 @@ function OisArchitecture() {
           aria-label="Organizational Intelligence layered architecture"
           className="ois-visual-wrap"
         >
-          <BrandIllustration variant="BC-002" />
+          <BrandIllustration decorative={false} interactive variant="BC-002" />
         </div>
       </div>
 

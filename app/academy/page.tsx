@@ -106,7 +106,8 @@ export default function AcademyPage() {
             <EditorialEyebrow>The Learning System</EditorialEyebrow>
             <BrandIllustration
               className="academy-hero-visual"
-              decorative
+              decorative={false}
+              interactive
               priority
               variant="BC-006"
             />

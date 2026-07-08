@@ -187,7 +187,7 @@ export function OrganizationMirror() {
               : { duration: 1.1, ease: motionEase, delay: 0.12 }
           }
         >
-          <BrandIllustration variant="BC-001" />
+          <BrandIllustration decorative={false} interactive variant="BC-001" />
         </motion.div>
       </div>
     </section>

@@ -89,7 +89,7 @@ export function BrandIllustration({
   interactive = false,
   priority = false,
   variant,
-  viewerMode = "gallery",
+  viewerMode = "figure",
 }: BrandIllustrationProps) {
   const asset = brandCanonAssets[variant];
   const image = (

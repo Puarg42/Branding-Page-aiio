@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { BrandCanonLightbox } from "../components/brand/BrandCanonLightbox";
 import { NavigationMemory } from "../components/brand/NavigationMemory";
 import { SiteFooter } from "./site-footer";
 import { siteUrl } from "./site-url";
@@ -60,6 +61,7 @@ export default function RootLayout({
         <NavigationMemory />
         {children}
         <SiteFooter />
+        <BrandCanonLightbox />
       </body>
     </html>
   );
