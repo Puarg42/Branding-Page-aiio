@@ -31,7 +31,9 @@ const academySectionNavigator: EditorialSectionNavigatorItem[] = [
 const learningModules = [
   {
     module: "Foundation",
+    tone: "foundation",
     title: "Understand Organizational Reality",
+    titleLines: ["Understand", "Organizational Reality"],
     copy:
       "Learn how organizations become understandable by documenting structures, responsibilities, processes and knowledge.",
     product: "ProcessCollector™",
@@ -39,7 +41,9 @@ const learningModules = [
   },
   {
     module: "Understanding",
+    tone: "understanding",
     title: "Build Organizational Self-Understanding",
+    titleLines: ["Build Organizational", "Self-Understanding"],
     copy:
       "Learn how connected organizational reality becomes continuous Organizational Self-Understanding.",
     product: "ProcessMagnet™",
@@ -47,7 +51,9 @@ const learningModules = [
   },
   {
     module: "Application",
+    tone: "application",
     title: "Transform Understanding into Organizational Capabilities",
+    titleLines: ["Transform Understanding", "into Organizational Capabilities"],
     copy:
       "Learn how Organizational Intelligence becomes reusable organizational capabilities that people and AI can apply.",
     product: "ProcessForge™",
@@ -55,7 +61,9 @@ const learningModules = [
   },
   {
     module: "Mastery",
+    tone: "mastery",
     title: "Create Self-Empowering Organizations",
+    titleLines: ["Create Self-Empowering", "Organizations"],
     copy:
       "Learn how continuously evolving organizational capabilities enable organizations to become increasingly self-empowering and resilient.",
     product: "DataForge™",
@@ -147,13 +155,23 @@ export default function AcademyPage() {
 
         <EditorialGrid className="academy-journey-grid" columns="four">
           {learningModules.map((module, index) => (
-            <EditorialCard className="academy-journey-card" key={module.title}>
-              <span className="academy-level-index">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-              <p className="academy-level-label">{module.module}</p>
-              <h3>{module.title}</h3>
-              <p>{module.copy}</p>
+            <EditorialCard
+              className="academy-journey-card"
+              data-academy-tone={module.tone}
+              key={module.title}
+            >
+              <div className="academy-module-header">
+                <span className="academy-level-index">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <p className="academy-level-label">{module.module}</p>
+                <h3 aria-label={module.title}>
+                  {module.titleLines.map((line) => (
+                    <span key={line}>{line}</span>
+                  ))}
+                </h3>
+              </div>
+              <p className="academy-module-copy">{module.copy}</p>
               <p className="academy-powered">
                 Supported by <strong>{module.product}</strong>
               </p>
@@ -162,7 +180,7 @@ export default function AcademyPage() {
                 <p>{module.outcome}</p>
               </div>
               <Link className="academy-text-link" href="#academy-formats">
-                View Module <EditorialJumpArrow />
+                View Module <span aria-hidden="true">-&gt;</span>
               </Link>
             </EditorialCard>
           ))}
