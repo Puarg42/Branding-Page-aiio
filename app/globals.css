@@ -14841,7 +14841,7 @@ p.editorial-eyebrow,
     radial-gradient(circle at 54% 18%, rgb(90 50 138 / 18%), transparent 42%),
     linear-gradient(180deg, #020205 0%, #050507 100%);
   border-bottom: 1px solid rgb(255 255 255 / 8%);
-  padding: clamp(92px, 9vw, 150px) 0 clamp(118px, 12vw, 210px);
+  padding: clamp(78px, 7.5vw, 126px) 0 clamp(96px, 10vw, 176px);
 }
 
 .company-executive-hero .company-executive-shell {
@@ -14856,9 +14856,9 @@ p.editorial-eyebrow,
   border: 0;
   height: auto;
   line-height: 0;
-  margin: 0 0 clamp(32px, 4.5vw, 72px);
-  max-height: min(52vw, 680px);
-  min-height: 300px;
+  margin: 0 0 clamp(20px, 3vw, 48px);
+  max-height: min(56vw, 735px);
+  min-height: 324px;
   overflow: visible;
   width: 100%;
   -webkit-mask-image:
@@ -14885,7 +14885,7 @@ p.editorial-eyebrow,
   letter-spacing: 0;
   line-height: 0.94;
   margin: 0;
-  max-width: 980px;
+  max-width: 1120px;
   text-wrap: balance;
 }
 
@@ -14893,7 +14893,7 @@ p.editorial-eyebrow,
   color: rgb(255 255 255 / 72%);
   font-size: clamp(1.18rem, 1.58vw, 1.42rem);
   line-height: 1.56;
-  margin: clamp(34px, 4vw, 58px) 0 0;
+  margin: clamp(24px, 3vw, 42px) 0 0;
   max-width: 780px;
 }
 
@@ -14902,7 +14902,7 @@ p.editorial-eyebrow,
     radial-gradient(circle at 78% 10%, rgb(90 50 138 / 8%), transparent 34%),
     #050507;
   border-bottom: 1px solid rgb(255 255 255 / 8%);
-  padding: clamp(104px, 12vw, 190px) 0;
+  padding: clamp(84px, 9.5vw, 156px) 0;
 }
 
 .company-executive-heading {
@@ -14931,8 +14931,8 @@ p.editorial-eyebrow,
 .company-purpose-statement {
   border-left: 1px solid rgb(179 145 255 / 38%);
   display: grid;
-  gap: clamp(18px, 2vw, 28px);
-  margin-top: clamp(56px, 6vw, 96px);
+  gap: clamp(16px, 1.7vw, 24px);
+  margin-top: clamp(42px, 4.8vw, 76px);
   max-width: 840px;
   padding-left: clamp(26px, 3vw, 44px);
 }
@@ -14955,9 +14955,9 @@ p.editorial-eyebrow,
   counter-reset: company-story;
   display: grid;
   gap: 0;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   list-style: none;
-  margin: clamp(72px, 8vw, 128px) 0 0;
+  margin: clamp(52px, 6vw, 92px) 0 0;
   padding: 0;
   position: relative;
 }
@@ -14974,8 +14974,8 @@ p.editorial-eyebrow,
 
 .company-story-timeline li {
   display: grid;
-  gap: 18px;
-  padding: 84px clamp(20px, 2.6vw, 36px) 0;
+  gap: 14px;
+  padding: 76px clamp(16px, 2vw, 28px) 0;
   position: relative;
 }
 
@@ -14986,7 +14986,7 @@ p.editorial-eyebrow,
   box-shadow: 0 0 24px rgb(179 145 255 / 16%);
   content: "";
   height: 14px;
-  left: clamp(20px, 2.6vw, 36px);
+  left: clamp(16px, 2vw, 28px);
   position: absolute;
   top: 31px;
   width: 14px;
@@ -14995,6 +14995,7 @@ p.editorial-eyebrow,
 .company-story-timeline span,
 .company-principles-list span,
 .company-expert-copy span,
+.company-leadership-copy span,
 .company-team-composition span,
 .company-discipline-grid span,
 .company-recognition-proof span {
@@ -15018,6 +15019,7 @@ p.editorial-eyebrow,
 .company-story-timeline p,
 .company-principles-list p,
 .company-expert-copy p,
+.company-leadership-copy p,
 .company-team-composition strong,
 .company-recognition-proof p {
   color: rgb(255 255 255 / 62%);
@@ -15029,7 +15031,7 @@ p.editorial-eyebrow,
 .company-principles-list {
   border-top: 1px solid rgb(255 255 255 / 10%);
   display: grid;
-  margin-top: clamp(64px, 7vw, 112px);
+  margin-top: clamp(50px, 5.6vw, 88px);
 }
 
 .company-principles-list article {
@@ -15052,17 +15054,17 @@ p.editorial-eyebrow,
 
 .company-expert-list {
   display: grid;
-  gap: clamp(28px, 4vw, 60px);
-  margin-top: clamp(70px, 8vw, 132px);
+  gap: clamp(24px, 3vw, 48px);
+  margin-top: clamp(52px, 6vw, 92px);
 }
 
 .company-expert-profile {
   align-items: center;
   border-top: 1px solid rgb(255 255 255 / 10%);
   display: grid;
-  gap: clamp(28px, 5vw, 82px);
+  gap: clamp(26px, 4vw, 68px);
   grid-template-columns: minmax(180px, 0.36fr) minmax(0, 1fr);
-  padding-top: clamp(28px, 4vw, 60px);
+  padding-top: clamp(24px, 3.2vw, 48px);
 }
 
 .company-expert-portrait {
@@ -15121,6 +15123,45 @@ p.editorial-eyebrow,
   line-height: 1.32;
 }
 
+.company-leadership-grid {
+  display: grid;
+  gap: clamp(18px, 2vw, 30px);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: clamp(52px, 6vw, 92px);
+}
+
+.company-leadership-card {
+  border-top: 1px solid rgb(255 255 255 / 10%);
+  display: grid;
+  gap: clamp(18px, 2vw, 28px);
+  padding-top: clamp(24px, 3vw, 44px);
+}
+
+.company-leadership-portrait {
+  width: 100%;
+}
+
+.company-leadership-copy {
+  display: grid;
+  gap: clamp(10px, 1.2vw, 16px);
+}
+
+.company-leadership-copy h3 {
+  color: #ffffff;
+  font-family: var(--font-aiio-heading);
+  font-size: clamp(1.46rem, 2.1vw, 2.45rem);
+  line-height: 1.04;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.company-leadership-copy .company-expert-field {
+  color: rgb(255 255 255 / 82%);
+  font-family: var(--font-aiio-heading);
+  font-size: clamp(1rem, 1.15vw, 1.14rem);
+  line-height: 1.32;
+}
+
 .company-team-composition {
   display: grid;
   gap: clamp(18px, 2vw, 30px);
@@ -15162,7 +15203,7 @@ p.editorial-eyebrow,
 
 .company-reference-marquee {
   height: clamp(76px, 7vw, 108px);
-  margin: clamp(60px, 7vw, 112px) 0 clamp(42px, 5vw, 76px);
+  margin: clamp(46px, 5.2vw, 84px) 0 clamp(32px, 4vw, 58px);
   overflow: hidden;
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
   mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
@@ -15250,7 +15291,7 @@ p.editorial-eyebrow,
   background:
     radial-gradient(circle at 50% 0%, rgb(179 145 255 / 12%), transparent 34%),
     #030305;
-  padding: clamp(112px, 14vw, 230px) 0;
+  padding: clamp(92px, 11vw, 184px) 0;
   position: relative;
 }
 
@@ -15262,11 +15303,12 @@ p.editorial-eyebrow,
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
-  margin-top: clamp(40px, 5vw, 76px);
+  margin-top: clamp(32px, 4vw, 58px);
 }
 
 @media (max-width: 980px) {
   .company-story-timeline,
+  .company-leadership-grid,
   .company-team-composition,
   .company-recognition-proof {
     grid-template-columns: 1fr;
@@ -15287,6 +15329,10 @@ p.editorial-eyebrow,
     display: none;
   }
 
+  .company-leadership-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .company-expert-profile {
     grid-template-columns: 1fr;
   }
@@ -15302,7 +15348,7 @@ p.editorial-eyebrow,
   }
 
   .company-executive-hero {
-    padding: 84px 0 112px;
+    padding: 76px 0 92px;
   }
 
   .company-hero-visual.brand-canon-figure {
@@ -15315,7 +15361,11 @@ p.editorial-eyebrow,
 
   .company-executive-section,
   .company-journey-cta {
-    padding: 92px 0;
+    padding: 82px 0;
+  }
+
+  .company-leadership-grid {
+    grid-template-columns: 1fr;
   }
 
   .company-principles-list article {

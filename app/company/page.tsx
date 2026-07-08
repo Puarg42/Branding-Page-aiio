@@ -3,7 +3,6 @@ import Link from "next/link";
 import { BrandIllustration } from "../../components/brand/BrandIllustration";
 import {
   EditorialCTAGroup,
-  EditorialGrid,
   EditorialNavigation,
   EditorialSection,
   EditorialSectionHeader,
@@ -24,28 +23,37 @@ const companySectionNavigator = [
   { id: "company-purpose", label: "Purpose" },
   { id: "company-story", label: "Story" },
   { id: "company-belief", label: "Belief" },
+  { id: "company-team", label: "Leadership" },
   { id: "company-experts", label: "Expertise" },
-  { id: "company-team", label: "Team" },
   { id: "company-recognition", label: "Recognition" },
   { id: "start", label: "Start" },
 ] as const;
 
 const storyMilestones = [
   {
+    year: "2006",
     label: "Lintra",
-    text: "Process expertise became the foundation for making organizations more understandable.",
+    text: "Foundation of structured organizational knowledge and the first discipline for making organizational reality explicit.",
   },
   {
+    year: "2015",
     label: "Quam",
-    text: "Process management matured into structured organizational modeling and governance.",
+    text: "Semantic process intelligence connected processes, structures and governance into a more coherent organizational model.",
   },
   {
+    year: "2023",
     label: "aiio",
-    text: "The company shifted from process software toward Organizational Intelligence.",
+    text: "Transformation from process software into an Organizational Intelligence System built for continuous self-understanding.",
   },
   {
+    year: "2024",
+    label: "Series A",
+    text: "Institutional growth accelerated the category and strengthened the long-term platform foundation.",
+  },
+  {
+    year: "Today",
     label: "Organizational Intelligence System",
-    text: "The platform now connects understanding, capability development and resilience.",
+    text: "Establishing Organizational Intelligence as a new management discipline for organizations that need to evolve continuously.",
   },
 ] as const;
 
@@ -58,15 +66,42 @@ const principles = [
   "Technology should make organizations more capable, not more dependent.",
 ] as const;
 
-const experts = [
+const leadership = [
   {
-    contribution:
-      "Shapes the theoretical foundation of Organizational Intelligence and the link between management discipline, platform architecture and business value.",
-    expertise: "Organizational Intelligence, product strategy and management systems",
     image: "/people/christian-graup.jpg",
     name: "Dr. Christian Graup",
-    role: "Founder & CEO",
+    profile:
+      "Christian shapes the category, theory and product direction of aiio. He connects management thinking, platform strategy and the long-term ambition of Organizational Intelligence.",
+    responsibility: "Category, theory and product direction",
+    role: "Chief Executive Officer",
   },
+  {
+    image: "/people/knut-koechli.jpg",
+    name: "Knut Köchli",
+    profile:
+      "Knut turns strategy into organizational execution. He focuses on operating discipline, delivery quality and the structures required to scale aiio reliably.",
+    responsibility: "Operations, delivery and execution",
+    role: "Chief Operating Officer",
+  },
+  {
+    image: "/people/jobst-von-heintze.jpg",
+    name: "Jobst von Heintze",
+    profile:
+      "Jobst develops the market narrative around Organizational Intelligence and translates the category into communication that leaders, partners and customers can understand.",
+    responsibility: "Market narrative and category communication",
+    role: "Chief Marketing Officer",
+  },
+  {
+    image: "/people/lars-bendler.jpg",
+    name: "Lars Bendler",
+    profile:
+      "Lars builds the partner foundation for Organizational Intelligence. He connects consulting, ecosystem development and customer capability building.",
+    responsibility: "Partner ecosystem and capability delivery",
+    role: "Chief Partner Officer",
+  },
+] as const;
+
+const experts = [
   {
     contribution:
       "Contributes expertise in information security, embedded systems and trustworthy technical foundations for complex organizations.",
@@ -95,18 +130,10 @@ const experts = [
     contribution:
       "René Leitgen contributes expertise in organizational resilience, adaptive leadership and sustainable transformation. His perspective strengthens Organizational Intelligence by addressing how organizations remain capable of acting under continuous change, uncertainty and increasing complexity.",
     expertise: "Resilience & Adaptive Leadership",
-    image: null,
+    image: "/people/rene-leitgen.jpg",
     name: "René Leitgen",
     role: "Expert Panel",
   },
-] as const;
-
-const teamDisciplines = [
-  "Leadership",
-  "Software engineering",
-  "Organizational science",
-  "Artificial intelligence",
-  "Consulting",
 ] as const;
 
 const recognitionLogos = [
@@ -221,9 +248,9 @@ export default function CompanyPage() {
           lead="aiio did not begin with a generic software idea. It emerged from years of working with the structures, processes and realities that make organizations understandable."
         />
         <ol className="company-story-timeline">
-          {storyMilestones.map((milestone, index) => (
-            <li key={milestone.label}>
-              <span>{String(index + 1).padStart(2, "0")}</span>
+          {storyMilestones.map((milestone) => (
+            <li key={`${milestone.year}-${milestone.label}`}>
+              <span>{milestone.year}</span>
               <h3>{milestone.label}</h3>
               <p>{milestone.text}</p>
             </li>
@@ -252,6 +279,37 @@ export default function CompanyPage() {
       </EditorialSection>
 
       <EditorialSection
+        className="company-executive-section company-team-section"
+        id="company-team"
+        shellClassName="company-executive-shell"
+      >
+        <EditorialSectionHeader
+          className="company-executive-heading"
+          eyebrow="Leadership"
+          title="The executive management behind aiio."
+          lead="The leadership team connects category creation, operating discipline, market development and partner enablement into one institutional direction."
+        />
+        <div className="company-leadership-grid">
+          {leadership.map((person) => (
+            <article className="company-leadership-card" key={person.name}>
+              <div
+                aria-label={`${person.name} portrait`}
+                className="company-expert-portrait company-leadership-portrait"
+                role="img"
+                style={{ backgroundImage: `url(${person.image})` }}
+              />
+              <div className="company-leadership-copy">
+                <span>{person.role}</span>
+                <h3>{person.name}</h3>
+                <p className="company-expert-field">{person.responsibility}</p>
+                <p>{person.profile}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </EditorialSection>
+
+      <EditorialSection
         className="company-executive-section company-expert-section"
         id="company-experts"
         shellClassName="company-executive-shell"
@@ -266,14 +324,11 @@ export default function CompanyPage() {
           {experts.map((expert) => (
             <article className="company-expert-profile" key={expert.name}>
               <div
-                aria-hidden={!expert.image}
-                aria-label={expert.image ? `${expert.name} portrait` : undefined}
-                className={`company-expert-portrait${expert.image ? "" : " is-placeholder"}`}
-                role={expert.image ? "img" : undefined}
-                style={expert.image ? { backgroundImage: `url(${expert.image})` } : undefined}
-              >
-                {!expert.image ? <span>{expert.name.split(" ").map((part) => part[0]).join("")}</span> : null}
-              </div>
+                aria-label={`${expert.name} portrait`}
+                className="company-expert-portrait"
+                role="img"
+                style={{ backgroundImage: `url(${expert.image})` }}
+              />
               <div className="company-expert-copy">
                 <span>{expert.role}</span>
                 <h3>{expert.name}</h3>
@@ -283,36 +338,6 @@ export default function CompanyPage() {
             </article>
           ))}
         </div>
-      </EditorialSection>
-
-      <EditorialSection
-        className="company-executive-section company-team-section"
-        id="company-team"
-        shellClassName="company-executive-shell"
-      >
-        <EditorialSectionHeader
-          className="company-executive-heading"
-          eyebrow="Leadership & Team"
-          title="Building Organizational Intelligence together."
-          lead="The work connects leadership, engineering, organizational science, AI and consulting into one shared discipline."
-        />
-        <div className="company-team-composition">
-          <div>
-            <span>Leadership</span>
-            <strong>Direction, category and long-term institutional focus.</strong>
-          </div>
-          <div>
-            <span>Core Team</span>
-            <strong>Engineering, product, AI, consulting and customer learning.</strong>
-          </div>
-        </div>
-        <EditorialGrid className="company-discipline-grid" columns="auto">
-          {teamDisciplines.map((discipline) => (
-            <article key={discipline}>
-              <span>{discipline}</span>
-            </article>
-          ))}
-        </EditorialGrid>
       </EditorialSection>
 
       <EditorialSection
