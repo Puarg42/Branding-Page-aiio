@@ -198,7 +198,6 @@ export default function CompanyPage() {
             priority
             variant="BC-007"
           />
-          <EditorialEyebrow>Company</EditorialEyebrow>
           <h1>Building the future of Organizational Intelligence.</h1>
           <p>
             aiio exists to help organizations continuously understand

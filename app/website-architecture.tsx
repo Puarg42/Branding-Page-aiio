@@ -26,7 +26,6 @@ export type ArchitectureSection = {
 
 type WebsiteArchitecturePageProps = {
   children?: ReactNode;
-  eyebrow: string;
   heroActions?: ReactNode;
   heroId?: string;
   heroLead?: ReactNode;
@@ -40,7 +39,6 @@ type WebsiteArchitecturePageProps = {
 
 export function WebsiteArchitecturePage({
   children,
-  eyebrow,
   heroActions,
   heroId,
   heroLead,
@@ -57,7 +55,6 @@ export function WebsiteArchitecturePage({
       <EditorialHero
         actions={heroActions}
         className="website-hero"
-        eyebrow={eyebrow}
         id={heroId}
         intro={intro}
         lead={heroLead}

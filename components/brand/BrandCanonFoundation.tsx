@@ -19,7 +19,7 @@ function cx(...classes: Array<string | false | null | undefined>) {
 export type EditorialHeroProps = {
   actions?: ReactNode;
   className?: string;
-  eyebrow: ReactNode;
+  eyebrow?: ReactNode;
   id?: string;
   intro?: ReactNode;
   labelledBy?: string;
@@ -51,7 +51,7 @@ export function EditorialHero({
     >
       <div className={cx("editorial-shell", shellClassName)}>
         {visual ? <div className="editorial-hero-visual">{visual}</div> : null}
-        <EditorialEyebrow>{eyebrow}</EditorialEyebrow>
+        {eyebrow ? <EditorialEyebrow>{eyebrow}</EditorialEyebrow> : null}
         <h1 id={titleId}>{title}</h1>
         {lead ? <p className="editorial-hero-lead">{lead}</p> : null}
         {intro ? <p className="editorial-hero-intro">{intro}</p> : null}

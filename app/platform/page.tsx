@@ -165,7 +165,6 @@ function TheoryTerm({
 export default function PlatformPage() {
   return (
     <WebsiteArchitecturePage
-      eyebrow="The System"
       heroId="platform-hero"
       heroVisual={
         <BrandIllustration

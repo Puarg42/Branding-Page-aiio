@@ -1038,7 +1038,6 @@ function BusinessImpactPage() {
       <MainHeader variant="solid" />
       <section className="business-impact-hero" id="business-impact-hero">
         <div className="business-impact-shell">
-          <EditorialEyebrow>The Impact</EditorialEyebrow>
           <h1>Different business challenges. One missing capability.</h1>
           <div className="business-impact-lead">
             <p>

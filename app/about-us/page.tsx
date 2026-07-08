@@ -198,7 +198,6 @@ export default function AboutUsPage() {
 
       <EditorialSection className="about-hero" shell={false}>
         <div className="about-hero-inner">
-          <EditorialEyebrow>{getEditableContent("about.hero.eyebrow", "Company")}</EditorialEyebrow>
           <h1>{getEditableContent("about.hero.title", "Why aiio exists")}</h1>
           <p>
             Organizations are becoming more complex than their structures,

@@ -26,7 +26,6 @@ const thinkingSectionNavigator = [
 export default function ThinkingPage() {
   return (
     <WebsiteArchitecturePage
-      eyebrow="The Theory"
       heroActions={
         <TheoryLink className="website-text-link" href="/thinking/theory">
           Read the current Theory <EditorialJumpArrow />

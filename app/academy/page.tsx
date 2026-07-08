@@ -9,7 +9,6 @@ import {
   EditorialSection,
   EditorialSectionHeader,
 } from "../../components/brand/BrandCanonFoundation";
-import { EditorialEyebrow } from "../../components/brand/EditorialEyebrow";
 import { EditorialJumpArrow } from "../../components/brand/EditorialJumpArrow";
 import type { EditorialSectionNavigatorItem } from "../../components/brand/EditorialSectionNavigator";
 import { ExecutiveCTA } from "../../components/brand/ExecutiveCTA";
@@ -103,7 +102,6 @@ export default function AcademyPage() {
       <section className="academy-hero editorial-hero" id="academy-hero">
         <div className="academy-shell">
           <div className="academy-hero-copy">
-            <EditorialEyebrow>The Learning System</EditorialEyebrow>
             <BrandIllustration
               className="academy-hero-visual"
               decorative={false}

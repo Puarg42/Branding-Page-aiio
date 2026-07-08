@@ -23,7 +23,6 @@ export function LegalPage({ slug }: { slug: LegalSlug }) {
 
       <EditorialHero
         className="legal-hero"
-        eyebrow={page.eyebrow}
         id={`${slug}-hero`}
         intro={page.intro}
         shellClassName="legal-shell"
