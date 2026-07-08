@@ -53,7 +53,7 @@ const learningModules = [
     module: "Application",
     tone: "application",
     title: "Transform Understanding into Organizational Capabilities",
-    titleLines: ["Transform Understanding", "into Organizational Capabilities"],
+    titleLines: ["Transform Understanding", "into Organizational", "Capabilities"],
     copy:
       "Learn how Organizational Intelligence becomes reusable organizational capabilities that people and AI can apply.",
     product: "ProcessForge™",
