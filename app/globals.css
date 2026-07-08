@@ -14668,3 +14668,103 @@ p.editorial-eyebrow,
   text-align: left;
   text-transform: uppercase;
 }
+
+/* Executive headline refinement: calmer chapter-scale H2s with wider editorial measure. */
+.editorial-section-header,
+.website-section-heading,
+.business-impact-section-heading,
+.academy-section-heading {
+  max-width: min(100%, 980px);
+}
+
+.editorial-section-header h2,
+.website-section-heading h2,
+.website-page:has(.website-platform-system-section) .website-section-heading h2,
+.business-impact-section-heading h2,
+.academy-section-heading h2,
+.category-evolution-intro h2,
+.problem-inner h2,
+.concept-inner h2,
+.capability-journey-intro h2,
+.ois-intro h2,
+.organization-header h2,
+.company-purpose-copy h2,
+.trust-reference-copy h2,
+.website-platform-missing-copy h2,
+.website-platform-conclusion h2,
+.request-demo-section h2,
+.request-demo-form-intro h2,
+.executive-cta-copy h2,
+.contextual-executive-cta-copy h2,
+.theory-chapter h2 {
+  line-height: 1.02;
+  text-wrap: balance;
+}
+
+.editorial-section-header h2 {
+  font-size: clamp(2.18rem, 4.65vw, 5.2rem);
+}
+
+.website-section-heading h2,
+.website-page:has(.website-platform-system-section) .website-section-heading h2 {
+  font-size: clamp(2.78rem, 5vw, 6rem);
+  max-width: min(100%, 960px);
+}
+
+.website-page:has(.website-platform-system-section) .website-section-heading h2 {
+  font-size: clamp(2.48rem, 4.4vw, 5.28rem);
+  max-width: min(100%, 940px);
+}
+
+.category-evolution-intro h2,
+.problem-inner h2,
+.capability-journey-intro h2,
+.ois-intro h2,
+.organization-header h2,
+.company-purpose-copy h2,
+.trust-reference-copy h2,
+.executive-cta-copy h2 {
+  font-size: clamp(2.52rem, 4.98vw, 5.72rem);
+  max-width: min(100%, 1120px);
+}
+
+.concept-inner h2 {
+  font-size: clamp(2.52rem, 4.98vw, 5.72rem);
+  max-width: min(100%, 1060px);
+}
+
+.concept-inner-text h2 {
+  max-width: min(100%, 940px);
+}
+
+.website-platform-missing-copy h2,
+.website-platform-conclusion h2 {
+  font-size: clamp(2.52rem, 4.23vw, 5.32rem);
+  max-width: min(100%, 900px);
+}
+
+.academy-section-heading h2 {
+  font-size: clamp(2.78rem, 4.84vw, 5.76rem);
+  max-width: min(100%, 990px);
+}
+
+.business-impact-section-heading h2 {
+  font-size: clamp(2.5rem, 4.65vw, 5.58rem);
+  max-width: min(100%, 980px);
+}
+
+.request-demo-section h2,
+.request-demo-form-intro h2 {
+  font-size: clamp(2.24rem, 4.2vw, 5rem);
+  max-width: min(100%, 920px);
+}
+
+.contextual-executive-cta-copy h2 {
+  font-size: clamp(2.25rem, 4.28vw, 4.98rem);
+  max-width: min(100%, 1010px);
+}
+
+.theory-chapter h2 {
+  font-size: clamp(3rem, 5vw, 5.4rem);
+  max-width: min(100%, 840px);
+}
