@@ -5859,7 +5859,8 @@ h1 {
     linear-gradient(180deg, #020205 0%, #050507 48%, #030305 100%);
   color: #ffffff;
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: clip;
+  overflow-y: visible;
   position: relative;
 }
 
