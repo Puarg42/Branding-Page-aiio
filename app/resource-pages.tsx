@@ -10,6 +10,7 @@ import type { EditorialSectionNavigatorItem } from "../components/brand/Editoria
 import { EditorialEyebrow } from "../components/brand/EditorialEyebrow";
 import { EditorialJumpArrow } from "../components/brand/EditorialJumpArrow";
 import { ExecutiveCTA } from "../components/brand/ExecutiveCTA";
+import { TrustLogoMarquee } from "../components/brand/TrustLogoMarquee";
 import { getEditableContent, RichText } from "./editor/content";
 import { MainHeader } from "./main-navigation";
 
@@ -1036,6 +1037,7 @@ function BusinessImpactPage() {
   return (
     <main className="business-impact-page">
       <MainHeader variant="solid" />
+      <TrustLogoMarquee />
       <section className="business-impact-hero" id="business-impact-hero">
         <div className="business-impact-shell">
           <h1>Different business challenges. One missing capability.</h1>

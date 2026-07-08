@@ -6,7 +6,6 @@ import {
   EditorialNavigation,
   EditorialSection,
   EditorialSectionHeader,
-  ReferenceMarquee,
 } from "../../components/brand/BrandCanonFoundation";
 import { EditorialEyebrow } from "../../components/brand/EditorialEyebrow";
 import { EditorialJumpArrow } from "../../components/brand/EditorialJumpArrow";
@@ -136,17 +135,6 @@ const experts = [
   },
 ] as const;
 
-const recognitionLogos = [
-  { alt: "Media Central", key: "media-central", src: "/brand/references/media-central.png" },
-  { alt: "WKO", key: "wko", src: "/brand/references/wko.svg" },
-  { alt: "thyssenkrupp", key: "thyssenkrupp", src: "/brand/references/thyssenkrupp.png" },
-  { alt: "ABB", key: "abb", src: "/brand/references/abb.png" },
-  { alt: "Volkswagen", key: "volkswagen", src: "/brand/references/volkswagen.png" },
-  { alt: "VDE", key: "vde", src: "/brand/references/vde.png" },
-  { alt: "Euromobil", key: "euromobil", src: "/brand/references/euromobil.svg" },
-  { alt: "VTG", key: "vtg", src: "/brand/references/vtg.png" },
-] as const;
-
 const awards = [
   {
     alt: "CHIP Leading Software 2024 for aiio",
@@ -159,30 +147,6 @@ const awards = [
     label: "CHIP Leading Software 2025",
   },
 ] as const;
-
-function CompanyReferenceMarquee() {
-  return (
-    <ReferenceMarquee className="company-reference-marquee" ariaLabel="Selected aiio references">
-      <div className="company-reference-marquee-row">
-        <div className="company-reference-marquee-track">
-          {Array.from({ length: 3 }, (_, setIndex) => (
-            <div className="company-reference-marquee-set" key={setIndex}>
-              {recognitionLogos.map((logo) => (
-                <figure
-                  className="company-reference-logo"
-                  data-logo={logo.key}
-                  key={`${setIndex}-${logo.alt}`}
-                >
-                  <img alt={logo.alt} loading="lazy" src={logo.src} />
-                </figure>
-              ))}
-            </div>
-          ))}
-        </div>
-      </div>
-    </ReferenceMarquee>
-  );
-}
 
 export default function CompanyPage() {
   return (
@@ -350,7 +314,6 @@ export default function CompanyPage() {
           title="Trusted by organizations shaping the future."
           lead="aiio is shaped with organizations, partners and expert communities that operate in complex, regulated and knowledge-intensive environments."
         />
-        <CompanyReferenceMarquee />
         <div className="company-recognition-proof">
           {awards.map((award) => (
             <figure key={award.label}>

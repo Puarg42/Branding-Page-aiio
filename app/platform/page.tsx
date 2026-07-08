@@ -12,6 +12,7 @@ import { EditorialReferenceMarker } from "../../components/brand/EditorialRefere
 import { EditorialProgression } from "../../components/brand/EditorialProgression";
 import { ExecutiveCTA } from "../../components/brand/ExecutiveCTA";
 import { TheoryLink } from "../../components/brand/TheoryLink";
+import { TrustLogoMarquee } from "../../components/brand/TrustLogoMarquee";
 import { canonicalTheoryLinks } from "../../components/brand/theory-links";
 import { PlatformEditorialExperience } from "./platform-editorial-experience";
 
@@ -196,6 +197,7 @@ export default function PlatformPage() {
       sectionNavigatorLabel="Platform sections"
       title={platformHeroTitle}
     >
+      <TrustLogoMarquee />
       <EditorialSection
         className="website-architecture-section website-platform-missing-section"
         id="platform-missing-capability"
