@@ -13087,7 +13087,11 @@ section[id],
 
 .academy-hero {
   border-bottom: 1px solid rgb(255 255 255 / 8%);
-  padding: clamp(62px, 6vw, 94px) 0 clamp(76px, 7vw, 116px);
+  padding: clamp(46px, 5vw, 78px) 0 clamp(66px, 6.4vw, 104px);
+}
+
+.academy-hero .editorial-eyebrow {
+  margin-bottom: clamp(8px, 1vw, 16px);
 }
 
 .academy-hero-visual.brand-canon-figure {
@@ -13101,9 +13105,9 @@ section[id],
   height: auto;
   isolation: isolate;
   line-height: 0;
-  margin: 0 0 clamp(8px, 1vw, 16px);
-  max-height: min(52vw, 720px);
-  min-height: 340px;
+  margin: 0 0 clamp(-106px, -7.4vw, -56px);
+  max-height: min(50vw, 680px);
+  min-height: 320px;
   overflow: visible;
   position: relative;
   width: 100%;
@@ -13140,7 +13144,9 @@ section[id],
   line-height: 0.96;
   margin: 0;
   max-width: 1040px;
+  position: relative;
   text-wrap: balance;
+  z-index: 2;
 }
 
 .academy-hero-copy > p {
@@ -13164,13 +13170,13 @@ section[id],
 
 .academy-section {
   border-bottom: 1px solid rgb(255 255 255 / 8%);
-  padding: clamp(104px, 12vw, 190px) 0;
+  padding: clamp(82px, 9vw, 148px) 0;
 }
 
 .academy-section-heading {
   display: grid;
-  gap: 24px;
-  margin-bottom: clamp(56px, 7vw, 104px);
+  gap: clamp(18px, 2vw, 24px);
+  margin-bottom: clamp(44px, 5vw, 76px);
   max-width: 860px;
 }
 
@@ -13226,7 +13232,7 @@ section[id],
   display: flex;
   flex-direction: column;
   hyphens: none;
-  min-height: 610px;
+  min-height: clamp(700px, 46vw, 780px);
   overflow-wrap: normal;
   padding: clamp(30px, 2.7vw, 42px);
   position: relative;
@@ -13302,7 +13308,7 @@ section[id],
 .academy-journey-card h3,
 .academy-format-card h3 {
   color: #ffffff;
-  font-size: clamp(1.72rem, 1.82vw, 2.18rem);
+  font-size: clamp(1.54rem, 1.58vw, 1.98rem);
   font-weight: 600;
   hyphens: none;
   letter-spacing: 0;
@@ -13414,13 +13420,13 @@ section[id],
   display: grid;
   gap: 0;
   grid-template-rows:
-    clamp(166px, 12.8vw, 184px)
-    clamp(88px, 7.4vw, 108px)
-    clamp(40px, 3.8vw, 48px)
-    clamp(108px, 8.4vw, 124px)
+    minmax(clamp(226px, 16vw, 272px), auto)
+    minmax(clamp(124px, 8.8vw, 152px), auto)
+    minmax(clamp(58px, 4.8vw, 72px), auto)
+    minmax(clamp(148px, 10vw, 184px), auto)
     auto;
   height: 100%;
-  row-gap: clamp(18px, 1.7vw, 24px);
+  row-gap: clamp(16px, 1.45vw, 22px);
 }
 
 .academy-journey-card .academy-module-copy,
@@ -13454,11 +13460,16 @@ section[id],
   }
 
   .academy-journey-card {
-    min-height: 520px;
+    min-height: 650px;
   }
 
   .academy-journey-card > .editorial-card-body {
-    grid-template-rows: 158px 84px 44px 104px auto;
+    grid-template-rows:
+      minmax(206px, auto)
+      minmax(104px, auto)
+      minmax(58px, auto)
+      minmax(124px, auto)
+      auto;
     row-gap: 20px;
   }
 
@@ -13478,11 +13489,11 @@ section[id],
   }
 
   .academy-hero {
-    padding: 72px 0 76px;
+    padding: 58px 0 72px;
   }
 
   .academy-hero-visual.brand-canon-figure {
-    margin: 0 0 10px;
+    margin: 0 0 -30px;
     min-height: 202px;
   }
 
