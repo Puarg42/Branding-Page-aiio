@@ -190,7 +190,7 @@ This marks the transition from documenting organizations to understanding organi
 
 It is this transition that defines the beginning of Organizational Intelligence.
 
-# 2. The Missing Layer
+# 2. The Missing Capability
 
 Every major discipline of organizational management has focused on one central objective.
 
@@ -266,9 +266,9 @@ Organizational Self-Understanding enables Organizational Intelligence.
 
 Organizational Intelligence becomes the foundation for Organizational Capabilities.
 
-Organizational Capabilities enable Organizational Self-Empowering.
+Organizational Capabilities enable Organizational Self-Empowerment.
 
-Organizational Self-Empowering creates Organizational Resilience.
+Organizational Self-Empowerment creates Organizational Resilience.
 
 Knowledge Management and Organizational Intelligence therefore solve different problems.
 
@@ -290,7 +290,7 @@ It must continuously evolve together with the organization itself.
 
 This capability has been missing from organizational management for decades.
 
-It represents the missing layer between knowledge and intelligence.
+It represents the missing capability between knowledge and intelligence.
 
 Once this layer exists, intelligence is no longer applied only to isolated documents or individual tasks.
 
@@ -306,7 +306,7 @@ They become capable of improving themselves continuously.
 
 Understanding therefore becomes the enabling capability from which Organizational Intelligence emerges.
 
-The emergence of this missing layer represents more than another technological innovation.
+The emergence of this missing capability represents more than another technological innovation.
 
 It represents the beginning of a new stage in the evolution of organizations.
 
@@ -366,10 +366,6 @@ It means that the organization lacks a persistent self-representation through wh
 
 Organizational Self-Understanding names this missing capability.
 
-Within the Organizational Intelligence Theory, Organizational Self-Understanding is defined as:
-
-**Organizational Self-Understanding is the capability of an organization to continuously interpret, connect and understand its own organizational reality.**
-
 Organizational reality includes structures, processes, decisions, relationships, rules, responsibilities, capabilities and operational reality.
 
 Organizational Self-Understanding is not documentation.
@@ -414,15 +410,15 @@ Within the Organizational Intelligence Theory, understanding is not considered a
 
 It is considered an emergent capability.
 
-Organizational Understanding is the continuously evolving capability of an organization to interpret itself through the integration of knowledge, context, relationships and reasoning.
+Organizational Understanding describes the general mechanism by which knowledge becomes interpretable through context, relationships and reasoning.
 
 Organizational Understanding is the broader concept.
 
-It describes how organizational knowledge becomes connected, contextualized and interpretable.
+It explains how organizational knowledge becomes connected, contextualized and interpretable.
 
-Organizational Self-Understanding is more specific.
+Organizational Self-Understanding applies this mechanism to the organization itself.
 
-It describes the capability of the organization itself to continuously interpret its own structures, decisions, processes, relationships, responsibilities, capabilities and operational reality.
+It describes the capability of the organization as an autonomous socio-technical system to continuously interpret its own structures, decisions, processes, relationships, responsibilities, capabilities and operational reality.
 
 Knowledge alone is insufficient.
 
@@ -470,7 +466,51 @@ It is the capability that enables organizations to continuously interpret themse
 
 Only once this capability exists can Organizational Intelligence emerge.
 
-# 5. Organizational Intelligence
+# 5. Organizational Self-Understanding
+
+Organizational Self-Understanding is the primary theoretical innovation of the Organizational Intelligence Theory.
+
+It names the capability that has been missing from organizational management: the ability of the organization itself to continuously interpret its own structures, decisions, processes, relationships, responsibilities, capabilities and operational reality.
+
+Organizational Understanding explains the general mechanism by which knowledge becomes interpretable.
+
+Organizational Self-Understanding applies that mechanism to the organization as an autonomous socio-technical system.
+
+Within the Organizational Intelligence Theory, Organizational Self-Understanding is defined as:
+
+**Organizational Self-Understanding is the capability of an organization to continuously interpret, connect and understand its own organizational reality.**
+
+This capability precedes Organizational Intelligence.
+
+Without Organizational Self-Understanding, intelligence can only operate on fragments.
+
+With Organizational Self-Understanding, the organization develops a persistent interpretive foundation from which decisions, actions and future capabilities can become more coherent.
+
+Organizational Self-Understanding therefore does not mean that people simply know more about the organization.
+
+It means the organization develops a continuously evolving capacity to make its own reality interpretable.
+
+Conceptual Relationship
+
+Organizational Reality
+
+->
+
+Organizational Memory
+
+->
+
+Organizational Understanding
+
+->
+
+Organizational Self-Understanding
+
+->
+
+Organizational Intelligence
+
+# 6. Organizational Intelligence
 
 Understanding alone does not create intelligence.
 
@@ -488,7 +528,7 @@ Within the Organizational Intelligence Theory, Organizational Intelligence is de
 
 Organizational Intelligence therefore does not replace Organizational Understanding or Organizational Self-Understanding.
 
-It builds upon it.
+It builds upon both.
 
 Organizational Intelligence is not the final objective.
 
@@ -508,9 +548,9 @@ Intelligence transforms Organizational Self-Understanding into capability develo
 
 Capabilities become reusable organizational assets.
 
-Capabilities enable Organizational Self-Empowering.
+Capabilities enable Organizational Self-Empowerment.
 
-Organizational Self-Empowering creates Organizational Resilience.
+Organizational Self-Empowerment creates Organizational Resilience.
 
 Organizational Intelligence is therefore not a technology.
 
@@ -550,13 +590,13 @@ Organizational Capabilities
 
 ↓
 
-Organizational Self-Empowering
+Organizational Self-Empowerment
 
 ↓
 
 Organizational Resilience
 
-# 6. Organizational Capabilities
+# 7. Organizational Capabilities
 
 Organizational Intelligence cannot be observed directly.
 
@@ -596,87 +636,31 @@ Organizations with stronger capabilities require less external coordination.
 
 They become increasingly capable of improving themselves.
 
-Capabilities therefore represent the first measurable outcome of Organizational Intelligence.
+Capabilities therefore represent the first observable outcome of Organizational Intelligence.
 
-They also create the conditions for Organizational Self-Empowering.
+They also create the conditions for Organizational Self-Empowerment.
 
---------------------------------------------------
+This creates a clear relationship between capability, outcome and business value.
 
-Canonical Theory Mechanism
+Products and platforms do not create business outcomes directly.
 
-Organizational Reality
+They enable the organization to develop capabilities.
 
-↓
+Capabilities allow the organization to become increasingly self-empowering.
 
-ProcessMagnet
+Organizational Self-Empowerment creates resilience.
 
-(continuous interpretation)
+Business value emerges from resilience, adaptability, decision quality and sustainable performance.
 
-↓
+The important distinction is therefore not between product and outcome.
 
-Organizational Self-Understanding
+It is between what a system enables and what the organization becomes capable of doing with it.
 
-↓
+When Organizational Intelligence is transformed into repeatable action, the organization develops capabilities.
 
-Organizational Intelligence
+When those capabilities continuously improve each other, the organization develops Organizational Self-Empowerment.
 
-↓
-
-ProcessCollector
-
-(human-readable representation)
-
-↓
-
-ProcessForge
-
-(capability forging)
-
-↓
-
-DataForge
-
-(continuous evolution)
-
-↓
-
-Organizational Self-Empowering
-
-↓
-
-Organizational Resilience
-
-ProcessCollector does not create Organizational Self-Understanding.
-
-ProcessCollector creates and maintains the human-readable representation of the Organizational Intelligence continuously developed by ProcessMagnet.
-
-The product stages create organizational capabilities and maturity.
-
-Organizational capabilities enable Organizational Self-Empowering.
-
-Organizational Self-Empowering creates Organizational Resilience.
-
---------------------------------------------------
-
-From Organizational Capability to Business Value
-
-Capability
-
-The organization continuously develops new organizational capabilities.
-
-Outcome
-
-The organization becomes increasingly self-empowering and capable of continuously improving itself.
-
-Business Value
-
-The organization becomes increasingly resilient, adaptive and sustainable.
-
-An Organizational Intelligence Platform delivers capabilities.
-
-The organization develops Organizational Self-Empowering.
-
-The business realizes resilience.
+When Organizational Self-Empowerment remains effective under changing conditions, the business realizes Organizational Resilience.
 
 --------------------------------------------------
 
@@ -702,13 +686,87 @@ Organizational Capabilities
 
 ↓
 
-Organizational Self-Empowering
+Organizational Self-Empowerment
 
 ↓
 
 Organizational Resilience
 
-# 7. Organizational Resilience
+# 8. Organizational Self-Empowerment
+
+The development of Organizational Intelligence does not end with capabilities.
+
+It becomes self-empowering.
+
+Every capability an organization develops influences the way it generates new knowledge.
+
+Every decision creates new experience.
+
+Every adaptation creates new organizational context.
+
+Every improvement changes the organization itself.
+
+Organizational Intelligence is therefore not the final objective.
+
+It is the foundation from which capabilities are continuously forged.
+
+Capabilities become self-empowering when they continuously improve the organization's ability to develop further capabilities.
+
+Within the Organizational Intelligence Theory, Organizational Self-Empowerment is defined as:
+
+**Organizational Self-Empowerment is the capability of an organization to continuously develop, validate and evolve its own organizational capabilities.**
+
+Organizations become self-empowering when capability development is no longer episodic.
+
+Learning becomes continuous.
+
+Improvement becomes endogenous.
+
+Capability development becomes self-reinforcing.
+
+The organization continuously generates the conditions required for its own future development.
+
+This is the direct precursor of Organizational Resilience.
+
+Resilience emerges when Organizational Self-Empowerment remains effective under changing conditions.
+
+The defining characteristic of Organizational Self-Empowerment is therefore not autonomy.
+
+It is the ability to continuously develop the capabilities required for the organization's own evolution.
+
+--------------------------------------------------
+
+Conceptual Model
+
+Knowledge
+
+↓
+
+Understanding
+
+↓
+
+Intelligence
+
+↓
+
+Capabilities
+
+↓
+
+Organizational Self-Empowerment
+
+↓
+
+Organizational Resilience
+
+↓
+
+creates new Knowledge
+
+↺
+
+# 9. Organizational Resilience
 
 Organizations operate in environments that continuously change.
 
@@ -734,9 +792,9 @@ Within the Organizational Intelligence Theory, Organizational Resilience is defi
 
 Resilience is not produced directly by software.
 
-It emerges from Organizational Self-Empowering.
+It emerges from Organizational Self-Empowerment.
 
-Organizational Self-Empowering emerges when capabilities continuously evolve, reinforce each other and allow the organization to improve itself.
+Organizational Self-Empowerment emerges when capabilities continuously evolve, reinforce each other and allow the organization to improve itself.
 
 Every additional capability strengthens the organization's ability to respond to future situations.
 
@@ -748,7 +806,7 @@ Adaptation becomes systematic.
 
 Improvement becomes sustainable.
 
-Resilience therefore represents the stabilization of Organizational Self-Empowering.
+Resilience therefore represents the stabilization of Organizational Self-Empowerment.
 
 It is the stage at which continuously evolving capabilities remain effective despite continuous change.
 
@@ -760,11 +818,11 @@ Every disruption becomes additional organizational understanding.
 
 Every adaptation strengthens future capabilities.
 
-Resilience therefore transforms Organizational Self-Empowering from a temporary advantage into a permanent organizational characteristic.
+Resilience therefore transforms Organizational Self-Empowerment from a temporary advantage into a permanent organizational characteristic.
 
 Organizations do not become resilient because they possess more knowledge.
 
-They become resilient because Organizational Self-Empowering continuously develops, validates and improves their capabilities.
+They become resilient because Organizational Self-Empowerment continuously develops, validates and improves their capabilities.
 
 --------------------------------------------------
 
@@ -788,80 +846,147 @@ Organizational Capabilities
 
 Organizational Resilience
 
-# 8. Organizational Self-Empowering
+# 10. Organizational Memory
 
-The development of Organizational Intelligence does not end with capabilities.
+Human beings learn because they possess memory.
 
-It becomes self-empowering.
+Organizations learn differently.
 
-Every capability an organization develops influences the way it generates new knowledge.
+For centuries, organizations attempted to preserve experience through documentation.
 
-Every decision creates new experience.
+Processes.
 
-Every adaptation creates new organizational context.
+Policies.
 
-Every improvement changes the organization itself.
+Manuals.
 
-Organizational Intelligence is therefore not the final objective.
+Standards.
 
-It is the foundation from which capabilities are continuously forged.
+Meeting minutes.
 
-Capabilities become self-empowering when they continuously improve the organization's ability to develop further capabilities.
+Knowledge bases.
 
-Within the Organizational Intelligence Theory, Organizational Self-Empowering is defined as:
+These artifacts preserve information.
 
-**Organizational Self-Empowering is the capability of an organization to continuously develop, validate and evolve its own organizational capabilities.**
+They do not constitute organizational memory.
 
-Organizations become self-empowering when capability development is no longer episodic.
+Documentation records the past.
 
-Learning becomes continuous.
+Memory influences future decisions.
 
-Improvement becomes endogenous.
+Within the Organizational Intelligence Theory, Organizational Memory is defined as:
 
-Capability development becomes self-reinforcing.
+**The continuously evolving representation of organizational experience that remains available for future understanding and decision-making.**
 
-The organization continuously generates the conditions required for its own future development.
+Organizational Memory is not a repository.
 
-This is the direct precursor of Organizational Resilience.
+It is not an archive.
 
-Resilience emerges when Organizational Self-Empowering remains effective under changing conditions.
+It is not a document management system.
 
-The defining characteristic of Organizational Self-Empowering is therefore not autonomy.
+It is the capability of an organization to preserve, connect and continuously reinterpret its accumulated experience.
 
-It is the ability to continuously develop the capabilities required for the organization's own evolution.
+Without Organizational Memory, every generation of employees begins again.
+
+Knowledge leaves with people.
+
+Projects repeat previous mistakes.
+
+Organizations repeatedly solve identical problems.
+
+Organizational Memory changes this dynamic.
+
+It is a prerequisite for cumulative Organizational Self-Understanding because it preserves the experience, decisions and context from which future interpretation can evolve.
+
+Experience becomes continuously reusable.
+
+Learning becomes cumulative.
+
+Understanding becomes sustainable.
+
+Organizational Intelligence therefore requires Organizational Memory as its foundation.
+
+Only organizations capable of preserving their experience can continuously improve the quality of future decisions.
 
 --------------------------------------------------
 
-Conceptual Model
+Conceptual Relationship
 
-Knowledge
-
-↓
-
-Understanding
+Experience
 
 ↓
 
-Intelligence
+Organizational Memory
 
 ↓
 
-Capabilities
+Organizational Understanding
 
 ↓
 
-Organizational Self-Empowering
+Decision Quality
 
 ↓
 
-Organizational Resilience
+Action
 
 ↓
 
-creates new Knowledge
+New Experience
 
-↺
-# 9. The Organizational Intelligence Hypothesis
+# 11. Emergence
+
+Organizations cannot understand themselves through isolated information.
+
+Understanding emerges.
+
+It is not explicitly created.
+
+It is not stored.
+
+It is not written.
+
+It continuously develops through the interaction of organizational experience, memory, knowledge, context and relationships.
+
+Within the Organizational Intelligence Theory, Organizational Self-Understanding is therefore considered an emergent organizational capability.
+
+Emergence describes properties that cannot be explained by analyzing individual components in isolation.
+
+They arise only through the interaction of the complete system.
+
+Organizational Self-Understanding follows the same principle.
+
+No individual employee possesses complete organizational understanding.
+
+No individual document contains it.
+
+No isolated process describes it.
+
+Only the continuously connected representation of the organization allows understanding to emerge.
+
+This distinction fundamentally separates Organizational Intelligence from traditional Knowledge Management.
+
+Knowledge can be documented.
+
+Understanding cannot.
+
+It continuously emerges.
+
+Every new experience changes organizational memory.
+
+Every new relationship changes context.
+
+Every organizational decision changes future understanding.
+
+Organizational Understanding therefore remains permanently incomplete.
+
+It continuously evolves together with the organization itself.
+
+Organizational Intelligence should therefore not be understood as a collection of organizational knowledge.
+
+It should be understood as the capability of an organization to continuously generate organizational understanding from its own evolving representation.
+
+# 12. The Organizational Intelligence Hypothesis
 
 Every generation of management has attempted to improve organizational performance.
 
@@ -901,15 +1026,13 @@ Organizational Capabilities
 
 ↓
 
-Organizational Self-Empowering
+Organizational Self-Empowerment
 
 ↓
 
 Organizational Resilience
 
-↓
 
-Self-Empowering Organization
 This hypothesis fundamentally changes the purpose of organizational software.
 
 Its objective is no longer the management of information.
@@ -920,7 +1043,7 @@ If this hypothesis proves correct, Organizational Intelligence represents not me
 
 It represents a new management discipline.
 
-# 10. The Evolution of Organizational Management
+# 13. The Evolution of Organizational Management
 
 Management has always evolved by expanding the capabilities of organizations.
 
@@ -1002,7 +1125,7 @@ Artificial Intelligence
 
 Organizational Intelligence
 
-# 11. Why Now?
+# 14. Why Now?
 
 Every major management discipline emerged when technological progress made a previously impossible capability achievable.
 
@@ -1060,7 +1183,7 @@ The defining innovation of this era is therefore not Artificial Intelligence its
 
 It is the emergence of organizations that can continuously understand and improve themselves.
 
-# 12. The Transformation of Consulting
+# 15. The Transformation of Consulting
 
 Organizations have always relied on external expertise to compensate for missing organizational understanding.
 
@@ -1120,145 +1243,13 @@ Organizations remain responsible for their own development.
 
 Consultants increasingly become architects of organizational capabilities rather than providers of organizational knowledge.
 
-# 13. Organizational Memory
+# 16. Reference Architecture for Organizational Intelligence
 
-Human beings learn because they possess memory.
+The preceding chapters describe the management theory of Organizational Self-Understanding and Organizational Intelligence.
 
-Organizations learn differently.
+This chapter describes one reference architecture for implementing Organizational Intelligence.
 
-For centuries, organizations attempted to preserve experience through documentation.
-
-Processes.
-
-Policies.
-
-Manuals.
-
-Standards.
-
-Meeting minutes.
-
-Knowledge bases.
-
-These artifacts preserve information.
-
-They do not constitute organizational memory.
-
-Documentation records the past.
-
-Memory influences future decisions.
-
-Within the Organizational Intelligence Theory, Organizational Memory is defined as:
-
-**The continuously evolving representation of organizational experience that remains available for future understanding and decision-making.**
-
-Organizational Memory is not a repository.
-
-It is not an archive.
-
-It is not a document management system.
-
-It is the capability of an organization to preserve, connect and continuously reinterpret its accumulated experience.
-
-Without Organizational Memory, every generation of employees begins again.
-
-Knowledge leaves with people.
-
-Projects repeat previous mistakes.
-
-Organizations repeatedly solve identical problems.
-
-Organizational Memory changes this dynamic.
-
-Experience becomes continuously reusable.
-
-Learning becomes cumulative.
-
-Understanding becomes sustainable.
-
-Organizational Intelligence therefore requires Organizational Memory as its foundation.
-
-Only organizations capable of preserving their experience can continuously improve the quality of future decisions.
-
---------------------------------------------------
-
-Conceptual Relationship
-
-Experience
-
-↓
-
-Organizational Memory
-
-↓
-
-Organizational Understanding
-
-↓
-
-Decision Quality
-
-↓
-
-Action
-
-↓
-
-New Experience
-
-# 14. Emergence
-
-Organizations cannot understand themselves through isolated information.
-
-Understanding emerges.
-
-It is not explicitly created.
-
-It is not stored.
-
-It is not written.
-
-It continuously develops through the interaction of organizational experience, memory, knowledge, context and relationships.
-
-Within the Organizational Intelligence Theory, Organizational Understanding is therefore considered an emergent organizational property.
-
-Emergence describes properties that cannot be explained by analyzing individual components in isolation.
-
-They arise only through the interaction of the complete system.
-
-Organizational Understanding follows the same principle.
-
-No individual employee possesses complete organizational understanding.
-
-No individual document contains it.
-
-No isolated process describes it.
-
-Only the continuously connected representation of the organization allows understanding to emerge.
-
-This distinction fundamentally separates Organizational Intelligence from traditional Knowledge Management.
-
-Knowledge can be documented.
-
-Understanding cannot.
-
-It continuously emerges.
-
-Every new experience changes organizational memory.
-
-Every new relationship changes context.
-
-Every organizational decision changes future understanding.
-
-Organizational Understanding therefore remains permanently incomplete.
-
-It continuously evolves together with the organization itself.
-
-Organizational Intelligence should therefore not be understood as a collection of organizational knowledge.
-
-It should be understood as the capability of an organization to continuously generate organizational understanding from its own evolving representation.
-
-# 15. The Organizational Intelligence Model
+Product names belong here because this chapter connects the theory to the aiio implementation.
 
 Organizational Intelligence does not emerge suddenly.
 
@@ -1268,7 +1259,7 @@ Every organization evolves through a sequence of capabilities.
 
 Each capability enables the next.
 
-The model proposed in this document describes the canonical organizational evolution of Version 0.13.
+The reference architecture proposed in this document describes the canonical organizational evolution of Version 0.14.
 
 Organizational Reality
 
@@ -1306,7 +1297,7 @@ DataForge
 
 ↓
 
-Organizational Self-Empowering
+Organizational Self-Empowerment
 
 ↓
 
@@ -1328,23 +1319,23 @@ ProcessCollector creates the human-readable representation of the Organizational
 
 Organizational Capabilities are forged when Organizational Intelligence becomes reusable action the organization can repeat, improve and trust.
 
-Organizational Self-Empowering emerges when those capabilities continuously evolve and increasingly enable the organization to improve itself.
+Organizational Self-Empowerment emerges when those capabilities continuously evolve and increasingly enable the organization to improve itself.
 
 Organizational Resilience is the business outcome.
 
 Resilience is not produced directly by software.
 
-Resilience emerges from Organizational Self-Empowering.
+Resilience emerges from Organizational Self-Empowerment.
 
 Products do not create business outcomes directly.
 
 Products create organizational capabilities.
 
-Capabilities enable Organizational Self-Empowering.
+Capabilities enable Organizational Self-Empowerment.
 
-Organizational Self-Empowering creates Organizational Resilience.
+Organizational Self-Empowerment creates Organizational Resilience.
 
-This progression represents more than a maturity model.
+This architecture represents more than a maturity model.
 
 It describes the natural evolution of Organizational Intelligence.
 

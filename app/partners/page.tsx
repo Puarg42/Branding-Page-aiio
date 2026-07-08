@@ -31,7 +31,7 @@ const partnerRoles = [
     purpose: (
       <>
         Guide organizations as decision quality,{" "}
-        <TheoryReference>Organizational Self-Empowering</TheoryReference> and
+        <TheoryReference>Organizational Self-Empowerment</TheoryReference> and
         resilience become operating principles.
       </>
     ),

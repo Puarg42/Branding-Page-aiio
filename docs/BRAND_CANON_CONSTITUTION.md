@@ -204,7 +204,7 @@ Official asset:
 
 `public/brand-canon/006-organizational-intelligence-system.png`
 
-Purpose: illustrates the complete Organizational Intelligence System and the relationship between Organizational Reality, ProcessCollector, ProcessMagnet, ProcessForge, DataForge, Organizational Self-Understanding, Organizational Intelligence, Organizational Capabilities, Organizational Self-Empowering and Organizational Resilience.
+Purpose: illustrates the complete Organizational Intelligence System and the relationship between Organizational Reality, ProcessCollector, ProcessMagnet, ProcessForge, DataForge, Organizational Self-Understanding, Organizational Intelligence, Organizational Capabilities, Organizational Self-Empowerment and Organizational Resilience.
 
 BC006 is placed after BC005 in the Brand Canon and belongs to the official system illustration set.
 

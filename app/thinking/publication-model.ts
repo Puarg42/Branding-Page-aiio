@@ -15,10 +15,10 @@ export type TheoryJournalEntry = {
 
 export const theoryPublication = {
   edition: "Living Publication",
-  lastUpdated: "July 4, 2026",
+  lastUpdated: "July 8, 2026",
   readingTime: "Approx. 40 min reading",
   title: "Theory",
-  version: "Version 0.13",
+  version: "Version 0.14",
 } as const;
 
 export const theoryEditorialRules = [
@@ -38,12 +38,16 @@ export const theoryChapterReferences = {
     title: "Observation",
   },
   missingLayer: {
-    id: "2-the-missing-layer",
-    title: "The Missing Layer",
+    id: canonicalTheoryIds.missingCapability,
+    title: "The Missing Capability",
+  },
+  organizationsCannotUnderstandThemselves: {
+    id: "3-organizations-cannot-understand-themselves",
+    title: "Organizations Cannot Understand Themselves",
   },
   organizationalSelfUnderstanding: {
     id: canonicalTheoryIds.organizationalSelfUnderstanding,
-    title: "Organizations Cannot Understand Themselves",
+    title: "Organizational Self-Understanding",
   },
   organizationalUnderstanding: {
     id: canonicalTheoryIds.organizationalUnderstanding,
@@ -59,15 +63,61 @@ export const theoryChapterReferences = {
   },
   organizationalSelfEmpowering: {
     id: canonicalTheoryIds.organizationalSelfEmpowering,
-    title: "Organizational Self-Empowering",
+    title: "Organizational Self-Empowerment",
   },
   organizationalResilience: {
     id: canonicalTheoryIds.organizationalResilience,
     title: "Organizational Resilience",
   },
+  organizationalMemory: {
+    id: "10-organizational-memory",
+    title: "Organizational Memory",
+  },
+  emergence: {
+    id: "11-emergence",
+    title: "Emergence",
+  },
+  hypothesis: {
+    id: "12-the-organizational-intelligence-hypothesis",
+    title: "The Organizational Intelligence Hypothesis",
+  },
+  evolution: {
+    id: "13-the-evolution-of-organizational-management",
+    title: "The Evolution of Organizational Management",
+  },
+  whyNow: {
+    id: canonicalTheoryIds.whyNow,
+    title: "Why Now?",
+  },
+  consulting: {
+    id: "15-the-transformation-of-consulting",
+    title: "The Transformation of Consulting",
+  },
+  referenceArchitecture: {
+    id: canonicalTheoryIds.referenceArchitecture,
+    title: "Reference Architecture for Organizational Intelligence",
+  },
 } satisfies Record<string, TheoryChapterReference>;
 
 export const theoryJournalEntries: TheoryJournalEntry[] = [
+  {
+    affectedChapters: [
+      theoryChapterReferences.missingLayer,
+      theoryChapterReferences.organizationalUnderstanding,
+      theoryChapterReferences.organizationalSelfUnderstanding,
+      theoryChapterReferences.organizationalIntelligence,
+      theoryChapterReferences.organizationalCapabilities,
+      theoryChapterReferences.organizationalSelfEmpowering,
+      theoryChapterReferences.organizationalResilience,
+      theoryChapterReferences.referenceArchitecture,
+    ],
+    coreThesis:
+      "The Theory now separates the timeless management theory of Organizational Self-Understanding from the reference architecture that implements Organizational Intelligence.",
+    date: "July 8, 2026",
+    version: "0.14",
+    whyItMatters:
+      "This revision formalizes Organizational Self-Understanding as a management capability, introduces the Capability Model, clarifies the Capability -> Outcome -> Business Value distinction, sharpens the difference between Knowledge and Understanding, positions Organizational Resilience as the business outcome and creates stable reference markers for the entire website.",
+  },
   {
     affectedChapters: [
       theoryChapterReferences.organizationalSelfUnderstanding,
@@ -81,7 +131,7 @@ export const theoryJournalEntries: TheoryJournalEntry[] = [
     date: "July 4, 2026",
     version: "0.13",
     whyItMatters:
-      "This revision clarifies the distinction between Business Narrative and Theory, refines Organizational Self-Understanding, repositions Organizational Intelligence, clarifies Organizational Capabilities, introduces Organizational Self-Empowering as organizational maturity, synchronizes the website and Platform narrative, restructures the journey and rewrites the capability cards.",
+      "This revision clarifies the distinction between Business Narrative and Theory, refines Organizational Self-Understanding, repositions Organizational Intelligence, clarifies Organizational Capabilities, introduces Organizational Self-Empowerment as organizational maturity, synchronizes the website and Platform narrative, restructures the journey and rewrites the capability cards.",
   },
   {
     affectedChapters: [
@@ -96,7 +146,7 @@ export const theoryJournalEntries: TheoryJournalEntry[] = [
     date: "July 4, 2026",
     version: "0.12",
     whyItMatters:
-      "This major conceptual refinement positions Organizational Intelligence as an intermediate organizational capability, introduces Organizational Self-Empowering as the direct outcome of continuously evolving capabilities, refines the product-to-capability mapping and synchronizes the Brand Book, Theory and Platform narrative.",
+      "This major conceptual refinement positions Organizational Intelligence as an intermediate organizational capability, introduces Organizational Self-Empowerment as the direct outcome of continuously evolving capabilities, refines the product-to-capability mapping and synchronizes the Brand Book, Theory and Platform narrative.",
   },
   {
     affectedChapters: [

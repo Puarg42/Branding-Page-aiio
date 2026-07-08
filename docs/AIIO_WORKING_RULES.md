@@ -130,7 +130,7 @@ Capability sequence:
 1. Understand Your Organization / ProcessCollector
 2. Build Organizational Self-Understanding / ProcessMagnet
 3. Forge Organizational Capabilities / ProcessForge
-4. Enable Organizational Self-Empowering / DataForge
+4. Enable Organizational Self-Empowerment / DataForge
 
 Business outcome:
 

@@ -126,7 +126,7 @@ Illustrates the complete Organizational Intelligence System and the relationship
 - Organizational Self-Understanding
 - Organizational Intelligence
 - Organizational Capabilities
-- Organizational Self-Empowering
+- Organizational Self-Empowerment
 - Organizational Resilience
 
 Used on

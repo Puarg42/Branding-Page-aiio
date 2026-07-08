@@ -142,7 +142,7 @@ export default function TheoryPage() {
             <div className="theory-book-hero-content">
               <EditorialEyebrow>Theory</EditorialEyebrow>
               <h1>Organizational Intelligence</h1>
-              <p>The Theory of Organizational Understanding</p>
+              <p>The Theory of Organizational Intelligence</p>
             </div>
           </section>
 
@@ -150,7 +150,7 @@ export default function TheoryPage() {
             {chapters.map((chapter, chapterIndex) => (
               <section className="theory-chapter" id={chapter.id} key={chapter.id}>
                 <div className="theory-chapter-marker">
-                  <span>{String(chapterIndex + 1).padStart(2, "0")}</span>
+                  <span>{`T${String(chapterIndex).padStart(2, "0")}`}</span>
                   <i aria-hidden="true" />
                 </div>
                 <h2>{chapter.title}</h2>

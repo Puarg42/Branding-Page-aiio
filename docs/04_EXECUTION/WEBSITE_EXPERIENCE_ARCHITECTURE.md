@@ -80,7 +80,7 @@ The visitor should first understand what becomes possible:
 1. Understand Your Organization
 2. Build Organizational Self-Understanding
 3. Forge Organizational Capabilities
-4. Enable Organizational Self-Empowering
+4. Enable Organizational Self-Empowerment
 5. Organizational Resilience
 
 Only afterwards should the enabling products be revealed:
@@ -90,7 +90,7 @@ Only afterwards should the enabling products be revealed:
 | Understand Your Organization | ProcessCollector |
 | Build Organizational Self-Understanding | ProcessMagnet |
 | Forge Organizational Capabilities | ProcessForge |
-| Enable Organizational Self-Empowering | DataForge |
+| Enable Organizational Self-Empowerment | DataForge |
 | Organizational Resilience | Business outcome |
 
 ## Navigation Intent

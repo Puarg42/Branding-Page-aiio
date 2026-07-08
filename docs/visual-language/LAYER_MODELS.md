@@ -9,7 +9,7 @@ Define the conceptual layer models used across aiio illustrations, diagrams and 
 1. Understand Your Organization
 2. Build Organizational Self-Understanding
 3. Forge Organizational Capabilities
-4. Enable Organizational Self-Empowering
+4. Enable Organizational Self-Empowerment
 5. Organizational Resilience as business outcome
 
 ## Table of Contents

@@ -4,7 +4,7 @@
 
 This document defines the first conceptual model for Organizational Intelligence.
 
-The model describes how organizational reality is continuously interpreted into Organizational Self-Understanding, developed into Organizational Intelligence, represented for humans, forged into capabilities, evolved into Organizational Self-Empowering and ultimately realized as Organizational Resilience.
+The model describes how organizational reality is continuously interpreted into Organizational Self-Understanding, developed into Organizational Intelligence, represented for humans, forged into capabilities, evolved into Organizational Self-Empowerment and ultimately realized as Organizational Resilience.
 
 ## Status
 
@@ -48,7 +48,7 @@ continuous evolution
 
 ->
 
-Organizational Self-Empowering
+Organizational Self-Empowerment
 
 ->
 
@@ -62,7 +62,7 @@ Organizational Resilience
 4. Organizational Understanding
 5. Organizational Intelligence
 6. Organizational Capabilities
-7. Organizational Self-Empowering
+7. Organizational Self-Empowerment
 8. Organizational Resilience
 9. Relationship to the OI Capability Model
 10. Open Questions

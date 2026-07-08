@@ -55,11 +55,11 @@ The Platform story should distinguish business journey from scientific mechanism
 
 Business journey:
 
-Understand Your Organization -> Organizational Self-Understanding -> Build Organizational Self-Understanding -> Organizational Intelligence -> Forge Organizational Capabilities -> Organizational Capabilities -> Enable Organizational Self-Empowering -> Organizational Self-Empowering -> Organizational Resilience
+Understand Your Organization -> Organizational Self-Understanding -> Build Organizational Self-Understanding -> Organizational Intelligence -> Forge Organizational Capabilities -> Organizational Capabilities -> Enable Organizational Self-Empowerment -> Organizational Self-Empowerment -> Organizational Resilience
 
 Scientific mechanism:
 
-Organizational Reality -> ProcessMagnet -> Organizational Self-Understanding -> Organizational Intelligence -> ProcessCollector -> ProcessForge -> DataForge -> Organizational Self-Empowering -> Organizational Resilience
+Organizational Reality -> ProcessMagnet -> Organizational Self-Understanding -> Organizational Intelligence -> ProcessCollector -> ProcessForge -> DataForge -> Organizational Self-Empowerment -> Organizational Resilience
 
 ProcessMagnet is central because it continuously interprets organizational reality. ProcessCollector does not create Organizational Self-Understanding. It creates and maintains the human-readable representation of the Organizational Intelligence continuously developed by ProcessMagnet. But the website should not lead with technical internals.
 
@@ -101,11 +101,11 @@ It is not merely workflow automation. It makes organizational intelligence opera
 
 ### DataForge
 
-Capability: Enable Organizational Self-Empowering.
+Capability: Enable Organizational Self-Empowerment.
 
 DataForge continuously validates and evolves organizational capabilities using goals, scenarios, operational reality and Organizational Intelligence.
 
-Organizational Self-Empowering is the direct outcome of continuously evolving capabilities. Resilience is the business outcome, not the product itself.
+Organizational Self-Empowerment is the direct outcome of continuously evolving capabilities. Resilience is the business outcome, not the product itself.
 
 ### AgentSphere
 
@@ -122,7 +122,7 @@ Current structure:
 3. BC102 as explanatory architectural figure, not as hero image.
 4. Capability journey: 01 Understand, 02 Build Organizational Self-Understanding, 03 Forge Capabilities, 04 Enable Self-Empowering.
 5. Four capability cards using BC201-BC204.
-6. Outcome conclusion: self-understanding develops intelligence; intelligence forges capabilities; capabilities enable Organizational Self-Empowering; Organizational Self-Empowering creates resilience.
+6. Outcome conclusion: self-understanding develops intelligence; intelligence forges capabilities; capabilities enable Organizational Self-Empowerment; Organizational Self-Empowerment creates resilience.
 
 The next work on Platform should be polish: executive copy, visual hierarchy, rhythm and conversion clarity. Do not reopen the architecture.
 
@@ -190,7 +190,7 @@ Knowledge is a raw material. Capability is the reusable organizational asset.
 
 Value chain:
 
-Data -> Information -> Knowledge -> Understanding -> Self-Understanding -> Organizational Intelligence -> Organizational Capabilities -> Organizational Self-Empowering -> Organizational Resilience
+Data -> Information -> Knowledge -> Understanding -> Self-Understanding -> Organizational Intelligence -> Organizational Capabilities -> Organizational Self-Empowerment -> Organizational Resilience
 
 ## 11. Company Narrative
 

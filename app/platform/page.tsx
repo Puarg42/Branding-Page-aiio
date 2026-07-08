@@ -26,6 +26,7 @@ const theoryLinks = {
   capabilities: canonicalTheoryLinks.organizationalCapabilities,
   intelligence: canonicalTheoryLinks.organizationalIntelligence,
   resilience: canonicalTheoryLinks.organizationalResilience,
+  selfEmpowerment: canonicalTheoryLinks.organizationalSelfEmpowerment,
   selfUnderstanding: canonicalTheoryLinks.organizationalSelfUnderstanding,
 } as const;
 
@@ -108,7 +109,11 @@ const capabilitySpine = [
   },
   {
     eyebrow: "Level 4",
-    label: "Organizational Self-Empowerment",
+    label: (
+      <TheoryTerm href={theoryLinks.selfEmpowerment}>
+        Organizational Self-Empowerment
+      </TheoryTerm>
+    ),
     tone: "amber",
   },
   {
@@ -309,7 +314,11 @@ export default function PlatformPage() {
                 {
                   description:
                     "Your organization continuously develops and improves its own capabilities.",
-                  label: "Organizational Self-Empowerment",
+                  label: (
+                    <TheoryTerm href={theoryLinks.selfEmpowerment}>
+                      Organizational Self-Empowerment
+                    </TheoryTerm>
+                  ),
                   meta: (
                     <>
                       Level 4 ·
@@ -344,7 +353,9 @@ export default function PlatformPage() {
                 Organizational Capabilities
               </TheoryTerm>{" "}
               and{" "}
-              Organizational Self-Empowerment.
+              <TheoryTerm href={theoryLinks.selfEmpowerment}>
+                Organizational Self-Empowerment
+              </TheoryTerm>.
             </p>
             <p className="website-platform-conclusion-final">
               The goal is not better documentation. The goal is not another AI

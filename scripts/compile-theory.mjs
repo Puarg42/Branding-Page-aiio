@@ -107,12 +107,15 @@ function pushParagraph(blocks, buffer) {
 function getCanonicalTheoryChapterId(title, fallbackId) {
   const titleWithoutNumber = title.replace(/^\d+\.\s*/, "");
   const canonicalIds = {
+    "Reference Architecture for Organizational Intelligence": "reference-architecture-for-organizational-intelligence",
+    "The Missing Capability": "2-the-missing-layer",
     "Organizational Capabilities": "organizational-capabilities",
     "Organizational Intelligence": "organizational-intelligence",
     "Organizational Resilience": "organizational-resilience",
     "Organizational Self-Empowering": "organizational-self-empowering",
+    "Organizational Self-Empowerment": "organizational-self-empowering",
+    "Organizational Self-Understanding": "organizational-self-understanding",
     "Organizational Understanding": "organizational-understanding",
-    "Organizations Cannot Understand Themselves": "organizational-self-understanding",
     "Self-Empowering Organization": "organizational-self-empowering",
     "Self-Empowering Organizations": "organizational-self-empowering",
   };

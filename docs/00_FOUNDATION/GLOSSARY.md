@@ -14,7 +14,7 @@ The capability that emerges when Organizational Self-Understanding is continuous
 
 Reusable organizational abilities forged from Organizational Intelligence and expressed as repeatable organizational behavior.
 
-## Organizational Self-Empowering
+## Organizational Self-Empowerment
 
 The maturity capability of an organization to continuously develop, validate and evolve its own organizational capabilities.
 

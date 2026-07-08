@@ -6,12 +6,12 @@ Collect the theoretical foundation for Organizational Intelligence.
 
 ## Current Publication
 
-- Version: 0.13
+- Version: 0.14
 - Status: Living Publication
-- Last updated: July 4, 2026
+- Last updated: July 8, 2026
 - Canonical page: `/thinking/theory`
 
-Version 0.13 synchronizes the Brand Book, Theory, Thinking, Platform and Website around one canonical conceptual architecture. It clarifies the distinction between Business Narrative, Product Narrative and Scientific Theory.
+Version 0.14 synchronizes the Brand Book, Theory, Thinking, Platform and Website around one canonical reference structure. It introduces stable T00-T16 Theory markers, separates the timeless management theory from the implementation reference architecture and concentrates product references in the Reference Architecture chapter.
 
 ## Publishing Flow
 
@@ -71,7 +71,7 @@ DataForge
 
 ->
 
-Organizational Self-Empowering
+Organizational Self-Empowerment
 
 ->
 
@@ -101,7 +101,7 @@ Organizational Capabilities
 
 ->
 
-Organizational Self-Empowering
+Organizational Self-Empowerment
 
 ->
 
@@ -141,11 +141,11 @@ Organizational Capabilities
 
 Level 4
 
-Enable Organizational Self-Empowering
+Enable Organizational Self-Empowerment
 
 Result
 
-Organizational Self-Empowering
+Organizational Self-Empowerment
 
 ---
 
@@ -169,9 +169,9 @@ Products do not create business outcomes directly.
 
 Products create and evolve organizational capabilities.
 
-Capabilities enable Organizational Self-Empowering.
+Capabilities enable Organizational Self-Empowerment.
 
-Organizational Self-Empowering creates Organizational Resilience.
+Organizational Self-Empowerment creates Organizational Resilience.
 
 ## Communication Layers
 
