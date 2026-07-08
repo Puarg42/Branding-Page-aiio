@@ -157,7 +157,7 @@ export default function AcademyPage() {
           {learningModules.map((module, index) => (
             <EditorialCard
               className="academy-journey-card"
-              data-academy-tone={module.tone}
+              dataCapability={module.tone}
               key={module.title}
             >
               <div className="academy-module-header">
