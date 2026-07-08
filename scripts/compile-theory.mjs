@@ -123,6 +123,10 @@ function getCanonicalTheoryChapterId(title, fallbackId) {
   return canonicalIds[titleWithoutNumber] ?? fallbackId;
 }
 
+function getDisplayTheoryChapterTitle(title) {
+  return title.replace(/^\d+\.\s*/, "");
+}
+
 function getTheoryChapters() {
   const source = normalizeTheoryText(readFileSync(sourcePath, "utf8"));
 
@@ -132,7 +136,8 @@ function getTheoryChapters() {
     .filter(Boolean)
     .map((section) => {
       const [titleLine, ...contentLines] = section.split("\n");
-      const title = titleLine.trim();
+      const sourceTitle = titleLine.trim();
+      const title = getDisplayTheoryChapterTitle(sourceTitle);
       const chunks = contentLines
         .join("\n")
         .split(/\n{2,}/)
@@ -184,7 +189,7 @@ function getTheoryChapters() {
 
       return {
         blocks,
-        id: getCanonicalTheoryChapterId(title, slugify(title)),
+        id: getCanonicalTheoryChapterId(sourceTitle, slugify(sourceTitle)),
         title,
       };
     });

@@ -87,7 +87,7 @@ export const theoryChapters = [
       }
     ],
     "id": "1-observation",
-    "title": "1. Observation"
+    "title": "Observation"
   },
   {
     "blocks": [
@@ -145,7 +145,7 @@ export const theoryChapters = [
       }
     ],
     "id": "2-the-missing-layer",
-    "title": "2. The Missing Capability"
+    "title": "The Missing Capability"
   },
   {
     "blocks": [
@@ -191,7 +191,7 @@ export const theoryChapters = [
       }
     ],
     "id": "3-organizations-cannot-understand-themselves",
-    "title": "3. Organizations Cannot Understand Themselves"
+    "title": "Organizations Cannot Understand Themselves"
   },
   {
     "blocks": [
@@ -235,7 +235,7 @@ export const theoryChapters = [
       }
     ],
     "id": "organizational-understanding",
-    "title": "4. Organizational Understanding"
+    "title": "Organizational Understanding"
   },
   {
     "blocks": [
@@ -265,7 +265,7 @@ export const theoryChapters = [
       }
     ],
     "id": "organizational-self-understanding",
-    "title": "5. Organizational Self-Understanding"
+    "title": "Organizational Self-Understanding"
   },
   {
     "blocks": [
@@ -322,7 +322,7 @@ export const theoryChapters = [
       }
     ],
     "id": "organizational-intelligence",
-    "title": "6. Organizational Intelligence"
+    "title": "Organizational Intelligence"
   },
   {
     "blocks": [
@@ -391,7 +391,7 @@ export const theoryChapters = [
       }
     ],
     "id": "organizational-capabilities",
-    "title": "7. Organizational Capabilities"
+    "title": "Organizational Capabilities"
   },
   {
     "blocks": [
@@ -445,7 +445,7 @@ export const theoryChapters = [
       }
     ],
     "id": "organizational-self-empowering",
-    "title": "8. Organizational Self-Empowerment"
+    "title": "Organizational Self-Empowerment"
   },
   {
     "blocks": [
@@ -498,7 +498,7 @@ export const theoryChapters = [
       }
     ],
     "id": "organizational-resilience",
-    "title": "9. Organizational Resilience"
+    "title": "Organizational Resilience"
   },
   {
     "blocks": [
@@ -549,7 +549,7 @@ export const theoryChapters = [
       }
     ],
     "id": "10-organizational-memory",
-    "title": "10. Organizational Memory"
+    "title": "Organizational Memory"
   },
   {
     "blocks": [
@@ -579,7 +579,7 @@ export const theoryChapters = [
       }
     ],
     "id": "11-emergence",
-    "title": "11. Emergence"
+    "title": "Emergence"
   },
   {
     "blocks": [
@@ -627,7 +627,7 @@ export const theoryChapters = [
       }
     ],
     "id": "12-the-organizational-intelligence-hypothesis",
-    "title": "12. The Organizational Intelligence Hypothesis"
+    "title": "The Organizational Intelligence Hypothesis"
   },
   {
     "blocks": [
@@ -676,7 +676,7 @@ export const theoryChapters = [
       }
     ],
     "id": "13-the-evolution-of-organizational-management",
-    "title": "13. The Evolution of Organizational Management"
+    "title": "The Evolution of Organizational Management"
   },
   {
     "blocks": [
@@ -710,7 +710,7 @@ export const theoryChapters = [
       }
     ],
     "id": "14-why-now",
-    "title": "14. Why Now?"
+    "title": "Why Now?"
   },
   {
     "blocks": [
@@ -740,7 +740,7 @@ export const theoryChapters = [
       }
     ],
     "id": "15-the-transformation-of-consulting",
-    "title": "15. The Transformation of Consulting"
+    "title": "The Transformation of Consulting"
   },
   {
     "blocks": [
@@ -816,6 +816,6 @@ export const theoryChapters = [
       }
     ],
     "id": "reference-architecture-for-organizational-intelligence",
-    "title": "16. Reference Architecture for Organizational Intelligence"
+    "title": "Reference Architecture for Organizational Intelligence"
   }
 ] as const;
