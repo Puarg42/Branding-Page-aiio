@@ -148,8 +148,9 @@ const awards = [
   },
   {
     alt: "KI Bundesverband",
-    image: "/brand/references/ki-bundesverband.png",
+    image: "/brand/references/ki-bundesverband-footer.png",
     label: "KI Bundesverband",
+    meta: "Mitglied seit 2024",
   },
 ] as const;
 
@@ -323,7 +324,10 @@ export default function CompanyPage() {
           {awards.map((award) => (
             <figure key={award.label}>
               <img alt={award.alt} loading="lazy" src={award.image} />
-              <figcaption>{award.label}</figcaption>
+              <figcaption>
+                <span>{award.label}</span>
+                {"meta" in award ? <small>{award.meta}</small> : null}
+              </figcaption>
             </figure>
           ))}
           <article>
