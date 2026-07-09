@@ -13464,7 +13464,7 @@ section[id],
 
 #partners-hero.website-hero {
   overflow: clip;
-  padding: clamp(106px, 10vw, 154px) 0 clamp(92px, 10vw, 154px);
+  padding: clamp(70px, 6.6vw, 104px) 0 clamp(48px, 5.5vw, 82px);
 }
 
 #partners-hero .website-page-shell {
@@ -13473,17 +13473,19 @@ section[id],
 }
 
 #partners-hero .website-hero-visual {
-  margin: 0 auto clamp(-112px, -7vw, -72px);
-  max-width: 1120px;
+  left: 50%;
+  margin: clamp(-42px, -2.6vw, -18px) auto clamp(-340px, -22vw, -220px);
+  max-width: none;
   position: relative;
-  width: min(100%, 1120px);
+  transform: translateX(-50%);
+  width: min(118vw, 1480px);
   z-index: 1;
 }
 
 #partners-hero .partners-hero-visual.brand-canon-figure {
   aspect-ratio: 16 / 7;
   height: auto;
-  min-height: clamp(280px, 34vw, 500px);
+  min-height: clamp(360px, 40vw, 620px);
   overflow: visible;
   width: 100%;
 }
@@ -13515,20 +13517,26 @@ section[id],
 }
 
 #partners-hero > .website-page-shell > p:last-child {
-  margin-top: clamp(28px, 3vw, 44px);
+  margin-top: clamp(24px, 2.4vw, 34px);
   max-width: 720px;
+  position: relative;
+  z-index: 2;
+}
+
+#partners-hero .editorial-cta-group {
+  margin-top: clamp(24px, 2.6vw, 36px);
   position: relative;
   z-index: 2;
 }
 
 @media (max-width: 1100px) {
   #partners-hero .website-hero-visual {
-    margin-bottom: clamp(-86px, -7vw, -56px);
-    width: min(100%, 980px);
+    margin-bottom: clamp(-270px, -22vw, -170px);
+    width: min(116vw, 1180px);
   }
 
   #partners-hero .partners-hero-visual.brand-canon-figure {
-    min-height: clamp(260px, 36vw, 420px);
+    min-height: clamp(320px, 43vw, 500px);
   }
 
   #partners-hero h1 {
@@ -13539,13 +13547,13 @@ section[id],
 
 @media (max-width: 720px) {
   #partners-hero.website-hero {
-    padding: 92px 0 86px;
+    padding: 74px 0 62px;
   }
 
   #partners-hero .website-hero-visual {
-    margin-bottom: clamp(-58px, -12vw, -38px);
-    margin-left: -8%;
-    width: 116%;
+    margin-bottom: clamp(-126px, -24vw, -78px);
+    margin-top: -24px;
+    width: 124%;
   }
 
   #partners-hero h1 {
@@ -13554,11 +13562,11 @@ section[id],
   }
 
   #partners-hero .partners-hero-visual.brand-canon-figure {
-    min-height: 220px;
+    min-height: 260px;
   }
 
   #partners-hero > .website-page-shell > p:last-child {
-    margin-top: 30px;
+    margin-top: 26px;
   }
 }
 

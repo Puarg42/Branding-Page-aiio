@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { BrandIllustration } from "../../components/brand/BrandIllustration";
 import {
   EditorialCard,
@@ -49,6 +50,16 @@ export default function PartnersPage() {
   return (
     <WebsiteArchitecturePage
       heroId="partners-hero"
+      heroActions={
+        <>
+          <Link className="button hero-button" href="/live-demo/kontakt">
+            Become a Partner
+          </Link>
+          <Link className="button hero-button secondary" href="/contact">
+            Contact Us
+          </Link>
+        </>
+      }
       heroVisual={
         <BrandIllustration
           className="partners-hero-visual"
