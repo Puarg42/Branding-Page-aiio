@@ -17,6 +17,7 @@ const footerNav: FooterLink[] = [
 ];
 
 const legalLinks: FooterLink[] = [
+  { href: "/blog", label: "Blog & News" },
   { href: "/datenschutz", label: "Privacy" },
   { href: "/impressum", label: "Legal" },
 ];

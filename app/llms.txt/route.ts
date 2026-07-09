@@ -8,6 +8,7 @@ const pages = [
   ["/forge", "ProcessForge als Activation Layer fuer Agenten, APIs und Umsysteme."],
   ["/success-stories", "Business Impact: organisatorische Herausforderungen und Wertbeitrag von Organizational Intelligence."],
   ["/downloadcenter", "Dokumente, Sicherheit, AVV und technische Downloads."],
+  ["/blog", "Blog & News: Artikel, Produktneuigkeiten und Perspektiven zur Entwicklung von Organizational Intelligence."],
   ["/kontakt", "Kontakt und Anfragewege."],
 ] as const;
 
