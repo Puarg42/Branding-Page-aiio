@@ -158,7 +158,6 @@ export function SiteFooter() {
               ))}
             </nav>
             <nav aria-label="Social media" className="footer-social-block">
-              <p>Follow aiio</p>
               <div className="footer-social-links">
                 {socialLinks.map((link) => (
                   <a
