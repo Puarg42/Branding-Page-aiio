@@ -8,6 +8,7 @@ export type BrandIllustrationVariant =
   | "BC-005"
   | "BC-006"
   | "BC-007"
+  | "COMPANY-OI"
   | "BC201"
   | "BC202"
   | "BC203"
@@ -47,6 +48,10 @@ export const brandCanonAssets: Record<
     src: "/brand-canon/006-organizational-intelligence-system.png",
   },
   "BC-007": {
+    alt: "Abstract aiio Brand Canon illustration showing Organizational Intelligence transforming into Business Impact.",
+    src: "/brand-canon/bc007-business-impact.png",
+  },
+  "COMPANY-OI": {
     alt: "Company brand illustration for interdisciplinary Organizational Intelligence",
     src: "/brand-canon/007-company-organizational-intelligence.png",
   },

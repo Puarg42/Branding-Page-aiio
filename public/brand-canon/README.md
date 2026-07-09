@@ -74,9 +74,25 @@ Never crop, recolor, redraw, add labels, add overlays or reinterpret BC006. The 
 
 ### BC007
 
+`bc007-business-impact.png`
+
+Official name: BC007 - Business Impact.
+
+Category: Business Outcome.
+
+Purpose: dedicated Business Impact hero illustration.
+
+Description: the transformation of Organizational Intelligence into measurable business value, resilience and sustainable advantage.
+
+Usage: Business Impact hero only.
+
+Never crop aggressively, recolor, redraw, add overlays, reinterpret or modify BC007 per page. Pages adapt to the asset.
+
+### Company Organizational Intelligence
+
 `007-company-organizational-intelligence.png`
 
-Official name: BC007 - Company Organizational Intelligence.
+Official name: Company Organizational Intelligence.
 
 Purpose: dedicated Company Hero illustration.
 
@@ -84,7 +100,9 @@ Narrative: visualizes interdisciplinary collaboration, science, organizational s
 
 Usage: Company page hero only.
 
-Never use BC007 as a software UI, dashboard, generic teamwork image or decorative background. It should remain an editorial illustration for the people and institutional foundation behind Organizational Intelligence.
+This asset keeps its historical filename and remains approved for the Company page. It is not changed by the BC007 Business Impact registration.
+
+Never use the Company Organizational Intelligence asset as a software UI, dashboard, generic teamwork image or decorative background. It should remain an editorial illustration for the people and institutional foundation behind Organizational Intelligence.
 
 ### BC201
 

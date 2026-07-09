@@ -160,7 +160,7 @@ export default function CompanyPage() {
             decorative={false}
             interactive
             priority
-            variant="BC-007"
+            variant="COMPANY-OI"
           />
           <h1>Building the future of Organizational Intelligence.</h1>
           <p>

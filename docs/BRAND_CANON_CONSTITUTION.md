@@ -212,7 +212,23 @@ BC006 must not be cropped, recolored, redrawn, labelled, overlaid, reinterpreted
 
 #### BC007
 
-Company Organizational Intelligence
+Business Impact
+
+Official asset:
+
+`public/brand-canon/bc007-business-impact.png`
+
+Purpose: dedicated Business Impact page Hero illustration.
+
+Category: Business Outcome.
+
+BC007 visualizes the transformation of Organizational Intelligence into measurable business value, resilience and sustainable advantage.
+
+BC007 belongs to the business outcome side of the Brand Canon. It is a Business Impact mood and value illustration, not a system architecture explanation.
+
+BC007 must not be cropped aggressively, recolored, redrawn, modified per page or used as a generic decorative background. Pages adapt to the asset.
+
+#### Company Organizational Intelligence
 
 Official asset:
 
@@ -220,11 +236,13 @@ Official asset:
 
 Purpose: dedicated Company page Hero illustration.
 
-BC007 visualizes interdisciplinary collaboration, science, organizational systems, leadership and intelligence emerging from multiple perspectives.
+This asset visualizes interdisciplinary collaboration, science, organizational systems, leadership and intelligence emerging from multiple perspectives.
 
-BC007 belongs to the institutional side of the Brand Canon. It represents the people and expertise behind Organizational Intelligence rather than product functionality.
+This asset belongs to the institutional side of the Brand Canon. It represents the people and expertise behind Organizational Intelligence rather than product functionality.
 
-BC007 must not be used as a generic teamwork image, software interface, dashboard, decorative background or stock-style company visual.
+It keeps its historical filename and remains approved for the Company page. It is not changed by the BC007 Business Impact registration.
+
+This asset must not be used as a generic teamwork image, software interface, dashboard, decorative background or stock-style company visual.
 
 ### BC200
 

@@ -137,6 +137,28 @@ Used on
 
 Never crop, recolor, redraw, add labels, add overlays, reinterpret or regenerate the artwork.
 
+#### BC007
+
+Business Impact
+
+Asset
+
+`public/brand-canon/bc007-business-impact.png`
+
+Purpose
+
+Illustrates the transformation of Organizational Intelligence into measurable business value, resilience and sustainable advantage.
+
+Used on
+
+- Business Impact Hero
+
+Category
+
+- Business Outcome
+
+Never crop aggressively, recolor, redraw, add overlays, modify per page or use as a generic decorative background.
+
 ### BC200
 
 ORGANIZATIONAL CAPABILITIES

@@ -6,6 +6,7 @@ import {
   EditorialSection,
   EditorialSectionHeader,
 } from "../components/brand/BrandCanonFoundation";
+import { BrandIllustration } from "../components/brand/BrandIllustration";
 import type { EditorialSectionNavigatorItem } from "../components/brand/EditorialSectionNavigator";
 import { EditorialEyebrow } from "../components/brand/EditorialEyebrow";
 import { EditorialJumpArrow } from "../components/brand/EditorialJumpArrow";
@@ -1040,6 +1041,13 @@ function BusinessImpactPage() {
       <TrustLogoMarquee />
       <section className="business-impact-hero" id="business-impact-hero">
         <div className="business-impact-shell">
+          <BrandIllustration
+            className="business-impact-hero-visual"
+            decorative={false}
+            interactive
+            priority
+            variant="BC-007"
+          />
           <h1>Different business challenges. One missing capability.</h1>
           <div className="business-impact-lead">
             <p>
