@@ -6730,7 +6730,13 @@ h1 {
 }
 
 .thinking-journal-section .website-section-heading {
-  max-width: 960px;
+  margin-bottom: clamp(44px, 5vw, 76px);
+  max-width: 920px;
+}
+
+.thinking-journal-section,
+.thinking-publication-section {
+  padding: clamp(76px, 8vw, 132px) 0;
 }
 
 .thinking-journal-list {
@@ -6752,8 +6758,8 @@ h1 {
 
 .thinking-journal-entry {
   display: grid;
-  gap: clamp(44px, 5vw, 74px);
-  padding: clamp(34px, 5vw, 74px);
+  gap: clamp(30px, 3.8vw, 54px);
+  padding: clamp(30px, 4vw, 58px);
 }
 
 .thinking-journal-entry-header,
@@ -6780,8 +6786,8 @@ h1 {
 
 .thinking-journal-entry-body {
   display: grid;
-  gap: clamp(34px, 5vw, 64px);
-  grid-template-columns: minmax(0, 1.45fr) minmax(240px, 0.8fr) minmax(220px, 0.7fr);
+  gap: clamp(28px, 4vw, 54px);
+  grid-template-columns: minmax(0, 0.95fr) minmax(240px, 0.95fr) minmax(220px, 0.82fr);
 }
 
 .thinking-journal-label {
@@ -6796,10 +6802,10 @@ h1 {
 .thinking-journal-entry h3 {
   color: #ffffff;
   font-family: var(--font-aiio-heading);
-  font-size: clamp(2rem, 3.5vw, 4.15rem);
+  font-size: clamp(1.45rem, 2.2vw, 2.58rem);
   font-weight: 610;
   letter-spacing: 0;
-  line-height: 1.02;
+  line-height: 1.08;
   margin: 0;
   text-wrap: balance;
 }
@@ -8000,7 +8006,7 @@ h1 {
   }
 
   .thinking-journal-entry h3 {
-    font-size: clamp(1.75rem, 9vw, 2.75rem);
+    font-size: clamp(1.42rem, 7.2vw, 2.2rem);
   }
 
   .theory-book-layout {
@@ -13309,18 +13315,19 @@ section[id],
 .website-page:has(.thinking-journal-section) .website-hero {
   isolation: isolate;
   overflow: hidden;
-  padding-bottom: clamp(112px, 11vw, 184px);
+  padding: clamp(96px, 9.4vw, 148px) 0 clamp(54px, 5.8vw, 90px);
   position: relative;
 }
 
 .website-page:has(.thinking-journal-section) .website-hero::before {
   background:
-    linear-gradient(90deg, rgb(2 2 5 / 94%) 0%, rgb(2 2 5 / 72%) 32%, rgb(2 2 5 / 22%) 64%, rgb(2 2 5 / 74%) 100%),
-    linear-gradient(180deg, rgb(2 2 5 / 82%) 0%, transparent 34%, rgb(2 2 5 / 88%) 100%),
-    url("/brand-canon/001-organizational-mind-theory-neu.png") 64% 48% / cover no-repeat;
+    linear-gradient(90deg, rgb(2 2 5 / 86%) 0%, rgb(2 2 5 / 58%) 31%, rgb(2 2 5 / 12%) 64%, rgb(2 2 5 / 52%) 100%),
+    linear-gradient(180deg, rgb(2 2 5 / 48%) 0%, transparent 32%, rgb(2 2 5 / 76%) 100%),
+    url("/brand-canon/001-organizational-mind-theory-neu.png") 65% 43% / cover no-repeat;
   content: "";
+  filter: saturate(1.14) contrast(1.16) brightness(1.08);
   inset: 0;
-  opacity: 0.74;
+  opacity: 0.9;
   position: absolute;
   z-index: -2;
 }
@@ -13341,6 +13348,13 @@ section[id],
   z-index: 1;
 }
 
+.website-page:has(.thinking-journal-section) .website-hero > .website-page-shell {
+  align-items: end;
+  column-gap: clamp(22px, 4vw, 64px);
+  display: grid;
+  grid-template-columns: minmax(0, 700px) auto;
+}
+
 .website-hero-visual {
   margin: 0 0 clamp(14px, 2vw, 32px);
   width: 100%;
@@ -13353,11 +13367,25 @@ section[id],
 }
 
 .website-page:has(.thinking-journal-section) .website-hero h1 {
+  grid-column: 1 / -1;
   line-height: 0.99;
+  max-width: min(100%, 1060px);
 }
 
 .website-page:has(.thinking-journal-section) .website-hero > .website-page-shell > p:not(.editorial-eyebrow):not(.website-hero-lead) {
-  margin-top: clamp(34px, 3.6vw, 58px);
+  grid-column: 1;
+  margin-top: clamp(22px, 2.2vw, 34px);
+  max-width: 640px;
+}
+
+.website-page:has(.thinking-journal-section) .website-hero .editorial-cta-group {
+  grid-column: 2;
+  justify-self: start;
+  margin-top: clamp(22px, 2.2vw, 34px);
+}
+
+.website-page:has(.thinking-journal-section) .website-hero .website-text-link {
+  margin-top: 0;
 }
 
 .website-platform-hero-artwork.brand-canon-figure {
@@ -13979,7 +14007,7 @@ section[id],
 }
 
 .thinking-publication-section {
-  padding-top: clamp(96px, 10vw, 172px);
+  padding-top: clamp(76px, 8vw, 132px);
 }
 
 .thinking-publication-card {
@@ -14118,11 +14146,20 @@ section[id],
 }
 
 @media (max-width: 720px) {
+  .website-page:has(.thinking-journal-section) .website-hero > .website-page-shell {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .website-page:has(.thinking-journal-section) .website-hero .editorial-cta-group {
+    grid-column: 1;
+  }
+
   .website-page:has(.thinking-journal-section) .website-hero::before {
     background:
-      linear-gradient(180deg, rgb(2 2 5 / 86%) 0%, rgb(2 2 5 / 58%) 48%, rgb(2 2 5 / 92%) 100%),
+      linear-gradient(180deg, rgb(2 2 5 / 76%) 0%, rgb(2 2 5 / 42%) 48%, rgb(2 2 5 / 88%) 100%),
       url("/brand-canon/001-organizational-mind-theory-neu.png") 58% 50% / cover no-repeat;
-    opacity: 0.42;
+    opacity: 0.68;
   }
 
   .theory-formula-shell.is-circular {
