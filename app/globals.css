@@ -15578,8 +15578,13 @@ p.editorial-eyebrow,
 }
 
 .company-story-timeline li {
+  align-content: start;
   display: grid;
-  gap: 14px;
+  gap: 0;
+  grid-template-rows:
+    18px
+    minmax(clamp(58px, 4.8vw, 76px), auto)
+    auto;
   padding: 76px clamp(16px, 2vw, 28px) 0;
   position: relative;
 }
@@ -15614,11 +15619,12 @@ p.editorial-eyebrow,
 }
 
 .company-story-timeline h3 {
+  align-self: start;
   color: #ffffff;
   font-family: var(--font-aiio-heading);
   font-size: clamp(1.48rem, 2.2vw, 2.35rem);
   line-height: 1.08;
-  margin: 0;
+  margin: 14px 0 0;
 }
 
 .company-story-timeline p,
@@ -15898,6 +15904,8 @@ p.editorial-eyebrow,
 
   .company-story-timeline li {
     border-top: 1px solid rgb(255 255 255 / 10%);
+    gap: 14px;
+    grid-template-rows: auto;
     padding-left: 0;
     padding-right: 0;
     padding-top: 32px;
@@ -15905,6 +15913,10 @@ p.editorial-eyebrow,
 
   .company-story-timeline li::before {
     display: none;
+  }
+
+  .company-story-timeline h3 {
+    margin-top: 0;
   }
 
   .company-leadership-grid {
