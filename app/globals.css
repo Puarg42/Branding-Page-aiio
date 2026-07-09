@@ -1587,6 +1587,22 @@ h1 {
   justify-content: flex-end;
 }
 
+.footer-legal-stack {
+  align-items: flex-end;
+  display: grid;
+  gap: 18px;
+  justify-items: end;
+}
+
+.footer-affiliation-logo {
+  display: block;
+  height: auto;
+  max-height: 38px;
+  max-width: 190px;
+  opacity: 0.82;
+  width: auto;
+}
+
 .footer-logo-link {
   align-items: center;
   display: inline-flex;
@@ -3265,6 +3281,11 @@ h1 {
   .footer-link-row,
   .footer-legal-row {
     justify-content: center;
+  }
+
+  .footer-legal-stack {
+    align-items: center;
+    justify-items: center;
   }
 }
 

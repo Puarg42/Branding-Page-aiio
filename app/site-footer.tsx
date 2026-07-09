@@ -67,20 +67,28 @@ export function SiteFooter() {
             ))}
           </nav>
 
-          <nav aria-label="Footer legal links" className="footer-legal-row">
-            <a
-              href="https://www.linkedin.com/company/aiio-gmbh/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              LinkedIn
-            </a>
-            {legalLinks.map((link) => (
-              <SmartLink href={link.href} key={link.href}>
-                {link.label}
-              </SmartLink>
-            ))}
-          </nav>
+          <div className="footer-legal-stack">
+            <nav aria-label="Footer legal links" className="footer-legal-row">
+              <a
+                href="https://www.linkedin.com/company/aiio-gmbh/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                LinkedIn
+              </a>
+              {legalLinks.map((link) => (
+                <SmartLink href={link.href} key={link.href}>
+                  {link.label}
+                </SmartLink>
+              ))}
+            </nav>
+            <img
+              alt="KI Bundesverband"
+              className="footer-affiliation-logo"
+              loading="lazy"
+              src="/brand/references/ki-bundesverband.png"
+            />
+          </div>
         </div>
 
         <div className="footer-bottom">

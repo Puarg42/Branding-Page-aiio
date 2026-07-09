@@ -146,6 +146,11 @@ const awards = [
     image: "/awards/chip-leading-software-2025-aiio.svg",
     label: "CHIP Leading Software 2025",
   },
+  {
+    alt: "KI Bundesverband",
+    image: "/brand/references/ki-bundesverband.png",
+    label: "KI Bundesverband",
+  },
 ] as const;
 
 export default function CompanyPage() {
