@@ -2,6 +2,7 @@ import { MainHeader } from "../../main-navigation";
 import {
   EditorialCTAGroup,
   EditorialNavigation,
+  ReferenceMarquee,
   EditorialSection,
   EditorialSectionHeader,
 } from "../../../components/brand/BrandCanonFoundation";
@@ -9,19 +10,22 @@ import { EditorialEyebrow } from "../../../components/brand/EditorialEyebrow";
 
 const conversationOutcomes = [
   {
-    copy: "Understand where Organizational Intelligence creates measurable value in your organization.",
+    copy: "Clarify which business question should lead the discussion before technology enters the room.",
+    cta: "Clarify the starting point",
     icon: "conversation",
-    title: "Executive Conversation",
+    title: "Executive clarity",
   },
   {
-    copy: "Identify your organization's highest-impact starting points for continuous self-understanding.",
+    copy: "Identify where Organizational Intelligence can reduce friction, accelerate decisions or strengthen capability.",
+    cta: "Find the value path",
     icon: "assessment",
-    title: "Organizational Assessment",
+    title: "Value assessment",
   },
   {
-    copy: "Leave with practical recommendations instead of a software demonstration or sales pitch.",
+    copy: "Leave with a credible next step: conversation, assessment, partner route or platform deep dive.",
+    cta: "Define the next step",
     icon: "steps",
-    title: "Concrete Next Steps",
+    title: "Practical path",
   },
 ] as const;
 
@@ -31,18 +35,6 @@ const customerLogos = [
   { alt: "VTG", image: "/brand/references/vtg.png" },
   { alt: "Busch-Jaeger", image: "/brand/references/busch-jaeger.svg" },
   { alt: "Euromobil", image: "/brand/references/euromobil.svg" },
-] as const;
-
-const recognitionLogos = [
-  {
-    alt: "CHIP Leading Software 2024",
-    image: "/awards/chip-leading-software-2024-aiio.svg",
-  },
-  {
-    alt: "CHIP Leading Software 2025",
-    image: "/awards/chip-leading-software-2025-aiio.svg",
-  },
-  { alt: "KI Bundesverband", image: "/brand/references/ki-bundesverband.png" },
 ] as const;
 
 const requestDemoSectionNavigator = [
@@ -122,20 +114,18 @@ export default function DemoKontaktPage() {
             />
             <div className="request-demo-person-copy">
               <span className="request-demo-person-name">Lars Bendler</span>
-              <span className="request-demo-person-role">Partner Ecosystem & Capability Building</span>
-              <ul className="request-demo-person-focus" aria-label="Conversation focus">
-                <li>Partner Strategy</li>
-                <li>Customer Capability Building</li>
-                <li>Organizational Intelligence Ecosystems</li>
-              </ul>
+              <span className="request-demo-person-role">
+                Managing Director & Chief Partner Officer
+              </span>
               <blockquote>
                 "The right conversation turns ambition into a credible path."
               </blockquote>
-              <ul className="request-demo-person-proof" aria-label="Executive experience">
-                <li>Builds the aiio partner foundation</li>
-                <li>Connects ecosystem development and customer capability</li>
-                <li>Guides organizations from first conversation to next step</li>
-              </ul>
+              <p>
+                Lars helps leaders and partners translate ambition into a
+                practical first route. He connects partner strategy, customer
+                capability building and ecosystem development into a credible
+                next conversation.
+              </p>
               <a className="request-demo-person-link" href="#request-demo-form">
                 Request a Conversation
               </a>
@@ -160,6 +150,9 @@ export default function DemoKontaktPage() {
                 </span>
                 <h3>{item.title}</h3>
                 <p>{item.copy}</p>
+                <a className="request-demo-outcome-link" href="#request-demo-form">
+                  {item.cta}
+                </a>
               </article>
             ))}
           </div>
@@ -172,21 +165,22 @@ export default function DemoKontaktPage() {
       >
           <div className="request-demo-trust-panel">
             <p>Trusted by organizations including</p>
-            <div className="request-demo-trust-logos" aria-label="Customer references">
-              {customerLogos.map((logo) => (
-                <figure key={logo.alt}>
-                  <img alt={logo.alt} loading="lazy" src={logo.image} />
-                </figure>
-              ))}
-            </div>
-            <div className="request-demo-recognition-logos" aria-label="Recognition">
-              {recognitionLogos.map((logo) => (
-                <figure key={logo.alt}>
-                  <img alt={logo.alt} loading="lazy" src={logo.image} />
-                  <figcaption>{logo.alt}</figcaption>
-                </figure>
-              ))}
-            </div>
+            <ReferenceMarquee
+              ariaLabel="Customer references"
+              className="request-demo-reference-marquee"
+            >
+              <div className="request-demo-reference-track">
+                {Array.from({ length: 4 }, (_, setIndex) => (
+                  <div className="request-demo-reference-set" key={setIndex}>
+                    {customerLogos.map((logo) => (
+                      <figure className="request-demo-reference-logo" key={`${setIndex}-${logo.alt}`}>
+                        <img alt={setIndex === 0 ? logo.alt : ""} loading="lazy" src={logo.image} />
+                      </figure>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </ReferenceMarquee>
           </div>
       </EditorialSection>
 
