@@ -178,7 +178,7 @@ export function SiteFooter() {
               alt="KI Bundesverband"
               className="footer-affiliation-logo"
               loading="lazy"
-              src="/brand/references/ki-bundesverband.png"
+              src="/brand/references/ki-bundesverband-footer.png"
             />
           </div>
         </div>
