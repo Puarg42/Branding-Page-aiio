@@ -10,6 +10,7 @@
     "build": "vinext build",
     "build:vercel": "npm run theory:check && next build",
     "brand-review": "node scripts/review/export-brand-review.mjs",
+    "review:website": "node scripts/generate-website-review.mjs",
     "theory:compile": "node scripts/compile-theory.mjs",
     "theory:check": "node scripts/compile-theory.mjs --check",
     "review": "node scripts/review/export-brand-review.mjs",

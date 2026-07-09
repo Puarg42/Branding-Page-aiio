@@ -1,4 +1,5 @@
 # Review history is not needed during Vercel builds.
+docs/review/
 docs/reviews/
 
 # Draft and historical Brand Canon assets are not runtime assets.
