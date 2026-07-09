@@ -66,10 +66,10 @@ Illustrates how an Organizational Intelligence System transforms organizational 
 Narrative
 
 - Real organizational world
-- ProcessCollector: Grounding
-- ProcessMagnet: Organizational Understanding
-- ProcessForge: Getting into Action
-- DataForge: Continuous Evolution
+- ProcessMagnet: continuous interpretation of organizational reality
+- ProcessCollector: human-readable representation
+- ProcessForge: capability forging
+- DataForge: continuous capability evolution
 
 Used on
 
@@ -83,6 +83,81 @@ Never use as Hero artwork.
 Never use as decorative background artwork.
 
 Never allow it to dominate a page.
+
+#### BC005
+
+Missing Capability
+
+Asset
+
+`public/brand-canon/005-missing-capability.png`
+
+Purpose
+
+Dedicated Home page illustration for the Missing Capability section.
+
+Used on
+
+- Home Missing Capability section
+
+Placement
+
+Directly between the editorial eyebrow and the section headline.
+
+Never crop, recolor, redraw, add labels, add overlays or use as a generic decorative background.
+
+#### BC006
+
+The Organizational Intelligence System
+
+Asset
+
+`public/brand-canon/006-organizational-intelligence-system.png`
+
+Purpose
+
+Illustrates the complete Organizational Intelligence System and the relationship between:
+
+- Organizational Reality
+- ProcessCollector
+- ProcessMagnet
+- ProcessForge
+- DataForge
+- Organizational Self-Understanding
+- Organizational Intelligence
+- Organizational Capabilities
+- Organizational Self-Empowerment
+- Organizational Resilience
+
+Used on
+
+- Brand Canon system references
+- Executive explanations
+- Editorial system context
+
+Never crop, recolor, redraw, add labels, add overlays, reinterpret or regenerate the artwork.
+
+#### BC007
+
+Business Impact
+
+Asset
+
+`public/brand-canon/bc007-business-impact.png`
+
+Purpose
+
+Illustrates the transformation of Organizational Intelligence into measurable business value, resilience and sustainable advantage.
+
+Used on
+
+- Business Impact Hero
+
+Category
+
+- Business Outcome
+
+Never crop aggressively, recolor, redraw, add overlays, modify per page or use as a generic decorative background.
 
 ### BC200
 

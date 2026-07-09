@@ -52,15 +52,13 @@ Organizational Self-Understanding is therefore an active organizational capabili
 
 ## Platform Alignment
 
-ProcessCollector structures knowledge.
+ProcessMagnet continuously interprets organizational reality into Organizational Self-Understanding.
 
-ProcessMagnet creates organizational context.
+ProcessCollector creates and maintains the human-readable representation of Organizational Intelligence.
 
-ProcessForge generates new organizational knowledge.
+ProcessForge transforms Organizational Intelligence into reusable Organizational Capabilities.
 
-DataForge validates understanding against operational reality.
-
-AgentSphere acts upon Organizational Intelligence.
+DataForge validates and evolves capabilities against operational reality, KPIs, goals and scenarios.
 
 The platform should be explained through this progression without becoming product-first.
 

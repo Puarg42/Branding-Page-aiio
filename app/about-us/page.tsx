@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import {
+  EditorialCard,
+  EditorialCTAGroup,
+  EditorialGrid,
+  EditorialSection,
+} from "../../components/brand/BrandCanonFoundation";
+import { EditorialEyebrow } from "../../components/brand/EditorialEyebrow";
 import { getEditableContent } from "../editor/content";
 import { MainHeader } from "../main-navigation";
 import { TimelineMedia } from "./timeline-media";
@@ -93,7 +100,7 @@ const milestones: TimelineMilestone[] = [
     image: "/history/aiio-apri-invest.jpg",
     peopleMotion: true,
     copy:
-      "Das Unternehmen sichert sich ein Series-A-Investment und schärft den Weg zu einem Produkt-Stack, der Wissen, Recognition und Activation enger miteinander verbindet.",
+      "Das Unternehmen sichert sich ein Series-A-Investment und schärft den Weg zu einem Organizational Intelligence System, das Wissen, Interpretation und Capability-Entwicklung enger verbindet.",
   },
   {
     year: "2025",
@@ -161,9 +168,9 @@ export default function AboutUsPage() {
     <main>
       <MainHeader variant="solid" />
 
-      <section className="section award-section award-section-top">
+      <EditorialSection className="section award-section award-section-top" shell={false}>
         <div>
-          <p className="eyebrow">{getEditableContent("about.awards.eyebrow", "Auszeichnungen")}</p>
+          <EditorialEyebrow>{getEditableContent("about.awards.eyebrow", "Auszeichnungen")}</EditorialEyebrow>
           <h2>
             {getEditableContent(
               "about.awards.title",
@@ -187,30 +194,29 @@ export default function AboutUsPage() {
             </div>
           ))}
         </div>
-      </section>
+      </EditorialSection>
 
-      <section className="about-hero">
+      <EditorialSection className="about-hero" shell={false}>
         <div className="about-hero-inner">
-          <p className="eyebrow">{getEditableContent("about.hero.eyebrow", "Company")}</p>
           <h1>{getEditableContent("about.hero.title", "Why aiio exists")}</h1>
           <p>
             Organizations are becoming more complex than their structures,
             systems and routines can fully explain.
           </p>
-          <div className="actions" aria-label="Über aiio Aktionen">
+          <EditorialCTAGroup className="actions" ariaLabel="Über aiio Aktionen">
             <Link className="button" href="/#architektur">
               Plattform verstehen
             </Link>
             <Link className="button secondary" href="/#demo">
               Demo anfordern
             </Link>
-          </div>
+          </EditorialCTAGroup>
         </div>
-      </section>
+      </EditorialSection>
 
-      <section className="section about-intro">
+      <EditorialSection className="section about-intro" shell={false}>
         <div>
-          <p className="eyebrow">{getEditableContent("about.intro.eyebrow", "Purpose")}</p>
+          <EditorialEyebrow>{getEditableContent("about.intro.eyebrow", "Purpose")}</EditorialEyebrow>
           <h2>
             {getEditableContent(
               "about.intro.title",
@@ -234,17 +240,17 @@ export default function AboutUsPage() {
             enable themselves.
           </p>
         </div>
-      </section>
+      </EditorialSection>
 
-      <section className="section">
-        <p className="eyebrow">{getEditableContent("about.management.eyebrow", "Management")}</p>
+      <EditorialSection className="section" shell={false}>
+        <EditorialEyebrow>{getEditableContent("about.management.eyebrow", "Management")}</EditorialEyebrow>
         <h2>
           {getEditableContent(
             "about.management.title",
             "Ein Führungsteam mit Leidenschaft für einfachere Organisationen.",
           )}
         </h2>
-        <div className="about-grid leadership-grid">
+        <EditorialGrid className="about-grid leadership-grid" columns="four">
           {leadership.map((person, personIndex) => {
             const personName = getEditableContent(
               `about.leadership.${personIndex}.name`,
@@ -252,7 +258,7 @@ export default function AboutUsPage() {
             );
 
             return (
-              <article className="about-card person-card" key={person.name}>
+              <EditorialCard className="about-card person-card" key={person.name}>
                 <div
                   aria-hidden="true"
                   className="person-photo"
@@ -260,14 +266,14 @@ export default function AboutUsPage() {
                 />
                 <span>{person.role}</span>
                 <h3>{personName}</h3>
-              </article>
+              </EditorialCard>
             );
           })}
-        </div>
-      </section>
+        </EditorialGrid>
+      </EditorialSection>
 
-      <section className="section about-timeline-section">
-        <p className="eyebrow">{getEditableContent("about.timeline.eyebrow", "Entwicklung")}</p>
+      <EditorialSection className="section about-timeline-section" shell={false}>
+        <EditorialEyebrow>{getEditableContent("about.timeline.eyebrow", "Entwicklung")}</EditorialEyebrow>
         <h2>
           {getEditableContent(
             "about.timeline.title",
@@ -318,11 +324,11 @@ export default function AboutUsPage() {
             );
           })}
         </div>
-      </section>
+      </EditorialSection>
 
-      <section className="section section-split">
+      <EditorialSection className="section section-split" shell={false}>
         <div>
-          <p className="eyebrow">{getEditableContent("about.outlook.eyebrow", "Ausblick")}</p>
+          <EditorialEyebrow>{getEditableContent("about.outlook.eyebrow", "Ausblick")}</EditorialEyebrow>
           <h2>
             {getEditableContent(
               "about.outlook.title",
@@ -336,17 +342,17 @@ export default function AboutUsPage() {
           in der Menschen, Maschinen und Organisationen in gemeinsamen
           Wissensräumen zusammenarbeiten.
         </p>
-      </section>
+      </EditorialSection>
 
-      <section className="section">
-        <p className="eyebrow">{getEditableContent("about.advisors.eyebrow", "Expert Panel")}</p>
+      <EditorialSection className="section" shell={false}>
+        <EditorialEyebrow>{getEditableContent("about.advisors.eyebrow", "Expert Panel")}</EditorialEyebrow>
         <h2>
           {getEditableContent(
             "about.advisors.title",
             "Trusted Minds für Security, Markt und Investment.",
           )}
         </h2>
-        <div className="about-grid advisor-grid">
+        <EditorialGrid className="about-grid advisor-grid" columns="three">
           {advisors.map((advisor, advisorIndex) => {
             const advisorName = getEditableContent(
               `about.advisors.${advisorIndex}.name`,
@@ -354,7 +360,7 @@ export default function AboutUsPage() {
             );
 
             return (
-              <article className="about-card person-card" key={advisor.name}>
+              <EditorialCard className="about-card person-card" key={advisor.name}>
                 <div
                   aria-hidden="true"
                   className="person-photo"
@@ -363,16 +369,16 @@ export default function AboutUsPage() {
                 <span>{advisor.focus}</span>
                 <h3>{advisorName}</h3>
                 <p>{advisor.context}</p>
-              </article>
+              </EditorialCard>
             );
           })}
-        </div>
-      </section>
+        </EditorialGrid>
+      </EditorialSection>
 
-      <section className="section">
-        <p className="eyebrow">{getEditableContent("about.principles.eyebrow", "Principles")}</p>
+      <EditorialSection className="section" shell={false}>
+        <EditorialEyebrow>{getEditableContent("about.principles.eyebrow", "Principles")}</EditorialEyebrow>
         <h2>{getEditableContent("about.principles.title", "Three principles guide our work.")}</h2>
-        <div className="about-grid">
+        <EditorialGrid className="about-grid" columns="three">
           {principles.map((principle, principleIndex) => {
             const principleTitle = getEditableContent(
               `about.principles.${principleIndex}.title`,
@@ -380,22 +386,22 @@ export default function AboutUsPage() {
             );
 
             return (
-              <article className="about-card proof-card" key={principle.title}>
+              <EditorialCard className="about-card proof-card" key={principle.title}>
                 <h3>{principleTitle}</h3>
                 <p>{principle.copy}</p>
-              </article>
+              </EditorialCard>
             );
           })}
-        </div>
-      </section>
+        </EditorialGrid>
+      </EditorialSection>
 
-      <section className="demo about-demo" id="about-demo">
+      <EditorialSection className="demo about-demo" id="about-demo" shell={false}>
         <div>
-          <p className="eyebrow">{getEditableContent("about.demo.eyebrow", "Nächster Schritt")}</p>
+          <EditorialEyebrow>{getEditableContent("about.demo.eyebrow", "Nächster Schritt")}</EditorialEyebrow>
           <h2>
             {getEditableContent(
               "about.demo.title",
-              "Lass uns zeigen, wie Wissen als Produkt-Stack aktiviert wird.",
+              "Lass uns zeigen, wie Organizational Intelligence in konkrete Capabilities übersetzt wird.",
             )}
           </h2>
         </div>
@@ -407,7 +413,7 @@ export default function AboutUsPage() {
         <Link className="button" href="/#demo">
           Demo anfordern
         </Link>
-      </section>
+      </EditorialSection>
     </main>
   );
 }

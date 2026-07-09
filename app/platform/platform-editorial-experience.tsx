@@ -1,10 +1,11 @@
 "use client";
 
 import { useEffect } from "react";
-import { BrandCanonLightbox } from "../../components/brand/BrandCanonLightbox";
 
 const capabilityCardSelector = ".website-capability-card[data-capability]";
 const revealSelector = [
+  ".website-platform-missing-section .website-section-heading",
+  ".website-platform-capability-spine",
   ".website-platform-system-section .website-section-heading",
   ".website-capability-section .website-section-heading",
 ].join(",");
@@ -144,5 +145,5 @@ export function PlatformEditorialExperience() {
     };
   }, []);
 
-  return <BrandCanonLightbox />;
+  return null;
 }

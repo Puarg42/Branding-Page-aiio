@@ -1,8 +1,8 @@
-# Theory of Organizational Self-Empowering
+# Theory of Organizational Self-Empowerment
 
 ## Purpose
 
-Defines the future theory behind Organizational Self-Empowering and its implications for aiio, the OIS, product strategy and category design.
+Defines the future theory behind Organizational Self-Empowerment and its implications for aiio, the OIS, product strategy and category design.
 
 ## Table of Contents
 
@@ -31,4 +31,4 @@ Defines the future theory behind Organizational Self-Empowering and its implicat
 
 ## 7. Organizational Resilience
 
-## 8. Organizational Self-Empowering
+## 8. Organizational Self-Empowerment

@@ -3,6 +3,8 @@ import {
   EditorialProgression,
   type EditorialProgressionItem,
 } from "../../../components/brand/EditorialProgression";
+import { EditorialEyebrow } from "../../../components/brand/EditorialEyebrow";
+import { ExecutiveCTA } from "../../../components/brand/ExecutiveCTA";
 import { theoryChapters } from "./theory-content.generated";
 import { TheorySidebar } from "./theory-sidebar";
 
@@ -138,9 +140,9 @@ export default function TheoryPage() {
               <div className="theory-book-hero-shade" />
             </div>
             <div className="theory-book-hero-content">
-              <p className="theory-sidebar-eyebrow">Theory</p>
+              <EditorialEyebrow>Theory</EditorialEyebrow>
               <h1>Organizational Intelligence</h1>
-              <p>The Theory of Organizational Understanding</p>
+              <p>The Theory of Organizational Intelligence</p>
             </div>
           </section>
 
@@ -148,7 +150,7 @@ export default function TheoryPage() {
             {chapters.map((chapter, chapterIndex) => (
               <section className="theory-chapter" id={chapter.id} key={chapter.id}>
                 <div className="theory-chapter-marker">
-                  <span>{String(chapterIndex + 1).padStart(2, "0")}</span>
+                  <span>{`T${String(chapterIndex).padStart(2, "0")}`}</span>
                   <i aria-hidden="true" />
                 </div>
                 <h2>{chapter.title}</h2>
@@ -190,6 +192,12 @@ export default function TheoryPage() {
               </section>
             ))}
           </article>
+          <ExecutiveCTA
+            copy="See how Organizational Intelligence becomes operational inside real organizations."
+            headline="Turn theory into organizational reality."
+            primary={{ href: "/live-demo/kontakt", label: "Request a Demo" }}
+            secondary={{ href: "/platform", label: "Explore the Platform" }}
+          />
         </div>
       </div>
     </main>

@@ -122,19 +122,19 @@ An organization continuously develops organizational capabilities by transformin
 
 The illustration visualizes four complementary capability layers.
 
-1. ProcessCollector  
-Grounding
+1. ProcessMagnet
+Continuous interpretation
+
+Organizational reality becomes continuously connected and interpreted.
+
+Creates Organizational Self-Understanding.
+
+2. ProcessCollector
+Human-readable representation
 
 The human-readable organizational source code.
 
-Organizational reality becomes understandable, modelable and explainable.
-
-2. ProcessMagnet  
-Organizational Understanding
-
-Continuously captures and connects organizational reality from every relevant source.
-
-Creates continuously evolving organizational understanding.
+Organizational Intelligence becomes understandable, modelable and explainable.
 
 3. ProcessForge  
 Getting into Action
@@ -179,6 +179,70 @@ BC101 remains the primary Theory Hero.
 BC102 remains the Platform Explanation Illustration.
 
 BC003 becomes the Platform Hero Illustration.
+
+#### BC005
+
+Missing Capability
+
+Official asset:
+
+`public/brand-canon/005-missing-capability.png`
+
+Purpose: dedicated Home page illustration for the Missing Capability section.
+
+BC005 is placed directly between the editorial eyebrow and the Missing Capability headline.
+
+It bridges the editorial chapter label and the explanation of the missing organizational capability.
+
+BC005 must not be cropped, recolored, redrawn, labelled, overlaid or used as a generic decorative background.
+
+#### BC006
+
+The Organizational Intelligence System
+
+Official asset:
+
+`public/brand-canon/006-organizational-intelligence-system.png`
+
+Purpose: illustrates the complete Organizational Intelligence System and the relationship between Organizational Reality, ProcessCollector, ProcessMagnet, ProcessForge, DataForge, Organizational Self-Understanding, Organizational Intelligence, Organizational Capabilities, Organizational Self-Empowerment and Organizational Resilience.
+
+BC006 is placed after BC005 in the Brand Canon and belongs to the official system illustration set.
+
+BC006 must not be cropped, recolored, redrawn, labelled, overlaid, reinterpreted or regenerated.
+
+#### BC007
+
+Business Impact
+
+Official asset:
+
+`public/brand-canon/bc007-business-impact.png`
+
+Purpose: dedicated Business Impact page Hero illustration.
+
+Category: Business Outcome.
+
+BC007 visualizes the transformation of Organizational Intelligence into measurable business value, resilience and sustainable advantage.
+
+BC007 belongs to the business outcome side of the Brand Canon. It is a Business Impact mood and value illustration, not a system architecture explanation.
+
+BC007 must not be cropped aggressively, recolored, redrawn, modified per page or used as a generic decorative background. Pages adapt to the asset.
+
+#### Company Organizational Intelligence
+
+Official asset:
+
+`public/brand-canon/007-company-organizational-intelligence.png`
+
+Purpose: dedicated Company page Hero illustration.
+
+This asset visualizes interdisciplinary collaboration, science, organizational systems, leadership and intelligence emerging from multiple perspectives.
+
+This asset belongs to the institutional side of the Brand Canon. It represents the people and expertise behind Organizational Intelligence rather than product functionality.
+
+It keeps its historical filename and remains approved for the Company page. It is not changed by the BC007 Business Impact registration.
+
+This asset must not be used as a generic teamwork image, software interface, dashboard, decorative background or stock-style company visual.
 
 #### BC008
 

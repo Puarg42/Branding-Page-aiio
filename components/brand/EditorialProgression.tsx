@@ -12,6 +12,7 @@ type EditorialProgressionTone =
 
 export type EditorialProgressionItem = {
   connectorBefore?: string;
+  description?: ReactNode;
   label: ReactNode;
   meta?: ReactNode;
   tone?: EditorialProgressionTone;
@@ -44,11 +45,12 @@ export function EditorialProgression({
         {items.map((item, index) => (
           <li
             className={`is-${item.tone ?? "white"}`}
-            data-connector={index === 0 ? undefined : item.connectorBefore ?? "↓"}
+            data-connector={index === 0 ? undefined : item.connectorBefore ?? "\u2193"}
             key={`${index}-${String(item.meta ?? "")}`}
           >
             {item.meta ? <span>{item.meta}</span> : null}
             <strong>{item.label}</strong>
+            {item.description ? <p>{item.description}</p> : null}
           </li>
         ))}
       </ol>

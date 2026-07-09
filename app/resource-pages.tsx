@@ -1,8 +1,17 @@
 import Link from "next/link";
 import {
-  EditorialSectionNavigator,
-  type EditorialSectionNavigatorItem,
-} from "../components/brand/EditorialSectionNavigator";
+  EditorialCard,
+  EditorialGrid,
+  EditorialNavigation,
+  EditorialSection,
+  EditorialSectionHeader,
+} from "../components/brand/BrandCanonFoundation";
+import { BrandIllustration } from "../components/brand/BrandIllustration";
+import type { EditorialSectionNavigatorItem } from "../components/brand/EditorialSectionNavigator";
+import { EditorialEyebrow } from "../components/brand/EditorialEyebrow";
+import { EditorialJumpArrow } from "../components/brand/EditorialJumpArrow";
+import { ExecutiveCTA } from "../components/brand/ExecutiveCTA";
+import { TrustLogoMarquee } from "../components/brand/TrustLogoMarquee";
 import { getEditableContent, RichText } from "./editor/content";
 import { MainHeader } from "./main-navigation";
 
@@ -199,21 +208,21 @@ export const resourcePages: Record<ResourceSlug, ResourcePageData> = {
     ],
   },
   "success-stories": {
-    eyebrow: "Success Stories",
+    eyebrow: "The Impact",
     title: getEditableContent(
       "resource.success.title",
-      "Erfolge, die Organisationswissen nutzbar machen.",
+      "Organizational Intelligence creates measurable business value.",
     ),
     intro: getEditableContent(
       "resource.success.intro",
       "Die Erfolgsgeschichten zeigen, wie Unternehmen mit aiio Transparenz schaffen, Migration beschleunigen und Audits sicherer bewältigen.",
     ),
     heroImage: "/aiio-pages/success-stories/image-02.jpeg",
-    heroImageAlt: "Autoschlüssel als Bildmotiv für die Euromobil Success Story.",
-    cta: { href: "/live-demo/kontakt", label: "Eigene Story starten" },
+    heroImageAlt: "Business Impact visual for the Euromobil scenario.",
+    cta: { href: "/platform", label: "Explore the Platform" },
     sections: [
       {
-        eyebrow: "Kundenergebnisse",
+        eyebrow: "Scenarios",
         title: "Vier Beispiele für messbaren Fortschritt.",
         cards: [
           {
@@ -696,7 +705,7 @@ export const resourcePages: Record<ResourceSlug, ResourcePageData> = {
   },
   facts: {
     eyebrow: "Facts",
-    title: "Grounding Pages für aiio.",
+    title: "Reference Pages für aiio.",
     intro:
       "Die Facts-Seite bündelt indexierbare Kurzprofile zur aiio GmbH, zur Plattform und zu zentralen Konzepten.",
     heroImage: "/aiio-architecture.png",
@@ -718,7 +727,7 @@ export const resourcePages: Record<ResourceSlug, ResourcePageData> = {
           {
             title: "Prozess-Staubsauger",
             text:
-              "Grounding-Ansatz für schnelle Erfolge mit Prozessen und digitalem Organisationswissen.",
+              "Einstieg in die menschenlesbare Organisationsrepräsentation und das Organizational Intelligence System.",
           },
         ],
       },
@@ -817,9 +826,9 @@ function ResourceForm({
   const buttonLabel = editableResourceText(slug, "form.buttonLabel", form.buttonLabel);
 
   return (
-    <section className="resource-form-section" id={id}>
+    <EditorialSection className="resource-form-section" id={id} shell={false}>
       <div>
-        <p className="eyebrow">Formular</p>
+        <EditorialEyebrow>Formular</EditorialEyebrow>
         <h2>{formTitle}</h2>
         <p>{formCopy}</p>
       </div>
@@ -857,7 +866,7 @@ function ResourceForm({
           {buttonLabel}
         </button>
       </form>
-    </section>
+    </EditorialSection>
   );
 }
 
@@ -871,7 +880,7 @@ function ResourceCardList({
   slug: ResourceSlug;
 }) {
   return (
-    <div className="resource-card-grid">
+    <EditorialGrid className="resource-card-grid">
       {cards.map((card, cardIndex) => {
         const cardTitle = editableResourceText(
           slug,
@@ -894,7 +903,7 @@ function ResourceCardList({
           : null;
 
         return (
-          <article className="resource-card" key={`${sectionIndex}-${cardIndex}`}>
+          <EditorialCard className="resource-card" key={`${sectionIndex}-${cardIndex}`}>
             {card.image ? (
               <span
                 aria-label={cardTitle}
@@ -911,14 +920,302 @@ function ResourceCardList({
                 {linkLabel ?? "Mehr ansehen"}
               </Link>
             ) : null}
-          </article>
+          </EditorialCard>
         );
       })}
-    </div>
+    </EditorialGrid>
+  );
+}
+
+const businessImpactChallengeLandscape = [
+  {
+    title: "Digital Transformation",
+    copy:
+      "Transformation slows when teams cannot see how systems, processes and responsibilities actually connect.",
+  },
+  {
+    title: "Operational Excellence",
+    copy:
+      "Improvement work loses momentum when operational reality is scattered across tools, teams and documents.",
+  },
+  {
+    title: "Compliance & Governance",
+    copy:
+      "Governance becomes fragile when requirements, owners and process evidence are not connected in daily work.",
+  },
+  {
+    title: "AI Enablement",
+    copy:
+      "AI stays generic when it cannot reason from the organization's own context, structures and decisions.",
+  },
+  {
+    title: "Knowledge Retention",
+    copy:
+      "Critical expertise leaves faster than organizations can turn it into shared organizational capability.",
+  },
+  {
+    title: "Organizational Change",
+    copy:
+      "Change becomes expensive when leaders cannot see what will be affected before decisions are made.",
+  },
+  {
+    title: "Mergers & Integration",
+    copy:
+      "Integration fails when different operating models cannot be compared, aligned and understood.",
+  },
+  {
+    title: "Process Excellence",
+    copy:
+      "Process work remains local when target processes, real work and improvement evidence never meet.",
+  },
+] as const;
+
+const businessImpactScenarioDetails = {
+  Euromobil: {
+    challengeArea: "Knowledge Retention",
+    missing:
+      "Important operational knowledge existed in documents and routines, but it was not consistently available where work happened.",
+    action:
+      "Organizational Intelligence turned scattered material into shared organizational context that teams could reuse.",
+    result:
+      "Existing knowledge became easier to find, apply and improve instead of remaining locked inside documents.",
+  },
+  Windpunx: {
+    challengeArea: "Digital Transformation",
+    missing:
+      "A platform transition risked interrupting process work and forcing teams to rebuild organizational context from zero.",
+    action:
+      "Organizational Intelligence helped carry existing process understanding into a new operating model.",
+    result:
+      "The migration kept momentum while preserving the organizational knowledge needed for daily work.",
+  },
+  HVLE: {
+    challengeArea: "Compliance & Governance",
+    missing:
+      "Audit readiness and improvement work belonged to the same organization, but were treated as separate efforts.",
+    action:
+      "Organizational Intelligence connected requirements, processes and operational context into one shared view.",
+    result:
+      "Governance work became part of the same capability system that supports continuous improvement.",
+  },
+  "ABB Busch-Jaeger": {
+    challengeArea: "Process Excellence",
+    missing:
+      "Target processes and real process behavior needed one common view before analysis could become reliable.",
+    action:
+      "Organizational Intelligence made differences between process intent and operational reality visible.",
+    result:
+      "Process analysis became more grounded, comparable and actionable for better decisions.",
+  },
+} as const;
+
+const businessImpactCapabilityPath = [
+  "Organizational Understanding",
+  "Organizational Intelligence",
+  "Organizational Capabilities",
+  "Organizational Self-Empowerment",
+] as const;
+
+const businessImpactSectionNavigator: EditorialSectionNavigatorItem[] = [
+  { id: "business-impact-hero", label: "Hero" },
+  { id: "business-impact-landscape", label: "Challenges" },
+  { id: "business-impact-scenarios", label: "Proof" },
+  { id: "business-impact-insight", label: "Insight" },
+  { id: "business-impact-closing", label: "Outcome" },
+  { id: "start", label: "Start" },
+];
+
+function getBusinessImpactScenario(card: ResourceCard) {
+  return businessImpactScenarioDetails[
+    card.title as keyof typeof businessImpactScenarioDetails
+  ];
+}
+
+function BusinessImpactPage() {
+  const page = resourcePages["success-stories"];
+  const scenarioCards = page.sections[0]?.cards ?? [];
+
+  return (
+    <main className="business-impact-page">
+      <MainHeader variant="solid" />
+      <TrustLogoMarquee />
+      <section className="business-impact-hero" id="business-impact-hero">
+        <div className="business-impact-shell">
+          <BrandIllustration
+            className="business-impact-hero-visual"
+            decorative={false}
+            interactive
+            priority
+            variant="BC-007"
+          />
+          <h1>Different business challenges. One missing capability.</h1>
+          <div className="business-impact-lead">
+            <p>
+              Business Impact is the category proof of Organizational Intelligence.
+            </p>
+            <p>
+              Different organizations face different business realities. Yet each
+              transformation depends on the same missing organizational capability:
+            </p>
+            <p>continuous Organizational Intelligence.</p>
+          </div>
+          <div className="business-impact-actions" aria-label="Business Impact actions">
+            <Link className="button" href="/platform">
+              Explore the Platform <EditorialJumpArrow />
+            </Link>
+            <Link className="button secondary" href="/thinking/theory">
+              Understand the Theory <EditorialJumpArrow />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="business-impact-intro" id="business-impact-intro">
+        <div className="business-impact-shell">
+          <p>
+            The business problem comes first. The reference organization becomes
+            the proof.
+          </p>
+        </div>
+      </section>
+
+      <section className="business-impact-landscape" id="business-impact-landscape">
+        <div className="business-impact-shell">
+          <div className="business-impact-section-heading">
+            <EditorialEyebrow>Business Challenge Landscape</EditorialEyebrow>
+            <h2>Organizational Intelligence starts where executive priorities get stuck.</h2>
+            <p>
+              These are not product categories. They are business priorities that
+              become harder to execute when organizational context is fragmented.
+            </p>
+          </div>
+          <div className="business-impact-landscape-grid">
+            {businessImpactChallengeLandscape.map((challenge) => (
+              <article className="business-impact-landscape-card" key={challenge.title}>
+                <h3>{challenge.title}</h3>
+                <p>{challenge.copy}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="business-impact-scenarios" id="business-impact-scenarios">
+        <div className="business-impact-shell">
+          <div className="business-impact-section-heading">
+            <EditorialEyebrow>Category Proof</EditorialEyebrow>
+            <h2>Customer work becomes proof of the business challenge.</h2>
+            <p>
+              Each case starts with a different executive problem. The reference
+              organization proves how Organizational Intelligence changes the work.
+            </p>
+          </div>
+          <div className="business-impact-scenario-grid">
+            {scenarioCards.map((card, index) => {
+              const scenario = getBusinessImpactScenario(card);
+
+              if (!scenario) {
+                return null;
+              }
+
+              return (
+                <article className="business-impact-scenario-card" key={card.title}>
+                  <span className="business-impact-scenario-index">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <div className="business-impact-scenario-title">
+                    <p>The Challenge</p>
+                    <h3>{scenario.challengeArea}</h3>
+                    <span>Reference organization: {card.title}</span>
+                  </div>
+                  <div className="business-impact-scenario-steps">
+                    <div>
+                      <span>What Was Missing</span>
+                      <p>{scenario.missing}</p>
+                    </div>
+                    <div>
+                      <span>How Organizational Intelligence Changed It</span>
+                      <p>{scenario.action}</p>
+                    </div>
+                    <div>
+                      <span>Business Result</span>
+                      <p>{scenario.result}</p>
+                    </div>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="business-impact-capability" id="business-impact-insight">
+        <div className="business-impact-shell">
+          <div className="business-impact-section-heading">
+            <EditorialEyebrow>Cross-Scenario Insight</EditorialEyebrow>
+            <h2>Different Challenges. One Missing Capability.</h2>
+            <p>
+              Although every organization faced a different business problem,
+              every successful transformation required the same organizational
+              capability: continuous Organizational Intelligence.
+            </p>
+          </div>
+          <div className="business-impact-capability-path" aria-label="Capability path">
+            {businessImpactCapabilityPath.map((item, index) => (
+              <div className="business-impact-capability-step" key={item}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <strong>{item}</strong>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="business-impact-closing" id="business-impact-closing">
+        <div className="business-impact-shell">
+          <div className="business-impact-closing-statement">
+            <p>Every organization faces different business realities.</p>
+            <p>The capability that enables successful transformation is always the same.</p>
+            <p>Organizational Intelligence.</p>
+          </div>
+          <div className="business-impact-closing-copy">
+            <p>
+              Business Impact is not a gallery of references. It is evidence that
+              Organizational Intelligence answers a recurring executive problem:
+              organizations need continuous understanding before they can improve,
+              adapt and transform with confidence.
+            </p>
+          </div>
+          <div className="business-impact-actions" aria-label="Business Impact closing actions">
+            <Link className="button" href="/platform">
+              Explore the Platform <EditorialJumpArrow />
+            </Link>
+            <Link className="button secondary" href="/thinking/theory">
+              Understand the Theory <EditorialJumpArrow />
+            </Link>
+          </div>
+        </div>
+      </section>
+      <ExecutiveCTA
+        copy="Discover how organizations transform knowledge into measurable business capability."
+        headline="Create measurable Organizational Intelligence."
+        primary={{ href: "/live-demo/kontakt", label: "Request a Demo" }}
+        secondary={{ href: "/platform", label: "Explore the Platform" }}
+      />
+
+      <EditorialNavigation
+        ariaLabel="Business Impact sections"
+        sections={businessImpactSectionNavigator}
+      />
+    </main>
   );
 }
 
 export function ResourcePage({ slug }: { slug: ResourceSlug }) {
+  if (slug === "success-stories") {
+    return <BusinessImpactPage />;
+  }
+
   const page = resourcePages[slug];
   const pageEyebrow = editableResourceText(slug, "eyebrow", page.eyebrow);
   const pageTitle = editableResourceText(slug, "title", page.title);
@@ -936,9 +1233,13 @@ export function ResourcePage({ slug }: { slug: ResourceSlug }) {
   return (
     <main className="resource-page">
       <MainHeader variant="solid" />
-      <section className="resource-hero" id={`${slug}-hero`}>
+      <EditorialSection
+        className="resource-hero editorial-hero"
+        id={`${slug}-hero`}
+        shell={false}
+      >
         <div className="resource-hero-copy">
-          <p className="eyebrow">{pageEyebrow}</p>
+          <EditorialEyebrow>{pageEyebrow}</EditorialEyebrow>
           <h1>{pageTitle}</h1>
           <div className="resource-hero-intro rich-text">
             <RichText html={pageIntro} />
@@ -957,7 +1258,7 @@ export function ResourcePage({ slug }: { slug: ResourceSlug }) {
             style={{ backgroundImage: `url(${page.heroImage})` }}
           />
         ) : null}
-      </section>
+      </EditorialSection>
 
       {page.sections.map((section, sectionIndex) => {
         const sectionTitle = editableResourceText(
@@ -973,16 +1274,18 @@ export function ResourcePage({ slug }: { slug: ResourceSlug }) {
           : null;
 
         return (
-          <section
+          <EditorialSection
             className="resource-section"
             id={getResourceSectionId(slug, sectionIndex)}
             key={sectionIndex}
+            shell={false}
           >
-            <div className="resource-section-heading">
-              {sectionEyebrow ? <p className="eyebrow">{sectionEyebrow}</p> : null}
-              <h2>{sectionTitle}</h2>
-              {sectionCopy ? <p>{sectionCopy}</p> : null}
-            </div>
+            <EditorialSectionHeader
+              className="resource-section-heading"
+              eyebrow={sectionEyebrow}
+              lead={sectionCopy}
+              title={sectionTitle}
+            />
             {section.items ? (
               <ul className="resource-list">
                 {section.items.map((item) => (
@@ -993,12 +1296,12 @@ export function ResourcePage({ slug }: { slug: ResourceSlug }) {
             {section.cards ? (
               <ResourceCardList cards={section.cards} sectionIndex={sectionIndex} slug={slug} />
             ) : null}
-          </section>
+          </EditorialSection>
         );
       })}
 
       {page.form ? <ResourceForm form={page.form} id={`${slug}-form`} slug={slug} /> : null}
-      <EditorialSectionNavigator
+      <EditorialNavigation
         ariaLabel={`${pageTitle} sections`}
         sections={sectionNavigator}
       />

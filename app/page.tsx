@@ -1,13 +1,17 @@
-import Link from "next/link";
 import { MainHeader } from "./main-navigation";
 import { CapabilityJourney } from "./capability-journey";
 import { CategoryEvolution, CeoMondayMoment } from "./category-reinforcement";
 import { BrandIllustration } from "../components/brand/BrandIllustration";
+import {
+  EditorialCard,
+  EditorialCTAGroup,
+  EditorialGrid,
+  EditorialNavigation,
+  TrustRow,
+} from "../components/brand/BrandCanonFoundation";
 import { EditorialEyebrow } from "../components/brand/EditorialEyebrow";
-import { EditorialJumpArrow } from "../components/brand/EditorialJumpArrow";
-import { EditorialSectionNavigator } from "../components/brand/EditorialSectionNavigator";
-import { EditorialProgression } from "../components/brand/EditorialProgression";
 import { TheoryReference } from "../components/brand/TheoryReference";
+import { TrustLogoMarquee } from "../components/brand/TrustLogoMarquee";
 
 const problemCards = [
   {
@@ -28,68 +32,31 @@ const problemCards = [
   },
 ] as const;
 
-const intelligenceProgression = [
-  { label: "Organizational Self-Understanding", meta: "Missing capability", tone: "cyan" },
-  { label: "Organizational Intelligence", meta: "Capability foundation", tone: "purple" },
-  { label: "Organizational Capabilities", meta: "Reusable abilities", tone: "amber" },
-  { label: "Organizational Self-Empowering", meta: "Continuous improvement", tone: "amber" },
-  { label: "Organizational Resilience", meta: "Business outcome", tone: "violet" },
-] as const;
-
-const imagineMoments = [
+const trustSignals = [
   {
-    statement: "Imagine an organization that never loses its knowledge.",
-    support: "Knowledge stays.",
+    title: "Enterprise Complexity",
+    copy: "For organizations where decisions depend on context, ownership and operational reality.",
   },
   {
-    statement: "Imagine an organization where context is never lost.",
-    support: "Every decision carries memory forward.",
+    title: "Organizational Intelligence",
+    copy: "A category foundation for making organizational context continuously usable.",
   },
   {
-    statement:
-      "Imagine an organization that continuously develops new capabilities.",
-    support: "Every interaction strengthens it.",
-  },
-  {
-    statement: "Imagine an organization that is resilient by design.",
-    support: (
-      <>
-        Prepared for change.
-        <br />
-        Ready for the unknown.
-      </>
-    ),
-  },
-] as const;
-
-const companyPrinciples = [
-  {
-    title: "Understanding before Intelligence",
-    copy:
-      "AI creates value when the organization can interpret its own context.",
-  },
-  {
-    title: "Enable, don't replace",
-    copy:
-      "Technology should make organizations more capable, not more dependent.",
-  },
-  {
-    title: "Build for the next decade",
-    copy:
-      "aiio builds the foundation for organizations that understand, decide and improve over time.",
+    title: "People • Teams • AI",
+    copy: "One shared organizational context for humans, teams and intelligent systems.",
   },
 ] as const;
 
 const homeSectionNavigator = [
   { id: "home-hero", label: "Hero" },
-  { id: "category-evolution", label: "Why Now" },
-  { id: "problem", label: "Problem" },
-  { id: "organizational-intelligence", label: "Missing Capability" },
-  { id: "capabilities", label: "Journey" },
-  { id: "architektur", label: "System" },
-  { id: "self-empowering-organization", label: "Outcome" },
   { id: "monday-morning", label: "Monday" },
-  { id: "company", label: "Company" },
+  { id: "category-evolution", label: "Why Now" },
+  { id: "organizational-intelligence", label: "Missing Capability" },
+  { id: "architektur", label: "System" },
+  { id: "capabilities", label: "Journey" },
+  { id: "self-empowering-organization", label: "Outcome" },
+  { id: "trust", label: "Enterprise Trust" },
+  { id: "executive-cta", label: "Start" },
 ] as const;
 
 function Hero() {
@@ -102,17 +69,22 @@ function Hero() {
           <br />
           aiio enables an organization to continuously understand itself, continuously develop new organizational capabilities and empower every person to make better decisions.
         </p>
-        <div className="actions hero-actions" aria-label="Primary actions">
+        <EditorialCTAGroup className="actions hero-actions" ariaLabel="Primary actions">
           <a className="button hero-button" href="#organizational-intelligence">
             Explore the system
           </a>
           <a className="button hero-button secondary" href="/live-demo/kontakt">
             Request a demo
           </a>
-        </div>
+        </EditorialCTAGroup>
       </div>
-      <div className="hero-visual" aria-hidden="true">
-        <BrandIllustration priority variant="BC-001" />
+      <div className="hero-visual">
+        <BrandIllustration
+          decorative={false}
+          interactive
+          priority
+          variant="BC-001"
+        />
       </div>
     </section>
   );
@@ -122,16 +94,16 @@ function ProblemSection() {
   return (
     <section className="problem-section" id="problem">
       <div className="problem-inner">
-        <EditorialEyebrow>The Problem</EditorialEyebrow>
+        <EditorialEyebrow>The Challenge</EditorialEyebrow>
         <h2>Organizations know more than they can use.</h2>
-        <div className="problem-grid">
+        <EditorialGrid className="problem-grid" columns="four">
           {problemCards.map((card) => (
-            <article className="problem-card" key={card.title}>
+            <EditorialCard className="problem-card" key={card.title}>
               <h3>{card.title}</h3>
               <p>{card.copy}</p>
-            </article>
+            </EditorialCard>
           ))}
-        </div>
+        </EditorialGrid>
       </div>
       <div className="problem-atmosphere" aria-hidden="true">
         <span />
@@ -145,9 +117,15 @@ function ProblemSection() {
 function ConceptBreakthrough() {
   return (
     <section className="concept-section" id="organizational-intelligence">
-      <div className="concept-inner">
+      <div className="concept-inner concept-inner-text">
         <div className="concept-copy">
           <EditorialEyebrow>The Missing Capability</EditorialEyebrow>
+          <BrandIllustration
+            className="missing-capability-illustration"
+            decorative={false}
+            interactive
+            variant="BC-005"
+          />
           <h2>The missing capability is continuous self-understanding.</h2>
           <div className="concept-statement">
             <p>Organizations collect information, document processes and introduce AI.</p>
@@ -159,19 +137,11 @@ function ConceptBreakthrough() {
             </p>
           </div>
           <p className="concept-support">
-            When an organization continuously understands itself, understanding becomes
-            intelligence, intelligence becomes capability and capability becomes self-empowerment.
+            This is why the category needs to exist: organizations need a
+            foundation that makes context continuously understandable before
+            decisions and action depend on scattered memory.
           </p>
         </div>
-        <EditorialProgression
-          ariaLabel="Missing layer progression"
-          className="intelligence-progression"
-          items={intelligenceProgression.map((step) => ({
-            label: <TheoryReference>{step.label}</TheoryReference>,
-            meta: step.meta,
-            tone: step.tone,
-          }))}
-        />
       </div>
     </section>
   );
@@ -187,7 +157,7 @@ function NewKindOrganization() {
       </div>
       <div className="organization-inner">
         <div className="organization-header">
-          <EditorialEyebrow>Outcome</EditorialEyebrow>
+          <EditorialEyebrow>Business Impact</EditorialEyebrow>
           <h2>A more resilient organization creates better work.</h2>
           <p>Your organization makes better decisions, executes with less rework and adapts with more confidence.</p>
         </div>
@@ -197,32 +167,12 @@ function NewKindOrganization() {
           </div>
         </div>
         <div className="organization-bottom-statement">
-          <p>Self-understanding creates capability.</p>
-          <p>Capability creates self-empowerment.</p>
-          <p>Self-empowerment creates resilience.</p>
+          <p>Faster decisions.</p>
+          <p>Less rework.</p>
+          <p>Stronger execution.</p>
+          <p>More resilience.</p>
         </div>
       </div>
-    </section>
-  );
-}
-
-function ImagineFuture() {
-  return (
-    <section className="imagine-section" id="imagine">
-      <p className="imagine-section-title">Imagine...</p>
-      {imagineMoments.map((moment) => (
-        <section className="imagine-moment" key={moment.statement}>
-          <div className="imagine-copy">
-            <h2>{moment.statement}</h2>
-            <p>{moment.support}</p>
-          </div>
-        </section>
-      ))}
-      <section className="imagine-moment imagine-final">
-        <div className="imagine-copy">
-          <h2>This is the Self-Empowering Organization.</h2>
-        </div>
-      </section>
     </section>
   );
 }
@@ -232,12 +182,7 @@ function OisArchitecture() {
     <section className="ois-section" id="architektur">
       <div className="ois-editorial-layout">
         <div className="ois-intro">
-          <div className="home-section-kicker">
-            <EditorialEyebrow>The System</EditorialEyebrow>
-            <Link className="home-platform-link" href="/platform">
-              Platform <EditorialJumpArrow />
-            </Link>
-          </div>
+          <EditorialEyebrow>The System</EditorialEyebrow>
           <h2>The Organizational Intelligence System gives this capability a place to operate.</h2>
           <div className="ois-body">
             <p>
@@ -251,7 +196,7 @@ function OisArchitecture() {
           aria-label="Organizational Intelligence layered architecture"
           className="ois-visual-wrap"
         >
-          <BrandIllustration variant="BC-002" />
+          <BrandIllustration decorative={false} interactive variant="BC-002" />
         </div>
       </div>
 
@@ -263,38 +208,57 @@ function OisArchitecture() {
   );
 }
 
-function CompanyPurpose() {
+function TrustReferences() {
   return (
-    <section className="company-purpose-section" id="company">
-      <div className="company-purpose-inner">
-        <div className="company-purpose-copy">
-          <EditorialEyebrow>Company</EditorialEyebrow>
-          <h2>Why aiio exists</h2>
-          <div>
-            <p>
-              Organizations should not depend on scattered memory to make important
-              decisions.
-            </p>
-            <p>
-              aiio exists to help organizations continuously understand, decide
-              and improve.
-            </p>
-            <p>
-              The result is better decisions, stronger execution and more resilient organizations.
-            </p>
-          </div>
+    <section className="trust-reference-section" id="trust">
+      <div className="trust-reference-inner">
+        <div className="trust-reference-copy">
+          <EditorialEyebrow>Enterprise Trust</EditorialEyebrow>
+          <h2>
+            Trusted by organizations operating in complex, regulated and
+            knowledge-intensive environments.
+          </h2>
+          <p className="trust-reference-lead">
+            Organizations across industry, mobility, healthcare, consulting and
+            the public sector use aiio to build Organizational Intelligence.
+          </p>
         </div>
-        <div className="company-principles" aria-label="aiio principles">
-          {companyPrinciples.map((principle) => (
-            <article className="company-principle" key={principle.title}>
-              <h3>{principle.title}</h3>
-              <p>{principle.copy}</p>
-            </article>
+        <TrustRow className="trust-reference-grid" ariaLabel="Trust foundations">
+          {trustSignals.map((signal) => (
+            <EditorialCard className="trust-reference-card" key={signal.title}>
+              <h3>{signal.title}</h3>
+              <p>{signal.copy}</p>
+            </EditorialCard>
           ))}
-        </div>
+        </TrustRow>
       </div>
-      <div className="company-quiet-image" aria-hidden="true">
+      <div className="trust-reference-quiet-image" aria-hidden="true">
         <span />
+      </div>
+    </section>
+  );
+}
+
+function ExecutiveCTA() {
+  return (
+    <section className="executive-cta-section" id="executive-cta">
+      <div className="executive-cta-inner">
+        <div className="executive-cta-copy">
+          <EditorialEyebrow>Start</EditorialEyebrow>
+          <h2>Start with the right conversation.</h2>
+          <p>
+            Explore where Organizational Intelligence can create value in your
+            organization and what the first credible next step should be.
+          </p>
+        </div>
+        <EditorialCTAGroup className="executive-cta-actions" ariaLabel="Executive actions">
+          <a className="button hero-button" href="/live-demo/kontakt">
+            Request a demo
+          </a>
+          <a className="button hero-button secondary" href="/platform">
+            Explore the system
+          </a>
+        </EditorialCTAGroup>
       </div>
     </section>
   );
@@ -302,18 +266,21 @@ function CompanyPurpose() {
 
 export default function Home() {
   return (
-    <main>
+    <main className="home-page">
       <MainHeader />
-      <Hero />
-      <CategoryEvolution />
-      <ProblemSection />
-      <ConceptBreakthrough />
-      <CapabilityJourney />
-      <OisArchitecture />
-      <NewKindOrganization />
-      <CeoMondayMoment />
-      <CompanyPurpose />
-      <EditorialSectionNavigator
+      <div className="home-page-story">
+        <TrustLogoMarquee />
+        <Hero />
+        <CeoMondayMoment />
+        <CategoryEvolution />
+        <ConceptBreakthrough />
+        <OisArchitecture />
+        <CapabilityJourney />
+        <NewKindOrganization />
+        <TrustReferences />
+        <ExecutiveCTA />
+      </div>
+      <EditorialNavigation
         ariaLabel="Home sections"
         sections={homeSectionNavigator}
       />

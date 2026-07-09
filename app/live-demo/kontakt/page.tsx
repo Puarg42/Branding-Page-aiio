@@ -1,5 +1,11 @@
 import { MainHeader } from "../../main-navigation";
-import { EditorialSectionNavigator } from "../../../components/brand/EditorialSectionNavigator";
+import {
+  EditorialCTAGroup,
+  EditorialNavigation,
+  EditorialSection,
+  EditorialSectionHeader,
+} from "../../../components/brand/BrandCanonFoundation";
+import { EditorialEyebrow } from "../../../components/brand/EditorialEyebrow";
 
 const expectationItems = [
   "A conversation about your organizational challenges.",
@@ -11,7 +17,7 @@ const expectationItems = [
 const requestDemoSectionNavigator = [
   { id: "request-demo-hero", label: "Hero" },
   { id: "request-demo-expectations", label: "Expectations" },
-  { id: "request-demo-form", label: "Request" },
+  { id: "request-demo-form", label: "Start" },
 ] as const;
 
 export default function DemoKontaktPage() {
@@ -19,21 +25,21 @@ export default function DemoKontaktPage() {
     <main className="request-demo-page">
       <MainHeader />
 
-      <section
+      <EditorialSection
         className="request-demo-hero"
         id="request-demo-hero"
-        aria-labelledby="request-demo-title"
+        shellClassName="request-demo-shell request-demo-hero-grid"
       >
-        <div className="request-demo-shell request-demo-hero-grid">
           <div className="request-demo-copy">
-            <p className="request-demo-eyebrow">Request Demo</p>
             <h1 id="request-demo-title">Start with the right conversation.</h1>
             <p>
               For demos, platform questions and partnership conversations.
             </p>
-            <a className="request-demo-button" href="#request-demo-form">
-              Request a Demo
-            </a>
+            <EditorialCTAGroup ariaLabel="Request demo action">
+              <a className="request-demo-button" href="#request-demo-form">
+                Request a Demo
+              </a>
+            </EditorialCTAGroup>
           </div>
 
           <aside className="request-demo-person" aria-label="Your aiio contact">
@@ -51,35 +57,31 @@ export default function DemoKontaktPage() {
               </span>
             </div>
           </aside>
-        </div>
-      </section>
+      </EditorialSection>
 
-      <section
+      <EditorialSection
         className="request-demo-section"
         id="request-demo-expectations"
-        aria-labelledby="request-demo-expect"
+        shellClassName="request-demo-shell request-demo-expect-grid"
       >
-        <div className="request-demo-shell request-demo-expect-grid">
-          <div>
-            <p className="request-demo-eyebrow">What to expect</p>
-            <h2 id="request-demo-expect">A calm first look at what matters.</h2>
-          </div>
+          <EditorialSectionHeader
+            eyebrow="What to expect"
+            title="A calm first look at what matters."
+          />
           <ul className="request-demo-list">
             {expectationItems.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
-        </div>
-      </section>
+      </EditorialSection>
 
-      <section
+      <EditorialSection
         className="request-demo-form-section"
         id="request-demo-form"
-        aria-labelledby="request-demo-form-title"
+        shellClassName="request-demo-shell request-demo-form-grid"
       >
-        <div className="request-demo-shell request-demo-form-grid">
           <div className="request-demo-form-intro">
-            <p className="request-demo-eyebrow">Start here</p>
+            <EditorialEyebrow>Start here</EditorialEyebrow>
             <h2 id="request-demo-form-title">Tell us what you want to understand.</h2>
             <p>
               A few lines are enough. We will use them to prepare the right
@@ -128,9 +130,8 @@ export default function DemoKontaktPage() {
               Request a Demo
             </button>
           </form>
-        </div>
-      </section>
-      <EditorialSectionNavigator
+      </EditorialSection>
+      <EditorialNavigation
         ariaLabel="Request demo sections"
         sections={requestDemoSectionNavigator}
       />

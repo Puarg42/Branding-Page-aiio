@@ -1,36 +1,72 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import { BrandCanonLightbox } from "../components/brand/BrandCanonLightbox";
 import { NavigationMemory } from "../components/brand/NavigationMemory";
 import { SiteFooter } from "./site-footer";
-import { siteUrl } from "./site-url";
+import { deploymentUrl, siteUrl } from "./site-url";
+
+const title = "aiio | Organizational Intelligence with System";
+const description = "Build organizations that continuously understand themselves.";
+const socialPreviewImageUrl = new URL(
+  "/og-home-bc002-1200x630.jpg",
+  deploymentUrl,
+);
+const socialPreviewImage = {
+  alt: "BC002 Organizational Intelligence Engine",
+  height: 630,
+  url: socialPreviewImageUrl,
+  width: 1200,
+};
 
 export const metadata: Metadata = {
+  applicationName: "aiio",
+  category: "technology",
   metadataBase: new URL(siteUrl),
-  title:
-    "aiio | Organizational Intelligence mit System",
-  description:
-    "aiio verbindet Wissen, Recognition und Activation in einem integrierten Organizational Intelligence System.",
+  title,
+  description,
   alternates: {
     canonical: "/",
   },
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    apple: "/apple-touch-icon.png",
+    icon: [
+      { rel: "icon", url: "/favicon.ico" },
+      { rel: "icon", type: "image/svg+xml", url: "/favicon.svg" },
+      { rel: "icon", sizes: "512x512", type: "image/png", url: "/icon.png" },
+    ],
+    shortcut: "/favicon.ico",
   },
+  manifest: "/manifest.json",
   openGraph: {
-    description:
-      "aiio verbindet Wissen, Recognition und Activation in einem integrierten Organizational Intelligence System.",
-    images: ["/aiio-architecture-stack-output-v3.png"],
+    description,
+    images: [socialPreviewImage],
     locale: "de_DE",
     siteName: "aiio",
-    title: "aiio | Organizational Intelligence mit System",
+    title,
     type: "website",
     url: "/",
   },
   robots: {
     follow: true,
     index: true,
+    googleBot: {
+      follow: true,
+      index: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
+  twitter: {
+    card: "summary_large_image",
+    description,
+    images: [socialPreviewImage],
+    title,
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#050509",
 };
 
 export default function RootLayout({
@@ -60,6 +96,7 @@ export default function RootLayout({
         <NavigationMemory />
         {children}
         <SiteFooter />
+        <BrandCanonLightbox />
       </body>
     </html>
   );

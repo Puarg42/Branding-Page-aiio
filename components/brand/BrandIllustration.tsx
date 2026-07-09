@@ -5,11 +5,17 @@ export type BrandIllustrationVariant =
   | "BC-002"
   | "BC-003"
   | "BC-004"
+  | "BC-005"
+  | "BC-006"
+  | "BC-007"
   | "BC-008"
+  | "COMPANY-OI"
   | "BC201"
   | "BC202"
   | "BC203"
   | "BC204";
+
+export type BrandCanonViewerMode = "gallery" | "figure";
 
 export const brandCanonAssets: Record<
   BrandIllustrationVariant,
@@ -34,9 +40,25 @@ export const brandCanonAssets: Record<
     alt: "Organizational Intelligence Elements brand illustration",
     src: "/brand-canon/004-visual-language-library.png",
   },
+  "BC-005": {
+    alt: "Missing Capability brand illustration",
+    src: "/brand-canon/005-missing-capability.png",
+  },
+  "BC-006": {
+    alt: "The Organizational Intelligence System brand illustration",
+    src: "/brand-canon/006-organizational-intelligence-system.png",
+  },
+  "BC-007": {
+    alt: "Abstract aiio Brand Canon illustration showing Organizational Intelligence transforming into Business Impact.",
+    src: "/brand-canon/bc007-business-impact.png",
+  },
   "BC-008": {
     alt: "Partner Ecosystem brand illustration",
     src: "/brand-canon/008-partner-ecosystem.png",
+  },
+  "COMPANY-OI": {
+    alt: "Company brand illustration for interdisciplinary Organizational Intelligence",
+    src: "/brand-canon/007-company-organizational-intelligence.png",
   },
   BC201: {
     alt: "Organizational Source Code brand illustration",
@@ -62,12 +84,16 @@ type BrandIllustrationProps = {
   interactive?: boolean;
   priority?: boolean;
   variant: BrandIllustrationVariant;
+  viewerMode?: BrandCanonViewerMode;
 };
 
-function openBrandCanonLightbox(variant: BrandIllustrationVariant) {
+function openBrandCanonLightbox(
+  variant: BrandIllustrationVariant,
+  viewerMode: BrandCanonViewerMode,
+) {
   window.dispatchEvent(
     new CustomEvent("aiio:brand-canon-open", {
-      detail: { variant },
+      detail: { variant, viewerMode },
     }),
   );
 }
@@ -78,6 +104,7 @@ export function BrandIllustration({
   interactive = false,
   priority = false,
   variant,
+  viewerMode = "figure",
 }: BrandIllustrationProps) {
   const asset = brandCanonAssets[variant];
   const image = (
@@ -101,7 +128,7 @@ export function BrandIllustration({
         <button
           aria-label={`Open ${asset.alt}`}
           className="brand-canon-trigger"
-          onClick={() => openBrandCanonLightbox(variant)}
+          onClick={() => openBrandCanonLightbox(variant, viewerMode)}
           type="button"
         >
           {image}

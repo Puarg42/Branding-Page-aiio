@@ -12,6 +12,7 @@ import {
 
 import { BrandIllustration } from "../components/brand/BrandIllustration";
 import { EditorialEyebrow } from "../components/brand/EditorialEyebrow";
+import { TheoryReference } from "../components/brand/TheoryReference";
 
 const motionEase = [0.2, 0, 0, 1] as const;
 
@@ -61,7 +62,7 @@ const infrastructureStages = [
   },
   {
     era: "Next Age",
-    foundation: "Organizational Self-Understanding",
+    foundation: "Organizational Intelligence",
     tone: "cyan",
   },
   {
@@ -111,9 +112,7 @@ export function CeoMondayMoment() {
       <div className="ceo-scrolly-sticky">
         <div className="ceo-scrolly-shell">
           <div className="ceo-scrolly-chapter">
-            <EditorialEyebrow className="ceo-moment-title">
-              Imagine Monday Morning
-            </EditorialEyebrow>
+            <EditorialEyebrow>Imagine Monday Morning</EditorialEyebrow>
             <ol className="ceo-scenario-indicator" aria-label="Monday Morning scenarios">
               {ceoMoments.map((moment, index) => (
                 <li
@@ -188,7 +187,7 @@ export function OrganizationMirror() {
               : { duration: 1.1, ease: motionEase, delay: 0.12 }
           }
         >
-          <BrandIllustration variant="BC-001" />
+          <BrandIllustration decorative={false} interactive variant="BC-001" />
         </motion.div>
       </div>
     </section>
@@ -202,7 +201,7 @@ export function CategoryEvolution() {
   return (
     <section className="category-evolution-section" id="category-evolution">
       <motion.div className="category-evolution-intro" {...reveal}>
-        <EditorialEyebrow className="category-evolution-title">Why Now</EditorialEyebrow>
+        <EditorialEyebrow>Why Now</EditorialEyebrow>
         <h2>A new era of complexity requires a new organizational capability.</h2>
       </motion.div>
 
@@ -230,7 +229,14 @@ export function CategoryEvolution() {
           >
             <span className="category-stage-dot" aria-hidden="true" />
             <p>{stage.era}</p>
-            <h3>{stage.foundation}</h3>
+            <h3>
+              {stage.foundation === "Organizational Intelligence" ||
+              stage.foundation === "Organizational Resilience" ? (
+                <TheoryReference>{stage.foundation}</TheoryReference>
+              ) : (
+                stage.foundation
+              )}
+            </h3>
           </motion.article>
         ))}
       </div>

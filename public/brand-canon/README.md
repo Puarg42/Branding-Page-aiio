@@ -48,6 +48,62 @@ Usage: Platform Hero only.
 
 Never use BC003 to replace BC001, BC002 or any capability illustration. BC001 remains the Organizational Mind illustration. BC002 remains the Platform explanation illustration.
 
+### BC005
+
+`005-missing-capability.png`
+
+Official name: BC005 - Missing Capability.
+
+Purpose: dedicated Home page illustration for the Missing Capability section.
+
+Usage: Home Missing Capability section only, placed between the editorial eyebrow and the section headline.
+
+Never crop, recolor, redraw, add labels, add overlays or use BC005 as a generic decorative background.
+
+### BC006
+
+`006-organizational-intelligence-system.png`
+
+Official name: BC006 - The Organizational Intelligence System.
+
+Purpose: illustrates the complete Organizational Intelligence System and the relationship between Organizational Reality, ProcessCollector, ProcessMagnet, ProcessForge, DataForge, Organizational Self-Understanding, Organizational Intelligence, Organizational Capabilities, Organizational Self-Empowering and Organizational Resilience.
+
+Usage: Brand Canon system reference, executive explanation and editorial system context.
+
+Never crop, recolor, redraw, add labels, add overlays or reinterpret BC006. The Brand Canon adapts to the approved asset, not the other way around.
+
+### BC007
+
+`bc007-business-impact.png`
+
+Official name: BC007 - Business Impact.
+
+Category: Business Outcome.
+
+Purpose: dedicated Business Impact hero illustration.
+
+Description: the transformation of Organizational Intelligence into measurable business value, resilience and sustainable advantage.
+
+Usage: Business Impact hero only.
+
+Never crop aggressively, recolor, redraw, add overlays, reinterpret or modify BC007 per page. Pages adapt to the asset.
+
+### Company Organizational Intelligence
+
+`007-company-organizational-intelligence.png`
+
+Official name: Company Organizational Intelligence.
+
+Purpose: dedicated Company Hero illustration.
+
+Narrative: visualizes interdisciplinary collaboration, science, organizational systems, leadership and intelligence emerging from multiple perspectives.
+
+Usage: Company page hero only.
+
+This asset keeps its historical filename and remains approved for the Company page. It is not changed by the BC007 Business Impact registration.
+
+Never use the Company Organizational Intelligence asset as a software UI, dashboard, generic teamwork image or decorative background. It should remain an editorial illustration for the people and institutional foundation behind Organizational Intelligence.
+
 ### BC008
 
 `008-partner-ecosystem.png`

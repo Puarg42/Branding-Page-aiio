@@ -7,6 +7,7 @@ import {
   theoryReturnStorageKey,
   type TheoryReturnState,
 } from "../../../components/brand/theory-links";
+import { EditorialEyebrow } from "../../../components/brand/EditorialEyebrow";
 import { theoryPublication } from "../publication-model";
 
 type TheorySidebarChapter = {
@@ -136,9 +137,9 @@ export function TheorySidebar({ chapters }: TheorySidebarProps) {
       </a>
 
       <div className="theory-sidebar-intro">
-        <p className="theory-sidebar-eyebrow">Theory</p>
+        <EditorialEyebrow>Theory</EditorialEyebrow>
         <h2>Organizational Intelligence</h2>
-        <p>The Theory of Organizational Understanding</p>
+        <p>The Theory of Organizational Intelligence</p>
       </div>
 
       <div className="theory-publication-meta" aria-label="Publication details">
@@ -170,7 +171,7 @@ export function TheorySidebar({ chapters }: TheorySidebarProps) {
                 href={`#${chapter.id}`}
                 onClick={(event) => handleChapterClick(event, chapter.id)}
               >
-                <span>{String(index + 1).padStart(2, "0")}</span>
+                <span>{`T${String(index).padStart(2, "0")}`}</span>
                 <span>{chapter.title}</span>
               </a>
             </li>

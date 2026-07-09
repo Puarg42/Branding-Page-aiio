@@ -7,7 +7,6 @@ import {
   type Variants,
 } from "framer-motion";
 import { EditorialEyebrow } from "../components/brand/EditorialEyebrow";
-import { TheoryReference } from "../components/brand/TheoryReference";
 
 const motionEase = [0.2, 0, 0, 1] as const;
 
@@ -19,27 +18,27 @@ const fadeIn: Variants = {
 const capabilitySequence = [
   {
     meta: "Level 1",
-    title: "Organizational Intelligence",
-    copy: "Your organization continuously interprets itself and turns self-understanding into direction.",
-    tone: "cyan",
+    title: "Understand itself",
+    copy: "Your organization gains a shared view of how work, context and decisions connect.",
+    tone: "graphite",
   },
   {
     meta: "Level 2",
-    title: "Organizational Capabilities",
-    copy: "Intelligence becomes reusable organizational abilities people and AI can apply.",
-    tone: "purple",
+    title: "Develop intelligence",
+    copy: "That shared context becomes continuously interpretable and usable for better decisions.",
+    tone: "cyan",
   },
   {
     meta: "Level 3",
-    title: "Organizational Self-Empowering",
-    copy: "Capabilities evolve until the organization increasingly empowers itself to improve.",
-    tone: "amber",
+    title: "Create capabilities",
+    copy: "Interpretation becomes repeatable behavior that people and AI can apply in daily work.",
+    tone: "purple",
   },
   {
-    meta: "Business Outcome",
-    title: "Organizational Resilience",
-    copy: "Self-empowering organizations adapt with less rework, stronger execution and more confidence.",
-    tone: "violet",
+    meta: "Level 4",
+    title: "Become resilient",
+    copy: "The organization adapts faster because its capabilities improve with feedback and change.",
+    tone: "amber",
   },
 ] as const;
 
@@ -67,14 +66,11 @@ export function CapabilityJourney() {
           whileInView="visible"
         >
           <EditorialEyebrow>The Journey</EditorialEyebrow>
-          <h2>
-            From{" "}
-            <TheoryReference>Organizational Intelligence</TheoryReference>{" "}
-            to <TheoryReference>Organizational Resilience</TheoryReference>
-          </h2>
+          <h2>From understanding itself to becoming resilient.</h2>
           <p>
-            Your organization becomes resilient when intelligence creates
-            capabilities and capabilities create self-empowerment.
+            This is the customer transformation. aiio helps the organization
+            move from shared understanding to stronger capabilities and better
+            adaptation.
           </p>
         </motion.div>
 
@@ -99,9 +95,7 @@ export function CapabilityJourney() {
               <span className="capability-step-number">
                 {String(index + 1).padStart(2, "0")}
               </span>
-              <h3>
-                <TheoryReference>{capability.title}</TheoryReference>
-              </h3>
+              <h3>{capability.title}</h3>
               <p>{capability.copy}</p>
             </motion.article>
           ))}

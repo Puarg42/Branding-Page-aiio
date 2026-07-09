@@ -28,10 +28,11 @@ Top-Level Navigation
 
 Platform Architecture
 
-- Capture Knowledge
-- Build Understanding
-- Enable Action
-- Evolve Organizations
+- Understand Your Organization
+- Build Organizational Self-Understanding
+- Forge Organizational Capabilities
+- Enable Organizational Self-Empowerment
+- Organizational Resilience as business outcome
 
 Thinking Architecture
 

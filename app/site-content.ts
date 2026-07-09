@@ -4,20 +4,20 @@ export const layers = [
   {
     slug: "collector",
     stage: "COLLECT",
-    layerName: "Grounding Layer",
+    layerName: "Human-readable Representation",
     product: "ProcessCollector",
     verb: "Organisationswissen erfassen",
     headline: "Organisationswissen erfassen und strukturieren.",
     summary:
-      "ProcessCollector sammelt Wissen aus Dokumenten, Interviews, Prozessen und bestehenden Systemen und schafft daraus die belastbare Grundlage für KI-gestützte Organisationsarbeit.",
+      "ProcessCollector erstellt eine vertrauenswürdige, menschenlesbare Repräsentation der Organisation.",
     promise:
-      "ProcessCollector schafft den Grounding Layer des OIS: eine belastbare, strukturierte Wissensbasis für Menschen, KI-Agenten und bestehende Systeme.",
+      "ProcessCollector macht Organizational Intelligence lesbar, nachvollziehbar und für Menschen sowie KI konsistent nutzbar.",
     detail:
-      "Als Grounding Layer sammelt ProcessCollector Wissen aus Dokumenten, Interviews, Prozessen und bestehenden Systemen und macht es als gemeinsame Handlungsbasis nutzbar.",
+      "ProcessCollector verbindet Dokumentation, Prozesse, Rollen, Regeln und Verantwortlichkeiten zu einer gemeinsamen Organisationsrepräsentation.",
     outcomes: [
       "Organisationswissen wird strukturiert, auffindbar und anschlussfähig.",
       "Dokumente, Interviews, Prozesse und bestehende Systeme werden zu einer gemeinsamen Wissensbasis.",
-      "Die Grundlage für KI-gestützte Organisationsarbeit entsteht belastbar und nachvollziehbar.",
+      "Die menschenlesbare Repräsentation der Organisation entsteht belastbar und nachvollziehbar.",
     ],
     modules: [
       "Geführte Wissenserfassung",
@@ -28,20 +28,20 @@ export const layers = [
   {
     slug: "magnet",
     stage: "RECOGNIZE",
-    layerName: "Understanding Layer",
+    layerName: "Self-Understanding Capability",
     product: "ProcessMagnet",
     verb: "Zusammenhänge erkennen",
     headline: "Zusammenhänge, Prozesse und Potenziale erkennen.",
     summary:
-      "ProcessMagnet analysiert die strukturierte Wissensbasis, erkennt Muster, Prozesszusammenhänge, Schwachstellen und Optimierungspotenziale – auf Basis des ProcessCollectors als Grounding Layer.",
+      "ProcessMagnet interpretiert organisatorische Realität kontinuierlich und verbindet Menschen, Systeme, Dokumente, Daten und Erfahrung.",
     promise:
-      "ProcessMagnet baut auf dem ProcessCollector auf und macht Muster, Prozesszusammenhänge und Optimierungspotenziale sichtbar.",
+      "ProcessMagnet erzeugt Organizational Self-Understanding, indem es organisatorische Realität kontinuierlich verbindet und interpretiert.",
     detail:
-      "Als Understanding Layer analysiert ProcessMagnet die strukturierte Wissensbasis und erkennt Muster, Prozesszusammenhänge, Schwachstellen und Optimierungspotenziale – auf Basis des ProcessCollectors als Grounding Layer.",
+      "ProcessMagnet ist die interpretierende Fähigkeit des Organizational Intelligence Systems und macht organisatorische Zusammenhänge kontinuierlich nutzbar.",
     outcomes: [
       "Muster und Prozesszusammenhänge werden aus der Wissensbasis sichtbar.",
       "Schwachstellen und Optimierungspotenziale werden erkennbar.",
-      "ProcessCollector bleibt Grounding Layer für belastbare Analysen.",
+      "ProcessCollector macht die entstehende Organizational Intelligence menschenlesbar und nachvollziehbar.",
     ],
     modules: [
       "Multimodal Retrieval",
@@ -86,14 +86,14 @@ export const architecturePath = [
 
 export const operatingModel = [
   {
-    title: "Grounding zuerst",
+    title: "Repräsentation zuerst",
     copy:
-      "ProcessCollector ist ein eigenständiger Einstieg und zugleich die Grundlage jeder weiteren Schicht: Single Point of Truth, Wissensbasis und Protokoll.",
+      "ProcessCollector ist ein eigenständiger Einstieg und zugleich die menschenlesbare Repräsentation der Organisation.",
   },
   {
     title: "Understanding als Erweiterung",
     copy:
-      "ProcessMagnet erweitert den Collector, wenn Zusammenhänge, Prozesse, Schwachstellen und Optimierungspotenziale erkannt werden sollen.",
+      "ProcessMagnet interpretiert organisatorische Realität kontinuierlich und erzeugt Organizational Self-Understanding.",
   },
   {
     title: "Activation mit Anschluss",
