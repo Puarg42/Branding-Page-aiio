@@ -1,11 +1,9 @@
-import { readFileSync } from "fs";
-import path from "path";
 import type { Metadata } from "next";
 import {
   EditorialProgression,
   type EditorialProgressionItem,
 } from "../../../components/brand/EditorialProgression";
-import { getCanonicalTheoryChapterId } from "../../../components/brand/theory-links";
+import { theoryChapters } from "./theory-content.generated";
 import { TheorySidebar } from "./theory-sidebar";
 
 export const metadata: Metadata = {
@@ -13,22 +11,8 @@ export const metadata: Metadata = {
   description: "Read the digital theory of Organizational Intelligence.",
 };
 
-type TheoryBlock =
-  | {
-      lines: string[];
-      title?: string;
-      type: "model";
-    }
-  | {
-      text: string;
-      type: "paragraph" | "quote";
-    };
-
-type TheoryChapter = {
-  blocks: TheoryBlock[];
-  id: string;
-  title: string;
-};
+const arrowDown = "\u2193";
+const arrowRight = "\u21ba";
 
 const modelLabels = new Set([
   "Conceptual Evolution",
@@ -37,155 +21,6 @@ const modelLabels = new Set([
   "Conceptual Progression",
   "Conceptual Relationship",
 ]);
-
-function slugify(value: string) {
-  return value
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
-}
-
-function normalizeTheoryText(value: string) {
-  return value
-    .replace(/\r\n/g, "\n")
-    .replaceAll("â†“", "↓")
-    .replaceAll("â†º", "↺")
-    .replaceAll("Ã¢â€ â€œ", "↓")
-    .replaceAll("Ã¢â€ Âº", "↺");
-}
-
-function isModelStart(chunks: string[], index: number) {
-  const current = chunks[index];
-  const upcoming = chunks.slice(index + 1, index + 5);
-
-  return (
-    modelLabels.has(current) ||
-    (!/[.!?]$/.test(current) &&
-      upcoming.some((line) => line === "↓" || line === "+" || line === "↺"))
-  );
-}
-
-function isModelLine(line: string) {
-  return (
-    line === "+" ||
-    line === "↓" ||
-    line === "↺" ||
-    modelLabels.has(line) ||
-    (!/[.!?]$/.test(line) && line.length <= 86) ||
-    /^".+"$/.test(line)
-  );
-}
-
-function stripStrongMarkers(value: string) {
-  return value.replace(/^\*\*/, "").replace(/\*\*$/, "");
-}
-
-function isStrongStatement(value: string) {
-  return value.startsWith("**") && value.endsWith("**");
-}
-
-function shouldFlushParagraph(buffer: string[], chunks: string[], index: number) {
-  const text = buffer.join(" ");
-  const next = chunks[index + 1];
-
-  if (!next) {
-    return true;
-  }
-
-  if (text.length >= 360) {
-    return true;
-  }
-
-  if (buffer.length >= 3 && text.length >= 220) {
-    return true;
-  }
-
-  if (isModelStart(chunks, index + 1) || isStrongStatement(next)) {
-    return true;
-  }
-
-  return false;
-}
-
-function pushParagraph(blocks: TheoryBlock[], buffer: string[]) {
-  if (buffer.length === 0) {
-    return;
-  }
-
-  blocks.push({
-    text: buffer.join(" "),
-    type: "paragraph",
-  });
-  buffer.length = 0;
-}
-
-function getTheoryChapters(): TheoryChapter[] {
-  const sourcePath = path.join(process.cwd(), "docs", "00_FOUNDATION", "AIIO_OPERATING_SYSTEM.md");
-  const source = normalizeTheoryText(readFileSync(sourcePath, "utf8"));
-
-  return source
-    .split(/^# /m)
-    .map((section) => section.trim())
-    .filter(Boolean)
-    .map((section) => {
-      const [titleLine, ...contentLines] = section.split("\n");
-      const title = titleLine.trim();
-      const chunks = contentLines
-        .join("\n")
-        .split(/\n{2,}/)
-        .map((chunk) => chunk.trim())
-        .filter(Boolean)
-        .filter((chunk) => chunk !== "--------------------------------------------------");
-      const blocks: TheoryBlock[] = [];
-      const paragraphBuffer: string[] = [];
-
-      for (let index = 0; index < chunks.length; index += 1) {
-        const chunk = chunks[index];
-
-        if (isModelStart(chunks, index)) {
-          pushParagraph(blocks, paragraphBuffer);
-
-          const lines: string[] = [];
-
-          while (index < chunks.length && isModelLine(chunks[index])) {
-            lines.push(chunks[index]);
-            index += 1;
-          }
-
-          blocks.push({ lines, type: "model" });
-          index -= 1;
-          continue;
-        }
-
-        if (isStrongStatement(chunk)) {
-          pushParagraph(blocks, paragraphBuffer);
-          blocks.push({ text: stripStrongMarkers(chunk), type: "quote" });
-          continue;
-        }
-
-        paragraphBuffer.push(chunk);
-
-        if (shouldFlushParagraph(paragraphBuffer, chunks, index)) {
-          pushParagraph(blocks, paragraphBuffer);
-        }
-      }
-
-      pushParagraph(blocks, paragraphBuffer);
-
-      if (title === "Prologue" && blocks[0]?.type === "paragraph") {
-        blocks[0] = {
-          text: blocks[0].text,
-          type: "quote",
-        };
-      }
-
-      return {
-        blocks,
-        id: getCanonicalTheoryChapterId(title, slugify(title)),
-        title,
-      };
-    });
-}
 
 function renderOpeningSentence(text: string, isOpening: boolean) {
   if (!isOpening) {
@@ -246,17 +81,17 @@ function getTheoryModelTone(value: string): EditorialProgressionItem["tone"] {
   return "white";
 }
 
-function getTheoryModelItems(lines: string[]): EditorialProgressionItem[] {
+function getTheoryModelItems(lines: readonly string[]): EditorialProgressionItem[] {
   const items: EditorialProgressionItem[] = [];
-  let connectorBefore = "↓";
+  let connectorBefore = arrowDown;
 
   lines.forEach((line) => {
     if (modelLabels.has(line)) {
       return;
     }
 
-    if (line === "+" || line === "â†“" || line === "↓" || line === "â†º" || line === "↺") {
-      connectorBefore = line === "+" ? "+" : line === "â†º" || line === "↺" ? "↺" : "↓";
+    if (line === "+" || line === arrowDown || line === arrowRight) {
+      connectorBefore = line === "+" ? "+" : line === arrowRight ? arrowRight : arrowDown;
       return;
     }
 
@@ -265,24 +100,24 @@ function getTheoryModelItems(lines: string[]): EditorialProgressionItem[] {
       label: line,
       tone: getTheoryModelTone(line),
     });
-    connectorBefore = "↓";
+    connectorBefore = arrowDown;
   });
 
   return items;
 }
 
-function getTheoryModelTitle(lines: string[]) {
+function getTheoryModelTitle(lines: readonly string[]) {
   const title = lines.find((line) => modelLabels.has(line));
 
   return title ? `${title}:` : "Conceptual Model:";
 }
 
-function isCircularTheoryModel(lines: string[]) {
-  return lines.some((line) => line === "↺" || line === "â†º") &&
+function isCircularTheoryModel(lines: readonly string[]) {
+  return lines.some((line) => line === arrowRight) &&
     lines.some((line) => line.toLowerCase().includes("creates new knowledge"));
 }
 
-const chapters = getTheoryChapters();
+const chapters = theoryChapters;
 const sidebarChapters = chapters.map(({ id, title }) => ({ id, title }));
 
 export default function TheoryPage() {

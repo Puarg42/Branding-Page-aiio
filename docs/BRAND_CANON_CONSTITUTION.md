@@ -180,6 +180,22 @@ BC102 remains the Platform Explanation Illustration.
 
 BC003 becomes the Platform Hero Illustration.
 
+#### BC008
+
+Partner Ecosystem
+
+Official asset:
+
+`public/brand-canon/008-partner-ecosystem.png`
+
+Purpose: dedicated Partners page Hero illustration.
+
+BC008 visualizes the partner ecosystem around Organizational Intelligence: collaboration, integration, co-creation and global reach.
+
+BC008 belongs to the ecosystem and market-building side of the Brand Canon. It supports the Partners narrative without becoming a product diagram or generic technology image.
+
+BC008 must not be cropped, recolored, tinted, masked, blurred, shadowed, overlaid or modified per page. Pages adapt to the asset.
+
 ### BC200
 
 ORGANIZATIONAL CAPABILITIES

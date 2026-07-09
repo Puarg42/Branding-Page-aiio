@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BrandIllustration } from "../../components/brand/BrandIllustration";
 import { EditorialEyebrow } from "../../components/brand/EditorialEyebrow";
 import { WebsiteArchitecturePage } from "../website-architecture";
 
@@ -38,6 +39,15 @@ export default function PartnersPage() {
     <WebsiteArchitecturePage
       eyebrow="Partners"
       heroId="partners-hero"
+      heroVisual={
+        <BrandIllustration
+          className="partners-hero-visual"
+          decorative={false}
+          interactive
+          priority
+          variant="BC-008"
+        />
+      }
       intro="Partners help turn Organizational Intelligence into lasting customer capability."
       sectionNavigator={partnersSectionNavigator}
       sectionNavigatorLabel="Partners sections"

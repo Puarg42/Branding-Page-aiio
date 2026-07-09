@@ -48,6 +48,20 @@ Usage: Platform Hero only.
 
 Never use BC003 to replace BC001, BC002 or any capability illustration. BC001 remains the Organizational Mind illustration. BC002 remains the Platform explanation illustration.
 
+### BC008
+
+`008-partner-ecosystem.png`
+
+Official name: BC008 - Partner Ecosystem.
+
+Purpose: dedicated Partners Hero illustration.
+
+Narrative: visualizes partnership as a connected ecosystem of collaboration, integration, co-creation and global reach around Organizational Intelligence.
+
+Usage: Partners Hero only.
+
+Never crop, recolor, tint, mask, add overlays, add shadows or reinterpret BC008. Pages adapt to the asset.
+
 ### BC201
 
 `201-organizational-source-code.png`

@@ -266,6 +266,26 @@ BC001 remains the Organizational Mind illustration.
 
 BC002 remains the Platform Explanation Illustration.
 
+### Partner Ecosystem
+
+Identifier
+
+BC008
+
+Asset
+
+`public/brand-canon/008-partner-ecosystem.png`
+
+Purpose
+
+Partners Hero Illustration.
+
+Visualizes partnership as a connected ecosystem of collaboration, integration, co-creation and global reach around Organizational Intelligence.
+
+Use only for the Partners Hero.
+
+Do not crop, recolor, tint, mask, add overlays, add shadows or reinterpret the asset.
+
 ### Transparent Intelligence
 
 Purpose
