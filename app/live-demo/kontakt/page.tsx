@@ -10,17 +10,17 @@ import { EditorialEyebrow } from "../../../components/brand/EditorialEyebrow";
 const conversationOutcomes = [
   {
     copy: "Understand where Organizational Intelligence creates measurable value in your organization.",
-    icon: "M5 17.5 10.5 12 14 15.5 19 10.5",
+    icon: "conversation",
     title: "Executive Conversation",
   },
   {
     copy: "Identify your organization's highest-impact starting points for continuous self-understanding.",
-    icon: "M12 4.5v15M4.5 12h15M7 7l10 10M17 7 7 17",
+    icon: "assessment",
     title: "Organizational Assessment",
   },
   {
     copy: "Leave with practical recommendations instead of a software demonstration or sales pitch.",
-    icon: "M5 12.5 9.5 17 19 7.5M5 7h6M5 17h4",
+    icon: "steps",
     title: "Concrete Next Steps",
   },
 ] as const;
@@ -53,6 +53,42 @@ const requestDemoSectionNavigator = [
   { id: "request-demo-closing", label: "Close" },
 ] as const;
 
+function OutcomeIcon({ icon }: { icon: (typeof conversationOutcomes)[number]["icon"] }) {
+  if (icon === "conversation") {
+    return (
+      <svg viewBox="0 0 48 48">
+        <circle className="icon-orbit" cx="24" cy="24" r="18" />
+        <path className="icon-line" d="M17 21.5c0-3.2 2.9-5.7 6.6-5.7h2.8c3.7 0 6.6 2.5 6.6 5.7s-2.9 5.7-6.6 5.7H24l-5.2 3.5v-4.2C17.7 25.4 17 23.6 17 21.5Z" />
+        <path className="icon-line" d="M15 33.5h18" />
+        <circle className="icon-dot" cx="24" cy="21.5" r="1.5" />
+      </svg>
+    );
+  }
+
+  if (icon === "assessment") {
+    return (
+      <svg viewBox="0 0 48 48">
+        <circle className="icon-orbit" cx="24" cy="24" r="18" />
+        <circle className="icon-muted" cx="24" cy="24" r="9" />
+        <path className="icon-line" d="M24 10v6M24 32v6M10 24h6M32 24h6" />
+        <path className="icon-line" d="M19.5 24.5 23 28l6.5-8" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg viewBox="0 0 48 48">
+      <circle className="icon-orbit" cx="24" cy="24" r="18" />
+      <path className="icon-muted" d="M14 33h20" />
+      <path className="icon-line" d="M15 31c5.2-10.2 10.4-13.4 18-15" />
+      <path className="icon-line" d="M29 13h7v7" />
+      <circle className="icon-dot" cx="18" cy="27" r="1.7" />
+      <circle className="icon-dot" cx="25" cy="20.5" r="1.7" />
+      <circle className="icon-dot" cx="33" cy="16" r="1.7" />
+    </svg>
+  );
+}
+
 export default function DemoKontaktPage() {
   return (
     <main className="request-demo-page">
@@ -72,36 +108,36 @@ export default function DemoKontaktPage() {
             </p>
             <EditorialCTAGroup ariaLabel="Request demo action">
               <a className="request-demo-button" href="#request-demo-form">
-                Request a Conversation <span aria-hidden="true">-&gt;</span>
+                Request a Conversation
               </a>
             </EditorialCTAGroup>
           </div>
 
           <aside className="request-demo-person" aria-label="Executive conversation with aiio">
             <div
-              aria-label="Dr. Christian Graup portrait"
+              aria-label="Lars Bendler portrait"
               className="company-expert-portrait request-demo-portrait"
               role="img"
-              style={{ backgroundImage: "url(/people/christian-graup.jpg)" }}
+              style={{ backgroundImage: "url(/people/lars-bendler.jpg)" }}
             />
             <div className="request-demo-person-copy">
-              <span className="request-demo-person-name">Dr. Christian Graup</span>
-              <span className="request-demo-person-role">Founder & CEO</span>
+              <span className="request-demo-person-name">Lars Bendler</span>
+              <span className="request-demo-person-role">Partner Ecosystem & Capability Building</span>
               <ul className="request-demo-person-focus" aria-label="Conversation focus">
-                <li>Organizational Intelligence</li>
-                <li>Product Strategy</li>
-                <li>Management Systems</li>
+                <li>Partner Strategy</li>
+                <li>Customer Capability Building</li>
+                <li>Organizational Intelligence Ecosystems</li>
               </ul>
               <blockquote>
-                "Every transformation starts with understanding before changing."
+                "The right conversation turns ambition into a credible path."
               </blockquote>
               <ul className="request-demo-person-proof" aria-label="Executive experience">
-                <li>25+ years organizational management</li>
-                <li>Founder of Organizational Intelligence</li>
-                <li>Trusted by enterprise organizations</li>
+                <li>Builds the aiio partner foundation</li>
+                <li>Connects ecosystem development and customer capability</li>
+                <li>Guides organizations from first conversation to next step</li>
               </ul>
-              <a href="#request-demo-form">
-                Request a Conversation <span aria-hidden="true">-&gt;</span>
+              <a className="request-demo-person-link" href="#request-demo-form">
+                Request a Conversation
               </a>
             </div>
           </aside>
@@ -120,9 +156,7 @@ export default function DemoKontaktPage() {
             {conversationOutcomes.map((item) => (
               <article className="request-demo-outcome-card" key={item.title}>
                 <span className="request-demo-outcome-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24">
-                    <path d={item.icon} />
-                  </svg>
+                  <OutcomeIcon icon={item.icon} />
                 </span>
                 <h3>{item.title}</h3>
                 <p>{item.copy}</p>
