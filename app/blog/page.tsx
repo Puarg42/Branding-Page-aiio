@@ -139,7 +139,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
         shellClassName="blog-news-shell"
       >
         <div className="blog-filter-strip" aria-label="Blog categories">
-          <Link className={!activeCategory ? "is-active" : ""} href="/blog">
+          <Link className={!activeCategory ? "is-active" : ""} href="/blog" scroll={false}>
             All
           </Link>
           {blogCategories.map((category) => (
@@ -147,6 +147,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
               className={activeCategory === category ? "is-active" : ""}
               href={`/blog?category=${encodeURIComponent(category)}`}
               key={category}
+              scroll={false}
             >
               {category}
             </Link>

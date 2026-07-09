@@ -105,7 +105,15 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
     <main className="blog-article-page">
       <MainHeader variant="solid" />
 
-      <article>
+      <article className="blog-article-layout">
+        <div className="blog-article-sticky-nav">
+          <div className="blog-article-shell">
+            <Link className="blog-back-link" href="/blog">
+              {"\u2190"} Back to Blog & News
+            </Link>
+          </div>
+        </div>
+
         <section className="blog-article-hero">
           <div className="blog-article-shell">
             <Link className="blog-back-link" href="/blog">
