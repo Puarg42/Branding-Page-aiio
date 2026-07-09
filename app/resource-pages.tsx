@@ -1010,10 +1010,22 @@ const businessImpactScenarioDetails = {
 } as const;
 
 const businessImpactCapabilityPath = [
-  "Organizational Understanding",
-  "Organizational Intelligence",
-  "Organizational Capabilities",
-  "Organizational Self-Empowerment",
+  {
+    level: "collector",
+    title: "Organizational Understanding",
+  },
+  {
+    level: "magnet",
+    title: "Organizational Intelligence",
+  },
+  {
+    level: "forge",
+    title: "Organizational Capabilities",
+  },
+  {
+    level: "dataforge",
+    title: "Organizational Self-Empowerment",
+  },
 ] as const;
 
 const businessImpactSectionNavigator: EditorialSectionNavigatorItem[] = [
@@ -1162,9 +1174,13 @@ function BusinessImpactPage() {
           </div>
           <div className="business-impact-capability-path" aria-label="Capability path">
             {businessImpactCapabilityPath.map((item, index) => (
-              <div className="business-impact-capability-step" key={item}>
+              <div
+                className="business-impact-capability-step"
+                data-level={item.level}
+                key={item.title}
+              >
                 <span>{String(index + 1).padStart(2, "0")}</span>
-                <strong>{item}</strong>
+                <strong>{item.title}</strong>
               </div>
             ))}
           </div>
