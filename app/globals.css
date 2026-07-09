@@ -1590,8 +1590,57 @@ h1 {
 .footer-legal-stack {
   align-items: flex-end;
   display: grid;
-  gap: 18px;
+  gap: 16px;
   justify-items: end;
+}
+
+.footer-social-block {
+  display: grid;
+  gap: 10px;
+  justify-items: end;
+}
+
+.footer-social-block p {
+  color: rgb(255 255 255 / 52%);
+  font-family: var(--font-aiio-heading);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  line-height: 1;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.footer-social-links {
+  align-items: center;
+  display: flex;
+  gap: 14px;
+  justify-content: flex-end;
+}
+
+.footer-social-links a {
+  align-items: center;
+  color: rgb(255 255 255 / 76%);
+  display: inline-flex;
+  height: 28px;
+  justify-content: center;
+  opacity: 0.82;
+  transition:
+    color 220ms ease,
+    opacity 220ms ease;
+  width: 28px;
+}
+
+.footer-social-links a:hover,
+.footer-social-links a:focus-visible {
+  color: var(--bc-color-eyebrow);
+  opacity: 1;
+}
+
+.footer-social-icon {
+  display: block;
+  height: 23px;
+  width: 23px;
 }
 
 .footer-affiliation-logo {
@@ -3285,6 +3334,12 @@ h1 {
 
   .footer-legal-stack {
     align-items: center;
+    justify-items: center;
+  }
+
+  .footer-social-block,
+  .footer-social-links {
+    justify-content: center;
     justify-items: center;
   }
 }
