@@ -9923,13 +9923,6 @@ section[id],
   z-index: 60;
 }
 
-.website-page:has(.website-platform-system-section) .editorial-section-navigator,
-.website-page:has(.thinking-journal-section) .editorial-section-navigator,
-.academy-page .editorial-section-navigator,
-.company-executive-page .editorial-section-navigator {
-  --editorial-section-navigator-top: clamp(360px, 48svh, 560px);
-}
-
 .editorial-section-navigator:hover {
   opacity: 1;
 }
