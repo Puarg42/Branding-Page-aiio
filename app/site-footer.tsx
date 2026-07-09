@@ -173,12 +173,20 @@ export function SiteFooter() {
                 ))}
               </div>
             </nav>
-            <img
-              alt="KI Bundesverband"
-              className="footer-affiliation-logo"
-              loading="lazy"
-              src="/brand/references/ki-bundesverband-footer.png"
-            />
+            <div className="footer-recognition-bar" aria-label="External recognition" role="group">
+              <img
+                alt="ISO/IEC 27001 certified"
+                className="footer-recognition-logo footer-recognition-logo-iso"
+                loading="lazy"
+                src="/brand/references/iso-27001-certified-white.png"
+              />
+              <img
+                alt="Member of KI Bundesverband"
+                className="footer-recognition-logo footer-recognition-logo-ki"
+                loading="lazy"
+                src="/brand/references/ki-bundesverband-footer.png"
+              />
+            </div>
           </div>
         </div>
 

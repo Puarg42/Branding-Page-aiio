@@ -1643,13 +1643,31 @@ h1 {
   width: 23px;
 }
 
-.footer-affiliation-logo {
+.footer-recognition-bar {
+  align-items: center;
+  border-top: 1px solid rgb(255 255 255 / 14%);
+  display: flex;
+  gap: clamp(18px, 2vw, 28px);
+  justify-content: flex-end;
+  padding-top: 16px;
+  width: 100%;
+}
+
+.footer-recognition-logo {
   display: block;
-  height: auto;
-  max-height: 38px;
-  max-width: 190px;
-  opacity: 0.82;
+  flex: 0 0 auto;
+  height: 34px;
+  object-fit: contain;
   width: auto;
+}
+
+.footer-recognition-logo-iso {
+  height: 32px;
+}
+
+.footer-recognition-logo-ki {
+  height: 34px;
+  max-width: 190px;
 }
 
 .footer-logo-link {
@@ -3363,6 +3381,10 @@ h1 {
     justify-content: center;
     justify-items: center;
   }
+
+  .footer-recognition-bar {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 640px) {
@@ -3378,6 +3400,19 @@ h1 {
   .demo,
   .site-footer-inner {
     width: min(calc(100% - 28px), 1180px);
+  }
+
+  .footer-recognition-bar {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .footer-recognition-logo-iso {
+    height: 30px;
+  }
+
+  .footer-recognition-logo-ki {
+    height: 32px;
   }
 
   .topbar,
