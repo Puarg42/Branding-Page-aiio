@@ -51,7 +51,7 @@ const storyMilestones = [
   },
   {
     year: "Today",
-    label: "Organizational Intelligence System",
+    label: "OIS",
     text: "Establishing Organizational Intelligence as a new management discipline for organizations that need to evolve continuously.",
   },
 ] as const;
