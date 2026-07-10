@@ -16509,3 +16509,131 @@ p.editorial-eyebrow,
     padding: 24px;
   }
 }
+
+/* RC1 Editorial Hero standardization
+   Platform remains the reference. Home, Thinking and Get Started keep their
+   documented editorial overrides. */
+:where(
+  .business-impact-hero,
+  .academy-hero,
+  .company-executive-hero,
+  #partners-hero.website-hero
+) {
+  padding: clamp(72px, 7vw, 112px) 0 clamp(88px, 8vw, 134px);
+}
+
+:where(
+  .business-impact-hero .business-impact-shell,
+  .academy-hero .academy-shell,
+  .company-executive-hero .company-executive-shell,
+  #partners-hero.website-hero > .website-page-shell
+) {
+  transform: translateY(clamp(-88px, -5.4vw, -68px));
+}
+
+:where(
+  .business-impact-hero-visual.brand-canon-figure,
+  .academy-hero-visual.brand-canon-figure,
+  .company-hero-visual.brand-canon-figure,
+  #partners-hero .website-hero-visual
+) {
+  margin-top: 0;
+  margin-bottom: clamp(-212px, -11.5vw, -116px);
+}
+
+:where(
+  .business-impact-lead,
+  .academy-hero-copy > h1 + p,
+  .company-executive-hero p:not(.editorial-eyebrow),
+  #partners-hero > .website-page-shell > p:last-child
+) {
+  margin-top: clamp(26px, 2.8vw, 42px);
+}
+
+:where(
+  .business-impact-actions,
+  .academy-actions,
+  #partners-hero .editorial-cta-group
+) {
+  margin-top: clamp(28px, 4vw, 52px);
+}
+
+#partners-hero.website-hero {
+  overflow: visible;
+}
+
+.theory-book-hero {
+  align-items: end;
+  min-height: clamp(430px, 42vw, 620px);
+  padding: clamp(72px, 7vw, 112px) clamp(36px, 8vw, 132px) clamp(88px, 8vw, 134px);
+}
+
+.theory-book-hero-content {
+  transform: translateY(clamp(-88px, -5.4vw, -68px));
+}
+
+@media (max-width: 920px) {
+  :where(
+    .business-impact-hero .business-impact-shell,
+    .academy-hero .academy-shell,
+    .company-executive-hero .company-executive-shell,
+    #partners-hero.website-hero > .website-page-shell
+  ) {
+    transform: translateY(-48px);
+  }
+
+  :where(
+    .business-impact-hero-visual.brand-canon-figure,
+    .academy-hero-visual.brand-canon-figure,
+    .company-hero-visual.brand-canon-figure,
+    #partners-hero .website-hero-visual
+  ) {
+    margin-bottom: clamp(-116px, -13vw, -66px);
+  }
+
+  .theory-book-hero {
+    min-height: 460px;
+  }
+
+  .theory-book-hero-content {
+    transform: translateY(-48px);
+  }
+}
+
+@media (max-width: 640px) {
+  :where(
+    .business-impact-hero,
+    .academy-hero,
+    .company-executive-hero,
+    #partners-hero.website-hero
+  ) {
+    padding: 66px 0 68px;
+  }
+
+  :where(
+    .business-impact-hero .business-impact-shell,
+    .academy-hero .academy-shell,
+    .company-executive-hero .company-executive-shell,
+    #partners-hero.website-hero > .website-page-shell
+  ) {
+    transform: translateY(-28px);
+  }
+
+  :where(
+    .business-impact-hero-visual.brand-canon-figure,
+    .academy-hero-visual.brand-canon-figure,
+    .company-hero-visual.brand-canon-figure,
+    #partners-hero .website-hero-visual
+  ) {
+    margin-bottom: -54px;
+  }
+
+  .theory-book-hero {
+    min-height: 360px;
+    padding: 70px 22px 82px;
+  }
+
+  .theory-book-hero-content {
+    transform: none;
+  }
+}
