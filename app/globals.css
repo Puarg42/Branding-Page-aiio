@@ -16586,10 +16586,12 @@ p.editorial-eyebrow,
 
 .academy-hero.editorial-hero .academy-hero-visual.brand-canon-figure,
 .company-executive-hero.editorial-hero .company-hero-visual.brand-canon-figure {
-  margin-top: 0;
-  margin-bottom: clamp(-212px, -11.5vw, -116px);
+  margin-top: clamp(-42px, -2.6vw, -18px);
+  margin-bottom: clamp(-300px, -16vw, -176px);
 }
 
+.business-impact-hero h1,
+#partners-hero.website-hero h1,
 .academy-hero.editorial-hero h1,
 .company-executive-hero.editorial-hero h1 {
   font-size: clamp(3.18rem, 5.5vw, 6.62rem);
@@ -16597,6 +16599,11 @@ p.editorial-eyebrow,
   letter-spacing: 0;
   line-height: 0.98;
   max-width: 1180px;
+  position: relative;
+  text-shadow: 0 18px 56px rgb(0 0 0 / 78%);
+  text-wrap: balance;
+  white-space: normal;
+  z-index: 2;
 }
 
 .academy-hero.editorial-hero .academy-hero-copy > h1 + p,
@@ -16642,7 +16649,7 @@ p.editorial-eyebrow,
 
   .academy-hero.editorial-hero .academy-hero-visual.brand-canon-figure,
   .company-executive-hero.editorial-hero .company-hero-visual.brand-canon-figure {
-    margin-bottom: clamp(-116px, -13vw, -66px);
+    margin-bottom: clamp(-154px, -16vw, -92px);
   }
 }
 
@@ -16695,9 +16702,21 @@ p.editorial-eyebrow,
 
   .academy-hero.editorial-hero .academy-hero-visual.brand-canon-figure,
   .company-executive-hero.editorial-hero .company-hero-visual.brand-canon-figure {
+    margin-top: 0;
     margin-bottom: -54px;
   }
 
+  .business-impact-hero h1,
+  #partners-hero.website-hero h1,
+  .academy-hero.editorial-hero h1,
+  .company-executive-hero.editorial-hero h1 {
+    font-size: clamp(2.92rem, 13.1vw, 4.32rem);
+  }
+}
+
+@media (max-width: 720px) {
+  .business-impact-hero h1,
+  #partners-hero.website-hero h1,
   .academy-hero.editorial-hero h1,
   .company-executive-hero.editorial-hero h1 {
     font-size: clamp(2.92rem, 13.1vw, 4.32rem);
