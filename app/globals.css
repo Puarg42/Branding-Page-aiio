@@ -16590,6 +16590,15 @@ p.editorial-eyebrow,
   margin-bottom: clamp(-212px, -11.5vw, -116px);
 }
 
+.academy-hero.editorial-hero h1,
+.company-executive-hero.editorial-hero h1 {
+  font-size: clamp(3.18rem, 5.5vw, 6.62rem);
+  font-weight: 560;
+  letter-spacing: 0;
+  line-height: 0.98;
+  max-width: 1180px;
+}
+
 .academy-hero.editorial-hero .academy-hero-copy > h1 + p,
 .company-executive-hero.editorial-hero p:not(.editorial-eyebrow) {
   margin-top: clamp(26px, 2.8vw, 42px);
@@ -16687,5 +16696,10 @@ p.editorial-eyebrow,
   .academy-hero.editorial-hero .academy-hero-visual.brand-canon-figure,
   .company-executive-hero.editorial-hero .company-hero-visual.brand-canon-figure {
     margin-bottom: -54px;
+  }
+
+  .academy-hero.editorial-hero h1,
+  .company-executive-hero.editorial-hero h1 {
+    font-size: clamp(2.92rem, 13.1vw, 4.32rem);
   }
 }
