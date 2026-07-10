@@ -328,7 +328,7 @@ It is the emergence of organizations that can continuously understand and improv
 
 # 2. The Missing Layer
 
-Every major discipline of organizational management has focused on one central objective.
+Every major discipline of organizational management has improved one part of the organization.
 
 Business Process Management structured activities.
 
@@ -344,25 +344,33 @@ Artificial Intelligence accelerated reasoning.
 
 Each discipline solved an important problem.
 
-None of them solved the fundamental one.
+None created a continuous capability through which the organization itself could interpret its own reality.
 
-Organizations still do not possess continuous Organizational Self-Understanding.
+That is the missing layer.
 
-The reason is deceptively simple.
+The distinction begins with knowledge.
 
-Knowledge and understanding are not the same.
+Knowledge consists of facts, records, documents, decisions, models and experience.
 
-Knowledge consists of isolated facts.
+Knowledge describes what is known.
 
-Understanding emerges from relationships.
+Memory preserves what remains available.
 
-Knowledge answers questions.
+Self-understanding emerges when preserved knowledge, context and relationships become continuously interpretable by the organization itself.
 
-Understanding explains context.
+Intelligence begins when that self-understanding improves decisions, action and capability development.
 
-Knowledge describes what exists.
+These concepts must not be collapsed into one another.
 
-Understanding explains why it behaves as it does.
+Knowledge is raw material.
+
+Memory is continuity.
+
+Self-understanding is interpretation.
+
+Intelligence is the capacity to use interpretation for decisions and capability development.
+
+Capabilities are the repeatable organizational abilities that become visible through action.
 
 For decades organizations invested in collecting more knowledge.
 
@@ -376,79 +384,45 @@ Enterprise systems became connected.
 
 Knowledge became increasingly available.
 
-Yet organizational understanding hardly improved.
+Yet organizational understanding did not increase at the same pace.
 
 The missing capability was never the collection of knowledge.
 
-It was the continuous integration of knowledge into a coherent understanding of the organization itself.
+It was the continuous interpretation of organizational reality as a connected system.
 
-This distinction changes the way organizations must be understood.
+--------------------------------------------------
 
-Knowledge is not the destination.
+Conceptual Distinction
 
-It is the raw material.
+Knowledge
 
-Knowledge is not Understanding.
+->
 
-Data becomes information.
+Organizational Memory
 
-Information becomes knowledge.
+->
 
-Knowledge becomes Organizational Understanding.
+Organizational Self-Understanding
 
-Organizational Understanding becomes Organizational Self-Understanding.
+->
 
-Organizational Self-Understanding enables Organizational Intelligence.
+Organizational Intelligence
 
-Organizational Intelligence becomes the foundation for Organizational Capabilities.
+->
 
-Organizational Capabilities enable Organizational Self-Empowerment.
+Organizational Capabilities
 
-Organizational Self-Empowerment creates Organizational Resilience.
+->
 
-Knowledge Management and Organizational Intelligence therefore solve different problems.
+Organizational Self-Empowerment
 
-Knowledge Management improves access to knowledge.
+->
 
-Organizational Intelligence improves the organization's ability to interpret knowledge and transform it into action.
+Organizational Resilience
 
-Knowledge stores.
+People can understand parts of an organization.
 
-Understanding interprets.
-
-Organizational Intelligence enables capability development.
-
-Understanding is the capability that emerges when knowledge becomes continuously connected, contextualized and interpreted.
-
-Understanding therefore cannot be documented once.
-
-It must continuously evolve together with the organization itself.
-
-This capability has been missing from organizational management for decades.
-
-It represents the missing capability between knowledge and intelligence.
-
-Once this layer exists, intelligence is no longer applied only to isolated documents or individual tasks.
-
-It becomes applicable to the organization itself.
-
-Organizations become capable of reasoning about themselves.
-
-They become capable of recognizing inconsistencies.
-
-They become capable of identifying opportunities.
-
-They become capable of improving themselves continuously.
-
-Understanding therefore becomes the enabling capability from which Organizational Intelligence emerges.
-
-The emergence of this missing capability represents more than another technological innovation.
-
-It represents the beginning of a new stage in the evolution of organizations.
-
-People can understand an organization.
-
-Employees understand their roles.
+Employees understand roles.
 
 Leaders understand strategies.
 
@@ -456,13 +430,11 @@ Experts understand processes.
 
 Consultants understand patterns.
 
-Yet none of these forms of understanding is identical with an organization understanding itself.
+Yet none of these forms of understanding is identical with an organization continuously understanding itself.
 
 An organization is not simply the sum of the people currently working inside it.
 
-Within the Organizational Intelligence Theory, an organization is treated as an autonomous socio-technical system.
-
-It consists of people, processes, knowledge, technologies, routines, decisions, responsibilities, constraints and relationships.
+It is a socio-technical system made of people, processes, knowledge, technologies, routines, decisions, responsibilities, constraints and relationships.
 
 Its behavior emerges from the interaction of these elements.
 
@@ -478,31 +450,15 @@ Each perspective may be valid.
 
 None is complete.
 
-This distinction is fundamental.
-
-People may understand parts of the organization.
-
-The organization itself does not yet possess a continuous capability to understand itself as a whole.
-
-It cannot continuously preserve its own experience.
-
-It cannot continuously connect its own knowledge.
-
-It cannot continuously interpret its own context.
-
-It cannot continuously recognize how its elements influence each other.
-
 This does not imply that an organization is conscious.
 
 Nor does it imply that an organization thinks like a human being.
 
-It means that the organization lacks a persistent self-representation through which its knowledge, context, relationships and experience can remain available for future interpretation.
+It means that the organization lacks a persistent self-representation through which knowledge, experience, context and relationships can remain available for future interpretation.
 
 Organizational Self-Understanding names this missing capability.
 
-Organizational reality includes structures, processes, decisions, relationships, rules, responsibilities, capabilities and operational reality.
-
-Organizational Self-Understanding is not documentation.
+It is not documentation.
 
 It is not Knowledge Management.
 
@@ -512,35 +468,27 @@ It is not enterprise search.
 
 It is not an AI assistant.
 
-It is not information retrieval.
-
 It is continuous organizational interpretation.
 
-Organizational Self-Understanding precedes Organizational Intelligence.
+Without it, intelligence can only operate on fragments.
 
-Without it, intelligence can only be applied to fragments.
-
-Artificial Intelligence may reason about documents.
-
-It may reason about processes.
-
-It may reason about data.
-
-But it cannot reliably reason about the organization itself unless the organization first becomes understandable as a connected system.
+With it, intelligence can become applicable to the organization itself.
 
 The decisive transition is therefore not from human work to machine intelligence.
 
-It is from externally interpreted organizations to organizations capable of continuously developing their own Organizational Self-Understanding.
+It is from externally interpreted organizations to organizations capable of continuously developing their own self-understanding.
 
-Only once this capability exists can Organizational Intelligence emerge.
+The next chapter explains the prerequisite for this transition.
+
+Before an organization can understand itself, it must be able to remember.
 
 # 3. Organizational Memory
 
-Human beings learn because they possess memory.
+Memory is the condition that allows learning to become cumulative.
 
-Organizations learn differently.
+Human beings learn because experience remains available to future interpretation.
 
-For centuries, organizations attempted to preserve experience through documentation.
+Organizations also accumulate experience, but they usually preserve it in fragmented forms.
 
 Processes.
 
@@ -556,15 +504,15 @@ Knowledge bases.
 
 These artifacts preserve information.
 
-They do not constitute organizational memory.
+They do not by themselves constitute organizational memory.
 
-Documentation records the past.
+Documentation records that something existed.
 
-Memory influences future decisions.
+Memory makes experience available for future interpretation.
 
 Within the Organizational Intelligence Theory, Organizational Memory is defined as:
 
-**The continuously evolving representation of organizational experience that remains available for future understanding and decision-making.**
+**The continuously evolving representation of organizational experience that preserves knowledge, context, decisions and relationships for future interpretation.**
 
 Organizational Memory is not a repository.
 
@@ -572,7 +520,7 @@ It is not an archive.
 
 It is not a document management system.
 
-It is the capability of an organization to preserve, connect and continuously reinterpret its accumulated experience.
+It is the organizational capability to preserve, connect and reinterpret accumulated experience.
 
 Without Organizational Memory, every generation of employees begins again.
 
@@ -580,19 +528,29 @@ Knowledge leaves with people.
 
 Projects repeat previous mistakes.
 
-Organizations repeatedly solve identical problems.
+Decisions lose their context.
+
+Organizations repeatedly solve problems they have already solved.
 
 Organizational Memory changes this dynamic.
 
-It is a prerequisite for cumulative Organizational Self-Understanding because it preserves the experience, decisions and context from which future interpretation can evolve.
+It gives knowledge continuity.
+
+It keeps experience available after individual people, projects or systems change.
+
+It connects what the organization has learned with what it must understand next.
+
+For this reason, Organizational Memory is the prerequisite for Organizational Self-Understanding.
+
+Self-understanding cannot emerge from isolated knowledge.
+
+It requires preserved experience, connected context and interpretable relationships.
 
 Experience becomes continuously reusable.
 
 Learning becomes cumulative.
 
-Understanding becomes sustainable.
-
-Organizational Intelligence therefore requires Organizational Memory as its foundation.
+Interpretation becomes sustainable.
 
 Only organizations capable of preserving their experience can continuously improve the quality of future decisions.
 
@@ -608,7 +566,7 @@ Organizational Memory
 
 ↓
 
-Organizational Understanding
+Organizational Self-Understanding
 
 ↓
 
@@ -624,35 +582,41 @@ New Experience
 
 # 4. Organizational Self-Understanding
 
-The concept of understanding is often used intuitively.
+Understanding is often treated as if it were stored knowledge.
 
-Yet it is rarely defined.
+In the Organizational Intelligence Theory, this is a category error.
 
-Within the Organizational Intelligence Theory, understanding is not considered a collection of knowledge.
+Knowledge can be stored.
 
-It is considered an emergent capability.
+Memory can preserve knowledge and experience.
 
-Organizational Understanding describes the general mechanism by which knowledge becomes interpretable through context, relationships and reasoning.
+Understanding cannot be stored in the same way.
 
-Organizational Understanding is the broader concept.
+Understanding emerges when knowledge, memory, context, relationships and reasoning interact.
 
-It explains how organizational knowledge becomes connected, contextualized and interpretable.
+It is an emergent property of the organization as a connected system.
 
-Organizational Self-Understanding applies this mechanism to the organization itself.
+Organizational Self-Understanding applies this emergent property to the organization itself.
 
-It describes the capability of the organization as an autonomous socio-technical system to continuously interpret its own structures, decisions, processes, relationships, responsibilities, capabilities and operational reality.
+It describes the capability of the organization to continuously interpret its own structures, decisions, processes, relationships, responsibilities, capabilities and operational reality.
 
 Knowledge alone is insufficient.
+
+Memory preserves what the organization has experienced.
 
 Context explains where knowledge applies.
 
 Relationships explain how organizational elements influence each other.
 
-Reasoning allows organizations to derive meaning, identify inconsistencies and anticipate consequences.
+Reasoning allows the organization to derive meaning, identify inconsistencies and anticipate consequences.
 
-Only when these four dimensions continuously interact does understanding emerge.
+Only when these dimensions continuously interact can organizational self-understanding emerge.
 
 Knowledge
+
++
+
+Organizational Memory
 
 +
 
@@ -668,9 +632,9 @@ Reasoning
 
 ↓
 
-Organizational Understanding
+Organizational Self-Understanding
 
-Unlike documentation, understanding cannot be frozen.
+Unlike documentation, self-understanding cannot be frozen.
 
 Every organizational decision changes context.
 
@@ -678,27 +642,17 @@ Every new employee changes relationships.
 
 Every new regulation changes interpretation.
 
-Understanding therefore evolves continuously together with the organization itself.
+Self-understanding therefore evolves continuously together with the organization itself.
 
-Organizational Understanding is not another repository.
+It is not another repository.
 
 It is not another management discipline.
 
-It is the capability that enables organizations to continuously interpret themselves.
-
-Only once this capability exists can Organizational Intelligence emerge.
-
-Organizational Self-Understanding is the primary theoretical innovation of the Organizational Intelligence Theory.
-
-It names the capability that has been missing from organizational management: the ability of the organization itself to continuously interpret its own structures, decisions, processes, relationships, responsibilities, capabilities and operational reality.
-
-Organizational Understanding explains the general mechanism by which knowledge becomes interpretable.
-
-Organizational Self-Understanding applies that mechanism to the organization as an autonomous socio-technical system.
+It is the emergent capability that enables organizations to continuously interpret themselves.
 
 Within the Organizational Intelligence Theory, Organizational Self-Understanding is defined as:
 
-**Organizational Self-Understanding is the capability of an organization to continuously interpret, connect and understand its own organizational reality.**
+**Organizational Self-Understanding is the emergent capability of an organization to continuously make its own reality interpretable for future decisions and action.**
 
 This capability precedes Organizational Intelligence.
 
@@ -710,31 +664,11 @@ Organizational Self-Understanding therefore does not mean that people simply kno
 
 It means the organization develops a continuously evolving capacity to make its own reality interpretable.
 
-Conceptual Relationship
-
-Organizational Reality
-
-->
-
-Organizational Memory
-
-->
-
-Organizational Understanding
-
-->
-
-Organizational Self-Understanding
-
-->
-
-Organizational Intelligence
-
 Organizations cannot understand themselves through isolated information.
 
 Understanding emerges.
 
-It is not explicitly created.
+It is not explicitly manufactured.
 
 It is not stored.
 
@@ -756,29 +690,29 @@ No individual document contains it.
 
 No isolated process describes it.
 
-Only the continuously connected representation of the organization allows understanding to emerge.
+Only the continuously connected representation of the organization allows self-understanding to emerge.
 
-This distinction fundamentally separates Organizational Intelligence from traditional Knowledge Management.
+This distinction separates Organizational Intelligence from traditional Knowledge Management.
 
 Knowledge can be documented.
 
-Understanding cannot.
-
-It continuously emerges.
+Self-understanding must continuously emerge.
 
 Every new experience changes organizational memory.
 
 Every new relationship changes context.
 
-Every organizational decision changes future understanding.
+Every organizational decision changes future interpretation.
 
-Organizational Understanding therefore remains permanently incomplete.
+Organizational Self-Understanding therefore remains permanently incomplete.
 
 It continuously evolves together with the organization itself.
 
-Organizational Intelligence should therefore not be understood as a collection of organizational knowledge.
+Once self-understanding exists, the organization can move beyond interpretation.
 
-It should be understood as the capability of an organization to continuously generate organizational understanding from its own evolving representation.
+It can begin to use interpretation to improve decisions, actions and capabilities.
+
+That transition is Organizational Intelligence.
 
 # 5. Organizational Intelligence
 
@@ -796,9 +730,9 @@ Within the Organizational Intelligence Theory, Organizational Intelligence is de
 
 **The continuously evolving capability of an organization to interpret itself and transform Organizational Self-Understanding into coherent decisions, coordinated action and capability development.**
 
-Organizational Intelligence therefore does not replace Organizational Understanding or Organizational Self-Understanding.
+Organizational Intelligence therefore does not replace Organizational Self-Understanding.
 
-It builds upon both.
+It builds upon it.
 
 Organizational Intelligence is not the final objective.
 
@@ -808,11 +742,11 @@ It becomes the foundation from which Organizational Capabilities are forged.
 
 The relationship can be understood as a progression.
 
-Knowledge provides the foundation.
+Knowledge provides raw material.
 
-Understanding creates meaning.
+Organizational Memory preserves continuity.
 
-Organizational Self-Understanding turns meaning toward the organization itself.
+Organizational Self-Understanding makes the organization interpretable to itself.
 
 Intelligence transforms Organizational Self-Understanding into capability development.
 
@@ -844,7 +778,7 @@ Knowledge
 
 ↓
 
-Understanding
+Organizational Memory
 
 ↓
 
@@ -892,7 +826,7 @@ This leads to the central hypothesis of Organizational Intelligence.
 
 Decision quality itself does not emerge randomly.
 
-It emerges from Organizational Understanding
+It emerges from Organizational Self-Understanding
 
 ↓
 
@@ -995,7 +929,7 @@ Knowledge
 
 ↓
 
-Understanding
+Organizational Memory
 
 ↓
 
@@ -1067,7 +1001,7 @@ Knowledge
 
 ↓
 
-Understanding
+Organizational Memory
 
 ↓
 
@@ -1157,7 +1091,7 @@ Knowledge
 
 ↓
 
-Organizational Understanding
+Organizational Self-Understanding
 
 ↓
 
@@ -1231,11 +1165,15 @@ Organizations remain responsible for their own development.
 
 Consultants increasingly become architects of organizational capabilities rather than providers of organizational knowledge.
 
-The preceding chapters describe the management theory of Organizational Self-Understanding and Organizational Intelligence.
+The preceding chapters describe the management theory of Organizational Memory, Organizational Self-Understanding and Organizational Intelligence.
 
-This chapter describes one reference architecture for implementing Organizational Intelligence.
+This theory is not dependent on aiio.
 
-Product names belong here because this chapter connects the theory to the aiio implementation.
+It describes a general organizational capability.
+
+aiio provides one reference implementation.
+
+The aiio product names appear here only as implementation examples.
 
 Organizational Intelligence does not emerge suddenly.
 
@@ -1245,15 +1183,15 @@ Every organization evolves through a sequence of capabilities.
 
 Each capability enables the next.
 
-The reference architecture proposed in this document describes the canonical organizational evolution of Version 0.14.
+The reference architecture proposed in this document begins with the theoretical progression.
 
 Organizational Reality
 
 ↓
 
-ProcessMagnet
+Organizational Memory
 
-(continuous interpretation)
+(preserved experience and interpretable context)
 
 ↓
 
@@ -1265,61 +1203,49 @@ Organizational Intelligence
 
 ↓
 
-ProcessCollector
+Organizational Capabilities
 
-(human-readable representation)
-
-↓
-
-ProcessForge
-
-(capability forging)
-
-↓
-
-DataForge
-
-(continuous evolution)
+(repeatable, coordinated action)
 
 ↓
 
 Organizational Self-Empowerment
 
+(capabilities that improve further capabilities)
+
 ↓
 
 Organizational Resilience
 
-ProcessMagnet continuously interprets organizational reality.
+(effective under changing conditions)
 
-Every organization possesses knowledge.
+The aiio implementation maps this progression into a system of complementary capabilities.
 
-Yet knowledge alone does not create Organizational Intelligence.
+The theoretical function comes first.
 
-Organizational Self-Understanding emerges when the organization continuously interprets its own organizational reality.
+The product demonstrates one way to implement it.
 
-Organizational Intelligence develops when that self-understanding becomes a continuously evolving capability to interpret the organization and guide decisions.
+Continuous interpretation of organizational reality is required for Organizational Self-Understanding to emerge.
 
-ProcessCollector does not create Organizational Self-Understanding.
+In the aiio implementation, ProcessMagnet supports this function.
 
-ProcessCollector creates the human-readable representation of the Organizational Intelligence continuously developed by ProcessMagnet.
+A human-readable representation is required so that Organizational Intelligence can be shared, governed and improved.
 
-Organizational Capabilities are forged when Organizational Intelligence becomes reusable action the organization can repeat, improve and trust.
+In the aiio implementation, ProcessCollector supports this function.
 
-Organizational Self-Empowerment emerges when those capabilities continuously evolve and increasingly enable the organization to improve itself.
+Organizational Capabilities are required so that intelligence becomes repeatable action the organization can trust.
+
+In the aiio implementation, ProcessForge supports this function.
+
+Continuous evolution is required so that capabilities keep improving under changing conditions.
+
+In the aiio implementation, DataForge supports this function.
 
 Organizational Resilience is the business outcome.
 
-Resilience is not produced directly by software.
+It is not produced directly by software.
 
-Resilience emerges from Organizational Self-Empowerment.
-
-Products do not create business outcomes directly.
-
-Products create organizational capabilities.
-
-Capabilities enable Organizational Self-Empowerment.
-
-Organizational Self-Empowerment creates Organizational Resilience.
+It emerges when Organizational Self-Empowerment remains effective under changing conditions.
 
 This architecture represents more than a maturity model.
 

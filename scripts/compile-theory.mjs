@@ -16,6 +16,7 @@ const arrowDown = "\u2193";
 const arrowRight = "\u21ba";
 
 const modelLabels = new Set([
+  "Conceptual Distinction",
   "Conceptual Evolution",
   "Conceptual Interpretation",
   "Conceptual Model",
