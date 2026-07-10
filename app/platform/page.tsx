@@ -263,10 +263,11 @@ export default function PlatformPage() {
                 continuous evolution.
               </p>
               <p>
-                ProcessCollector makes the organization readable. ProcessMagnet
-                builds organizational intelligence. ProcessForge turns that
-                intelligence into capabilities. DataForge evolves those
-                capabilities against operational reality.
+                <strong>ProcessCollector</strong> makes the organization readable.{" "}
+                <strong>ProcessMagnet</strong> builds organizational intelligence.{" "}
+                <strong>ProcessForge</strong> turns that intelligence into
+                capabilities. <strong>DataForge</strong> evolves those capabilities
+                against operational reality.
               </p>
             </div>
             <div className="website-capability-layer-visual">
