@@ -192,6 +192,12 @@ This marks the transition from documenting organizations to understanding organi
 
 It is this transition that defines the beginning of Organizational Intelligence.
 
+Transition: The empirical observation leads to a historical question: why has no previous management discipline solved this missing capability?
+
+# 2. The Evolution of Management
+
+Purpose: This chapter situates Organizational Intelligence within the historical evolution of management disciplines.
+
 Management has always evolved by expanding the capabilities of organizations.
 
 Every major discipline emerged because organizations reached the limits of the previous one.
@@ -330,9 +336,9 @@ It is the emergence of organizations that can continuously understand and improv
 
 Key insight: Artificial Intelligence makes new forms of interpretation possible, but the management shift is the emergence of organizations that can use interpretation to develop themselves.
 
-Transition: The next chapter identifies the missing layer between accumulated knowledge and organizational intelligence.
+Transition: The historical evolution clarifies why the next chapter must identify the missing layer between accumulated knowledge and organizational intelligence.
 
-# 2. The Missing Layer
+# 3. The Missing Layer
 
 Every major discipline of organizational management has improved one part of the organization.
 
@@ -400,7 +406,7 @@ It was the continuous interpretation of organizational reality as a connected sy
 
 --------------------------------------------------
 
-Conceptual Distinction
+The Organizational Intelligence Framework
 
 Knowledge
 
@@ -492,7 +498,7 @@ The next chapter explains the prerequisite for this transition.
 
 Before an organization can understand itself, it must be able to remember.
 
-# 3. Organizational Memory
+# 4. Organizational Memory
 
 Memory is the condition that allows learning to become cumulative.
 
@@ -598,7 +604,7 @@ Action
 
 New Experience
 
-# 4. Organizational Self-Understanding
+# 5. Organizational Self-Understanding
 
 Understanding is often treated as if it were stored knowledge.
 
@@ -738,7 +744,7 @@ Key insight: Organizational Self-Understanding is not stored knowledge; it is th
 
 That transition is Organizational Intelligence.
 
-# 5. Organizational Intelligence
+# 6. Organizational Intelligence
 
 Understanding alone does not create intelligence.
 
@@ -748,15 +754,15 @@ This distinction is fundamental.
 
 An organization may develop Organizational Self-Understanding without consistently acting upon that understanding.
 
-Intelligence begins when Organizational Self-Understanding is continuously transformed into coherent decisions, reusable interpretation and capability development.
+Intelligence begins when Organizational Self-Understanding is continuously transformed into reusable interpretation, coordinated action and capability development.
 
 Within the Organizational Intelligence Theory, Organizational Intelligence is defined as:
 
-**The continuously evolving capability of an organization to interpret itself and transform Organizational Self-Understanding into coherent decisions, coordinated action and capability development.**
+**The continuously evolving capability of an organization to interpret itself and transform Organizational Self-Understanding into coordinated action, reusable interpretation and capability development.**
 
-Purpose: Organizational Intelligence transforms self-understanding into decision quality, coordinated action and capability development.
+Purpose: Organizational Intelligence transforms self-understanding into coordinated action, reusable interpretation and capability development.
 
-Result: The organization can use interpretation to continuously develop its own capabilities.
+Result: The organization can use interpretation to develop capabilities whose observable consequences include improved decision quality.
 
 Organizational Intelligence therefore does not replace Organizational Self-Understanding.
 
@@ -768,21 +774,9 @@ It is the organization's continuously evolving capability to interpret itself.
 
 It becomes the foundation from which Organizational Capabilities are forged.
 
-The relationship can be understood as a progression.
+The relationship follows the Organizational Intelligence Framework introduced earlier.
 
-Knowledge provides raw material.
-
-Organizational Memory preserves continuity.
-
-Organizational Self-Understanding makes the organization interpretable to itself.
-
-Intelligence transforms Organizational Self-Understanding into capability development.
-
-Capabilities become reusable organizational assets.
-
-Capabilities enable Organizational Self-Empowerment.
-
-Organizational Self-Empowerment creates Organizational Resilience.
+Within that framework, Organizational Intelligence marks the transition from self-understanding to capability development.
 
 Organizational Intelligence is therefore not a technology.
 
@@ -802,35 +796,9 @@ The objective is organizations that use intelligence to continuously develop the
 
 Key insight: Artificial Intelligence can strengthen Organizational Intelligence, but Organizational Intelligence remains an organizational capability rather than a property of software.
 
---------------------------------------------------
+The Organizational Intelligence Framework already describes the full progression.
 
-Conceptual Progression
-
-Knowledge
-
-↓
-
-Organizational Memory
-
-↓
-
-Organizational Self-Understanding
-
-↓
-
-Organizational Intelligence
-
-↓
-
-Organizational Capabilities
-
-↓
-
-Organizational Self-Empowerment
-
-↓
-
-Organizational Resilience
+Within that framework, this chapter focuses on the point at which self-understanding becomes organizational intelligence.
 
 Every generation of management has attempted to improve organizational performance.
 
@@ -850,7 +818,7 @@ Organizations do not become better simply because they possess more information.
 
 They become better because they continuously improve the quality of their collective decisions.
 
-Decision quality therefore represents the true indicator of organizational development.
+Decision quality therefore represents an observable consequence of organizational development.
 
 This leads to the central hypothesis of Organizational Intelligence.
 
@@ -859,6 +827,10 @@ This leads to the central hypothesis of Organizational Intelligence.
 Decision quality itself does not emerge randomly.
 
 It emerges from Organizational Self-Understanding
+
+↓
+
+Organizational Intelligence
 
 ↓
 
@@ -877,11 +849,11 @@ Organizational Self-Empowerment
 Organizational Resilience
 
 
-This hypothesis fundamentally changes the purpose of organizational software.
+This hypothesis fundamentally changes the role of organizational systems.
 
 Its objective is no longer the management of information.
 
-Its objective becomes the continuous improvement of organizational decision quality.
+Its objective becomes the continuous development of organizational capabilities whose observable consequences include decision quality.
 
 If this hypothesis proves correct, Organizational Intelligence represents not merely another software category.
 
@@ -889,7 +861,7 @@ It represents a new management discipline.
 
 Transition: Intelligence becomes observable when it is transformed into repeatable organizational abilities.
 
-# 6. Organizational Capabilities
+# 7. Organizational Capabilities
 
 Organizational Intelligence cannot be observed directly.
 
@@ -918,6 +890,12 @@ Result: The organization develops repeatable abilities that can be applied, impr
 Discussion: Organizational Capabilities are not software functions.
 
 They become visible through organizational behavior, decision quality, execution and continuous improvement.
+
+Examples include recognition, contextual interpretation, recommendations, coordinated action, agentic execution and governance.
+
+These examples describe organizational abilities.
+
+They are not product functions.
 
 Action alone does not create capabilities.
 
@@ -965,39 +943,13 @@ When Organizational Self-Empowerment remains effective under changing conditions
 
 Key insight: Capabilities are the point at which intelligence becomes observable as repeatable organizational behavior.
 
+The Organizational Intelligence Framework already describes the full progression.
+
+This chapter focuses on the point at which Organizational Intelligence becomes observable as Organizational Capabilities.
+
 Transition: When capabilities begin to improve the organization's ability to develop further capabilities, the organization becomes self-empowering.
 
---------------------------------------------------
-
-Conceptual Progression
-
-Knowledge
-
-↓
-
-Organizational Memory
-
-↓
-
-Organizational Self-Understanding
-
-↓
-
-Organizational Intelligence
-
-↓
-
-Organizational Capabilities
-
-↓
-
-Organizational Self-Empowerment
-
-↓
-
-Organizational Resilience
-
-# 7. Organizational Self-Empowerment
+# 8. Organizational Self-Empowerment
 
 The development of Organizational Intelligence does not end with capabilities.
 
@@ -1079,7 +1031,7 @@ creates new Knowledge
 
 ↺
 
-# 8. Organizational Resilience
+# 9. Organizational Resilience
 
 Organizations operate in environments that continuously change.
 
@@ -1143,39 +1095,11 @@ They become resilient because Organizational Self-Empowerment continuously devel
 
 Key insight: Organizational Resilience is not a static state; it is the stabilization of self-empowerment under continuous change.
 
+Within the Organizational Intelligence Framework, resilience is the point at which self-empowerment remains effective under changing conditions.
+
 Transition: The theory is independent of aiio. The final chapter describes one reference implementation.
 
---------------------------------------------------
-
-Conceptual Progression
-
-Knowledge
-
-↓
-
-Organizational Memory
-
-↓
-
-Organizational Self-Understanding
-
-↓
-
-Organizational Intelligence
-
-↓
-
-Organizational Capabilities
-
-↓
-
-Organizational Self-Empowerment
-
-↓
-
-Organizational Resilience
-
-# 9. Operationalization by aiio
+# 10. Operationalization by aiio
 
 Definition: Operationalization describes how the theory can be implemented without allowing product architecture to define the theory.
 
@@ -1257,43 +1181,13 @@ Every organization evolves through a sequence of capabilities.
 
 Each capability enables the next.
 
-The reference architecture proposed in this document begins with the theoretical progression.
+The reference architecture proposed in this document begins with the Organizational Intelligence Framework and applies it to organizational reality.
 
-Organizational Reality
+It does not redefine the framework.
 
-↓
+It shows one implementation path.
 
-Organizational Memory
-
-(preserved experience and interpretable context)
-
-↓
-
-Organizational Self-Understanding
-
-↓
-
-Organizational Intelligence
-
-↓
-
-Organizational Capabilities
-
-(repeatable, coordinated action)
-
-↓
-
-Organizational Self-Empowerment
-
-(capabilities that improve further capabilities)
-
-↓
-
-Organizational Resilience
-
-(effective under changing conditions)
-
-The aiio implementation maps this progression into a system of complementary capabilities.
+The aiio implementation maps this framework into a system of complementary capabilities.
 
 The theoretical function comes first.
 

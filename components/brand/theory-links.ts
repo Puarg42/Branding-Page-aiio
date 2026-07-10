@@ -1,4 +1,5 @@
 export const canonicalTheoryIds = {
+  evolutionOfManagement: "the-evolution-of-management",
   missingCapability: "2-the-missing-layer",
   organizationalCapabilities: "organizational-capabilities",
   organizationalIntelligence: "organizational-intelligence",
@@ -14,6 +15,7 @@ export const canonicalTheoryIds = {
 } as const;
 
 export const canonicalTheoryLinks = {
+  evolutionOfManagement: `/thinking/theory#${canonicalTheoryIds.evolutionOfManagement}`,
   missingCapability: `/thinking/theory#${canonicalTheoryIds.missingCapability}`,
   organizationalCapabilities: `/thinking/theory#${canonicalTheoryIds.organizationalCapabilities}`,
   organizationalIntelligence: `/thinking/theory#${canonicalTheoryIds.organizationalIntelligence}`,
@@ -55,6 +57,7 @@ const canonicalIdsByChapterTitle: Record<string, string> = {
   "Reference Architecture for Organizational Intelligence": canonicalTheoryIds.referenceArchitecture,
   "Self-Empowering Organization": canonicalTheoryIds.organizationalSelfEmpowering,
   "Self-Empowering Organizations": canonicalTheoryIds.organizationalSelfEmpowering,
+  "The Evolution of Management": canonicalTheoryIds.evolutionOfManagement,
   "The Missing Capability": canonicalTheoryIds.missingCapability,
   "The Missing Layer": canonicalTheoryIds.missingCapability,
   "The Observation": canonicalTheoryIds.observation,
@@ -80,6 +83,10 @@ export function getCanonicalTheoryLinkForLabel(label: string) {
 
   if (normalized === "why now" || normalized === "why now?") {
     return canonicalTheoryLinks.whyNow;
+  }
+
+  if (normalized === "the evolution of management" || normalized === "evolution of management") {
+    return canonicalTheoryLinks.evolutionOfManagement;
   }
 
   if (

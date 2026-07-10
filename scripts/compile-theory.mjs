@@ -22,6 +22,7 @@ const modelLabels = new Set([
   "Conceptual Model",
   "Conceptual Progression",
   "Conceptual Relationship",
+  "The Organizational Intelligence Framework",
 ]);
 
 function slugify(value) {
@@ -127,6 +128,7 @@ function getCanonicalTheoryChapterId(title, fallbackId) {
   const canonicalIds = {
     "Operationalization by aiio": "operationalization-by-aiio",
     "Reference Architecture for Organizational Intelligence": "operationalization-by-aiio",
+    "The Evolution of Management": "the-evolution-of-management",
     "The Missing Capability": "2-the-missing-layer",
     "The Missing Layer": "2-the-missing-layer",
     "The Observation": "1-the-observation",

@@ -14142,12 +14142,12 @@ section[id],
 }
 
 .theory-book-layout {
-  grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
+  grid-template-columns: minmax(300px, 370px) minmax(0, 1fr);
 }
 
 .theory-sidebar {
   gap: 24px;
-  padding: 34px 38px 24px 28px;
+  padding: 34px 26px 24px 24px;
 }
 
 .theory-sidebar-intro {
@@ -14184,10 +14184,10 @@ section[id],
 }
 
 .theory-sidebar-nav a {
-  gap: 12px;
-  grid-template-columns: 30px minmax(0, 1fr);
+  gap: 10px;
+  grid-template-columns: 26px minmax(0, 1fr);
   line-height: 1.2;
-  padding: 10px 13px;
+  padding: 10px 10px;
 }
 
 .theory-sidebar-note {

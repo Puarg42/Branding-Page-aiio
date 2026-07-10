@@ -90,6 +90,20 @@ export const theoryChapters = [
         "type": "paragraph"
       },
       {
+        "text": "Transition: The empirical observation leads to a historical question: why has no previous management discipline solved this missing capability?",
+        "type": "paragraph"
+      }
+    ],
+    "id": "1-the-observation",
+    "title": "The Observation"
+  },
+  {
+    "blocks": [
+      {
+        "text": "Purpose: This chapter situates Organizational Intelligence within the historical evolution of management disciplines.",
+        "type": "paragraph"
+      },
+      {
         "text": "Management has always evolved by expanding the capabilities of organizations. Every major discipline emerged because organizations reached the limits of the previous one. Scientific Management optimized manual work. Quality Management optimized consistency.",
         "type": "paragraph"
       },
@@ -165,12 +179,12 @@ export const theoryChapters = [
         "type": "paragraph"
       },
       {
-        "text": "Transition: The next chapter identifies the missing layer between accumulated knowledge and organizational intelligence.",
+        "text": "Transition: The historical evolution clarifies why the next chapter must identify the missing layer between accumulated knowledge and organizational intelligence.",
         "type": "paragraph"
       }
     ],
-    "id": "1-the-observation",
-    "title": "The Observation"
+    "id": "the-evolution-of-management",
+    "title": "The Evolution of Management"
   },
   {
     "blocks": [
@@ -216,7 +230,7 @@ export const theoryChapters = [
       },
       {
         "lines": [
-          "Conceptual Distinction",
+          "The Organizational Intelligence Framework",
           "Knowledge",
           "↓",
           "Organizational Memory",
@@ -453,19 +467,19 @@ export const theoryChapters = [
         "type": "paragraph"
       },
       {
-        "text": "Intelligence begins when Organizational Self-Understanding is continuously transformed into coherent decisions, reusable interpretation and capability development. Within the Organizational Intelligence Theory, Organizational Intelligence is defined as:",
+        "text": "Intelligence begins when Organizational Self-Understanding is continuously transformed into reusable interpretation, coordinated action and capability development. Within the Organizational Intelligence Theory, Organizational Intelligence is defined as:",
         "type": "paragraph"
       },
       {
-        "text": "The continuously evolving capability of an organization to interpret itself and transform Organizational Self-Understanding into coherent decisions, coordinated action and capability development.",
+        "text": "The continuously evolving capability of an organization to interpret itself and transform Organizational Self-Understanding into coordinated action, reusable interpretation and capability development.",
         "type": "quote"
       },
       {
-        "text": "Purpose: Organizational Intelligence transforms self-understanding into decision quality, coordinated action and capability development.",
+        "text": "Purpose: Organizational Intelligence transforms self-understanding into coordinated action, reusable interpretation and capability development.",
         "type": "paragraph"
       },
       {
-        "text": "Result: The organization can use interpretation to continuously develop its own capabilities.",
+        "text": "Result: The organization can use interpretation to develop capabilities whose observable consequences include improved decision quality.",
         "type": "paragraph"
       },
       {
@@ -473,11 +487,7 @@ export const theoryChapters = [
         "type": "paragraph"
       },
       {
-        "text": "It becomes the foundation from which Organizational Capabilities are forged. The relationship can be understood as a progression. Knowledge provides raw material. Organizational Memory preserves continuity. Organizational Self-Understanding makes the organization interpretable to itself.",
-        "type": "paragraph"
-      },
-      {
-        "text": "Intelligence transforms Organizational Self-Understanding into capability development. Capabilities become reusable organizational assets. Capabilities enable Organizational Self-Empowerment. Organizational Self-Empowerment creates Organizational Resilience.",
+        "text": "It becomes the foundation from which Organizational Capabilities are forged. The relationship follows the Organizational Intelligence Framework introduced earlier. Within that framework, Organizational Intelligence marks the transition from self-understanding to capability development.",
         "type": "paragraph"
       },
       {
@@ -497,34 +507,19 @@ export const theoryChapters = [
         "type": "paragraph"
       },
       {
-        "lines": [
-          "Conceptual Progression",
-          "Knowledge",
-          "↓",
-          "Organizational Memory",
-          "↓",
-          "Organizational Self-Understanding",
-          "↓",
-          "Organizational Intelligence",
-          "↓",
-          "Organizational Capabilities",
-          "↓",
-          "Organizational Self-Empowerment",
-          "↓",
-          "Organizational Resilience"
-        ],
-        "type": "model"
-      },
-      {
-        "text": "Every generation of management has attempted to improve organizational performance. Some focused on specialization. Some focused on standardization. Some focused on quality. Others focused on knowledge. Artificial Intelligence now promises to improve decision-making.",
+        "text": "The Organizational Intelligence Framework already describes the full progression. Within that framework, this chapter focuses on the point at which self-understanding becomes organizational intelligence. Every generation of management has attempted to improve organizational performance.",
         "type": "paragraph"
       },
       {
-        "text": "Despite these advances, one fundamental assumption has remained largely unquestioned. Organizations do not become better simply because they possess more information. They become better because they continuously improve the quality of their collective decisions.",
+        "text": "Some focused on specialization. Some focused on standardization. Some focused on quality. Others focused on knowledge. Artificial Intelligence now promises to improve decision-making. Despite these advances, one fundamental assumption has remained largely unquestioned.",
         "type": "paragraph"
       },
       {
-        "text": "Decision quality therefore represents the true indicator of organizational development. This leads to the central hypothesis of Organizational Intelligence.",
+        "text": "Organizations do not become better simply because they possess more information. They become better because they continuously improve the quality of their collective decisions. Decision quality therefore represents an observable consequence of organizational development.",
+        "type": "paragraph"
+      },
+      {
+        "text": "This leads to the central hypothesis of Organizational Intelligence.",
         "type": "paragraph"
       },
       {
@@ -539,6 +534,8 @@ export const theoryChapters = [
         "lines": [
           "It emerges from Organizational Self-Understanding",
           "↓",
+          "Organizational Intelligence",
+          "↓",
           "Decision Quality",
           "↓",
           "Organizational Capabilities",
@@ -550,7 +547,7 @@ export const theoryChapters = [
         "type": "model"
       },
       {
-        "text": "This hypothesis fundamentally changes the purpose of organizational software. Its objective is no longer the management of information. Its objective becomes the continuous improvement of organizational decision quality.",
+        "text": "This hypothesis fundamentally changes the role of organizational systems. Its objective is no longer the management of information. Its objective becomes the continuous development of organizational capabilities whose observable consequences include decision quality.",
         "type": "paragraph"
       },
       {
@@ -596,7 +593,11 @@ export const theoryChapters = [
         "type": "paragraph"
       },
       {
-        "text": "They become visible through organizational behavior, decision quality, execution and continuous improvement. Action alone does not create capabilities. Repeated, coherent and continuously improving action does. Every capability increases the organization's ability to respond to future situations.",
+        "text": "They become visible through organizational behavior, decision quality, execution and continuous improvement. Examples include recognition, contextual interpretation, recommendations, coordinated action, agentic execution and governance. These examples describe organizational abilities.",
+        "type": "paragraph"
+      },
+      {
+        "text": "They are not product functions. Action alone does not create capabilities. Repeated, coherent and continuously improving action does. Every capability increases the organization's ability to respond to future situations.",
         "type": "paragraph"
       },
       {
@@ -628,27 +629,12 @@ export const theoryChapters = [
         "type": "paragraph"
       },
       {
-        "text": "Transition: When capabilities begin to improve the organization's ability to develop further capabilities, the organization becomes self-empowering.",
+        "text": "The Organizational Intelligence Framework already describes the full progression. This chapter focuses on the point at which Organizational Intelligence becomes observable as Organizational Capabilities.",
         "type": "paragraph"
       },
       {
-        "lines": [
-          "Conceptual Progression",
-          "Knowledge",
-          "↓",
-          "Organizational Memory",
-          "↓",
-          "Organizational Self-Understanding",
-          "↓",
-          "Organizational Intelligence",
-          "↓",
-          "Organizational Capabilities",
-          "↓",
-          "Organizational Self-Empowerment",
-          "↓",
-          "Organizational Resilience"
-        ],
-        "type": "model"
+        "text": "Transition: When capabilities begin to improve the organization's ability to develop further capabilities, the organization becomes self-empowering.",
+        "type": "paragraph"
       }
     ],
     "id": "organizational-capabilities",
@@ -771,27 +757,12 @@ export const theoryChapters = [
         "type": "paragraph"
       },
       {
-        "text": "Transition: The theory is independent of aiio. The final chapter describes one reference implementation.",
+        "text": "Within the Organizational Intelligence Framework, resilience is the point at which self-empowerment remains effective under changing conditions.",
         "type": "paragraph"
       },
       {
-        "lines": [
-          "Conceptual Progression",
-          "Knowledge",
-          "↓",
-          "Organizational Memory",
-          "↓",
-          "Organizational Self-Understanding",
-          "↓",
-          "Organizational Intelligence",
-          "↓",
-          "Organizational Capabilities",
-          "↓",
-          "Organizational Self-Empowerment",
-          "↓",
-          "Organizational Resilience"
-        ],
-        "type": "model"
+        "text": "Transition: The theory is independent of aiio. The final chapter describes one reference implementation.",
+        "type": "paragraph"
       }
     ],
     "id": "organizational-resilience",
@@ -836,61 +807,43 @@ export const theoryChapters = [
         "type": "paragraph"
       },
       {
-        "text": "It develops progressively. Every organization evolves through a sequence of capabilities. Each capability enables the next. The reference architecture proposed in this document begins with the theoretical progression.",
+        "text": "It develops progressively. Every organization evolves through a sequence of capabilities. Each capability enables the next. The reference architecture proposed in this document begins with the Organizational Intelligence Framework and applies it to organizational reality.",
         "type": "paragraph"
       },
       {
-        "lines": [
-          "Organizational Reality",
-          "↓",
-          "Organizational Memory",
-          "(preserved experience and interpretable context)",
-          "↓",
-          "Organizational Self-Understanding",
-          "↓",
-          "Organizational Intelligence",
-          "↓",
-          "Organizational Capabilities",
-          "(repeatable, coordinated action)",
-          "↓",
-          "Organizational Self-Empowerment",
-          "(capabilities that improve further capabilities)",
-          "↓",
-          "Organizational Resilience",
-          "(effective under changing conditions)"
-        ],
-        "type": "model"
-      },
-      {
-        "text": "The aiio implementation maps this progression into a system of complementary capabilities. The theoretical function comes first. The product demonstrates one way to implement it. Continuous interpretation of organizational reality is required for Organizational Self-Understanding to emerge.",
+        "text": "It does not redefine the framework. It shows one implementation path. The aiio implementation maps this framework into a system of complementary capabilities. The theoretical function comes first. The product demonstrates one way to implement it.",
         "type": "paragraph"
       },
       {
-        "text": "In the aiio implementation, ProcessMagnet supports this function. A human-readable representation is required so that Organizational Intelligence can be shared, governed and improved. In the aiio implementation, ProcessCollector supports this function.",
+        "text": "Continuous interpretation of organizational reality is required for Organizational Self-Understanding to emerge. In the aiio implementation, ProcessMagnet supports this function. A human-readable representation is required so that Organizational Intelligence can be shared, governed and improved.",
         "type": "paragraph"
       },
       {
-        "text": "Organizational Capabilities are required so that intelligence becomes repeatable action the organization can trust. In the aiio implementation, ProcessForge supports this function. Continuous evolution is required so that capabilities keep improving under changing conditions.",
+        "text": "In the aiio implementation, ProcessCollector supports this function. Organizational Capabilities are required so that intelligence becomes repeatable action the organization can trust. In the aiio implementation, ProcessForge supports this function.",
         "type": "paragraph"
       },
       {
-        "text": "In the aiio implementation, DataForge supports this function. Organizational Resilience is the business outcome. It is not produced directly by software. It emerges when Organizational Self-Empowerment remains effective under changing conditions.",
+        "text": "Continuous evolution is required so that capabilities keep improving under changing conditions. In the aiio implementation, DataForge supports this function. Organizational Resilience is the business outcome. It is not produced directly by software.",
         "type": "paragraph"
       },
       {
-        "text": "This architecture represents more than a maturity model. It describes the natural evolution of Organizational Intelligence. Artificial Intelligence does not replace any stage of this model. It accelerates the transition between them.",
+        "text": "It emerges when Organizational Self-Empowerment remains effective under changing conditions. This architecture represents more than a maturity model. It describes the natural evolution of Organizational Intelligence. Artificial Intelligence does not replace any stage of this model.",
         "type": "paragraph"
       },
       {
-        "text": "The objective is therefore not Artificial Intelligence itself. The objective is the emergence of organizations that continuously understand themselves, develop new capabilities, empower themselves and become increasingly resilient, adaptive and sustainable. Conceptual Interpretation",
+        "text": "It accelerates the transition between them. The objective is therefore not Artificial Intelligence itself. The objective is the emergence of organizations that continuously understand themselves, develop new capabilities, empower themselves and become increasingly resilient, adaptive and sustainable.",
         "type": "paragraph"
       },
       {
-        "text": "ProcessMagnet answers: \"How does organizational reality become continuously interpreted?\" Organizational Self-Understanding answers: \"How does the organization work as a connected system?\" ProcessCollector answers: \"How does Organizational Intelligence become human-readable and shared?\"",
+        "text": "Conceptual Interpretation ProcessMagnet answers: \"How does organizational reality become continuously interpreted?\" Organizational Self-Understanding answers: \"How does the organization work as a connected system?\" ProcessCollector answers:",
         "type": "paragraph"
       },
       {
-        "text": "ProcessForge answers: \"What can the organization now consistently do?\" DataForge answers: \"How does the organization continuously develop the conditions for its own improvement?\" Organizational Resilience answers: \"How does the organization remain effective under change?\"",
+        "text": "\"How does Organizational Intelligence become human-readable and shared?\" ProcessForge answers: \"What can the organization now consistently do?\" DataForge answers: \"How does the organization continuously develop the conditions for its own improvement?\"",
+        "type": "paragraph"
+      },
+      {
+        "text": "Organizational Resilience answers: \"How does the organization remain effective under change?\"",
         "type": "paragraph"
       }
     ],

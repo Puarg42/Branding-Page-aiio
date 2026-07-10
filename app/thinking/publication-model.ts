@@ -18,7 +18,7 @@ export const theoryPublication = {
   lastUpdated: "July 10, 2026",
   readingTime: "Approx. 40 min reading",
   title: "Theory",
-  version: "Version 0.15",
+  version: "Version 1.0 RC",
 } as const;
 
 export const theoryEditorialRules = [
@@ -36,6 +36,10 @@ export const theoryChapterReferences = {
   observation: {
     id: canonicalTheoryIds.observation,
     title: "The Observation",
+  },
+  evolutionOfManagement: {
+    id: canonicalTheoryIds.evolutionOfManagement,
+    title: "The Evolution of Management",
   },
   missingLayer: {
     id: canonicalTheoryIds.missingCapability,
@@ -82,8 +86,8 @@ export const theoryChapterReferences = {
     title: "Organizational Intelligence",
   },
   evolution: {
-    id: canonicalTheoryIds.observation,
-    title: "The Observation",
+    id: canonicalTheoryIds.evolutionOfManagement,
+    title: "The Evolution of Management",
   },
   whyNow: {
     id: canonicalTheoryIds.whyNow,
@@ -100,6 +104,26 @@ export const theoryChapterReferences = {
 } satisfies Record<string, TheoryChapterReference>;
 
 export const theoryJournalEntries: TheoryJournalEntry[] = [
+  {
+    affectedChapters: [
+      theoryChapterReferences.observation,
+      theoryChapterReferences.evolutionOfManagement,
+      theoryChapterReferences.missingLayer,
+      theoryChapterReferences.organizationalMemory,
+      theoryChapterReferences.organizationalSelfUnderstanding,
+      theoryChapterReferences.organizationalIntelligence,
+      theoryChapterReferences.organizationalCapabilities,
+      theoryChapterReferences.organizationalSelfEmpowering,
+      theoryChapterReferences.organizationalResilience,
+      theoryChapterReferences.referenceArchitecture,
+    ],
+    coreThesis:
+      "The Organizational Intelligence Theory is consolidated as the first release-candidate scientific publication.",
+    date: "July 10, 2026",
+    version: "1.0 RC",
+    whyItMatters:
+      "This revision separates empirical observation from the evolution of management, positions decision quality as an observable consequence, introduces the Organizational Intelligence Framework as the canonical theoretical model, strengthens Organizational Capabilities as organizational abilities and prepares the Theory for internal release review.",
+  },
   {
     affectedChapters: [
       theoryChapterReferences.observation,
