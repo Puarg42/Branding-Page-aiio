@@ -13,7 +13,7 @@ import { theoryJournalEntries, theoryPublication } from "./publication-model";
 export const metadata: Metadata = {
   title: "Thinking | aiio",
   description:
-    "Explore how aiio's Theory of Organizational Intelligence evolves and which questions shape the next version.",
+    "Explore the public research journal behind aiio's Theory of Organizational Intelligence.",
 };
 
 const thinkingSectionNavigator = [
@@ -32,7 +32,7 @@ export default function ThinkingPage() {
         </TheoryLink>
       }
       heroId="thinking-hero"
-      intro="Thinking is the public journal behind the Theory of Organizational Intelligence. It opens the questions, records what changed and shows why each revision matters."
+      intro="Thinking is the public research journal behind the Theory of Organizational Intelligence. It opens the questions, records what changed and shows why each revision matters."
       sectionNavigator={thinkingSectionNavigator}
       sectionNavigatorLabel="Thinking sections"
       title="The Theory behind aiio's Organizational Intelligence System"
@@ -96,7 +96,7 @@ export default function ThinkingPage() {
             </div>
 
             <p>
-              Thinking opens the evolution. The Theory page contains the consolidated explanation.
+              Thinking explores the research evolution. The Theory page contains the consolidated explanation.
               Platform operationalizes it; Business Impact demonstrates it; Company legitimizes it.
             </p>
 

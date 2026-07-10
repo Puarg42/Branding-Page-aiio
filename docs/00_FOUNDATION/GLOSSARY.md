@@ -4,7 +4,11 @@
 
 ## Living Organizational Memory
 
-## Organizational Understanding
+The capability to preserve knowledge, context, decisions and relationships so future interpretation can build on accumulated organizational experience.
+
+## Organizational Self-Understanding
+
+The emergent capability of an organization to continuously make its own reality interpretable for future decisions and action.
 
 ## Organizational Intelligence
 

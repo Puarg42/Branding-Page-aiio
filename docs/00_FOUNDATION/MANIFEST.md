@@ -14,7 +14,7 @@ It defines the core convictions behind aiio.
 
 3. People may understand parts of an organization, but the organization itself lacks continuous self-understanding.
 
-4. Organizational Understanding connects knowledge, context, relationships and reasoning.
+4. Organizational Memory preserves knowledge, context, decisions and relationships so future interpretation can build on accumulated organizational experience.
 
 5. Organizational Self-Understanding is the capability of the organization itself to continuously interpret its own structures, decisions, processes and capabilities.
 

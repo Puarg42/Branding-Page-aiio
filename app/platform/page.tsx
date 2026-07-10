@@ -25,6 +25,7 @@ export const metadata: Metadata = {
 const theoryLinks = {
   capabilities: canonicalTheoryLinks.organizationalCapabilities,
   intelligence: canonicalTheoryLinks.organizationalIntelligence,
+  memory: canonicalTheoryLinks.organizationalMemory,
   resilience: canonicalTheoryLinks.organizationalResilience,
   selfEmpowerment: canonicalTheoryLinks.organizationalSelfEmpowerment,
   selfUnderstanding: canonicalTheoryLinks.organizationalSelfUnderstanding,
@@ -86,7 +87,11 @@ const capabilities: CapabilityTeaser[] = [
 const capabilitySpine = [
   {
     eyebrow: "Level 1",
-    label: "Organizational Understanding",
+    label: (
+      <TheoryTerm href={theoryLinks.memory}>
+        Organizational Memory
+      </TheoryTerm>
+    ),
     tone: "graphite",
   },
   {
@@ -189,8 +194,8 @@ export default function PlatformPage() {
       }
       intro={
         <>
-          Organizational reality continuously becomes self-understanding,
-          self-understanding becomes{" "}
+          Organizational reality becomes Organizational Memory, memory becomes
+          Organizational Self-Understanding, self-understanding becomes{" "}
           <TheoryTerm href={theoryLinks.intelligence}>
             Organizational Intelligence
           </TheoryTerm>
@@ -217,7 +222,8 @@ export default function PlatformPage() {
               </h2>
               <p>
                 They collect information, documents, processes and AI. Yet they
-                still struggle to continuously understand themselves.
+                still struggle to preserve organizational reality as memory and
+                turn it into continuous self-understanding.
               </p>
               <p className="website-platform-missing-thesis">
                 The missing capability is not more information. It is continuous{" "}
@@ -253,7 +259,8 @@ export default function PlatformPage() {
               <p>
                 The four capabilities do not work as isolated tools. They form
                 one Organizational Intelligence System that connects reality,
-                understanding, capability development and continuous evolution.
+                memory, self-understanding, capability development and
+                continuous evolution.
               </p>
               <p>
                 ProcessCollector makes the organization readable. ProcessMagnet
@@ -292,8 +299,8 @@ export default function PlatformPage() {
               items={[
                 {
                   description:
-                    "Your organization becomes understandable. People, AI and management share one trusted organizational representation.",
-                  label: "Organizational Understanding",
+                    "Your organization preserves context, decisions and relationships as a trusted organizational memory.",
+                  label: "Organizational Memory",
                   meta: "Level 1 · ProcessCollector",
                   tone: "graphite",
                 },
@@ -308,7 +315,13 @@ export default function PlatformPage() {
                   description:
                     "Organizational Intelligence becomes reusable organizational capabilities.",
                   label: "Organizational Capabilities",
-                  meta: "Level 3 · ProcessForge",
+                  meta: (
+                    <>
+                      Level 3 ·
+                      <br />
+                      PROCESSFORGE
+                    </>
+                  ),
                   tone: "purple",
                 },
                 {

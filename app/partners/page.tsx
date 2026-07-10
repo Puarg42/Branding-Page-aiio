@@ -21,7 +21,7 @@ const partnerRoles = [
   {
     title: "Develop understanding",
     purpose:
-      "Help organizations turn fragmented knowledge into shared Organizational Understanding.",
+      "Help organizations turn fragmented knowledge into Organizational Memory and shared Self-Understanding.",
   },
   {
     title: "Build capabilities",

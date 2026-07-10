@@ -17,13 +17,13 @@ import { MainHeader } from "../main-navigation";
 export const metadata: Metadata = {
   title: "Academy | aiio",
   description:
-    "The aiio Academy teaches leaders and organizations how to learn, apply and master Organizational Intelligence.",
+    "The aiio Academy helps leaders and organizations develop Organizational Intelligence capabilities.",
 };
 
 const academySectionNavigator: EditorialSectionNavigatorItem[] = [
   { id: "academy-hero", label: "Hero" },
-  { id: "academy-learning-path", label: "Learning Path" },
-  { id: "academy-formats", label: "Continue Learning" },
+  { id: "academy-learning-path", label: "Capability Development" },
+  { id: "academy-formats", label: "Continue Development" },
   { id: "start", label: "Start" },
 ];
 
@@ -31,12 +31,12 @@ const learningModules = [
   {
     module: "Foundation",
     tone: "foundation",
-    title: "Understand Organizational Reality",
-    titleLines: ["Understand", "Organizational Reality"],
+    title: "Build Organizational Memory",
+    titleLines: ["Build", "Organizational Memory"],
     copy:
-      "Learn how organizations become understandable by documenting structures, responsibilities, processes and knowledge.",
+      "Develop the capability to preserve structures, responsibilities, processes and knowledge as Organizational Memory.",
     product: "ProcessCollector™",
-    outcome: "You understand how organizational reality becomes visible.",
+    outcome: "You understand how organizational reality becomes durable and reusable.",
   },
   {
     module: "Understanding",
@@ -44,17 +44,17 @@ const learningModules = [
     title: "Build Organizational Self-Understanding",
     titleLines: ["Build Organizational", "Self-Understanding"],
     copy:
-      "Learn how connected organizational reality becomes continuous Organizational Self-Understanding.",
+      "Develop the capability to turn Organizational Memory into continuous Organizational Self-Understanding.",
     product: "ProcessMagnet™",
     outcome: "You understand how organizations continuously interpret themselves.",
   },
   {
     module: "Application",
     tone: "application",
-    title: "Transform Understanding into Organizational Capabilities",
-    titleLines: ["Transform Understanding", "into Organizational", "Capabilities"],
+    title: "Transform Intelligence into Organizational Capabilities",
+    titleLines: ["Transform Intelligence", "into Organizational", "Capabilities"],
     copy:
-      "Learn how Organizational Intelligence becomes reusable organizational capabilities that people and AI can apply.",
+      "Develop the capability to turn Organizational Intelligence into reusable organizational capabilities that people and AI can apply.",
     product: "ProcessForge™",
     outcome: "You understand how organizational capabilities are created.",
   },
@@ -74,11 +74,11 @@ const learningModules = [
 const learningFormats = [
   {
     title: "Tutorials",
-    copy: "Structured learning modules for teams building a shared foundation.",
+    copy: "Structured capability modules for teams building a shared foundation.",
   },
   {
     title: "Executive Sessions",
-    copy: "Focused formats for leaders who need to understand the discipline and its implications.",
+    copy: "Focused formats for leaders who need to develop the discipline and its implications.",
   },
   {
     title: "Practical Examples",
@@ -109,18 +109,17 @@ export default function AcademyPage() {
               priority
               variant="BC-006"
             />
-            <h1>Learn Organizational Intelligence.</h1>
+            <h1>Develop Organizational Intelligence capabilities.</h1>
             <p>
               Organizational Intelligence is not a feature to activate.
             </p>
             <p>
-              It is an organizational capability that leaders, teams and AI
-              systems continuously develop together.
+              It is a set of organizational capabilities that leaders, teams
+              and AI systems continuously develop together.
             </p>
             <p>
-              The Academy combines tutorials, executive sessions, practical
-              examples and applied learning into one continuous learning
-              experience.
+              The Academy combines tutorials, executive sessions and practical
+              examples into one continuous capability development experience.
             </p>
             <EditorialCTAGroup className="academy-actions" aria-label="Academy actions">
               <Link className="button" href="#academy-learning-path">
@@ -141,13 +140,13 @@ export default function AcademyPage() {
       >
         <EditorialSectionHeader
           className="academy-section-heading"
-          eyebrow="Learning Path"
-          title="From Understanding to Organizational Capability."
+          eyebrow="Capability Development"
+          title="From Organizational Memory to Organizational Capability."
           lead={
             <>
-              Every learning module builds on the previous one. Together they
-              explain how organizations continuously develop Organizational
-              Intelligence.
+              Every capability module builds on the previous one. Together they
+              explain how organizations develop Organizational Memory,
+              Self-Understanding, Intelligence and Capabilities.
             </>
           }
         />
@@ -193,11 +192,11 @@ export default function AcademyPage() {
       >
         <EditorialSectionHeader
           className="academy-section-heading"
-          eyebrow="Continue Learning"
-          title="Choose the learning format that fits your role."
+          eyebrow="Continue Development"
+          title="Choose the capability development format that fits your role."
           lead={
             <>
-              Choose the learning format that best fits your role and
+              Choose the development format that best fits your role and
               organizational maturity.
             </>
           }
@@ -216,8 +215,8 @@ export default function AcademyPage() {
         </EditorialGrid>
       </EditorialSection>
       <ExecutiveCTA
-        copy="Every organization learns differently. The capability they develop is always the same. Organizational Intelligence."
-        headline="Start building Organizational Intelligence."
+        copy="Every organization develops capability differently. The capability system they build is always the same: Organizational Intelligence."
+        headline="Start developing Organizational Intelligence capabilities."
         primary={{ href: "/live-demo/kontakt", label: "Request a Demo" }}
         secondary={{ href: "/platform", label: "Explore the Platform" }}
       />

@@ -4,7 +4,7 @@
 
 This document defines the first version of the Organizational Intelligence Capability Model.
 
-The model describes how organizational reality develops from knowledge into understanding, Organizational Self-Understanding, Organizational Intelligence, Organizational Capabilities, Organizational Self-Empowerment and Organizational Resilience.
+The model describes how organizational reality develops from knowledge into Organizational Memory, Organizational Self-Understanding, Organizational Intelligence, Organizational Capabilities, Organizational Self-Empowerment and Organizational Resilience.
 
 ## Status
 
@@ -16,7 +16,7 @@ Knowledge
 
 ->
 
-Understanding
+Organizational Memory
 
 ->
 
@@ -42,7 +42,7 @@ Organizational Resilience
 
 1. Model Thesis
 2. Knowledge
-3. Understanding
+3. Organizational Memory
 4. Organizational Self-Understanding
 5. Organizational Intelligence
 6. Organizational Capabilities

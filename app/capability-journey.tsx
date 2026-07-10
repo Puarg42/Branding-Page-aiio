@@ -18,20 +18,20 @@ const fadeIn: Variants = {
 const capabilitySequence = [
   {
     meta: "Level 1",
-    title: "Understand itself",
-    copy: "Your organization gains a shared view of how work, context and decisions connect.",
+    title: "Build memory",
+    copy: "Your organization preserves knowledge, context and decisions as shared Organizational Memory.",
     tone: "graphite",
   },
   {
     meta: "Level 2",
-    title: "Develop intelligence",
-    copy: "That shared context becomes continuously interpretable and usable for better decisions.",
+    title: "Understand itself",
+    copy: "Organizational Memory becomes continuously interpretable as Organizational Self-Understanding.",
     tone: "cyan",
   },
   {
     meta: "Level 3",
     title: "Create capabilities",
-    copy: "Interpretation becomes repeatable behavior that people and AI can apply in daily work.",
+    copy: "Self-understanding becomes intelligence and repeatable behavior people and AI can apply.",
     tone: "purple",
   },
   {
@@ -66,11 +66,11 @@ export function CapabilityJourney() {
           whileInView="visible"
         >
           <EditorialEyebrow>The Journey</EditorialEyebrow>
-          <h2>From understanding itself to becoming resilient.</h2>
+          <h2>From Organizational Memory to resilience.</h2>
           <p>
             This is the customer transformation. aiio helps the organization
-            move from shared understanding to stronger capabilities and better
-            adaptation.
+            move from preserved memory to self-understanding, stronger
+            capabilities and better adaptation.
           </p>
         </motion.div>
 

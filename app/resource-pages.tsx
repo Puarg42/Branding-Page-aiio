@@ -1012,7 +1012,7 @@ const businessImpactScenarioDetails = {
 const businessImpactCapabilityPath = [
   {
     level: "collector",
-    title: "Organizational Understanding",
+    title: "Organizational Memory",
   },
   {
     level: "magnet",

@@ -522,6 +522,10 @@ It is not a document management system.
 
 It is the organizational capability to preserve, connect and reinterpret accumulated experience.
 
+Purpose: Organizational Memory gives organizational knowledge continuity so future interpretation can build on accumulated experience.
+
+Result: The organization no longer begins again whenever people, systems or projects change.
+
 Without Organizational Memory, every generation of employees begins again.
 
 Knowledge leaves with people.
@@ -654,6 +658,10 @@ Within the Organizational Intelligence Theory, Organizational Self-Understanding
 
 **Organizational Self-Understanding is the emergent capability of an organization to continuously make its own reality interpretable for future decisions and action.**
 
+Purpose: Organizational Self-Understanding makes the organization's own reality continuously interpretable.
+
+Result: Decisions and actions can rely on a persistent interpretive foundation rather than isolated information.
+
 This capability precedes Organizational Intelligence.
 
 Without Organizational Self-Understanding, intelligence can only operate on fragments.
@@ -729,6 +737,10 @@ Intelligence begins when Organizational Self-Understanding is continuously trans
 Within the Organizational Intelligence Theory, Organizational Intelligence is defined as:
 
 **The continuously evolving capability of an organization to interpret itself and transform Organizational Self-Understanding into coherent decisions, coordinated action and capability development.**
+
+Purpose: Organizational Intelligence transforms self-understanding into decision quality, coordinated action and capability development.
+
+Result: The organization can use interpretation to continuously develop its own capabilities.
 
 Organizational Intelligence therefore does not replace Organizational Self-Understanding.
 
@@ -877,6 +889,10 @@ Within the Organizational Intelligence Theory, Organizational Capabilities are d
 
 **The continuously evolving organizational abilities that emerge when Organizational Intelligence is consistently transformed into repeatable, coordinated action.**
 
+Purpose: Organizational Capabilities make intelligence reusable in daily work.
+
+Result: The organization develops repeatable abilities that can be applied, improved and transferred across future situations.
+
 Action alone does not create capabilities.
 
 Repeated, coherent and continuously improving action does.
@@ -975,6 +991,10 @@ Within the Organizational Intelligence Theory, Organizational Self-Empowerment i
 
 **Organizational Self-Empowerment is the capability of an organization to continuously develop, validate and evolve its own organizational capabilities.**
 
+Purpose: Organizational Self-Empowerment makes capability development continuous instead of episodic.
+
+Result: The organization increasingly creates the conditions required for its own future development.
+
 Organizations become self-empowering when capability development is no longer episodic.
 
 Learning becomes continuous.
@@ -1049,6 +1069,10 @@ Within the Organizational Intelligence Theory, Organizational Resilience is defi
 
 **The continuously evolving capability of an organization to preserve its ability to understand, decide and act under changing conditions.**
 
+Purpose: Organizational Resilience stabilizes self-empowerment under changing conditions.
+
+Result: The organization remains capable of understanding, deciding and acting when its environment changes.
+
 Resilience is not produced directly by software.
 
 It emerges from Organizational Self-Empowerment.
@@ -1091,6 +1115,10 @@ Knowledge
 
 ↓
 
+Organizational Memory
+
+↓
+
 Organizational Self-Understanding
 
 ↓
@@ -1100,6 +1128,10 @@ Organizational Intelligence
 ↓
 
 Organizational Capabilities
+
+↓
+
+Organizational Self-Empowerment
 
 ↓
 

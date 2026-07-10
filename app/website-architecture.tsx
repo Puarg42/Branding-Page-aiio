@@ -176,7 +176,7 @@ export function CapabilityTeaserGrid({
       key: "collector",
       label: (
         <>
-          Organizational Understanding
+          <TheoryReference>Organizational Memory</TheoryReference>
         </>
       ),
     },
