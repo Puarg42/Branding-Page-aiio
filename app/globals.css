@@ -16572,6 +16572,33 @@ p.editorial-eyebrow,
   transform: translateY(clamp(-88px, -5.4vw, -68px));
 }
 
+/* Complete RC1: Academy and Company use page-specific hero classes whose
+   original rules are more specific than the shared :where() standard above. */
+.academy-hero.editorial-hero,
+.company-executive-hero.editorial-hero {
+  padding: clamp(72px, 7vw, 112px) 0 clamp(88px, 8vw, 134px);
+}
+
+.academy-hero.editorial-hero .academy-shell,
+.company-executive-hero.editorial-hero .company-executive-shell {
+  transform: translateY(clamp(-88px, -5.4vw, -68px));
+}
+
+.academy-hero.editorial-hero .academy-hero-visual.brand-canon-figure,
+.company-executive-hero.editorial-hero .company-hero-visual.brand-canon-figure {
+  margin-top: 0;
+  margin-bottom: clamp(-212px, -11.5vw, -116px);
+}
+
+.academy-hero.editorial-hero .academy-hero-copy > h1 + p,
+.company-executive-hero.editorial-hero p:not(.editorial-eyebrow) {
+  margin-top: clamp(26px, 2.8vw, 42px);
+}
+
+.academy-hero.editorial-hero .academy-actions {
+  margin-top: clamp(28px, 4vw, 52px);
+}
+
 @media (max-width: 920px) {
   :where(
     .business-impact-hero .business-impact-shell,
@@ -16597,6 +16624,16 @@ p.editorial-eyebrow,
 
   .theory-book-hero-content {
     transform: translateY(-48px);
+  }
+
+  .academy-hero.editorial-hero .academy-shell,
+  .company-executive-hero.editorial-hero .company-executive-shell {
+    transform: translateY(-48px);
+  }
+
+  .academy-hero.editorial-hero .academy-hero-visual.brand-canon-figure,
+  .company-executive-hero.editorial-hero .company-hero-visual.brand-canon-figure {
+    margin-bottom: clamp(-116px, -13vw, -66px);
   }
 }
 
@@ -16635,5 +16672,20 @@ p.editorial-eyebrow,
 
   .theory-book-hero-content {
     transform: none;
+  }
+
+  .academy-hero.editorial-hero,
+  .company-executive-hero.editorial-hero {
+    padding: 66px 0 68px;
+  }
+
+  .academy-hero.editorial-hero .academy-shell,
+  .company-executive-hero.editorial-hero .company-executive-shell {
+    transform: translateY(-28px);
+  }
+
+  .academy-hero.editorial-hero .academy-hero-visual.brand-canon-figure,
+  .company-executive-hero.editorial-hero .company-hero-visual.brand-canon-figure {
+    margin-bottom: -54px;
   }
 }
