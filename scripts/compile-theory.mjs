@@ -33,6 +33,7 @@ function slugify(value) {
 function normalizeTheoryText(value) {
   return value
     .replace(/\r\n/g, "\n")
+    .replaceAll("\n->\n", `\n${arrowDown}\n`)
     .replaceAll("â†“", arrowDown)
     .replaceAll("â†º", arrowRight)
     .replaceAll("Ã¢â€ â€œ", arrowDown)
@@ -81,6 +82,10 @@ function shouldFlushParagraph(buffer, chunks, index) {
     return true;
   }
 
+  if (buffer.length === 1 && text.includes(" -> ")) {
+    return true;
+  }
+
   if (buffer.length >= 3 && text.length >= 220) {
     return true;
   }
@@ -107,15 +112,19 @@ function pushParagraph(blocks, buffer) {
 function getCanonicalTheoryChapterId(title, fallbackId) {
   const titleWithoutNumber = title.replace(/^\d+\.\s*/, "");
   const canonicalIds = {
-    "Reference Architecture for Organizational Intelligence": "reference-architecture-for-organizational-intelligence",
+    "Operationalization by aiio": "operationalization-by-aiio",
+    "Reference Architecture for Organizational Intelligence": "operationalization-by-aiio",
     "The Missing Capability": "2-the-missing-layer",
+    "The Missing Layer": "2-the-missing-layer",
+    "The Observation": "1-the-observation",
     "Organizational Capabilities": "organizational-capabilities",
     "Organizational Intelligence": "organizational-intelligence",
+    "Organizational Memory": "organizational-memory",
     "Organizational Resilience": "organizational-resilience",
     "Organizational Self-Empowering": "organizational-self-empowering",
     "Organizational Self-Empowerment": "organizational-self-empowering",
     "Organizational Self-Understanding": "organizational-self-understanding",
-    "Organizational Understanding": "organizational-understanding",
+    "Organizational Understanding": "organizational-self-understanding",
     "Self-Empowering Organization": "organizational-self-empowering",
     "Self-Empowering Organizations": "organizational-self-empowering",
   };

@@ -34,24 +34,24 @@ export const theoryChapterReferences = {
     title: "Prologue",
   },
   observation: {
-    id: "1-observation",
-    title: "Observation",
+    id: canonicalTheoryIds.observation,
+    title: "The Observation",
   },
   missingLayer: {
     id: canonicalTheoryIds.missingCapability,
-    title: "The Missing Capability",
+    title: "The Missing Layer",
   },
   organizationsCannotUnderstandThemselves: {
-    id: "3-organizations-cannot-understand-themselves",
-    title: "Organizations Cannot Understand Themselves",
+    id: canonicalTheoryIds.missingCapability,
+    title: "The Missing Layer",
   },
   organizationalSelfUnderstanding: {
     id: canonicalTheoryIds.organizationalSelfUnderstanding,
     title: "Organizational Self-Understanding",
   },
   organizationalUnderstanding: {
-    id: canonicalTheoryIds.organizationalUnderstanding,
-    title: "Organizational Understanding",
+    id: canonicalTheoryIds.organizationalSelfUnderstanding,
+    title: "Organizational Self-Understanding",
   },
   organizationalIntelligence: {
     id: canonicalTheoryIds.organizationalIntelligence,
@@ -70,40 +70,41 @@ export const theoryChapterReferences = {
     title: "Organizational Resilience",
   },
   organizationalMemory: {
-    id: "10-organizational-memory",
+    id: canonicalTheoryIds.organizationalMemory,
     title: "Organizational Memory",
   },
   emergence: {
-    id: "11-emergence",
-    title: "Emergence",
+    id: canonicalTheoryIds.organizationalSelfUnderstanding,
+    title: "Organizational Self-Understanding",
   },
   hypothesis: {
-    id: "12-the-organizational-intelligence-hypothesis",
-    title: "The Organizational Intelligence Hypothesis",
+    id: canonicalTheoryIds.organizationalIntelligence,
+    title: "Organizational Intelligence",
   },
   evolution: {
-    id: "13-the-evolution-of-organizational-management",
-    title: "The Evolution of Organizational Management",
+    id: canonicalTheoryIds.observation,
+    title: "The Observation",
   },
   whyNow: {
     id: canonicalTheoryIds.whyNow,
-    title: "Why Now?",
+    title: "The Observation",
   },
   consulting: {
-    id: "15-the-transformation-of-consulting",
-    title: "The Transformation of Consulting",
+    id: canonicalTheoryIds.referenceArchitecture,
+    title: "Operationalization by aiio",
   },
   referenceArchitecture: {
     id: canonicalTheoryIds.referenceArchitecture,
-    title: "Reference Architecture for Organizational Intelligence",
+    title: "Operationalization by aiio",
   },
 } satisfies Record<string, TheoryChapterReference>;
 
 export const theoryJournalEntries: TheoryJournalEntry[] = [
   {
     affectedChapters: [
+      theoryChapterReferences.observation,
       theoryChapterReferences.missingLayer,
-      theoryChapterReferences.organizationalUnderstanding,
+      theoryChapterReferences.organizationalMemory,
       theoryChapterReferences.organizationalSelfUnderstanding,
       theoryChapterReferences.organizationalIntelligence,
       theoryChapterReferences.organizationalCapabilities,
@@ -167,8 +168,8 @@ export const theoryJournalEntries: TheoryJournalEntry[] = [
       theoryChapterReferences.prologue,
       theoryChapterReferences.observation,
       theoryChapterReferences.missingLayer,
+      theoryChapterReferences.organizationalMemory,
       theoryChapterReferences.organizationalSelfUnderstanding,
-      theoryChapterReferences.organizationalUnderstanding,
       theoryChapterReferences.organizationalIntelligence,
       theoryChapterReferences.organizationalCapabilities,
       theoryChapterReferences.organizationalResilience,

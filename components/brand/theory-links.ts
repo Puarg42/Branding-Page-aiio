@@ -2,24 +2,28 @@ export const canonicalTheoryIds = {
   missingCapability: "2-the-missing-layer",
   organizationalCapabilities: "organizational-capabilities",
   organizationalIntelligence: "organizational-intelligence",
+  organizationalMemory: "organizational-memory",
   organizationalResilience: "organizational-resilience",
   organizationalSelfEmpowering: "organizational-self-empowering",
   organizationalSelfEmpowerment: "organizational-self-empowering",
   organizationalSelfUnderstanding: "organizational-self-understanding",
-  organizationalUnderstanding: "organizational-understanding",
-  referenceArchitecture: "reference-architecture-for-organizational-intelligence",
-  whyNow: "14-why-now",
+  organizationalUnderstanding: "organizational-self-understanding",
+  observation: "1-the-observation",
+  referenceArchitecture: "operationalization-by-aiio",
+  whyNow: "1-the-observation",
 } as const;
 
 export const canonicalTheoryLinks = {
   missingCapability: `/thinking/theory#${canonicalTheoryIds.missingCapability}`,
   organizationalCapabilities: `/thinking/theory#${canonicalTheoryIds.organizationalCapabilities}`,
   organizationalIntelligence: `/thinking/theory#${canonicalTheoryIds.organizationalIntelligence}`,
+  organizationalMemory: `/thinking/theory#${canonicalTheoryIds.organizationalMemory}`,
   organizationalResilience: `/thinking/theory#${canonicalTheoryIds.organizationalResilience}`,
   organizationalSelfEmpowering: `/thinking/theory#${canonicalTheoryIds.organizationalSelfEmpowering}`,
   organizationalSelfEmpowerment: `/thinking/theory#${canonicalTheoryIds.organizationalSelfEmpowerment}`,
   organizationalSelfUnderstanding: `/thinking/theory#${canonicalTheoryIds.organizationalSelfUnderstanding}`,
   organizationalUnderstanding: `/thinking/theory#${canonicalTheoryIds.organizationalUnderstanding}`,
+  observation: `/thinking/theory#${canonicalTheoryIds.observation}`,
   referenceArchitecture: `/thinking/theory#${canonicalTheoryIds.referenceArchitecture}`,
   whyNow: `/thinking/theory#${canonicalTheoryIds.whyNow}`,
 } as const;
@@ -41,15 +45,19 @@ const canonicalIdsByChapterTitle: Record<string, string> = {
   "Organizational Capabilities": canonicalTheoryIds.organizationalCapabilities,
   "Organizational Intelligence": canonicalTheoryIds.organizationalIntelligence,
   "Organizational Intelligence System": canonicalTheoryIds.referenceArchitecture,
+  "Organizational Memory": canonicalTheoryIds.organizationalMemory,
   "Organizational Resilience": canonicalTheoryIds.organizationalResilience,
   "Organizational Self-Empowering": canonicalTheoryIds.organizationalSelfEmpowering,
   "Organizational Self-Empowerment": canonicalTheoryIds.organizationalSelfEmpowerment,
   "Organizational Self-Understanding": canonicalTheoryIds.organizationalSelfUnderstanding,
   "Organizational Understanding": canonicalTheoryIds.organizationalUnderstanding,
+  "Operationalization by aiio": canonicalTheoryIds.referenceArchitecture,
   "Reference Architecture for Organizational Intelligence": canonicalTheoryIds.referenceArchitecture,
   "Self-Empowering Organization": canonicalTheoryIds.organizationalSelfEmpowering,
   "Self-Empowering Organizations": canonicalTheoryIds.organizationalSelfEmpowering,
   "The Missing Capability": canonicalTheoryIds.missingCapability,
+  "The Missing Layer": canonicalTheoryIds.missingCapability,
+  "The Observation": canonicalTheoryIds.observation,
   "Why Now?": canonicalTheoryIds.whyNow,
 };
 
@@ -76,10 +84,15 @@ export function getCanonicalTheoryLinkForLabel(label: string) {
 
   if (
     normalized === "organizational intelligence system" ||
+    normalized === "operationalization by aiio" ||
     normalized === "reference architecture for organizational intelligence" ||
     normalized === "platform"
   ) {
     return canonicalTheoryLinks.referenceArchitecture;
+  }
+
+  if (normalized === "organizational memory") {
+    return canonicalTheoryLinks.organizationalMemory;
   }
 
   if (normalized === "organizational intelligence") {

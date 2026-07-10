@@ -84,10 +84,81 @@ export const theoryChapters = [
       {
         "text": "For the first time, organizations are technically capable of connecting fragmented organizational knowledge into a continuously evolving representation of themselves. This marks the transition from documenting organizations to understanding organizations. It is this transition that defines the beginning of Organizational Intelligence.",
         "type": "paragraph"
+      },
+      {
+        "text": "Management has always evolved by expanding the capabilities of organizations. Every major discipline emerged because organizations reached the limits of the previous one. Scientific Management optimized manual work. Quality Management optimized consistency.",
+        "type": "paragraph"
+      },
+      {
+        "text": "Business Process Management optimized organizational activities. Knowledge Management optimized access to organizational knowledge. Enterprise Architecture optimized technological complexity. Artificial Intelligence optimizes reasoning.",
+        "type": "paragraph"
+      },
+      {
+        "text": "Each discipline represents an important evolutionary step. None of them should be considered obsolete. Each remains necessary. Yet every discipline shares one common characteristic. Each optimizes a specific organizational capability.",
+        "type": "paragraph"
+      },
+      {
+        "text": "None of them continuously develops organizational understanding itself. Business Process Management documents activities. Knowledge Management stores knowledge. Enterprise Architecture models systems. Artificial Intelligence reasons about information.",
+        "type": "paragraph"
+      },
+      {
+        "text": "Organizational Intelligence connects all of them. Its objective is not to replace existing disciplines. Its objective is to integrate their contributions into a continuously evolving understanding of the organization. Organizational Intelligence therefore represents an integrative discipline.",
+        "type": "paragraph"
+      },
+      {
+        "text": "It explains how existing organizational capabilities collectively contribute to organizational understanding, decision quality and continuous evolution. The emergence of Organizational Intelligence should therefore not be interpreted as the end of previous management disciplines. It represents their logical continuation.",
+        "type": "paragraph"
+      },
+      {
+        "lines": [
+          "Conceptual Evolution",
+          "Scientific Management",
+          "↓",
+          "Quality Management",
+          "↓",
+          "Business Process Management",
+          "↓",
+          "Knowledge Management",
+          "↓",
+          "Enterprise Architecture",
+          "↓",
+          "Artificial Intelligence",
+          "↓",
+          "Organizational Intelligence"
+        ],
+        "type": "model"
+      },
+      {
+        "text": "Every major management discipline emerged when technological progress made a previously impossible capability achievable. Scientific Management required industrialization. Business Process Management required digital modeling.",
+        "type": "paragraph"
+      },
+      {
+        "text": "Knowledge Management required digital information. Artificial Intelligence required computational reasoning. Organizational Intelligence requires something fundamentally different. Organizations must become understandable.",
+        "type": "paragraph"
+      },
+      {
+        "text": "For most of history this was impossible. Organizational knowledge remained fragmented. Documents existed in isolation. Processes were disconnected from policies. Systems were disconnected from human expertise. Knowledge disappeared continuously.",
+        "type": "paragraph"
+      },
+      {
+        "text": "The technological foundations required to integrate these perspectives simply did not exist. Only recently have four developments converged. Large Language Models. Vector databases. Knowledge Graphs. Multimodal information retrieval.",
+        "type": "paragraph"
+      },
+      {
+        "text": "Individually, each technology solves only part of the problem. Together, they make something fundamentally new possible. Organizations can, for the first time, continuously construct an integrated understanding of themselves.",
+        "type": "paragraph"
+      },
+      {
+        "text": "This convergence represents the true beginning of Organizational Intelligence. Artificial Intelligence is therefore not the destination. It is the technological enabler that makes Organizational Intelligence possible. Just as electricity enabled industrial production without becoming the purpose of industrialization, Artificial Intelligence enables Organizational Intelligence without becoming its purpose.",
+        "type": "paragraph"
+      },
+      {
+        "text": "The defining innovation of this era is therefore not Artificial Intelligence itself. It is the emergence of organizations that can continuously understand and improve themselves.",
+        "type": "paragraph"
       }
     ],
-    "id": "1-observation",
-    "title": "Observation"
+    "id": "1-the-observation",
+    "title": "The Observation"
   },
   {
     "blocks": [
@@ -142,13 +213,7 @@ export const theoryChapters = [
       {
         "text": "Understanding therefore becomes the enabling capability from which Organizational Intelligence emerges. The emergence of this missing capability represents more than another technological innovation. It represents the beginning of a new stage in the evolution of organizations.",
         "type": "paragraph"
-      }
-    ],
-    "id": "2-the-missing-layer",
-    "title": "The Missing Capability"
-  },
-  {
-    "blocks": [
+      },
       {
         "text": "People can understand an organization. Employees understand their roles. Leaders understand strategies. Experts understand processes. Consultants understand patterns. Yet none of these forms of understanding is identical with an organization understanding itself.",
         "type": "paragraph"
@@ -190,8 +255,59 @@ export const theoryChapters = [
         "type": "paragraph"
       }
     ],
-    "id": "3-organizations-cannot-understand-themselves",
-    "title": "Organizations Cannot Understand Themselves"
+    "id": "2-the-missing-layer",
+    "title": "The Missing Layer"
+  },
+  {
+    "blocks": [
+      {
+        "text": "Human beings learn because they possess memory. Organizations learn differently. For centuries, organizations attempted to preserve experience through documentation. Processes. Policies. Manuals. Standards. Meeting minutes.",
+        "type": "paragraph"
+      },
+      {
+        "text": "Knowledge bases. These artifacts preserve information. They do not constitute organizational memory. Documentation records the past. Memory influences future decisions. Within the Organizational Intelligence Theory, Organizational Memory is defined as:",
+        "type": "paragraph"
+      },
+      {
+        "text": "The continuously evolving representation of organizational experience that remains available for future understanding and decision-making.",
+        "type": "quote"
+      },
+      {
+        "text": "Organizational Memory is not a repository. It is not an archive. It is not a document management system. It is the capability of an organization to preserve, connect and continuously reinterpret its accumulated experience.",
+        "type": "paragraph"
+      },
+      {
+        "text": "Without Organizational Memory, every generation of employees begins again. Knowledge leaves with people. Projects repeat previous mistakes. Organizations repeatedly solve identical problems. Organizational Memory changes this dynamic.",
+        "type": "paragraph"
+      },
+      {
+        "text": "It is a prerequisite for cumulative Organizational Self-Understanding because it preserves the experience, decisions and context from which future interpretation can evolve. Experience becomes continuously reusable. Learning becomes cumulative.",
+        "type": "paragraph"
+      },
+      {
+        "text": "Understanding becomes sustainable. Organizational Intelligence therefore requires Organizational Memory as its foundation. Only organizations capable of preserving their experience can continuously improve the quality of future decisions.",
+        "type": "paragraph"
+      },
+      {
+        "lines": [
+          "Conceptual Relationship",
+          "Experience",
+          "↓",
+          "Organizational Memory",
+          "↓",
+          "Organizational Understanding",
+          "↓",
+          "Decision Quality",
+          "↓",
+          "Action",
+          "↓",
+          "New Experience"
+        ],
+        "type": "model"
+      }
+    ],
+    "id": "organizational-memory",
+    "title": "Organizational Memory"
   },
   {
     "blocks": [
@@ -232,13 +348,7 @@ export const theoryChapters = [
       {
         "text": "Organizational Understanding is not another repository. It is not another management discipline. It is the capability that enables organizations to continuously interpret themselves. Only once this capability exists can Organizational Intelligence emerge.",
         "type": "paragraph"
-      }
-    ],
-    "id": "organizational-understanding",
-    "title": "Organizational Understanding"
-  },
-  {
-    "blocks": [
+      },
       {
         "text": "Organizational Self-Understanding is the primary theoretical innovation of the Organizational Intelligence Theory. It names the capability that has been missing from organizational management: the ability of the organization itself to continuously interpret its own structures, decisions, processes, relationships, responsibilities, capabilities and operational reality.",
         "type": "paragraph"
@@ -256,11 +366,46 @@ export const theoryChapters = [
         "type": "paragraph"
       },
       {
-        "text": "Organizational Self-Understanding therefore does not mean that people simply know more about the organization. It means the organization develops a continuously evolving capacity to make its own reality interpretable. Conceptual Relationship",
+        "text": "Organizational Self-Understanding therefore does not mean that people simply know more about the organization. It means the organization develops a continuously evolving capacity to make its own reality interpretable.",
         "type": "paragraph"
       },
       {
-        "text": "Organizational Reality -> Organizational Memory -> Organizational Understanding -> Organizational Self-Understanding -> Organizational Intelligence",
+        "lines": [
+          "Conceptual Relationship",
+          "Organizational Reality",
+          "↓",
+          "Organizational Memory",
+          "↓",
+          "Organizational Understanding",
+          "↓",
+          "Organizational Self-Understanding",
+          "↓",
+          "Organizational Intelligence"
+        ],
+        "type": "model"
+      },
+      {
+        "text": "Organizations cannot understand themselves through isolated information. Understanding emerges. It is not explicitly created. It is not stored. It is not written. It continuously develops through the interaction of organizational experience, memory, knowledge, context and relationships.",
+        "type": "paragraph"
+      },
+      {
+        "text": "Within the Organizational Intelligence Theory, Organizational Self-Understanding is therefore considered an emergent organizational capability. Emergence describes properties that cannot be explained by analyzing individual components in isolation. They arise only through the interaction of the complete system.",
+        "type": "paragraph"
+      },
+      {
+        "text": "Organizational Self-Understanding follows the same principle. No individual employee possesses complete organizational understanding. No individual document contains it. No isolated process describes it. Only the continuously connected representation of the organization allows understanding to emerge.",
+        "type": "paragraph"
+      },
+      {
+        "text": "This distinction fundamentally separates Organizational Intelligence from traditional Knowledge Management. Knowledge can be documented. Understanding cannot. It continuously emerges. Every new experience changes organizational memory.",
+        "type": "paragraph"
+      },
+      {
+        "text": "Every new relationship changes context. Every organizational decision changes future understanding. Organizational Understanding therefore remains permanently incomplete. It continuously evolves together with the organization itself.",
+        "type": "paragraph"
+      },
+      {
+        "text": "Organizational Intelligence should therefore not be understood as a collection of organizational knowledge. It should be understood as the capability of an organization to continuously generate organizational understanding from its own evolving representation.",
         "type": "paragraph"
       }
     ],
@@ -319,6 +464,48 @@ export const theoryChapters = [
           "Organizational Resilience"
         ],
         "type": "model"
+      },
+      {
+        "text": "Every generation of management has attempted to improve organizational performance. Some focused on specialization. Some focused on standardization. Some focused on quality. Others focused on knowledge. Artificial Intelligence now promises to improve decision-making.",
+        "type": "paragraph"
+      },
+      {
+        "text": "Despite these advances, one fundamental assumption has remained largely unquestioned. Organizations do not become better simply because they possess more information. They become better because they continuously improve the quality of their collective decisions.",
+        "type": "paragraph"
+      },
+      {
+        "text": "Decision quality therefore represents the true indicator of organizational development. This leads to the central hypothesis of Organizational Intelligence.",
+        "type": "paragraph"
+      },
+      {
+        "text": "The long-term performance of an organization is determined by the quality of the decisions it is capable of making under continuously changing conditions.",
+        "type": "quote"
+      },
+      {
+        "text": "Decision quality itself does not emerge randomly.",
+        "type": "paragraph"
+      },
+      {
+        "lines": [
+          "It emerges from Organizational Understanding",
+          "↓",
+          "Decision Quality",
+          "↓",
+          "Organizational Capabilities",
+          "↓",
+          "Organizational Self-Empowerment",
+          "↓",
+          "Organizational Resilience"
+        ],
+        "type": "model"
+      },
+      {
+        "text": "This hypothesis fundamentally changes the purpose of organizational software. Its objective is no longer the management of information. Its objective becomes the continuous improvement of organizational decision quality.",
+        "type": "paragraph"
+      },
+      {
+        "text": "If this hypothesis proves correct, Organizational Intelligence represents not merely another software category. It represents a new management discipline.",
+        "type": "paragraph"
       }
     ],
     "id": "organizational-intelligence",
@@ -503,218 +690,6 @@ export const theoryChapters = [
   {
     "blocks": [
       {
-        "text": "Human beings learn because they possess memory. Organizations learn differently. For centuries, organizations attempted to preserve experience through documentation. Processes. Policies. Manuals. Standards. Meeting minutes.",
-        "type": "paragraph"
-      },
-      {
-        "text": "Knowledge bases. These artifacts preserve information. They do not constitute organizational memory. Documentation records the past. Memory influences future decisions. Within the Organizational Intelligence Theory, Organizational Memory is defined as:",
-        "type": "paragraph"
-      },
-      {
-        "text": "The continuously evolving representation of organizational experience that remains available for future understanding and decision-making.",
-        "type": "quote"
-      },
-      {
-        "text": "Organizational Memory is not a repository. It is not an archive. It is not a document management system. It is the capability of an organization to preserve, connect and continuously reinterpret its accumulated experience.",
-        "type": "paragraph"
-      },
-      {
-        "text": "Without Organizational Memory, every generation of employees begins again. Knowledge leaves with people. Projects repeat previous mistakes. Organizations repeatedly solve identical problems. Organizational Memory changes this dynamic.",
-        "type": "paragraph"
-      },
-      {
-        "text": "It is a prerequisite for cumulative Organizational Self-Understanding because it preserves the experience, decisions and context from which future interpretation can evolve. Experience becomes continuously reusable. Learning becomes cumulative.",
-        "type": "paragraph"
-      },
-      {
-        "text": "Understanding becomes sustainable. Organizational Intelligence therefore requires Organizational Memory as its foundation. Only organizations capable of preserving their experience can continuously improve the quality of future decisions.",
-        "type": "paragraph"
-      },
-      {
-        "lines": [
-          "Conceptual Relationship",
-          "Experience",
-          "↓",
-          "Organizational Memory",
-          "↓",
-          "Organizational Understanding",
-          "↓",
-          "Decision Quality",
-          "↓",
-          "Action",
-          "↓",
-          "New Experience"
-        ],
-        "type": "model"
-      }
-    ],
-    "id": "10-organizational-memory",
-    "title": "Organizational Memory"
-  },
-  {
-    "blocks": [
-      {
-        "text": "Organizations cannot understand themselves through isolated information. Understanding emerges. It is not explicitly created. It is not stored. It is not written. It continuously develops through the interaction of organizational experience, memory, knowledge, context and relationships.",
-        "type": "paragraph"
-      },
-      {
-        "text": "Within the Organizational Intelligence Theory, Organizational Self-Understanding is therefore considered an emergent organizational capability. Emergence describes properties that cannot be explained by analyzing individual components in isolation. They arise only through the interaction of the complete system.",
-        "type": "paragraph"
-      },
-      {
-        "text": "Organizational Self-Understanding follows the same principle. No individual employee possesses complete organizational understanding. No individual document contains it. No isolated process describes it. Only the continuously connected representation of the organization allows understanding to emerge.",
-        "type": "paragraph"
-      },
-      {
-        "text": "This distinction fundamentally separates Organizational Intelligence from traditional Knowledge Management. Knowledge can be documented. Understanding cannot. It continuously emerges. Every new experience changes organizational memory.",
-        "type": "paragraph"
-      },
-      {
-        "text": "Every new relationship changes context. Every organizational decision changes future understanding. Organizational Understanding therefore remains permanently incomplete. It continuously evolves together with the organization itself.",
-        "type": "paragraph"
-      },
-      {
-        "text": "Organizational Intelligence should therefore not be understood as a collection of organizational knowledge. It should be understood as the capability of an organization to continuously generate organizational understanding from its own evolving representation.",
-        "type": "paragraph"
-      }
-    ],
-    "id": "11-emergence",
-    "title": "Emergence"
-  },
-  {
-    "blocks": [
-      {
-        "text": "Every generation of management has attempted to improve organizational performance. Some focused on specialization. Some focused on standardization. Some focused on quality. Others focused on knowledge. Artificial Intelligence now promises to improve decision-making.",
-        "type": "paragraph"
-      },
-      {
-        "text": "Despite these advances, one fundamental assumption has remained largely unquestioned. Organizations do not become better simply because they possess more information. They become better because they continuously improve the quality of their collective decisions.",
-        "type": "paragraph"
-      },
-      {
-        "text": "Decision quality therefore represents the true indicator of organizational development. This leads to the central hypothesis of Organizational Intelligence.",
-        "type": "paragraph"
-      },
-      {
-        "text": "The long-term performance of an organization is determined by the quality of the decisions it is capable of making under continuously changing conditions.",
-        "type": "quote"
-      },
-      {
-        "text": "Decision quality itself does not emerge randomly.",
-        "type": "paragraph"
-      },
-      {
-        "lines": [
-          "It emerges from Organizational Understanding",
-          "↓",
-          "Decision Quality",
-          "↓",
-          "Organizational Capabilities",
-          "↓",
-          "Organizational Self-Empowerment",
-          "↓",
-          "Organizational Resilience"
-        ],
-        "type": "model"
-      },
-      {
-        "text": "This hypothesis fundamentally changes the purpose of organizational software. Its objective is no longer the management of information. Its objective becomes the continuous improvement of organizational decision quality.",
-        "type": "paragraph"
-      },
-      {
-        "text": "If this hypothesis proves correct, Organizational Intelligence represents not merely another software category. It represents a new management discipline.",
-        "type": "paragraph"
-      }
-    ],
-    "id": "12-the-organizational-intelligence-hypothesis",
-    "title": "The Organizational Intelligence Hypothesis"
-  },
-  {
-    "blocks": [
-      {
-        "text": "Management has always evolved by expanding the capabilities of organizations. Every major discipline emerged because organizations reached the limits of the previous one. Scientific Management optimized manual work. Quality Management optimized consistency.",
-        "type": "paragraph"
-      },
-      {
-        "text": "Business Process Management optimized organizational activities. Knowledge Management optimized access to organizational knowledge. Enterprise Architecture optimized technological complexity. Artificial Intelligence optimizes reasoning.",
-        "type": "paragraph"
-      },
-      {
-        "text": "Each discipline represents an important evolutionary step. None of them should be considered obsolete. Each remains necessary. Yet every discipline shares one common characteristic. Each optimizes a specific organizational capability.",
-        "type": "paragraph"
-      },
-      {
-        "text": "None of them continuously develops organizational understanding itself. Business Process Management documents activities. Knowledge Management stores knowledge. Enterprise Architecture models systems. Artificial Intelligence reasons about information.",
-        "type": "paragraph"
-      },
-      {
-        "text": "Organizational Intelligence connects all of them. Its objective is not to replace existing disciplines. Its objective is to integrate their contributions into a continuously evolving understanding of the organization. Organizational Intelligence therefore represents an integrative discipline.",
-        "type": "paragraph"
-      },
-      {
-        "text": "It explains how existing organizational capabilities collectively contribute to organizational understanding, decision quality and continuous evolution. The emergence of Organizational Intelligence should therefore not be interpreted as the end of previous management disciplines. It represents their logical continuation.",
-        "type": "paragraph"
-      },
-      {
-        "lines": [
-          "Conceptual Evolution",
-          "Scientific Management",
-          "↓",
-          "Quality Management",
-          "↓",
-          "Business Process Management",
-          "↓",
-          "Knowledge Management",
-          "↓",
-          "Enterprise Architecture",
-          "↓",
-          "Artificial Intelligence",
-          "↓",
-          "Organizational Intelligence"
-        ],
-        "type": "model"
-      }
-    ],
-    "id": "13-the-evolution-of-organizational-management",
-    "title": "The Evolution of Organizational Management"
-  },
-  {
-    "blocks": [
-      {
-        "text": "Every major management discipline emerged when technological progress made a previously impossible capability achievable. Scientific Management required industrialization. Business Process Management required digital modeling.",
-        "type": "paragraph"
-      },
-      {
-        "text": "Knowledge Management required digital information. Artificial Intelligence required computational reasoning. Organizational Intelligence requires something fundamentally different. Organizations must become understandable.",
-        "type": "paragraph"
-      },
-      {
-        "text": "For most of history this was impossible. Organizational knowledge remained fragmented. Documents existed in isolation. Processes were disconnected from policies. Systems were disconnected from human expertise. Knowledge disappeared continuously.",
-        "type": "paragraph"
-      },
-      {
-        "text": "The technological foundations required to integrate these perspectives simply did not exist. Only recently have four developments converged. Large Language Models. Vector databases. Knowledge Graphs. Multimodal information retrieval.",
-        "type": "paragraph"
-      },
-      {
-        "text": "Individually, each technology solves only part of the problem. Together, they make something fundamentally new possible. Organizations can, for the first time, continuously construct an integrated understanding of themselves.",
-        "type": "paragraph"
-      },
-      {
-        "text": "This convergence represents the true beginning of Organizational Intelligence. Artificial Intelligence is therefore not the destination. It is the technological enabler that makes Organizational Intelligence possible. Just as electricity enabled industrial production without becoming the purpose of industrialization, Artificial Intelligence enables Organizational Intelligence without becoming its purpose.",
-        "type": "paragraph"
-      },
-      {
-        "text": "The defining innovation of this era is therefore not Artificial Intelligence itself. It is the emergence of organizations that can continuously understand and improve themselves.",
-        "type": "paragraph"
-      }
-    ],
-    "id": "14-why-now",
-    "title": "Why Now?"
-  },
-  {
-    "blocks": [
-      {
         "text": "Organizations have always relied on external expertise to compensate for missing organizational understanding. Consultants analyzed processes. Documented structures. Developed strategies. Designed target operating models.",
         "type": "paragraph"
       },
@@ -735,21 +710,15 @@ export const theoryChapters = [
         "type": "paragraph"
       },
       {
-        "text": "Organizations remain responsible for their own development. Consultants increasingly become architects of organizational capabilities rather than providers of organizational knowledge.",
-        "type": "paragraph"
-      }
-    ],
-    "id": "15-the-transformation-of-consulting",
-    "title": "The Transformation of Consulting"
-  },
-  {
-    "blocks": [
-      {
-        "text": "The preceding chapters describe the management theory of Organizational Self-Understanding and Organizational Intelligence. This chapter describes one reference architecture for implementing Organizational Intelligence. Product names belong here because this chapter connects the theory to the aiio implementation.",
+        "text": "Organizations remain responsible for their own development. Consultants increasingly become architects of organizational capabilities rather than providers of organizational knowledge. The preceding chapters describe the management theory of Organizational Self-Understanding and Organizational Intelligence.",
         "type": "paragraph"
       },
       {
-        "text": "Organizational Intelligence does not emerge suddenly. It develops progressively. Every organization evolves through a sequence of capabilities. Each capability enables the next. The reference architecture proposed in this document describes the canonical organizational evolution of Version 0.14.",
+        "text": "This chapter describes one reference architecture for implementing Organizational Intelligence. Product names belong here because this chapter connects the theory to the aiio implementation. Organizational Intelligence does not emerge suddenly.",
+        "type": "paragraph"
+      },
+      {
+        "text": "It develops progressively. Every organization evolves through a sequence of capabilities. Each capability enables the next. The reference architecture proposed in this document describes the canonical organizational evolution of Version 0.14.",
         "type": "paragraph"
       },
       {
@@ -815,7 +784,7 @@ export const theoryChapters = [
         "type": "paragraph"
       }
     ],
-    "id": "reference-architecture-for-organizational-intelligence",
-    "title": "Reference Architecture for Organizational Intelligence"
+    "id": "operationalization-by-aiio",
+    "title": "Operationalization by aiio"
   }
 ] as const;
