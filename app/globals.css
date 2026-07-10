@@ -6048,7 +6048,7 @@ h1 {
 }
 
 #platform-hero.website-hero > .website-page-shell {
-  transform: translateY(clamp(-60px, -4vw, -44px));
+  transform: translateY(clamp(-88px, -5.4vw, -68px));
 }
 
 .website-hero h1 {
@@ -13457,7 +13457,7 @@ section[id],
 }
 
 .website-page:has(.website-platform-system-section) .website-hero-visual {
-  margin-bottom: clamp(-180px, -10vw, -96px);
+  margin-bottom: clamp(-212px, -11.5vw, -116px);
   position: relative;
   z-index: 1;
 }
