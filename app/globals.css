@@ -12174,6 +12174,7 @@ section[id],
 .website-platform-outcome-ladder.editorial-progression li > strong {
   align-self: start;
   color: rgb(255 255 255 / 92%);
+  font-size: clamp(1.06rem, 1.34vw, 1.38rem);
 }
 
 .website-platform-outcome-ladder.editorial-progression li > p {
