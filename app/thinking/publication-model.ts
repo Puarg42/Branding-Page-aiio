@@ -15,10 +15,10 @@ export type TheoryJournalEntry = {
 
 export const theoryPublication = {
   edition: "Living Publication",
-  lastUpdated: "July 8, 2026",
+  lastUpdated: "July 10, 2026",
   readingTime: "Approx. 40 min reading",
   title: "Theory",
-  version: "Version 0.14",
+  version: "Version 0.15",
 } as const;
 
 export const theoryEditorialRules = [
@@ -100,6 +100,25 @@ export const theoryChapterReferences = {
 } satisfies Record<string, TheoryChapterReference>;
 
 export const theoryJournalEntries: TheoryJournalEntry[] = [
+  {
+    affectedChapters: [
+      theoryChapterReferences.observation,
+      theoryChapterReferences.missingLayer,
+      theoryChapterReferences.organizationalMemory,
+      theoryChapterReferences.organizationalSelfUnderstanding,
+      theoryChapterReferences.organizationalIntelligence,
+      theoryChapterReferences.organizationalCapabilities,
+      theoryChapterReferences.organizationalSelfEmpowering,
+      theoryChapterReferences.organizationalResilience,
+      theoryChapterReferences.referenceArchitecture,
+    ],
+    coreThesis:
+      "Theory Version 0.15 prepares Organizational Intelligence as a scientific management publication.",
+    date: "July 10, 2026",
+    version: "0.15",
+    whyItMatters:
+      "This revision standardizes chapter rhythm, sharpens reference definitions, strengthens the boundaries between knowledge, memory, self-understanding, intelligence, capabilities, self-empowerment and resilience, and clarifies that Artificial Intelligence may contribute to Organizational Intelligence without constituting it.",
+  },
   {
     affectedChapters: [
       theoryChapterReferences.observation,

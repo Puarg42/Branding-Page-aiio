@@ -98,6 +98,8 @@ Everything that follows is built upon that assumption.
 
 # 1. The Observation
 
+Purpose: This chapter establishes the empirical problem that makes Organizational Intelligence necessary.
+
 Organizations are knowledge systems.
 
 Every organization continuously creates, stores and exchanges knowledge.
@@ -326,6 +328,10 @@ The defining innovation of this era is therefore not Artificial Intelligence its
 
 It is the emergence of organizations that can continuously understand and improve themselves.
 
+Key insight: Artificial Intelligence makes new forms of interpretation possible, but the management shift is the emergence of organizations that can use interpretation to develop themselves.
+
+Transition: The next chapter identifies the missing layer between accumulated knowledge and organizational intelligence.
+
 # 2. The Missing Layer
 
 Every major discipline of organizational management has improved one part of the organization.
@@ -348,9 +354,11 @@ None created a continuous capability through which the organization itself could
 
 That is the missing layer.
 
+Definition: The missing layer is the organizational capability to continuously interpret organizational reality as a connected system.
+
 The distinction begins with knowledge.
 
-Knowledge consists of facts, records, documents, decisions, models and experience.
+Definition: Knowledge consists of facts, records, documents, decisions, models and experience.
 
 Knowledge describes what is known.
 
@@ -478,6 +486,8 @@ The decisive transition is therefore not from human work to machine intelligence
 
 It is from externally interpreted organizations to organizations capable of continuously developing their own self-understanding.
 
+Key insight: The missing layer is not a technology gap alone; it is a management capability gap.
+
 The next chapter explains the prerequisite for this transition.
 
 Before an organization can understand itself, it must be able to remember.
@@ -512,7 +522,7 @@ Memory makes experience available for future interpretation.
 
 Within the Organizational Intelligence Theory, Organizational Memory is defined as:
 
-**The continuously evolving representation of organizational experience that preserves knowledge, context, decisions and relationships for future interpretation.**
+**Organizational Memory is the continuously preserved and contextualized organizational representation that keeps knowledge, experience, decisions and relationships available for future interpretation and enables Organizational Self-Understanding.**
 
 Organizational Memory is not a repository.
 
@@ -557,6 +567,10 @@ Learning becomes cumulative.
 Interpretation becomes sustainable.
 
 Only organizations capable of preserving their experience can continuously improve the quality of future decisions.
+
+Key insight: Organizational Memory is not storage; it is continuity for interpretation.
+
+Transition: Memory makes experience available. Self-understanding emerges when that preserved experience becomes continuously interpretable.
 
 --------------------------------------------------
 
@@ -720,6 +734,8 @@ Once self-understanding exists, the organization can move beyond interpretation.
 
 It can begin to use interpretation to improve decisions, actions and capabilities.
 
+Key insight: Organizational Self-Understanding is not stored knowledge; it is the emergent interpretability of the organization to itself.
+
 That transition is Organizational Intelligence.
 
 # 5. Organizational Intelligence
@@ -774,13 +790,17 @@ Nor is it another management discipline.
 
 It is an organizational capability.
 
-Artificial Intelligence may accelerate this capability.
+Discussion: Artificial Intelligence may contribute to this capability.
 
-It cannot substitute it.
+It may accelerate interpretation, reasoning and synthesis.
+
+It does not constitute Organizational Intelligence by itself.
 
 The objective is not intelligent software.
 
 The objective is organizations that use intelligence to continuously develop their own capabilities.
+
+Key insight: Artificial Intelligence can strengthen Organizational Intelligence, but Organizational Intelligence remains an organizational capability rather than a property of software.
 
 --------------------------------------------------
 
@@ -867,6 +887,8 @@ If this hypothesis proves correct, Organizational Intelligence represents not me
 
 It represents a new management discipline.
 
+Transition: Intelligence becomes observable when it is transformed into repeatable organizational abilities.
+
 # 6. Organizational Capabilities
 
 Organizational Intelligence cannot be observed directly.
@@ -892,6 +914,10 @@ Within the Organizational Intelligence Theory, Organizational Capabilities are d
 Purpose: Organizational Capabilities make intelligence reusable in daily work.
 
 Result: The organization develops repeatable abilities that can be applied, improved and transferred across future situations.
+
+Discussion: Organizational Capabilities are not software functions.
+
+They become visible through organizational behavior, decision quality, execution and continuous improvement.
 
 Action alone does not create capabilities.
 
@@ -936,6 +962,10 @@ When Organizational Intelligence is transformed into repeatable action, the orga
 When those capabilities continuously improve each other, the organization develops Organizational Self-Empowerment.
 
 When Organizational Self-Empowerment remains effective under changing conditions, the business realizes Organizational Resilience.
+
+Key insight: Capabilities are the point at which intelligence becomes observable as repeatable organizational behavior.
+
+Transition: When capabilities begin to improve the organization's ability to develop further capabilities, the organization becomes self-empowering.
 
 --------------------------------------------------
 
@@ -1012,6 +1042,10 @@ Resilience emerges when Organizational Self-Empowerment remains effective under 
 The defining characteristic of Organizational Self-Empowerment is therefore not autonomy.
 
 It is the ability to continuously develop the capabilities required for the organization's own evolution.
+
+Key insight: Organizational Self-Empowerment is the self-reinforcing maturity of capability development.
+
+Transition: Self-empowerment becomes strategically valuable when it remains effective under changing conditions.
 
 --------------------------------------------------
 
@@ -1107,6 +1141,10 @@ Organizations do not become resilient because they possess more knowledge.
 
 They become resilient because Organizational Self-Empowerment continuously develops, validates and improves their capabilities.
 
+Key insight: Organizational Resilience is not a static state; it is the stabilization of self-empowerment under continuous change.
+
+Transition: The theory is independent of aiio. The final chapter describes one reference implementation.
+
 --------------------------------------------------
 
 Conceptual Progression
@@ -1138,6 +1176,10 @@ Organizational Self-Empowerment
 Organizational Resilience
 
 # 9. Operationalization by aiio
+
+Definition: Operationalization describes how the theory can be implemented without allowing product architecture to define the theory.
+
+Purpose: This chapter separates the general management theory from aiio as one reference implementation.
 
 Organizations have always relied on external expertise to compensate for missing organizational understanding.
 

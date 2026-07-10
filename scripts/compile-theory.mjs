@@ -71,11 +71,23 @@ function isStrongStatement(value) {
   return value.startsWith("**") && value.endsWith("**");
 }
 
+function isStructuredTheoryParagraph(value) {
+  return /^(Definition|Purpose|Discussion|Result|Key insight|Transition):/i.test(value);
+}
+
 function shouldFlushParagraph(buffer, chunks, index) {
   const text = buffer.join(" ");
   const next = chunks[index + 1];
 
+  if (buffer.length === 1 && isStructuredTheoryParagraph(text)) {
+    return true;
+  }
+
   if (!next) {
+    return true;
+  }
+
+  if (isStructuredTheoryParagraph(next)) {
     return true;
   }
 

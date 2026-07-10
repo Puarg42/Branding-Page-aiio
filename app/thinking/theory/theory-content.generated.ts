@@ -50,6 +50,10 @@ export const theoryChapters = [
   {
     "blocks": [
       {
+        "text": "Purpose: This chapter establishes the empirical problem that makes Organizational Intelligence necessary.",
+        "type": "paragraph"
+      },
+      {
         "text": "Organizations are knowledge systems. Every organization continuously creates, stores and exchanges knowledge. It exists in conversations. In documents. In processes. In software systems. In regulations. In emails. In meetings.",
         "type": "paragraph"
       },
@@ -155,6 +159,14 @@ export const theoryChapters = [
       {
         "text": "The defining innovation of this era is therefore not Artificial Intelligence itself. It is the emergence of organizations that can continuously understand and improve themselves.",
         "type": "paragraph"
+      },
+      {
+        "text": "Key insight: Artificial Intelligence makes new forms of interpretation possible, but the management shift is the emergence of organizations that can use interpretation to develop themselves.",
+        "type": "paragraph"
+      },
+      {
+        "text": "Transition: The next chapter identifies the missing layer between accumulated knowledge and organizational intelligence.",
+        "type": "paragraph"
       }
     ],
     "id": "1-the-observation",
@@ -171,23 +183,35 @@ export const theoryChapters = [
         "type": "paragraph"
       },
       {
-        "text": "That is the missing layer. The distinction begins with knowledge. Knowledge consists of facts, records, documents, decisions, models and experience. Knowledge describes what is known. Memory preserves what remains available.",
+        "text": "That is the missing layer.",
         "type": "paragraph"
       },
       {
-        "text": "Self-understanding emerges when preserved knowledge, context and relationships become continuously interpretable by the organization itself. Intelligence begins when that self-understanding improves decisions, action and capability development. These concepts must not be collapsed into one another.",
+        "text": "Definition: The missing layer is the organizational capability to continuously interpret organizational reality as a connected system.",
         "type": "paragraph"
       },
       {
-        "text": "Knowledge is raw material. Memory is continuity. Self-understanding is interpretation. Intelligence is the capacity to use interpretation for decisions and capability development. Capabilities are the repeatable organizational abilities that become visible through action.",
+        "text": "The distinction begins with knowledge.",
         "type": "paragraph"
       },
       {
-        "text": "For decades organizations invested in collecting more knowledge. Documents multiplied. Processes became digital. Policies became searchable. Enterprise systems became connected. Knowledge became increasingly available. Yet organizational understanding did not increase at the same pace.",
+        "text": "Definition: Knowledge consists of facts, records, documents, decisions, models and experience.",
         "type": "paragraph"
       },
       {
-        "text": "The missing capability was never the collection of knowledge. It was the continuous interpretation of organizational reality as a connected system.",
+        "text": "Knowledge describes what is known. Memory preserves what remains available. Self-understanding emerges when preserved knowledge, context and relationships become continuously interpretable by the organization itself. Intelligence begins when that self-understanding improves decisions, action and capability development.",
+        "type": "paragraph"
+      },
+      {
+        "text": "These concepts must not be collapsed into one another. Knowledge is raw material. Memory is continuity. Self-understanding is interpretation. Intelligence is the capacity to use interpretation for decisions and capability development.",
+        "type": "paragraph"
+      },
+      {
+        "text": "Capabilities are the repeatable organizational abilities that become visible through action. For decades organizations invested in collecting more knowledge. Documents multiplied. Processes became digital. Policies became searchable.",
+        "type": "paragraph"
+      },
+      {
+        "text": "Enterprise systems became connected. Knowledge became increasingly available. Yet organizational understanding did not increase at the same pace. The missing capability was never the collection of knowledge. It was the continuous interpretation of organizational reality as a connected system.",
         "type": "paragraph"
       },
       {
@@ -234,6 +258,10 @@ export const theoryChapters = [
         "type": "paragraph"
       },
       {
+        "text": "Key insight: The missing layer is not a technology gap alone; it is a management capability gap.",
+        "type": "paragraph"
+      },
+      {
         "text": "The next chapter explains the prerequisite for this transition. Before an organization can understand itself, it must be able to remember.",
         "type": "paragraph"
       }
@@ -256,27 +284,43 @@ export const theoryChapters = [
         "type": "paragraph"
       },
       {
-        "text": "The continuously evolving representation of organizational experience that preserves knowledge, context, decisions and relationships for future interpretation.",
+        "text": "Organizational Memory is the continuously preserved and contextualized organizational representation that keeps knowledge, experience, decisions and relationships available for future interpretation and enables Organizational Self-Understanding.",
         "type": "quote"
       },
       {
-        "text": "Organizational Memory is not a repository. It is not an archive. It is not a document management system. It is the organizational capability to preserve, connect and reinterpret accumulated experience. Purpose: Organizational Memory gives organizational knowledge continuity so future interpretation can build on accumulated experience.",
+        "text": "Organizational Memory is not a repository. It is not an archive. It is not a document management system. It is the organizational capability to preserve, connect and reinterpret accumulated experience.",
         "type": "paragraph"
       },
       {
-        "text": "Result: The organization no longer begins again whenever people, systems or projects change. Without Organizational Memory, every generation of employees begins again. Knowledge leaves with people. Projects repeat previous mistakes.",
+        "text": "Purpose: Organizational Memory gives organizational knowledge continuity so future interpretation can build on accumulated experience.",
         "type": "paragraph"
       },
       {
-        "text": "Decisions lose their context. Organizations repeatedly solve problems they have already solved. Organizational Memory changes this dynamic. It gives knowledge continuity. It keeps experience available after individual people, projects or systems change.",
+        "text": "Result: The organization no longer begins again whenever people, systems or projects change.",
         "type": "paragraph"
       },
       {
-        "text": "It connects what the organization has learned with what it must understand next. For this reason, Organizational Memory is the prerequisite for Organizational Self-Understanding. Self-understanding cannot emerge from isolated knowledge.",
+        "text": "Without Organizational Memory, every generation of employees begins again. Knowledge leaves with people. Projects repeat previous mistakes. Decisions lose their context. Organizations repeatedly solve problems they have already solved.",
         "type": "paragraph"
       },
       {
-        "text": "It requires preserved experience, connected context and interpretable relationships. Experience becomes continuously reusable. Learning becomes cumulative. Interpretation becomes sustainable. Only organizations capable of preserving their experience can continuously improve the quality of future decisions.",
+        "text": "Organizational Memory changes this dynamic. It gives knowledge continuity. It keeps experience available after individual people, projects or systems change. It connects what the organization has learned with what it must understand next.",
+        "type": "paragraph"
+      },
+      {
+        "text": "For this reason, Organizational Memory is the prerequisite for Organizational Self-Understanding. Self-understanding cannot emerge from isolated knowledge. It requires preserved experience, connected context and interpretable relationships.",
+        "type": "paragraph"
+      },
+      {
+        "text": "Experience becomes continuously reusable. Learning becomes cumulative. Interpretation becomes sustainable. Only organizations capable of preserving their experience can continuously improve the quality of future decisions.",
+        "type": "paragraph"
+      },
+      {
+        "text": "Key insight: Organizational Memory is not storage; it is continuity for interpretation.",
+        "type": "paragraph"
+      },
+      {
+        "text": "Transition: Memory makes experience available. Self-understanding emerges when that preserved experience becomes continuously interpretable.",
         "type": "paragraph"
       },
       {
@@ -351,19 +395,23 @@ export const theoryChapters = [
         "type": "quote"
       },
       {
-        "text": "Purpose: Organizational Self-Understanding makes the organization's own reality continuously interpretable. Result: Decisions and actions can rely on a persistent interpretive foundation rather than isolated information. This capability precedes Organizational Intelligence.",
+        "text": "Purpose: Organizational Self-Understanding makes the organization's own reality continuously interpretable.",
         "type": "paragraph"
       },
       {
-        "text": "Without Organizational Self-Understanding, intelligence can only operate on fragments. With Organizational Self-Understanding, the organization develops a persistent interpretive foundation from which decisions, actions and future capabilities can become more coherent. Organizational Self-Understanding therefore does not mean that people simply know more about the organization.",
+        "text": "Result: Decisions and actions can rely on a persistent interpretive foundation rather than isolated information.",
         "type": "paragraph"
       },
       {
-        "text": "It means the organization develops a continuously evolving capacity to make its own reality interpretable. Organizations cannot understand themselves through isolated information. Understanding emerges. It is not explicitly manufactured.",
+        "text": "This capability precedes Organizational Intelligence. Without Organizational Self-Understanding, intelligence can only operate on fragments. With Organizational Self-Understanding, the organization develops a persistent interpretive foundation from which decisions, actions and future capabilities can become more coherent.",
         "type": "paragraph"
       },
       {
-        "text": "It is not stored. It is not written. It continuously develops through the interaction of organizational experience, memory, knowledge, context and relationships. Within the Organizational Intelligence Theory, Organizational Self-Understanding is therefore considered an emergent organizational capability.",
+        "text": "Organizational Self-Understanding therefore does not mean that people simply know more about the organization. It means the organization develops a continuously evolving capacity to make its own reality interpretable. Organizations cannot understand themselves through isolated information.",
+        "type": "paragraph"
+      },
+      {
+        "text": "Understanding emerges. It is not explicitly manufactured. It is not stored. It is not written. It continuously develops through the interaction of organizational experience, memory, knowledge, context and relationships. Within the Organizational Intelligence Theory, Organizational Self-Understanding is therefore considered an emergent organizational capability.",
         "type": "paragraph"
       },
       {
@@ -383,7 +431,15 @@ export const theoryChapters = [
         "type": "paragraph"
       },
       {
-        "text": "It can begin to use interpretation to improve decisions, actions and capabilities. That transition is Organizational Intelligence.",
+        "text": "It can begin to use interpretation to improve decisions, actions and capabilities.",
+        "type": "paragraph"
+      },
+      {
+        "text": "Key insight: Organizational Self-Understanding is not stored knowledge; it is the emergent interpretability of the organization to itself.",
+        "type": "paragraph"
+      },
+      {
+        "text": "That transition is Organizational Intelligence.",
         "type": "paragraph"
       }
     ],
@@ -405,23 +461,39 @@ export const theoryChapters = [
         "type": "quote"
       },
       {
-        "text": "Purpose: Organizational Intelligence transforms self-understanding into decision quality, coordinated action and capability development. Result: The organization can use interpretation to continuously develop its own capabilities. Organizational Intelligence therefore does not replace Organizational Self-Understanding.",
+        "text": "Purpose: Organizational Intelligence transforms self-understanding into decision quality, coordinated action and capability development.",
         "type": "paragraph"
       },
       {
-        "text": "It builds upon it. Organizational Intelligence is not the final objective. It is the organization's continuously evolving capability to interpret itself. It becomes the foundation from which Organizational Capabilities are forged.",
+        "text": "Result: The organization can use interpretation to continuously develop its own capabilities.",
         "type": "paragraph"
       },
       {
-        "text": "The relationship can be understood as a progression. Knowledge provides raw material. Organizational Memory preserves continuity. Organizational Self-Understanding makes the organization interpretable to itself. Intelligence transforms Organizational Self-Understanding into capability development.",
+        "text": "Organizational Intelligence therefore does not replace Organizational Self-Understanding. It builds upon it. Organizational Intelligence is not the final objective. It is the organization's continuously evolving capability to interpret itself.",
         "type": "paragraph"
       },
       {
-        "text": "Capabilities become reusable organizational assets. Capabilities enable Organizational Self-Empowerment. Organizational Self-Empowerment creates Organizational Resilience. Organizational Intelligence is therefore not a technology.",
+        "text": "It becomes the foundation from which Organizational Capabilities are forged. The relationship can be understood as a progression. Knowledge provides raw material. Organizational Memory preserves continuity. Organizational Self-Understanding makes the organization interpretable to itself.",
         "type": "paragraph"
       },
       {
-        "text": "Nor is it another management discipline. It is an organizational capability. Artificial Intelligence may accelerate this capability. It cannot substitute it. The objective is not intelligent software. The objective is organizations that use intelligence to continuously develop their own capabilities.",
+        "text": "Intelligence transforms Organizational Self-Understanding into capability development. Capabilities become reusable organizational assets. Capabilities enable Organizational Self-Empowerment. Organizational Self-Empowerment creates Organizational Resilience.",
+        "type": "paragraph"
+      },
+      {
+        "text": "Organizational Intelligence is therefore not a technology. Nor is it another management discipline. It is an organizational capability.",
+        "type": "paragraph"
+      },
+      {
+        "text": "Discussion: Artificial Intelligence may contribute to this capability.",
+        "type": "paragraph"
+      },
+      {
+        "text": "It may accelerate interpretation, reasoning and synthesis. It does not constitute Organizational Intelligence by itself. The objective is not intelligent software. The objective is organizations that use intelligence to continuously develop their own capabilities.",
+        "type": "paragraph"
+      },
+      {
+        "text": "Key insight: Artificial Intelligence can strengthen Organizational Intelligence, but Organizational Intelligence remains an organizational capability rather than a property of software.",
         "type": "paragraph"
       },
       {
@@ -484,6 +556,10 @@ export const theoryChapters = [
       {
         "text": "If this hypothesis proves correct, Organizational Intelligence represents not merely another software category. It represents a new management discipline.",
         "type": "paragraph"
+      },
+      {
+        "text": "Transition: Intelligence becomes observable when it is transformed into repeatable organizational abilities.",
+        "type": "paragraph"
       }
     ],
     "id": "organizational-intelligence",
@@ -508,35 +584,51 @@ export const theoryChapters = [
         "type": "quote"
       },
       {
-        "text": "Purpose: Organizational Capabilities make intelligence reusable in daily work. Result: The organization develops repeatable abilities that can be applied, improved and transferred across future situations. Action alone does not create capabilities.",
+        "text": "Purpose: Organizational Capabilities make intelligence reusable in daily work.",
         "type": "paragraph"
       },
       {
-        "text": "Repeated, coherent and continuously improving action does. Every capability increases the organization's ability to respond to future situations. Capabilities therefore represent accumulated organizational learning. They become reusable organizational assets.",
+        "text": "Result: The organization develops repeatable abilities that can be applied, improved and transferred across future situations.",
         "type": "paragraph"
       },
       {
-        "text": "Once a capability exists, the organization can apply it again, improve it and transfer it across future situations. The development of capabilities marks the transition from reacting to individual situations toward systematically improving organizational performance. Organizations with stronger capabilities require less external coordination.",
+        "text": "Discussion: Organizational Capabilities are not software functions.",
         "type": "paragraph"
       },
       {
-        "text": "They become increasingly capable of improving themselves. Capabilities therefore represent the first observable outcome of Organizational Intelligence. They also create the conditions for Organizational Self-Empowerment.",
+        "text": "They become visible through organizational behavior, decision quality, execution and continuous improvement. Action alone does not create capabilities. Repeated, coherent and continuously improving action does. Every capability increases the organization's ability to respond to future situations.",
         "type": "paragraph"
       },
       {
-        "text": "This creates a clear relationship between capability, outcome and business value. Products and platforms do not create business outcomes directly. They enable the organization to develop capabilities. Capabilities allow the organization to become increasingly self-empowering.",
+        "text": "Capabilities therefore represent accumulated organizational learning. They become reusable organizational assets. Once a capability exists, the organization can apply it again, improve it and transfer it across future situations.",
         "type": "paragraph"
       },
       {
-        "text": "Organizational Self-Empowerment creates resilience. Business value emerges from resilience, adaptability, decision quality and sustainable performance. The important distinction is therefore not between product and outcome.",
+        "text": "The development of capabilities marks the transition from reacting to individual situations toward systematically improving organizational performance. Organizations with stronger capabilities require less external coordination. They become increasingly capable of improving themselves.",
         "type": "paragraph"
       },
       {
-        "text": "It is between what a system enables and what the organization becomes capable of doing with it. When Organizational Intelligence is transformed into repeatable action, the organization develops capabilities. When those capabilities continuously improve each other, the organization develops Organizational Self-Empowerment.",
+        "text": "Capabilities therefore represent the first observable outcome of Organizational Intelligence. They also create the conditions for Organizational Self-Empowerment. This creates a clear relationship between capability, outcome and business value.",
         "type": "paragraph"
       },
       {
-        "text": "When Organizational Self-Empowerment remains effective under changing conditions, the business realizes Organizational Resilience.",
+        "text": "Products and platforms do not create business outcomes directly. They enable the organization to develop capabilities. Capabilities allow the organization to become increasingly self-empowering. Organizational Self-Empowerment creates resilience.",
+        "type": "paragraph"
+      },
+      {
+        "text": "Business value emerges from resilience, adaptability, decision quality and sustainable performance. The important distinction is therefore not between product and outcome. It is between what a system enables and what the organization becomes capable of doing with it.",
+        "type": "paragraph"
+      },
+      {
+        "text": "When Organizational Intelligence is transformed into repeatable action, the organization develops capabilities. When those capabilities continuously improve each other, the organization develops Organizational Self-Empowerment. When Organizational Self-Empowerment remains effective under changing conditions, the business realizes Organizational Resilience.",
+        "type": "paragraph"
+      },
+      {
+        "text": "Key insight: Capabilities are the point at which intelligence becomes observable as repeatable organizational behavior.",
+        "type": "paragraph"
+      },
+      {
+        "text": "Transition: When capabilities begin to improve the organization's ability to develop further capabilities, the organization becomes self-empowering.",
         "type": "paragraph"
       },
       {
@@ -581,15 +673,31 @@ export const theoryChapters = [
         "type": "quote"
       },
       {
-        "text": "Purpose: Organizational Self-Empowerment makes capability development continuous instead of episodic. Result: The organization increasingly creates the conditions required for its own future development. Organizations become self-empowering when capability development is no longer episodic.",
+        "text": "Purpose: Organizational Self-Empowerment makes capability development continuous instead of episodic.",
         "type": "paragraph"
       },
       {
-        "text": "Learning becomes continuous. Improvement becomes endogenous. Capability development becomes self-reinforcing. The organization continuously generates the conditions required for its own future development. This is the direct precursor of Organizational Resilience.",
+        "text": "Result: The organization increasingly creates the conditions required for its own future development.",
         "type": "paragraph"
       },
       {
-        "text": "Resilience emerges when Organizational Self-Empowerment remains effective under changing conditions. The defining characteristic of Organizational Self-Empowerment is therefore not autonomy. It is the ability to continuously develop the capabilities required for the organization's own evolution.",
+        "text": "Organizations become self-empowering when capability development is no longer episodic. Learning becomes continuous. Improvement becomes endogenous. Capability development becomes self-reinforcing. The organization continuously generates the conditions required for its own future development.",
+        "type": "paragraph"
+      },
+      {
+        "text": "This is the direct precursor of Organizational Resilience. Resilience emerges when Organizational Self-Empowerment remains effective under changing conditions. The defining characteristic of Organizational Self-Empowerment is therefore not autonomy.",
+        "type": "paragraph"
+      },
+      {
+        "text": "It is the ability to continuously develop the capabilities required for the organization's own evolution.",
+        "type": "paragraph"
+      },
+      {
+        "text": "Key insight: Organizational Self-Empowerment is the self-reinforcing maturity of capability development.",
+        "type": "paragraph"
+      },
+      {
+        "text": "Transition: Self-empowerment becomes strategically valuable when it remains effective under changing conditions.",
         "type": "paragraph"
       },
       {
@@ -631,27 +739,39 @@ export const theoryChapters = [
         "type": "quote"
       },
       {
-        "text": "Purpose: Organizational Resilience stabilizes self-empowerment under changing conditions. Result: The organization remains capable of understanding, deciding and acting when its environment changes. Resilience is not produced directly by software.",
+        "text": "Purpose: Organizational Resilience stabilizes self-empowerment under changing conditions.",
         "type": "paragraph"
       },
       {
-        "text": "It emerges from Organizational Self-Empowerment. Organizational Self-Empowerment emerges when capabilities continuously evolve, reinforce each other and allow the organization to improve itself. Every additional capability strengthens the organization's ability to respond to future situations.",
+        "text": "Result: The organization remains capable of understanding, deciding and acting when its environment changes.",
         "type": "paragraph"
       },
       {
-        "text": "As capabilities become increasingly interconnected, organizations become less dependent on individual people, isolated knowledge or temporary structures. Learning becomes continuous. Adaptation becomes systematic. Improvement becomes sustainable.",
+        "text": "Resilience is not produced directly by software. It emerges from Organizational Self-Empowerment. Organizational Self-Empowerment emerges when capabilities continuously evolve, reinforce each other and allow the organization to improve itself.",
         "type": "paragraph"
       },
       {
-        "text": "Resilience therefore represents the stabilization of Organizational Self-Empowerment. It is the stage at which continuously evolving capabilities remain effective despite continuous change. Resilient organizations do not merely survive disruption.",
+        "text": "Every additional capability strengthens the organization's ability to respond to future situations. As capabilities become increasingly interconnected, organizations become less dependent on individual people, isolated knowledge or temporary structures. Learning becomes continuous.",
         "type": "paragraph"
       },
       {
-        "text": "They continuously learn from it. Every disruption becomes additional organizational understanding. Every adaptation strengthens future capabilities. Resilience therefore transforms Organizational Self-Empowerment from a temporary advantage into a permanent organizational characteristic.",
+        "text": "Adaptation becomes systematic. Improvement becomes sustainable. Resilience therefore represents the stabilization of Organizational Self-Empowerment. It is the stage at which continuously evolving capabilities remain effective despite continuous change.",
+        "type": "paragraph"
+      },
+      {
+        "text": "Resilient organizations do not merely survive disruption. They continuously learn from it. Every disruption becomes additional organizational understanding. Every adaptation strengthens future capabilities. Resilience therefore transforms Organizational Self-Empowerment from a temporary advantage into a permanent organizational characteristic.",
         "type": "paragraph"
       },
       {
         "text": "Organizations do not become resilient because they possess more knowledge. They become resilient because Organizational Self-Empowerment continuously develops, validates and improves their capabilities.",
+        "type": "paragraph"
+      },
+      {
+        "text": "Key insight: Organizational Resilience is not a static state; it is the stabilization of self-empowerment under continuous change.",
+        "type": "paragraph"
+      },
+      {
+        "text": "Transition: The theory is independent of aiio. The final chapter describes one reference implementation.",
         "type": "paragraph"
       },
       {
@@ -679,6 +799,14 @@ export const theoryChapters = [
   },
   {
     "blocks": [
+      {
+        "text": "Definition: Operationalization describes how the theory can be implemented without allowing product architecture to define the theory.",
+        "type": "paragraph"
+      },
+      {
+        "text": "Purpose: This chapter separates the general management theory from aiio as one reference implementation.",
+        "type": "paragraph"
+      },
       {
         "text": "Organizations have always relied on external expertise to compensate for missing organizational understanding. Consultants analyzed processes. Documented structures. Developed strategies. Designed target operating models.",
         "type": "paragraph"
