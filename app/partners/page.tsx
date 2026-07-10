@@ -1,5 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BrandIllustration } from "../../components/brand/BrandIllustration";
+import {
+  EditorialCard,
+  EditorialGrid,
+  EditorialSection,
+  EditorialSectionHeader,
+} from "../../components/brand/BrandCanonFoundation";
+import { ExecutiveCTA } from "../../components/brand/ExecutiveCTA";
+import { TheoryReference } from "../../components/brand/TheoryReference";
 import { WebsiteArchitecturePage } from "../website-architecture";
 
 export const metadata: Metadata = {
@@ -12,7 +21,7 @@ const partnerRoles = [
   {
     title: "Develop understanding",
     purpose:
-      "Help organizations turn fragmented knowledge into shared Organizational Understanding.",
+      "Help organizations turn fragmented knowledge into Organizational Memory and shared Self-Understanding.",
   },
   {
     title: "Build capabilities",
@@ -21,48 +30,82 @@ const partnerRoles = [
   },
   {
     title: "Support evolution",
-    purpose:
-      "Guide organizations as decision quality, resilience and self-enablement become operating principles.",
+    purpose: (
+      <>
+        Guide organizations as decision quality,{" "}
+        <TheoryReference>Organizational Self-Empowerment</TheoryReference> and
+        resilience become operating principles.
+      </>
+    ),
   },
+] as const;
+
+const partnersSectionNavigator = [
+  { id: "partners-hero", label: "Hero" },
+  { id: "partners-ecosystem", label: "Ecosystem" },
+  { id: "start", label: "Start" },
 ] as const;
 
 export default function PartnersPage() {
   return (
     <WebsiteArchitecturePage
-      eyebrow="Partners"
-      intro="Partners help turn Organizational Intelligence into lasting customer capability."
+      heroId="partners-hero"
+      heroActions={
+        <>
+          <Link className="button hero-button" href="/live-demo/kontakt">
+            Become a Partner
+          </Link>
+          <Link className="button hero-button secondary" href="/contact">
+            Contact Us
+          </Link>
+        </>
+      }
+      heroVisual={
+        <BrandIllustration
+          className="partners-hero-visual"
+          decorative={false}
+          interactive
+          priority
+          variant="BC-008"
+        />
+      }
+      intro={
+        <>
+          Partners help turn{" "}
+          <TheoryReference>Organizational Intelligence</TheoryReference> into
+          lasting customer capability.
+        </>
+      }
+      sectionNavigator={partnersSectionNavigator}
+      sectionNavigatorLabel="Partners sections"
       title="Help organizations build lasting capability."
     >
-      <section className="website-architecture-section">
-        <div className="website-page-shell">
-          <div className="website-section-heading">
-            <p className="website-eyebrow">Partner Ecosystem</p>
-            <h2>Partners become capability builders.</h2>
-          </div>
-          <div className="website-architecture-grid">
+      <EditorialSection
+        className="website-architecture-section"
+        id="partners-ecosystem"
+        shellClassName="website-page-shell"
+      >
+          <EditorialSectionHeader
+            className="website-section-heading"
+            eyebrow="Partner Ecosystem"
+            title="Partners become capability builders."
+          />
+          <EditorialGrid className="website-architecture-grid" columns="three">
             {partnerRoles.map((role) => (
-              <article className="website-architecture-card" key={role.title}>
+              <EditorialCard className="website-architecture-card" key={role.title}>
                 <h3>{role.title}</h3>
                 <p>{role.purpose}</p>
-              </article>
+              </EditorialCard>
             ))}
-          </div>
-        </div>
-      </section>
+          </EditorialGrid>
+      </EditorialSection>
 
-      <section className="website-contact-section">
-        <div className="website-page-shell">
-          <div className="website-contact-panel">
-            <p>
-              Partnership with aiio means helping organizations turn strategic
-              ambition into lasting capability.
-            </p>
-            <Link className="website-final-button" href="/contact">
-              Start a partner conversation
-            </Link>
-          </div>
-        </div>
-      </section>
+      <ExecutiveCTA
+        copy="Become part of the Organizational Intelligence ecosystem."
+        headline="Build Organizational Intelligence together."
+        primary={{ href: "/live-demo/kontakt", label: "Become a Partner" }}
+        secondary={{ href: "/contact", label: "Contact Us" }}
+      />
     </WebsiteArchitecturePage>
   );
 }

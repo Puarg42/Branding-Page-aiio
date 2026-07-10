@@ -1,3 +1,10 @@
+import {
+  EditorialCard,
+  EditorialGrid,
+  EditorialHero,
+  EditorialNavigation,
+  EditorialSection,
+} from "../components/brand/BrandCanonFoundation";
 import { MainHeader } from "./main-navigation";
 import { resourcePages } from "./resource-pages";
 
@@ -5,23 +12,33 @@ type LegalSlug = "datenschutz" | "impressum";
 
 export function LegalPage({ slug }: { slug: LegalSlug }) {
   const page = resourcePages[slug];
+  const sectionNavigator = [
+    { id: `${slug}-hero`, label: "Hero" },
+    { id: `${slug}-content`, label: page.eyebrow },
+  ] as const;
 
   return (
     <main className="legal-page">
       <MainHeader />
 
-      <section className="legal-hero" aria-labelledby={`${slug}-title`}>
-        <div className="legal-shell">
-          <p className="legal-eyebrow">{page.eyebrow}</p>
-          <h1 id={`${slug}-title`}>{page.title}</h1>
-          <p>{page.intro}</p>
-        </div>
-      </section>
+      <EditorialHero
+        className="legal-hero"
+        id={`${slug}-hero`}
+        intro={page.intro}
+        shellClassName="legal-shell"
+        title={page.title}
+        titleId={`${slug}-title`}
+      />
 
-      <section className="legal-content" aria-label={page.title}>
-        <div className="legal-shell legal-card-stack">
+      <EditorialSection
+        ariaLabel={page.title}
+        className="legal-content"
+        id={`${slug}-content`}
+        shellClassName="legal-shell"
+      >
+        <EditorialGrid className="legal-card-stack" columns="two">
           {page.sections.map((section) => (
-            <article className="legal-card" key={section.title}>
+            <EditorialCard className="legal-card" key={section.title}>
               <h2>{section.title}</h2>
               {section.copy ? <p>{section.copy}</p> : null}
               {section.items ? (
@@ -31,10 +48,14 @@ export function LegalPage({ slug }: { slug: LegalSlug }) {
                   ))}
                 </ul>
               ) : null}
-            </article>
+            </EditorialCard>
           ))}
-        </div>
-      </section>
+        </EditorialGrid>
+      </EditorialSection>
+      <EditorialNavigation
+        ariaLabel={`${page.title} sections`}
+        sections={sectionNavigator}
+      />
     </main>
   );
 }

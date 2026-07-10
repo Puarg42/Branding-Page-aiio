@@ -1,7 +1,12 @@
 "use client";
 
-import { motion, useReducedMotion, type Transition, type Variants } from "framer-motion";
-import { BrandIllustration } from "../components/brand/BrandIllustration";
+import {
+  motion,
+  useReducedMotion,
+  type Transition,
+  type Variants,
+} from "framer-motion";
+import { EditorialEyebrow } from "../components/brand/EditorialEyebrow";
 
 const motionEase = [0.2, 0, 0, 1] as const;
 
@@ -11,10 +16,30 @@ const fadeIn: Variants = {
 };
 
 const capabilitySequence = [
-  "Capture Knowledge",
-  "Build Understanding",
-  "Enable Action",
-  "Evolve Organizations",
+  {
+    meta: "Level 1",
+    title: "Build memory",
+    copy: "Your organization preserves knowledge, context and decisions as shared Organizational Memory.",
+    tone: "graphite",
+  },
+  {
+    meta: "Level 2",
+    title: "Understand itself",
+    copy: "Organizational Memory becomes continuously interpretable as Organizational Self-Understanding.",
+    tone: "cyan",
+  },
+  {
+    meta: "Level 3",
+    title: "Create capabilities",
+    copy: "Self-understanding becomes intelligence and repeatable behavior people and AI can apply.",
+    tone: "purple",
+  },
+  {
+    meta: "Level 4",
+    title: "Become resilient",
+    copy: "The organization adapts faster because its capabilities improve with feedback and change.",
+    tone: "amber",
+  },
 ] as const;
 
 export function CapabilityJourney() {
@@ -33,77 +58,48 @@ export function CapabilityJourney() {
     <section className="capability-journey-section" id="capabilities">
       <div className="capability-journey-inner">
         <motion.div
-          className="capability-model-stage"
-          initial="hidden"
-          transition={transition}
-          variants={variants}
-          viewport={{ amount: 0.28, once: true }}
-          whileInView="visible"
-        >
-          <BrandIllustration variant="BC-002" />
-        </motion.div>
-
-        <motion.div
           className="capability-journey-intro"
           initial="hidden"
-          transition={
-            shouldReduceMotion
-              ? { duration: 0 }
-              : { duration: 0.95, ease: motionEase, delay: 0.08 }
-          }
+          transition={transition}
           variants={variants}
           viewport={{ amount: 0.45, once: true }}
           whileInView="visible"
         >
-          <p className="capability-section-title">The Capability Journey</p>
-          <h2>From knowledge to capability.</h2>
-          <p>Knowledge becomes understanding. Understanding enables action. Action enables continuous evolution.</p>
+          <EditorialEyebrow>The Journey</EditorialEyebrow>
+          <h2>From Organizational Memory to resilience.</h2>
+          <p>
+            This is the customer transformation. aiio helps the organization
+            move from preserved memory to self-understanding, stronger
+            capabilities and better adaptation.
+          </p>
         </motion.div>
 
-        <div className="capability-sequence" aria-label="Capability progression">
+        <div className="capability-journey-map" aria-label="Capability progression">
+          <span className="capability-journey-line" aria-hidden="true" />
           {capabilitySequence.map((capability, index) => (
-            <div className="capability-sequence-step" key={capability}>
-              <span>{capability}</span>
-              {index < capabilitySequence.length - 1 ? (
-                <em aria-hidden="true">↓</em>
-              ) : null}
-            </div>
+            <motion.article
+              className="capability-step"
+              data-tone={capability.tone}
+              initial="hidden"
+              key={capability.title}
+              transition={
+                shouldReduceMotion
+                  ? { duration: 0 }
+                  : { duration: 0.85, ease: motionEase, delay: index * 0.06 }
+              }
+              variants={variants}
+              viewport={{ amount: 0.32, once: true }}
+              whileInView="visible"
+            >
+              <span className="capability-step-level">{capability.meta}</span>
+              <span className="capability-step-number">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <h3>{capability.title}</h3>
+              <p>{capability.copy}</p>
+            </motion.article>
           ))}
         </div>
-
-        <motion.div
-          className="capability-stack-stage"
-          initial="hidden"
-          transition={
-            shouldReduceMotion
-              ? { duration: 0 }
-              : { duration: 0.95, ease: motionEase, delay: 0.08 }
-          }
-          variants={variants}
-          viewport={{ amount: 0.28, once: true }}
-          whileInView="visible"
-        >
-          <BrandIllustration variant="BC-002" />
-        </motion.div>
-
-        <motion.div
-          className="capability-closing"
-          initial="hidden"
-          transition={
-            shouldReduceMotion
-              ? { duration: 0 }
-              : { duration: 0.95, ease: motionEase }
-          }
-          variants={variants}
-          viewport={{ amount: 0.42, once: true }}
-          whileInView="visible"
-        >
-          <p>Understanding creates intelligence.</p>
-          <span aria-hidden="true">↓</span>
-          <p>Intelligence creates capability.</p>
-          <span aria-hidden="true">↓</span>
-          <p>Capability creates resilience.</p>
-        </motion.div>
       </div>
     </section>
   );

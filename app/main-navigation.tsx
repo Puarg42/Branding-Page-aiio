@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState, type ReactNode } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useState, type CSSProperties, type ReactNode } from "react";
 
 type HeaderVariant = "home" | "solid";
 
@@ -12,11 +13,13 @@ type MenuLink = {
 
 const navItems: MenuLink[] = [
   { href: "/", label: "Home" },
-  { href: "/thinking", label: "Thinking" },
   { href: "/platform", label: "Platform" },
+  { href: "/success-stories", label: "Business Impact" },
+  { href: "/thinking", label: "Thinking" },
+  { href: "/live-demo/kontakt", label: "Get Started" },
   { href: "/partners", label: "Partners" },
+  { href: "/academy", label: "Academy" },
   { href: "/company", label: "Company" },
-  { href: "/contact", label: "Contact" },
 ] as const;
 
 function isExternalLink(href: string) {
@@ -68,17 +71,26 @@ function BrandLink({ className }: { className: string }) {
 }
 
 export function MainHeader({ variant = "home" }: { variant?: HeaderVariant }) {
-  const [hasScrolled, setHasScrolled] = useState(false);
+  const pathname = usePathname();
+  const [scrollProgress, setScrollProgress] = useState(variant === "solid" ? 1 : 0);
   const [menuOpen, setMenuOpen] = useState(false);
-  const isScrolled = variant === "solid" || hasScrolled;
+  const isScrolled = variant === "solid" || scrollProgress > 0;
 
   useEffect(() => {
     if (variant === "solid") {
+      setScrollProgress(1);
       return;
     }
 
     function handleScroll() {
-      setHasScrolled(window.scrollY > 18);
+      const transitionStart = 80;
+      const transitionEnd = 180;
+      const progress = Math.min(
+        1,
+        Math.max(0, (window.scrollY - transitionStart) / (transitionEnd - transitionStart)),
+      );
+
+      setScrollProgress(progress);
     }
 
     handleScroll();
@@ -114,15 +126,26 @@ export function MainHeader({ variant = "home" }: { variant?: HeaderVariant }) {
     setMenuOpen(false);
   }
 
+  function isActiveHref(href: string) {
+    if (href === "/") {
+      return pathname === "/";
+    }
+
+    return pathname === href || pathname.startsWith(`${href}/`);
+  }
+
   const headerClass =
     variant === "solid"
       ? `site-header solid is-scrolled${menuOpen ? " is-menu-open" : ""}`
       : `topbar-shell${isScrolled ? " is-scrolled" : ""}${
           menuOpen ? " is-menu-open" : ""
         }`;
+  const headerStyle = {
+    "--header-progress": variant === "solid" ? 1 : scrollProgress,
+  } as CSSProperties;
 
   return (
-    <header className={headerClass}>
+    <header className={headerClass} style={headerStyle}>
       <div className={variant === "solid" ? "site-header-inner" : "topbar"}>
         <BrandLink className={variant === "solid" ? "brand-mark" : "brand"} />
         <button
@@ -136,7 +159,11 @@ export function MainHeader({ variant = "home" }: { variant?: HeaderVariant }) {
         </button>
         <nav aria-label="Hauptnavigation" className="main-nav">
           {navItems.map((item) => (
-            <SmartLink href={item.href} key={item.href}>
+            <SmartLink
+              className={isActiveHref(item.href) ? "is-active" : undefined}
+              href={item.href}
+              key={item.href}
+            >
               {item.label}
             </SmartLink>
           ))}
@@ -150,6 +177,7 @@ export function MainHeader({ variant = "home" }: { variant?: HeaderVariant }) {
         <nav aria-label="Mobile Hauptnavigation" className="mobile-menu-nav">
           {navItems.map((item) => (
             <SmartLink
+              className={isActiveHref(item.href) ? "is-active" : undefined}
               href={item.href}
               key={item.href}
               onClick={closeMenu}

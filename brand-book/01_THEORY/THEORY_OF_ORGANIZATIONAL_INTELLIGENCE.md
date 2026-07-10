@@ -7,17 +7,13 @@ Serve as the canonical brand-book reference for the Theory of Organizational Int
 ## Table of Contents
 
 1. Prologue
-2. Observation
+2. The Observation
 3. The Missing Layer
-4. Organizational Understanding
-5. Organizational Intelligence
-6. Organizational Capabilities
-7. Organizational Resilience
-8. The Self-Enabling Cycle
-9. Organizational Intelligence Hypothesis
-10. Evolution of Organizational Management
-11. Why Now?
-12. Transformation of Consulting
-13. Organizational Memory
-14. Emergence
+4. Organizational Memory
+5. Organizational Self-Understanding
+6. Organizational Intelligence
+7. Organizational Capabilities
+8. Organizational Self-Empowerment
+9. Organizational Resilience
+10. Operationalization by aiio
 

@@ -1,4 +1,12 @@
 import Link from "next/link";
+import {
+  EditorialCard,
+  EditorialCTAGroup,
+  EditorialGrid,
+  EditorialSection,
+  EditorialSectionHeader,
+} from "../components/brand/BrandCanonFoundation";
+import { EditorialEyebrow } from "../components/brand/EditorialEyebrow";
 import { getEditableContent } from "./editor/content";
 import { MainHeader } from "./main-navigation";
 import { getLayer, layers, type LayerSlug } from "./site-content";
@@ -17,9 +25,9 @@ export function LayerPage({ slug }: { slug: LayerSlug }) {
   );
   const modulesTitle = getEditableContent(
     `layer.${slug}.modules.title`,
-    "Direkt anschlussfähig an den aiio Produkt-Stack.",
+    "Direkt anschlussfähig an das aiio Organizational Intelligence System.",
   );
-  const relatedTitle = getEditableContent(`layer.${slug}.related.title`, "Der Stack bleibt verbunden.");
+  const relatedTitle = getEditableContent(`layer.${slug}.related.title`, "Das System bleibt verbunden.");
 
   return (
     <main>
@@ -27,46 +35,47 @@ export function LayerPage({ slug }: { slug: LayerSlug }) {
 
       <section className="subhero">
         <div className="subhero-content">
-          <p className="eyebrow">{layerName}</p>
+          <EditorialEyebrow>{layerName}</EditorialEyebrow>
           <h1>{product}</h1>
           <p className="hero-copy">{headline}</p>
-          <div className="hero-actions">
+          <EditorialCTAGroup className="hero-actions">
             <Link className="button button-primary" href="/#architektur">
               Plattform verstehen
             </Link>
             <Link className="button button-secondary" href="/live-demo/kontakt">
               Demo anfordern
             </Link>
-          </div>
+          </EditorialCTAGroup>
         </div>
       </section>
 
-      <section className="section section-split">
+      <EditorialSection className="section section-split" shell={false}>
         <div>
-          <p className="eyebrow">{stage}</p>
+          <EditorialEyebrow>{stage}</EditorialEyebrow>
           <h2>{verb}</h2>
         </div>
         <p className="lead-text">{layer.detail}</p>
-      </section>
+      </EditorialSection>
 
-      <section className="section">
-        <div className="section-intro compact">
-          <p className="eyebrow">Wirkung</p>
-          <h2>{impactTitle}</h2>
-        </div>
-        <div className="outcome-grid">
+      <EditorialSection className="section" shell={false}>
+        <EditorialSectionHeader
+          className="section-intro compact"
+          eyebrow="Wirkung"
+          title={impactTitle}
+        />
+        <EditorialGrid className="outcome-grid">
           {layer.outcomes.map((outcome) => (
-            <article className="outcome-card" key={outcome}>
+            <EditorialCard className="outcome-card" key={outcome}>
               <span />
               <p>{outcome}</p>
-            </article>
+            </EditorialCard>
           ))}
-        </div>
-      </section>
+        </EditorialGrid>
+      </EditorialSection>
 
-      <section className="section section-modules">
+      <EditorialSection className="section section-modules" shell={false}>
         <div>
-          <p className="eyebrow">Bausteine</p>
+          <EditorialEyebrow>Bausteine</EditorialEyebrow>
           <h2>{modulesTitle}</h2>
         </div>
         <div className="module-list">
@@ -74,26 +83,27 @@ export function LayerPage({ slug }: { slug: LayerSlug }) {
             <div key={module}>{module}</div>
           ))}
         </div>
-      </section>
+      </EditorialSection>
 
-      <section className="section">
-        <div className="section-intro compact">
-          <p className="eyebrow">Weitere Layer</p>
-          <h2>{relatedTitle}</h2>
-        </div>
-        <div className="story-grid two">
+      <EditorialSection className="section" shell={false}>
+        <EditorialSectionHeader
+          className="section-intro compact"
+          eyebrow="Weitere Layer"
+          title={relatedTitle}
+        />
+        <EditorialGrid className="story-grid two" columns="two">
           {relatedLayers.map((item) => (
-            <article className="story-card" key={item.slug}>
+            <EditorialCard className="story-card" key={item.slug}>
               <p className="layer-name">
                 {getEditableContent(`layer.${item.slug}.layerName`, item.layerName)}
               </p>
               <h3>{getEditableContent(`layer.${item.slug}.product`, item.product)}</h3>
               <p>{item.summary}</p>
               <Link href={`/${item.slug}`}>Layer ansehen</Link>
-            </article>
+            </EditorialCard>
           ))}
-        </div>
-      </section>
+        </EditorialGrid>
+      </EditorialSection>
     </main>
   );
 }

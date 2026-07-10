@@ -14,19 +14,29 @@ No regeneration is allowed.
 
 Every future illustration, animation, presentation and website component must derive from these assets.
 
-## Brand Assets
+## Brand Canon Architecture V2
 
-### BC-001
+The Brand Canon now uses a scalable numbering architecture.
 
-Organizational Understanding
+Existing image filenames remain unchanged until a later technical migration.
 
-Former name
+### BC100
+
+FOUNDATION
+
+Foundation illustrations define the core visual language of aiio.
+
+#### BC101
 
 Organizational Mind
 
+Previous identifier
+
+legacy 001
+
 Purpose
 
-Brand illustration.
+Editorial foundation illustration.
 
 Used on
 
@@ -39,64 +49,333 @@ Used on
 
 Never use as a product illustration.
 
-### BC-002
-
-Capability Journey
-
-Former name
+#### BC102
 
 Organizational Intelligence Engine
 
+Previous identifier
+
+legacy 002
+
 Purpose
 
-Platform explanation.
+Explanatory illustration.
+
+Illustrates how an Organizational Intelligence System transforms organizational reality into continuously evolving organizational capabilities.
+
+Narrative
+
+- Real organizational world
+- ProcessMagnet: continuous interpretation of organizational reality
+- ProcessCollector: human-readable representation
+- ProcessForge: capability forging
+- DataForge: continuous capability evolution
 
 Used on
 
 - Platform
-- Product pages
-- Capability explanation
+- Articles
+- Theory
+- Capability explanations
 
 Never use as Hero artwork.
 
-### BC-003
+Never use as decorative background artwork.
 
-Transparent Intelligence
+Never allow it to dominate a page.
+
+#### BC005
+
+Missing Capability
+
+Asset
+
+`public/brand-canon/005-missing-capability.png`
+
+Purpose
+
+Dedicated Home page illustration for the Missing Capability section.
+
+Used on
+
+- Home Missing Capability section
+
+Placement
+
+Directly between the editorial eyebrow and the section headline.
+
+Never crop, recolor, redraw, add labels, add overlays or use as a generic decorative background.
+
+#### BC006
+
+The Organizational Intelligence System
+
+Asset
+
+`public/brand-canon/006-organizational-intelligence-system.png`
+
+Purpose
+
+Illustrates the complete Organizational Intelligence System and the relationship between:
+
+- Organizational Reality
+- ProcessCollector
+- ProcessMagnet
+- ProcessForge
+- DataForge
+- Organizational Self-Understanding
+- Organizational Intelligence
+- Organizational Capabilities
+- Organizational Self-Empowerment
+- Organizational Resilience
+
+Used on
+
+- Brand Canon system references
+- Executive explanations
+- Editorial system context
+
+Never crop, recolor, redraw, add labels, add overlays, reinterpret or regenerate the artwork.
+
+#### BC007
+
+Business Impact
+
+Asset
+
+`public/brand-canon/bc007-business-impact.png`
+
+Purpose
+
+Illustrates the transformation of Organizational Intelligence into measurable business value, resilience and sustainable advantage.
+
+Used on
+
+- Business Impact Hero
+
+Category
+
+- Business Outcome
+
+Never crop aggressively, recolor, redraw, add overlays, modify per page or use as a generic decorative background.
+
+### BC200
+
+ORGANIZATIONAL CAPABILITIES
+
+Capability illustrations are reserved for detailed explorations of the four architectural layers introduced by BC102.
+
+They are not independent illustrations.
+
+#### BC201
+
+Organizational Source Code
+
+Asset
+
+`public/brand-canon/201-organizational-source-code.png`
+
+Purpose
+
+Visualizes the human-readable organizational source code: processes, structures, policies, documentation, responsibilities, rules and operational models.
+
+#### BC202
+
+Organizational Understanding
+
+Asset
+
+`public/brand-canon/202-organizational-understanding.png`
+
+Purpose
+
+Visualizes continuously connected organizational context across people, processes, systems, rules, relationships, events, documents and operational reality.
+
+#### BC203
+
+Organizational Capability
+
+Asset
+
+`public/brand-canon/203-organizational-capability.png`
+
+Purpose
+
+Visualizes the transformation of organizational understanding into executable organizational capabilities, including operating models, systems, services and coordinated action.
+
+#### BC204
+
+Organizational Evolution
+
+Asset
+
+`public/brand-canon/204-organizational-evolution.png`
+
+Purpose
+
+Visualizes continuous evolution through goals, scenarios, operational reality, external intelligence and resilient organizational capability development.
+
+### BC300
+
+THEORY
+
+Reserved for future Theory illustrations.
+
+Theory illustrations support reasoning and make conceptual relationships easier to understand.
+
+### BC400
+
+EDITORIAL
+
+Reserved for explanatory diagrams.
+
+Editorial illustrations clarify adjacent arguments without becoming decorative.
+
+#### BC-DIAGRAM-001
+
+Editorial Progression
+
+Purpose
+
+Visualizes conceptual progression.
+
+It explains relationships between ideas, not process execution, software architecture or workflow.
+
+Typical usage
+
+- Information + AI
+- Organizational Self-Understanding
+- Coordinated Action
+
+Composition rules
+
+- No surrounding container.
+- No filled boxes.
+- No dashboard appearance.
+- No UI cards.
+- Use generous whitespace.
+- Use elegant typography.
+- Use subtle connecting lines.
+- Use minimal arrows.
+- Keep the progression readable without surrounding explanation.
+
+Color usage
+
+Color may reinforce meaning:
+
+- Graphite: current organizational reality.
+- Cyan: understanding.
+- Purple: Organizational Intelligence or capability generation.
+- Amber: business outcome.
+
+Color must never decorate.
+
+Prohibited usage
+
+- Process execution diagrams.
+- Workflow charts.
+- Product architecture diagrams.
+- Decorative section graphics.
+- Presentation-slide card layouts.
+
+### BC-ICON
+
+INTERFACE ELEMENTS
+
+Interface elements guide editorial reading behavior.
+
+They are not illustrations and not application controls.
+
+#### BC-ICON-001
+
+Editorial Reference Icon
+
+Purpose
+
+Use the Editorial Reference Icon whenever a concept offers deeper editorial context.
+
+It appears as a very small violet circular badge with a white lowercase "i".
+
+It behaves like a premium publication footnote, not like a button.
+
+Use for
+
+- Theory references
+- Thinking references
+- Company references
+- Brand Canon references
+- Whitepaper references
+- Editorial cross-links
+
+Do not use for
+
+- Main navigation
+- Menus
+- Pagination
+- Carousel controls
+- Application UI
+- Directional navigation
+- Primary calls to action
+
+## Legacy Implementation Assets
+
+Some current files and component variants still use earlier technical labels.
+
+They remain valid implementation references until a dedicated technical migration is performed.
+
+### Organizational Intelligence Core
+
+Identifier
+
+BC003
+
+Purpose
+
+Platform Hero Illustration.
+
+Visualizes the transformation from fragmented organizational reality into one connected Organizational Intelligence System.
+
+Use only for the Platform Hero.
+
+BC001 remains the Organizational Mind illustration.
+
+BC002 remains the Platform Explanation Illustration.
+
+### Partner Ecosystem
+
+Identifier
+
+BC008
+
+Asset
+
+`public/brand-canon/008-partner-ecosystem.png`
+
+Purpose
+
+Partners Hero Illustration.
+
+Visualizes partnership as a connected ecosystem of collaboration, integration, co-creation and global reach around Organizational Intelligence.
+
+Use only for the Partners Hero.
+
+Do not crop, recolor, tint, mask, add overlays, add shadows or reinterpret the asset.
+
+### Transparent Intelligence
 
 Purpose
 
 Master material.
 
-Defines
+Defines transparency, optical behavior, edge treatment, reflections and lighting.
 
-- transparency
-- optical behavior
-- edge treatment
-- reflections
-- lighting
-
-Every future illustration inherits this material.
-
-### BC-004
-
-Organizational Intelligence Elements
-
-Former name
-
-Visual Language Library
+### Organizational Intelligence Elements
 
 Purpose
 
 Visual vocabulary.
 
-Defines
-
-- Knowledge Artifacts
-- Semantic Relationships
-- Capability Structures
-- Evolution Language
-
-Every future illustration must be composed from these primitives.
+Defines Knowledge Artifacts, Semantic Relationships, Capability Structures and Evolution Language.
 
 ## Immutable Principles
 

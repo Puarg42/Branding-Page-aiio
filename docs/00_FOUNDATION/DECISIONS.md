@@ -23,21 +23,19 @@ The long-term vision of aiio is no longer described primarily as "Self-Improving
 
 The current working hypothesis is
 
-"Self-Enabling Organizations"
+"Organizational Self-Empowerment"
 
 ### Reason
 
 A self-improving organization describes an outcome.
 
-A self-enabling organization describes a capability.
+Organizational Self-Empowerment describes a capability.
 
-Organizations first develop the capability to understand themselves, preserve their knowledge and continuously acquire new capabilities.
+Organizations first develop the capability to understand themselves, develop Organizational Intelligence, forge organizational capabilities and continuously evolve those capabilities.
 
-Continuous improvement is one consequence of this capability.
+Organizational Self-Empowerment is the maturity state in which those capabilities continuously improve the organization itself.
 
-This distinction will be further developed inside
-
-"The Theory of Self-Enabling Organizations".
+This distinction is further developed inside the Theory of Organizational Intelligence.
 
 ### Status
 

@@ -4,7 +4,7 @@
 
 This document defines the first conceptual model for Organizational Intelligence.
 
-The model describes how organizational knowledge develops into understanding, intelligence, capabilities, resilience and ultimately self-enablement.
+The model describes how organizational reality becomes Organizational Memory, develops into Organizational Self-Understanding, becomes Organizational Intelligence, is forged into capabilities, evolves into Organizational Self-Empowerment and is ultimately realized as Organizational Resilience.
 
 ## Status
 
@@ -12,7 +12,7 @@ Working model.
 
 ## Core Progression
 
-Organizational Knowledge
+Reality
 
 ->
 
@@ -20,7 +20,13 @@ Organizational Memory
 
 ->
 
-Organizational Understanding
+ProcessMagnet
+
+continuous interpretation
+
+->
+
+Organizational Self-Understanding
 
 ->
 
@@ -28,25 +34,39 @@ Organizational Intelligence
 
 ->
 
-Organizational Capabilities
+ProcessCollector
+
+human-readable representation
+
+->
+
+ProcessForge
+
+capability forging
+
+->
+
+DataForge
+
+continuous evolution
+
+->
+
+Organizational Self-Empowerment
 
 ->
 
 Organizational Resilience
-
-->
-
-Self-Enabling Organization
 
 ## Table of Contents
 
 1. Model Thesis
 2. Organizational Knowledge
 3. Organizational Memory
-4. Organizational Understanding
+4. Organizational Self-Understanding
 5. Organizational Intelligence
 6. Organizational Capabilities
-7. Organizational Resilience
-8. Self-Enabling Organization
+7. Organizational Self-Empowerment
+8. Organizational Resilience
 9. Relationship to the OI Capability Model
 10. Open Questions

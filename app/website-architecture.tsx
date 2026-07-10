@@ -1,7 +1,23 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import {
+  BrandIllustration,
+  type BrandIllustrationVariant,
+} from "../components/brand/BrandIllustration";
+import {
+  EditorialCard,
+  EditorialGrid,
+  EditorialHero,
+  EditorialNavigation,
+  EditorialSection,
+  EditorialSectionHeader,
+  JourneyCard,
+} from "../components/brand/BrandCanonFoundation";
+import { EditorialEyebrow } from "../components/brand/EditorialEyebrow";
+import { EditorialJumpArrow } from "../components/brand/EditorialJumpArrow";
+import type { EditorialSectionNavigatorItem } from "../components/brand/EditorialSectionNavigator";
+import { TheoryReference } from "../components/brand/TheoryReference";
 import { MainHeader } from "./main-navigation";
-import { BrandIllustration } from "../components/brand/BrandIllustration";
 
 export type ArchitectureSection = {
   title: string;
@@ -10,49 +26,71 @@ export type ArchitectureSection = {
 
 type WebsiteArchitecturePageProps = {
   children?: ReactNode;
-  eyebrow: string;
-  intro: string;
+  heroActions?: ReactNode;
+  heroId?: string;
+  heroLead?: ReactNode;
+  heroVisual?: ReactNode;
+  intro: ReactNode;
+  sectionNavigator?: readonly EditorialSectionNavigatorItem[];
+  sectionNavigatorLabel?: string;
   sections?: readonly ArchitectureSection[];
-  title: string;
+  title: ReactNode;
 };
 
 export function WebsiteArchitecturePage({
   children,
-  eyebrow,
+  heroActions,
+  heroId,
+  heroLead,
+  heroVisual,
   intro,
+  sectionNavigator,
+  sectionNavigatorLabel,
   sections = [],
   title,
 }: WebsiteArchitecturePageProps) {
   return (
     <main className="website-page">
       <MainHeader />
-      <section className="website-hero">
-        <div className="website-page-shell">
-          <p className="website-eyebrow">{eyebrow}</p>
-          <h1>{title}</h1>
-          <p>{intro}</p>
-        </div>
-      </section>
+      <EditorialHero
+        actions={heroActions}
+        className="website-hero"
+        id={heroId}
+        intro={intro}
+        lead={heroLead}
+        shellClassName="website-page-shell"
+        title={title}
+        visual={heroVisual ? <div className="website-hero-visual">{heroVisual}</div> : null}
+      />
 
       {children}
 
       {sections.length > 0 ? (
-        <section className="website-architecture-section">
-          <div className="website-page-shell">
-            <div className="website-section-heading">
-              <p className="website-eyebrow">Structure</p>
-              <h2>Page architecture</h2>
-            </div>
-            <div className="website-architecture-grid">
-              {sections.map((section) => (
-                <article className="website-architecture-card" key={section.title}>
-                  <h3>{section.title}</h3>
-                  {section.purpose ? <p>{section.purpose}</p> : null}
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
+        <EditorialSection
+          className="website-architecture-section"
+          shellClassName="website-page-shell"
+        >
+          <EditorialSectionHeader
+            className="website-section-heading"
+            eyebrow="Structure"
+            title="Page architecture"
+          />
+          <EditorialGrid className="website-architecture-grid">
+            {sections.map((section) => (
+              <EditorialCard className="website-architecture-card" key={section.title}>
+                <h3>{section.title}</h3>
+                {section.purpose ? <p>{section.purpose}</p> : null}
+              </EditorialCard>
+            ))}
+          </EditorialGrid>
+        </EditorialSection>
+      ) : null}
+
+      {sectionNavigator?.length ? (
+        <EditorialNavigation
+          ariaLabel={sectionNavigatorLabel}
+          sections={sectionNavigator}
+        />
       ) : null}
     </main>
   );
@@ -60,47 +98,174 @@ export function WebsiteArchitecturePage({
 
 export type CapabilityTeaser = {
   badge?: string;
-  copy: string;
+  copy: ReactNode;
   href: string;
+  illustration?: {
+    alt: string;
+    src: string;
+  };
+  illustrationVariant?: BrandIllustrationVariant;
+  illustrationSlot?: "BC002A" | "BC002B" | "BC002C" | "BC002D";
   product: "ProcessCollector" | "ProcessMagnet" | "ProcessForge" | "DataForge";
+  quote?: string;
+  secondaryCopy?: string;
   title: string;
 };
 
+function capabilityKey(product: CapabilityTeaser["product"]) {
+  switch (product) {
+    case "ProcessCollector":
+      return "collector";
+    case "ProcessMagnet":
+      return "magnet";
+    case "ProcessForge":
+      return "forge";
+    case "DataForge":
+      return "dataforge";
+  }
+}
+
+function CapabilityVisual({ capability }: { capability: CapabilityTeaser }) {
+  if (capability.illustrationVariant) {
+    return (
+      <BrandIllustration
+        className="website-card-canon"
+        decorative={false}
+        interactive
+        variant={capability.illustrationVariant}
+        viewerMode="figure"
+      />
+    );
+  }
+
+  if (capability.illustration) {
+    return (
+      <figure className="website-card-canon">
+        <img
+          alt={capability.illustration.alt}
+          className="website-card-canon-image"
+          loading="lazy"
+          src={capability.illustration.src}
+        />
+      </figure>
+    );
+  }
+
+  if (capability.illustrationSlot) {
+    return (
+      <figure
+        aria-hidden="true"
+        className="website-card-canon is-empty"
+        data-slot={capability.illustrationSlot}
+      />
+    );
+  }
+
+  return null;
+}
+
 export function CapabilityTeaserGrid({
   capabilities,
+  sectionId,
 }: {
   capabilities: CapabilityTeaser[];
+  sectionId?: string;
 }) {
+  const journey = [
+    {
+      key: "collector",
+      label: (
+        <>
+          <TheoryReference>Organizational Memory</TheoryReference>
+        </>
+      ),
+    },
+    {
+      key: "magnet",
+      label: (
+        <>
+          <TheoryReference>Organizational Intelligence</TheoryReference>
+        </>
+      ),
+    },
+    {
+      key: "forge",
+      label: (
+        <>
+          <TheoryReference>Organizational Capabilities</TheoryReference>
+        </>
+      ),
+    },
+    {
+      key: "dataforge",
+      label: (
+        <>
+          Organizational Self-Empowerment
+        </>
+      ),
+    },
+  ];
+  const journeyTone = (key: (typeof journey)[number]["key"]) => {
+    if (key === "collector") return "collector";
+    if (key === "magnet") return "magnet";
+    if (key === "forge") return "forge";
+    return "dataforge";
+  };
+
   return (
-    <section className="website-capability-section" aria-label="Platform capabilities">
-      <div className="website-page-shell">
+    <EditorialSection
+      className="website-capability-section"
+      id={sectionId}
+      ariaLabel="Platform capabilities"
+      shellClassName="website-page-shell"
+    >
         <div className="website-section-heading">
-          <p className="website-eyebrow">Capabilities</p>
-          <h2>Four capabilities. One system.</h2>
+          <EditorialEyebrow>The Journey</EditorialEyebrow>
+          <h2>How aiio creates organizational capabilities.</h2>
+          <p>
+            Every platform layer turns organizational reality into a stronger
+            capability. Each level creates the prerequisite for the next.
+          </p>
         </div>
-        <div className="website-capability-grid">
-          {capabilities.map((capability) => (
-            <article
-              className="website-capability-card"
-              id={capability.product.toLowerCase()}
-              key={capability.title}
+        <div className="website-capability-journey" aria-label="Capability journey">
+          {journey.map((step, index) => (
+            <JourneyCard
+              className="website-capability-journey-step"
+              dataCapability={step.key}
+              index={String(index + 1).padStart(2, "0")}
+              key={step.key}
+              tone={journeyTone(step.key)}
             >
-              <div>
-                <div className="website-card-topline">
-                  <span>Powered by {capability.product}</span>
-                  {capability.badge ? <em>{capability.badge}</em> : null}
-                </div>
-                <h3>{capability.title}</h3>
-                <p>{capability.copy}</p>
-              </div>
-              <BrandIllustration className="website-card-canon" variant="BC-003" />
-              <Link className="website-text-link" href={capability.href}>
-                See {capability.product} <span aria-hidden="true">→</span>
-              </Link>
-            </article>
+              {step.label}
+            </JourneyCard>
           ))}
         </div>
-      </div>
-    </section>
+        <EditorialGrid className="website-capability-grid">
+          {capabilities.map((capability, index) => (
+            <JourneyCard
+              cta={
+                <Link className="website-text-link" href={capability.href}>
+                  Learn more <EditorialJumpArrow />
+                </Link>
+              }
+              className="website-capability-card"
+              dataCapability={capabilityKey(capability.product)}
+              description={
+                <>
+                  <p>{capability.copy}</p>
+                  {capability.secondaryCopy ? <p>{capability.secondaryCopy}</p> : null}
+                </>
+              }
+              headline={capability.title}
+              id={capability.product.toLowerCase()}
+              index={String(index + 1).padStart(2, "0")}
+              insight={capability.quote}
+              key={capability.title}
+              poweredBy={capability.product}
+              visual={<CapabilityVisual capability={capability} />}
+            />
+          ))}
+        </EditorialGrid>
+    </EditorialSection>
   );
 }

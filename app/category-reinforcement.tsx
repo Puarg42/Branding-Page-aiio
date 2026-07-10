@@ -1,8 +1,18 @@
 "use client";
 
-import { motion, useReducedMotion, type Transition, type Variants } from "framer-motion";
+import { useRef, useState } from "react";
+import {
+  motion,
+  useMotionValueEvent,
+  useReducedMotion,
+  useScroll,
+  type Transition,
+  type Variants,
+} from "framer-motion";
 
 import { BrandIllustration } from "../components/brand/BrandIllustration";
+import { EditorialEyebrow } from "../components/brand/EditorialEyebrow";
+import { TheoryReference } from "../components/brand/TheoryReference";
 
 const motionEase = [0.2, 0, 0, 1] as const;
 
@@ -18,22 +28,18 @@ const staticReveal: Variants = {
 
 const ceoMoments = [
   {
-    statement: "Your most experienced expert retires.",
-    support: (
-      <>
-        Nothing is lost.
-        <br />
-        Your organization remembers.
-      </>
-    ),
+    statement: "A key expert leaves.",
+    support: "The context remains available. Decisions do not start from zero.",
   },
   {
-    statement: "Artificial Intelligence answers with confidence.",
-    support: "Because it understands your organization.",
+    statement: "A production issue occurs.",
+    support:
+      "Your organization can trace what changed, what depends on it and who needs to act.",
   },
   {
-    statement: "Your organization continuously develops new capabilities.",
-    support: "Without starting from zero.",
+    statement: "A new regulation appears.",
+    support:
+      "Obligations connect to processes, owners and capabilities before work fragments.",
   },
 ] as const;
 
@@ -48,7 +54,7 @@ const infrastructureStages = [
   },
   {
     era: "Digital Age",
-    foundation: "Knowledge Management",
+    foundation: "Digital Systems",
   },
   {
     era: "AI Age",
@@ -57,11 +63,13 @@ const infrastructureStages = [
   {
     era: "Next Age",
     foundation: "Organizational Intelligence",
+    tone: "cyan",
   },
   {
     era: "Outcome",
-    foundation: "Self-Enabling Organizations",
+    foundation: "Organizational Resilience",
     featured: true,
+    tone: "violet",
   },
 ] as const;
 
@@ -81,27 +89,75 @@ function useReveal(duration = 0.95) {
 }
 
 export function CeoMondayMoment() {
-  const shouldReduceMotion = useReducedMotion();
-  const reveal = useReveal(1);
+  const sectionRef = useRef<HTMLElement>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end end"],
+  });
+
+  useMotionValueEvent(scrollYProgress, "change", (progress) => {
+    const nextIndex = Math.min(
+      ceoMoments.length - 1,
+      Math.max(0, Math.floor(progress * ceoMoments.length)),
+    );
+
+    setActiveIndex((currentIndex) =>
+      currentIndex === nextIndex ? currentIndex : nextIndex,
+    );
+  });
 
   return (
-    <section className="ceo-moment-section" id="monday-morning">
-      <p className="ceo-moment-title">Imagine Monday Morning.</p>
-      {ceoMoments.map((moment, index) => (
-        <section className="ceo-moment" key={moment.statement}>
-          <motion.div
-            className="ceo-moment-copy"
-            {...reveal}
-            transition={{
-              ...reveal.transition,
-              delay: shouldReduceMotion ? 0 : index * 0.04,
-            }}
-          >
-            <h2>{moment.statement}</h2>
-            <p>{moment.support}</p>
-          </motion.div>
-        </section>
-      ))}
+    <section className="ceo-moment-section" id="monday-morning" ref={sectionRef}>
+      <div className="ceo-scrolly-sticky">
+        <div className="ceo-scrolly-shell">
+          <div className="ceo-scrolly-chapter">
+            <EditorialEyebrow>Imagine Monday Morning</EditorialEyebrow>
+            <ol className="ceo-scenario-indicator" aria-label="Monday Morning scenarios">
+              {ceoMoments.map((moment, index) => (
+                <li
+                  className={[
+                    index === activeIndex ? "is-active" : "",
+                    index < activeIndex ? "is-complete" : "",
+                  ]
+                    .filter(Boolean)
+                    .join(" ")}
+                  key={moment.statement}
+                >
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <span>{moment.statement}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+
+          <div className="ceo-scenario-stage" aria-live="polite">
+            {ceoMoments.map((moment, index) => {
+              const cardState =
+                index === activeIndex
+                  ? "is-active"
+                  : index < activeIndex
+                    ? "is-previous"
+                    : "is-upcoming";
+
+              return (
+                <article
+                  aria-hidden={index !== activeIndex}
+                  className={`ceo-moment-card ${cardState}`}
+                  data-step={String(index + 1).padStart(2, "0")}
+                  key={moment.statement}
+                >
+                  <span className="ceo-scenario-number">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <h2>{moment.statement}</h2>
+                  <p>{moment.support}</p>
+                </article>
+              );
+            })}
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
@@ -131,7 +187,7 @@ export function OrganizationMirror() {
               : { duration: 1.1, ease: motionEase, delay: 0.12 }
           }
         >
-          <BrandIllustration variant="BC-001" />
+          <BrandIllustration decorative={false} interactive variant="BC-001" />
         </motion.div>
       </div>
     </section>
@@ -145,17 +201,21 @@ export function CategoryEvolution() {
   return (
     <section className="category-evolution-section" id="category-evolution">
       <motion.div className="category-evolution-intro" {...reveal}>
-        <p className="category-evolution-title">Why Now?</p>
-        <h2>Every technological revolution required new infrastructure.</h2>
+        <EditorialEyebrow>Why Now</EditorialEyebrow>
+        <h2>A new era of complexity requires a new organizational capability.</h2>
       </motion.div>
 
       <div className="category-timeline" aria-label="Why Now infrastructure progression">
         <div className="category-timeline-line" aria-hidden="true" />
         {infrastructureStages.map((stage, index) => (
           <motion.article
-            className={`category-timeline-stage${
-              "featured" in stage && stage.featured ? " is-featured" : ""
-            }`}
+            className={[
+              "category-timeline-stage",
+              "featured" in stage && stage.featured ? "is-featured" : "",
+              "tone" in stage ? `is-${stage.tone}` : "",
+            ]
+              .filter(Boolean)
+              .join(" ")}
             initial="hidden"
             key={stage.era}
             transition={{
@@ -169,7 +229,14 @@ export function CategoryEvolution() {
           >
             <span className="category-stage-dot" aria-hidden="true" />
             <p>{stage.era}</p>
-            <h3>{stage.foundation}</h3>
+            <h3>
+              {stage.foundation === "Organizational Intelligence" ||
+              stage.foundation === "Organizational Resilience" ? (
+                <TheoryReference>{stage.foundation}</TheoryReference>
+              ) : (
+                stage.foundation
+              )}
+            </h3>
           </motion.article>
         ))}
       </div>

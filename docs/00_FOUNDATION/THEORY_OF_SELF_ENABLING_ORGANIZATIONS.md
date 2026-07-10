@@ -1,8 +1,8 @@
-# Theory of Self-Enabling Organizations
+# Theory of Organizational Self-Empowerment
 
 ## Purpose
 
-Defines the future theory behind Self-Enabling Organizations and its implications for aiio, the OIS, product strategy and category design.
+Defines the future theory behind Organizational Self-Empowerment and its implications for aiio, the OIS, product strategy and category design.
 
 ## Table of Contents
 
@@ -11,6 +11,7 @@ Defines the future theory behind Self-Enabling Organizations and its implication
 - Capability Model
 - Organizational Knowledge
 - Organizational Memory
+- Organizational Self-Understanding
 - Organizational Intelligence
 - Strategic Implications
 - Product Implications
@@ -23,12 +24,12 @@ Defines the future theory behind Self-Enabling Organizations and its implication
 
 ## 3. Organizational Memory
 
-## 4. Organizational Understanding
+## 4. Organizational Self-Understanding
 
 ## 5. Organizational Intelligence
 
-## 6. Organizational Enablement
+## 6. Organizational Capabilities
 
-## 7. Organizational Resilience
+## 7. Organizational Self-Empowerment
 
-## 8. Self-Enabling Organizations
+## 8. Organizational Resilience
