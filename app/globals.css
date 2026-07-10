@@ -6047,6 +6047,10 @@ h1 {
   padding: clamp(72px, 7vw, 112px) 0 clamp(88px, 8vw, 134px);
 }
 
+#platform-hero.website-hero > .website-page-shell {
+  transform: translateY(clamp(-60px, -4vw, -44px));
+}
+
 .website-hero h1 {
   color: #ffffff;
   font-size: clamp(4.04rem, 7.5vw, 8.65rem);
@@ -7991,6 +7995,10 @@ h1 {
 
   .website-hero h1 {
     font-size: clamp(2.92rem, 13.1vw, 4.32rem);
+  }
+
+  #platform-hero.website-hero > .website-page-shell {
+    transform: translateY(-32px);
   }
 
   .website-page:has(.website-platform-system-section) .website-hero-visual {
