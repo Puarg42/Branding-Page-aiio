@@ -9913,6 +9913,10 @@ h1 {
   max-width: 560px;
 }
 
+.website-platform-system-copy strong {
+  color: #ffffff;
+}
+
 .website-capability-layer-visual {
   --website-shell-width: min(1180px, calc(100vw - 40px));
   --website-viewport-bleed-right: max(0px, calc((100vw - var(--website-shell-width)) / 2));
