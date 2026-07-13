@@ -1,0 +1,332 @@
+.section {
+  background:
+    radial-gradient(circle at 22% 18%, rgb(179 145 255 / 14%), transparent 34%),
+    radial-gradient(circle at 76% 64%, rgb(36 214 255 / 7%), transparent 32%),
+    linear-gradient(180deg, #020203 0%, #050507 54%, #020203 100%);
+  border-top: 1px solid rgb(255 255 255 / 8%);
+  color: #ffffff;
+  overflow: hidden;
+  padding: clamp(124px, 13vw, 218px) 0 clamp(128px, 14vw, 232px);
+  position: relative;
+}
+
+.section::before,
+.section::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+}
+
+.section::before {
+  background:
+    radial-gradient(circle, rgb(255 255 255 / 32%) 0 1px, transparent 1.5px),
+    radial-gradient(circle, rgb(179 145 255 / 22%) 0 1px, transparent 1.5px);
+  background-position:
+    0 0,
+    34px 52px;
+  background-size:
+    118px 118px,
+    164px 164px;
+  inset: 0;
+  opacity: 0.14;
+}
+
+.section::after {
+  background:
+    linear-gradient(90deg, transparent, rgb(255 255 255 / 8%), transparent),
+    linear-gradient(180deg, transparent, rgb(179 145 255 / 7%), transparent);
+  height: 1px;
+  left: 50%;
+  opacity: 0.72;
+  top: clamp(74px, 8vw, 126px);
+  transform: translateX(-50%);
+  width: min(1180px, calc(100% - 40px));
+}
+
+.shell {
+  display: grid;
+  gap: clamp(54px, 6vw, 96px);
+  margin: 0 auto;
+  position: relative;
+  width: min(1180px, calc(100% - 40px));
+  z-index: 1;
+}
+
+.intro {
+  max-width: 860px;
+}
+
+.intro :global(.editorial-eyebrow) {
+  margin-bottom: clamp(28px, 3vw, 44px);
+}
+
+.intro h2 {
+  color: #ffffff;
+  font-size: clamp(3.9rem, 7.6vw, 8.6rem);
+  letter-spacing: 0;
+  line-height: 0.96;
+  margin: 0;
+  max-width: 940px;
+  text-wrap: balance;
+}
+
+.intro p {
+  color: rgb(255 255 255 / 66%);
+  font-size: clamp(1.06rem, 1.35vw, 1.28rem);
+  line-height: 1.55;
+  margin: clamp(30px, 3.4vw, 52px) 0 0;
+  max-width: 690px;
+}
+
+.field {
+  min-height: clamp(620px, 58vw, 780px);
+  position: relative;
+}
+
+.field::before {
+  background:
+    radial-gradient(circle at 50% 50%, rgb(179 145 255 / 13%), transparent 42%),
+    radial-gradient(circle at 50% 50%, rgb(36 214 255 / 8%), transparent 54%);
+  content: "";
+  filter: blur(4px);
+  inset: 8% 6% 10%;
+  opacity: 0.9;
+  position: absolute;
+}
+
+.field::after {
+  background:
+    linear-gradient(115deg, transparent 8%, rgb(179 145 255 / 10%) 28%, transparent 48%),
+    linear-gradient(24deg, transparent 18%, rgb(36 214 255 / 8%) 42%, transparent 62%);
+  content: "";
+  inset: 12% 8%;
+  opacity: 0.62;
+  position: absolute;
+}
+
+.orbit {
+  border: 1px solid rgb(255 255 255 / 5%);
+  border-radius: 999px;
+  inset: 13% 7% 11%;
+  opacity: 0.8;
+  position: absolute;
+  transform: rotate(-7deg);
+}
+
+.orbit::before,
+.orbit::after {
+  border: 1px solid rgb(179 145 255 / 8%);
+  border-radius: inherit;
+  content: "";
+  inset: 12% 9%;
+  position: absolute;
+}
+
+.orbit::after {
+  border-color: rgb(36 214 255 / 6%);
+  inset: 24% 18%;
+  transform: rotate(16deg);
+}
+
+.thought {
+  --thought-delay: 0s;
+  --thought-duration: 60s;
+  --thought-dx: 12px;
+  --thought-dy: -12px;
+  --thought-x: 50%;
+  --thought-y: 50%;
+
+  animation: thought-drift var(--thought-duration) ease-in-out infinite;
+  animation-delay: var(--thought-delay);
+  left: var(--thought-x);
+  max-width: min(520px, 34vw);
+  opacity: 0.64;
+  position: absolute;
+  scale: 1;
+  top: var(--thought-y);
+  transform: translate(-50%, -50%);
+  transition:
+    filter 420ms ease,
+    opacity 420ms ease,
+    scale 520ms cubic-bezier(0.22, 1, 0.36, 1),
+    translate 520ms cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 2;
+}
+
+.thought:focus-visible {
+  border-radius: 18px;
+  outline: 1px solid rgb(179 145 255 / 68%);
+  outline-offset: 12px;
+}
+
+.thought h3 {
+  color: rgb(255 255 255 / 86%);
+  font-family: var(--font-aiio-heading);
+  font-size: clamp(1.45rem, 2.25vw, 2.55rem);
+  font-weight: 720;
+  letter-spacing: 0;
+  line-height: 1.04;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.thought p {
+  color: rgb(255 255 255 / 66%);
+  font-size: clamp(0.92rem, 1.02vw, 1.02rem);
+  line-height: 1.46;
+  margin: 14px 0 0;
+  max-width: 460px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 360ms ease,
+    transform 420ms ease;
+}
+
+.large h3 {
+  font-size: clamp(1.7rem, 2.8vw, 3.18rem);
+}
+
+.small h3 {
+  font-size: clamp(1.24rem, 1.75vw, 1.9rem);
+}
+
+.violet h3 {
+  text-shadow: 0 0 42px rgb(179 145 255 / 26%);
+}
+
+.cyan h3 {
+  color: rgb(226 250 255 / 88%);
+  text-shadow: 0 0 38px rgb(36 214 255 / 18%);
+}
+
+.quiet h3 {
+  color: rgb(255 255 255 / 70%);
+}
+
+.field:has(.thought:hover) .thought:not(:hover),
+.field:has(.thought:focus-visible) .thought:not(:focus-visible) {
+  filter: blur(0.4px);
+  opacity: 0.28;
+}
+
+.thought:hover,
+.thought:focus-visible {
+  filter: none;
+  opacity: 1;
+  scale: 1.07;
+  translate: 0 -8px;
+  z-index: 4;
+}
+
+.thought:hover p,
+.thought:focus-visible p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.transition {
+  border-left: 1px solid rgb(179 145 255 / 72%);
+  color: rgb(255 255 255 / 76%);
+  font-size: clamp(1.1rem, 1.45vw, 1.34rem);
+  line-height: 1.48;
+  margin: clamp(-18px, -1.5vw, -8px) 0 0 auto;
+  max-width: 640px;
+  padding-left: clamp(22px, 2.6vw, 36px);
+  text-wrap: balance;
+}
+
+@keyframes thought-drift {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: var(--thought-dx) var(--thought-dy);
+  }
+}
+
+@media (max-width: 940px) {
+  .field {
+    min-height: 860px;
+  }
+
+  .thought {
+    max-width: min(430px, 58vw);
+  }
+}
+
+@media (max-width: 680px) {
+  .section {
+    padding: 96px 0 118px;
+  }
+
+  .intro h2 {
+    font-size: clamp(3.1rem, 14vw, 5.4rem);
+  }
+
+  .field {
+    min-height: 980px;
+  }
+
+  .thought {
+    max-width: min(82vw, 360px);
+  }
+
+  .thought:nth-of-type(1) {
+    left: 42%;
+    top: 8%;
+  }
+
+  .thought:nth-of-type(2) {
+    left: 57%;
+    top: 19%;
+  }
+
+  .thought:nth-of-type(3) {
+    left: 43%;
+    top: 31%;
+  }
+
+  .thought:nth-of-type(4) {
+    left: 55%;
+    top: 43%;
+  }
+
+  .thought:nth-of-type(5) {
+    left: 45%;
+    top: 56%;
+  }
+
+  .thought:nth-of-type(6) {
+    left: 56%;
+    top: 68%;
+  }
+
+  .thought:nth-of-type(7) {
+    left: 43%;
+    top: 79%;
+  }
+
+  .thought:nth-of-type(8) {
+    left: 56%;
+    top: 88%;
+  }
+
+  .thought:nth-of-type(9) {
+    left: 45%;
+    top: 96%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .thought {
+    animation: none;
+  }
+
+  .thought,
+  .thought p {
+    transition: none;
+  }
+}

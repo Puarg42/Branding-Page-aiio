@@ -1,5 +1,6 @@
 "use client";
 
+import type { CSSProperties } from "react";
 import {
   motion,
   useReducedMotion,
@@ -7,6 +8,7 @@ import {
   type Variants,
 } from "framer-motion";
 
+import styles from "./organizational-thought-space.module.css";
 import { BrandIllustration } from "../components/brand/BrandIllustration";
 import { EditorialEyebrow } from "../components/brand/EditorialEyebrow";
 import { TheoryReference } from "../components/brand/TheoryReference";
@@ -23,26 +25,125 @@ const staticReveal: Variants = {
   visible: { opacity: 1, y: 0 },
 };
 
-const strategicRealityQuestions = [
+const thoughtSpaceQuestions = [
   {
-    question: "Could your organization explain why work is performed the way it is?",
+    question: "Could your organization explain itself?",
+    context:
+      "Structures, responsibilities and decisions become resilient only when the organization can make its own logic visible.",
+    x: "8%",
+    y: "14%",
+    dx: "18px",
+    dy: "-12px",
+    duration: "52s",
+    delay: "-8s",
+    scale: "large",
+    tone: "violet",
   },
   {
     question: "How dependent is your business on individual experts?",
+    context:
+      "When context lives inside a few minds, continuity depends on people being available at exactly the right moment.",
+    x: "52%",
+    y: "10%",
+    dx: "-14px",
+    dy: "16px",
+    duration: "58s",
+    delay: "-22s",
+    scale: "medium",
+    tone: "cyan",
   },
   {
     question:
-      "Could your organization continue operating after losing key organizational knowledge?",
+      "What part of your advantage exists only inside people's heads?",
+    context:
+      "Competitive advantage becomes fragile when the organization cannot preserve the knowledge that makes it work.",
+    x: "28%",
+    y: "34%",
+    dx: "14px",
+    dy: "18px",
+    duration: "64s",
+    delay: "-31s",
+    scale: "small",
+    tone: "quiet",
   },
   {
     question: "How resilient is your operating model?",
+    context:
+      "Resilience depends on whether the organization can keep understanding itself while conditions change.",
+    x: "67%",
+    y: "36%",
+    dx: "-18px",
+    dy: "-10px",
+    duration: "56s",
+    delay: "-15s",
+    scale: "large",
+    tone: "violet",
   },
   {
     question:
       "Can leadership understand the consequences of strategic decisions before they happen?",
+    context:
+      "Strategy becomes executable when leadership can see how decisions touch processes, capabilities and responsibility.",
+    x: "7%",
+    y: "58%",
+    dx: "16px",
+    dy: "12px",
+    duration: "62s",
+    delay: "-38s",
+    scale: "medium",
+    tone: "cyan",
   },
   {
     question: "Do you really know how your organization creates value?",
+    context:
+      "Value creation becomes governable when the organization can understand the relationships behind its work.",
+    x: "43%",
+    y: "62%",
+    dx: "-16px",
+    dy: "-16px",
+    duration: "54s",
+    delay: "-5s",
+    scale: "large",
+    tone: "violet",
+  },
+  {
+    question: "Can strategy be translated into execution?",
+    context:
+      "Execution improves when strategic intent connects to the capabilities, owners and operating logic that make it real.",
+    x: "74%",
+    y: "68%",
+    dx: "10px",
+    dy: "-18px",
+    duration: "60s",
+    delay: "-27s",
+    scale: "small",
+    tone: "quiet",
+  },
+  {
+    question: "Would the organization still function if critical knowledge disappeared tomorrow?",
+    context:
+      "An intelligent organization reduces the distance between what people know and what the organization can retain.",
+    x: "18%",
+    y: "80%",
+    dx: "-12px",
+    dy: "-14px",
+    duration: "66s",
+    delay: "-44s",
+    scale: "small",
+    tone: "quiet",
+  },
+  {
+    question: "Can your organization learn faster than complexity grows?",
+    context:
+      "The next management capability is the ability to continuously turn organizational reality into shared understanding.",
+    x: "58%",
+    y: "82%",
+    dx: "18px",
+    dy: "10px",
+    duration: "57s",
+    delay: "-12s",
+    scale: "medium",
+    tone: "cyan",
   },
 ] as const;
 
@@ -95,30 +196,50 @@ export function OrganizationalRealityCheck() {
   const reveal = useReveal(0.95);
 
   return (
-    <section className="reality-check-section" id="organizational-reality-check">
-      <motion.div className="reality-check-inner" {...reveal}>
-        <div className="reality-check-header">
-          <EditorialEyebrow>Organizational Reality Check</EditorialEyebrow>
-          <h2>Before organizations can evolve, leaders need to see what is actually true.</h2>
+    <section className={styles.section} id="organizational-reality-check">
+      <motion.div className={styles.shell} {...reveal}>
+        <div className={styles.intro}>
+          <EditorialEyebrow>Thought Space</EditorialEyebrow>
+          <h2>Strategic questions move through every intelligent organization.</h2>
           <p>
-            The decisive questions are rarely operational. They reveal whether the organization can understand itself when complexity, decisions and responsibility begin to move faster than individual memory.
+            They rarely appear one after another. They exist simultaneously, shaping decisions, resilience and the ability to evolve.
           </p>
         </div>
 
-        <ol className="reality-question-list" aria-label="Strategic organizational reality questions">
-          {strategicRealityQuestions.map((item, index) => (
-            <li className="reality-question-item" key={item.question}>
-              <span>{String(index + 1).padStart(2, "0")}</span>
-              <p>{item.question}</p>
-            </li>
+        <div
+          aria-label="Strategic organizational thought space"
+          className={styles.field}
+        >
+          <div className={styles.orbit} aria-hidden="true" />
+          {thoughtSpaceQuestions.map((thought) => (
+            <article
+              className={[
+                styles.thought,
+                styles[thought.scale],
+                styles[thought.tone],
+              ].join(" ")}
+              key={thought.question}
+              style={
+                {
+                  "--thought-delay": thought.delay,
+                  "--thought-duration": thought.duration,
+                  "--thought-dx": thought.dx,
+                  "--thought-dy": thought.dy,
+                  "--thought-x": thought.x,
+                  "--thought-y": thought.y,
+                } as CSSProperties
+              }
+              tabIndex={0}
+            >
+              <h3>{thought.question}</h3>
+              <p>{thought.context}</p>
+            </article>
           ))}
-        </ol>
-
-        <div className="reality-check-transition">
-          <p>
-            If these questions are difficult to answer, the challenge is no longer better documentation. It is Organizational Intelligence.
-          </p>
         </div>
+
+        <p className={styles.transition}>
+          If these questions are difficult to answer, the challenge is no longer better documentation. It is Organizational Intelligence.
+        </p>
       </motion.div>
     </section>
   );
