@@ -1,6 +1,6 @@
 "use client";
 
-import type { CSSProperties } from "react";
+import { useEffect, useState, type CSSProperties } from "react";
 import {
   motion,
   useReducedMotion,
@@ -58,6 +58,23 @@ const thoughtSpaceConcepts = [
     delay: "-26s",
     attentionDelay: "-17s",
     depth: "signal",
+    tone: "cyan",
+  },
+  {
+    concept: "Purpose",
+    question: "Can the organization connect everyday work to strategic intent?",
+    lines: [
+      "Purpose becomes operational when it can be seen inside decisions, roles and capabilities.",
+      "Organizational Intelligence keeps intent connected to the work that makes it real.",
+    ],
+    x: "58%",
+    y: "22%",
+    dx: "-14px",
+    dy: "16px",
+    duration: "87s",
+    delay: "-21s",
+    attentionDelay: "-23s",
+    depth: "foreground",
     tone: "cyan",
   },
   {
@@ -751,7 +768,259 @@ const thoughtSpaceFragments = [
   { x: "35%", y: "83%", size: "5px", duration: "38s", delay: "-29s" },
   { x: "11%", y: "74%", size: "3px", duration: "33s", delay: "-19s" },
   { x: "90%", y: "83%", size: "4px", duration: "37s", delay: "-32s" },
+  { x: "23%", y: "18%", size: "3px", duration: "29s", delay: "-9s" },
+  { x: "52%", y: "12%", size: "4px", duration: "34s", delay: "-22s" },
+  { x: "79%", y: "19%", size: "3px", duration: "31s", delay: "-14s" },
+  { x: "94%", y: "47%", size: "4px", duration: "39s", delay: "-30s" },
+  { x: "62%", y: "36%", size: "2px", duration: "28s", delay: "-18s" },
+  { x: "43%", y: "44%", size: "3px", duration: "33s", delay: "-27s" },
+  { x: "8%", y: "56%", size: "4px", duration: "36s", delay: "-12s" },
+  { x: "18%", y: "66%", size: "2px", duration: "30s", delay: "-23s" },
+  { x: "47%", y: "78%", size: "3px", duration: "35s", delay: "-15s" },
+  { x: "67%", y: "86%", size: "4px", duration: "41s", delay: "-35s" },
+  { x: "83%", y: "76%", size: "2px", duration: "27s", delay: "-20s" },
+  { x: "5%", y: "29%", size: "3px", duration: "37s", delay: "-28s" },
+  { x: "31%", y: "7%", size: "2px", duration: "32s", delay: "-16s" },
+  { x: "73%", y: "7%", size: "3px", duration: "38s", delay: "-24s" },
+  { x: "96%", y: "68%", size: "2px", duration: "31s", delay: "-11s" },
+  { x: "55%", y: "96%", size: "3px", duration: "40s", delay: "-34s" },
 ] as const;
+
+type ThoughtCluster = "foundation" | "intelligence" | "enabler" | "actionCluster" | "outcome";
+
+const primaryThoughtConcepts = [
+  "Memory",
+  "Purpose",
+  "Trust",
+  "Resilience",
+  "Leadership",
+  "Capability",
+  "Execution",
+  "Learning",
+  "Reality",
+  "Adaptation",
+] as const;
+
+const primaryThoughtSet = new Set<string>(primaryThoughtConcepts);
+
+const thoughtClusterByConcept: Record<string, ThoughtCluster> = {
+  Memory: "foundation",
+  Knowledge: "foundation",
+  Learning: "foundation",
+  "Learning Loops": "foundation",
+  Experience: "foundation",
+  Culture: "foundation",
+  Purpose: "intelligence",
+  Context: "intelligence",
+  Capability: "intelligence",
+  Execution: "intelligence",
+  Strategy: "intelligence",
+  Alignment: "intelligence",
+  Decisions: "intelligence",
+  Processes: "intelligence",
+  Flow: "intelligence",
+  Trust: "enabler",
+  Resilience: "enabler",
+  Reality: "enabler",
+  Governance: "enabler",
+  Evidence: "enabler",
+  Risk: "enabler",
+  Continuity: "enabler",
+  Signals: "enabler",
+  Leadership: "actionCluster",
+  Adaptation: "actionCluster",
+  Action: "actionCluster",
+  Change: "actionCluster",
+  Ownership: "actionCluster",
+  Responsibility: "actionCluster",
+  Roles: "actionCluster",
+  Coordination: "actionCluster",
+  Value: "outcome",
+  Maturity: "outcome",
+  Confidence: "outcome",
+  Coherence: "outcome",
+  Principles: "outcome",
+  Architecture: "outcome",
+  Time: "outcome",
+  Decentralization: "outcome",
+  Complexity: "outcome",
+  Interpretation: "outcome",
+};
+
+const thoughtReaderContent: Record<
+  string,
+  {
+    question: string;
+    insights: string[];
+    related: string[];
+  }
+> = {
+  Memory: {
+    question: "What happens when critical organizational knowledge disappears?",
+    insights: [
+      "Organizations repeatedly lose experience when knowledge remains attached to individuals instead of becoming organizational capability.",
+      "Memory is not information. It is accumulated understanding that enables better decisions, faster adaptation and stronger execution.",
+      "Preserving memory turns experience into a sustainable advantage.",
+    ],
+    related: ["Knowledge", "Experience", "Learning", "Culture"],
+  },
+  Purpose: {
+    question: "Can the organization connect everyday work to strategic intent?",
+    insights: [
+      "Purpose becomes operational when strategic intent is visible inside roles, decisions and capabilities.",
+      "Without this connection, purpose remains communication rather than a force that shapes work.",
+      "Organizational Intelligence keeps intent connected to the work that makes it real.",
+    ],
+    related: ["Strategy", "Alignment", "Goals", "Execution"],
+  },
+  Trust: {
+    question: "Can people trust the organization to remember what matters?",
+    insights: [
+      "Trust grows when decisions do not depend on hidden context or individual memory.",
+      "A trusted organization can explain why work happens, who owns it and what consequences a decision creates.",
+      "Shared understanding turns organizational memory into confidence.",
+    ],
+    related: ["Evidence", "Relationships", "Stakeholders", "Decisions"],
+  },
+  Resilience: {
+    question: "Would the organization still function if critical knowledge disappeared tomorrow?",
+    insights: [
+      "Resilience depends on whether the organization can continue understanding itself when people, markets and systems change.",
+      "The more understanding is preserved structurally, the less fragile the operating model becomes.",
+      "A resilient organization adapts without losing coherence.",
+    ],
+    related: ["Continuity", "Adaptation", "Risk", "Stability"],
+  },
+  Leadership: {
+    question: "Can leadership understand consequences before decisions become reality?",
+    insights: [
+      "Strategic decisions touch processes, ownership, capabilities and operating logic.",
+      "Leadership becomes stronger when these relationships are visible before action is taken.",
+      "Understanding turns leadership from directional intent into informed organizational movement.",
+    ],
+    related: ["Ownership", "Responsibility", "Execution", "Trust"],
+  },
+  Capability: {
+    question: "Can understanding become something the organization can use?",
+    insights: [
+      "Knowledge has limited value until it becomes applicable in real work.",
+      "Capability is the point where understanding turns into coordinated action that people and AI can reuse.",
+      "The organization becomes more powerful when capability is no longer dependent on individual memory.",
+    ],
+    related: ["Processes", "Roles", "Action", "Maturity"],
+  },
+  Execution: {
+    question: "Can strategy be translated into the work that makes it real?",
+    insights: [
+      "Execution fails when strategic intent cannot reach the operating model.",
+      "Organizational Intelligence connects intent to work, responsibility and capability.",
+      "The result is not more activity. It is more coherent action.",
+    ],
+    related: ["Strategy", "Decisions", "Performance", "Quality"],
+  },
+  Learning: {
+    question: "Can your organization learn faster than complexity grows?",
+    insights: [
+      "Learning becomes organizational when it survives beyond individual experience.",
+      "Every insight should return to the organization as reusable context, not disappear as a local lesson.",
+      "Continuous learning turns operational experience into future capability.",
+    ],
+    related: ["Memory", "Reflection", "Skills", "Experience"],
+  },
+  Reality: {
+    question: "Does the organization understand what is actually happening?",
+    insights: [
+      "Dashboards show fragments. Organizational reality lives in the relationships between those fragments.",
+      "Understanding reality means connecting work, responsibility, evidence and context into one coherent picture.",
+      "Only then can leadership act on the organization as it truly operates.",
+    ],
+    related: ["Context", "Feedback", "Signals", "Evidence"],
+  },
+  Adaptation: {
+    question: "Can the organization adapt without losing its own logic?",
+    insights: [
+      "Change becomes safer when the organization understands what must remain coherent.",
+      "Adaptation requires memory, context and capability to move together.",
+      "The organization evolves without dissolving into fragmentation.",
+    ],
+    related: ["Change", "Coordination", "Evolution", "Resilience"],
+  },
+};
+
+const thoughtSpaceConnections = [
+  { from: "Memory", to: "Knowledge", cluster: "foundation", bend: -8 },
+  { from: "Memory", to: "Experience", cluster: "foundation", bend: 10 },
+  { from: "Memory", to: "Learning", cluster: "foundation", bend: 12 },
+  { from: "Memory", to: "Culture", cluster: "foundation", bend: -12 },
+  { from: "Learning", to: "Learning Loops", cluster: "foundation", bend: 6 },
+  { from: "Purpose", to: "Strategy", cluster: "intelligence", bend: -10 },
+  { from: "Purpose", to: "Alignment", cluster: "intelligence", bend: 8 },
+  { from: "Purpose", to: "Execution", cluster: "intelligence", bend: 12 },
+  { from: "Capability", to: "Processes", cluster: "intelligence", bend: -7 },
+  { from: "Capability", to: "Roles", cluster: "intelligence", bend: 8 },
+  { from: "Capability", to: "Action", cluster: "intelligence", bend: 10 },
+  { from: "Execution", to: "Decisions", cluster: "intelligence", bend: -9 },
+  { from: "Execution", to: "Value", cluster: "intelligence", bend: 6 },
+  { from: "Context", to: "Reality", cluster: "intelligence", bend: 9 },
+  { from: "Context", to: "Interpretation", cluster: "intelligence", bend: -11 },
+  { from: "Trust", to: "Evidence", cluster: "enabler", bend: -8 },
+  { from: "Trust", to: "Decisions", cluster: "enabler", bend: 8 },
+  { from: "Trust", to: "Leadership", cluster: "enabler", bend: -12 },
+  { from: "Resilience", to: "Continuity", cluster: "enabler", bend: 8 },
+  { from: "Resilience", to: "Risk", cluster: "enabler", bend: -10 },
+  { from: "Resilience", to: "Adaptation", cluster: "enabler", bend: 14 },
+  { from: "Reality", to: "Signals", cluster: "enabler", bend: 6 },
+  { from: "Reality", to: "Evidence", cluster: "enabler", bend: -8 },
+  { from: "Leadership", to: "Ownership", cluster: "actionCluster", bend: -7 },
+  { from: "Leadership", to: "Responsibility", cluster: "actionCluster", bend: 9 },
+  { from: "Leadership", to: "Execution", cluster: "actionCluster", bend: -11 },
+  { from: "Adaptation", to: "Change", cluster: "actionCluster", bend: 7 },
+  { from: "Adaptation", to: "Coordination", cluster: "actionCluster", bend: -9 },
+  { from: "Adaptation", to: "Coherence", cluster: "actionCluster", bend: 11 },
+  { from: "Governance", to: "Principles", cluster: "outcome", bend: -6 },
+  { from: "Governance", to: "Responsibility", cluster: "outcome", bend: 8 },
+  { from: "Value", to: "Maturity", cluster: "outcome", bend: 10 },
+  { from: "Confidence", to: "Evidence", cluster: "outcome", bend: -12 },
+  { from: "Coherence", to: "Alignment", cluster: "outcome", bend: 7 },
+] as const;
+
+const thoughtPositionByConcept = Object.fromEntries(
+  thoughtSpaceConcepts.map((thought) => [
+    thought.concept,
+    { x: Number.parseFloat(thought.x), y: Number.parseFloat(thought.y) },
+  ]),
+) as Record<string, { x: number; y: number }>;
+
+function getThoughtCluster(concept: string): ThoughtCluster {
+  return thoughtClusterByConcept[concept] ?? "foundation";
+}
+
+function getThoughtReader(concept: string) {
+  const thought = thoughtSpaceConcepts.find((item) => item.concept === concept) ?? thoughtSpaceConcepts[0];
+  return (
+    thoughtReaderContent[concept] ?? {
+      question: thought.question,
+      insights: thought.lines,
+      related: [],
+    }
+  );
+}
+
+function getConnectionPath(from: string, to: string, bend = 0) {
+  const start = thoughtPositionByConcept[from];
+  const end = thoughtPositionByConcept[to];
+
+  if (!start || !end) {
+    return "";
+  }
+
+  const firstX = start.x + (end.x - start.x) * 0.36;
+  const secondX = start.x + (end.x - start.x) * 0.64;
+  const firstY = start.y + (end.y - start.y) * 0.36 + bend;
+  const secondY = start.y + (end.y - start.y) * 0.64 - bend;
+
+  return `M ${start.x} ${start.y} C ${firstX} ${firstY}, ${secondX} ${secondY}, ${end.x} ${end.y}`;
+}
 
 const infrastructureStages = [
   {
@@ -800,6 +1069,28 @@ function useReveal(duration = 0.95) {
 
 export function OrganizationalRealityCheck() {
   const reveal = useReveal(0.95);
+  const [autoFocusIndex, setAutoFocusIndex] = useState(0);
+  const [hoverConcept, setHoverConcept] = useState<string | null>(null);
+  const [selectedConcept, setSelectedConcept] = useState<string | null>(null);
+  const [pointer, setPointer] = useState({ active: false, x: 50, y: 50 });
+
+  useEffect(() => {
+    if (selectedConcept || hoverConcept) {
+      return;
+    }
+
+    const interval = window.setInterval(() => {
+      setAutoFocusIndex((index) => (index + 1) % primaryThoughtConcepts.length);
+    }, 7200);
+
+    return () => window.clearInterval(interval);
+  }, [hoverConcept, selectedConcept]);
+
+  const autonomousConcept = primaryThoughtConcepts[autoFocusIndex];
+  const activeConcept = hoverConcept ?? selectedConcept ?? autonomousConcept;
+  const activeReader = getThoughtReader(activeConcept);
+  const activeCluster = getThoughtCluster(activeConcept);
+  const relatedConcepts = activeReader.related;
 
   return (
     <section className={styles.section} id="organizational-reality-check">
@@ -810,76 +1101,199 @@ export function OrganizationalRealityCheck() {
 
         <div
           aria-label="Organizational thought space"
-          className={styles.field}
+          className={styles.experience}
+          style={
+            {
+              "--reader-accent": `var(--thought-${activeCluster})`,
+            } as CSSProperties
+          }
         >
-          <div className={styles.orbit} aria-hidden="true" />
-          <div className={styles.traces} aria-hidden="true">
-            {thoughtSpaceTraces.map((trace, index) => (
-              <span
-                className={[styles.trace, styles[trace.tone]].join(" ")}
-                key={`${trace.x}-${trace.y}-${index}`}
-                style={
-                  {
-                    "--trace-delay": trace.delay,
-                    "--trace-duration": trace.duration,
-                    "--trace-rotate": trace.rotate,
-                    "--trace-width": trace.width,
-                    "--trace-x": trace.x,
-                    "--trace-y": trace.y,
-                  } as CSSProperties
-                }
-              />
-            ))}
-          </div>
-          <div className={styles.fragments} aria-hidden="true">
-            {thoughtSpaceFragments.map((fragment, index) => (
-              <span
-                key={`${fragment.x}-${fragment.y}-${index}`}
-                style={
-                  {
-                    "--fragment-delay": fragment.delay,
-                    "--fragment-duration": fragment.duration,
-                    "--fragment-size": fragment.size,
-                    "--fragment-x": fragment.x,
-                    "--fragment-y": fragment.y,
-                  } as CSSProperties
-                }
-              />
-            ))}
-          </div>
-          {thoughtSpaceConcepts.map((thought) => (
-            <article
-              className={[
-                styles.thought,
-                styles[thought.depth],
-                styles[thought.tone],
-              ].join(" ")}
-              data-concept={thought.concept}
-              key={thought.concept}
-              style={
-                {
-                  "--thought-delay": thought.delay,
-                  "--thought-duration": thought.duration,
-                  "--thought-attention-delay": thought.attentionDelay,
-                  "--thought-dx": thought.dx,
-                  "--thought-dy": thought.dy,
-                  "--thought-x": thought.x,
-                  "--thought-y": thought.y,
-                } as CSSProperties
-              }
-              tabIndex={0}
+          <div
+            className={styles.network}
+            onPointerLeave={() => {
+              setHoverConcept(null);
+              setPointer((current) => ({ ...current, active: false }));
+            }}
+            onPointerMove={(event) => {
+              const rect = event.currentTarget.getBoundingClientRect();
+              setPointer({
+                active: true,
+                x: ((event.clientX - rect.left) / rect.width) * 100,
+                y: ((event.clientY - rect.top) / rect.height) * 100,
+              });
+            }}
+            style={
+              {
+                "--pointer-active": pointer.active ? 1 : 0,
+                "--pointer-x": `${pointer.x}%`,
+                "--pointer-y": `${pointer.y}%`,
+              } as CSSProperties
+            }
+          >
+            <svg
+              aria-hidden="true"
+              className={styles.connections}
+              preserveAspectRatio="none"
+              viewBox="0 0 100 100"
             >
-              <h3>{thought.concept}</h3>
-              <div className={styles.unfold}>
-                <p className={styles.question}>{thought.question}</p>
-                <div className={styles.context}>
-                  {thought.lines.map((line) => (
-                    <p key={line}>{line}</p>
-                  ))}
-                </div>
-              </div>
-            </article>
-          ))}
+              {thoughtSpaceConnections.map((connection) => {
+                const isActive =
+                  connection.from === activeConcept || connection.to === activeConcept;
+                const isRelated =
+                  relatedConcepts.includes(connection.from) || relatedConcepts.includes(connection.to);
+                const path = getConnectionPath(connection.from, connection.to, connection.bend);
+
+                if (!path) {
+                  return null;
+                }
+
+                return (
+                  <path
+                    className={[
+                      styles.connection,
+                      styles[connection.cluster],
+                      isActive ? styles.activeConnection : "",
+                      isRelated ? styles.relatedConnection : "",
+                    ]
+                      .filter(Boolean)
+                      .join(" ")}
+                    d={path}
+                    key={`${connection.from}-${connection.to}`}
+                  />
+                );
+              })}
+            </svg>
+
+            <div className={styles.traces} aria-hidden="true">
+              {thoughtSpaceTraces.map((trace, index) => (
+                <span
+                  className={[styles.trace, styles[trace.tone]].join(" ")}
+                  key={`${trace.x}-${trace.y}-${index}`}
+                  style={
+                    {
+                      "--trace-delay": trace.delay,
+                      "--trace-duration": trace.duration,
+                      "--trace-rotate": trace.rotate,
+                      "--trace-width": trace.width,
+                      "--trace-x": trace.x,
+                      "--trace-y": trace.y,
+                    } as CSSProperties
+                  }
+                />
+              ))}
+            </div>
+
+            <div className={styles.fragments} aria-hidden="true">
+              {thoughtSpaceFragments.map((fragment, index) => (
+                <span
+                  key={`${fragment.x}-${fragment.y}-${index}`}
+                  style={
+                    {
+                      "--fragment-delay": fragment.delay,
+                      "--fragment-duration": fragment.duration,
+                      "--fragment-size": fragment.size,
+                      "--fragment-x": fragment.x,
+                      "--fragment-y": fragment.y,
+                    } as CSSProperties
+                  }
+                />
+              ))}
+            </div>
+
+            {thoughtSpaceConcepts.map((thought) => {
+              const isPrimary = primaryThoughtSet.has(thought.concept);
+              const isActive = activeConcept === thought.concept;
+              const isSelected = selectedConcept === thought.concept;
+              const isRelated = relatedConcepts.includes(thought.concept);
+              const cluster = getThoughtCluster(thought.concept);
+              const nodeClassName = [
+                styles.node,
+                isPrimary ? styles.primaryNode : styles.secondaryNode,
+                styles[cluster],
+                isActive ? styles.activeNode : "",
+                isSelected ? styles.selectedNode : "",
+                isRelated ? styles.relatedNode : "",
+              ]
+                .filter(Boolean)
+                .join(" ");
+              const nodeStyle = {
+                "--node-attention-delay": thought.attentionDelay,
+                "--node-delay": thought.delay,
+                "--node-duration": thought.duration,
+                "--node-dx": thought.dx,
+                "--node-dy": thought.dy,
+                "--node-x": thought.x,
+                "--node-y": thought.y,
+              } as CSSProperties;
+
+              if (isPrimary) {
+                return (
+                  <button
+                    aria-describedby="thought-space-reader"
+                    aria-pressed={isSelected}
+                    className={nodeClassName}
+                    data-concept={thought.concept}
+                    key={thought.concept}
+                    onBlur={() => setHoverConcept(null)}
+                    onClick={() => setSelectedConcept(thought.concept)}
+                    onFocus={() => setHoverConcept(thought.concept)}
+                    onPointerEnter={() => setHoverConcept(thought.concept)}
+                    style={nodeStyle}
+                    type="button"
+                  >
+                    <span className={styles.nodeBody}>
+                      <span className={styles.nodeCore} aria-hidden="true" />
+                      <span className={styles.nodeLabel}>{thought.concept}</span>
+                    </span>
+                  </button>
+                );
+              }
+
+              return (
+                <span
+                  aria-hidden="true"
+                  className={nodeClassName}
+                  data-concept={thought.concept}
+                  key={thought.concept}
+                  style={nodeStyle}
+                >
+                  <span className={styles.nodeBody}>
+                    <span className={styles.nodeCore} />
+                    <span className={styles.nodeLabel}>{thought.concept}</span>
+                  </span>
+                </span>
+              );
+            })}
+          </div>
+
+          <aside
+            aria-live="polite"
+            className={styles.reader}
+            id="thought-space-reader"
+          >
+            <p className={styles.readerEyebrow}>Focus</p>
+            <h3>{activeConcept}</h3>
+            <span className={styles.readerLine} aria-hidden="true" />
+            <p className={styles.readerQuestion}>{activeReader.question}</p>
+            <div className={styles.readerInsights}>
+              {activeReader.insights.map((insight) => (
+                <p key={insight}>
+                  <span aria-hidden="true" />
+                  {insight}
+                </p>
+              ))}
+            </div>
+            <div className={styles.readerRelated} aria-label={`Related concepts for ${activeConcept}`}>
+              {relatedConcepts.map((concept) => (
+                <span key={concept}>{concept}</span>
+              ))}
+            </div>
+            <p className={styles.readerHint}>
+              {selectedConcept
+                ? "Select another concept to redirect attention."
+                : "Hover or select a concept to guide the field."}
+            </p>
+          </aside>
         </div>
       </motion.div>
     </section>

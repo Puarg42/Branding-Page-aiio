@@ -1,8 +1,7 @@
 .section {
   background:
-    radial-gradient(circle at 18% 18%, rgb(179 145 255 / 12%), transparent 34%),
-    radial-gradient(circle at 76% 52%, rgb(36 214 255 / 7%), transparent 36%),
-    radial-gradient(circle at 48% 60%, rgb(255 255 255 / 4%), transparent 42%),
+    radial-gradient(circle at 16% 22%, rgb(179 145 255 / 8%), transparent 30%),
+    radial-gradient(circle at 62% 48%, rgb(36 214 255 / 5%), transparent 34%),
     linear-gradient(180deg, #020203 0%, #050507 52%, #020203 100%);
   border-top: 1px solid rgb(255 255 255 / 8%);
   color: #ffffff;
@@ -11,17 +10,18 @@
   position: relative;
 }
 
-.section::before,
-.section::after {
-  content: "";
-  pointer-events: none;
-  position: absolute;
+.section {
+  --thought-actionCluster: #ffb545;
+  --thought-enabler: #34e4d0;
+  --thought-foundation: #a985ff;
+  --thought-intelligence: #24d6ff;
+  --thought-outcome: #c8a8ff;
 }
 
 .section::before {
   background:
-    radial-gradient(circle, rgb(255 255 255 / 20%) 0 1px, transparent 1.5px),
-    radial-gradient(circle, rgb(179 145 255 / 18%) 0 1px, transparent 1.5px),
+    radial-gradient(circle, rgb(255 255 255 / 18%) 0 1px, transparent 1.5px),
+    radial-gradient(circle, rgb(179 145 255 / 17%) 0 1px, transparent 1.5px),
     radial-gradient(circle, rgb(36 214 255 / 12%) 0 1px, transparent 1.5px);
   background-position:
     0 0,
@@ -31,17 +31,23 @@
     132px 132px,
     190px 190px,
     244px 244px;
+  content: "";
   inset: 0;
-  opacity: 0.11;
+  opacity: 0.1;
+  pointer-events: none;
+  position: absolute;
 }
 
 .section::after {
   background:
     linear-gradient(90deg, transparent, rgb(255 255 255 / 7%), transparent),
     linear-gradient(180deg, transparent, rgb(179 145 255 / 6%), transparent);
+  content: "";
   height: 1px;
   left: 50%;
-  opacity: 0.52;
+  opacity: 0.48;
+  pointer-events: none;
+  position: absolute;
   top: clamp(64px, 7vw, 112px);
   transform: translateX(-50%);
   width: min(1180px, calc(100% - 40px));
@@ -55,51 +61,110 @@
 }
 
 .marker {
-  left: 0;
   position: relative;
-  top: 0;
   z-index: 8;
 }
 
 .marker :global(.editorial-eyebrow) {
-  margin-bottom: clamp(22px, 3.2vw, 44px);
+  margin-bottom: clamp(22px, 3.1vw, 42px);
 }
 
-.field {
+.experience {
+  --reader-accent: var(--thought-foundation);
+
+  display: grid;
+  gap: clamp(28px, 4vw, 54px);
+  grid-template-columns: minmax(0, 1fr) minmax(270px, 0.34fr);
+  min-height: clamp(720px, 62vw, 900px);
+}
+
+.network {
+  --pointer-active: 0;
+  --pointer-x: 50%;
+  --pointer-y: 50%;
+
+  clip-path: inset(-14% 0 -14% -14%);
   isolation: isolate;
-  min-height: clamp(760px, 68vw, 980px);
+  min-height: inherit;
+  overflow: hidden;
   position: relative;
 }
 
-.field::before {
+.network::before {
+  background:
+    radial-gradient(circle at var(--pointer-x) var(--pointer-y), rgb(255 255 255 / 12%), transparent 13%),
+    radial-gradient(circle at var(--pointer-x) var(--pointer-y), rgb(179 145 255 / 12%), transparent 24%);
   content: "";
-  display: none;
+  inset: 0;
+  opacity: calc(var(--pointer-active) * 1);
+  pointer-events: none;
   position: absolute;
+  transition: opacity 260ms ease;
+  z-index: 2;
 }
 
-.field::after {
+.network::after {
+  animation: network-breath 18s ease-in-out infinite;
+  background:
+    linear-gradient(114deg, transparent 10%, rgb(179 145 255 / 7%) 34%, transparent 58%),
+    linear-gradient(24deg, transparent 16%, rgb(36 214 255 / 5%) 48%, transparent 72%);
   content: "";
-  display: none;
+  inset: 6% 0 4%;
+  opacity: 0.46;
+  pointer-events: none;
   position: absolute;
+  z-index: -1;
 }
 
-.orbit {
-  display: none;
-}
-
-.orbit::before,
-.orbit::after {
-  border: 1px solid rgb(179 145 255 / 5%);
-  border-radius: inherit;
-  content: "";
-  inset: 13% 9%;
+.connections {
+  inset: 0;
+  overflow: visible;
+  pointer-events: none;
   position: absolute;
+  z-index: 1;
 }
 
-.orbit::after {
-  border-color: rgb(36 214 255 / 4%);
-  inset: 28% 18%;
-  transform: rotate(17deg);
+.connection {
+  animation:
+    edge-breathe 8s ease-in-out infinite,
+    edge-dash 18s linear infinite;
+  fill: none;
+  opacity: 0.2;
+  stroke: currentColor;
+  stroke-dasharray: 2 14;
+  stroke-linecap: round;
+  stroke-width: 0.16;
+  transition:
+    opacity 300ms ease,
+    stroke-width 300ms ease,
+    filter 300ms ease;
+}
+
+.connection.foundation {
+  color: var(--thought-foundation);
+}
+
+.connection.intelligence {
+  color: var(--thought-intelligence);
+}
+
+.connection.enabler {
+  color: var(--thought-enabler);
+}
+
+.connection.actionCluster {
+  color: var(--thought-actionCluster);
+}
+
+.connection.outcome {
+  color: var(--thought-outcome);
+}
+
+.activeConnection,
+.relatedConnection {
+  filter: drop-shadow(0 0 6px currentColor);
+  opacity: 0.72;
+  stroke-width: 0.32;
 }
 
 .traces,
@@ -107,6 +172,14 @@
   inset: 0;
   pointer-events: none;
   position: absolute;
+}
+
+.traces {
+  z-index: 1;
+}
+
+.fragments {
+  z-index: 2;
 }
 
 .trace {
@@ -145,6 +218,18 @@
   width: 3px;
 }
 
+.trace.violet {
+  color: var(--thought-foundation);
+}
+
+.trace.cyan {
+  color: var(--thought-intelligence);
+}
+
+.trace.quiet {
+  color: rgb(255 255 255 / 40%);
+}
+
 .fragments span {
   --fragment-delay: 0s;
   --fragment-duration: 24s;
@@ -154,352 +239,371 @@
 
   animation: fragment-pulse var(--fragment-duration) ease-in-out infinite;
   animation-delay: var(--fragment-delay);
-  background: rgb(255 255 255 / 56%);
+  background: rgb(255 255 255 / 60%);
   border-radius: 999px;
   box-shadow: 0 0 20px rgb(179 145 255 / 28%);
   height: var(--fragment-size);
   left: var(--fragment-x);
-  opacity: 0.24;
+  opacity: 0.26;
   position: absolute;
   top: var(--fragment-y);
   width: var(--fragment-size);
 }
 
-.thought {
-  --base-blur: 0.15px;
-  --base-opacity: 0.24;
-  --base-scale: 0.5;
-  --peak-blur: 0px;
-  --peak-opacity: 0.62;
-  --peak-scale: 0.72;
-  --thought-attention-delay: 0s;
-  --thought-delay: 0s;
-  --thought-duration: 96s;
-  --thought-dx: 10px;
-  --thought-dy: -10px;
-  --thought-x: 50%;
-  --thought-y: 50%;
+.fragments span:nth-child(3n) {
+  background: var(--thought-intelligence);
+  box-shadow: 0 0 20px rgb(36 214 255 / 24%);
+}
 
-  animation:
-    thought-drift var(--thought-duration) ease-in-out infinite,
-    thought-attention 104s ease-in-out infinite;
-  animation-delay: var(--thought-delay), var(--thought-attention-delay);
-  color: rgb(255 255 255 / 68%);
-  filter: blur(var(--base-blur));
-  left: var(--thought-x);
-  max-width: min(410px, 31vw);
-  opacity: var(--base-opacity);
+.fragments span:nth-child(4n) {
+  background: var(--thought-actionCluster);
+  box-shadow: 0 0 18px rgb(255 181 69 / 20%);
+}
+
+.fragments span:nth-child(5n) {
+  background: var(--thought-enabler);
+  box-shadow: 0 0 18px rgb(52 228 208 / 18%);
+}
+
+.node {
+  --node-attention-delay: 0s;
+  --node-delay: 0s;
+  --node-duration: 96s;
+  --node-dx: 10px;
+  --node-dy: -10px;
+  --node-x: 50%;
+  --node-y: 50%;
+
+  animation: node-drift var(--node-duration) ease-in-out infinite;
+  animation-delay: var(--node-delay);
+  appearance: none;
+  background: transparent;
+  border: 0;
+  color: var(--thought-foundation);
+  cursor: default;
+  font: inherit;
+  left: var(--node-x);
+  padding: 0;
   position: absolute;
-  scale: var(--base-scale);
-  top: var(--thought-y);
+  top: var(--node-y);
   transform: translate(-50%, -50%);
-  transition:
-    color 520ms ease,
-    filter 520ms ease,
-    opacity 520ms ease,
-    scale 620ms cubic-bezier(0.22, 1, 0.36, 1);
-  z-index: 2;
-  width: max-content;
-}
-
-.thought::before,
-.thought::after {
-  background: linear-gradient(90deg, transparent, currentColor, transparent);
-  content: "";
-  height: 1px;
-  opacity: 0;
-  pointer-events: none;
-  position: absolute;
-  transform-origin: left center;
-  transition:
-    opacity 520ms ease,
-    width 680ms ease;
-  width: 0;
-}
-
-.thought::before {
-  left: 12%;
-  top: 50%;
-  transform: rotate(-18deg);
-}
-
-.thought::after {
-  right: 14%;
-  top: 26%;
-  transform: rotate(22deg);
-}
-
-.thought:focus-visible {
-  border-radius: 18px;
-  outline: 1px solid rgb(179 145 255 / 64%);
-  outline-offset: 10px;
-}
-
-.thought h3 {
-  color: rgb(255 255 255 / 78%);
-  font-family: var(--font-aiio-heading);
-  font-size: clamp(0.94rem, 1.22vw, 1.45rem);
-  font-weight: 720;
-  letter-spacing: 0;
-  line-height: 1;
-  margin: 0;
-  text-wrap: balance;
-  transition:
-    color 520ms ease,
-    text-shadow 520ms ease;
-}
-
-.unfold {
-  left: 0;
-  max-width: min(420px, 34vw);
-  opacity: 0;
-  pointer-events: none;
-  position: absolute;
-  top: calc(100% + 10px);
-  transform: translateY(10px);
-  transition:
-    opacity 480ms ease,
-    transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.question {
-  color: #ffffff;
-  font-family: var(--font-aiio-heading);
-  font-size: clamp(1rem, 1.34vw, 1.48rem);
-  font-weight: 720;
-  letter-spacing: 0;
-  line-height: 1.08;
-  margin: 0;
-  text-wrap: balance;
-}
-
-.context {
-  display: grid;
-  gap: 8px;
-  margin-top: clamp(14px, 1.5vw, 20px);
-  max-width: 390px;
-}
-
-.context p {
-  color: rgb(255 255 255 / 58%);
-  font-size: clamp(0.82rem, 0.9vw, 0.96rem);
-  line-height: 1.46;
-  margin: 0;
-}
-
-.foreground {
-  --base-blur: 0px;
-  --base-opacity: 0.48;
-  --base-scale: 0.82;
-  --peak-opacity: 0.96;
-  --peak-scale: 1.08;
-
   z-index: 4;
 }
 
-.foreground h3 {
-  font-size: clamp(1.16rem, 1.68vw, 2rem);
+.primaryNode {
+  cursor: pointer;
+  z-index: 6;
 }
 
-.signal {
-  --base-blur: 0.05px;
-  --base-opacity: 0.38;
-  --base-scale: 0.68;
-  --peak-opacity: 0.82;
-  --peak-scale: 0.96;
-
-  z-index: 3;
+.secondaryNode {
+  pointer-events: none;
+  z-index: 4;
 }
 
-.midground {
-  --base-blur: 0.12px;
-  --base-opacity: 0.32;
-  --base-scale: 0.56;
-  --peak-opacity: 0.66;
-  --peak-scale: 0.78;
-
-  z-index: 2;
+.nodeBody {
+  animation:
+    node-depth 12s ease-in-out infinite,
+    node-attention 92s ease-in-out infinite;
+  animation-delay: var(--node-delay), var(--node-attention-delay);
+  align-items: center;
+  display: inline-flex;
+  filter: blur(0.18px);
+  gap: 8px;
+  opacity: 0.42;
+  scale: 0.68;
+  transition:
+    filter 280ms ease,
+    opacity 280ms ease,
+    scale 320ms cubic-bezier(0.22, 1, 0.36, 1),
+    translate 320ms cubic-bezier(0.22, 1, 0.36, 1);
+  white-space: nowrap;
 }
 
-.midground h3,
-.background h3 {
-  font-size: clamp(0.72rem, 0.95vw, 1.08rem);
+.nodeCore {
+  background: currentColor;
+  border-radius: 999px;
+  box-shadow:
+    0 0 12px currentColor,
+    0 0 28px rgb(255 255 255 / 10%);
+  flex: 0 0 auto;
+  height: 7px;
+  opacity: 0.9;
+  width: 7px;
 }
 
-.background {
-  --base-blur: 0.25px;
-  --base-opacity: 0.17;
-  --base-scale: 0.42;
-  --peak-opacity: 0.44;
-  --peak-scale: 0.6;
-
-  z-index: 1;
+.nodeLabel {
+  color: rgb(255 255 255 / 72%);
+  font-family: var(--font-aiio-heading);
+  font-size: clamp(0.76rem, 0.9vw, 1rem);
+  font-weight: 720;
+  letter-spacing: 0;
+  line-height: 1;
+  text-shadow: 0 0 20px color-mix(in srgb, currentColor 24%, transparent);
 }
 
-.violet {
-  color: rgb(179 145 255);
+.primaryNode .nodeBody {
+  filter: blur(0);
+  opacity: 0.72;
+  scale: 1;
 }
 
-.violet h3 {
-  text-shadow: 0 0 42px rgb(179 145 255 / 22%);
+.primaryNode .nodeCore {
+  height: 11px;
+  width: 11px;
 }
 
-.cyan {
-  color: rgb(36 214 255);
+.primaryNode .nodeLabel {
+  color: rgb(255 255 255 / 88%);
+  font-size: clamp(1.05rem, 1.65vw, 1.9rem);
 }
 
-.cyan h3 {
-  color: rgb(226 250 255 / 84%);
-  text-shadow: 0 0 36px rgb(36 214 255 / 16%);
+.foundation {
+  color: var(--thought-foundation);
 }
 
-.quiet {
-  color: rgb(255 255 255 / 62%);
+.intelligence {
+  color: var(--thought-intelligence);
 }
 
-.quiet h3 {
-  color: rgb(255 255 255 / 62%);
+.enabler {
+  color: var(--thought-enabler);
 }
 
-.field:has(.thought:hover) .thought:not(:hover),
-.field:has(.thought:focus-visible) .thought:not(:focus-visible) {
-  animation-play-state: paused, paused;
-  filter: blur(0.35px);
-  opacity: 0.22;
+.actionCluster {
+  color: var(--thought-actionCluster);
 }
 
-.field:has(.thought[data-concept="Memory"]:is(:hover, :focus-visible)) .thought:is([data-concept="Knowledge"], [data-concept="Learning"], [data-concept="Experience"], [data-concept="Learning Loops"]),
-.field:has(.thought[data-concept="Knowledge"]:is(:hover, :focus-visible)) .thought:is([data-concept="Memory"], [data-concept="Experience"], [data-concept="Learning"]),
-.field:has(.thought[data-concept="Learning"]:is(:hover, :focus-visible)) .thought:is([data-concept="Memory"], [data-concept="Experience"], [data-concept="Learning Loops"]),
-.field:has(.thought[data-concept="Leadership"]:is(:hover, :focus-visible)) .thought:is([data-concept="Trust"], [data-concept="Execution"], [data-concept="Responsibility"], [data-concept="Ownership"]),
-.field:has(.thought[data-concept="Trust"]:is(:hover, :focus-visible)) .thought:is([data-concept="Leadership"], [data-concept="Evidence"], [data-concept="Decisions"]),
-.field:has(.thought[data-concept="Execution"]:is(:hover, :focus-visible)) .thought:is([data-concept="Leadership"], [data-concept="Strategy"], [data-concept="Action"], [data-concept="Responsibility"]),
-.field:has(.thought[data-concept="Capability"]:is(:hover, :focus-visible)) .thought:is([data-concept="Action"], [data-concept="Maturity"], [data-concept="Execution"], [data-concept="Processes"]),
-.field:has(.thought[data-concept="Action"]:is(:hover, :focus-visible)) .thought:is([data-concept="Capability"], [data-concept="Execution"], [data-concept="Value"]),
-.field:has(.thought[data-concept="Context"]:is(:hover, :focus-visible)) .thought:is([data-concept="Reality"], [data-concept="Interpretation"], [data-concept="Evidence"], [data-concept="Decisions"]),
-.field:has(.thought[data-concept="Reality"]:is(:hover, :focus-visible)) .thought:is([data-concept="Context"], [data-concept="Signals"], [data-concept="Interpretation"]),
-.field:has(.thought[data-concept="Resilience"]:is(:hover, :focus-visible)) .thought:is([data-concept="Continuity"], [data-concept="Adaptation"], [data-concept="Risk"], [data-concept="Change"]),
-.field:has(.thought[data-concept="Adaptation"]:is(:hover, :focus-visible)) .thought:is([data-concept="Resilience"], [data-concept="Change"], [data-concept="Coherence"]),
-.field:has(.thought[data-concept="Governance"]:is(:hover, :focus-visible)) .thought:is([data-concept="Principles"], [data-concept="Roles"], [data-concept="Responsibility"], [data-concept="Evidence"]),
-.field:has(.thought[data-concept="Value"]:is(:hover, :focus-visible)) .thought:is([data-concept="Strategy"], [data-concept="Flow"], [data-concept="Coordination"], [data-concept="Alignment"]),
-.field:has(.thought[data-concept="Complexity"]:is(:hover, :focus-visible)) .thought:is([data-concept="Signals"], [data-concept="Architecture"], [data-concept="Decentralization"], [data-concept="Coherence"]) {
-  filter: blur(0) !important;
-  opacity: 0.58 !important;
-  scale: 0.66 !important;
-  translate: 3px -2px !important;
-  z-index: 5;
+.outcome {
+  color: var(--thought-outcome);
 }
 
-.thought:hover,
-.thought:focus-visible {
-  animation: thought-drift var(--thought-duration) ease-in-out infinite;
-  animation-delay: var(--thought-delay);
-  color: rgb(179 145 255);
-  filter: none;
+.network:has(.activeNode) .node:not(.activeNode, .relatedNode) .nodeBody {
+  filter: blur(0.6px);
+  opacity: 0.18;
+  scale: 0.48;
+}
+
+.network:has(.activeNode) .node:not(.activeNode, .relatedNode) .nodeLabel {
+  color: rgb(255 255 255 / 38%);
+}
+
+.primaryNode:hover .nodeBody,
+.primaryNode:focus-visible .nodeBody,
+.activeNode .nodeBody {
+  animation: node-drift-active 4.8s ease-in-out infinite;
+  filter: blur(0);
   opacity: 1;
-  scale: 0.94;
-  z-index: 12;
+  scale: 1.28;
+  translate: 0 -6px;
 }
 
-.thought:hover::before,
-.thought:hover::after,
-.thought:focus-visible::before,
-.thought:focus-visible::after {
-  opacity: 0.3;
-  width: clamp(84px, 12vw, 150px);
+.selectedNode .nodeBody {
+  scale: 1.42;
 }
 
-.thought:hover h3,
-.thought:focus-visible h3 {
+.relatedNode .nodeBody {
+  filter: blur(0);
+  opacity: 0.72;
+  scale: 0.82;
+  translate: 2px -2px;
+}
+
+.primaryNode:hover .nodeLabel,
+.primaryNode:focus-visible .nodeLabel,
+.activeNode .nodeLabel {
   color: #ffffff;
-  text-shadow: 0 0 54px rgb(179 145 255 / 28%);
+  text-shadow:
+    0 0 22px currentColor,
+    0 0 44px currentColor;
 }
 
-.thought:hover .unfold,
-.thought:focus-visible .unfold {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
+.primaryNode:focus-visible {
+  border-radius: 999px;
+  outline: 1px solid color-mix(in srgb, currentColor 70%, white 10%);
+  outline-offset: 10px;
 }
 
-.thought[data-concept="Trust"] .unfold,
-.thought[data-concept="Dependencies"] .unfold,
-.thought[data-concept="Evidence"] .unfold,
-.thought[data-concept="Complexity"] .unfold,
-.thought[data-concept="Responsibility"] .unfold,
-.thought[data-concept="Adaptation"] .unfold,
-.thought[data-concept="Coordination"] .unfold {
-  left: auto;
-  right: 0;
+.reader {
+  align-self: stretch;
+  border-left: 1px solid rgb(255 255 255 / 12%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: inherit;
+  padding-left: clamp(26px, 3vw, 48px);
+  position: relative;
 }
 
-.thought[data-concept="Learning"] .unfold,
-.thought[data-concept="Reality"] .unfold,
-.thought[data-concept="Adaptation"] .unfold,
-.thought[data-concept="Processes"] .unfold,
-.thought[data-concept="Continuity"] .unfold,
-.thought[data-concept="Principles"] .unfold,
-.thought[data-concept="Time"] .unfold,
-.thought[data-concept="Decentralization"] .unfold,
-.thought[data-concept="Confidence"] .unfold,
-.thought[data-concept="Coordination"] .unfold {
-  bottom: calc(100% + 10px);
-  top: auto;
-  transform: translateY(-10px);
+.reader::before {
+  background: linear-gradient(180deg, transparent, var(--reader-accent), transparent);
+  content: "";
+  height: 38%;
+  left: -1px;
+  opacity: 0.55;
+  position: absolute;
+  top: 31%;
+  width: 1px;
 }
 
-.thought[data-concept="Learning"]:hover .unfold,
-.thought[data-concept="Learning"]:focus-visible .unfold,
-.thought[data-concept="Reality"]:hover .unfold,
-.thought[data-concept="Reality"]:focus-visible .unfold,
-.thought[data-concept="Adaptation"]:hover .unfold,
-.thought[data-concept="Adaptation"]:focus-visible .unfold,
-.thought[data-concept="Processes"]:hover .unfold,
-.thought[data-concept="Processes"]:focus-visible .unfold,
-.thought[data-concept="Continuity"]:hover .unfold,
-.thought[data-concept="Continuity"]:focus-visible .unfold,
-.thought[data-concept="Principles"]:hover .unfold,
-.thought[data-concept="Principles"]:focus-visible .unfold,
-.thought[data-concept="Time"]:hover .unfold,
-.thought[data-concept="Time"]:focus-visible .unfold,
-.thought[data-concept="Decentralization"]:hover .unfold,
-.thought[data-concept="Decentralization"]:focus-visible .unfold,
-.thought[data-concept="Confidence"]:hover .unfold,
-.thought[data-concept="Confidence"]:focus-visible .unfold,
-.thought[data-concept="Coordination"]:hover .unfold,
-.thought[data-concept="Coordination"]:focus-visible .unfold {
-  transform: translateY(0);
+.readerEyebrow {
+  color: var(--reader-accent);
+  font-family: var(--font-aiio-heading);
+  font-size: 0.72rem;
+  font-weight: 760;
+  letter-spacing: 0.26em;
+  line-height: 1;
+  margin: 0 0 clamp(18px, 2vw, 26px);
+  text-transform: uppercase;
 }
 
-@keyframes thought-drift {
+.reader h3 {
+  color: #ffffff;
+  font-family: var(--font-aiio-heading);
+  font-size: clamp(2.3rem, 4.2vw, 4.8rem);
+  font-weight: 760;
+  letter-spacing: 0;
+  line-height: 0.92;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.readerLine {
+  background: linear-gradient(90deg, var(--reader-accent), transparent);
+  display: block;
+  height: 1px;
+  margin: clamp(24px, 2.8vw, 36px) 0;
+  opacity: 0.72;
+  width: min(260px, 72%);
+}
+
+.readerQuestion {
+  color: rgb(255 255 255 / 90%);
+  font-family: var(--font-aiio-heading);
+  font-size: clamp(1.02rem, 1.18vw, 1.26rem);
+  font-weight: 720;
+  line-height: 1.18;
+  margin: 0 0 clamp(24px, 2.6vw, 34px);
+  text-wrap: balance;
+}
+
+.readerInsights {
+  display: grid;
+  gap: 14px;
+}
+
+.readerInsights p {
+  color: rgb(255 255 255 / 64%);
+  font-size: clamp(0.88rem, 0.98vw, 1rem);
+  line-height: 1.5;
+  margin: 0;
+  padding-left: 20px;
+  position: relative;
+}
+
+.readerInsights p span {
+  background: var(--reader-accent);
+  border-radius: 999px;
+  box-shadow: 0 0 14px var(--reader-accent);
+  height: 5px;
+  left: 0;
+  position: absolute;
+  top: 0.65em;
+  width: 5px;
+}
+
+.readerRelated {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: clamp(26px, 3vw, 40px);
+}
+
+.readerRelated span {
+  border: 1px solid color-mix(in srgb, var(--reader-accent) 38%, transparent);
+  border-radius: 999px;
+  color: rgb(255 255 255 / 76%);
+  font-size: 0.75rem;
+  line-height: 1;
+  padding: 8px 10px;
+}
+
+.readerHint {
+  color: rgb(255 255 255 / 34%);
+  font-size: 0.78rem;
+  line-height: 1.4;
+  margin: clamp(28px, 3vw, 42px) 0 0;
+}
+
+@keyframes node-drift {
   0%,
   100% {
     translate: 0 0;
   }
 
-  50% {
-    translate: calc(var(--thought-dx) * 1.35) calc(var(--thought-dy) * 1.35);
+  35% {
+    translate: calc(var(--node-dx) * 1.15) calc(var(--node-dy) * 1.15);
+  }
+
+  68% {
+    translate: calc(var(--node-dy) * -0.55) calc(var(--node-dx) * 0.5);
   }
 }
 
-@keyframes thought-attention {
+@keyframes node-depth {
   0%,
   100% {
-    filter: blur(var(--base-blur));
-    opacity: var(--base-opacity);
-    scale: var(--base-scale);
+    opacity: 0.44;
+    scale: 0.68;
   }
 
-  9% {
-    filter: blur(var(--peak-blur));
-    opacity: var(--peak-opacity);
-    scale: var(--peak-scale);
+  48% {
+    opacity: 0.62;
+    scale: 0.76;
+  }
+}
+
+@keyframes node-attention {
+  0%,
+  100% {
+    filter: blur(0.2px);
   }
 
-  20% {
-    filter: blur(var(--base-blur));
-    opacity: var(--base-opacity);
-    scale: var(--base-scale);
+  10% {
+    filter: blur(0);
+    opacity: 0.9;
+    scale: 1.05;
+  }
+
+  23% {
+    filter: blur(0.12px);
+  }
+}
+
+@keyframes node-drift-active {
+  0%,
+  100% {
+    translate: 0 -6px;
+  }
+
+  50% {
+    translate: 5px -10px;
+  }
+}
+
+@keyframes edge-breathe {
+  0%,
+  100% {
+    opacity: 0.14;
+  }
+
+  48% {
+    opacity: 0.32;
+  }
+}
+
+@keyframes edge-dash {
+  to {
+    stroke-dashoffset: -160;
   }
 }
 
@@ -513,7 +617,7 @@
   42%,
   66%,
   74% {
-    opacity: 0.2;
+    opacity: 0.18;
   }
 }
 
@@ -526,7 +630,7 @@
   }
 
   64% {
-    opacity: 0.42;
+    opacity: 0.38;
   }
 
   80% {
@@ -543,61 +647,46 @@
   }
 
   48% {
-    opacity: 0.44;
+    opacity: 0.48;
     scale: 1;
   }
 }
 
-@keyframes neural-breath {
+@keyframes network-breath {
   0%,
   100% {
-    opacity: 0.4;
-    transform: rotate(-2deg) scale(0.985);
+    opacity: 0.32;
+    transform: scale(0.99) rotate(-0.5deg);
   }
 
   50% {
-    opacity: 0.64;
-    transform: rotate(1deg) scale(1.015);
-  }
-}
-
-@keyframes field-breath {
-  0%,
-  100% {
-    opacity: 0.62;
-    transform: scale(0.99);
-  }
-
-  50% {
-    opacity: 0.9;
-    transform: scale(1.015);
-  }
-}
-
-@keyframes orbit-breath {
-  0%,
-  100% {
-    opacity: 0.36;
-    transform: rotate(-8deg) scale(0.98);
-  }
-
-  50% {
-    opacity: 0.62;
-    transform: rotate(-4deg) scale(1.02);
+    opacity: 0.54;
+    transform: scale(1.015) rotate(0.5deg);
   }
 }
 
 @media (max-width: 980px) {
-  .field {
-    min-height: 1040px;
+  .experience {
+    grid-template-columns: 1fr;
   }
 
-  .thought {
-    max-width: min(440px, 58vw);
+  .network {
+    min-height: clamp(680px, 92vw, 860px);
   }
 
-  .unfold {
-    max-width: min(480px, 58vw);
+  .reader {
+    border-left: 0;
+    border-top: 1px solid rgb(255 255 255 / 12%);
+    min-height: auto;
+    padding: clamp(34px, 6vw, 58px) 0 0;
+  }
+
+  .reader::before {
+    background: linear-gradient(90deg, var(--reader-accent), transparent);
+    height: 1px;
+    left: 0;
+    top: -1px;
+    width: min(360px, 72%);
   }
 }
 
@@ -610,69 +699,42 @@
     width: min(1180px, calc(100% - 28px));
   }
 
-  .field {
-    min-height: 1280px;
+  .network {
+    min-height: 760px;
   }
 
-  .field::before {
-    inset: 0 -18% 5%;
+  .primaryNode .nodeLabel {
+    font-size: clamp(0.95rem, 5vw, 1.45rem);
   }
 
-  .orbit {
-    inset: 9% -28% 8%;
+  .secondaryNode .nodeLabel {
+    font-size: 0.72rem;
   }
 
-  .thought {
-    max-width: min(84vw, 360px);
-  }
-
-  .foreground h3 {
-    font-size: clamp(1rem, 7vw, 1.72rem);
-  }
-
-  .question {
-    font-size: clamp(1.06rem, 5.6vw, 1.52rem);
-  }
-
-  .context p {
-    font-size: 0.9rem;
-  }
-
-  .unfold {
-    max-width: min(84vw, 360px);
+  .reader h3 {
+    font-size: clamp(2.2rem, 16vw, 4rem);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .field::before,
-  .field::after,
-  .orbit,
+  .connection,
+  .network::after,
+  .node,
+  .nodeBody,
   .trace,
   .trace::after,
-  .fragments span,
-  .thought {
+  .fragments span {
     animation: none;
   }
 
-  .thought {
-    filter: blur(var(--base-blur));
-    opacity: var(--base-opacity);
-    scale: var(--base-scale);
+  .connection {
+    opacity: 0.24;
   }
 
-  .trace {
-    opacity: 0.08;
-  }
-
-  .fragments span {
-    opacity: 0.16;
-  }
-
-  .thought,
-  .thought::before,
-  .thought::after,
-  .thought h3,
-  .unfold {
-    transition: none;
+  .nodeBody {
+    transition:
+      filter 180ms ease,
+      opacity 180ms ease,
+      scale 180ms ease;
   }
 }
