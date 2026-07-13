@@ -13804,6 +13804,7 @@ section[id],
   --academy-accent-muted: rgb(179 145 255 / 72%);
   --academy-card-glow: rgb(179 145 255 / 7%);
   --academy-next-accent: rgb(255 184 77);
+  --capability-accent: 179 145 255;
 
   box-shadow:
     0 24px 80px rgb(0 0 0 / 34%),
@@ -13824,6 +13825,7 @@ section[id],
   --academy-accent-muted: rgb(190 194 202 / 68%);
   --academy-card-glow: rgb(190 194 202 / 6%);
   --academy-next-accent: rgb(36 214 255);
+  --capability-accent: 190 194 202;
 }
 
 .academy-journey-card[data-capability="understanding"] {
@@ -13832,6 +13834,7 @@ section[id],
   --academy-accent-muted: rgb(36 214 255 / 72%);
   --academy-card-glow: rgb(36 214 255 / 7%);
   --academy-next-accent: rgb(179 145 255);
+  --capability-accent: 36 214 255;
 }
 
 .academy-journey-card[data-capability="application"] {
@@ -13840,6 +13843,7 @@ section[id],
   --academy-accent-muted: rgb(179 145 255 / 74%);
   --academy-card-glow: rgb(179 145 255 / 7%);
   --academy-next-accent: rgb(255 184 77);
+  --capability-accent: 179 145 255;
 }
 
 .academy-journey-card[data-capability="mastery"] {
@@ -13847,6 +13851,7 @@ section[id],
   --academy-accent-soft: rgb(255 184 77 / 8%);
   --academy-accent-muted: rgb(255 184 77 / 72%);
   --academy-card-glow: rgb(255 184 77 / 7%);
+  --capability-accent: 255 184 77;
 }
 
 .academy-journey-card:not(:last-child)::after {
@@ -13995,6 +14000,22 @@ section[id],
   transform: translate(4px, -0.02em);
 }
 
+.academy-module-cta.website-text-link {
+  --editorial-arrow-color: var(--academy-accent);
+
+  border-color: rgb(var(--capability-accent, 179 145 255) / 30%);
+  color: rgb(255 255 255 / 88%);
+  font-family: var(--font-aiio-heading);
+  margin-top: auto;
+  width: fit-content;
+}
+
+.academy-module-cta.website-text-link:hover,
+.academy-module-cta.website-text-link:focus-visible {
+  background: rgb(var(--capability-accent, 179 145 255) / 9%);
+  border-color: rgb(var(--capability-accent, 179 145 255) / 48%);
+}
+
 .academy-journey-card > .editorial-card-body {
   display: grid;
   gap: 0;
@@ -14015,7 +14036,8 @@ section[id],
   margin-top: 0;
 }
 
-.academy-journey-card .academy-text-link {
+.academy-journey-card .academy-text-link,
+.academy-journey-card .academy-module-cta {
   align-self: end;
   margin-top: 0;
   padding-top: 0;
@@ -14108,7 +14130,8 @@ section[id],
     margin-top: 32px;
   }
 
-  .academy-journey-card .academy-text-link {
+  .academy-journey-card .academy-text-link,
+  .academy-journey-card .academy-module-cta {
     margin-top: auto;
     padding-top: 34px;
   }

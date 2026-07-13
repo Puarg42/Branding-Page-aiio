@@ -177,8 +177,8 @@ export default function AcademyPage() {
                 <span>Learning Outcome</span>
                 <p>{module.outcome}</p>
               </div>
-              <Link className="academy-text-link" href="#academy-formats">
-                View Module <span aria-hidden="true">-&gt;</span>
+              <Link className="website-text-link academy-module-cta" href="#academy-formats">
+                View Module <EditorialJumpArrow />
               </Link>
             </EditorialCard>
           ))}
