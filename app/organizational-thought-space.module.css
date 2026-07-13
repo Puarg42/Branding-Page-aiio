@@ -72,40 +72,19 @@
 }
 
 .field::before {
-  animation: field-breath 32s ease-in-out infinite;
-  background:
-    radial-gradient(circle at 44% 44%, rgb(179 145 255 / 13%), transparent 38%),
-    radial-gradient(circle at 62% 58%, rgb(36 214 255 / 6%), transparent 48%);
   content: "";
-  filter: blur(4px);
-  inset: 2% 2% 7%;
-  opacity: 0.8;
+  display: none;
   position: absolute;
-  z-index: -2;
 }
 
 .field::after {
-  animation: neural-breath 38s ease-in-out infinite;
-  background:
-    linear-gradient(112deg, transparent 9%, rgb(179 145 255 / 10%) 29%, transparent 52%),
-    linear-gradient(28deg, transparent 16%, rgb(36 214 255 / 7%) 43%, transparent 67%),
-    linear-gradient(164deg, transparent 18%, rgb(255 255 255 / 4%) 50%, transparent 76%);
   content: "";
-  inset: 9% 5%;
-  opacity: 0.55;
+  display: none;
   position: absolute;
-  transform: rotate(-2deg);
-  z-index: -1;
 }
 
 .orbit {
-  animation: orbit-breath 42s ease-in-out infinite;
-  border: 1px solid rgb(255 255 255 / 3%);
-  border-radius: 999px;
-  inset: 12% 4% 9%;
-  opacity: 0.54;
-  position: absolute;
-  transform: rotate(-8deg);
+  display: none;
 }
 
 .orbit::before,
@@ -180,7 +159,7 @@
   box-shadow: 0 0 20px rgb(179 145 255 / 28%);
   height: var(--fragment-size);
   left: var(--fragment-x);
-  opacity: 0.18;
+  opacity: 0.24;
   position: absolute;
   top: var(--fragment-y);
   width: var(--fragment-size);
@@ -188,7 +167,7 @@
 
 .thought {
   --base-blur: 0.15px;
-  --base-opacity: 0.2;
+  --base-opacity: 0.24;
   --base-scale: 0.5;
   --peak-blur: 0px;
   --peak-opacity: 0.62;
@@ -203,7 +182,7 @@
 
   animation:
     thought-drift var(--thought-duration) ease-in-out infinite,
-    thought-attention 138s ease-in-out infinite;
+    thought-attention 104s ease-in-out infinite;
   animation-delay: var(--thought-delay), var(--thought-attention-delay);
   color: rgb(255 255 255 / 68%);
   filter: blur(var(--base-blur));
@@ -220,6 +199,7 @@
     opacity 520ms ease,
     scale 620ms cubic-bezier(0.22, 1, 0.36, 1);
   z-index: 2;
+  width: max-content;
 }
 
 .thought::before,
@@ -270,9 +250,12 @@
 }
 
 .unfold {
-  max-width: min(520px, 42vw);
+  left: 0;
+  max-width: min(420px, 34vw);
   opacity: 0;
   pointer-events: none;
+  position: absolute;
+  top: calc(100% + 10px);
   transform: translateY(10px);
   transition:
     opacity 480ms ease,
@@ -282,11 +265,11 @@
 .question {
   color: #ffffff;
   font-family: var(--font-aiio-heading);
-  font-size: clamp(1.22rem, 1.78vw, 2rem);
+  font-size: clamp(1rem, 1.34vw, 1.48rem);
   font-weight: 720;
   letter-spacing: 0;
   line-height: 1.08;
-  margin: clamp(14px, 1.6vw, 22px) 0 0;
+  margin: 0;
   text-wrap: balance;
 }
 
@@ -294,12 +277,12 @@
   display: grid;
   gap: 8px;
   margin-top: clamp(14px, 1.5vw, 20px);
-  max-width: 470px;
+  max-width: 390px;
 }
 
 .context p {
-  color: rgb(255 255 255 / 66%);
-  font-size: clamp(0.9rem, 0.98vw, 1.03rem);
+  color: rgb(255 255 255 / 58%);
+  font-size: clamp(0.82rem, 0.9vw, 0.96rem);
   line-height: 1.46;
   margin: 0;
 }
@@ -309,7 +292,7 @@
   --base-opacity: 0.48;
   --base-scale: 0.82;
   --peak-opacity: 0.96;
-  --peak-scale: 1.05;
+  --peak-scale: 1.08;
 
   z-index: 4;
 }
@@ -323,17 +306,17 @@
   --base-opacity: 0.38;
   --base-scale: 0.68;
   --peak-opacity: 0.82;
-  --peak-scale: 0.92;
+  --peak-scale: 0.96;
 
   z-index: 3;
 }
 
 .midground {
-  --base-blur: 0.25px;
-  --base-opacity: 0.24;
-  --base-scale: 0.52;
-  --peak-opacity: 0.58;
-  --peak-scale: 0.72;
+  --base-blur: 0.12px;
+  --base-opacity: 0.32;
+  --base-scale: 0.56;
+  --peak-opacity: 0.66;
+  --peak-scale: 0.78;
 
   z-index: 2;
 }
@@ -344,11 +327,11 @@
 }
 
 .background {
-  --base-blur: 0.55px;
-  --base-opacity: 0.1;
-  --base-scale: 0.36;
-  --peak-opacity: 0.36;
-  --peak-scale: 0.54;
+  --base-blur: 0.25px;
+  --base-opacity: 0.17;
+  --base-scale: 0.42;
+  --peak-opacity: 0.44;
+  --peak-scale: 0.6;
 
   z-index: 1;
 }
@@ -381,8 +364,30 @@
 .field:has(.thought:hover) .thought:not(:hover),
 .field:has(.thought:focus-visible) .thought:not(:focus-visible) {
   animation-play-state: paused, paused;
-  filter: blur(0.7px);
-  opacity: 0.12;
+  filter: blur(0.35px);
+  opacity: 0.22;
+}
+
+.field:has(.thought[data-concept="Memory"]:is(:hover, :focus-visible)) .thought:is([data-concept="Knowledge"], [data-concept="Learning"], [data-concept="Experience"], [data-concept="Learning Loops"]),
+.field:has(.thought[data-concept="Knowledge"]:is(:hover, :focus-visible)) .thought:is([data-concept="Memory"], [data-concept="Experience"], [data-concept="Learning"]),
+.field:has(.thought[data-concept="Learning"]:is(:hover, :focus-visible)) .thought:is([data-concept="Memory"], [data-concept="Experience"], [data-concept="Learning Loops"]),
+.field:has(.thought[data-concept="Leadership"]:is(:hover, :focus-visible)) .thought:is([data-concept="Trust"], [data-concept="Execution"], [data-concept="Responsibility"], [data-concept="Ownership"]),
+.field:has(.thought[data-concept="Trust"]:is(:hover, :focus-visible)) .thought:is([data-concept="Leadership"], [data-concept="Evidence"], [data-concept="Decisions"]),
+.field:has(.thought[data-concept="Execution"]:is(:hover, :focus-visible)) .thought:is([data-concept="Leadership"], [data-concept="Strategy"], [data-concept="Action"], [data-concept="Responsibility"]),
+.field:has(.thought[data-concept="Capability"]:is(:hover, :focus-visible)) .thought:is([data-concept="Action"], [data-concept="Maturity"], [data-concept="Execution"], [data-concept="Processes"]),
+.field:has(.thought[data-concept="Action"]:is(:hover, :focus-visible)) .thought:is([data-concept="Capability"], [data-concept="Execution"], [data-concept="Value"]),
+.field:has(.thought[data-concept="Context"]:is(:hover, :focus-visible)) .thought:is([data-concept="Reality"], [data-concept="Interpretation"], [data-concept="Evidence"], [data-concept="Decisions"]),
+.field:has(.thought[data-concept="Reality"]:is(:hover, :focus-visible)) .thought:is([data-concept="Context"], [data-concept="Signals"], [data-concept="Interpretation"]),
+.field:has(.thought[data-concept="Resilience"]:is(:hover, :focus-visible)) .thought:is([data-concept="Continuity"], [data-concept="Adaptation"], [data-concept="Risk"], [data-concept="Change"]),
+.field:has(.thought[data-concept="Adaptation"]:is(:hover, :focus-visible)) .thought:is([data-concept="Resilience"], [data-concept="Change"], [data-concept="Coherence"]),
+.field:has(.thought[data-concept="Governance"]:is(:hover, :focus-visible)) .thought:is([data-concept="Principles"], [data-concept="Roles"], [data-concept="Responsibility"], [data-concept="Evidence"]),
+.field:has(.thought[data-concept="Value"]:is(:hover, :focus-visible)) .thought:is([data-concept="Strategy"], [data-concept="Flow"], [data-concept="Coordination"], [data-concept="Alignment"]),
+.field:has(.thought[data-concept="Complexity"]:is(:hover, :focus-visible)) .thought:is([data-concept="Signals"], [data-concept="Architecture"], [data-concept="Decentralization"], [data-concept="Coherence"]) {
+  filter: blur(0) !important;
+  opacity: 0.58 !important;
+  scale: 0.66 !important;
+  translate: 3px -2px !important;
+  z-index: 5;
 }
 
 .thought:hover,
@@ -392,7 +397,7 @@
   color: rgb(179 145 255);
   filter: none;
   opacity: 1;
-  scale: 1.08;
+  scale: 0.94;
   z-index: 12;
 }
 
@@ -401,7 +406,7 @@
 .thought:focus-visible::before,
 .thought:focus-visible::after {
   opacity: 0.3;
-  width: clamp(120px, 16vw, 210px);
+  width: clamp(84px, 12vw, 150px);
 }
 
 .thought:hover h3,
@@ -417,6 +422,55 @@
   transform: translateY(0);
 }
 
+.thought[data-concept="Trust"] .unfold,
+.thought[data-concept="Dependencies"] .unfold,
+.thought[data-concept="Evidence"] .unfold,
+.thought[data-concept="Complexity"] .unfold,
+.thought[data-concept="Responsibility"] .unfold,
+.thought[data-concept="Adaptation"] .unfold,
+.thought[data-concept="Coordination"] .unfold {
+  left: auto;
+  right: 0;
+}
+
+.thought[data-concept="Learning"] .unfold,
+.thought[data-concept="Reality"] .unfold,
+.thought[data-concept="Adaptation"] .unfold,
+.thought[data-concept="Processes"] .unfold,
+.thought[data-concept="Continuity"] .unfold,
+.thought[data-concept="Principles"] .unfold,
+.thought[data-concept="Time"] .unfold,
+.thought[data-concept="Decentralization"] .unfold,
+.thought[data-concept="Confidence"] .unfold,
+.thought[data-concept="Coordination"] .unfold {
+  bottom: calc(100% + 10px);
+  top: auto;
+  transform: translateY(-10px);
+}
+
+.thought[data-concept="Learning"]:hover .unfold,
+.thought[data-concept="Learning"]:focus-visible .unfold,
+.thought[data-concept="Reality"]:hover .unfold,
+.thought[data-concept="Reality"]:focus-visible .unfold,
+.thought[data-concept="Adaptation"]:hover .unfold,
+.thought[data-concept="Adaptation"]:focus-visible .unfold,
+.thought[data-concept="Processes"]:hover .unfold,
+.thought[data-concept="Processes"]:focus-visible .unfold,
+.thought[data-concept="Continuity"]:hover .unfold,
+.thought[data-concept="Continuity"]:focus-visible .unfold,
+.thought[data-concept="Principles"]:hover .unfold,
+.thought[data-concept="Principles"]:focus-visible .unfold,
+.thought[data-concept="Time"]:hover .unfold,
+.thought[data-concept="Time"]:focus-visible .unfold,
+.thought[data-concept="Decentralization"]:hover .unfold,
+.thought[data-concept="Decentralization"]:focus-visible .unfold,
+.thought[data-concept="Confidence"]:hover .unfold,
+.thought[data-concept="Confidence"]:focus-visible .unfold,
+.thought[data-concept="Coordination"]:hover .unfold,
+.thought[data-concept="Coordination"]:focus-visible .unfold {
+  transform: translateY(0);
+}
+
 @keyframes thought-drift {
   0%,
   100% {
@@ -424,7 +478,7 @@
   }
 
   50% {
-    translate: var(--thought-dx) var(--thought-dy);
+    translate: calc(var(--thought-dx) * 1.35) calc(var(--thought-dy) * 1.35);
   }
 }
 
@@ -455,9 +509,11 @@
     opacity: 0;
   }
 
+  28%,
   42%,
-  58% {
-    opacity: 0.18;
+  66%,
+  74% {
+    opacity: 0.2;
   }
 }
 

@@ -734,6 +734,10 @@ const thoughtSpaceTraces = [
   { x: "64%", y: "74%", width: "21%", rotate: "18deg", duration: "39s", delay: "-8s", tone: "violet" },
   { x: "10%", y: "78%", width: "18%", rotate: "-24deg", duration: "48s", delay: "-39s", tone: "quiet" },
   { x: "72%", y: "31%", width: "16%", rotate: "28deg", duration: "44s", delay: "-21s", tone: "cyan" },
+  { x: "27%", y: "41%", width: "26%", rotate: "-31deg", duration: "36s", delay: "-16s", tone: "violet" },
+  { x: "49%", y: "61%", width: "18%", rotate: "32deg", duration: "40s", delay: "-34s", tone: "quiet" },
+  { x: "70%", y: "52%", width: "19%", rotate: "-11deg", duration: "37s", delay: "-27s", tone: "cyan" },
+  { x: "19%", y: "86%", width: "24%", rotate: "9deg", duration: "42s", delay: "-6s", tone: "violet" },
 ] as const;
 
 const thoughtSpaceFragments = [
@@ -850,6 +854,7 @@ export function OrganizationalRealityCheck() {
                 styles[thought.depth],
                 styles[thought.tone],
               ].join(" ")}
+              data-concept={thought.concept}
               key={thought.concept}
               style={
                 {
