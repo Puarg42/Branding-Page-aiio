@@ -16,10 +16,9 @@ const navItems: MenuLink[] = [
   { href: "/platform", label: "Platform" },
   { href: "/success-stories", label: "Business Impact" },
   { href: "/thinking", label: "Thinking" },
-  { href: "/live-demo/kontakt", label: "Get Started" },
   { href: "/partners", label: "Partners" },
-  { href: "/academy", label: "Academy" },
   { href: "/company", label: "Company" },
+  { href: "/live-demo/kontakt", label: "Get Started" },
 ] as const;
 
 function isExternalLink(href: string) {
