@@ -1,6 +1,6 @@
 import { MainHeader } from "./main-navigation";
 import { CapabilityJourney } from "./capability-journey";
-import { CategoryEvolution, CeoMondayMoment } from "./category-reinforcement";
+import { CategoryEvolution, OrganizationalRealityCheck } from "./category-reinforcement";
 import { BrandIllustration } from "../components/brand/BrandIllustration";
 import {
   EditorialCard,
@@ -49,7 +49,7 @@ const trustSignals = [
 
 const homeSectionNavigator = [
   { id: "home-hero", label: "Hero" },
-  { id: "monday-morning", label: "Monday" },
+  { id: "organizational-reality-check", label: "Reality Check" },
   { id: "category-evolution", label: "Why Now" },
   { id: "organizational-intelligence", label: "Missing Capability" },
   { id: "architektur", label: "System" },
@@ -271,7 +271,7 @@ export default function Home() {
       <div className="home-page-story">
         <TrustLogoMarquee />
         <Hero />
-        <CeoMondayMoment />
+        <OrganizationalRealityCheck />
         <CategoryEvolution />
         <ConceptBreakthrough />
         <OisArchitecture />

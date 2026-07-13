@@ -1,11 +1,8 @@
 "use client";
 
-import { useRef, useState } from "react";
 import {
   motion,
-  useMotionValueEvent,
   useReducedMotion,
-  useScroll,
   type Transition,
   type Variants,
 } from "framer-motion";
@@ -26,20 +23,26 @@ const staticReveal: Variants = {
   visible: { opacity: 1, y: 0 },
 };
 
-const ceoMoments = [
+const strategicRealityQuestions = [
   {
-    statement: "A key expert leaves.",
-    support: "The context remains available. Decisions do not start from zero.",
+    question: "Could your organization explain why work is performed the way it is?",
   },
   {
-    statement: "A production issue occurs.",
-    support:
-      "Your organization can trace what changed, what depends on it and who needs to act.",
+    question: "How dependent is your business on individual experts?",
   },
   {
-    statement: "A new regulation appears.",
-    support:
-      "Obligations connect to processes, owners and capabilities before work fragments.",
+    question:
+      "Could your organization continue operating after losing key organizational knowledge?",
+  },
+  {
+    question: "How resilient is your operating model?",
+  },
+  {
+    question:
+      "Can leadership understand the consequences of strategic decisions before they happen?",
+  },
+  {
+    question: "Do you really know how your organization creates value?",
   },
 ] as const;
 
@@ -88,76 +91,35 @@ function useReveal(duration = 0.95) {
   };
 }
 
-export function CeoMondayMoment() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const [activeIndex, setActiveIndex] = useState(0);
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start start", "end end"],
-  });
-
-  useMotionValueEvent(scrollYProgress, "change", (progress) => {
-    const nextIndex = Math.min(
-      ceoMoments.length - 1,
-      Math.max(0, Math.floor(progress * ceoMoments.length)),
-    );
-
-    setActiveIndex((currentIndex) =>
-      currentIndex === nextIndex ? currentIndex : nextIndex,
-    );
-  });
+export function OrganizationalRealityCheck() {
+  const reveal = useReveal(0.95);
 
   return (
-    <section className="ceo-moment-section" id="monday-morning" ref={sectionRef}>
-      <div className="ceo-scrolly-sticky">
-        <div className="ceo-scrolly-shell">
-          <div className="ceo-scrolly-chapter">
-            <EditorialEyebrow>Imagine Monday Morning</EditorialEyebrow>
-            <ol className="ceo-scenario-indicator" aria-label="Monday Morning scenarios">
-              {ceoMoments.map((moment, index) => (
-                <li
-                  className={[
-                    index === activeIndex ? "is-active" : "",
-                    index < activeIndex ? "is-complete" : "",
-                  ]
-                    .filter(Boolean)
-                    .join(" ")}
-                  key={moment.statement}
-                >
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                  <span>{moment.statement}</span>
-                </li>
-              ))}
-            </ol>
-          </div>
-
-          <div className="ceo-scenario-stage" aria-live="polite">
-            {ceoMoments.map((moment, index) => {
-              const cardState =
-                index === activeIndex
-                  ? "is-active"
-                  : index < activeIndex
-                    ? "is-previous"
-                    : "is-upcoming";
-
-              return (
-                <article
-                  aria-hidden={index !== activeIndex}
-                  className={`ceo-moment-card ${cardState}`}
-                  data-step={String(index + 1).padStart(2, "0")}
-                  key={moment.statement}
-                >
-                  <span className="ceo-scenario-number">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  <h2>{moment.statement}</h2>
-                  <p>{moment.support}</p>
-                </article>
-              );
-            })}
-          </div>
+    <section className="reality-check-section" id="organizational-reality-check">
+      <motion.div className="reality-check-inner" {...reveal}>
+        <div className="reality-check-header">
+          <EditorialEyebrow>Organizational Reality Check</EditorialEyebrow>
+          <h2>Before organizations can evolve, leaders need to see what is actually true.</h2>
+          <p>
+            The decisive questions are rarely operational. They reveal whether the organization can understand itself when complexity, decisions and responsibility begin to move faster than individual memory.
+          </p>
         </div>
-      </div>
+
+        <ol className="reality-question-list" aria-label="Strategic organizational reality questions">
+          {strategicRealityQuestions.map((item, index) => (
+            <li className="reality-question-item" key={item.question}>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <p>{item.question}</p>
+            </li>
+          ))}
+        </ol>
+
+        <div className="reality-check-transition">
+          <p>
+            If these questions are difficult to answer, the challenge is no longer better documentation. It is Organizational Intelligence.
+          </p>
+        </div>
+      </motion.div>
     </section>
   );
 }
