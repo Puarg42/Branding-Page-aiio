@@ -346,7 +346,7 @@ export default function CompanyPage() {
           <h2>Help shape the future of Organizational Intelligence.</h2>
           <EditorialCTAGroup className="company-journey-actions" ariaLabel="Company actions">
             <Link className="button hero-button" href="/live-demo/kontakt">
-              Request a Demo <EditorialJumpArrow />
+              Request a conversation <EditorialJumpArrow />
             </Link>
             <Link className="button hero-button secondary" href="/partners">
               Become a Partner <EditorialJumpArrow />

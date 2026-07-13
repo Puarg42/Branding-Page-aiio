@@ -13,7 +13,7 @@ const sourceLabels: Record<string, string> = {
   "/company": "Company",
   "/datenschutz": "Privacy",
   "/impressum": "Legal",
-  "/live-demo/kontakt": "Request Demo",
+  "/live-demo/kontakt": "Request a conversation",
   "/partners": "Partners",
   "/platform": "Platform",
   "/thinking": "Thinking",

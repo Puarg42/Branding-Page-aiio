@@ -26,7 +26,7 @@ export default function ContactPage() {
           <div className="website-contact-panel">
             <p>Tell us what you want to understand, build or evaluate.</p>
             <Link className="website-final-button" href="/live-demo/kontakt">
-              Request Demo
+              Request a conversation
             </Link>
           </div>
         </div>

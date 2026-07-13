@@ -175,7 +175,7 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
             Explore the Platform
           </Link>
           <Link className="button secondary" href="/live-demo/kontakt">
-            Request a Demo
+            Request a conversation
           </Link>
         </div>
       </EditorialSection>

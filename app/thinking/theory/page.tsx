@@ -196,7 +196,7 @@ export default function TheoryPage() {
           <ExecutiveCTA
             copy="See how Organizational Intelligence becomes operational inside real organizations."
             headline="Turn theory into organizational reality."
-            primary={{ href: "/live-demo/kontakt", label: "Request a Demo" }}
+            primary={{ href: "/live-demo/kontakt", label: "Request a conversation" }}
             secondary={{ href: "/platform", label: "Explore the Platform" }}
           />
         </div>

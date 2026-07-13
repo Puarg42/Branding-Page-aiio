@@ -98,9 +98,9 @@ export default function DemoKontaktPage() {
               themselves, identify where Organizational Intelligence creates
               value and decide what should happen next.
             </p>
-            <EditorialCTAGroup ariaLabel="Request demo action">
+            <EditorialCTAGroup ariaLabel="Request conversation action">
               <a className="request-demo-button" href="#request-demo-form">
-                Request a Conversation
+                Request a conversation
               </a>
             </EditorialCTAGroup>
           </div>
@@ -127,7 +127,7 @@ export default function DemoKontaktPage() {
                 next conversation.
               </p>
               <a className="request-demo-person-link" href="#request-demo-form">
-                Request a Conversation
+                Request a conversation
               </a>
             </div>
           </aside>
@@ -237,7 +237,7 @@ export default function DemoKontaktPage() {
               </span>
             </label>
             <button className="request-demo-submit" type="submit">
-              Request a Conversation
+              Request a conversation
             </button>
           </form>
       </EditorialSection>
@@ -261,7 +261,7 @@ export default function DemoKontaktPage() {
           </div>
       </EditorialSection>
       <EditorialNavigation
-        ariaLabel="Request demo sections"
+        ariaLabel="Request conversation sections"
         sections={requestDemoSectionNavigator}
       />
     </main>

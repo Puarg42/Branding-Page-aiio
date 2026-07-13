@@ -192,7 +192,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
         />
         <div className="editorial-cta-group">
           <Link className="button" href="/live-demo/kontakt">
-            Request a Demo
+            Request a conversation
           </Link>
           <Link className="button secondary" href="/contact">
             Contact aiio

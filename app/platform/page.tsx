@@ -389,7 +389,7 @@ export default function PlatformPage() {
       <ExecutiveCTA
         copy="Experience how the Organizational Intelligence System connects your organizational reality into one continuously evolving foundation."
         headline="See Organizational Intelligence in action."
-        primary={{ href: "/live-demo/kontakt", label: "Request a Demo" }}
+        primary={{ href: "/live-demo/kontakt", label: "Request a conversation" }}
         secondary={{ href: "/thinking/theory", label: "Explore the Theory" }}
       />
       <PlatformEditorialExperience />
