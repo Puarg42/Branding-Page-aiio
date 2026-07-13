@@ -74,7 +74,7 @@ function Hero() {
             Explore the system
           </a>
           <a className="button hero-button secondary" href="/live-demo/kontakt">
-            Request a demo
+            Request a Conversation
           </a>
         </EditorialCTAGroup>
       </div>
@@ -253,7 +253,7 @@ function ExecutiveCTA() {
         </div>
         <EditorialCTAGroup className="executive-cta-actions" ariaLabel="Executive actions">
           <a className="button hero-button" href="/live-demo/kontakt">
-            Request a demo
+            Request a Conversation
           </a>
           <a className="button hero-button secondary" href="/platform">
             Explore the system

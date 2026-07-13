@@ -126,7 +126,7 @@ export default function AcademyPage() {
                 Start Learning <EditorialJumpArrow />
               </Link>
               <Link className="button secondary" href="/live-demo/kontakt">
-                Request a Demo <EditorialJumpArrow />
+                Request a Conversation <EditorialJumpArrow />
               </Link>
             </EditorialCTAGroup>
           </div>
@@ -217,7 +217,7 @@ export default function AcademyPage() {
       <ExecutiveCTA
         copy="Every organization develops capability differently. The capability system they build is always the same: Organizational Intelligence."
         headline="Start developing Organizational Intelligence capabilities."
-        primary={{ href: "/live-demo/kontakt", label: "Request a Demo" }}
+        primary={{ href: "/live-demo/kontakt", label: "Request a Conversation" }}
         secondary={{ href: "/platform", label: "Explore the Platform" }}
       />
 

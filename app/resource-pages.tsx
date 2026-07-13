@@ -1215,7 +1215,7 @@ function BusinessImpactPage() {
       <ExecutiveCTA
         copy="Discover how organizations transform knowledge into measurable business capability."
         headline="Create measurable Organizational Intelligence."
-        primary={{ href: "/live-demo/kontakt", label: "Request a Demo" }}
+        primary={{ href: "/live-demo/kontakt", label: "Request a Conversation" }}
         secondary={{ href: "/platform", label: "Explore the Platform" }}
       />
 
