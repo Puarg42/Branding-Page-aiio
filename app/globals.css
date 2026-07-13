@@ -7607,6 +7607,17 @@ h1 {
   color: #ffffff;
 }
 
+@media (min-width: 1101px) {
+  .request-demo-hero-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 398px);
+  }
+
+  .request-demo-person {
+    max-width: 386px;
+    transform: translate(clamp(18px, 2.2vw, 34px), clamp(26px, 3vw, 46px));
+  }
+}
+
 .request-demo-section,
 .request-demo-form-section {
   border-bottom: 1px solid rgb(255 255 255 / 8%);
