@@ -25,124 +25,181 @@ const staticReveal: Variants = {
   visible: { opacity: 1, y: 0 },
 };
 
-const thoughtSpaceQuestions = [
+const thoughtSpaceConcepts = [
   {
-    question: "Could your organization explain itself?",
-    context:
-      "Structures, responsibilities and decisions become resilient only when the organization can make its own logic visible.",
-    x: "8%",
-    y: "14%",
+    concept: "Memory",
+    question: "What happens when critical organizational knowledge disappears?",
+    lines: [
+      "Organizations repeatedly lose experience when knowledge remains attached to individuals.",
+      "Memory becomes strategic when it turns into reusable organizational capability.",
+    ],
+    x: "12%",
+    y: "17%",
     dx: "18px",
-    dy: "-12px",
-    duration: "52s",
-    delay: "-8s",
-    scale: "large",
+    dy: "-14px",
+    duration: "72s",
+    delay: "-10s",
+    depth: "near",
     tone: "violet",
   },
   {
-    question: "How dependent is your business on individual experts?",
-    context:
-      "When context lives inside a few minds, continuity depends on people being available at exactly the right moment.",
-    x: "52%",
-    y: "10%",
-    dx: "-14px",
-    dy: "16px",
-    duration: "58s",
-    delay: "-22s",
-    scale: "medium",
+    concept: "Context",
+    question: "Can leadership see why work happens the way it does?",
+    lines: [
+      "Decisions become fragile when context is scattered across systems, documents and memory.",
+      "Understanding begins when relationships become visible.",
+    ],
+    x: "48%",
+    y: "13%",
+    dx: "-16px",
+    dy: "18px",
+    duration: "84s",
+    delay: "-26s",
+    depth: "mid",
     tone: "cyan",
   },
   {
-    question:
-      "What part of your advantage exists only inside people's heads?",
-    context:
-      "Competitive advantage becomes fragile when the organization cannot preserve the knowledge that makes it work.",
-    x: "28%",
-    y: "34%",
-    dx: "14px",
-    dy: "18px",
-    duration: "64s",
-    delay: "-31s",
-    scale: "small",
+    concept: "Ownership",
+    question: "Who carries responsibility when the organization changes?",
+    lines: [
+      "Accountability weakens when ownership is implicit.",
+      "Intelligent organizations preserve responsibility as part of their operating reality.",
+    ],
+    x: "76%",
+    y: "22%",
+    dx: "12px",
+    dy: "-16px",
+    duration: "92s",
+    delay: "-44s",
+    depth: "far",
     tone: "quiet",
   },
   {
-    question: "How resilient is your operating model?",
-    context:
-      "Resilience depends on whether the organization can keep understanding itself while conditions change.",
-    x: "67%",
-    y: "36%",
-    dx: "-18px",
-    dy: "-10px",
-    duration: "56s",
-    delay: "-15s",
-    scale: "large",
+    concept: "Resilience",
+    question: "Would the organization still function if critical knowledge disappeared tomorrow?",
+    lines: [
+      "Resilience depends on whether the organization can keep understanding itself.",
+      "Not only when people remember, but when conditions change.",
+    ],
+    x: "62%",
+    y: "39%",
+    dx: "-20px",
+    dy: "-12px",
+    duration: "78s",
+    delay: "-18s",
+    depth: "near",
     tone: "violet",
   },
   {
-    question:
-      "Can leadership understand the consequences of strategic decisions before they happen?",
-    context:
-      "Strategy becomes executable when leadership can see how decisions touch processes, capabilities and responsibility.",
-    x: "7%",
-    y: "58%",
-    dx: "16px",
+    concept: "Leadership",
+    question: "Can leadership understand consequences before decisions become reality?",
+    lines: [
+      "Strategic decisions touch processes, owners, capabilities and operating logic.",
+      "The organization becomes more governable when these consequences can be understood early.",
+    ],
+    x: "19%",
+    y: "47%",
+    dx: "18px",
     dy: "12px",
-    duration: "62s",
+    duration: "88s",
     delay: "-38s",
-    scale: "medium",
+    depth: "mid",
     tone: "cyan",
   },
   {
-    question: "Do you really know how your organization creates value?",
-    context:
-      "Value creation becomes governable when the organization can understand the relationships behind its work.",
+    concept: "Capability",
+    question: "Can understanding become something the organization can use?",
+    lines: [
+      "Knowledge has limited value until it becomes applicable.",
+      "Capability is the point where understanding turns into coordinated action.",
+    ],
     x: "43%",
     y: "62%",
-    dx: "-16px",
-    dy: "-16px",
-    duration: "54s",
-    delay: "-5s",
-    scale: "large",
+    dx: "-18px",
+    dy: "-18px",
+    duration: "76s",
+    delay: "-7s",
+    depth: "near",
     tone: "violet",
   },
   {
-    question: "Can strategy be translated into execution?",
-    context:
-      "Execution improves when strategic intent connects to the capabilities, owners and operating logic that make it real.",
-    x: "74%",
-    y: "68%",
-    dx: "10px",
-    dy: "-18px",
-    duration: "60s",
-    delay: "-27s",
-    scale: "small",
+    concept: "Execution",
+    question: "Can strategy be translated into the work that makes it real?",
+    lines: [
+      "Execution fails when strategic intent cannot reach the operating model.",
+      "Intelligence connects intent to work, ownership and capability.",
+    ],
+    x: "79%",
+    y: "64%",
+    dx: "14px",
+    dy: "-20px",
+    duration: "86s",
+    delay: "-31s",
+    depth: "far",
     tone: "quiet",
   },
   {
-    question: "Would the organization still function if critical knowledge disappeared tomorrow?",
-    context:
-      "An intelligent organization reduces the distance between what people know and what the organization can retain.",
-    x: "18%",
-    y: "80%",
-    dx: "-12px",
-    dy: "-14px",
-    duration: "66s",
-    delay: "-44s",
-    scale: "small",
-    tone: "quiet",
-  },
-  {
+    concept: "Learning",
     question: "Can your organization learn faster than complexity grows?",
-    context:
-      "The next management capability is the ability to continuously turn organizational reality into shared understanding.",
+    lines: [
+      "Learning becomes organizational when it survives beyond individual experience.",
+      "The system becomes stronger every time reality is understood again.",
+    ],
+    x: "24%",
+    y: "79%",
+    dx: "-14px",
+    dy: "-16px",
+    duration: "94s",
+    delay: "-52s",
+    depth: "far",
+    tone: "quiet",
+  },
+  {
+    concept: "Reality",
+    question: "Does the organization understand what is actually happening?",
+    lines: [
+      "Dashboards show fragments.",
+      "Organizational Intelligence connects fragments into a living sense of reality.",
+    ],
     x: "58%",
-    y: "82%",
+    y: "84%",
     dx: "18px",
-    dy: "10px",
-    duration: "57s",
-    delay: "-12s",
-    scale: "medium",
+    dy: "12px",
+    duration: "82s",
+    delay: "-16s",
+    depth: "mid",
+    tone: "cyan",
+  },
+  {
+    concept: "Trust",
+    question: "Can people trust the organization to remember what matters?",
+    lines: [
+      "Trust grows when decisions do not depend on hidden context.",
+      "Shared understanding turns organizational memory into confidence.",
+    ],
+    x: "35%",
+    y: "28%",
+    dx: "-12px",
+    dy: "16px",
+    duration: "90s",
+    delay: "-60s",
+    depth: "far",
+    tone: "quiet",
+  },
+  {
+    concept: "Adaptation",
+    question: "Can the organization adapt without losing its own logic?",
+    lines: [
+      "Change becomes safer when the organization understands what must remain coherent.",
+      "Adaptation requires memory, context and capability to move together.",
+    ],
+    x: "70%",
+    y: "82%",
+    dx: "-16px",
+    dy: "14px",
+    duration: "80s",
+    delay: "-23s",
+    depth: "mid",
     tone: "cyan",
   },
 ] as const;
@@ -198,27 +255,23 @@ export function OrganizationalRealityCheck() {
   return (
     <section className={styles.section} id="organizational-reality-check">
       <motion.div className={styles.shell} {...reveal}>
-        <div className={styles.intro}>
+        <div className={styles.marker}>
           <EditorialEyebrow>Thought Space</EditorialEyebrow>
-          <h2>Strategic questions move through every intelligent organization.</h2>
-          <p>
-            They rarely appear one after another. They exist simultaneously, shaping decisions, resilience and the ability to evolve.
-          </p>
         </div>
 
         <div
-          aria-label="Strategic organizational thought space"
+          aria-label="Organizational thought space"
           className={styles.field}
         >
           <div className={styles.orbit} aria-hidden="true" />
-          {thoughtSpaceQuestions.map((thought) => (
+          {thoughtSpaceConcepts.map((thought) => (
             <article
               className={[
                 styles.thought,
-                styles[thought.scale],
+                styles[thought.depth],
                 styles[thought.tone],
               ].join(" ")}
-              key={thought.question}
+              key={thought.concept}
               style={
                 {
                   "--thought-delay": thought.delay,
@@ -231,15 +284,18 @@ export function OrganizationalRealityCheck() {
               }
               tabIndex={0}
             >
-              <h3>{thought.question}</h3>
-              <p>{thought.context}</p>
+              <h3>{thought.concept}</h3>
+              <div className={styles.unfold}>
+                <p className={styles.question}>{thought.question}</p>
+                <div className={styles.context}>
+                  {thought.lines.map((line) => (
+                    <p key={line}>{line}</p>
+                  ))}
+                </div>
+              </div>
             </article>
           ))}
         </div>
-
-        <p className={styles.transition}>
-          If these questions are difficult to answer, the challenge is no longer better documentation. It is Organizational Intelligence.
-        </p>
       </motion.div>
     </section>
   );
