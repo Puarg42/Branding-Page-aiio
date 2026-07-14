@@ -77,7 +77,6 @@ export function MainHeader({ variant = "home" }: { variant?: HeaderVariant }) {
 
   useEffect(() => {
     if (variant === "solid") {
-      setScrollProgress(1);
       return;
     }
 

@@ -118,7 +118,7 @@ export default function DemoKontaktPage() {
                 Managing Director & Chief Partner Officer
               </span>
               <blockquote>
-                "The right conversation turns ambition into a credible path."
+                &ldquo;The right conversation turns ambition into a credible path.&rdquo;
               </blockquote>
               <p>
                 Lars helps leaders and partners translate ambition into a

@@ -355,7 +355,7 @@ export default function PlatformPage() {
             <p>
               The ladder summarizes the customer journey. Every level creates a
               new organizational outcome, and every outcome increases the
-              organization's ability to improve.
+              organization&apos;s ability to improve.
             </p>
             <p className="website-platform-conclusion-thesis">
               Organizational Resilience emerges from the combined effect of{" "}

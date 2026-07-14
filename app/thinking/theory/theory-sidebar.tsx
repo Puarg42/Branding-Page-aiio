@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import type { MouseEvent } from "react";
 import { useEffect, useState } from "react";
 import {
@@ -55,6 +56,8 @@ export function TheorySidebar({ chapters }: TheorySidebarProps) {
 
   useEffect(() => {
     let animationFrame = 0;
+    let hashFrame = 0;
+    let returnStateFrame = 0;
 
     function updateProgress() {
       const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -71,17 +74,18 @@ export function TheorySidebar({ chapters }: TheorySidebarProps) {
     const hashId = window.location.hash.replace(/^#/, "");
 
     if (hashId && chapters.some((chapter) => chapter.id === hashId)) {
-      setActiveId(hashId);
+      hashFrame = window.requestAnimationFrame(() => setActiveId(hashId));
     }
 
     try {
       const storedReturnState = sessionStorage.getItem(theoryReturnStorageKey);
 
       if (storedReturnState) {
-        setReturnState(JSON.parse(storedReturnState) as TheoryReturnState);
+        const nextReturnState = JSON.parse(storedReturnState) as TheoryReturnState;
+        returnStateFrame = window.requestAnimationFrame(() => setReturnState(nextReturnState));
       }
     } catch {
-      setReturnState(null);
+      returnStateFrame = window.requestAnimationFrame(() => setReturnState(null));
     }
 
     const observer = new IntersectionObserver(
@@ -112,6 +116,8 @@ export function TheorySidebar({ chapters }: TheorySidebarProps) {
 
     return () => {
       window.cancelAnimationFrame(animationFrame);
+      window.cancelAnimationFrame(hashFrame);
+      window.cancelAnimationFrame(returnStateFrame);
       observer.disconnect();
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
@@ -126,10 +132,10 @@ export function TheorySidebar({ chapters }: TheorySidebarProps) {
 
   return (
     <aside className="theory-sidebar" aria-label="Theory table of contents">
-      <a className="theory-publisher-logo" href="/" aria-label="aiio Startseite">
+      <Link className="theory-publisher-logo" href="/" aria-label="aiio Startseite">
         <span className="aiio-logo" aria-hidden="true" />
         <span className="sr-only">aiio</span>
-      </a>
+      </Link>
 
       <a className="theory-back-link" href={returnHref} onClick={handleReturnClick}>
         <span aria-hidden="true">&larr;</span>

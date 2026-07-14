@@ -32,7 +32,11 @@ export function EditorialSectionNavigator({
   const [activeId, setActiveId] = useState(items[0]?.id ?? "");
 
   useEffect(() => {
-    setActiveId(items[0]?.id ?? "");
+    const frame = window.requestAnimationFrame(() => {
+      setActiveId(items[0]?.id ?? "");
+    });
+
+    return () => window.cancelAnimationFrame(frame);
   }, [items]);
 
   useEffect(() => {
