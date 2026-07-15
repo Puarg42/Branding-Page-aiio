@@ -28,6 +28,10 @@ const databaseUrl =
 
 run("node", ["scripts/compile-theory.mjs", "--check"]);
 
+// Keep the Payload admin import map in sync with the config so the admin never
+// renders blank due to a stale/empty map. No database required.
+run("npx", ["payload", "generate:importmap"]);
+
 if (databaseUrl) {
   console.log("[ci-build] Database detected — running Payload migrations.");
   run("npx", ["payload", "migrate"]);
