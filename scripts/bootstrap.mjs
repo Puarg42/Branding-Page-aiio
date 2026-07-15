@@ -101,12 +101,12 @@ if (/neon/i.test(integrations.out)) {
 
 // 4. Vercel Blob --------------------------------------------------------------
 step("Provisioning Vercel Blob storage");
-const stores = capture("vercel", ["blob", "store", "ls"]);
-if (stores.status === 0 && stores.out && !/no stores/i.test(stores.out)) {
-  ok("A Blob store already exists.");
+const stores = capture("vercel", ["blob", "list-stores", "--all"]);
+if (stores.status === 0 && /aiio-media/.test(stores.out)) {
+  ok("Blob store 'aiio-media' already exists.");
 } else {
-  warn("Creating a Blob store named 'aiio-media'.");
-  run("vercel", ["blob", "store", "add", "aiio-media"]);
+  warn("Creating a public Blob store named 'aiio-media'.");
+  run("vercel", ["blob", "create-store", "aiio-media", "--access", "public", "--yes"]);
 }
 
 // 5. PAYLOAD_SECRET -----------------------------------------------------------
