@@ -14,6 +14,8 @@ import { Media } from "./collections/Media";
 import { Publications } from "./collections/Publications";
 import { SuccessStories } from "./collections/SuccessStories";
 import { Users } from "./collections/Users";
+import { Footer } from "./globals/Footer";
+import { Header } from "./globals/Header";
 import { SiteSettings } from "./globals/SiteSettings";
 
 const dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -32,7 +34,7 @@ export default buildConfig({
     },
   },
   collections: [Users, Media, Authors, Categories, Publications, SuccessStories, Leads],
-  globals: [SiteSettings],
+  globals: [Header, Footer, SiteSettings],
   editor: lexicalEditor(),
   // Real deployments MUST set PAYLOAD_SECRET (bootstrap provisions it). The
   // fallback exists only so `next build` can run in environments without the
@@ -44,6 +46,10 @@ export default buildConfig({
   db: vercelPostgresAdapter({
     pool: { connectionString },
     migrationDir: path.resolve(dirname, "migrations"),
+    // Migrations are the single source of truth. Disable dev "push" so the
+    // schema is never auto-synced (which caused drift against the shared DB and
+    // a data-loss prompt in `payload migrate`).
+    push: false,
   }),
   sharp,
   plugins: [

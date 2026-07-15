@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState, type CSSProperties } from "react";
 import { SmartLink } from "@/components/navigation/SmartLink";
+import { useHeaderNav } from "@/components/navigation/NavProvider";
 
 type HeaderVariant = "home" | "solid";
 
@@ -12,7 +13,8 @@ type MenuLink = {
   label: string;
 };
 
-const navItems: MenuLink[] = [
+// Fallback used when the CMS-driven nav (NavProvider) is unavailable.
+const defaultNavItems: MenuLink[] = [
   { href: "/", label: "Home" },
   { href: "/platform", label: "Platform" },
   { href: "/success-stories", label: "Business Impact" },
@@ -20,7 +22,7 @@ const navItems: MenuLink[] = [
   { href: "/partners", label: "Partners" },
   { href: "/company", label: "Company" },
   { href: "/live-demo/kontakt", label: "Get Started" },
-] as const;
+];
 
 function BrandLink({ className }: { className: string }) {
   return (
@@ -33,6 +35,7 @@ function BrandLink({ className }: { className: string }) {
 
 export function MainHeader({ variant = "home" }: { variant?: HeaderVariant }) {
   const pathname = usePathname();
+  const navItems = useHeaderNav(defaultNavItems);
   const [scrollProgress, setScrollProgress] = useState(variant === "solid" ? 1 : 0);
   const [menuOpen, setMenuOpen] = useState(false);
   const isScrolled = variant === "solid" || scrollProgress > 0;

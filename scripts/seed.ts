@@ -10,6 +10,11 @@
  */
 import { getPayload } from "payload";
 import config from "../payload.config";
+import {
+  DEFAULT_FOOTER_LEGAL,
+  DEFAULT_FOOTER_NAV,
+  DEFAULT_HEADER_NAV,
+} from "../lib/cms/navigation";
 
 const baselineCategories = [
   { title: "Organizational Intelligence", slug: "organizational-intelligence" },
@@ -63,6 +68,17 @@ async function seed() {
     },
   });
   payload.logger.info("Ensured site-settings defaults.");
+
+  // 4. Navigation globals (header + footer) ----------------------------------
+  await payload.updateGlobal({
+    slug: "header",
+    data: { navItems: DEFAULT_HEADER_NAV },
+  });
+  await payload.updateGlobal({
+    slug: "footer",
+    data: { navItems: DEFAULT_FOOTER_NAV, legalItems: DEFAULT_FOOTER_LEGAL },
+  });
+  payload.logger.info("Ensured header/footer navigation.");
 
   payload.logger.info("Seed complete.");
   process.exit(0);

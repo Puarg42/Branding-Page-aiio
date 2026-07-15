@@ -10,7 +10,7 @@ type SocialLink = FooterLink & {
   platform: "facebook" | "instagram" | "x" | "linkedin" | "youtube";
 };
 
-const footerNav: FooterLink[] = [
+const defaultFooterNav: FooterLink[] = [
   { href: "/platform", label: "Platform" },
   { href: "/success-stories", label: "Business Impact" },
   { href: "/thinking", label: "Thinking" },
@@ -20,7 +20,7 @@ const footerNav: FooterLink[] = [
   { href: "/company", label: "Company" },
 ];
 
-const legalLinks: FooterLink[] = [
+const defaultLegalLinks: FooterLink[] = [
   { href: "/blog", label: "Blog & News" },
   { href: "/datenschutz", label: "Privacy" },
   { href: "/impressum", label: "Legal" },
@@ -103,7 +103,15 @@ function SocialIcon({ platform }: { platform: SocialLink["platform"] }) {
   }
 }
 
-export function SiteFooter() {
+export function SiteFooter({
+  nav = defaultFooterNav,
+  legal = defaultLegalLinks,
+}: {
+  nav?: FooterLink[];
+  legal?: FooterLink[];
+} = {}) {
+  const footerNav = nav;
+  const legalLinks = legal;
   return (
     <footer className="site-footer">
       <div className="site-footer-inner">

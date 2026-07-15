@@ -3,6 +3,8 @@ import "./globals.css";
 import { BrandCanonLightbox } from "@/components/brand/BrandCanonLightbox";
 import { NavigationMemory } from "@/components/brand/NavigationMemory";
 import { CookieConsent } from "@/components/consent/CookieConsent";
+import { NavProvider } from "@/components/navigation/NavProvider";
+import { getNavigation } from "@/lib/cms/navigation";
 import { SiteFooter } from "./site-footer";
 import { deploymentUrl, siteUrl } from "./site-url";
 
@@ -67,11 +69,12 @@ export const viewport: Viewport = {
   themeColor: "#050509",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const nav = await getNavigation();
   return (
     <html lang="en">
       <head>
@@ -92,8 +95,8 @@ export default function RootLayout({
       </head>
       <body>
         <NavigationMemory />
-        {children}
-        <SiteFooter />
+        <NavProvider header={nav.header}>{children}</NavProvider>
+        <SiteFooter nav={nav.footerNav} legal={nav.footerLegal} />
         <BrandCanonLightbox />
         <CookieConsent />
       </body>
