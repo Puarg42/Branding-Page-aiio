@@ -1,0 +1,27 @@
+import type { CollectionConfig } from "payload";
+import { isAuthenticated } from "./access";
+
+export const Media: CollectionConfig = {
+  slug: "media",
+  admin: { group: "Content" },
+  access: {
+    read: () => true,
+    create: isAuthenticated,
+    update: isAuthenticated,
+    delete: isAuthenticated,
+  },
+  upload: {
+    // Files are stored in Vercel Blob (see payload.config plugins); no local
+    // filesystem writes in production.
+    mimeTypes: ["image/*", "application/pdf"],
+  },
+  fields: [
+    {
+      name: "alt",
+      type: "text",
+      required: true,
+      admin: { description: "Describe the image for screen readers and SEO." },
+    },
+    { name: "caption", type: "text" },
+  ],
+};

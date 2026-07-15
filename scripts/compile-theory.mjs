@@ -7,6 +7,7 @@ const sourcePath = path.join(rootDir, "docs", "00_FOUNDATION", "AIIO_OPERATING_S
 const outputPath = path.join(
   rootDir,
   "app",
+  "(frontend)",
   "thinking",
   "theory",
   "theory-content.generated.ts",

@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Theory content is in sync
+        run: npm run theory:check
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Unit tests
+        run: npm test
+
+      - name: Build
+        run: npm run build
+        env:
+          # Build must succeed without a live database. Migrations run in the
+          # Vercel deploy pipeline (ci:build) once Neon is provisioned.
+          NEXT_PUBLIC_SITE_URL: https://aiio.de
+          # Throwaway build-time secret; production uses the real Vercel value.
+          PAYLOAD_SECRET: ci-build-only-secret

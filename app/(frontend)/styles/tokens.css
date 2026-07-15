@@ -1,0 +1,178 @@
+/*
+ * Canonical design tokens — the single executable source of truth for the aiio
+ * design system. The human-readable contract lives in `design.md`.
+ *
+ * Naming: prefer the semantic tokens in this file (`--color-*`, `--space-*`,
+ * `--text-*`, `--ease-*`, `--dur-*`, `--radius-*`, `--z-*`) for all new work.
+ * The legacy `--bc-*` / brand variables still live in `globals.css` and are
+ * being migrated here incrementally (see design.md § Migration).
+ */
+
+:root {
+  /* Fix a dangling reference in the Tailwind @theme block (globals.css). */
+  --font-aiio-sans: var(--font-aiio-body);
+
+  /* ===================== Typography roles ===================== */
+  --font-display: var(--font-aiio-heading);
+  --font-body: var(--font-aiio-body);
+
+  /* ===================== Color (OKLCH, semantic) ===================== */
+  /* Light editorial surface (home hero, resource pages). */
+  --color-paper: oklch(97% 0.008 310); /* ~ #f8f5fb */
+  --color-paper-2: oklch(95% 0.014 310);
+  --color-paper-3: oklch(92% 0.02 305);
+  --color-ink: oklch(22% 0.006 260); /* ~ #151819 */
+  --color-ink-2: oklch(46% 0.02 315); /* muted body */
+  --color-rule: oklch(84% 0.03 305); /* hairline */
+
+  /* Dark brand-canon surface (editorial story sections). */
+  --color-canvas-dark: oklch(11% 0.012 290); /* ~ #050508 */
+  --color-on-dark: oklch(100% 0 0);
+  --color-on-dark-muted: oklch(88% 0.008 300 / 0.76);
+  --color-on-dark-caption: oklch(88% 0.008 300 / 0.56);
+
+  /* Accents. */
+  --color-accent: oklch(42% 0.15 305); /* brand purple ~ #5a328a */
+  --color-accent-strong: oklch(34% 0.13 305);
+  --color-accent-soft: oklch(68% 0.16 300); /* eyebrow ~ #a884ff */
+  --color-accent-ink: oklch(100% 0 0); /* text on accent */
+  --color-focus: oklch(72% 0.14 300);
+
+  /* Capability tones (Collector -> Magnet -> Forge -> DataForge). */
+  --tone-collector: oklch(80% 0.008 265); /* ~ #b9bcc4 */
+  --tone-magnet: oklch(78% 0.13 205); /* ~ #22d3ee */
+  --tone-forge: oklch(62% 0.19 292); /* ~ #9b6cff */
+  --tone-dataforge: oklch(80% 0.15 70); /* ~ #ffb24a */
+
+  /* Feedback (forms, lead flow). */
+  --color-success: oklch(62% 0.15 150);
+  --color-danger: oklch(58% 0.2 25);
+
+  /* ===================== Fluid type scale ===================== */
+  --text-xs: 0.78rem;
+  --text-sm: 0.9rem;
+  --text-base: clamp(1rem, 1.2vw, 1.1rem);
+  --text-lg: clamp(1.1rem, 1.55vw, 1.35rem);
+  --text-xl: clamp(1.35rem, 2.2vw, 1.75rem);
+  --text-2xl: clamp(1.7rem, 3vw, 2.4rem);
+  --text-section: clamp(2.35rem, 5vw, 5.6rem);
+  --text-display: clamp(3rem, 8vw, 7.6rem);
+  --text-hero: clamp(4rem, 9vw, 9rem);
+
+  --leading-tight: 1.08;
+  --leading-snug: 1.28;
+  --leading-body: 1.6;
+
+  /* ===================== 4-pt spacing scale ===================== */
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+  --space-section: clamp(5.75rem, 12vw, 10.5rem);
+
+  /* ===================== Layout ===================== */
+  --measure: 68ch; /* readable line length */
+  --shell-max: 1180px;
+  --gutter: clamp(1.25rem, 4vw, 2.5rem);
+
+  /* ===================== Radius ===================== */
+  --radius-input: 10px;
+  --radius-card: 18px;
+  --radius-panel: 28px;
+  --radius-pill: 999px;
+
+  /* ===================== Motion ===================== */
+  --ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --dur-fast: 180ms;
+  --dur-base: 280ms;
+  --dur-slow: 520ms;
+
+  /* ===================== Elevation & layering ===================== */
+  --shadow-soft: 0 24px 80px oklch(0% 0 0 / 0.28);
+  --z-base: 0;
+  --z-raised: 10;
+  --z-sticky: 100;
+  --z-header: 200;
+  --z-overlay: 1000;
+  --z-modal: 1100;
+}
+
+/* Spatial motion collapses to an instant crossfade when the user opts out. */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms;
+    --dur-base: 1ms;
+    --dur-slow: 1ms;
+  }
+}
+
+/*
+ * ===================== Legacy brand variables =====================
+ * Migrated verbatim from globals.css. These back the existing ~17k lines of
+ * page CSS and the light/dark brand-canon surfaces. New work should prefer the
+ * semantic tokens above; these are retired as page CSS moves to CSS Modules.
+ */
+:root {
+  --bg: #f8f5fb;
+  --ink: #151819;
+  --brand-purple: #5a328a;
+  --brand-purple-dark: #3d235f;
+  --brand-purple-soft: #efe8f7;
+  --brand-purple-softer: #f6f1fb;
+  --brand-purple-line: #d8c9e8;
+  --muted: #625b68;
+  --teal: var(--brand-purple);
+  --teal-dark: var(--brand-purple);
+  --coral: #7a4fb0;
+  --amber: #a88ccc;
+  --mist: #f0e9f7;
+  --clay: #f6eff9;
+  --line: var(--brand-purple-line);
+  --white: #ffffff;
+  --font-aiio-heading: "Chillax", Arial, Helvetica, ui-sans-serif, system-ui, sans-serif;
+  --font-aiio-body: Arial, Helvetica, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --bc-color-background: #050508;
+  --bc-color-surface: rgb(255 255 255 / 5%);
+  --bc-color-surface-strong: rgb(255 255 255 / 8%);
+  --bc-color-heading: #ffffff;
+  --bc-color-body: rgb(232 229 238 / 76%);
+  --bc-color-caption: rgb(232 229 238 / 56%);
+  --bc-color-eyebrow: #a884ff;
+  --bc-level-collector: #b9bcc4;
+  --bc-level-magnet: #22d3ee;
+  --bc-level-forge: #9b6cff;
+  --bc-level-dataforge: #ffb24a;
+  --bc-level-evolution: var(--bc-level-dataforge);
+  --bc-border-subtle: rgb(255 255 255 / 10%);
+  --bc-border-strong: rgb(255 255 255 / 18%);
+  --bc-radius-soft: 12px;
+  --bc-radius-card: 18px;
+  --bc-radius-panel: 28px;
+  --bc-shadow-soft: 0 24px 80px rgb(0 0 0 / 28%);
+  --bc-shell: min(1180px, calc(100% - 40px));
+  --bc-space-2xs: clamp(6px, 0.6vw, 10px);
+  --bc-space-xs: clamp(10px, 1vw, 14px);
+  --bc-space-sm: clamp(14px, 1.4vw, 20px);
+  --bc-space-md: clamp(22px, 2.2vw, 32px);
+  --bc-space-lg: clamp(36px, 4vw, 58px);
+  --bc-space-xl: clamp(72px, 9vw, 128px);
+  --bc-space-section: clamp(92px, 12vw, 168px);
+  --bc-type-hero: clamp(4rem, 9vw, 9rem);
+  --bc-type-display: clamp(3rem, 8vw, 7.6rem);
+  --bc-type-section: clamp(2.35rem, 5vw, 5.6rem);
+  --bc-type-body-lg: clamp(1.1rem, 1.55vw, 1.35rem);
+  --bc-type-body: clamp(1rem, 1.2vw, 1.1rem);
+  --bc-type-caption: 0.78rem;
+  --bc-type-eyebrow: 0.75rem;
+  --bc-motion-fast: 180ms;
+  --bc-motion-medium: 280ms;
+  --bc-motion-slow: 520ms;
+  --bc-ease-standard: cubic-bezier(.2, .8, .2, 1);
+}

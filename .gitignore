@@ -12,17 +12,39 @@
 
 # testing
 /coverage
+/test-results
+/playwright-report
+/.playwright
 
 # next.js
 /.next/
 /out/
 
+# production
+/build
+/dist
+
+# documents (never commit these to the repo root)
+*.pdf
+*.doc
+*.docx
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# python (tooling / scripts)
+venv/
+env/
+__pycache__/
+*.pyc
+
 # misc
 .DS_Store
 *.pem
 /.tools/
-/.wrangler-config/
-/.edge-profile/
 /.agents/
 /.codex/
 
@@ -31,15 +53,18 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
-.codex-dev-server*.log
 
-# env files (can opt-in for committing if needed)
-.env*
+# env files (never commit real secrets)
+.env
+.env.*
+!.env.example
 
 # vercel
 .vercel
 
+# payload (generated import map cache; payload-types.ts IS committed so imports resolve)
+/.payload
+
 # typescript
 next-env.d.ts
-/dist/
-/.wrangler/
+*.tsbuildinfo

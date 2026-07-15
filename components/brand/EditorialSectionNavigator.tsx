@@ -32,10 +32,6 @@ export function EditorialSectionNavigator({
   const [activeId, setActiveId] = useState(items[0]?.id ?? "");
 
   useEffect(() => {
-    setActiveId(items[0]?.id ?? "");
-  }, [items]);
-
-  useEffect(() => {
     const sectionElements = items
       .map((section) => document.getElementById(section.id))
       .filter((section): section is HTMLElement => Boolean(section));

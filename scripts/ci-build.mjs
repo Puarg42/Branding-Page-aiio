@@ -1,0 +1,41 @@
+#!/usr/bin/env node
+// Production/CI build entry.
+//
+// Order of operations:
+//   1. Verify the generated theory content is in sync with its markdown source.
+//   2. Run pending Payload database migrations, but ONLY when a database URL is
+//      present. This keeps the first deployment (before Neon is provisioned)
+//      from failing, and guarantees migrations run automatically once the
+//      database exists.
+//   3. Build the Next.js application.
+//
+// Migrations are intentionally never destructive here; `payload migrate` only
+// applies committed migration files that have not yet run.
+
+import { spawnSync } from "node:child_process";
+
+function run(command, args) {
+  const result = spawnSync(command, args, { stdio: "inherit", shell: false });
+  if (result.status !== 0) {
+    process.exit(result.status ?? 1);
+  }
+}
+
+const databaseUrl =
+  process.env.DATABASE_URL ||
+  process.env.POSTGRES_URL ||
+  process.env.POSTGRES_URL_NON_POOLING;
+
+run("node", ["scripts/compile-theory.mjs", "--check"]);
+
+if (databaseUrl) {
+  console.log("[ci-build] Database detected — running Payload migrations.");
+  run("npx", ["payload", "migrate"]);
+} else {
+  console.warn(
+    "[ci-build] No DATABASE_URL/POSTGRES_URL set — skipping migrations. " +
+      "Provision the database (npm run bootstrap) before enabling CMS-backed routes.",
+  );
+}
+
+run("npx", ["next", "build"]);
