@@ -11,6 +11,7 @@ import { Authors } from "./collections/Authors";
 import { Categories } from "./collections/Categories";
 import { Leads } from "./collections/Leads";
 import { Media } from "./collections/Media";
+import { Pages } from "./collections/Pages";
 import { Publications } from "./collections/Publications";
 import { SuccessStories } from "./collections/SuccessStories";
 import { Users } from "./collections/Users";
@@ -33,7 +34,7 @@ export default buildConfig({
       titleSuffix: " · aiio",
     },
   },
-  collections: [Users, Media, Authors, Categories, Publications, SuccessStories, Leads],
+  collections: [Users, Media, Pages, Authors, Categories, Publications, SuccessStories, Leads],
   globals: [Header, Footer, SiteSettings],
   editor: lexicalEditor(),
   // Real deployments MUST set PAYLOAD_SECRET (bootstrap provisions it). The

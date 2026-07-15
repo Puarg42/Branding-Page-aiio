@@ -15,6 +15,30 @@ import {
   DEFAULT_FOOTER_NAV,
   DEFAULT_HEADER_NAV,
 } from "../lib/cms/navigation";
+import { capabilitySpine } from "../content/capability-spine";
+
+/** Minimal valid Lexical editor state from a plain paragraph. */
+function richTextParagraph(text: string) {
+  return {
+    root: {
+      type: "root",
+      direction: "ltr" as const,
+      format: "" as const,
+      indent: 0,
+      version: 1,
+      children: [
+        {
+          type: "paragraph",
+          direction: "ltr" as const,
+          format: "" as const,
+          indent: 0,
+          version: 1,
+          children: [{ type: "text", detail: 0, format: 0, mode: "normal", style: "", text, version: 1 }],
+        },
+      ],
+    },
+  };
+}
 
 const baselineCategories = [
   { title: "Organizational Intelligence", slug: "organizational-intelligence" },
@@ -79,6 +103,66 @@ async function seed() {
     data: { navItems: DEFAULT_FOOTER_NAV, legalItems: DEFAULT_FOOTER_LEGAL },
   });
   payload.logger.info("Ensured header/footer navigation.");
+
+  // 5. Example block-composed page (idempotent by slug) ----------------------
+  const pageSlug = "overview";
+  const existingPage = await payload.find({
+    collection: "pages",
+    where: { slug: { equals: pageSlug } },
+    limit: 1,
+    overrideAccess: true,
+  });
+  if (existingPage.totalDocs === 0) {
+    await payload.create({
+      collection: "pages",
+      overrideAccess: true,
+      data: {
+        title: "Overview",
+        slug: pageSlug,
+        _status: "published",
+        layout: [
+          {
+            blockType: "hero",
+            eyebrow: "Overview",
+            heading: "Organizational Intelligence, with system.",
+            subheading:
+              "aiio enables an organization to continuously understand itself, develop new capabilities and empower every person to make better decisions.",
+            primaryCta: { label: "Request a conversation", href: "/live-demo/kontakt" },
+            secondaryCta: { label: "Explore the platform", href: "/platform" },
+          },
+          {
+            blockType: "featureGrid",
+            eyebrow: "The capability",
+            heading: "From memory to resilience.",
+            items: capabilitySpine.map((step) => ({ title: step.title, copy: step.copy })),
+          },
+          {
+            blockType: "prose",
+            heading: "Why the category exists",
+            content: richTextParagraph(
+              "Organizations collect information, document processes and introduce AI, yet still struggle to turn all of this into coordinated action — not because information is missing, but because continuous organizational self-understanding is.",
+            ),
+          },
+          {
+            blockType: "cta",
+            eyebrow: "Start",
+            heading: "Start with the right conversation.",
+            copy: "Explore where Organizational Intelligence can create value in your organization.",
+            primaryCta: { label: "Request a conversation", href: "/live-demo/kontakt" },
+            secondaryCta: { label: "Explore the platform", href: "/platform" },
+          },
+        ],
+        seo: {
+          title: "Overview | aiio",
+          description:
+            "How aiio turns organizational reality into continuous understanding and capability.",
+        },
+      },
+    });
+    payload.logger.info(`Seeded example page: /${pageSlug}`);
+  } else {
+    payload.logger.info("Example page already exists — skipping.");
+  }
 
   payload.logger.info("Seed complete.");
   process.exit(0);
