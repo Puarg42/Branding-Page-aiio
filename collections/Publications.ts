@@ -14,8 +14,11 @@ export const Publications: CollectionConfig = {
     defaultColumns: ["adminTitle", "category", "publishedAt", "_status"],
     listSearchableFields: ["adminTitle", "title", "slug"],
     livePreview: {
-      url: ({ data }) => `/blog/${data?.slug ?? ""}`,
+      url: ({ data, locale }) =>
+        `/${locale?.code ?? "en"}/blog/${data?.slug ?? ""}`,
     },
+    preview: (data, { locale }) =>
+      `/${locale ?? "en"}/blog/${data?.slug ?? ""}`,
   },
   versions: {
     drafts: {

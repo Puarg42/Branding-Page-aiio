@@ -16,7 +16,18 @@ export const Pages: CollectionConfig = {
     defaultColumns: ["adminTitle", "slug", "_status"],
     listSearchableFields: ["adminTitle", "title", "slug"],
     livePreview: {
-      url: ({ data }) => `/${data?.slug ?? ""}`,
+      url: ({ data, locale }) => {
+        const code = locale?.code ?? "en";
+        return data?.pageType === "home"
+          ? `/${code}`
+          : `/${code}/${data?.slug ?? ""}`;
+      },
+    },
+    preview: (data, { locale }) => {
+      const code = locale ?? "en";
+      return data?.pageType === "home"
+        ? `/${code}`
+        : `/${code}/${data?.slug ?? ""}`;
     },
   },
   versions: {
