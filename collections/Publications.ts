@@ -13,6 +13,13 @@ export const Publications: CollectionConfig = {
     group: "Content",
     defaultColumns: ["adminTitle", "category", "publishedAt", "_status"],
     listSearchableFields: ["adminTitle", "title", "slug"],
+    components: {
+      edit: {
+        beforeDocumentControls: [
+          "@/components/admin/ReloadPreviewButton#ReloadPreviewButton",
+        ],
+      },
+    },
     livePreview: {
       url: ({ data, locale }) =>
         `/${locale?.code ?? "en"}/blog/${data?.slug ?? ""}`,

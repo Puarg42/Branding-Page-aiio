@@ -15,6 +15,13 @@ export const Pages: CollectionConfig = {
     group: "Content",
     defaultColumns: ["adminTitle", "slug", "_status"],
     listSearchableFields: ["adminTitle", "title", "slug"],
+    components: {
+      edit: {
+        beforeDocumentControls: [
+          "@/components/admin/ReloadPreviewButton#ReloadPreviewButton",
+        ],
+      },
+    },
     livePreview: {
       url: ({ data, locale }) => {
         const code = locale?.code ?? "en";

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { RenderBlocks } from "@/components/blocks/RenderBlocks";
+import { RefreshRouteOnSave } from "@/components/live-preview/RefreshRouteOnSave";
 import { getLocaleAlternates } from "@/lib/cms/alternates";
 import {
   getPageBySlug,
@@ -79,6 +80,7 @@ export default async function LocalizedCmsPage({ params }: Props) {
 
   return (
     <main className="website-page">
+      <RefreshRouteOnSave />
       <MainHeader variant={page.pageType === "home" ? "home" : "solid"} />
       <RenderBlocks
         blocks={page.layout as Parameters<typeof RenderBlocks>[0]["blocks"]}

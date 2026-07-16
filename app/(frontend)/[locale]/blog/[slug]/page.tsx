@@ -6,6 +6,7 @@ import {
   EditorialSectionHeader,
 } from "@/components/brand/BrandCanonFoundation";
 import { EditorialEyebrow } from "@/components/brand/EditorialEyebrow";
+import { RefreshRouteOnSave } from "@/components/live-preview/RefreshRouteOnSave";
 import {
   getPublicationBySlug,
   getPublicationSlugs,
@@ -77,6 +78,7 @@ export default async function LocalizedArticle({ params }: Props) {
 
   return (
     <main className="blog-article-page">
+      <RefreshRouteOnSave />
       <MainHeader variant="solid" />
       <article className="blog-article-layout">
         <section className="blog-article-hero">
