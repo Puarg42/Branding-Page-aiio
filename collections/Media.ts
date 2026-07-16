@@ -30,6 +30,10 @@ export const Media: CollectionConfig = {
     // Files are stored in Vercel Blob (see payload.config plugins); no local
     // filesystem writes in production.
     mimeTypes: [
+      // Explicit extensions are needed for the macOS Finder file picker; MIME
+      // values alone do not consistently map to the WOFF/WOFF2 UTI.
+      ".woff2",
+      ".woff",
       "image/*",
       "application/pdf",
       "font/*",
