@@ -71,6 +71,13 @@ test.describe("marketing site smoke", () => {
   test("Payload admin and API remain unprefixed", async ({ request }) => {
     expect((await request.get("/admin")).status()).toBe(200);
     expect((await request.get("/api/pages")).status()).toBe(200);
+    expect(
+      (
+        await request.post("/api/deepl/translate", {
+          data: { text: "Hallo", targetLocale: "en" },
+        })
+      ).status(),
+    ).toBe(401);
   });
 
   test("localized sitemap includes EN/DE alternates", async ({ request }) => {

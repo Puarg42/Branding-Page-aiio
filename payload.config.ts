@@ -19,6 +19,7 @@ import { Footer } from "./globals/Footer";
 import { Header } from "./globals/Header";
 import { SiteSettings } from "./globals/SiteSettings";
 import { defaultLocale, localeLabels, locales } from "./lib/i18n/config";
+import { deeplTranslation } from "./plugins/deepl-translate";
 
 const dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -63,6 +64,7 @@ export default buildConfig({
   }),
   sharp,
   plugins: [
+    deeplTranslation(),
     vercelBlobStorage({
       enabled: Boolean(process.env.BLOB_READ_WRITE_TOKEN),
       collections: { media: true },
