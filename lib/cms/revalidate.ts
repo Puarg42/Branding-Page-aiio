@@ -9,6 +9,8 @@ import { revalidateTag } from "next/cache";
 export const NAV_TAG = "nav";
 /** Cache tag for block-composed CMS pages. */
 export const PAGES_TAG = "pages";
+/** Cache tag for blog publications. */
+export const PUBLICATIONS_TAG = "publications";
 
 function bust(tag: string) {
   if (!process.env.NEXT_RUNTIME) return;
@@ -32,5 +34,15 @@ export const revalidatePagesChange: CollectionAfterChangeHook = ({ doc }) => {
 
 export const revalidatePagesDelete: CollectionAfterDeleteHook = ({ doc }) => {
   bust(PAGES_TAG);
+  return doc;
+};
+
+export const revalidatePublicationsChange: CollectionAfterChangeHook = ({ doc }) => {
+  bust(PUBLICATIONS_TAG);
+  return doc;
+};
+
+export const revalidatePublicationsDelete: CollectionAfterDeleteHook = ({ doc }) => {
+  bust(PUBLICATIONS_TAG);
   return doc;
 };

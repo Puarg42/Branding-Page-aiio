@@ -8,8 +8,8 @@ import {
 import { EditorialEyebrow } from "@/components/brand/EditorialEyebrow";
 import { EditorialJumpArrow } from "@/components/brand/EditorialJumpArrow";
 import type { EditorialSectionNavigatorItem } from "@/components/brand/EditorialSectionNavigator";
+import { getPublications, type PublicationListItem } from "@/lib/cms/publications";
 import { MainHeader } from "../main-navigation";
-import { blogCategories, blogPosts, type BlogPost } from "./blog-posts";
 
 const dateFormatter = new Intl.DateTimeFormat("de-DE", {
   day: "2-digit",
@@ -31,9 +31,7 @@ const description =
 export const metadata: Metadata = {
   title,
   description,
-  alternates: {
-    canonical: "/blog",
-  },
+  alternates: { canonical: "/blog" },
   openGraph: {
     title,
     description,
@@ -50,30 +48,35 @@ export const metadata: Metadata = {
 };
 
 type BlogPageProps = {
-  searchParams?: Promise<{
-    category?: string;
-  }>;
+  searchParams?: Promise<{ category?: string }>;
 };
 
-function formatDate(date: string) {
-  return dateFormatter.format(new Date(`${date}T12:00:00.000Z`));
+function formatDate(date: string | null) {
+  if (!date) return "";
+  return dateFormatter.format(new Date(date));
 }
 
-function BlogMeta({ post }: { post: BlogPost }) {
+function BlogMeta({ post }: { post: PublicationListItem }) {
   return (
     <p className="blog-post-meta">
-      <span>{post.category}</span>
-      <span>{formatDate(post.date)}</span>
-      <span>{post.readingTime}</span>
+      {post.categoryTitle ? <span>{post.categoryTitle}</span> : null}
+      <span>{formatDate(post.publishedAt)}</span>
+      {post.readingTime ? <span>{post.readingTime}</span> : null}
     </p>
   );
 }
 
-function BlogCard({ post, priority = false }: { post: BlogPost; priority?: boolean }) {
+function BlogCard({ post, priority = false }: { post: PublicationListItem; priority?: boolean }) {
   return (
     <article className={priority ? "blog-card is-featured" : "blog-card"}>
       <Link className="blog-card-image-link" href={`/blog/${post.slug}`}>
-        <img alt={post.heroImageAlt} loading={priority ? "eager" : "lazy"} src={post.heroImage} />
+        {post.heroImageUrl ? (
+          <img
+            alt={post.heroImageAlt ?? ""}
+            loading={priority ? "eager" : "lazy"}
+            src={post.heroImageUrl}
+          />
+        ) : null}
       </Link>
       <div className="blog-card-copy">
         <BlogMeta post={post} />
@@ -92,9 +95,13 @@ function BlogCard({ post, priority = false }: { post: BlogPost; priority?: boole
 export default async function BlogPage({ searchParams }: BlogPageProps) {
   const params = (await searchParams) ?? {};
   const activeCategory = params.category;
+  const allPosts = await getPublications();
+  const categories = Array.from(
+    new Set(allPosts.map((post) => post.categoryTitle).filter((c): c is string => Boolean(c))),
+  );
   const visiblePosts = activeCategory
-    ? blogPosts.filter((post) => post.category === activeCategory)
-    : blogPosts;
+    ? allPosts.filter((post) => post.categoryTitle === activeCategory)
+    : allPosts;
   const [featuredPost, ...archivePosts] = visiblePosts;
   const gridPosts = archivePosts.slice(0, 11);
 
@@ -142,7 +149,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
           <Link className={!activeCategory ? "is-active" : ""} href="/blog" scroll={false}>
             All
           </Link>
-          {blogCategories.map((category) => (
+          {categories.map((category) => (
             <Link
               className={activeCategory === category ? "is-active" : ""}
               href={`/blog?category=${encodeURIComponent(category)}`}
@@ -170,9 +177,9 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
           <div className="blog-archive-list">
             {visiblePosts.map((post) => (
               <Link className="blog-archive-row" href={`/blog/${post.slug}`} key={post.slug}>
-                <span>{formatDate(post.date)}</span>
+                <span>{formatDate(post.publishedAt)}</span>
                 <strong>{post.title}</strong>
-                <em>{post.category}</em>
+                <em>{post.categoryTitle}</em>
               </Link>
             ))}
           </div>
@@ -194,7 +201,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
           <Link className="button" href="/live-demo/kontakt">
             Request a conversation
           </Link>
-          <Link className="button secondary" href="/contact">
+          <Link className="button secondary" href="/live-demo/kontakt">
             Contact aiio
           </Link>
         </div>

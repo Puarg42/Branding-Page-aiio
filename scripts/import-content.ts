@@ -5,14 +5,12 @@
  *   npm run content:import -- --dry-run   # report only, no writes
  *   npm run content:import                # upsert by sourceId (post slug)
  *
- * Idempotency: each post is matched by `sourceId` (its original slug). Re-runs
- * update in place instead of duplicating. Hero images are intentionally skipped
- * (media upload to Blob is a separate step) and reported.
+ * Legacy HTML bodies are stored verbatim in `bodyHtml` (rendered as-is on the
+ * blog) rather than converted to Lexical — reliable and lossless for migrated
+ * content. Hero images are skipped (media upload to Blob is a separate step).
  *
  * Requires a database (DATABASE_URL/POSTGRES_URL) and PAYLOAD_SECRET.
  */
-import { convertHTMLToLexical, editorConfigFactory } from "@payloadcms/richtext-lexical";
-import { JSDOM } from "jsdom";
 import { getPayload } from "payload";
 import config from "../payload.config";
 import { blogPosts } from "../app/(frontend)/blog/blog-posts";
@@ -30,8 +28,6 @@ function slugifyCategory(category: string): string {
 
 async function importContent() {
   const payload = await getPayload({ config });
-  const editorConfig = await editorConfigFactory.default({ config: await config });
-
   const summary = { created: 0, updated: 0, skippedImages: 0 };
   const categoryCache = new Map<string, number>();
 
@@ -44,32 +40,31 @@ async function importContent() {
       collection: "categories",
       where: { slug: { equals: slug } },
       limit: 1,
+      overrideAccess: true,
     });
     const id = existing.totalDocs
       ? (existing.docs[0].id as number)
-      : ((await payload.create({ collection: "categories", data: { title, slug } })).id as number);
+      : ((await payload.create({ collection: "categories", data: { title, slug }, overrideAccess: true }))
+          .id as number);
     categoryCache.set(slug, id);
     return id;
   }
 
   for (const post of blogPosts) {
-    const categoryId = post.category ? await ensureCategory(post.category) : undefined;
+    const categoryId = post.category && !dryRun ? await ensureCategory(post.category) : undefined;
     if (post.heroImage) summary.skippedImages += 1;
-
-    const body = convertHTMLToLexical({
-      editorConfig,
-      html: post.contentHtml,
-      JSDOM,
-    });
 
     const data = {
       title: post.title,
       slug: post.slug,
       sourceId: post.slug,
       excerpt: post.excerpt,
+      readingTime: post.readingTime,
       category: categoryId,
       publishedAt: post.date,
-      body,
+      heroImageUrl: post.heroImage,
+      heroImageAlt: post.heroImageAlt,
+      bodyHtml: post.contentHtml,
       seo: {
         title: post.seoTitle,
         description: post.seoDescription || post.excerpt,

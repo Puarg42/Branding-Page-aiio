@@ -335,11 +335,23 @@ export interface Publication {
    */
   sourceId?: string | null;
   excerpt: string;
+  /**
+   * e.g. '5 min read'.
+   */
+  readingTime?: string | null;
   category?: (number | null) | Category;
   authors?: (number | Author)[] | null;
   publishedAt?: string | null;
   heroImage?: (number | null) | Media;
-  body: {
+  /**
+   * Legacy hero image path (e.g. /blog/...). Used until media is migrated to Blob.
+   */
+  heroImageUrl?: string | null;
+  heroImageAlt?: string | null;
+  /**
+   * Structured body for natively-authored posts. Optional when bodyHtml is set.
+   */
+  body?: {
     root: {
       type: string;
       children: {
@@ -353,7 +365,11 @@ export interface Publication {
       version: number;
     };
     [k: string]: unknown;
-  };
+  } | null;
+  /**
+   * Imported/legacy HTML body. Rendered as-is when the richText body is empty.
+   */
+  bodyHtml?: string | null;
   seo?: {
     title?: string | null;
     description?: string | null;
@@ -688,11 +704,15 @@ export interface PublicationsSelect<T extends boolean = true> {
   slug?: T;
   sourceId?: T;
   excerpt?: T;
+  readingTime?: T;
   category?: T;
   authors?: T;
   publishedAt?: T;
   heroImage?: T;
+  heroImageUrl?: T;
+  heroImageAlt?: T;
   body?: T;
+  bodyHtml?: T;
   seo?:
     | T
     | {

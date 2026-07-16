@@ -7,13 +7,17 @@ import {
 } from "@/components/brand/BrandCanonFoundation";
 import { EditorialEyebrow } from "@/components/brand/EditorialEyebrow";
 import { EditorialJumpArrow } from "@/components/brand/EditorialJumpArrow";
+import {
+  getPublicationBySlug,
+  getPublicationSlugs,
+  getPublications,
+  type PublicationDetail,
+} from "@/lib/cms/publications";
 import { MainHeader } from "../../main-navigation";
-import { blogPosts, getBlogPost, type BlogPost } from "../blog-posts";
+import { createMetadata } from "../../seo";
 
 type BlogArticlePageProps = {
-  params: Promise<{
-    slug: string;
-  }>;
+  params: Promise<{ slug: string }>;
 };
 
 const dateFormatter = new Intl.DateTimeFormat("de-DE", {
@@ -22,84 +26,55 @@ const dateFormatter = new Intl.DateTimeFormat("de-DE", {
   year: "numeric",
 });
 
-function formatDate(date: string) {
-  return dateFormatter.format(new Date(`${date}T12:00:00.000Z`));
+function formatDate(date: string | null) {
+  if (!date) return "";
+  return dateFormatter.format(new Date(date));
 }
 
-function getRelatedPosts(post: BlogPost) {
-  const sameCategory = blogPosts.filter(
-    (candidate) => candidate.slug !== post.slug && candidate.category === post.category,
+async function getRelatedPosts(post: PublicationDetail) {
+  const all = await getPublications();
+  const sameCategory = all.filter(
+    (candidate) => candidate.slug !== post.slug && candidate.categoryTitle === post.categoryTitle,
   );
-  const fallback = blogPosts.filter((candidate) => candidate.slug !== post.slug);
-
+  const fallback = all.filter((candidate) => candidate.slug !== post.slug);
   return (sameCategory.length ? sameCategory : fallback).slice(0, 3);
 }
 
-function BlogArticleMeta({ post }: { post: BlogPost }) {
-  return (
-    <p className="blog-post-meta blog-article-meta">
-      <span>{post.category}</span>
-      <span>{formatDate(post.date)}</span>
-      <span>{post.readingTime}</span>
-    </p>
-  );
+export async function generateStaticParams() {
+  const slugs = await getPublicationSlugs();
+  return slugs.map((slug) => ({ slug }));
 }
 
-export function generateStaticParams() {
-  return blogPosts.map((post) => ({
-    slug: post.slug,
-  }));
-}
-
-export async function generateMetadata({
-  params,
-}: BlogArticlePageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: BlogArticlePageProps): Promise<Metadata> {
   const { slug } = await params;
-  const post = getBlogPost(slug);
+  const post = await getPublicationBySlug(slug);
+  if (!post) return { title: "Blog & News | aiio" };
 
-  if (!post) {
-    return {
-      title: "Blog & News | aiio",
-    };
-  }
-
-  const title = `${post.seoTitle} | aiio Blog & News`;
-  const description = post.seoDescription || post.excerpt;
-  const image = post.heroImage || "/og-home-bc002-1200x630.jpg";
+  const metaTitle = `${post.seoTitle || post.title} | aiio Blog & News`;
+  const metaDescription = post.seoDescription || post.excerpt;
+  const image = post.heroImageUrl || "/og-home-bc002-1200x630.jpg";
 
   return {
-    title,
-    description,
-    alternates: {
-      canonical: `/blog/${post.slug}`,
-    },
+    ...createMetadata({ path: `/blog/${post.slug}`, title: metaTitle, description: metaDescription }),
     openGraph: {
-      description,
+      title: metaTitle,
+      description: metaDescription,
       images: [{ url: image }],
-      modifiedTime: post.updatedAt,
-      publishedTime: post.date,
-      title,
+      modifiedTime: post.updatedAt ?? undefined,
+      publishedTime: post.publishedAt ?? undefined,
       type: "article",
       url: `/blog/${post.slug}`,
     },
-    twitter: {
-      card: "summary_large_image",
-      description,
-      images: [image],
-      title,
-    },
+    twitter: { card: "summary_large_image", title: metaTitle, description: metaDescription, images: [image] },
   };
 }
 
 export default async function BlogArticlePage({ params }: BlogArticlePageProps) {
   const { slug } = await params;
-  const post = getBlogPost(slug);
+  const post = await getPublicationBySlug(slug);
+  if (!post) notFound();
 
-  if (!post) {
-    notFound();
-  }
-
-  const relatedPosts = getRelatedPosts(post);
+  const relatedPosts = await getRelatedPosts(post);
 
   return (
     <main className="blog-article-page">
@@ -119,13 +94,17 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
             <Link className="blog-back-link" href="/blog">
               ← Back to Blog & News
             </Link>
-            <EditorialEyebrow>{post.category}</EditorialEyebrow>
-            <BlogArticleMeta post={post} />
+            {post.categoryTitle ? <EditorialEyebrow>{post.categoryTitle}</EditorialEyebrow> : null}
+            <p className="blog-post-meta blog-article-meta">
+              {post.categoryTitle ? <span>{post.categoryTitle}</span> : null}
+              <span>{formatDate(post.publishedAt)}</span>
+              {post.readingTime ? <span>{post.readingTime}</span> : null}
+            </p>
             <h1>{post.title}</h1>
             <p>{post.excerpt}</p>
-            {post.heroImage ? (
+            {post.heroImageUrl ? (
               <figure className="blog-article-hero-image">
-                <img alt={post.heroImageAlt} src={post.heroImage} />
+                <img alt={post.heroImageAlt ?? ""} src={post.heroImageUrl} />
               </figure>
             ) : null}
           </div>
@@ -134,15 +113,12 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
         <div className="blog-article-shell">
           <div
             className="blog-article-body"
-            dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+            dangerouslySetInnerHTML={{ __html: post.bodyHtml ?? "" }}
           />
         </div>
       </article>
 
-      <EditorialSection
-        className="blog-related-section"
-        shellClassName="blog-article-shell"
-      >
+      <EditorialSection className="blog-related-section" shellClassName="blog-article-shell">
         <EditorialSectionHeader
           className="blog-news-section-heading"
           eyebrow="Related"
@@ -151,7 +127,7 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
         <div className="blog-related-grid">
           {relatedPosts.map((relatedPost) => (
             <article className="blog-related-card" key={relatedPost.slug}>
-              <p>{relatedPost.category}</p>
+              <p>{relatedPost.categoryTitle}</p>
               <h3>
                 <Link href={`/blog/${relatedPost.slug}`}>{relatedPost.title}</Link>
               </h3>

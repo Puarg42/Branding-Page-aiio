@@ -1,4 +1,5 @@
 import type { CollectionConfig } from "payload";
+import { revalidatePublicationsChange, revalidatePublicationsDelete } from "../lib/cms/revalidate";
 import { isAuthenticated, publishedOrAuthenticated } from "./access";
 
 /**
@@ -20,6 +21,10 @@ export const Publications: CollectionConfig = {
       autosave: true,
     },
     maxPerDoc: 25,
+  },
+  hooks: {
+    afterChange: [revalidatePublicationsChange],
+    afterDelete: [revalidatePublicationsDelete],
   },
   access: {
     read: publishedOrAuthenticated,
@@ -47,6 +52,7 @@ export const Publications: CollectionConfig = {
       },
     },
     { name: "excerpt", type: "textarea", required: true },
+    { name: "readingTime", type: "text", admin: { description: "e.g. '5 min read'." } },
     { name: "category", type: "relationship", relationTo: "categories" },
     { name: "authors", type: "relationship", relationTo: "authors", hasMany: true },
     {
@@ -56,9 +62,24 @@ export const Publications: CollectionConfig = {
     },
     { name: "heroImage", type: "upload", relationTo: "media" },
     {
+      name: "heroImageUrl",
+      type: "text",
+      admin: { description: "Legacy hero image path (e.g. /blog/...). Used until media is migrated to Blob." },
+    },
+    { name: "heroImageAlt", type: "text" },
+    {
       name: "body",
       type: "richText",
-      required: true,
+      admin: {
+        description: "Structured body for natively-authored posts. Optional when bodyHtml is set.",
+      },
+    },
+    {
+      name: "bodyHtml",
+      type: "textarea",
+      admin: {
+        description: "Imported/legacy HTML body. Rendered as-is when the richText body is empty.",
+      },
     },
     {
       name: "seo",
