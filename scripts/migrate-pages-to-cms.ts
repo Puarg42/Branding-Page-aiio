@@ -487,6 +487,7 @@ async function upsert(seed: PageSeed) {
 
   for (const [locale, value] of entries) {
     const data = {
+      adminTitle: value.title,
       sourceKey: seed.sourceKey,
       pageType: seed.pageType ?? "standard",
       title: value.title,

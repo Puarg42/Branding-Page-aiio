@@ -17,6 +17,14 @@ async function main() {
     const { totalDocs } = await payload.count({ collection: c });
     console.log(`${c.padEnd(18)} ${totalDocs}`);
   }
+  for (const collection of ["pages", "publications"] as const) {
+    const missing = await payload.count({
+      collection,
+      where: { adminTitle: { exists: false } },
+      overrideAccess: true,
+    });
+    console.log(`${`${collection} missing title`.padEnd(28)} ${missing.totalDocs}`);
+  }
   process.exit(0);
 }
 

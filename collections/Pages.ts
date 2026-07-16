@@ -11,9 +11,10 @@ import { isAuthenticated, publishedOrAuthenticated } from "./access";
 export const Pages: CollectionConfig = {
   slug: "pages",
   admin: {
-    useAsTitle: "title",
+    useAsTitle: "adminTitle",
     group: "Content",
-    defaultColumns: ["title", "slug", "_status"],
+    defaultColumns: ["adminTitle", "slug", "_status"],
+    listSearchableFields: ["adminTitle", "title", "slug"],
     livePreview: {
       url: ({ data }) => `/${data?.slug ?? ""}`,
     },
@@ -33,6 +34,16 @@ export const Pages: CollectionConfig = {
     delete: isAuthenticated,
   },
   fields: [
+    {
+      name: "adminTitle",
+      type: "text",
+      required: true,
+      index: true,
+      admin: {
+        description:
+          "Locale-neutral editor label. This does not appear on the website.",
+      },
+    },
     {
       name: "sourceKey",
       type: "text",

@@ -63,6 +63,7 @@ async function importContent() {
     if (post.heroImage) summary.skippedImages += 1;
 
     const data = {
+      adminTitle: post.title,
       title: post.title,
       slug: post.slug,
       sourceId: post.slug,

@@ -144,6 +144,7 @@ async function seed() {
       collection: "pages",
       overrideAccess: true,
       data: {
+        adminTitle: "Overview",
         title: "Overview",
         slug: pageSlug,
         _status: "published",

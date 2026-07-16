@@ -199,6 +199,10 @@ export interface Media {
 export interface Page {
   id: number;
   /**
+   * Locale-neutral editor label. This does not appear on the website.
+   */
+  adminTitle: string;
+  /**
    * Stable migration key; not shown in URLs.
    */
   sourceKey?: string | null;
@@ -276,6 +280,10 @@ export interface HeroBlock {
  */
 export interface Publication {
   id: number;
+  /**
+   * Locale-neutral editor label. This does not appear on the website.
+   */
+  adminTitle: string;
   title: string;
   slug: string;
   /**
@@ -714,6 +722,7 @@ export interface MediaSelect<T extends boolean = true> {
  * via the `definition` "pages_select".
  */
 export interface PagesSelect<T extends boolean = true> {
+  adminTitle?: T;
   sourceKey?: T;
   title?: T;
   slug?: T;
@@ -907,6 +916,7 @@ export interface CategoriesSelect<T extends boolean = true> {
  * via the `definition` "publications_select".
  */
 export interface PublicationsSelect<T extends boolean = true> {
+  adminTitle?: T;
   title?: T;
   slug?: T;
   sourceId?: T;
