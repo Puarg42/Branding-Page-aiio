@@ -55,7 +55,12 @@ team/project and accepting any provider billing consent in the dashboard. See
 | `npm run db:migrate:create` | Create a new migration from schema changes |
 | `npm run db:seed` | Idempotently seed roles, settings, redirects |
 | `npm run generate:types` | Regenerate `payload-types.ts` |
-| `npm run theory:check` | Verify generated theory content is in sync |
+| `npm run content:verify` | Verify required CMS pages, theory and navigation |
+| `npm run content:migrate-pages -- --dry-run` | Preview non-clobbering legacy → CMS migration |
+| `npm run content:migrate-pages` | Apply migration to pending/parity-review pages |
+| `npm run content:import-theory` | Import the archived theory fixture into Payload |
+| `npm run db:checkpoint` | Create a Neon pre-release branch (requires `NEON_API_KEY`) |
+| `npm run test:budgets` | Enforce CSS/global stylesheet budgets |
 
 ## Structure
 

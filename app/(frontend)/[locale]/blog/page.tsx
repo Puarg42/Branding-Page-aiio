@@ -7,6 +7,7 @@ import {
 import { EditorialEyebrow } from "@/components/brand/EditorialEyebrow";
 import { EditorialJumpArrow } from "@/components/brand/EditorialJumpArrow";
 import { getPublications, type PublicationListItem } from "@/lib/cms/publications";
+import { getBlogSettings } from "@/lib/cms/settings";
 import { assertLocale, type Locale } from "@/lib/i18n/config";
 import { MainHeader } from "../../main-navigation";
 
@@ -113,7 +114,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function LocalizedBlog({ params, searchParams }: Props) {
   const locale = assertLocale((await params).locale);
   const activeCategory = (await searchParams)?.category;
-  const posts = await getPublications(locale);
+  const [posts, settings] = await Promise.all([
+    getPublications(locale),
+    getBlogSettings(locale),
+  ]);
   const visible = activeCategory
     ? posts.filter((post) => post.categoryTitle === activeCategory)
     : posts;
@@ -125,7 +129,16 @@ export default async function LocalizedBlog({ params, searchParams }: Props) {
         .filter((value): value is string => Boolean(value)),
     ),
   );
-  const c = copy[locale];
+  const fallback = copy[locale];
+  const c = {
+    eyebrow: settings?.eyebrow || fallback.eyebrow,
+    title: settings?.heading || fallback.title,
+    intro: settings?.intro || fallback.intro,
+    latest: settings?.latestHeading || fallback.latest,
+    archive: settings?.archiveHeading || fallback.archive,
+    read: settings?.readLabel || fallback.read,
+    all: settings?.allLabel || fallback.all,
+  };
 
   return (
     <main className="blog-news-page">

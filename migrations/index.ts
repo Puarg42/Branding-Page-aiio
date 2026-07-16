@@ -6,6 +6,8 @@ import * as migration_20260716_062610_publication_presentation from './20260716_
 import * as migration_20260716_082549_localization_foundation from './20260716_082549_localization_foundation';
 import * as migration_20260716_083659_cms_page_modules from './20260716_083659_cms_page_modules';
 import * as migration_20260716_091856_admin_titles from './20260716_091856_admin_titles';
+import * as migration_20260716_151334_cms_authority_themes from './20260716_151334_cms_authority_themes';
+import * as migration_20260716_152625_remove_generic_module from './20260716_152625_remove_generic_module';
 
 export const migrations = [
   {
@@ -46,6 +48,16 @@ export const migrations = [
   {
     up: migration_20260716_091856_admin_titles.up,
     down: migration_20260716_091856_admin_titles.down,
-    name: '20260716_091856_admin_titles'
+    name: '20260716_091856_admin_titles',
+  },
+  {
+    up: migration_20260716_151334_cms_authority_themes.up,
+    down: migration_20260716_151334_cms_authority_themes.down,
+    name: '20260716_151334_cms_authority_themes',
+  },
+  {
+    up: migration_20260716_152625_remove_generic_module.up,
+    down: migration_20260716_152625_remove_generic_module.down,
+    name: '20260716_152625_remove_generic_module'
   },
 ];

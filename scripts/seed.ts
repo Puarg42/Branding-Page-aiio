@@ -86,11 +86,74 @@ async function seed() {
     }
   }
 
-  // 3. Site settings defaults -------------------------------------------------
+  // 3. Pixel-neutral default theme -------------------------------------------
+  const existingTheme = await payload.find({
+    collection: "themes",
+    where: { slug: { equals: "editorial-default" } },
+    limit: 1,
+    overrideAccess: true,
+  });
+  const themeData = {
+    name: "Editorial Default",
+    slug: "editorial-default",
+    description: "Pixel-neutral theme seeded from the current aiio design tokens.",
+    colors: {
+      paper: "oklch(97% 0.008 310)",
+      paper2: "oklch(95% 0.014 310)",
+      ink: "oklch(22% 0.006 260)",
+      ink2: "oklch(46% 0.02 315)",
+      rule: "oklch(84% 0.03 305)",
+      canvasDark: "oklch(11% 0.012 290)",
+      onDark: "oklch(100% 0 0)",
+      accent: "oklch(42% 0.15 305)",
+      accentStrong: "oklch(34% 0.13 305)",
+      accentInk: "oklch(100% 0 0)",
+      focus: "oklch(72% 0.14 300)",
+      success: "oklch(62% 0.15 150)",
+      danger: "oklch(58% 0.2 25)",
+      collector: "oklch(80% 0.008 265)",
+      magnet: "oklch(78% 0.13 205)",
+      forge: "oklch(62% 0.19 292)",
+      dataforge: "oklch(80% 0.15 70)",
+    },
+    shape: { radiusInput: 10, radiusCard: 18, radiusPanel: 28, ruleWidth: 1 },
+    motion: { fast: 180, base: 280, slow: 520, easing: "standard" as const },
+    _status: "published" as const,
+  };
+  const theme = existingTheme.docs[0]
+    ? await payload.update({
+        collection: "themes",
+        id: existingTheme.docs[0].id,
+        data: themeData,
+        overrideAccess: true,
+      })
+    : await payload.create({
+        collection: "themes",
+        data: themeData,
+        overrideAccess: true,
+      });
+
+  const showcase = await payload.find({
+    collection: "pages",
+    where: { sourceKey: { equals: "theme-showcase" } },
+    limit: 1,
+    overrideAccess: true,
+  });
+  if (showcase.docs[0]) {
+    await payload.update({
+      collection: "pages",
+      id: showcase.docs[0].id,
+      data: { theme: theme.id },
+      overrideAccess: true,
+    });
+  }
+
+  // 4. Site settings defaults -------------------------------------------------
   await payload.updateGlobal({
     slug: "site-settings",
     locale: "en",
     data: {
+      defaultTheme: theme.id,
       primaryCta: { label: "Request a conversation", href: "/conversation" },
       secondaryCta: { label: "Explore the platform", href: "/platform" },
     },
@@ -99,11 +162,47 @@ async function seed() {
     slug: "site-settings",
     locale: "de",
     data: {
+      defaultTheme: theme.id,
       primaryCta: { label: "Gespräch starten", href: "/gespraech" },
       secondaryCta: { label: "Plattform entdecken", href: "/plattform" },
     },
   });
   payload.logger.info("Ensured site-settings defaults.");
+
+  await payload.updateGlobal({
+    slug: "blog-settings",
+    locale: "en",
+    data: {
+      eyebrow: "Blog & News",
+      heading: "Insights for organizations that want to understand themselves.",
+      intro:
+        "Articles, product news and field notes on Organizational Intelligence and the evolution of work.",
+      latestHeading: "The latest from aiio.",
+      archiveHeading: "All Blog & News entries.",
+      readLabel: "Read article",
+      allLabel: "All",
+      ctaHeading: "Follow the evolution of Organizational Intelligence.",
+      ctaCopy:
+        "For executive briefings, product updates or media requests, talk to the aiio team directly.",
+    },
+  });
+  await payload.updateGlobal({
+    slug: "blog-settings",
+    locale: "de",
+    data: {
+      eyebrow: "Blog & News",
+      heading: "Impulse für Organisationen, die sich selbst verstehen wollen.",
+      intro:
+        "Artikel, Produktneuigkeiten und Perspektiven zu Organizational Intelligence und der Zukunft der Arbeit.",
+      latestHeading: "Neu bei aiio.",
+      archiveHeading: "Alle Beiträge.",
+      readLabel: "Artikel lesen",
+      allLabel: "Alle",
+      ctaHeading: "Verfolgen Sie die Entwicklung von Organizational Intelligence.",
+      ctaCopy:
+        "Für Briefings, Produktupdates oder Presseanfragen sprechen Sie direkt mit dem aiio Team.",
+    },
+  });
 
   // 4. Navigation globals (header + footer) ----------------------------------
   await payload.updateGlobal({
@@ -205,7 +304,18 @@ async function seed() {
     });
     payload.logger.info(`Seeded example page: /${pageSlug}`);
   } else {
-    payload.logger.info("Example page already exists — skipping.");
+    await payload.update({
+      collection: "pages",
+      id: existingPage.docs[0].id,
+      data: {
+        sourceKey: "overview",
+        migrationStatus: "complete",
+        migrationVersion: "seed-v1",
+        legacySource: "scripts/seed.ts#overview",
+      },
+      overrideAccess: true,
+    });
+    payload.logger.info("Example page already exists — marked editor-owned.");
   }
 
   payload.logger.info("Seed complete.");

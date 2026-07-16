@@ -13,7 +13,7 @@ export const Media: CollectionConfig = {
   upload: {
     // Files are stored in Vercel Blob (see payload.config plugins); no local
     // filesystem writes in production.
-    mimeTypes: ["image/*", "application/pdf"],
+    mimeTypes: ["image/*", "application/pdf", "font/woff2", "application/font-woff2"],
   },
   fields: [
     {

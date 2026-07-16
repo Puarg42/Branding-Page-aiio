@@ -28,7 +28,7 @@ const academySectionNavigator: EditorialSectionNavigatorItem[] = [
   { id: "start", label: "Start" },
 ];
 
-const learningModules = [
+export const learningModules = [
   {
     module: "Foundation",
     tone: "foundation",
@@ -72,7 +72,7 @@ const learningModules = [
   },
 ] as const;
 
-const learningFormats = [
+export const learningFormats = [
   {
     title: "Tutorials",
     copy: "Structured capability modules for teams building a shared foundation.",

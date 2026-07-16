@@ -22,7 +22,7 @@ export const Publications: CollectionConfig = {
     },
     livePreview: {
       url: ({ data, locale }) =>
-        `/${locale?.code ?? "en"}/blog/${data?.slug ?? ""}`,
+        `/${locale?.code ?? "en"}/blog/${data?.slug ?? ""}?preview=1`,
     },
     preview: (data, { locale }) =>
       `/${locale ?? "en"}/blog/${data?.slug ?? ""}`,
@@ -92,6 +92,12 @@ export const Publications: CollectionConfig = {
       name: "publishedAt",
       type: "date",
       admin: { position: "sidebar", date: { pickerAppearance: "dayOnly" } },
+    },
+    {
+      name: "theme",
+      type: "relationship",
+      relationTo: "themes",
+      admin: { position: "sidebar" },
     },
     { name: "heroImage", type: "upload", relationTo: "media", localized: true },
     {

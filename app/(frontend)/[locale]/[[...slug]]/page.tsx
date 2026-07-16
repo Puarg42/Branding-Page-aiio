@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import { notFound } from "next/navigation";
 import { RenderBlocks } from "@/components/blocks/RenderBlocks";
 import { RefreshRouteOnSave } from "@/components/live-preview/RefreshRouteOnSave";
+import { ThemeBoundary } from "@/components/theme/ThemeBoundary";
 import { getLocaleAlternates } from "@/lib/cms/alternates";
 import {
   getPageBySlug,
   getPageByType,
+  getPreviewPage,
   getPublishedPageSlugs,
 } from "@/lib/cms/pages";
 import {
@@ -13,10 +16,15 @@ import {
   locales,
   type Locale,
 } from "@/lib/i18n/config";
+import {
+  getPreviewTheme,
+  type ThemeRecord,
+} from "@/lib/cms/theme";
 import { MainHeader } from "../../main-navigation";
 
 type Props = {
   params: Promise<{ locale: string; slug?: string[] }>;
+  searchParams?: Promise<{ preview?: string; previewTheme?: string }>;
 };
 
 async function resolvePage(locale: Locale, segments?: string[]) {
@@ -72,13 +80,40 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function LocalizedCmsPage({ params }: Props) {
+export default async function LocalizedCmsPage({ params, searchParams }: Props) {
   const { locale: rawLocale, slug } = await params;
   const locale = assertLocale(rawLocale);
-  const page = await resolvePage(locale, slug);
+  const query = await searchParams;
+  const requestHeaders =
+    query?.preview || query?.previewTheme ? await headers() : null;
+  const previewPage =
+    query?.preview && requestHeaders
+      ? await getPreviewPage(
+          {
+            locale,
+            ...(slug?.length
+              ? { slug: slug.join("/") }
+              : { pageType: "home" }),
+          },
+          requestHeaders,
+        )
+      : null;
+  const page = previewPage ?? (await resolvePage(locale, slug));
   if (!page) notFound();
+  const previewThemeID = query?.previewTheme;
+  const previewTheme = previewThemeID
+    ? await getPreviewTheme(
+        previewThemeID,
+        requestHeaders ?? (await headers()),
+      )
+    : null;
+  const pageTheme =
+    page.theme && typeof page.theme === "object"
+      ? (page.theme as unknown as ThemeRecord)
+      : null;
+  const resolvedTheme = previewTheme ?? pageTheme;
 
-  return (
+  const content = (
     <main className="website-page">
       <RefreshRouteOnSave />
       <MainHeader variant={page.pageType === "home" ? "home" : "solid"} />
@@ -87,5 +122,10 @@ export default async function LocalizedCmsPage({ params }: Props) {
         locale={locale}
       />
     </main>
+  );
+  return resolvedTheme ? (
+    <ThemeBoundary theme={resolvedTheme}>{content}</ThemeBoundary>
+  ) : (
+    content
   );
 }

@@ -13,6 +13,9 @@ export function RefreshRouteOnSave() {
   const [serverURL, setServerURL] = useState("");
 
   useEffect(() => {
+    // Browser origin is unavailable during SSR; mount-only synchronization is
+    // required so the rendered markup remains hydration-safe.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setServerURL(window.location.origin);
   }, []);
 

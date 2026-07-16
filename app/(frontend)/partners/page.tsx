@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "The partner architecture for organizations building Organizational Intelligence.",
 };
 
-const partnerRoles = [
+export const partnerRoles = [
   {
     title: "Develop understanding",
     purpose:

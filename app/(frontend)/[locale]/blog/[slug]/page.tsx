@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
@@ -9,6 +10,7 @@ import { EditorialEyebrow } from "@/components/brand/EditorialEyebrow";
 import { RefreshRouteOnSave } from "@/components/live-preview/RefreshRouteOnSave";
 import {
   getPublicationBySlug,
+  getPreviewPublication,
   getPublicationSlugs,
 } from "@/lib/cms/publications";
 import { getLocaleAlternates } from "@/lib/cms/alternates";
@@ -17,6 +19,7 @@ import { MainHeader } from "../../../main-navigation";
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>;
+  searchParams?: Promise<{ preview?: string }>;
 };
 
 export async function generateStaticParams() {
@@ -70,10 +73,14 @@ function formatDate(date: string | null, locale: Locale) {
   }).format(new Date(date));
 }
 
-export default async function LocalizedArticle({ params }: Props) {
+export default async function LocalizedArticle({ params, searchParams }: Props) {
   const values = await params;
   const locale = assertLocale(values.locale);
-  const post = await getPublicationBySlug(values.slug, locale);
+  const preview = (await searchParams)?.preview;
+  const previewPost = preview
+    ? await getPreviewPublication(values.slug, locale, await headers())
+    : null;
+  const post = previewPost ?? (await getPublicationBySlug(values.slug, locale));
   if (!post) notFound();
 
   return (

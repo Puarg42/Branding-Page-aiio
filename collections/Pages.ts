@@ -25,9 +25,10 @@ export const Pages: CollectionConfig = {
     livePreview: {
       url: ({ data, locale }) => {
         const code = locale?.code ?? "en";
-        return data?.pageType === "home"
+        const path = data?.pageType === "home"
           ? `/${code}`
           : `/${code}/${data?.slug ?? ""}`;
+        return `${path}?preview=1`;
       },
     },
     preview: (data, { locale }) => {
@@ -72,6 +73,33 @@ export const Pages: CollectionConfig = {
         description: "Stable migration key; not shown in URLs.",
       },
     },
+    {
+      name: "migrationStatus",
+      type: "select",
+      defaultValue: "pending",
+      index: true,
+      admin: { position: "sidebar" },
+      options: [
+        { label: "Pending migration", value: "pending" },
+        { label: "Parity review", value: "parity-review" },
+        { label: "Editor-owned / complete", value: "complete" },
+      ],
+    },
+    {
+      name: "migrationVersion",
+      type: "text",
+      admin: { position: "sidebar", readOnly: true },
+    },
+    {
+      name: "sourceHash",
+      type: "text",
+      admin: { position: "sidebar", readOnly: true },
+    },
+    {
+      name: "legacySource",
+      type: "text",
+      admin: { position: "sidebar", readOnly: true },
+    },
     { name: "title", type: "text", required: true, localized: true },
     {
       name: "slug",
@@ -100,6 +128,15 @@ export const Pages: CollectionConfig = {
         { label: "Legal", value: "legal" },
         { label: "Conversion", value: "conversion" },
       ],
+    },
+    {
+      name: "theme",
+      type: "relationship",
+      relationTo: "themes",
+      admin: {
+        position: "sidebar",
+        description: "Optional override; otherwise Site Settings default is used.",
+      },
     },
     {
       name: "layout",

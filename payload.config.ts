@@ -9,14 +9,18 @@ import sharp from "sharp";
 
 import { Authors } from "./collections/Authors";
 import { Categories } from "./collections/Categories";
+import { FontFamilies } from "./collections/FontFamilies";
 import { Leads } from "./collections/Leads";
 import { Media } from "./collections/Media";
 import { Pages } from "./collections/Pages";
 import { Publications } from "./collections/Publications";
 import { SuccessStories } from "./collections/SuccessStories";
+import { TheoryPublications } from "./collections/TheoryPublications";
+import { Themes } from "./collections/Themes";
 import { Users } from "./collections/Users";
 import { Footer } from "./globals/Footer";
 import { Header } from "./globals/Header";
+import { BlogSettings } from "./globals/BlogSettings";
 import { SiteSettings } from "./globals/SiteSettings";
 import { defaultLocale, localeLabels, locales } from "./lib/i18n/config";
 import { deeplTranslation } from "./plugins/deepl-translate";
@@ -36,8 +40,20 @@ export default buildConfig({
       titleSuffix: " · aiio",
     },
   },
-  collections: [Users, Media, Pages, Authors, Categories, Publications, SuccessStories, Leads],
-  globals: [Header, Footer, SiteSettings],
+  collections: [
+    Users,
+    Media,
+    FontFamilies,
+    Themes,
+    Pages,
+    Authors,
+    Categories,
+    Publications,
+    TheoryPublications,
+    SuccessStories,
+    Leads,
+  ],
+  globals: [Header, Footer, SiteSettings, BlogSettings],
   localization: {
     locales: locales.map((code) => ({
       code,

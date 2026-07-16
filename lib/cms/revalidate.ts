@@ -11,6 +11,7 @@ export const NAV_TAG = "nav";
 export const PAGES_TAG = "pages";
 /** Cache tag for blog publications. */
 export const PUBLICATIONS_TAG = "publications";
+export const THEMES_TAG = "themes";
 
 function bust(tag: string) {
   if (!process.env.NEXT_RUNTIME) return;
@@ -44,5 +45,15 @@ export const revalidatePublicationsChange: CollectionAfterChangeHook = ({ doc })
 
 export const revalidatePublicationsDelete: CollectionAfterDeleteHook = ({ doc }) => {
   bust(PUBLICATIONS_TAG);
+  return doc;
+};
+
+export const revalidateThemesChange: CollectionAfterChangeHook = ({ doc }) => {
+  bust(THEMES_TAG);
+  return doc;
+};
+
+export const revalidateThemesDelete: CollectionAfterDeleteHook = ({ doc }) => {
+  bust(THEMES_TAG);
   return doc;
 };

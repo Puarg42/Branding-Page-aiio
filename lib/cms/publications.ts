@@ -135,3 +135,40 @@ export const getPublicationBySlug = unstable_cache(
   ["publication-detail"],
   { tags: [PUBLICATIONS_TAG], revalidate: 3600 },
 );
+
+export async function getPreviewPublication(
+  slug: string,
+  locale: Locale,
+  requestHeaders: Headers,
+): Promise<PublicationDetail | null> {
+  try {
+    const payload = await payloadClient();
+    const { user } = await payload.auth({
+      headers: requestHeaders,
+      canSetHeaders: false,
+    });
+    if (!user) return null;
+    const result = await payload.find({
+      collection: "publications",
+      locale,
+      fallbackLocale: "en",
+      draft: true,
+      overrideAccess: true,
+      depth: 2,
+      limit: 1,
+      where: { slug: { equals: slug } },
+    });
+    const doc = result.docs[0] as RawDoc | undefined;
+    return doc
+      ? {
+          ...toListItem(doc),
+          bodyHtml: doc.bodyHtml ?? null,
+          seoTitle: doc.seo?.title ?? null,
+          seoDescription: doc.seo?.description ?? null,
+          updatedAt: doc.updatedAt ?? null,
+        }
+      : null;
+  } catch {
+    return null;
+  }
+}

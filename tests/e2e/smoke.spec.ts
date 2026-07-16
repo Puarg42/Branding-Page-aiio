@@ -32,7 +32,7 @@ test.describe("marketing site smoke", () => {
   test("platform advertises its own canonical", async ({ page }) => {
     await page.goto("/platform");
     await expect(page).toHaveURL(/\/en\/platform$/);
-    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
+    await expect(page.locator('link[rel="canonical"]').first()).toHaveAttribute(
       "href",
       /\/en\/platform$/,
     );

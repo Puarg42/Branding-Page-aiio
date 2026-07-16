@@ -118,11 +118,25 @@ Shared primitives (composed, not duplicated per page):
 
 ## Variants
 
-_None yet. Record legitimate per-family deviations here (paper band, accent, or
-display treatment) rather than overriding tokens locally._
+- Named runtime themes are Payload `themes` documents.
+- `SiteSettings.defaultTheme` selects the site theme; Pages/Publications may
+  override it.
+- Theme documents may override only validated semantic tokens. They cannot
+  inject arbitrary CSS.
+- `editorial-default` is the pixel-neutral baseline corresponding to this file.
+
+## Theme preview
+
+- Payload Theme Live Preview uses `/en/theme-showcase?previewTheme=<id>`.
+- Authenticated draft-theme reads bypass published caches.
+- `THEME_SYSTEM_ENABLED=true` enables runtime theme resolution.
+- The theme showcase and focused golden routes are the required review surface
+  before publishing a new named theme.
 
 ## Migration
 
-`globals.css` still holds the legacy `--bc-*` and brand variables plus ~17k lines
-of page CSS. These are being migrated into `app/(frontend)/styles/tokens.css` and co-located
-CSS Modules incrementally; new work uses the canonical tokens above.
+`globals.css` still holds legacy page-specific CSS. Compatibility aliases now
+resolve back to the semantic variables in
+`app/(frontend)/styles/tokens.css`, so named themes propagate through both
+legacy and migrated styles. New CMS blocks use co-located CSS Modules; future
+work continues shrinking the legacy cascade.

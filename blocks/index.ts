@@ -150,13 +150,274 @@ export const ModuleBlock: Block = {
   ],
 };
 
+const experienceModule = (
+  slug: string,
+  interfaceName: string,
+  label: string,
+  fields: Block["fields"] = [],
+): Block => ({
+  slug,
+  interfaceName,
+  labels: { singular: label, plural: label },
+  fields: [
+    { name: "heading", type: "text" },
+    { name: "copy", type: "textarea" },
+    ...fields,
+  ],
+});
+
+export const RealityCheckBlock = experienceModule(
+  "realityCheck",
+  "RealityCheckBlock",
+  "Organizational reality check",
+);
+export const CategoryEvolutionBlock = experienceModule(
+  "categoryEvolution",
+  "CategoryEvolutionBlock",
+  "Category evolution",
+);
+export const CapabilityJourneyBlock = experienceModule(
+  "capabilityJourney",
+  "CapabilityJourneyBlock",
+  "Capability journey",
+);
+export const TrustLogosBlock = experienceModule(
+  "trustLogos",
+  "TrustLogosBlock",
+  "Trust logo marquee",
+);
+export const BrandIllustrationBlock = experienceModule(
+  "brandIllustration",
+  "BrandIllustrationBlock",
+  "Brand illustration",
+  [
+    {
+      name: "variant",
+      type: "select",
+      required: true,
+      defaultValue: "BC-002",
+      options: ["BC-001", "BC-002", "BC-005"],
+    },
+  ],
+);
+export const TheoryReaderBlock = experienceModule(
+  "theoryReader",
+  "TheoryReaderBlock",
+  "Theory reader entry",
+);
+export const SuccessStoriesBlock = experienceModule(
+  "successStories",
+  "SuccessStoriesBlock",
+  "Success stories",
+);
+
+export const HeroMediaBlock: Block = {
+  slug: "heroMedia",
+  interfaceName: "HeroMediaBlock",
+  fields: [
+    { name: "eyebrow", type: "text" },
+    { name: "heading", type: "text", required: true },
+    { name: "subheading", type: "textarea" },
+    { name: "media", type: "upload", relationTo: "media" },
+    { name: "legacyImageUrl", type: "text" },
+    { name: "alt", type: "text" },
+    ctaGroup("primaryCta"),
+    ctaGroup("secondaryCta"),
+  ],
+};
+
+export const CardGridBlock: Block = {
+  slug: "cardGrid",
+  interfaceName: "CardGridBlock",
+  fields: [
+    { name: "eyebrow", type: "text" },
+    { name: "heading", type: "text" },
+    {
+      name: "cards",
+      type: "array",
+      minRows: 1,
+      fields: [
+        { name: "title", type: "text", required: true },
+        { name: "copy", type: "textarea" },
+        { name: "image", type: "upload", relationTo: "media" },
+        { name: "legacyImageUrl", type: "text" },
+        { name: "imageAlt", type: "text" },
+        linkField("link", { localized: false }),
+        {
+          name: "kind",
+          type: "select",
+          defaultValue: "standard",
+          options: ["standard", "evidence", "capability", "resource"],
+        },
+      ],
+    },
+  ],
+};
+
+export const FAQBlock: Block = {
+  slug: "faq",
+  interfaceName: "FAQBlock",
+  fields: [
+    { name: "eyebrow", type: "text" },
+    { name: "heading", type: "text" },
+    {
+      name: "items",
+      type: "array",
+      minRows: 1,
+      fields: [
+        { name: "question", type: "text", required: true },
+        { name: "answer", type: "richText", required: true },
+      ],
+    },
+  ],
+};
+
+export const TimelineBlock: Block = {
+  slug: "timeline",
+  interfaceName: "TimelineBlock",
+  fields: [
+    { name: "eyebrow", type: "text" },
+    { name: "heading", type: "text" },
+    {
+      name: "milestones",
+      type: "array",
+      fields: [
+        { name: "date", type: "text", required: true },
+        { name: "title", type: "text", required: true },
+        { name: "copy", type: "textarea" },
+        { name: "media", type: "upload", relationTo: "media" },
+      ],
+    },
+  ],
+};
+
+export const PeopleBlock: Block = {
+  slug: "people",
+  interfaceName: "PeopleBlock",
+  fields: [
+    { name: "eyebrow", type: "text" },
+    { name: "heading", type: "text" },
+    {
+      name: "people",
+      type: "array",
+      fields: [
+        { name: "name", type: "text", required: true },
+        { name: "role", type: "text" },
+        { name: "bio", type: "textarea" },
+        { name: "image", type: "upload", relationTo: "media" },
+        { name: "legacyImageUrl", type: "text" },
+        linkField("profileLink", { localized: false }),
+      ],
+    },
+  ],
+};
+
+export const AwardsProofBlock: Block = {
+  slug: "awardsProof",
+  interfaceName: "AwardsProofBlock",
+  fields: [
+    { name: "eyebrow", type: "text" },
+    { name: "heading", type: "text" },
+    {
+      name: "items",
+      type: "array",
+      fields: [
+        { name: "title", type: "text", required: true },
+        { name: "issuer", type: "text" },
+        { name: "year", type: "text" },
+        { name: "evidence", type: "textarea" },
+        { name: "logo", type: "upload", relationTo: "media" },
+        { name: "legacyImageUrl", type: "text" },
+        linkField("sourceLink", { localized: false }),
+      ],
+    },
+  ],
+};
+
+export const LinkListBlock: Block = {
+  slug: "linkList",
+  interfaceName: "LinkListBlock",
+  fields: [
+    { name: "eyebrow", type: "text" },
+    { name: "heading", type: "text" },
+    {
+      name: "links",
+      type: "array",
+      fields: [linkField("link", { localized: false, required: true })],
+    },
+  ],
+};
+
+export const OutcomeListBlock: Block = {
+  slug: "outcomeList",
+  interfaceName: "OutcomeListBlock",
+  fields: [
+    { name: "eyebrow", type: "text" },
+    { name: "heading", type: "text" },
+    {
+      name: "items",
+      type: "array",
+      fields: [
+        { name: "title", type: "text" },
+        { name: "copy", type: "textarea", required: true },
+      ],
+    },
+  ],
+};
+
+export const RelatedPagesBlock: Block = {
+  slug: "relatedPages",
+  interfaceName: "RelatedPagesBlock",
+  fields: [
+    { name: "eyebrow", type: "text" },
+    { name: "heading", type: "text" },
+    {
+      name: "pages",
+      type: "relationship",
+      relationTo: "pages",
+      hasMany: true,
+    },
+  ],
+};
+
+export const SectionNavigationBlock: Block = {
+  slug: "sectionNavigation",
+  interfaceName: "SectionNavigationBlock",
+  fields: [
+    {
+      name: "items",
+      type: "array",
+      fields: [
+        { name: "label", type: "text", required: true },
+        { name: "anchor", type: "text", required: true },
+      ],
+    },
+  ],
+};
+
 export const pageBlocks = [
   HeroBlock,
+  HeroMediaBlock,
   ProseBlock,
   FeatureGridBlock,
+  CardGridBlock,
+  FAQBlock,
+  TimelineBlock,
+  PeopleBlock,
+  AwardsProofBlock,
+  LinkListBlock,
+  OutcomeListBlock,
+  RelatedPagesBlock,
+  SectionNavigationBlock,
   StatementBlock,
   MediaBlock,
   LeadFormBlock,
-  ModuleBlock,
+  RealityCheckBlock,
+  CategoryEvolutionBlock,
+  CapabilityJourneyBlock,
+  TrustLogosBlock,
+  BrandIllustrationBlock,
+  TheoryReaderBlock,
+  SuccessStoriesBlock,
   CTABlock,
 ];

@@ -9,6 +9,12 @@ export type SuccessStoryItem = {
   challenge: string;
   action: string;
   result: string;
+  proofPoints: Array<{
+    metric?: string | null;
+    label?: string | null;
+    source?: string | null;
+  }>;
+  logo: number | { url?: string | null; alt?: string | null } | null;
 };
 
 export const getSuccessStories = unstable_cache(
@@ -33,6 +39,8 @@ export const getSuccessStories = unstable_cache(
         challenge: doc.challenge ?? "",
         action: doc.action ?? "",
         result: doc.result ?? "",
+        proofPoints: doc.proofPoints ?? [],
+        logo: doc.logo ?? null,
       }));
     } catch {
       return [];

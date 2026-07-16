@@ -5,8 +5,11 @@ import { BrandCanonLightbox } from "@/components/brand/BrandCanonLightbox";
 import { NavigationMemory } from "@/components/brand/NavigationMemory";
 import { CookieConsent } from "@/components/consent/CookieConsent";
 import { NavProvider } from "@/components/navigation/NavProvider";
+import { ThemeBoundary } from "@/components/theme/ThemeBoundary";
 import { getLocaleAlternates } from "@/lib/cms/alternates";
 import { getNavigation } from "@/lib/cms/navigation";
+import { getSiteSettings } from "@/lib/cms/settings";
+import { getDefaultTheme } from "@/lib/cms/theme";
 import { defaultLocale, isLocale } from "@/lib/i18n/config";
 import { SiteFooter } from "./site-footer";
 import { deploymentUrl, siteUrl } from "./site-url";
@@ -86,9 +89,11 @@ export default async function RootLayout({
   const requestedLocale = requestHeaders.get("x-aiio-locale");
   const locale = isLocale(requestedLocale) ? requestedLocale : defaultLocale;
   const pathname = requestHeaders.get("x-aiio-pathname") ?? `/${locale}`;
-  const [nav, alternates] = await Promise.all([
+  const [nav, alternates, siteSettings, defaultTheme] = await Promise.all([
     getNavigation(locale),
     getLocaleAlternates(pathname, locale),
+    getSiteSettings(locale),
+    getDefaultTheme(locale),
   ]);
   return (
     <html lang={locale}>
@@ -109,17 +114,24 @@ export default async function RootLayout({
         />
       </head>
       <body>
-        <NavigationMemory />
-        <NavProvider
-          alternates={alternates}
-          header={nav.header}
-          locale={locale}
-        >
-          {children}
-        </NavProvider>
-        <SiteFooter nav={nav.footerNav} legal={nav.footerLegal} />
-        <BrandCanonLightbox />
-        <CookieConsent />
+        <ThemeBoundary theme={defaultTheme}>
+          <NavigationMemory />
+          {siteSettings?.announcement ? (
+            <aside className="site-announcement" role="status">
+              {siteSettings.announcement}
+            </aside>
+          ) : null}
+          <NavProvider
+            alternates={alternates}
+            header={nav.header}
+            locale={locale}
+          >
+            {children}
+          </NavProvider>
+          <SiteFooter nav={nav.footerNav} legal={nav.footerLegal} />
+          <BrandCanonLightbox />
+          <CookieConsent />
+        </ThemeBoundary>
       </body>
     </html>
   );

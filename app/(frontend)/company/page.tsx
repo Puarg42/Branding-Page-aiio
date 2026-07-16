@@ -29,7 +29,7 @@ const companySectionNavigator = [
   { id: "start", label: "Start" },
 ] as const;
 
-const storyMilestones = [
+export const storyMilestones = [
   {
     year: "2006",
     label: "Lintra",
@@ -57,7 +57,7 @@ const storyMilestones = [
   },
 ] as const;
 
-const principles = [
+export const companyPrinciples = [
   "Organizations should continuously understand themselves.",
   "Knowledge alone does not create intelligence.",
   "Capabilities emerge from connected understanding.",
@@ -66,7 +66,7 @@ const principles = [
   "Technology should make organizations more capable, not more dependent.",
 ] as const;
 
-const leadership = [
+export const companyLeadership = [
   {
     image: "/people/christian-graup.jpg",
     name: "Dr. Christian Graup",
@@ -101,7 +101,7 @@ const leadership = [
   },
 ] as const;
 
-const experts = [
+export const companyExperts = [
   {
     contribution:
       "Contributes expertise in information security, embedded systems and trustworthy technical foundations for complex organizations.",
@@ -136,7 +136,7 @@ const experts = [
   },
 ] as const;
 
-const awards = [
+export const companyAwards = [
   {
     alt: "CHIP Leading Software 2024 for aiio",
     image: "/awards/chip-leading-software-2024-aiio.svg",
@@ -239,7 +239,7 @@ export default function CompanyPage() {
           title="The principles that guide us."
         />
         <div className="company-principles-list">
-          {principles.map((principle, index) => (
+          {companyPrinciples.map((principle, index) => (
             <article key={principle}>
               <span>{String(index + 1).padStart(2, "0")}</span>
               <p>{principle}</p>
@@ -260,7 +260,7 @@ export default function CompanyPage() {
           lead="The leadership team connects category creation, operating discipline, market development and partner enablement into one institutional direction."
         />
         <div className="company-leadership-grid">
-          {leadership.map((person) => (
+          {companyLeadership.map((person) => (
             <article className="company-leadership-card" key={person.name}>
               <div
                 aria-label={`${person.name} portrait`}
@@ -291,7 +291,7 @@ export default function CompanyPage() {
           lead="The Expert Panel brings scientific, strategic, market and resilience perspectives into one shared management discipline."
         />
         <div className="company-expert-list">
-          {experts.map((expert) => (
+          {companyExperts.map((expert) => (
             <article className="company-expert-profile" key={expert.name}>
               <div
                 aria-label={`${expert.name} portrait`}
@@ -322,7 +322,7 @@ export default function CompanyPage() {
           lead="aiio is shaped with organizations, partners and expert communities that operate in complex, regulated and knowledge-intensive environments."
         />
         <div className="company-recognition-proof">
-          {awards.map((award) => (
+          {companyAwards.map((award) => (
             <figure key={award.label}>
               <img alt={award.alt} loading="lazy" src={award.image} />
               <figcaption>

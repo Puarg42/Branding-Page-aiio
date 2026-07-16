@@ -2,12 +2,11 @@
 // Production/CI build entry.
 //
 // Order of operations:
-//   1. Verify the generated theory content is in sync with its markdown source.
-//   2. Run pending Payload database migrations, but ONLY when a database URL is
+//   1. Run pending Payload database migrations, but ONLY when a database URL is
 //      present. This keeps the first deployment (before Neon is provisioned)
 //      from failing, and guarantees migrations run automatically once the
 //      database exists.
-//   3. Build the Next.js application.
+//   2. Build the Next.js application.
 //
 // Migrations are intentionally never destructive here; `payload migrate` only
 // applies committed migration files that have not yet run.
@@ -25,8 +24,6 @@ const databaseUrl =
   process.env.DATABASE_URL ||
   process.env.POSTGRES_URL ||
   process.env.POSTGRES_URL_NON_POOLING;
-
-run("node", ["scripts/compile-theory.mjs", "--check"]);
 
 // Keep the Payload admin import map in sync with the config so the admin never
 // renders blank due to a stale/empty map. No database required.

@@ -27,8 +27,8 @@ jobs:
       - name: Lint
         run: npm run lint
 
-      - name: Theory content is in sync
-        run: npm run theory:check
+      - name: Guard CMS content authority
+        run: npm run lint:content
 
       - name: Typecheck
         run: npm run typecheck
@@ -44,3 +44,6 @@ jobs:
           NEXT_PUBLIC_SITE_URL: https://aiio.de
           # Throwaway build-time secret; production uses the real Vercel value.
           PAYLOAD_SECRET: ci-build-only-secret
+
+      - name: Check frontend budgets
+        run: npm run test:budgets

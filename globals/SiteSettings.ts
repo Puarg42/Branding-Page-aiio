@@ -11,6 +11,12 @@ export const SiteSettings: GlobalConfig = {
   },
   fields: [
     {
+      name: "defaultTheme",
+      type: "relationship",
+      relationTo: "themes",
+      admin: { description: "Published site-wide theme." },
+    },
+    {
       name: "primaryCta",
       type: "group",
       localized: true,

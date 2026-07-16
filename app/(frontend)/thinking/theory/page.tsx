@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import {
   EditorialProgression,
   type EditorialProgressionItem,
 } from "@/components/brand/EditorialProgression";
 import { EditorialEyebrow } from "@/components/brand/EditorialEyebrow";
 import { ExecutiveCTA } from "@/components/brand/ExecutiveCTA";
-import { theoryChapters } from "./theory-content.generated";
 import { TheorySidebar } from "./theory-sidebar";
+import { getTheoryPublication } from "@/lib/cms/theory";
+import { isLocale } from "@/lib/i18n/config";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/thinking/theory" },
@@ -121,10 +123,28 @@ function isCircularTheoryModel(lines: readonly string[]) {
     lines.some((line) => line.toLowerCase().includes("creates new knowledge"));
 }
 
-const chapters = theoryChapters;
-const sidebarChapters = chapters.map(({ id, title }) => ({ id, title }));
-
-export default function TheoryPage() {
+export default async function TheoryPage() {
+  const requestHeaders = await headers();
+  const requestedLocale = requestHeaders.get("x-aiio-locale");
+  const locale = isLocale(requestedLocale) ? requestedLocale : "en";
+  const publication = await getTheoryPublication(locale);
+  const chapters =
+    publication?.chapters?.map((chapter) => ({
+        id: chapter.slug,
+        title: chapter.title,
+        blocks: chapter.blocks.map((block) =>
+          block.type === "model"
+            ? {
+                type: "model" as const,
+                lines: block.lines?.map((line) => line.text) ?? [],
+              }
+            : {
+                type: block.type as "paragraph" | "quote",
+                text: block.text ?? "",
+              },
+        ),
+      })) ?? [];
+  const sidebarChapters = chapters.map(({ id, title }) => ({ id, title }));
   return (
     <main className="theory-book-page">
       <div className="theory-book-layout">
