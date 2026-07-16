@@ -32,7 +32,7 @@ function formatDate(date: string | null) {
 }
 
 async function getRelatedPosts(post: PublicationDetail) {
-  const all = await getPublications();
+  const all = await getPublications("en");
   const sameCategory = all.filter(
     (candidate) => candidate.slug !== post.slug && candidate.categoryTitle === post.categoryTitle,
   );
@@ -41,13 +41,13 @@ async function getRelatedPosts(post: PublicationDetail) {
 }
 
 export async function generateStaticParams() {
-  const slugs = await getPublicationSlugs();
+  const slugs = await getPublicationSlugs("en");
   return slugs.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: BlogArticlePageProps): Promise<Metadata> {
   const { slug } = await params;
-  const post = await getPublicationBySlug(slug);
+  const post = await getPublicationBySlug(slug, "en");
   if (!post) return { title: "Blog & News | aiio" };
 
   const metaTitle = `${post.seoTitle || post.title} | aiio Blog & News`;
@@ -71,7 +71,7 @@ export async function generateMetadata({ params }: BlogArticlePageProps): Promis
 
 export default async function BlogArticlePage({ params }: BlogArticlePageProps) {
   const { slug } = await params;
-  const post = await getPublicationBySlug(slug);
+  const post = await getPublicationBySlug(slug, "en");
   if (!post) notFound();
 
   const relatedPosts = await getRelatedPosts(post);

@@ -12,8 +12,11 @@ import { getPayload } from "payload";
 import config from "../payload.config";
 import {
   DEFAULT_FOOTER_LEGAL,
+  DEFAULT_FOOTER_LEGAL_DE,
   DEFAULT_FOOTER_NAV,
+  DEFAULT_FOOTER_NAV_DE,
   DEFAULT_HEADER_NAV,
+  DEFAULT_HEADER_NAV_DE,
 } from "../lib/cms/navigation";
 import { capabilitySpine } from "../content/capability-spine";
 
@@ -86,9 +89,18 @@ async function seed() {
   // 3. Site settings defaults -------------------------------------------------
   await payload.updateGlobal({
     slug: "site-settings",
+    locale: "en",
     data: {
-      primaryCta: { label: "Request a conversation", href: "/live-demo/kontakt" },
+      primaryCta: { label: "Request a conversation", href: "/conversation" },
       secondaryCta: { label: "Explore the platform", href: "/platform" },
+    },
+  });
+  await payload.updateGlobal({
+    slug: "site-settings",
+    locale: "de",
+    data: {
+      primaryCta: { label: "Gespräch starten", href: "/gespraech" },
+      secondaryCta: { label: "Plattform entdecken", href: "/plattform" },
     },
   });
   payload.logger.info("Ensured site-settings defaults.");
@@ -96,11 +108,26 @@ async function seed() {
   // 4. Navigation globals (header + footer) ----------------------------------
   await payload.updateGlobal({
     slug: "header",
+    locale: "en",
     data: { navItems: DEFAULT_HEADER_NAV },
   });
   await payload.updateGlobal({
+    slug: "header",
+    locale: "de",
+    data: { navItems: DEFAULT_HEADER_NAV_DE },
+  });
+  await payload.updateGlobal({
     slug: "footer",
+    locale: "en",
     data: { navItems: DEFAULT_FOOTER_NAV, legalItems: DEFAULT_FOOTER_LEGAL },
+  });
+  await payload.updateGlobal({
+    slug: "footer",
+    locale: "de",
+    data: {
+      navItems: DEFAULT_FOOTER_NAV_DE,
+      legalItems: DEFAULT_FOOTER_LEGAL_DE,
+    },
   });
   payload.logger.info("Ensured header/footer navigation.");
 
@@ -127,8 +154,16 @@ async function seed() {
             heading: "Organizational Intelligence, with system.",
             subheading:
               "aiio enables an organization to continuously understand itself, develop new capabilities and empower every person to make better decisions.",
-            primaryCta: { label: "Request a conversation", href: "/live-demo/kontakt" },
-            secondaryCta: { label: "Explore the platform", href: "/platform" },
+            primaryCta: {
+              type: "external",
+              label: "Request a conversation",
+              url: "/live-demo/kontakt",
+            },
+            secondaryCta: {
+              type: "external",
+              label: "Explore the platform",
+              url: "/platform",
+            },
           },
           {
             blockType: "featureGrid",
@@ -148,8 +183,16 @@ async function seed() {
             eyebrow: "Start",
             heading: "Start with the right conversation.",
             copy: "Explore where Organizational Intelligence can create value in your organization.",
-            primaryCta: { label: "Request a conversation", href: "/live-demo/kontakt" },
-            secondaryCta: { label: "Explore the platform", href: "/platform" },
+            primaryCta: {
+              type: "external",
+              label: "Request a conversation",
+              url: "/live-demo/kontakt",
+            },
+            secondaryCta: {
+              type: "external",
+              label: "Explore the platform",
+              url: "/platform",
+            },
           },
         ],
         seo: {

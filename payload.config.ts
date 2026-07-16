@@ -18,6 +18,7 @@ import { Users } from "./collections/Users";
 import { Footer } from "./globals/Footer";
 import { Header } from "./globals/Header";
 import { SiteSettings } from "./globals/SiteSettings";
+import { defaultLocale, localeLabels, locales } from "./lib/i18n/config";
 
 const dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -36,6 +37,14 @@ export default buildConfig({
   },
   collections: [Users, Media, Pages, Authors, Categories, Publications, SuccessStories, Leads],
   globals: [Header, Footer, SiteSettings],
+  localization: {
+    locales: locales.map((code) => ({
+      code,
+      label: localeLabels[code],
+    })),
+    defaultLocale,
+    fallback: true,
+  },
   editor: lexicalEditor(),
   // Real deployments MUST set PAYLOAD_SECRET (bootstrap provisions it). The
   // fallback exists only so `next build` can run in environments without the

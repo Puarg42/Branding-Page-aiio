@@ -9,7 +9,6 @@ import {
 } from "framer-motion";
 
 import styles from "./organizational-thought-space.module.css";
-import { BrandIllustration } from "@/components/brand/BrandIllustration";
 import { EditorialEyebrow } from "@/components/brand/EditorialEyebrow";
 import { TheoryReference } from "@/components/brand/TheoryReference";
 

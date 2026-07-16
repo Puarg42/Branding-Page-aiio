@@ -12,9 +12,14 @@ export const Authors: CollectionConfig = {
   },
   fields: [
     { name: "name", type: "text", required: true },
-    { name: "role", type: "text", admin: { description: "e.g. Managing Director" } },
-    { name: "bio", type: "textarea" },
-    { name: "avatar", type: "upload", relationTo: "media" },
+    {
+      name: "role",
+      type: "text",
+      localized: true,
+      admin: { description: "e.g. Managing Director" },
+    },
+    { name: "bio", type: "textarea", localized: true },
+    { name: "avatar", type: "upload", relationTo: "media", localized: true },
     { name: "linkedin", type: "text" },
   ],
 };

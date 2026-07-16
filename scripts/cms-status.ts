@@ -6,6 +6,7 @@ async function main() {
   const collections = [
     "users",
     "media",
+    "pages",
     "authors",
     "categories",
     "publications",

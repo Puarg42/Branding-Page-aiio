@@ -1,0 +1,19 @@
+#!/usr/bin/expect -f
+set timeout 900
+set name [lindex $argv 0]
+spawn node_modules/.bin/dotenv -e .env.local -- node_modules/.bin/payload migrate:create $name
+
+expect {
+  -re {another (column|table|index|enum)} {
+    after 50
+    send -- "\r"
+    exp_continue
+  }
+  eof {
+    exit 0
+  }
+  timeout {
+    puts "Timed out while creating migration"
+    exit 1
+  }
+}

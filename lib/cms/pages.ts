@@ -1,4 +1,5 @@
 import { unstable_cache } from "next/cache";
+import type { Locale } from "../i18n/config";
 import { PAGES_TAG } from "./revalidate";
 
 async function payloadClient() {
@@ -11,11 +12,13 @@ async function payloadClient() {
 
 /** Slugs of published pages, for static generation. Empty if the DB is down. */
 export const getPublishedPageSlugs = unstable_cache(
-  async (): Promise<string[]> => {
+  async (locale: Locale): Promise<string[]> => {
     try {
       const payload = await payloadClient();
       const result = await payload.find({
         collection: "pages",
+        locale,
+        fallbackLocale: false,
         where: { _status: { equals: "published" } },
         limit: 200,
         depth: 0,
@@ -32,11 +35,13 @@ export const getPublishedPageSlugs = unstable_cache(
 
 /** A single published page by slug, or null. Cached and tag-revalidated. */
 export const getPageBySlug = unstable_cache(
-  async (slug: string) => {
+  async (slug: string, locale: Locale, fallbackLocale: Locale | false = "en") => {
     try {
       const payload = await payloadClient();
       const result = await payload.find({
         collection: "pages",
+        locale,
+        fallbackLocale,
         where: { slug: { equals: slug }, _status: { equals: "published" } },
         limit: 1,
         depth: 1,
@@ -47,5 +52,33 @@ export const getPageBySlug = unstable_cache(
     }
   },
   ["cms-page"],
+  { tags: [PAGES_TAG], revalidate: 3600 },
+);
+
+export const getPageByType = unstable_cache(
+  async (
+    pageType: string,
+    locale: Locale,
+    fallbackLocale: Locale | false = "en",
+  ) => {
+    try {
+      const payload = await payloadClient();
+      const result = await payload.find({
+        collection: "pages",
+        locale,
+        fallbackLocale,
+        where: {
+          pageType: { equals: pageType },
+          _status: { equals: "published" },
+        },
+        limit: 1,
+        depth: 2,
+      });
+      return result.docs[0] ?? null;
+    } catch {
+      return null;
+    }
+  },
+  ["cms-page-type"],
   { tags: [PAGES_TAG], revalidate: 3600 },
 );

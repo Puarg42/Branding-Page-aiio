@@ -33,13 +33,14 @@ export const Publications: CollectionConfig = {
     delete: isAuthenticated,
   },
   fields: [
-    { name: "title", type: "text", required: true },
+    { name: "title", type: "text", required: true, localized: true },
     {
       name: "slug",
       type: "text",
       required: true,
       unique: true,
       index: true,
+      localized: true,
     },
     {
       name: "sourceId",
@@ -51,25 +52,38 @@ export const Publications: CollectionConfig = {
         description: "Stable identifier from the original source; used for idempotent imports.",
       },
     },
-    { name: "excerpt", type: "textarea", required: true },
-    { name: "readingTime", type: "text", admin: { description: "e.g. '5 min read'." } },
-    { name: "category", type: "relationship", relationTo: "categories" },
-    { name: "authors", type: "relationship", relationTo: "authors", hasMany: true },
+    { name: "excerpt", type: "textarea", required: true, localized: true },
+    {
+      name: "readingTime",
+      type: "text",
+      localized: true,
+      admin: { description: "e.g. '5 min read' / '5 Min. Lesezeit'." },
+    },
+    { name: "category", type: "relationship", relationTo: "categories", localized: true },
+    {
+      name: "authors",
+      type: "relationship",
+      relationTo: "authors",
+      hasMany: true,
+      localized: true,
+    },
     {
       name: "publishedAt",
       type: "date",
       admin: { position: "sidebar", date: { pickerAppearance: "dayOnly" } },
     },
-    { name: "heroImage", type: "upload", relationTo: "media" },
+    { name: "heroImage", type: "upload", relationTo: "media", localized: true },
     {
       name: "heroImageUrl",
       type: "text",
+      localized: true,
       admin: { description: "Legacy hero image path (e.g. /blog/...). Used until media is migrated to Blob." },
     },
-    { name: "heroImageAlt", type: "text" },
+    { name: "heroImageAlt", type: "text", localized: true },
     {
       name: "body",
       type: "richText",
+      localized: true,
       admin: {
         description: "Structured body for natively-authored posts. Optional when bodyHtml is set.",
       },
@@ -77,6 +91,7 @@ export const Publications: CollectionConfig = {
     {
       name: "bodyHtml",
       type: "textarea",
+      localized: true,
       admin: {
         description: "Imported/legacy HTML body. Rendered as-is when the richText body is empty.",
       },
@@ -84,11 +99,21 @@ export const Publications: CollectionConfig = {
     {
       name: "seo",
       type: "group",
+      localized: true,
       admin: { position: "sidebar" },
       fields: [
         { name: "title", type: "text" },
         { name: "description", type: "textarea" },
+        { name: "image", type: "upload", relationTo: "media" },
+        { name: "noIndex", type: "checkbox", defaultValue: false },
       ],
+    },
+    {
+      name: "translationComplete",
+      type: "checkbox",
+      localized: true,
+      defaultValue: false,
+      admin: { position: "sidebar" },
     },
   ],
 };

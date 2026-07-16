@@ -13,6 +13,7 @@ export const SiteSettings: GlobalConfig = {
     {
       name: "primaryCta",
       type: "group",
+      localized: true,
       fields: [
         { name: "label", type: "text", defaultValue: "Request a conversation" },
         { name: "href", type: "text", defaultValue: "/live-demo/kontakt" },
@@ -21,6 +22,7 @@ export const SiteSettings: GlobalConfig = {
     {
       name: "secondaryCta",
       type: "group",
+      localized: true,
       fields: [
         { name: "label", type: "text", defaultValue: "Explore the platform" },
         { name: "href", type: "text", defaultValue: "/platform" },
@@ -29,6 +31,7 @@ export const SiteSettings: GlobalConfig = {
     {
       name: "announcement",
       type: "text",
+      localized: true,
       admin: { description: "Optional site-wide announcement. Leave empty to hide." },
     },
   ],

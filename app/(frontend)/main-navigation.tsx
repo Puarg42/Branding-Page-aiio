@@ -4,7 +4,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState, type CSSProperties } from "react";
 import { SmartLink } from "@/components/navigation/SmartLink";
-import { useHeaderNav } from "@/components/navigation/NavProvider";
+import {
+  useHeaderNav,
+  useLocaleNav,
+} from "@/components/navigation/NavProvider";
 
 type HeaderVariant = "home" | "solid";
 
@@ -24,9 +27,9 @@ const defaultNavItems: MenuLink[] = [
   { href: "/live-demo/kontakt", label: "Get Started" },
 ];
 
-function BrandLink({ className }: { className: string }) {
+function BrandLink({ className, href }: { className: string; href: string }) {
   return (
-    <Link className={className} href="/" aria-label="aiio Startseite">
+    <Link className={className} href={href} aria-label="aiio">
       <span className="aiio-logo" aria-hidden="true" />
       <span className="sr-only">aiio</span>
     </Link>
@@ -36,6 +39,8 @@ function BrandLink({ className }: { className: string }) {
 export function MainHeader({ variant = "home" }: { variant?: HeaderVariant }) {
   const pathname = usePathname();
   const navItems = useHeaderNav(defaultNavItems);
+  const localeNav = useLocaleNav();
+  const locale = localeNav?.locale ?? "en";
   const [scrollProgress, setScrollProgress] = useState(variant === "solid" ? 1 : 0);
   const [menuOpen, setMenuOpen] = useState(false);
   const isScrolled = variant === "solid" || scrollProgress > 0;
@@ -112,7 +117,10 @@ export function MainHeader({ variant = "home" }: { variant?: HeaderVariant }) {
   return (
     <header className={headerClass} style={headerStyle}>
       <div className={variant === "solid" ? "site-header-inner" : "topbar"}>
-        <BrandLink className={variant === "solid" ? "brand-mark" : "brand"} />
+        <BrandLink
+          className={variant === "solid" ? "brand-mark" : "brand"}
+          href={`/${locale}`}
+        />
         <button
           aria-controls="mobile-menu"
           aria-expanded={menuOpen}
@@ -122,7 +130,10 @@ export function MainHeader({ variant = "home" }: { variant?: HeaderVariant }) {
         >
           <span>{menuOpen ? "Close" : "Menu"}</span>
         </button>
-        <nav aria-label="Hauptnavigation" className="main-nav">
+        <nav
+          aria-label={locale === "de" ? "Hauptnavigation" : "Main navigation"}
+          className="main-nav"
+        >
           {navItems.map((item) => (
             <SmartLink
               className={isActiveHref(item.href) ? "is-active" : undefined}
@@ -132,6 +143,22 @@ export function MainHeader({ variant = "home" }: { variant?: HeaderVariant }) {
               {item.label}
             </SmartLink>
           ))}
+          {localeNav ? (
+            <span className="locale-switcher" aria-label="Language">
+              <Link
+                aria-current={locale === "en" ? "page" : undefined}
+                href={localeNav.alternates.en}
+              >
+                EN
+              </Link>
+              <Link
+                aria-current={locale === "de" ? "page" : undefined}
+                href={localeNav.alternates.de}
+              >
+                DE
+              </Link>
+            </span>
+          ) : null}
         </nav>
       </div>
       <div
@@ -139,7 +166,12 @@ export function MainHeader({ variant = "home" }: { variant?: HeaderVariant }) {
         className="mobile-menu-panel"
         id="mobile-menu"
       >
-        <nav aria-label="Mobile Hauptnavigation" className="mobile-menu-nav">
+        <nav
+          aria-label={
+            locale === "de" ? "Mobile Hauptnavigation" : "Mobile navigation"
+          }
+          className="mobile-menu-nav"
+        >
           {navItems.map((item) => (
             <SmartLink
               className={isActiveHref(item.href) ? "is-active" : undefined}
@@ -151,6 +183,16 @@ export function MainHeader({ variant = "home" }: { variant?: HeaderVariant }) {
               {item.label}
             </SmartLink>
           ))}
+          {localeNav ? (
+            <>
+              <Link href={localeNav.alternates.en} onClick={closeMenu}>
+                English
+              </Link>
+              <Link href={localeNav.alternates.de} onClick={closeMenu}>
+                Deutsch
+              </Link>
+            </>
+          ) : null}
         </nav>
       </div>
     </header>

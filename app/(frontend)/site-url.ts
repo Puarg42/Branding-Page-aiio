@@ -1,4 +1,4 @@
-const fallbackSiteUrl = "https://branding-page-aiio.vercel.app";
+const fallbackSiteUrl = "https://aiio-de-website.vercel.app";
 
 function normalizeSiteUrl(url?: string) {
   if (!url) {

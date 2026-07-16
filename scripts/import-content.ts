@@ -16,6 +16,7 @@ import config from "../payload.config";
 import { blogPosts } from "../app/(frontend)/blog/blog-posts";
 
 const dryRun = process.argv.includes("--dry-run");
+const importLocale = "de" as const;
 
 function slugifyCategory(category: string): string {
   return category
@@ -38,13 +39,20 @@ async function importContent() {
 
     const existing = await payload.find({
       collection: "categories",
+      locale: importLocale,
+      fallbackLocale: false,
       where: { slug: { equals: slug } },
       limit: 1,
       overrideAccess: true,
     });
     const id = existing.totalDocs
       ? (existing.docs[0].id as number)
-      : ((await payload.create({ collection: "categories", data: { title, slug }, overrideAccess: true }))
+      : ((await payload.create({
+          collection: "categories",
+          locale: importLocale,
+          data: { title, slug },
+          overrideAccess: true,
+        }))
           .id as number);
     categoryCache.set(slug, id);
     return id;
@@ -65,6 +73,7 @@ async function importContent() {
       heroImageUrl: post.heroImage,
       heroImageAlt: post.heroImageAlt,
       bodyHtml: post.contentHtml,
+      translationComplete: true,
       seo: {
         title: post.seoTitle,
         description: post.seoDescription || post.excerpt,
@@ -74,6 +83,8 @@ async function importContent() {
 
     const existing = await payload.find({
       collection: "publications",
+      locale: importLocale,
+      fallbackLocale: false,
       where: { sourceId: { equals: post.slug } },
       limit: 1,
       overrideAccess: true,
@@ -90,12 +101,18 @@ async function importContent() {
       await payload.update({
         collection: "publications",
         id: existing.docs[0].id,
+        locale: importLocale,
         data,
         overrideAccess: true,
       });
       summary.updated += 1;
     } else {
-      await payload.create({ collection: "publications", data, overrideAccess: true });
+      await payload.create({
+        collection: "publications",
+        locale: importLocale,
+        data,
+        overrideAccess: true,
+      });
       summary.created += 1;
     }
   }

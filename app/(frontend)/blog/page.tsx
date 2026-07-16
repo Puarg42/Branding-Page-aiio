@@ -95,7 +95,7 @@ function BlogCard({ post, priority = false }: { post: PublicationListItem; prior
 export default async function BlogPage({ searchParams }: BlogPageProps) {
   const params = (await searchParams) ?? {};
   const activeCategory = params.category;
-  const allPosts = await getPublications();
+  const allPosts = await getPublications("en");
   const categories = Array.from(
     new Set(allPosts.map((post) => post.categoryTitle).filter((c): c is string => Boolean(c))),
   );

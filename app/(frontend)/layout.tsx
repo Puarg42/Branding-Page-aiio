@@ -1,12 +1,19 @@
 import type { Metadata, Viewport } from "next";
+import { headers } from "next/headers";
 import "./globals.css";
 import { BrandCanonLightbox } from "@/components/brand/BrandCanonLightbox";
 import { NavigationMemory } from "@/components/brand/NavigationMemory";
 import { CookieConsent } from "@/components/consent/CookieConsent";
 import { NavProvider } from "@/components/navigation/NavProvider";
+import { getLocaleAlternates } from "@/lib/cms/alternates";
 import { getNavigation } from "@/lib/cms/navigation";
+import { defaultLocale, isLocale } from "@/lib/i18n/config";
 import { SiteFooter } from "./site-footer";
 import { deploymentUrl, siteUrl } from "./site-url";
+
+// The root document language and CMS navigation depend on the locale header
+// injected by proxy.ts. Force request-time rendering so `headers()` is valid.
+export const dynamic = "force-dynamic";
 
 const title = "aiio | Organizational Intelligence with System";
 const description = "Build organizations that continuously understand themselves.";
@@ -40,7 +47,8 @@ export const metadata: Metadata = {
   openGraph: {
     description,
     images: [socialPreviewImage],
-    locale: "de_DE",
+    locale: "en_US",
+    alternateLocale: ["de_DE"],
     siteName: "aiio",
     title,
     type: "website",
@@ -74,9 +82,16 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const nav = await getNavigation();
+  const requestHeaders = await headers();
+  const requestedLocale = requestHeaders.get("x-aiio-locale");
+  const locale = isLocale(requestedLocale) ? requestedLocale : defaultLocale;
+  const pathname = requestHeaders.get("x-aiio-pathname") ?? `/${locale}`;
+  const [nav, alternates] = await Promise.all([
+    getNavigation(locale),
+    getLocaleAlternates(pathname, locale),
+  ]);
   return (
-    <html lang="en">
+    <html lang={locale}>
       <head>
         <link
           as="font"
@@ -95,7 +110,13 @@ export default async function RootLayout({
       </head>
       <body>
         <NavigationMemory />
-        <NavProvider header={nav.header}>{children}</NavProvider>
+        <NavProvider
+          alternates={alternates}
+          header={nav.header}
+          locale={locale}
+        >
+          {children}
+        </NavProvider>
         <SiteFooter nav={nav.footerNav} legal={nav.footerLegal} />
         <BrandCanonLightbox />
         <CookieConsent />

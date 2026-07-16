@@ -1,4 +1,5 @@
 import { unstable_cache } from "next/cache";
+import type { Locale } from "../i18n/config";
 import { PUBLICATIONS_TAG } from "./revalidate";
 
 export type PublicationListItem = {
@@ -59,11 +60,13 @@ function toListItem(doc: RawDoc): PublicationListItem {
 }
 
 export const getPublications = unstable_cache(
-  async (): Promise<PublicationListItem[]> => {
+  async (locale: Locale): Promise<PublicationListItem[]> => {
     try {
       const payload = await payloadClient();
       const result = await payload.find({
         collection: "publications",
+        locale,
+        fallbackLocale: "en",
         where: { _status: { equals: "published" } },
         sort: "-publishedAt",
         depth: 1,
@@ -79,11 +82,13 @@ export const getPublications = unstable_cache(
 );
 
 export const getPublicationSlugs = unstable_cache(
-  async (): Promise<string[]> => {
+  async (locale: Locale): Promise<string[]> => {
     try {
       const payload = await payloadClient();
       const result = await payload.find({
         collection: "publications",
+        locale,
+        fallbackLocale: false,
         where: { _status: { equals: "published" } },
         depth: 0,
         limit: 500,
@@ -99,11 +104,17 @@ export const getPublicationSlugs = unstable_cache(
 );
 
 export const getPublicationBySlug = unstable_cache(
-  async (slug: string): Promise<PublicationDetail | null> => {
+  async (
+    slug: string,
+    locale: Locale,
+    fallbackLocale: Locale | false = "en",
+  ): Promise<PublicationDetail | null> => {
     try {
       const payload = await payloadClient();
       const result = await payload.find({
         collection: "publications",
+        locale,
+        fallbackLocale,
         where: { slug: { equals: slug }, _status: { equals: "published" } },
         depth: 1,
         limit: 1,

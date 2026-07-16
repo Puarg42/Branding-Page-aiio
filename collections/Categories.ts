@@ -11,13 +11,14 @@ export const Categories: CollectionConfig = {
     delete: isAuthenticated,
   },
   fields: [
-    { name: "title", type: "text", required: true },
+    { name: "title", type: "text", required: true, localized: true },
     {
       name: "slug",
       type: "text",
       required: true,
       unique: true,
       index: true,
+      localized: true,
       admin: { description: "URL-safe identifier, e.g. organizational-intelligence." },
     },
   ],

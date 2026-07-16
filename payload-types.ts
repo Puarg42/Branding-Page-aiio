@@ -98,7 +98,7 @@ export interface Config {
   db: {
     defaultIDType: number;
   };
-  fallbackLocale: null;
+  fallbackLocale: ('false' | 'none' | 'null') | false | null | ('en' | 'de') | ('en' | 'de')[];
   globals: {
     header: Header;
     footer: Footer;
@@ -109,7 +109,7 @@ export interface Config {
     footer: FooterSelect<false> | FooterSelect<true>;
     'site-settings': SiteSettingsSelect<false> | SiteSettingsSelect<true>;
   };
-  locale: null;
+  locale: 'en' | 'de';
   widgets: {
     collections: CollectionsWidget;
   };
@@ -175,6 +175,11 @@ export interface Media {
    */
   alt: string;
   caption?: string | null;
+  video?: {
+    url?: string | null;
+    poster?: (number | null) | Media;
+    transcript?: string | null;
+  };
   updatedAt: string;
   createdAt: string;
   url?: string | null;
@@ -193,16 +198,32 @@ export interface Media {
  */
 export interface Page {
   id: number;
+  /**
+   * Stable migration key; not shown in URLs.
+   */
+  sourceKey?: string | null;
   title: string;
   /**
-   * URL path segment, e.g. 'overview'. Reserved words: existing routes.
+   * Localized path without locale prefix, e.g. 'platform' (EN) / 'plattform' (DE). Nested paths are allowed.
    */
   slug: string;
-  layout: (HeroBlock | ProseBlock | FeatureGridBlock | CTABlock)[];
+  pageType?: ('standard' | 'home' | 'platform' | 'thinking' | 'theory' | 'company' | 'legal' | 'conversion') | null;
+  layout: (
+    HeroBlock | ProseBlock | FeatureGridBlock | StatementBlock | MediaBlock | LeadFormBlock | ModuleBlock | CTABlock
+  )[];
   seo?: {
     title?: string | null;
     description?: string | null;
+    /**
+     * Locale-specific social preview image.
+     */
+    image?: (number | null) | Media;
+    noIndex?: boolean | null;
   };
+  /**
+   * Mark only after a human has reviewed this locale.
+   */
+  translationComplete?: boolean | null;
   updatedAt: string;
   createdAt: string;
   _status?: ('draft' | 'published') | null;
@@ -215,17 +236,129 @@ export interface HeroBlock {
   eyebrow?: string | null;
   heading: string;
   subheading?: string | null;
-  primaryCta?: {
+  primaryCta: {
+    type: 'internal' | 'external';
     label?: string | null;
-    href?: string | null;
+    reference?:
+      | ({
+          relationTo: 'pages';
+          value: number | Page;
+        } | null)
+      | ({
+          relationTo: 'publications';
+          value: number | Publication;
+        } | null);
+    url?: string | null;
+    newTab?: boolean | null;
   };
-  secondaryCta?: {
+  secondaryCta: {
+    type: 'internal' | 'external';
     label?: string | null;
-    href?: string | null;
+    reference?:
+      | ({
+          relationTo: 'pages';
+          value: number | Page;
+        } | null)
+      | ({
+          relationTo: 'publications';
+          value: number | Publication;
+        } | null);
+    url?: string | null;
+    newTab?: boolean | null;
   };
   id?: string | null;
   blockName?: string | null;
   blockType: 'hero';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "publications".
+ */
+export interface Publication {
+  id: number;
+  title: string;
+  slug: string;
+  /**
+   * Stable identifier from the original source; used for idempotent imports.
+   */
+  sourceId?: string | null;
+  excerpt: string;
+  /**
+   * e.g. '5 min read' / '5 Min. Lesezeit'.
+   */
+  readingTime?: string | null;
+  category?: (number | null) | Category;
+  authors?: (number | Author)[] | null;
+  publishedAt?: string | null;
+  heroImage?: (number | null) | Media;
+  /**
+   * Legacy hero image path (e.g. /blog/...). Used until media is migrated to Blob.
+   */
+  heroImageUrl?: string | null;
+  heroImageAlt?: string | null;
+  /**
+   * Structured body for natively-authored posts. Optional when bodyHtml is set.
+   */
+  body?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  /**
+   * Imported/legacy HTML body. Rendered as-is when the richText body is empty.
+   */
+  bodyHtml?: string | null;
+  seo?: {
+    title?: string | null;
+    description?: string | null;
+    image?: (number | null) | Media;
+    noIndex?: boolean | null;
+  };
+  translationComplete?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+  _status?: ('draft' | 'published') | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "categories".
+ */
+export interface Category {
+  id: number;
+  title: string;
+  /**
+   * URL-safe identifier, e.g. organizational-intelligence.
+   */
+  slug: string;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "authors".
+ */
+export interface Author {
+  id: number;
+  name: string;
+  /**
+   * e.g. Managing Director
+   */
+  role?: string | null;
+  bio?: string | null;
+  avatar?: (number | null) | Media;
+  linkedin?: string | null;
+  updatedAt: string;
+  createdAt: string;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -273,110 +406,106 @@ export interface FeatureGridBlock {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "StatementBlock".
+ */
+export interface StatementBlock {
+  eyebrow?: string | null;
+  heading: string;
+  copy?: string | null;
+  tone?: ('light' | 'dark' | 'accent') | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'statement';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "MediaBlock".
+ */
+export interface MediaBlock {
+  eyebrow?: string | null;
+  heading?: string | null;
+  image?: (number | null) | Media;
+  videoUrl?: string | null;
+  caption?: string | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'media';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "LeadFormBlock".
+ */
+export interface LeadFormBlock {
+  eyebrow?: string | null;
+  heading: string;
+  copy?: string | null;
+  buttonLabel?: string | null;
+  topic?: string | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'leadForm';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ModuleBlock".
+ */
+export interface ModuleBlock {
+  module:
+    | 'realityCheck'
+    | 'categoryEvolution'
+    | 'capabilityJourney'
+    | 'trustLogos'
+    | 'brandIllustration'
+    | 'theoryReader'
+    | 'successStories';
+  heading?: string | null;
+  copy?: string | null;
+  illustrationVariant?: ('BC-001' | 'BC-002' | 'BC-005') | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'module';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "CTABlock".
  */
 export interface CTABlock {
   eyebrow?: string | null;
   heading: string;
   copy?: string | null;
-  primaryCta?: {
+  primaryCta: {
+    type: 'internal' | 'external';
     label?: string | null;
-    href?: string | null;
+    reference?:
+      | ({
+          relationTo: 'pages';
+          value: number | Page;
+        } | null)
+      | ({
+          relationTo: 'publications';
+          value: number | Publication;
+        } | null);
+    url?: string | null;
+    newTab?: boolean | null;
   };
-  secondaryCta?: {
+  secondaryCta: {
+    type: 'internal' | 'external';
     label?: string | null;
-    href?: string | null;
+    reference?:
+      | ({
+          relationTo: 'pages';
+          value: number | Page;
+        } | null)
+      | ({
+          relationTo: 'publications';
+          value: number | Publication;
+        } | null);
+    url?: string | null;
+    newTab?: boolean | null;
   };
   id?: string | null;
   blockName?: string | null;
   blockType: 'cta';
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "authors".
- */
-export interface Author {
-  id: number;
-  name: string;
-  /**
-   * e.g. Managing Director
-   */
-  role?: string | null;
-  bio?: string | null;
-  avatar?: (number | null) | Media;
-  linkedin?: string | null;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "categories".
- */
-export interface Category {
-  id: number;
-  title: string;
-  /**
-   * URL-safe identifier, e.g. organizational-intelligence.
-   */
-  slug: string;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "publications".
- */
-export interface Publication {
-  id: number;
-  title: string;
-  slug: string;
-  /**
-   * Stable identifier from the original source; used for idempotent imports.
-   */
-  sourceId?: string | null;
-  excerpt: string;
-  /**
-   * e.g. '5 min read'.
-   */
-  readingTime?: string | null;
-  category?: (number | null) | Category;
-  authors?: (number | Author)[] | null;
-  publishedAt?: string | null;
-  heroImage?: (number | null) | Media;
-  /**
-   * Legacy hero image path (e.g. /blog/...). Used until media is migrated to Blob.
-   */
-  heroImageUrl?: string | null;
-  heroImageAlt?: string | null;
-  /**
-   * Structured body for natively-authored posts. Optional when bodyHtml is set.
-   */
-  body?: {
-    root: {
-      type: string;
-      children: {
-        type: any;
-        version: number;
-        [k: string]: unknown;
-      }[];
-      direction: ('ltr' | 'rtl') | null;
-      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-      indent: number;
-      version: number;
-    };
-    [k: string]: unknown;
-  } | null;
-  /**
-   * Imported/legacy HTML body. Rendered as-is when the richText body is empty.
-   */
-  bodyHtml?: string | null;
-  seo?: {
-    title?: string | null;
-    description?: string | null;
-  };
-  updatedAt: string;
-  createdAt: string;
-  _status?: ('draft' | 'published') | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -561,6 +690,13 @@ export interface UsersSelect<T extends boolean = true> {
 export interface MediaSelect<T extends boolean = true> {
   alt?: T;
   caption?: T;
+  video?:
+    | T
+    | {
+        url?: T;
+        poster?: T;
+        transcript?: T;
+      };
   updatedAt?: T;
   createdAt?: T;
   url?: T;
@@ -578,14 +714,20 @@ export interface MediaSelect<T extends boolean = true> {
  * via the `definition` "pages_select".
  */
 export interface PagesSelect<T extends boolean = true> {
+  sourceKey?: T;
   title?: T;
   slug?: T;
+  pageType?: T;
   layout?:
     | T
     | {
         hero?: T | HeroBlockSelect<T>;
         prose?: T | ProseBlockSelect<T>;
         featureGrid?: T | FeatureGridBlockSelect<T>;
+        statement?: T | StatementBlockSelect<T>;
+        media?: T | MediaBlockSelect<T>;
+        leadForm?: T | LeadFormBlockSelect<T>;
+        module?: T | ModuleBlockSelect<T>;
         cta?: T | CTABlockSelect<T>;
       };
   seo?:
@@ -593,7 +735,10 @@ export interface PagesSelect<T extends boolean = true> {
     | {
         title?: T;
         description?: T;
+        image?: T;
+        noIndex?: T;
       };
+  translationComplete?: T;
   updatedAt?: T;
   createdAt?: T;
   _status?: T;
@@ -609,14 +754,20 @@ export interface HeroBlockSelect<T extends boolean = true> {
   primaryCta?:
     | T
     | {
+        type?: T;
         label?: T;
-        href?: T;
+        reference?: T;
+        url?: T;
+        newTab?: T;
       };
   secondaryCta?:
     | T
     | {
+        type?: T;
         label?: T;
-        href?: T;
+        reference?: T;
+        url?: T;
+        newTab?: T;
       };
   id?: T;
   blockName?: T;
@@ -651,6 +802,56 @@ export interface FeatureGridBlockSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "StatementBlock_select".
+ */
+export interface StatementBlockSelect<T extends boolean = true> {
+  eyebrow?: T;
+  heading?: T;
+  copy?: T;
+  tone?: T;
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "MediaBlock_select".
+ */
+export interface MediaBlockSelect<T extends boolean = true> {
+  eyebrow?: T;
+  heading?: T;
+  image?: T;
+  videoUrl?: T;
+  caption?: T;
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "LeadFormBlock_select".
+ */
+export interface LeadFormBlockSelect<T extends boolean = true> {
+  eyebrow?: T;
+  heading?: T;
+  copy?: T;
+  buttonLabel?: T;
+  topic?: T;
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ModuleBlock_select".
+ */
+export interface ModuleBlockSelect<T extends boolean = true> {
+  module?: T;
+  heading?: T;
+  copy?: T;
+  illustrationVariant?: T;
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "CTABlock_select".
  */
 export interface CTABlockSelect<T extends boolean = true> {
@@ -660,14 +861,20 @@ export interface CTABlockSelect<T extends boolean = true> {
   primaryCta?:
     | T
     | {
+        type?: T;
         label?: T;
-        href?: T;
+        reference?: T;
+        url?: T;
+        newTab?: T;
       };
   secondaryCta?:
     | T
     | {
+        type?: T;
         label?: T;
-        href?: T;
+        reference?: T;
+        url?: T;
+        newTab?: T;
       };
   id?: T;
   blockName?: T;
@@ -718,7 +925,10 @@ export interface PublicationsSelect<T extends boolean = true> {
     | {
         title?: T;
         description?: T;
+        image?: T;
+        noIndex?: T;
       };
+  translationComplete?: T;
   updatedAt?: T;
   createdAt?: T;
   _status?: T;
@@ -815,7 +1025,25 @@ export interface Header {
   navItems?:
     | {
         label: string;
-        href: string;
+        /**
+         * Legacy/fallback URL. Prefer the link field.
+         */
+        href?: string | null;
+        link: {
+          type: 'internal' | 'external';
+          label?: string | null;
+          reference?:
+            | ({
+                relationTo: 'pages';
+                value: number | Page;
+              } | null)
+            | ({
+                relationTo: 'publications';
+                value: number | Publication;
+              } | null);
+          url?: string | null;
+          newTab?: boolean | null;
+        };
         id?: string | null;
       }[]
     | null;
@@ -831,14 +1059,44 @@ export interface Footer {
   navItems?:
     | {
         label: string;
-        href: string;
+        href?: string | null;
+        link: {
+          type: 'internal' | 'external';
+          label?: string | null;
+          reference?:
+            | ({
+                relationTo: 'pages';
+                value: number | Page;
+              } | null)
+            | ({
+                relationTo: 'publications';
+                value: number | Publication;
+              } | null);
+          url?: string | null;
+          newTab?: boolean | null;
+        };
         id?: string | null;
       }[]
     | null;
   legalItems?:
     | {
         label: string;
-        href: string;
+        href?: string | null;
+        link: {
+          type: 'internal' | 'external';
+          label?: string | null;
+          reference?:
+            | ({
+                relationTo: 'pages';
+                value: number | Page;
+              } | null)
+            | ({
+                relationTo: 'publications';
+                value: number | Publication;
+              } | null);
+          url?: string | null;
+          newTab?: boolean | null;
+        };
         id?: string | null;
       }[]
     | null;
@@ -876,6 +1134,15 @@ export interface HeaderSelect<T extends boolean = true> {
     | {
         label?: T;
         href?: T;
+        link?:
+          | T
+          | {
+              type?: T;
+              label?: T;
+              reference?: T;
+              url?: T;
+              newTab?: T;
+            };
         id?: T;
       };
   updatedAt?: T;
@@ -892,6 +1159,15 @@ export interface FooterSelect<T extends boolean = true> {
     | {
         label?: T;
         href?: T;
+        link?:
+          | T
+          | {
+              type?: T;
+              label?: T;
+              reference?: T;
+              url?: T;
+              newTab?: T;
+            };
         id?: T;
       };
   legalItems?:
@@ -899,6 +1175,15 @@ export interface FooterSelect<T extends boolean = true> {
     | {
         label?: T;
         href?: T;
+        link?:
+          | T
+          | {
+              type?: T;
+              label?: T;
+              reference?: T;
+              url?: T;
+              newTab?: T;
+            };
         id?: T;
       };
   updatedAt?: T;

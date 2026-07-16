@@ -24,14 +24,22 @@ export const SuccessStories: CollectionConfig = {
   },
   fields: [
     { name: "customer", type: "text", required: true },
-    { name: "industry", type: "text" },
-    { name: "slug", type: "text", required: true, unique: true, index: true },
-    { name: "challenge", type: "textarea", required: true },
-    { name: "action", type: "textarea", required: true },
-    { name: "result", type: "textarea", required: true },
+    { name: "industry", type: "text", localized: true },
+    {
+      name: "slug",
+      type: "text",
+      required: true,
+      unique: true,
+      index: true,
+      localized: true,
+    },
+    { name: "challenge", type: "textarea", required: true, localized: true },
+    { name: "action", type: "textarea", required: true, localized: true },
+    { name: "result", type: "textarea", required: true, localized: true },
     {
       name: "proofPoints",
       type: "array",
+      localized: true,
       admin: {
         description: "Only verified metrics or quotes. Leave empty if none exist.",
       },
@@ -41,6 +49,6 @@ export const SuccessStories: CollectionConfig = {
         { name: "source", type: "text" },
       ],
     },
-    { name: "logo", type: "upload", relationTo: "media" },
+    { name: "logo", type: "upload", relationTo: "media", localized: true },
   ],
 };

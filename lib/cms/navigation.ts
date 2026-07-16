@@ -1,4 +1,6 @@
 import { unstable_cache } from "next/cache";
+import type { Locale } from "../i18n/config";
+import { withLocale } from "../i18n/config";
 import { NAV_TAG } from "./revalidate";
 
 export type NavItem = { label: string; href: string };
@@ -30,17 +32,73 @@ export const DEFAULT_FOOTER_LEGAL: NavItem[] = [
   { href: "/impressum", label: "Legal" },
 ];
 
-function toItems(value: unknown, fallback: NavItem[]): NavItem[] {
-  if (!Array.isArray(value)) return fallback;
+export const DEFAULT_HEADER_NAV_DE: NavItem[] = [
+  { href: "/", label: "Start" },
+  { href: "/plattform", label: "Plattform" },
+  { href: "/erfolgsgeschichten", label: "Wirkung" },
+  { href: "/denken", label: "Denken" },
+  { href: "/partner", label: "Partner" },
+  { href: "/unternehmen", label: "Unternehmen" },
+  { href: "/gespraech", label: "Gespräch starten" },
+];
+
+export const DEFAULT_FOOTER_NAV_DE: NavItem[] = [
+  ...DEFAULT_HEADER_NAV_DE.slice(1),
+  { href: "/akademie", label: "Akademie" },
+];
+
+export const DEFAULT_FOOTER_LEGAL_DE: NavItem[] = [
+  { href: "/blog", label: "Blog & News" },
+  { href: "/datenschutz", label: "Datenschutz" },
+  { href: "/impressum", label: "Impressum" },
+];
+
+type LinkReference = {
+  relationTo?: "pages" | "publications";
+  value?: { slug?: string | null } | number | null;
+};
+
+type CmsLink = {
+  type?: "internal" | "external";
+  label?: string;
+  reference?: LinkReference | null;
+  url?: string | null;
+};
+
+function linkHref(link: CmsLink | undefined, locale: Locale): string | null {
+  if (!link) return null;
+  if (link.type === "external" && link.url) return link.url;
+  const value = link.reference?.value;
+  if (value && typeof value === "object" && value.slug) {
+    const prefix = link.reference?.relationTo === "publications" ? "/blog/" : "/";
+    return withLocale(locale, `${prefix}${value.slug}`);
+  }
+  return null;
+}
+
+function toItems(value: unknown, fallback: NavItem[], locale: Locale): NavItem[] {
+  const localizedFallback = fallback.map((item) => ({
+    ...item,
+    href: withLocale(locale, item.href),
+  }));
+  if (!Array.isArray(value)) return localizedFallback;
   const items = value
     .map((entry) => {
-      const record = entry as { label?: unknown; href?: unknown };
-      return typeof record.label === "string" && typeof record.href === "string"
-        ? { label: record.label, href: record.href }
-        : null;
+      const record = entry as { label?: unknown; href?: unknown; link?: CmsLink };
+      const label =
+        typeof record.link?.label === "string"
+          ? record.link.label
+          : typeof record.label === "string"
+            ? record.label
+            : null;
+      const resolved = linkHref(record.link, locale);
+      const href =
+        resolved ??
+        (typeof record.href === "string" ? withLocale(locale, record.href) : null);
+      return label && href ? { label, href } : null;
     })
     .filter((item): item is NavItem => item !== null);
-  return items.length > 0 ? items : fallback;
+  return items.length > 0 ? items : localizedFallback;
 }
 
 /**
@@ -49,7 +107,7 @@ function toItems(value: unknown, fallback: NavItem[]): NavItem[] {
  * Payload is imported lazily so this module is safe to import anywhere.
  */
 export const getNavigation = unstable_cache(
-  async () => {
+  async (locale: Locale) => {
     try {
       const [{ getPayload }, { default: config }] = await Promise.all([
         import("payload"),
@@ -57,19 +115,52 @@ export const getNavigation = unstable_cache(
       ]);
       const payload = await getPayload({ config });
       const [header, footer] = await Promise.all([
-        payload.findGlobal({ slug: "header" }),
-        payload.findGlobal({ slug: "footer" }),
+        payload.findGlobal({ slug: "header", locale, fallbackLocale: "en", depth: 2 }),
+        payload.findGlobal({ slug: "footer", locale, fallbackLocale: "en", depth: 2 }),
       ]);
+      const defaults =
+        locale === "de"
+          ? {
+              header: DEFAULT_HEADER_NAV_DE,
+              footer: DEFAULT_FOOTER_NAV_DE,
+              legal: DEFAULT_FOOTER_LEGAL_DE,
+            }
+          : {
+              header: DEFAULT_HEADER_NAV,
+              footer: DEFAULT_FOOTER_NAV,
+              legal: DEFAULT_FOOTER_LEGAL,
+            };
       return {
-        header: toItems(header?.navItems, DEFAULT_HEADER_NAV),
-        footerNav: toItems(footer?.navItems, DEFAULT_FOOTER_NAV),
-        footerLegal: toItems(footer?.legalItems, DEFAULT_FOOTER_LEGAL),
+        header: toItems(header?.navItems, defaults.header, locale),
+        footerNav: toItems(footer?.navItems, defaults.footer, locale),
+        footerLegal: toItems(footer?.legalItems, defaults.legal, locale),
       };
     } catch {
+      const defaults =
+        locale === "de"
+          ? {
+              header: DEFAULT_HEADER_NAV_DE,
+              footer: DEFAULT_FOOTER_NAV_DE,
+              legal: DEFAULT_FOOTER_LEGAL_DE,
+            }
+          : {
+              header: DEFAULT_HEADER_NAV,
+              footer: DEFAULT_FOOTER_NAV,
+              legal: DEFAULT_FOOTER_LEGAL,
+            };
       return {
-        header: DEFAULT_HEADER_NAV,
-        footerNav: DEFAULT_FOOTER_NAV,
-        footerLegal: DEFAULT_FOOTER_LEGAL,
+        header: defaults.header.map((item) => ({
+          ...item,
+          href: withLocale(locale, item.href),
+        })),
+        footerNav: defaults.footer.map((item) => ({
+          ...item,
+          href: withLocale(locale, item.href),
+        })),
+        footerLegal: defaults.legal.map((item) => ({
+          ...item,
+          href: withLocale(locale, item.href),
+        })),
       };
     }
   },
