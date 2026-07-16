@@ -85,6 +85,20 @@ const colorMap: Record<string, string> = {
   dataforge: "--tone-dataforge",
 };
 
+function fontForRole(theme: ThemeRecord, role: string) {
+  const typography = theme.typography ?? {};
+  const direct = typography[role];
+  if (direct && typeof direct === "object") return direct as Record<string, unknown>;
+  const collection = typography.collection;
+  if (collection && typeof collection === "object") {
+    const inherited = (collection as Record<string, unknown>)[role];
+    if (inherited && typeof inherited === "object") {
+      return inherited as Record<string, unknown>;
+    }
+  }
+  return null;
+}
+
 export function themeStyle(theme: ThemeRecord | null) {
   if (!theme) return {};
   const style: Record<string, string | number> = {};
@@ -102,15 +116,13 @@ export function themeStyle(theme: ThemeRecord | null) {
   if (typeof motion.fast === "number") style["--dur-fast"] = `${motion.fast}ms`;
   if (typeof motion.base === "number") style["--dur-base"] = `${motion.base}ms`;
   if (typeof motion.slow === "number") style["--dur-slow"] = `${motion.slow}ms`;
-  const typography = theme.typography ?? {};
   for (const [role, variable] of [
     ["display", "--font-display"],
     ["body", "--font-body"],
     ["mono", "--font-mono"],
   ] as const) {
-    const font = typography[role];
-    if (font && typeof font === "object") {
-      const record = font as Record<string, unknown>;
+    const record = fontForRole(theme, role);
+    if (record) {
       if (typeof record.cssFamily === "string") {
         const fallback =
           typeof record.fallback === "string" ? `, ${record.fallback}` : "";
@@ -122,12 +134,11 @@ export function themeStyle(theme: ThemeRecord | null) {
 }
 
 export function themeFontCSS(theme: ThemeRecord | null) {
-  if (!theme?.typography) return "";
+  if (!theme) return "";
   const rules: string[] = [];
   for (const role of ["display", "body", "mono"]) {
-    const font = theme.typography[role];
-    if (!font || typeof font !== "object") continue;
-    const record = font as Record<string, unknown>;
+    const record = fontForRole(theme, role);
+    if (!record || record.provider === "google") continue;
     const family =
       typeof record.cssFamily === "string"
         ? record.cssFamily.replace(/["{};]/g, "")
@@ -151,6 +162,37 @@ export function themeFontCSS(theme: ThemeRecord | null) {
     }
   }
   return rules.join("");
+}
+
+export function themeFontLinks(theme: ThemeRecord | null) {
+  if (!theme) return [];
+  return Array.from(
+    new Set(
+      ["display", "body", "mono"]
+        .map((role) => fontForRole(theme, role))
+        .filter(
+          (font): font is Record<string, unknown> =>
+            Boolean(
+              font &&
+                font.provider === "google" &&
+                typeof font.googleFontsURL === "string",
+            ),
+        )
+        .map((font) => font.googleFontsURL as string)
+        .filter((url) => {
+          try {
+            const parsed = new URL(url);
+            return (
+              parsed.protocol === "https:" &&
+              parsed.hostname === "fonts.googleapis.com" &&
+              (parsed.pathname === "/css" || parsed.pathname === "/css2")
+            );
+          } catch {
+            return false;
+          }
+        }),
+    ),
+  );
 }
 
 export type { ThemeRecord };

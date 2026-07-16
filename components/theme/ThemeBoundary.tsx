@@ -1,6 +1,7 @@
 import type { CSSProperties, ReactNode } from "react";
 import {
   themeFontCSS,
+  themeFontLinks,
   themeStyle,
   type ThemeRecord,
 } from "@/lib/cms/theme";
@@ -14,11 +15,25 @@ export function ThemeBoundary({
   children: ReactNode;
   theme: ThemeRecord | null;
 }) {
+  const googleLinks = themeFontLinks(theme);
   return (
     <div
       data-theme={theme?.slug ?? "editorial-default"}
       style={themeStyle(theme) as CSSVariables}
     >
+      {googleLinks.length ? (
+        <>
+          <link href="https://fonts.googleapis.com" rel="preconnect" />
+          <link
+            crossOrigin="anonymous"
+            href="https://fonts.gstatic.com"
+            rel="preconnect"
+          />
+        </>
+      ) : null}
+      {googleLinks.map((href) => (
+        <link href={href} key={href} rel="stylesheet" />
+      ))}
       {themeFontCSS(theme) ? (
         <style dangerouslySetInnerHTML={{ __html: themeFontCSS(theme) }} />
       ) : null}

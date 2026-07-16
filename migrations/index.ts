@@ -8,6 +8,7 @@ import * as migration_20260716_083659_cms_page_modules from './20260716_083659_c
 import * as migration_20260716_091856_admin_titles from './20260716_091856_admin_titles';
 import * as migration_20260716_151334_cms_authority_themes from './20260716_151334_cms_authority_themes';
 import * as migration_20260716_152625_remove_generic_module from './20260716_152625_remove_generic_module';
+import * as migration_20260716_163355_google_font_collections from './20260716_163355_google_font_collections';
 
 export const migrations = [
   {
@@ -58,6 +59,11 @@ export const migrations = [
   {
     up: migration_20260716_152625_remove_generic_module.up,
     down: migration_20260716_152625_remove_generic_module.down,
-    name: '20260716_152625_remove_generic_module'
+    name: '20260716_152625_remove_generic_module',
+  },
+  {
+    up: migration_20260716_163355_google_font_collections.up,
+    down: migration_20260716_163355_google_font_collections.down,
+    name: '20260716_163355_google_font_collections'
   },
 ];

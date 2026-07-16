@@ -84,6 +84,15 @@ export const Themes: CollectionConfig = {
       name: "typography",
       type: "group",
       fields: [
+        {
+          name: "collection",
+          type: "relationship",
+          relationTo: "font-collections",
+          admin: {
+            description:
+              "Optional coordinated Display/Body/Mono set. Individual roles below override it.",
+          },
+        },
         { name: "display", type: "relationship", relationTo: "font-families" },
         { name: "body", type: "relationship", relationTo: "font-families" },
         { name: "mono", type: "relationship", relationTo: "font-families" },

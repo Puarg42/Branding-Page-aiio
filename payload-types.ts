@@ -70,6 +70,7 @@ export interface Config {
     users: User;
     media: Media;
     'font-families': FontFamily;
+    'font-collections': FontCollection;
     themes: Theme;
     pages: Page;
     authors: Author;
@@ -88,6 +89,7 @@ export interface Config {
     users: UsersSelect<false> | UsersSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
     'font-families': FontFamiliesSelect<false> | FontFamiliesSelect<true>;
+    'font-collections': FontCollectionsSelect<false> | FontCollectionsSelect<true>;
     themes: ThemesSelect<false> | ThemesSelect<true>;
     pages: PagesSelect<false> | PagesSelect<true>;
     authors: AuthorsSelect<false> | AuthorsSelect<true>;
@@ -207,8 +209,13 @@ export interface Media {
 export interface FontFamily {
   id: number;
   name: string;
+  provider: 'local' | 'google';
   cssFamily: string;
   fallback: string;
+  /**
+   * Paste a fonts.googleapis.com/css or /css2 URL including weights and display=swap.
+   */
+  googleFontsURL?: string | null;
   files?:
     | {
         file: number | Media;
@@ -217,6 +224,20 @@ export interface FontFamily {
         id?: string | null;
       }[]
     | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "font-collections".
+ */
+export interface FontCollection {
+  id: number;
+  name: string;
+  description?: string | null;
+  display: number | FontFamily;
+  body: number | FontFamily;
+  mono?: (number | null) | FontFamily;
   updatedAt: string;
   createdAt: string;
 }
@@ -249,6 +270,10 @@ export interface Theme {
     dataforge: string;
   };
   typography?: {
+    /**
+     * Optional coordinated Display/Body/Mono set. Individual roles below override it.
+     */
+    collection?: (number | null) | FontCollection;
     display?: (number | null) | FontFamily;
     body?: (number | null) | FontFamily;
     mono?: (number | null) | FontFamily;
@@ -1092,6 +1117,10 @@ export interface PayloadLockedDocument {
         value: number | FontFamily;
       } | null)
     | ({
+        relationTo: 'font-collections';
+        value: number | FontCollection;
+      } | null)
+    | ({
         relationTo: 'themes';
         value: number | Theme;
       } | null)
@@ -1221,8 +1250,10 @@ export interface MediaSelect<T extends boolean = true> {
  */
 export interface FontFamiliesSelect<T extends boolean = true> {
   name?: T;
+  provider?: T;
   cssFamily?: T;
   fallback?: T;
+  googleFontsURL?: T;
   files?:
     | T
     | {
@@ -1231,6 +1262,19 @@ export interface FontFamiliesSelect<T extends boolean = true> {
         style?: T;
         id?: T;
       };
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "font-collections_select".
+ */
+export interface FontCollectionsSelect<T extends boolean = true> {
+  name?: T;
+  description?: T;
+  display?: T;
+  body?: T;
+  mono?: T;
   updatedAt?: T;
   createdAt?: T;
 }
@@ -1266,6 +1310,7 @@ export interface ThemesSelect<T extends boolean = true> {
   typography?:
     | T
     | {
+        collection?: T;
         display?: T;
         body?: T;
         mono?: T;

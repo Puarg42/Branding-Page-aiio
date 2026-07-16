@@ -10,6 +10,7 @@ import sharp from "sharp";
 import { Authors } from "./collections/Authors";
 import { Categories } from "./collections/Categories";
 import { FontFamilies } from "./collections/FontFamilies";
+import { FontCollections } from "./collections/FontCollections";
 import { Leads } from "./collections/Leads";
 import { Media } from "./collections/Media";
 import { Pages } from "./collections/Pages";
@@ -44,6 +45,7 @@ export default buildConfig({
     Users,
     Media,
     FontFamilies,
+    FontCollections,
     Themes,
     Pages,
     Authors,
