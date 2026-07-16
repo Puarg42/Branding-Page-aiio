@@ -1,13 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { toast, useField } from "@payloadcms/ui";
+import { useSearchParams } from "next/navigation";
+import { toast, useField, useFieldPath } from "@payloadcms/ui";
 import { useLocale } from "@payloadcms/ui/providers/Locale";
 import styles from "./DeepLTranslateButton.module.css";
 
 type Props = {
-  path?: string;
-  field?: { name?: string };
+  clientField?: { name?: string };
 };
 
 function slugify(value: string) {
@@ -19,14 +19,22 @@ function slugify(value: string) {
     .replace(/^-+|-+$/g, "");
 }
 
-export function DeepLTranslateButton({ path, field }: Props) {
-  const locale = useLocale();
-  const fieldPath = path ?? field?.name ?? "";
+export function DeepLTranslateButton({ clientField }: Props) {
+  const localeValue = useLocale() as
+    | { code?: string }
+    | string
+    | null
+    | undefined;
+  const searchParams = useSearchParams();
+  const fieldPath = useFieldPath();
   const { value, setValue } = useField<string>({ path: fieldPath });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const target = locale?.code;
+  const target =
+    (typeof localeValue === "string" ? localeValue : localeValue?.code) ??
+    searchParams.get("locale") ??
+    "en";
   const canTranslate =
     (target === "en" || target === "de") &&
     typeof value === "string" &&
@@ -44,7 +52,7 @@ export function DeepLTranslateButton({ path, field }: Props) {
         body: JSON.stringify({
           text: value,
           targetLocale: target,
-          field: field?.name,
+          field: clientField?.name,
         }),
       });
       const result = (await response.json()) as {
@@ -55,7 +63,7 @@ export function DeepLTranslateButton({ path, field }: Props) {
         throw new Error(result.error || `DeepL request failed (${response.status})`);
       }
       const translated =
-        field?.name === "slug" ? slugify(result.text) : result.text;
+        clientField?.name === "slug" ? slugify(result.text) : result.text;
       setValue(translated);
       toast.success(`Translated to ${target.toUpperCase()}`);
     } catch (cause) {
