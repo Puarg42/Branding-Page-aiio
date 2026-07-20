@@ -162,13 +162,13 @@ Never use BC-ICON-001 for main navigation, menus, pagination, carousel controls,
 
 ## Incoming assets
 
-`public/brand-canon/_incoming/`
+Local archive: `archive/public-assets/brand-canon/_incoming/`
 
 Work in progress only. Website code must never reference files from this folder.
 
 ## Archived assets
 
-`public/brand-canon/_archive/`
+Local archive: `archive/public-assets/brand-canon/_archive/`
 
 Rejected or historical artwork only. Website code must never reference files from this folder.
 

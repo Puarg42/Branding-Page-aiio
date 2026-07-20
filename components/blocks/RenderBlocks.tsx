@@ -587,7 +587,6 @@ const renderers: Record<
   brandIllustration: TypedModuleBlockView,
   theoryReader: TypedModuleBlockView,
   successStories: TypedModuleBlockView,
-  module: ModuleBlockView,
   cta: CTABlockView,
 };
 

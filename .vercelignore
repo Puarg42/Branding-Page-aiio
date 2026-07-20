@@ -1,9 +1,5 @@
-# Review history is not needed during Vercel builds.
-docs/reviews/
-
-# Draft and historical Brand Canon assets are not runtime assets.
-public/brand-canon/_incoming/
-public/brand-canon/_archive/
+# Local archive is not part of deployments.
+archive/
 
 # Local tooling and generated build output.
 .tools/

@@ -158,20 +158,9 @@ if (!envFileHasKey("PAYLOAD_BOOTSTRAP_ADMIN_EMAIL")) {
 }
 run("npx", ["dotenv", "-e", ".env.local", "--", "tsx", "scripts/seed.ts"]);
 
-// 9. Fresh-environment content ------------------------------------------------
+// 9. Required CMS content -----------------------------------------------------
 step("Ensuring required CMS content exists");
-const pageCheck = spawnSync(
-  "npx",
-  ["dotenv", "-e", ".env.local", "--", "tsx", "scripts/has-pages.ts"],
-  { stdio: "ignore", shell: false },
-);
-if (pageCheck.status !== 0) {
-  warn("No Pages found — running the idempotent initial content migration.");
-  run("npm", ["run", "content:migrate-pages"]);
-  run("npm", ["run", "content:import-theory"]);
-} else {
-  ok("Pages already exist — preserving editor-owned CMS content.");
-}
+run("npm", ["run", "content:import-theory"]);
 run("npm", ["run", "content:verify"]);
 
 console.log(`\n${c.bold}${c.green}Bootstrap complete.${c.reset}`);

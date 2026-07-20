@@ -56,8 +56,6 @@ team/project and accepting any provider billing consent in the dashboard. See
 | `npm run db:seed` | Idempotently seed roles, settings, redirects |
 | `npm run generate:types` | Regenerate `payload-types.ts` |
 | `npm run content:verify` | Verify required CMS pages, theory and navigation |
-| `npm run content:migrate-pages -- --dry-run` | Preview non-clobbering legacy → CMS migration |
-| `npm run content:migrate-pages` | Apply migration to pending/parity-review pages |
 | `npm run content:import-theory` | Import the archived theory fixture into Payload |
 | `npm run db:checkpoint` | Create a Neon pre-release branch (requires `NEON_API_KEY`) |
 | `npm run test:budgets` | Enforce CSS/global stylesheet budgets |
@@ -68,7 +66,7 @@ team/project and accepting any provider billing consent in the dashboard. See
 - `components/` — brand primitives, sections, and shared UI
 - `content/` — typed content sources that back the marketing pages
 - `payload.config.ts` + `collections/` — CMS schema
-- `scripts/` — bootstrap, migration, seed, and content-import tooling
+- `scripts/` — bootstrap, database, seed, validation, and review tooling
 - `design.md` + `app/(frontend)/styles/tokens.css` — locked design system
 - `docs/` — architecture and setup documentation
 

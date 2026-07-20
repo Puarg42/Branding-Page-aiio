@@ -110,46 +110,6 @@ export const LeadFormBlock: Block = {
   ],
 };
 
-/**
- * Interactive/code-owned sections exposed as reusable CMS modules. Editors can
- * place/reorder them without duplicating their implementation.
- */
-export const ModuleBlock: Block = {
-  slug: "module",
-  interfaceName: "ModuleBlock",
-  labels: { singular: "Interactive module", plural: "Interactive modules" },
-  fields: [
-    {
-      name: "module",
-      type: "select",
-      required: true,
-      options: [
-        { label: "Organizational reality check", value: "realityCheck" },
-        { label: "Category evolution", value: "categoryEvolution" },
-        { label: "Capability journey", value: "capabilityJourney" },
-        { label: "Trust logo marquee", value: "trustLogos" },
-        { label: "Brand illustration", value: "brandIllustration" },
-        { label: "Theory reader entry", value: "theoryReader" },
-        { label: "Success stories", value: "successStories" },
-      ],
-    },
-    { name: "heading", type: "text" },
-    { name: "copy", type: "textarea" },
-    {
-      name: "illustrationVariant",
-      type: "select",
-      options: [
-        { label: "BC-001", value: "BC-001" },
-        { label: "BC-002", value: "BC-002" },
-        { label: "BC-005", value: "BC-005" },
-      ],
-      admin: {
-        condition: (_, siblingData) => siblingData?.module === "brandIllustration",
-      },
-    },
-  ],
-};
-
 const experienceModule = (
   slug: string,
   interfaceName: string,
