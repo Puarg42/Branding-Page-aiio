@@ -11,6 +11,7 @@ import { getNavigation } from "@/lib/cms/navigation";
 import { getSiteSettings } from "@/lib/cms/settings";
 import { getDefaultTheme } from "@/lib/cms/theme";
 import { defaultLocale, isLocale } from "@/lib/i18n/config";
+import { fontBody, fontDisplay, fontMono } from "./fonts";
 import { SiteFooter } from "./site-footer";
 import { deploymentUrl, siteUrl } from "./site-url";
 
@@ -96,23 +97,10 @@ export default async function RootLayout({
     getDefaultTheme(locale),
   ]);
   return (
-    <html lang={locale}>
-      <head>
-        <link
-          as="font"
-          crossOrigin="anonymous"
-          href="/fonts/chillax-semibold.woff2"
-          rel="preload"
-          type="font/woff2"
-        />
-        <link
-          as="font"
-          crossOrigin="anonymous"
-          href="/fonts/chillax-bold.woff2"
-          rel="preload"
-          type="font/woff2"
-        />
-      </head>
+    <html
+      className={`${fontDisplay.variable} ${fontBody.variable} ${fontMono.variable}`}
+      lang={locale}
+    >
       <body>
         <ThemeBoundary theme={defaultTheme}>
           <NavigationMemory />

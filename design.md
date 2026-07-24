@@ -1,142 +1,206 @@
-# Design — aiio
+# aiio branding page — Typografie-System
 
-Locked design system for the aiio website. Every frontend change reads this file
-first and defers to it. `app/(frontend)/styles/tokens.css` is the executable source of
-truth; this document is the human-readable contract. Amend intentionally — the
-file is the rule, not a suggestion. The word "aiio" is always lowercase.
+**Dokument:** design.md · Typografie
+**Version:** 1.0 · 2026-07-24
+**Status:** Abgenommen per Screenshot (Mockup v2, System B „Swiss")
+**Scope:** Nur Typografie. Farben, Layoutraster, Motion → separates Dokument.
 
-## System
+---
 
-- **Genre** · editorial / modern-minimal. Calm, high-end, category-defining —
-  closer to a research publisher than a generic SaaS landing page.
-- **Visual thesis** · "An organization that understands itself." Structured
-  clarity, generous negative space, restrained motion, real evidence over hype.
-- **Dual surface** · a light editorial paper surface (`--color-paper`) and a
-  dark brand-canon surface (`--color-canvas-dark`) used deliberately per
-  section — never mixed arbitrarily within one band.
-- **Anchor** · brand purple `--color-accent` with a single accent per view;
-  capability tones (`--tone-*`) are reserved for the four-level spine only.
+## 1. Designabsicht
 
-## Tokens (canonical — see `app/(frontend)/styles/tokens.css`)
+Modern Brutalism mit C-Level-Disziplin: **„Shout the thesis, whisper the argument."**
+Die Wirkung entsteht durch Setzung (Skala, Gewicht, enge Zurichtung, Mono-Metadaten), nicht durch dekorative Fonts. Drei typografische Stimmen, streng getrennt:
 
-- **Color** · semantic OKLCH tokens: `--color-paper*`, `--color-ink*`,
-  `--color-canvas-dark`, `--color-on-dark*`, `--color-accent*`, `--color-focus`,
-  `--tone-{collector,magnet,forge,dataforge}`, `--color-success`,
-  `--color-danger`. No raw hex or `rgb()` in components.
-- **Type** · `--font-display` (Chillax) + `--font-body` (system sans). Scale:
-  `--text-xs … --text-hero`, fluid via `clamp()`. Line-height tokens
-  `--leading-{tight,snug,body}`.
-- **Space** · 4-pt scale `--space-3xs … --space-2xl` plus `--space-section`.
-  Layout: `--measure` (line length), `--shell-max`, `--gutter`.
-- **Radius** · `--radius-{input,card,panel,pill}`.
-- **Motion** · `--ease-{standard,out,in}`, `--dur-{fast,base,slow}`.
-- **Layering** · `--z-{base,raised,sticky,header,overlay,modal}`.
+| Stimme | Aufgabe | Charakter |
+|---|---|---|
+| **Display** | Thesen, Hero, Sektionstitel, Ghost-Ziffern | laut, eng, uppercase |
+| **Body** | Argumente, Fließtext, Ledes | ruhig, neutral, sentence case |
+| **Mono** | Labels, Nummern, Telemetrie, Buttons, Captions | technisch, uppercase, gesperrt |
 
-## Typography
+---
 
-- Display face **Chillax** (600/700) for h1–h3 and statement lines only.
-- Body in the system sans stack for paragraphs, labels, and UI.
-- Hero headline ≤ 7 words / ≤ 50 chars where authored; size by length using the
-  scale (`--text-hero` for short statements, step down for longer copy).
-- Measure capped at `--measure`; never edge-to-edge body text on wide screens.
+## 2. Font-Stack (verbindlich)
 
-## Page archetypes
+### Produktion (kostenfrei, sofort umsetzbar)
 
-Shared visual language, distinct structural jobs. Do **not** collapse every page
-into hero → 3 cards → CTA.
+| Rolle | Familie | Format | Quelle |
+|---|---|---|---|
+| Display | **Inter Tight** (variable, wght 100–900) | woff2 | Google Fonts, self-hosted via `next/font` |
+| Body | **Inter** (variable) | woff2 | Google Fonts, self-hosted via `next/font` |
+| Mono | **IBM Plex Mono** (400, 500) | woff2 | Google Fonts, self-hosted via `next/font` |
 
-| Archetype | Used by | Structural signature |
-| --- | --- | --- |
-| Category manifesto | Home | Statement hero, argument bands, capability spine, one closing CTA |
-| Long-form publication | Thinking / Theory | Sticky contents, reading progress, chaptered document |
-| Platform workbench | Platform | Capability ladder + system diagram + theory links (one ladder, not three) |
-| Evidence-led story | Success Stories | Challenge → action → result with real proof; no invented metrics |
-| Institutional narrative | Company | Leadership, panel, recognition; calm, sourced |
-| Focused conversion | live-demo/kontakt | Single primary action, minimal distraction, trust band |
-| Resource | factory routes | Consistent hero + section + optional form; differentiate high-value routes |
+### CSS-Fallback-Stacks
 
-New page families are recorded under `## Variants` before use.
+```css
+--font-display: 'Inter Tight', 'Helvetica Neue', Arial, system-ui, sans-serif;
+--font-body:    'Inter', 'Helvetica Neue', Arial, system-ui, sans-serif;
+--font-mono:    'IBM Plex Mono', 'SF Mono', 'Cascadia Mono', Consolas, monospace;
+```
 
-## CTA voice
+### Upgrade-Pfad (optional, lizenzpflichtig)
 
-- **Primary** · "Request a conversation" → `/live-demo/kontakt`. Filled accent,
-  `--radius-pill`.
-- **Secondary** · "Explore the platform" → `/platform`. Ghost/outline, same
-  radius. One primary CTA per view; secondary is visually subordinate.
-- Do not introduce new CTA labels for the same two intents.
+Ziel-System: **Suisse Int'l** (Swiss Typefaces, Weblizenz traffic-basiert, Trial verfügbar).
+Beim Upgrade ändern sich **nur** Familien + zwei Token — alle übrigen Regeln und Größen gelten unverändert:
 
-## Imagery & evidence
+| Token | Produktion (Inter Tight) | Upgrade (Suisse Int'l) |
+|---|---|---|
+| `--font-display` | Inter Tight | Suisse Int'l (Bold) |
+| `--font-body` | Inter | Suisse Int'l (Book/Regular) |
+| `--font-mono` | IBM Plex Mono | Suisse Int'l Mono |
+| `--disp-weight` | 800 | 700 |
+| `--disp-track` | −0.03em | −0.02em |
 
-- Brand-canon illustrations (`BrandIllustration`) are the signature visual — keep
-  them; do not replace with generic stock.
-- Use `next/image` with explicit `sizes`/aspect ratio, AVIF/WebP, stable
-  placeholders. No layout shift.
-- **Honest content only**: never fabricate metrics, customer logos, testimonials,
-  or "trusted by / measurable" claims. Use real proof, a labelled placeholder,
-  or a different structure.
+> Alternative Richtung „Berlin" (ABC Monument Grotesk + ABC Diatype + Diatype Mono, Dinamo): gleiches Prinzip — nur Familien-Token tauschen, `--disp-weight: 700`, `--disp-track: −0.02em`.
 
-## Motion stance
+---
 
-- Restrained and narrative: at most 1–2 reveal primitives per view, staggered
-  gently. Animate `transform`/`opacity` only.
-- Timing/easing come from tokens. No scroll-jacking, no ornamental parallax by
-  default. Focus rings appear instantly (never animated).
-- Full `prefers-reduced-motion` support: spatial motion collapses to ≤150 ms
-  opacity crossfade (tokens already zero out durations).
+## 3. Einbindung (Next.js / Vercel)
 
-## Interaction & component contracts
+`next/font` lädt beim Build und self-hostet — keine Runtime-Requests an Google-CDNs (DSGVO-Praxis für DE-Zielmarkt). Keine `<link>`-Einbindung von fonts.googleapis.com in Produktion.
 
-Every interactive component ships all eight states: default · hover ·
-`:focus-visible` · `:active` · disabled · loading · error · success. Touch
-targets ≥ 44px. Buttons never reflow surrounding layout on press.
+```ts
+// app/fonts.ts
+import { Inter, Inter_Tight, IBM_Plex_Mono } from 'next/font/google';
 
-Shared primitives (composed, not duplicated per page):
-- `components/navigation/SmartLink` — internal/external link behavior.
-- `components/brand/*` — `EditorialHero`, `EditorialSection`, `EditorialCard`,
-  `JourneyCard`, `ExecutiveCTA`, `BrandIllustration`, `EditorialEyebrow`.
-- Capability content: `content/capability-spine.ts` (one source for home,
-  platform, academy).
+export const fontDisplay = Inter_Tight({
+  subsets: ['latin'],
+  variable: '--font-display',
+  display: 'swap',
+});
 
-## Responsive & accessibility
+export const fontBody = Inter({
+  subsets: ['latin'],
+  variable: '--font-body',
+  display: 'swap',
+});
 
-- Verified at 320 / 375 / 414 / 768 / 1024 / 1440 px. No horizontal overflow
-  (`overflow-x: clip` on root). No two-line clickable text.
-- WCAG AA contrast (≥ 4.5:1 text, ≥ 3:1 large/UI). Visible focus ring at
-  `--color-focus`. Semantic headings, one `h1` per page, skip-friendly landmarks.
-- Color is never the only signal.
+export const fontMono = IBM_Plex_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  variable: '--font-mono',
+  display: 'swap',
+});
+```
 
-## Anti-patterns (reject in review)
+```tsx
+// app/layout.tsx
+<html lang="en" className={`${fontDisplay.variable} ${fontBody.variable} ${fontMono.variable}`}>
+```
 
-- Generic AI aesthetics: purple-gradient-on-white hero, evenly timid palettes,
-  Inter/Roboto defaults used as the brand face.
-- Wall of identical cards; repeating the same section rhythm across pages.
-- Uppercase eyebrow/kicker on every block (cap 1–2 per page).
-- Fake browser/phone/IDE chrome; re-drawn UI frames.
-- Invented metrics, logos, or testimonials.
-- Raw hex/`rgb()`/one-off font-families/radii/animation curves inside component
-  files — lift into tokens instead.
+---
 
-## Variants
+## 4. Token
 
-- Named runtime themes are Payload `themes` documents.
-- `SiteSettings.defaultTheme` selects the site theme; Pages/Publications may
-  override it.
-- Theme documents may override only validated semantic tokens. They cannot
-  inject arbitrary CSS.
-- `editorial-default` is the pixel-neutral baseline corresponding to this file.
+**Skalen-Korrektur ggü. Mockup v2:** Display-Größen **−25 %** (Feedback: v2 bei 100 % Zoom zu groß; Abnahme erfolgte bei reduziertem Zoom). Referenz-Viewport 1440 px.
 
-## Theme preview
+```css
+:root {
+  /* Familien — siehe Abschnitt 2 */
+  --font-display: 'Inter Tight', 'Helvetica Neue', Arial, system-ui, sans-serif;
+  --font-body:    'Inter', 'Helvetica Neue', Arial, system-ui, sans-serif;
+  --font-mono:    'IBM Plex Mono', 'SF Mono', Consolas, monospace;
 
-- Payload Theme Live Preview uses `/en/theme-showcase?previewTheme=<id>`.
-- Authenticated draft-theme reads bypass published caches.
-- `THEME_SYSTEM_ENABLED=true` enables runtime theme resolution.
-- The theme showcase and focused golden routes are the required review surface
-  before publishing a new named theme.
+  /* Display-Charakter */
+  --disp-weight: 800;
+  --disp-track: -0.03em;          /* Basis; Uppercase-Kontexte: +0.005em */
+  --disp-track-caps: calc(var(--disp-track) + 0.005em);
 
-## Migration
+  /* Größen (korrigierte Skala) */
+  --size-h1:      clamp(2.5rem, 7.4vw, 7.25rem);
+  --size-h2:      clamp(1.6rem, 3.3vw, 2.9rem);
+  --size-h3:      clamp(1.05rem, 1.5vw, 1.3rem);
+  --size-rowtitle:clamp(1.3rem, 2.6vw, 2.2rem);   /* Monday-Rows */
+  --size-impact:  clamp(2rem, 5vw, 4.4rem);        /* Marquee */
+  --size-ghost:   clamp(7rem, 19vw, 17rem);        /* Sektions-Ziffern */
+  --size-lede:    clamp(1rem, 1.3vw, 1.15rem);
+  --size-body:    1.0625rem;                        /* 17px */
+  --size-mono:    0.7rem;                           /* Labels, Rails */
+  --size-micro:   0.6rem;                           /* Telemetrie, Koordinaten */
+  --size-button:  0.72rem;
+  --size-caption: 0.66rem;
 
-`globals.css` still holds legacy page-specific CSS. Compatibility aliases now
-resolve back to the semantic variables in
-`app/(frontend)/styles/tokens.css`, so named themes propagate through both
-legacy and migrated styles. New CMS blocks use co-located CSS Modules; future
-work continues shrinking the legacy cascade.
+  /* Zeilen & Sperrung */
+  --lh-display: 0.94;
+  --lh-h2: 1.06;
+  --lh-body: 1.55;
+  --track-mono: 0.10em;
+  --track-micro: 0.16em;
+
+  /* Staircase-Einzüge (H1-Zeilen) */
+  --indent-1: clamp(1rem, 6.5vw, 6.5rem);
+  --indent-2: clamp(0.6rem, 3.2vw, 3.2rem);
+}
+```
+
+---
+
+## 5. Typo-Skala (Rollen)
+
+| Rolle | Font | Größe | Weight | LH | Tracking | Case |
+|---|---|---|---|---|---|---|
+| H1 / Hero | Display | `--size-h1` | 800 | 0.94 | `--disp-track-caps` | UPPERCASE |
+| H2 / Sektion | Display | `--size-h2` | 800 | 1.06 | `--disp-track` | Sentence case |
+| H3 / Karte | Display | `--size-h3` | 800 | 1.12 | `--disp-track` × 0.6 | Sentence case |
+| Row-Titel (Monday) | Display | `--size-rowtitle` | 800 | 1.0 | `--disp-track-caps` | UPPERCASE |
+| Impact-Marquee | Display | `--size-impact` | 800 | 0.95 | `--disp-track-caps` | UPPERCASE |
+| Ghost-Ziffer | Display | `--size-ghost` | 800 | 0.8 | 0 | — (nur Ziffern) |
+| Lede | Body | `--size-lede` | 400 | 1.5 | 0 | Sentence case |
+| Body | Body | `--size-body` | 400 | 1.55 | 0 | Sentence case |
+| Emphasis im Body | Body | — | 500 | — | 0 | — |
+| Mono-Label / Rail | Mono | `--size-mono` | 400 | 1.4 | `--track-mono` | UPPERCASE |
+| Telemetrie / Koordinaten | Mono | `--size-micro` | 400 (Werte: 500) | 1.4 | `--track-micro` | UPPERCASE |
+| Button | Mono | `--size-button` | 400 | 1 | 0.12em | UPPERCASE |
+| Caption (Field) | Mono | `--size-caption` | 400 | 1.4 | `--track-mono` | UPPERCASE |
+
+---
+
+## 6. Setz-Regeln
+
+1. **Uppercase nur im Display-Moment:** H1, Row-Titel, Impact-Marquee, Start-CTA-Headline. H2/H3 bleiben Sentence case — der Kontrast laut/leise ist Teil des Konzepts.
+2. **Outline-Wort:** max. **ein** Wort pro Viewport-Höhe. Nur in Display-Kontexten ≥ `--size-h2`. Stroke: 2px ab 64px Schriftgröße, sonst 1.5px (`-webkit-text-stroke`, Füllung transparent). Nie im Body, nie in Mono.
+3. **Endquadrat (■):** ersetzt den Schlusspunkt ausschließlich in der Hero-H1. Kantenlänge 0.42em, Füllung `--ink`.
+4. **Ziffern:** überall `font-feature-settings: "tnum"` wo Zahlen ausgerichtet werden (Nummern, Level, Telemetrie, Ticks). Führende Null bei Sequenzen (01, 02 …).
+5. **Mono ist immer gesperrt + uppercase.** Kein Mono in Fließtextlänge (> 1 Zeile Ausnahme: Telemetrie-Belt).
+6. **H1-Staircase:** Zeilen als `<span class="line">`, Einzüge nur über `--indent-1/-2`. Keine automatischen Umbrüche in der H1 — Zeilen werden redaktionell gesetzt.
+7. **Zeilenlängen:** H2 max. 24ch (`text-wrap: balance`), Lede 60ch, Body 62ch.
+8. **Deutsch-Tauglichkeit:** vor jedem Release Display-Texte mit Komposita testen („Organisationsintelligenz", „Prozessmanagement"). `hyphens: auto` nur für Body ab < 560px und nur bei `lang="de"`; nie im Display.
+9. **Ghost-Ziffern:** `color: transparent`, Stroke 1px `--line-strong`, angeschnitten (top/right negativ), `pointer-events: none`, `aria-hidden`.
+10. **Kein Italic** im gesamten System. Betonung im Body ausschließlich über Weight 500.
+
+## 7. Don'ts
+
+- Keine weiteren Familien einführen (auch nicht für „nur eine Grafik").
+- Kein positives Letterspacing im Display, kein negatives im Mono.
+- Keine Größen außerhalb der Token-Skala; keine Ad-hoc-`font-size` in Komponenten.
+- Outline-Treatment nie als Link-/Hover-Zustand zweckentfremden.
+- `--ink-faint` (#4C4C55) nie für inhaltstragenden Text (Kontrast ~2.4:1) — nur dekorativ (Ghost, Crop-Marks, Ticks).
+- Kein Font-Loading über externe CDNs in Produktion.
+
+---
+
+## 8. Performance & Rendering
+
+- `display: 'swap'` (via next/font gesetzt); automatischer metric-adjusted Fallback reduziert CLS.
+- Variable Fonts (Inter Tight, Inter) statt Einzelschnitten laden; IBM Plex Mono nur 400 + 500.
+- Subsets: `latin` genügt (Copy EN; deutsche Umlaute/ß sind in latin enthalten).
+- `-webkit-font-smoothing: antialiased` global auf dunklem Grund.
+
+## 9. Barrierefreiheit
+
+| Textfarbe | auf #050509 | Ratio | Freigabe |
+|---|---|---|---|
+| `--ink` #E8E8EC | Primärtext | ~16:1 | AAA |
+| `--ink-dim` #8A8A93 | Sekundärtext | ~5.9:1 | AA (Fließtext ok) |
+| `--ink-faint` #4C4C55 | — | ~2.4:1 | nur dekorativ |
+
+- Outline-Wörter sind nie alleinige Informationsträger und stehen nur in Großgraden.
+- Blink-/Marquee-Elemente respektieren `prefers-reduced-motion` (Animation aus, Inhalt statisch sichtbar).
+
+---
+
+## 10. Abnahme-Referenz
+
+- Mockup: `aiio-type-system-mockup-v2.html`, System **B — Swiss** (Proxy: Inter Tight / Inter / IBM Plex Mono).
+- Screenshot-Freigabe: 2026-07-24, mit Auflage **Display-Skala −25 %** (in Abschnitt 4 eingearbeitet).
+- Falls stattdessen System **A — Berlin** gemeint war: nur Familien-Token gemäß Abschnitt 2 tauschen (Schibsted Grotesk / Instrument Sans / DM Mono bzw. Ziel Dinamo); Skala und Regeln bleiben identisch.

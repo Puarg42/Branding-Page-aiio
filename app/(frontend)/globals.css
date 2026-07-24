@@ -1,22 +1,6 @@
 @import "tailwindcss";
 @import "./styles/tokens.css";
 
-@font-face {
-  font-display: swap;
-  font-family: "Chillax";
-  font-style: normal;
-  font-weight: 600;
-  src: url("/fonts/chillax-semibold.woff2") format("woff2");
-}
-
-@font-face {
-  font-display: swap;
-  font-family: "Chillax";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/chillax-bold.woff2") format("woff2");
-}
-
 /* Design tokens now live in app/styles/tokens.css (imported above), including
    the legacy brand + --bc-* variables. See design.md § Migration. */
 
@@ -39,9 +23,10 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
-  font-family:
-    Arial, Helvetica, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
   overflow-x: clip;
 }
 
@@ -462,16 +447,30 @@ h1,
 h2,
 h3 {
   font-family: var(--font-aiio-heading);
-  font-weight: 600;
-  letter-spacing: 0;
+  font-weight: var(--disp-weight);
+  letter-spacing: var(--disp-track);
   margin-top: 0;
 }
 
 h1 {
-  font-size: 4.37rem;
-  line-height: 0.98;
+  font-size: var(--size-h1);
+  letter-spacing: var(--disp-track-caps);
+  line-height: var(--lh-display);
   margin: 0 0 12px;
   max-width: 760px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: var(--size-h2);
+  line-height: var(--lh-h2);
+  max-width: 24ch;
+  text-wrap: balance;
+}
+
+h3 {
+  font-size: var(--size-h3);
+  line-height: 1.12;
 }
 
 .headline-mobile {
@@ -499,9 +498,13 @@ h1 {
   border-radius: 8px;
   color: #fff;
   display: inline-flex;
-  font-weight: 760;
+  font-family: var(--font-mono);
+  font-size: var(--size-button);
+  font-weight: 400;
+  letter-spacing: 0.12em;
   min-height: 46px;
   padding: 0 18px;
+  text-transform: uppercase;
   transition:
     background-color 180ms ease,
     border-color 180ms ease,
@@ -10311,8 +10314,10 @@ section[id],
   align-items: center;
   color: rgb(255 255 255 / 48%);
   display: grid;
-  font-family: var(--font-aiio-heading);
-  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  font-size: var(--size-mono);
+  letter-spacing: var(--track-mono);
+  text-transform: uppercase;
   font-weight: 620;
   grid-template-columns: 8px 1fr;
   gap: 10px;
@@ -11816,9 +11821,11 @@ section[id],
 .legal-page .topbar-shell.is-scrolled .main-nav > a,
 .request-demo-page .topbar-shell.is-scrolled .main-nav > a {
   color: rgb(255 255 255 / 72%);
-  font-family: var(--font-aiio-heading);
-  font-weight: 600;
-  letter-spacing: 0;
+  font-family: var(--font-mono);
+  font-size: var(--size-mono);
+  font-weight: 400;
+  letter-spacing: var(--track-mono);
+  text-transform: uppercase;
 }
 
 .main-nav > a::after {
@@ -11863,9 +11870,10 @@ section[id],
     background: rgb(255 255 255 / 6%);
     border-color: rgb(255 255 255 / 16%);
     color: rgb(255 255 255 / 82%);
-    font-family: var(--font-aiio-heading);
-    font-weight: 600;
-    letter-spacing: 0;
+    font-family: var(--font-mono);
+    font-weight: 400;
+    letter-spacing: var(--track-mono);
+    text-transform: uppercase;
   }
 
   .mobile-menu-toggle:hover,
@@ -11885,9 +11893,10 @@ section[id],
 
   .mobile-menu-nav a {
     color: rgb(255 255 255 / 72%);
-    font-family: var(--font-aiio-heading);
-    font-weight: 600;
-    letter-spacing: 0;
+    font-family: var(--font-mono);
+    font-weight: 400;
+    letter-spacing: var(--track-mono);
+    text-transform: uppercase;
     position: relative;
   }
 
@@ -14463,11 +14472,11 @@ section[id],
 /* Sprint E.2 - Editorial scrollytelling completion */
 .editorial-eyebrow {
   color: var(--bc-color-eyebrow);
-  font-family: var(--font-aiio-heading);
-  font-size: var(--bc-type-eyebrow);
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  line-height: 1;
+  font-family: var(--font-mono);
+  font-size: var(--size-mono);
+  font-weight: 400;
+  letter-spacing: var(--track-mono);
+  line-height: 1.4;
   margin: 0 0 clamp(24px, 3vw, 40px);
   text-align: left;
   text-transform: uppercase;
@@ -15451,11 +15460,11 @@ p.editorial-eyebrow.eyebrow,
 p.editorial-eyebrow,
 .editorial-eyebrow {
   color: var(--bc-color-eyebrow);
-  font-family: var(--font-aiio-heading);
-  font-size: var(--bc-type-eyebrow);
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  line-height: 1;
+  font-family: var(--font-mono);
+  font-size: var(--size-mono);
+  font-weight: 400;
+  letter-spacing: var(--track-mono);
+  line-height: 1.4;
   margin: 0 0 clamp(24px, 3vw, 40px);
   max-width: none;
   text-align: left;
@@ -17028,4 +17037,31 @@ p.editorial-eyebrow,
     font-size: clamp(1.62rem, 7vw, 2.5rem);
     max-width: 100%;
   }
+}
+
+/* Approved typography system: design.md v1.0, System B "Swiss". */
+.website-page .hero h1,
+.website-page .editorial-hero h1 {
+  font-family: var(--font-display);
+  font-weight: var(--disp-weight);
+  letter-spacing: var(--disp-track-caps);
+  line-height: var(--lh-display);
+  text-transform: uppercase;
+}
+
+.website-page h2 {
+  font-family: var(--font-display);
+  font-weight: var(--disp-weight);
+  letter-spacing: var(--disp-track);
+}
+
+.website-page h3 {
+  font-family: var(--font-display);
+  font-weight: var(--disp-weight);
+  letter-spacing: calc(var(--disp-track) * 0.6);
+}
+
+.website-page :is(em, i) {
+  font-style: normal;
+  font-weight: 500;
 }
