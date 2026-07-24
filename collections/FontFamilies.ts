@@ -73,5 +73,14 @@ export const FontFamilies: CollectionConfig = {
         },
       ],
     },
+    {
+      name: "specimen",
+      type: "ui",
+      admin: {
+        components: {
+          Field: "@/components/admin/FontSpecimen#FontSpecimen",
+        },
+      },
+    },
   ],
 };

@@ -49,6 +49,7 @@ type SiteSettingsValue = Awaited<ReturnType<typeof getSiteSettings>>;
 type BlockProps = {
   block: Block;
   locale: Locale;
+  pageType?: string | null;
   siteSettings: SiteSettingsValue;
 };
 
@@ -90,11 +91,32 @@ function settingsCTA(
     : undefined;
 }
 
-function HeroBlockView({ block, locale, siteSettings }: BlockProps) {
+function HeroBlockView({ block, locale, pageType, siteSettings }: BlockProps) {
   const primary =
     (block.primaryCta as Cta) ?? settingsCTA(siteSettings?.primaryCta);
   const secondary =
     (block.secondaryCta as Cta) ?? settingsCTA(siteSettings?.secondaryCta);
+  if (pageType === "home") {
+    return (
+      <section className="hero" id="home-hero">
+        <div className="landing-hero-content">
+          <h1>{String(block.heading ?? "")}</h1>
+          {block.subheading ? (
+            <p className="hero-subheadline">{String(block.subheading)}</p>
+          ) : null}
+          <div className="hero-actions">{ctaLinks(primary, secondary, locale)}</div>
+        </div>
+        <div className="hero-visual">
+          <BrandIllustration
+            decorative={false}
+            interactive
+            priority
+            variant="BC-001"
+          />
+        </div>
+      </section>
+    );
+  }
   return (
     <EditorialSection className="section" shellClassName="website-page-shell">
       {block.eyebrow ? <EditorialEyebrow>{String(block.eyebrow)}</EditorialEyebrow> : null}
@@ -190,9 +212,42 @@ function HeroMediaBlockView({ block, locale }: BlockProps) {
   );
 }
 
-function CardGridBlockView({ block, locale }: BlockProps) {
+function CardGridBlockView({ block, locale, pageType }: BlockProps) {
   const cards =
     (block.cards as Array<Record<string, unknown>> | undefined) ?? [];
+  if (pageType === "home") {
+    return (
+      <section className="trust-reference-section" id="trust">
+        <div className="trust-reference-inner">
+          <div className="trust-reference-copy">
+            {block.eyebrow ? (
+              <EditorialEyebrow>{String(block.eyebrow)}</EditorialEyebrow>
+            ) : null}
+            {block.heading ? <h2>{String(block.heading)}</h2> : null}
+          </div>
+          <EditorialGrid className="trust-reference-grid" columns="three">
+            {cards.map((card, index) => {
+              const href = ctaHref(card.link as Cta, locale);
+              return (
+                <EditorialCard
+                  className="trust-reference-card"
+                  key={String(card.id ?? index)}
+                >
+                  <h3>{String(card.title ?? "")}</h3>
+                  {card.copy ? <p>{String(card.copy)}</p> : null}
+                  {href ? (
+                    <Link href={href}>
+                      {String((card.link as Cta)?.label ?? "Learn more")}
+                    </Link>
+                  ) : null}
+                </EditorialCard>
+              );
+            })}
+          </EditorialGrid>
+        </div>
+      </section>
+    );
+  }
   return (
     <EditorialSection className="section" shellClassName="website-page-shell">
       {block.eyebrow ? <EditorialEyebrow>{String(block.eyebrow)}</EditorialEyebrow> : null}
@@ -326,10 +381,29 @@ function LinkListBlockView({ block, locale }: BlockProps) {
   );
 }
 
-function OutcomeListBlockView({ block }: BlockProps) {
+function OutcomeListBlockView({ block, pageType }: BlockProps) {
   const items =
     (block.items as Array<{ id?: string; title?: string; copy?: string }> | undefined) ??
     [];
+  if (pageType === "home") {
+    return (
+      <section className="organization-section" id="self-empowering-organization">
+        <div className="organization-inner">
+          <div className="organization-header">
+            {block.eyebrow ? (
+              <EditorialEyebrow>{String(block.eyebrow)}</EditorialEyebrow>
+            ) : null}
+            {block.heading ? <h2>{String(block.heading)}</h2> : null}
+          </div>
+          <div className="organization-bottom-statement">
+            {items.map((item, index) => (
+              <p key={item.id ?? index}>{item.copy ?? item.title}</p>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
   return (
     <EditorialSection className="section" shellClassName="website-page-shell">
       {block.heading ? <h2>{String(block.heading)}</h2> : null}
@@ -381,7 +455,30 @@ function SectionNavigationBlockView({ block }: BlockProps) {
   );
 }
 
-function StatementBlockView({ block }: BlockProps) {
+function StatementBlockView({ block, pageType }: BlockProps) {
+  if (pageType === "home") {
+    return (
+      <section className="concept-section" id="organizational-intelligence">
+        <div className="concept-inner concept-inner-text">
+          <div className="concept-copy">
+            {block.eyebrow ? (
+              <EditorialEyebrow>{String(block.eyebrow)}</EditorialEyebrow>
+            ) : null}
+            <BrandIllustration
+              className="missing-capability-illustration"
+              decorative={false}
+              interactive
+              variant="BC-005"
+            />
+            <h2>{String(block.heading ?? "")}</h2>
+            {block.copy ? (
+              <p className="concept-support">{String(block.copy)}</p>
+            ) : null}
+          </div>
+        </div>
+      </section>
+    );
+  }
   return (
     <EditorialSection
       className={`section ${styles.statement} ${
@@ -447,7 +544,7 @@ function LeadFormBlockView({ block, locale }: BlockProps) {
   );
 }
 
-async function ModuleBlockView({ block, locale }: BlockProps) {
+async function ModuleBlockView({ block, locale, pageType }: BlockProps) {
   const moduleName = String(block.module ?? "");
   switch (moduleName) {
     case "realityCheck":
@@ -459,6 +556,38 @@ async function ModuleBlockView({ block, locale }: BlockProps) {
     case "trustLogos":
       return <TrustLogoMarquee />;
     case "brandIllustration":
+      if (pageType === "home") {
+        return (
+          <section className="ois-section" id="architektur">
+            <div className="ois-editorial-layout">
+              <div className="ois-intro">
+                <EditorialEyebrow>
+                  {String(block.eyebrow ?? "The System")}
+                </EditorialEyebrow>
+                {block.heading ? <h2>{String(block.heading)}</h2> : null}
+                {block.copy ? (
+                  <div className="ois-body">
+                    <p>{String(block.copy)}</p>
+                  </div>
+                ) : null}
+              </div>
+              <div
+                aria-label="Organizational Intelligence layered architecture"
+                className="ois-visual-wrap"
+              >
+                <BrandIllustration
+                  decorative={false}
+                  interactive
+                  variant={
+                    (block.illustrationVariant as "BC-001" | "BC-002" | "BC-005") ??
+                    "BC-002"
+                  }
+                />
+              </div>
+            </div>
+          </section>
+        );
+      }
       return (
         <EditorialSection className="section" shellClassName="website-page-shell">
           <BrandIllustration
@@ -537,7 +666,7 @@ function TypedModuleBlockView(props: BlockProps) {
   });
 }
 
-function CTABlockView({ block, locale, siteSettings }: BlockProps) {
+function CTABlockView({ block, locale, pageType, siteSettings }: BlockProps) {
   const primary =
     (block.primaryCta as Cta) ?? settingsCTA(siteSettings?.primaryCta);
   const secondary =
@@ -545,6 +674,37 @@ function CTABlockView({ block, locale, siteSettings }: BlockProps) {
   const primaryHref = ctaHref(primary, locale);
   const secondaryHref = ctaHref(secondary, locale);
   if (!primaryHref || !primary?.label) return null;
+  if (pageType === "home") {
+    return (
+      <section className="executive-cta-section" id="executive-cta">
+        <div className="executive-cta-inner">
+          <div className="executive-cta-copy">
+            <EditorialEyebrow>
+              {String(block.eyebrow ?? "Start")}
+            </EditorialEyebrow>
+            <h2>{String(block.heading ?? "")}</h2>
+            {block.copy ? <p>{String(block.copy)}</p> : null}
+          </div>
+          <div
+            aria-label={`${String(block.heading ?? "")} actions`}
+            className="editorial-cta-group executive-cta-actions"
+          >
+            <Link className="button hero-button" href={primaryHref}>
+              {primary.label}
+            </Link>
+            {secondaryHref && secondary?.label ? (
+              <Link
+                className="button hero-button secondary"
+                href={secondaryHref}
+              >
+                {secondary.label}
+              </Link>
+            ) : null}
+          </div>
+        </div>
+      </section>
+    );
+  }
   return (
     <ExecutiveCTA
       eyebrow={block.eyebrow ? String(block.eyebrow) : undefined}
@@ -594,9 +754,11 @@ const renderers: Record<
 export async function RenderBlocks({
   blocks,
   locale,
+  pageType,
 }: {
   blocks: Block[];
   locale: Locale;
+  pageType?: string | null;
 }) {
   const siteSettings = await getSiteSettings(locale);
   const rendered = await Promise.all(
@@ -608,6 +770,7 @@ export async function RenderBlocks({
           block={block}
           key={block.id ?? `${block.blockType}-${index}`}
           locale={locale}
+          pageType={pageType}
           siteSettings={siteSettings}
         />
       );

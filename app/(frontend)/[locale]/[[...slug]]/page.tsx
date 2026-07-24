@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { headers } from "next/headers";
 import { notFound } from "next/navigation";
 import { RenderBlocks } from "@/components/blocks/RenderBlocks";
+import { EditorialNavigation } from "@/components/brand/BrandCanonFoundation";
 import { RefreshRouteOnSave } from "@/components/live-preview/RefreshRouteOnSave";
 import { ThemeBoundary } from "@/components/theme/ThemeBoundary";
 import { getLocaleAlternates } from "@/lib/cms/alternates";
@@ -26,6 +27,18 @@ type Props = {
   params: Promise<{ locale: string; slug?: string[] }>;
   searchParams?: Promise<{ preview?: string; previewTheme?: string }>;
 };
+
+const homeSectionNavigator = [
+  { id: "home-hero", label: "Hero" },
+  { id: "organizational-reality-check", label: "Reality Check" },
+  { id: "category-evolution", label: "Why Now" },
+  { id: "organizational-intelligence", label: "Missing Capability" },
+  { id: "architektur", label: "System" },
+  { id: "capabilities", label: "Journey" },
+  { id: "self-empowering-organization", label: "Outcome" },
+  { id: "trust", label: "Enterprise Trust" },
+  { id: "executive-cta", label: "Start" },
+] as const;
 
 async function resolvePage(locale: Locale, segments?: string[]) {
   if (!segments?.length) {
@@ -120,7 +133,14 @@ export default async function LocalizedCmsPage({ params, searchParams }: Props) 
       <RenderBlocks
         blocks={page.layout as Parameters<typeof RenderBlocks>[0]["blocks"]}
         locale={locale}
+        pageType={page.pageType}
       />
+      {page.pageType === "home" ? (
+        <EditorialNavigation
+          ariaLabel="Home sections"
+          sections={homeSectionNavigator}
+        />
+      ) : null}
     </main>
   );
   return resolvedTheme ? (

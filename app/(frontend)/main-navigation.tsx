@@ -8,6 +8,7 @@ import {
   useHeaderNav,
   useLocaleNav,
 } from "@/components/navigation/NavProvider";
+import styles from "./main-navigation.module.css";
 
 type HeaderVariant = "home" | "solid";
 
@@ -144,7 +145,10 @@ export function MainHeader({ variant = "home" }: { variant?: HeaderVariant }) {
             </SmartLink>
           ))}
           {localeNav ? (
-            <span className="locale-switcher" aria-label="Language">
+            <span
+              aria-label="Language selection"
+              className={styles.localeSwitcher}
+            >
               <Link
                 aria-current={locale === "en" ? "page" : undefined}
                 href={localeNav.alternates.en}

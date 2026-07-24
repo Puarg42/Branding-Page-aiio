@@ -1,0 +1,102 @@
+.localeSwitcher {
+  align-items: center;
+  background: rgb(255 255 255 / 7%);
+  border: 1px solid rgb(255 255 255 / 18%);
+  border-radius: 999px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 2px;
+  padding: 3px;
+}
+
+.localeSwitcher a {
+  align-items: center;
+  border-radius: 999px;
+  color: rgb(255 255 255 / 68%);
+  display: inline-flex;
+  font-family: var(--font-aiio-heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  height: 30px;
+  justify-content: center;
+  letter-spacing: 0.04em;
+  min-width: 30px;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.localeSwitcher a:hover {
+  color: #ffffff;
+}
+
+.localeSwitcher a[aria-current="page"] {
+  background: #ffffff;
+  box-shadow: 0 4px 14px rgb(0 0 0 / 18%);
+  color: #3c1d61;
+}
+
+.localeSwitcher a:focus-visible {
+  outline: 2px solid #b391ff;
+  outline-offset: 2px;
+}
+
+@media (max-width: 860px) {
+  :global(.main-nav),
+  :global(.header-actions) {
+    display: none;
+  }
+
+  :global(.mobile-menu-toggle) {
+    align-items: center;
+    border: 1px solid rgb(255 255 255 / 16%);
+    border-radius: 999px;
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    font-size: 0.88rem;
+    justify-content: center;
+    min-height: 44px;
+    min-width: 76px;
+    padding: 0 18px;
+  }
+
+  :global(.mobile-menu-panel) {
+    align-content: center;
+    color: #ffffff;
+    display: grid;
+    gap: 48px;
+    inset: 0;
+    justify-items: start;
+    opacity: 0;
+    padding: 110px 28px 32px;
+    pointer-events: none;
+    position: fixed;
+    transform: translateY(-10px);
+    transition:
+      opacity 220ms ease,
+      transform 220ms ease;
+    z-index: 1;
+  }
+
+  :global(.is-menu-open) :global(.mobile-menu-panel) {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  :global(.mobile-menu-nav) {
+    display: grid;
+    gap: 4px;
+    width: 100%;
+  }
+
+  :global(.mobile-menu-nav) a {
+    border-bottom: 1px solid rgb(255 255 255 / 10%);
+    font-size: clamp(2rem, 7vw, 3.4rem);
+    line-height: 1;
+    min-height: 60px;
+    padding: 12px 0;
+  }
+}
